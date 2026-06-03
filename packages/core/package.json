@@ -23,10 +23,11 @@
   "sideEffects": false,
   "exports": {
     ".": "./src/index.ts",
-    "./solarposition": "./src/solarposition/index.ts",
-    "./irradiance": "./src/irradiance/index.ts",
-    "./temperature": "./src/temperature/index.ts",
-    "./pvsystem": "./src/pvsystem/index.ts"
+    "./solarposition": "./src/models/solarposition/index.ts",
+    "./clearsky": "./src/models/clearsky/index.ts",
+    "./irradiance": "./src/models/irradiance/index.ts",
+    "./temperature": "./src/models/temperature/index.ts",
+    "./pvsystem": "./src/models/pvsystem/index.ts"
   },
   "publishConfig": {
     "exports": {
@@ -35,20 +36,24 @@
         "default": "./dist/index.js"
       },
       "./solarposition": {
-        "types": "./dist/solarposition/index.d.ts",
-        "default": "./dist/solarposition/index.js"
+        "types": "./dist/models/solarposition/index.d.ts",
+        "default": "./dist/models/solarposition/index.js"
+      },
+      "./clearsky": {
+        "types": "./dist/models/clearsky/index.d.ts",
+        "default": "./dist/models/clearsky/index.js"
       },
       "./irradiance": {
-        "types": "./dist/irradiance/index.d.ts",
-        "default": "./dist/irradiance/index.js"
+        "types": "./dist/models/irradiance/index.d.ts",
+        "default": "./dist/models/irradiance/index.js"
       },
       "./temperature": {
-        "types": "./dist/temperature/index.d.ts",
-        "default": "./dist/temperature/index.js"
+        "types": "./dist/models/temperature/index.d.ts",
+        "default": "./dist/models/temperature/index.js"
       },
       "./pvsystem": {
-        "types": "./dist/pvsystem/index.d.ts",
-        "default": "./dist/pvsystem/index.js"
+        "types": "./dist/models/pvsystem/index.d.ts",
+        "default": "./dist/models/pvsystem/index.js"
       }
     }
   },

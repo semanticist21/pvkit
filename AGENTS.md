@@ -45,10 +45,12 @@ Pre-commit hooks (lefthook): biome write + tsgo typecheck + harness check. Insta
 3. `temperature` (SAPM / PVsyst)
 4. `pvsystem` (PVWatts) → produces kWh.
 
-Each is a subpath export (`@pvkit/core/solarposition`, …). The submodule `src/*/index.ts`
-files are referenced by `package.json` `exports` and `src/index.ts` but **do not exist yet** —
-create them when implementing. The root barrel (`src/index.ts`) only re-exports submodules +
-unit types; real usage should prefer subpath imports for tree-shaking.
+Each is a subpath export (`@pvkit/core/solarposition`, …). The module
+`src/models/<module>/index.ts` files are referenced by `package.json` `exports` and
+`src/index.ts`; stubs exist (`export {}`) — fill them when implementing. Shared foundation
+(`src/units.ts`, `src/constants.ts`) sits flat at top; models nest under `src/models/`.
+The root entry (`src/index.ts`) only re-exports submodules + unit types; real usage should
+prefer subpath imports for tree-shaking.
 
 **Branded unit types** (`src/units.ts`) are a core differentiator: `Radians`/`Degrees` are
 nominal brands over `number`, so rad/deg mix-ups fail at compile time with zero runtime cost

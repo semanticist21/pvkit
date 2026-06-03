@@ -19,9 +19,13 @@ PV modeling core. Durable notes for future sessions — update when `src/` chang
 ## Modules (all stubs — implementation order)
 
 1. `solarposition` (NOAA SPA) — everything else depends on sun position → first.
-2. `irradiance` (Perez / Hay-Davies / Isotropic + AOI)
-3. `temperature` (SAPM / PVsyst)
-4. `pvsystem` (PVWatts)
+2. `clearsky` (Haurwitz / Ineichen) — depends only on solarposition; fallback
+   irradiance input when no weather data.
+3. `irradiance` (Perez / Hay-Davies / Isotropic + AOI)
+4. `temperature` (SAPM / PVsyst)
+5. `pvsystem` (PVWatts) → kWh + metrics (PR, specific yield, capacity factor)
+
+Full feature checklist: `features.md`.
 
 ## Validation workflow
 
