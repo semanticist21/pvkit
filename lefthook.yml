@@ -1,0 +1,13 @@
+# Git hooks via lefthook. Run: bunx lefthook install
+pre-commit:
+  parallel: false
+  commands:
+    biome:
+      glob: "**/*.{ts,tsx,js,jsx,mjs,cjs,json}"
+      run: bunx biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      stage_fixed: true
+    typecheck:
+      glob: "**/*.{ts,tsx}"
+      run: bunx tsgo --noEmit -p packages/core/tsconfig.json
+    harness:
+      run: node scripts/agent-harness-check.mjs --staged

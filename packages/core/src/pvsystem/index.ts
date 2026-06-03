@@ -1,11 +1,11 @@
 /**
- * 시스템 출력 (PV system output).
+ * PV system output.
  *
- * 설계도: PVWatts DC/AC 모델 (NREL).
- * 입력: POA irradiance, 셀 온도 → DC 출력 → AC 출력.
- * 검증: pvlib `pvsystem.pvwatts_dc` / `inverter.pvwatts` 출력 대조.
+ * Spec: PVWatts DC/AC model (NREL).
+ * Input: POA irradiance, cell temperature → DC output → AC output.
+ * Validation: pin reference outputs as fixtures and assert against them.
  *
- * TODO: pvwatts_dc → pvwatts_ac. high-level ModelChain류는 후순위.
+ * TODO: pvwatts_dc → pvwatts_ac. High-level ModelChain-style objects come later.
  */
 
 export {};

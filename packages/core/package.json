@@ -1,7 +1,7 @@
 {
   "name": "@pvkit/core",
   "version": "0.0.0",
-  "description": "Independent, ESM-first PV (solar) performance modeling engine — solar position, irradiance, cell temperature, system output. Validated against pvlib outputs.",
+  "description": "ESM-first PV (solar) performance modeling engine — solar position, irradiance, cell temperature, system output. Numerically validated against reference implementations.",
   "type": "module",
   "license": "MIT",
   "author": "semanticist21",
@@ -17,7 +17,6 @@
     "irradiance",
     "solar-position",
     "spa",
-    "pvlib",
     "esm",
     "tree-shaking"
   ],
@@ -59,6 +58,6 @@
   "scripts": {
     "build": "tsdown",
     "test": "bun test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsgo --noEmit"
   }
 }

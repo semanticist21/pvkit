@@ -1,0 +1,9 @@
+{
+  "ignorePrefixes": ["node_modules/", ".git/", "dist/", "build/", "target/", "vendor/"],
+  "sourceExtensions": [".ts", ".tsx"],
+  "testPatterns": ["(^|/)__tests__/", "\\.test\\.", "\\.spec\\.", "(^|/)tests?/"],
+  "testableGlobs": ["packages/core/src/"],
+  "docFileNames": ["AGENTS.md", "CLAUDE.md"],
+  "durableSourceGlobs": ["packages/core/src/"],
+  "roleComments": []
+}

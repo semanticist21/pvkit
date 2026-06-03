@@ -9,10 +9,17 @@
   "scripts": {
     "build": "bun run --filter '*' build",
     "test": "bun run --filter '*' test",
-    "typecheck": "bun run --filter '*' typecheck"
+    "typecheck": "bun run --filter '*' typecheck",
+    "format": "biome check --write .",
+    "lint": "biome check .",
+    "harness": "node scripts/agent-harness-check.mjs --worktree",
+    "prepare": "lefthook install"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
     "@types/bun": "^1.3.14",
+    "@typescript/native-preview": "^7.0.0-dev",
+    "lefthook": "^1.7.0",
     "tsdown": "^0.12.0",
     "typescript": "^5.7.0"
   }
