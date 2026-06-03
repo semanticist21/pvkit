@@ -10,6 +10,13 @@ PV modeling core. Durable notes for future sessions — update when `src/` chang
 - ESM-only, zero dependencies, `sideEffects: false`, function-level exports
   (tree-shaking).
 
+## Locked decisions
+
+- **API boundary: plain objects out, branded inside.** Public function inputs take
+  plain object args with bare `number` fields, unit fixed by field name (no forced
+  `degrees()`/`radians()` wrapping). Tag to branded `Radians`/`Degrees` internally;
+  returned angles are branded. See `doc/architecture.md` → "API boundary".
+
 ## Open decisions (lock before implementing)
 
 1. Naming — camelCase proposed (JS convention).

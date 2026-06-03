@@ -42,6 +42,21 @@ entry to `packages/core/tsdown.config.ts`.
   over `number` — rad/deg mix-ups fail at compile time, zero runtime cost. New
   angular APIs take/return branded types, never bare `number`.
 
+## API boundary — branded inside, plain objects outside
+
+- **Public function inputs take plain object args with bare `number` fields**;
+  the unit is fixed by the field name / JSDoc (e.g. lat/lon always degrees, tilt
+  always degrees). Users never have to call `degrees()`/`radians()` to pass an
+  argument. `spa({ lat: 37.5, lon: 127 })`, not `spa(degrees(37.5), …)`.
+- **Internally, tag at the boundary** (`degrees()`/`radians()`) and use branded
+  `Radians`/`Degrees` for all cross-module data and intermediate math — that is
+  where rad/deg mix-ups are caught at compile time.
+- **Returned angles SHOULD be branded** so the caller knows the unit (or the
+  return shape names the unit explicitly). The brand erases at build → zero
+  runtime cost, invisible to JS consumers.
+- Net: branded types are an internal safety net, transparent to library users.
+  Never force a consumer to wrap inputs.
+
 ## Source layout
 
 - Shared foundation sits flat at `src/` top: `units.ts` (public unit types),

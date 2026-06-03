@@ -13,6 +13,8 @@ layer down under `src/models/<module>/`. Foundation is imported *upward* by mode
 models never import each other.
 
 - [x] Branded unit types (`Radians`/`Degrees`, `src/units.ts`)
+- [ ] API boundary helper: plain-object inputs (bare `number`, unit by field name)
+      → tag to branded internally; returns branded. No forced wrapping by callers.
 - [~] Shared physical constants (`src/constants.ts`, stub) — universal physics only;
       model-specific coefficients stay in `src/models/<module>/constants.ts`
 - [ ] Shared time/geo types (datetime, lat/lon, elevation, pressure, temp)
