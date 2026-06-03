@@ -16,5 +16,9 @@ export default defineConfig({
   dts: true,
   clean: true,
   treeshake: true,
+  // Stable entry filenames: don't hash. publishConfig.exports points at fixed
+  // paths (dist/models/<m>/index.{js,d.ts}); hashing the .d.ts entries (tsdown's
+  // default) breaks those `types` paths. A library wants deterministic names.
+  hash: false,
   outDir: "dist",
 });
