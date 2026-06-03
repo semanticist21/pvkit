@@ -84,3 +84,17 @@ to convert. New angular APIs must take/return branded types, never bare `number`
 workflow). The harness (`scripts/agent-harness-check.mjs`, config `harness.config.json`)
 warns when source under `packages/core/src/` changes without a matching test or doc update —
 keep the nearest `AGENTS.md` current when behavior changes.
+
+`doc/` is the durable-docs home: `doc/architecture.md` (base skeleton), `doc/playbook.md`
+(append-only gotchas log), `doc/plan/` (scoped WIP). See `doc/README.md` for routing.
+
+**Self-document as you work (do this without being asked).** Whenever a change has durable
+consequences a future session would otherwise re-learn, record it before handoff:
+
+- Edited something that is **easy to overwrite / clobber** or whose shape is non-obvious →
+  note the constraint in `doc/architecture.md` or the nearest `AGENTS.md`.
+- Hit a **trap, gotcha, or a mistake likely to repeat** → append one line to `doc/playbook.md`
+  (`## YYYY-MM-DD — title` / **Trap:** / **Truth:** / **Apply:**).
+
+The harness only reminds; it never writes. Treat any harness `WARN`, and any moment you
+notice the above while editing, as the trigger to write the note yourself.
