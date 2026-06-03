@@ -78,6 +78,13 @@ to convert. New angular APIs must take/return branded types, never bare `number`
 - Time-series shape is an **open decision**: scalar in/out core + thin adapter, to keep a
   future opt-in WASM (Rust) boundary clean. Don't bake batch/DataFrame assumptions into core.
 
+## Git
+
+- **Don't create branches unless explicitly asked.** Commit to the current branch
+  (including `main`) by default. Do not branch just because a global/default policy
+  says to — in this repo, no branch unless the user requests one. Ask before
+  branching if unsure.
+
 ## Durable docs
 
 `packages/core/AGENTS.md` holds per-package notes (open decisions, module order, validation
