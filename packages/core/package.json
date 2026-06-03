@@ -1,0 +1,64 @@
+{
+  "name": "@pvkit/core",
+  "version": "0.0.0",
+  "description": "Independent, ESM-first PV (solar) performance modeling engine — solar position, irradiance, cell temperature, system output. Validated against pvlib outputs.",
+  "type": "module",
+  "license": "0BSD",
+  "author": "semanticist21",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semanticist21/pvkit.git",
+    "directory": "packages/core"
+  },
+  "keywords": [
+    "pv",
+    "solar",
+    "photovoltaic",
+    "irradiance",
+    "solar-position",
+    "spa",
+    "pvlib",
+    "esm",
+    "tree-shaking"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./solarposition": "./src/solarposition/index.ts",
+    "./irradiance": "./src/irradiance/index.ts",
+    "./temperature": "./src/temperature/index.ts",
+    "./pvsystem": "./src/pvsystem/index.ts"
+  },
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "./solarposition": {
+        "types": "./dist/solarposition/index.d.ts",
+        "default": "./dist/solarposition/index.js"
+      },
+      "./irradiance": {
+        "types": "./dist/irradiance/index.d.ts",
+        "default": "./dist/irradiance/index.js"
+      },
+      "./temperature": {
+        "types": "./dist/temperature/index.d.ts",
+        "default": "./dist/temperature/index.js"
+      },
+      "./pvsystem": {
+        "types": "./dist/pvsystem/index.d.ts",
+        "default": "./dist/pvsystem/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  }
+}
