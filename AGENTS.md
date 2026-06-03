@@ -39,11 +39,22 @@ Pre-commit hooks (lefthook): biome write + tsgo typecheck + harness check. Insta
 
 **Monorepo:** `packages/*` Bun workspaces. Only `@pvkit/core` exists today.
 
-**`@pvkit/core` module plan** (implementation order — each depends on the prior):
-1. `solarposition` (NOAA SPA) — everything depends on sun position, so first.
-2. `irradiance` (Perez / Hay-Davies / Isotropic + AOI)
-3. `temperature` (SAPM / PVsyst)
-4. `pvsystem` (PVWatts) → produces kWh.
+**`@pvkit/core` module plan** — 11 submodules, dependency order (each depends on the prior):
+1. `solarposition` (NOAA SPA + simple models) — everything depends on sun position, so first.
+2. `atmosphere` (air mass, alt2pres, precipitable water, Linke/AOD) — dataless helpers.
+3. `clearsky` (Haurwitz / Ineichen / Solis) — fallback irradiance, no weather data needed.
+4. `irradiance` (isotropic / Klucher / Hay-Davies / Reindl / King / Perez + AOI).
+5. `decomposition` (Erbs / Boland / DISC / DIRINT / DIRINDEX) — GHI→DNI/DHI splitters.
+6. `iam` (physical / ashrae / martin_ruiz / sapm / interp / marion).
+7. `temperature` (SAPM / PVsyst / Faiman / Fuentes / GenericLinearModel).
+8. `tracking` (singleaxis / backtracking) — pure geometry, core not layout.
+9. `pvsystem` (PVWatts DC/AC, clipping, losses) → produces kWh.
+10. `losses` (soiling, snow, combine_loss_factors).
+11. `metrics` (IEC 61724-1 PR, specific yield, capacity factor).
+
+Out of core → separate packages: `@pvkit/diode` (single-diode/SAPM precision),
+`@pvkit/spec` (parameter DBs + spectrum), `@pvkit/layout` (bifacial/shading),
+`@pvkit/io` (data fetch), `@pvkit/chain` (ModelChain orchestration). See `ROADMAP.md`.
 
 Each is a subpath export (`@pvkit/core/solarposition`, …). The module
 `src/models/<module>/index.ts` files are referenced by `package.json` `exports` and

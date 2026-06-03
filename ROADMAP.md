@@ -7,7 +7,7 @@
 
 | Package | Status | Description |
 | --- | --- | --- |
-| `@pvkit/core` | 🚧 scaffolded | PV modeling core. solarposition · irradiance · temperature · pvsystem. Produces kWh. |
+| `@pvkit/core` | 🚧 scaffolded | PV modeling core. solarposition · atmosphere · clearsky · irradiance · decomposition · iam · temperature · tracking · pvsystem · losses · metrics. Produces kWh. PVWatts-path precision (single-diode/SAPM precision lives in separate packages). |
 | `@pvkit/sizer` | 📋 planned | String sizing. Series/parallel panel configuration. Inverter over-voltage safety; a gap in JS tooling. |
 
 ## Under review (considered instead of react)
@@ -47,15 +47,23 @@ Roof area → panel count, tilt/azimuth optimization, shading / horizon analysis
 
 ### Priority 4 — `@pvkit/spec` (datasheet parser / DB)
 
-Normalize panel / inverter specs. Consumed by `sizer`.
+Normalize panel / inverter specs. Consumed by `sizer` and `diode`.
 
 - Useful, but mostly data-curation grind. More dataset than library
+
+### Deferred / advanced packages
+
+| Package | Status | Description |
+| --- | --- | --- |
+| `@pvkit/diode` | 📋 proposed | Precise single-diode + SAPM electrical models (desoto/cec/pvsyst calcparams, single-diode solver, SAPM I-V, Sandia/ADR inverters). Depends on core + spec (parameter DBs). Out of 1.0 — most real work is covered by core's PVWatts path. |
+| `@pvkit/chain` | 📋 proposed | Thin orchestration layer wiring solarposition→irradiance→temperature→pvsystem with sane defaults (pvlib ModelChain analog). Kept out of core to keep core stateless and tree-shakable. |
 
 ## Dependency graph (expected)
 
 ```
-core (kWh) ──┬─► economics ($)
-             ├─► layout
-             └─► sizer ◄── spec
-io ──► core (supplies input data)
+io ──► core (kWh) ──┬─► economics ($)
+                    ├─► chain (orchestration)
+                    ├─► layout
+                    ├─► diode ◄── spec
+                    └─► sizer ◄── spec
 ```

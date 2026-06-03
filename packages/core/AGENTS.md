@@ -25,12 +25,28 @@ PV modeling core. Durable notes for future sessions — update when `src/` chang
 
 ## Modules (all stubs — implementation order)
 
-1. `solarposition` (NOAA SPA) — everything else depends on sun position → first.
-2. `clearsky` (Haurwitz / Ineichen) — depends only on solarposition; fallback
-   irradiance input when no weather data.
-3. `irradiance` (Perez / Hay-Davies / Isotropic + AOI)
-4. `temperature` (SAPM / PVsyst)
-5. `pvsystem` (PVWatts) → kWh + metrics (PR, specific yield, capacity factor)
+11 core submodules, dependency order:
+
+1. `solarposition` (NOAA SPA + simple models) — everything depends on sun position → first.
+2. `atmosphere` (Kasten-Young air mass, alt2pres, precipitable water, Linke/AOD) —
+   dataless helpers consumed by clearsky/irradiance. Air mass lives here.
+3. `clearsky` (Haurwitz / Ineichen / Solis) — fallback irradiance when no weather data.
+   Linke turbidity is a caller input; lookup raster + detect_clearsky → `@pvkit/io`.
+4. `irradiance` (isotropic / Klucher / Hay-Davies / Reindl / King / Perez + AOI,
+   get_total_irradiance, poa_components)
+5. `decomposition` (Erbs / Boland / DISC / DIRINT / DIRINDEX) — GHI→DNI/DHI splitters;
+   essential because most weather feeds give GHI only. DIRINT needs time-series adapter.
+6. `iam` (physical / ashrae / martin_ruiz / sapm / interp / marion)
+7. `temperature` (SAPM / PVsyst / Faiman / Fuentes / noct_sam / ross / GenericLinearModel)
+8. `tracking` (singleaxis / backtracking / axis tilt) — pure geometry, depends only on
+   solarposition. GCR is scalar, not 3D → core, NOT layout.
+9. `pvsystem` (PVWatts DC/AC, inverter clipping, system losses) → kWh.
+10. `losses` (soiling kimber/hsu, combine_loss_factors, snow optional).
+11. `metrics` (IEC 61724-1: PR, specific yield, capacity factor, availability).
+
+Out of core (separate packages): single-diode/SAPM precision + inverters → `@pvkit/diode`;
+parameter DBs + spectrum → `@pvkit/spec`; bifacial/shading → `@pvkit/layout`; data fetch →
+`@pvkit/io`; ModelChain orchestration → `@pvkit/chain`.
 
 Full feature checklist: `features.md`.
 
