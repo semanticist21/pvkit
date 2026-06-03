@@ -23,17 +23,19 @@
   "sideEffects": false,
   "exports": {
     ".": "./src/index.ts",
-    "./solarposition": "./src/models/solarposition/index.ts",
-    "./atmosphere": "./src/models/atmosphere/index.ts",
-    "./clearsky": "./src/models/clearsky/index.ts",
-    "./irradiance": "./src/models/irradiance/index.ts",
-    "./decomposition": "./src/models/decomposition/index.ts",
-    "./iam": "./src/models/iam/index.ts",
-    "./temperature": "./src/models/temperature/index.ts",
-    "./tracking": "./src/models/tracking/index.ts",
-    "./pvsystem": "./src/models/pvsystem/index.ts",
-    "./losses": "./src/models/losses/index.ts",
-    "./metrics": "./src/models/metrics/index.ts"
+    "./units": "./src/units.ts",
+    "./*": "./src/models/*/index.ts",
+    "./solarposition/*": "./src/models/solarposition/*.ts",
+    "./atmosphere/*": "./src/models/atmosphere/*.ts",
+    "./clearsky/*": "./src/models/clearsky/*.ts",
+    "./irradiance/*": "./src/models/irradiance/*.ts",
+    "./decomposition/*": "./src/models/decomposition/*.ts",
+    "./iam/*": "./src/models/iam/*.ts",
+    "./temperature/*": "./src/models/temperature/*.ts",
+    "./tracking/*": "./src/models/tracking/*.ts",
+    "./pvsystem/*": "./src/models/pvsystem/*.ts",
+    "./losses/*": "./src/models/losses/*.ts",
+    "./metrics/*": "./src/models/metrics/*.ts"
   },
   "publishConfig": {
     "exports": {
@@ -41,49 +43,57 @@
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
       },
-      "./solarposition": {
-        "types": "./dist/models/solarposition/index.d.ts",
-        "default": "./dist/models/solarposition/index.js"
+      "./units": {
+        "types": "./dist/units.d.ts",
+        "default": "./dist/units.js"
       },
-      "./atmosphere": {
-        "types": "./dist/models/atmosphere/index.d.ts",
-        "default": "./dist/models/atmosphere/index.js"
+      "./*": {
+        "types": "./dist/models/*/index.d.ts",
+        "default": "./dist/models/*/index.js"
       },
-      "./clearsky": {
-        "types": "./dist/models/clearsky/index.d.ts",
-        "default": "./dist/models/clearsky/index.js"
+      "./solarposition/*": {
+        "types": "./dist/models/solarposition/*.d.ts",
+        "default": "./dist/models/solarposition/*.js"
       },
-      "./irradiance": {
-        "types": "./dist/models/irradiance/index.d.ts",
-        "default": "./dist/models/irradiance/index.js"
+      "./atmosphere/*": {
+        "types": "./dist/models/atmosphere/*.d.ts",
+        "default": "./dist/models/atmosphere/*.js"
       },
-      "./decomposition": {
-        "types": "./dist/models/decomposition/index.d.ts",
-        "default": "./dist/models/decomposition/index.js"
+      "./clearsky/*": {
+        "types": "./dist/models/clearsky/*.d.ts",
+        "default": "./dist/models/clearsky/*.js"
       },
-      "./iam": {
-        "types": "./dist/models/iam/index.d.ts",
-        "default": "./dist/models/iam/index.js"
+      "./irradiance/*": {
+        "types": "./dist/models/irradiance/*.d.ts",
+        "default": "./dist/models/irradiance/*.js"
       },
-      "./temperature": {
-        "types": "./dist/models/temperature/index.d.ts",
-        "default": "./dist/models/temperature/index.js"
+      "./decomposition/*": {
+        "types": "./dist/models/decomposition/*.d.ts",
+        "default": "./dist/models/decomposition/*.js"
       },
-      "./tracking": {
-        "types": "./dist/models/tracking/index.d.ts",
-        "default": "./dist/models/tracking/index.js"
+      "./iam/*": {
+        "types": "./dist/models/iam/*.d.ts",
+        "default": "./dist/models/iam/*.js"
       },
-      "./pvsystem": {
-        "types": "./dist/models/pvsystem/index.d.ts",
-        "default": "./dist/models/pvsystem/index.js"
+      "./temperature/*": {
+        "types": "./dist/models/temperature/*.d.ts",
+        "default": "./dist/models/temperature/*.js"
       },
-      "./losses": {
-        "types": "./dist/models/losses/index.d.ts",
-        "default": "./dist/models/losses/index.js"
+      "./tracking/*": {
+        "types": "./dist/models/tracking/*.d.ts",
+        "default": "./dist/models/tracking/*.js"
       },
-      "./metrics": {
-        "types": "./dist/models/metrics/index.d.ts",
-        "default": "./dist/models/metrics/index.js"
+      "./pvsystem/*": {
+        "types": "./dist/models/pvsystem/*.d.ts",
+        "default": "./dist/models/pvsystem/*.js"
+      },
+      "./losses/*": {
+        "types": "./dist/models/losses/*.d.ts",
+        "default": "./dist/models/losses/*.js"
+      },
+      "./metrics/*": {
+        "types": "./dist/models/metrics/*.d.ts",
+        "default": "./dist/models/metrics/*.js"
       }
     }
   },

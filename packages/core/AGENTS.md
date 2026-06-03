@@ -16,6 +16,15 @@ PV modeling core. Durable notes for future sessions — update when `src/` chang
   plain object args with bare `number` fields, unit fixed by field name (no forced
   `degrees()`/`radians()` wrapping). Tag to branded `Radians`/`Degrees` internally;
   returned angles are branded. See `doc/architecture.md` → "API boundary".
+- **Per-method subpath exports + per-method 4-file set.** Each calculation method
+  is its own file `src/models/<module>/<method>.ts`, publicly importable at
+  `@pvkit/core/<module>/<method>` (preferred granularity); the module subpath
+  `@pvkit/core/<module>` re-exports them as a convenience. Wildcard `package.json`
+  `exports` + glob tsdown entry = zero per-method wiring (new method = no config
+  edit). Each method ships four co-located files: `<method>.ts` (impl),
+  `<method>.md` (source URL + principle + tolerance), `<method>.test.ts`
+  (tolerance-based accuracy, not bit-exact — JS float64), `<method>.bench.ts`
+  (perf). See `doc/architecture.md` → "Subpath exports".
 
 ## Open decisions (lock before implementing)
 

@@ -17,18 +17,26 @@ file is the consolidated skeleton.
 Each depends on the prior; implement in order:
 
 1. `solarposition` (NOAA SPA) — everything depends on sun position → first.
-2. `clearsky` (Haurwitz / Ineichen) — depends only on solarposition; fallback
-   irradiance input when no weather data fetched.
-3. `irradiance` (Perez / Hay-Davies / Isotropic + AOI)
-4. `temperature` (SAPM / PVsyst)
-5. `pvsystem` (PVWatts) → kWh + metrics (PR, specific yield, capacity factor).
+2. `atmosphere` (Kasten-Young air mass, alt2pres, precipitable water, Linke/AOD) —
+   dataless helpers consumed by clearsky/irradiance.
+3. `clearsky` (Haurwitz / Ineichen) — fallback irradiance when no weather data.
+4. `irradiance` (Perez / Hay-Davies / Isotropic + AOI).
+5. `decomposition` (Erbs / Boland / DISC / DIRINT) — GHI → DNI/DHI splitters.
+6. `iam` (physical / ashrae / martin_ruiz / sapm) — incidence-angle modifier.
+7. `temperature` (SAPM / PVsyst).
+8. `tracking` (singleaxis / backtracking) — pure geometry, depends on solarposition.
+9. `pvsystem` (PVWatts) → kWh.
+10. `losses` (soiling kimber/hsu, combine_loss_factors) — optional derates.
+11. `metrics` (IEC 61724-1: PR, specific yield, capacity factor, availability).
 
 Full checklist: `packages/core/features.md`.
 
-Each is a subpath export (`@pvkit/core/solarposition`, …). Module
-`src/models/<module>/index.ts` files are referenced by `package.json` `exports`
-+ `src/index.ts`; stubs exist (`export {}`) — fill when implementing, and add the
-entry to `packages/core/tsdown.config.ts`.
+Each module is a subpath export (`@pvkit/core/solarposition`, …) whose
+`src/models/<module>/index.ts` is the convenience subpath entry re-exporting that
+module's calculation methods. Individual methods are also importable one level
+finer (`@pvkit/core/<module>/<method>`) — see "Subpath exports" below. Both the
+`exports` map and the tsdown entry are wildcard/glob, so a new method or module
+file needs no wiring.
 
 ## Core invariants
 
@@ -60,19 +68,66 @@ entry to `packages/core/tsdown.config.ts`.
 ## Source layout
 
 - Shared foundation sits flat at `src/` top: `units.ts` (public unit types),
-  `constants.ts` (universal physics constants). The 5 PV models nest one layer
-  down: `src/models/<module>/index.ts`. Public subpath names are unchanged
+  `constants.ts` (universal physics constants). The 11 PV models nest one layer
+  down: `src/models/<module>/`. Public subpath names are unchanged
   (`@pvkit/core/clearsky`) — only the internal path is `src/models/...`.
-- `dist/` mirrors this: `dist/models/<module>/index.js`; `package.json`
-  `publishConfig.exports` points there. tsdown entry list
-  (`tsdown.config.ts`) lists `src/models/<module>/index.ts`.
+- Within each `src/models/<module>/`, every calculation method is its own file
+  `<method>.ts` (e.g. `solarposition/spa.ts`), each with three companions:
+  `<method>.md` (theory + tolerance), `<method>.test.ts` (accuracy test),
+  `<method>.bench.ts` (perf). `index.ts` is the convenience subpath entry that
+  re-exports the module's methods. See "Module boundaries & tests".
+- `dist/` mirrors this: `dist/models/<module>/<method>.js` + `index.js`;
+  `package.json` `publishConfig.exports` points there. The tsdown entry is a
+  **glob** (`src/models/**/*.ts` minus tests/benches), not an explicit list, so
+  new method files are auto-built with no wiring.
+
+## Subpath exports (method-level)
+
+- **Per-method subpath is the preferred import granularity** (finest
+  tree-shaking): `import { spa } from "@pvkit/core/solarposition/spa"`. The
+  module subpath `@pvkit/core/solarposition` still works as a convenience — its
+  `index.ts` re-exports the methods.
+- **Zero wiring per method.** `package.json` `exports` is wildcard:
+
+  ```jsonc
+  {
+    "./*": "./src/models/*/index.ts",          // module level (auto for all)
+    "./solarposition/*": "./src/models/solarposition/*.ts", // method level
+    "./atmosphere/*": "./src/models/atmosphere/*.ts"
+    // …one method-wildcard line per module; module level is auto via "./*"
+  }
+  ```
+
+  `publishConfig.exports` mirrors the same patterns to `dist` with
+  `types` + `default`. Adding a **method** file needs no `package.json` edit;
+  adding a **module** needs one method-wildcard line (module level is already
+  covered by `./*`).
+- **Glob tsdown entry, zero wiring per method.** `tsdown.config.ts` entry is
+  `["src/index.ts", "src/models/**/*.ts", "!src/models/**/*.test.ts",
+  "!src/models/**/*.bench.ts"]` — new method files are auto-built; tests and
+  benches never ship to `dist`.
+- **TS consumers need `moduleResolution: "bundler"`** (or `node16`+) to resolve
+  the wildcard subpath types.
 
 ## Module boundaries & tests
 
-- **Tests co-locate inside the module**, independent:
-  `src/models/<module>/index.test.ts` next to `index.ts` (as `units.test.ts`
-  already does at top level). Each module pins its own reference fixtures — no
-  shared fixture state across modules.
+- **Per-method 4-file set.** Each calculation method ships four co-located files
+  under `src/models/<module>/`:
+  - `<method>.ts` — implementation.
+  - `<method>.md` — theory: source URL(s) of the paper/reference, the
+    principle/equations, assumptions, and the stated accuracy tolerance + which
+    reference (e.g. pvlib, NREL SPA appendix) the fixtures come from.
+  - `<method>.test.ts` — accuracy test: assert against pinned reference outputs
+    within a documented tolerance.
+  - `<method>.bench.ts` — performance benchmark (per-call timing, regression watch).
+- **Tests co-locate per method**, independent: `<method>.test.ts` next to
+  `<method>.ts` (as `units.test.ts` already does at top level). Each method pins
+  its own reference fixtures — no shared fixture state across methods or modules.
+- **JS numerical-limit caveat — tolerance-based, not bit-exact.** Accuracy tests
+  assert within a documented tolerance, never exact equality: float64 only,
+  large-angle accumulation (e.g. SPA Julian-day scaling), and platform-specific
+  `Math.sin`/`Math.cos` differences all perturb the low bits. Each `<method>.md`
+  must state the tolerance and its justification.
 - **Sharing is one-directional only.** A small foundation layer (`units.ts`,
   shared geo/time types) is imported *upward* by modules. Modules must NOT import
   each other (no `clearsky` → `irradiance`); cross-module relationships are

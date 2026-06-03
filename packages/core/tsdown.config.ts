@@ -1,19 +1,16 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
+  // Glob entry: every module's `index.ts` (subpath entry) + every per-method file
+  // (`src/models/<module>/<method>.ts`). Adding a new calculation-method file needs
+  // NO wiring here — it is picked up automatically. Tests/benches are excluded so
+  // they never ship to `dist`.
   entry: [
     "src/index.ts",
-    "src/models/solarposition/index.ts",
-    "src/models/atmosphere/index.ts",
-    "src/models/clearsky/index.ts",
-    "src/models/irradiance/index.ts",
-    "src/models/decomposition/index.ts",
-    "src/models/iam/index.ts",
-    "src/models/temperature/index.ts",
-    "src/models/tracking/index.ts",
-    "src/models/pvsystem/index.ts",
-    "src/models/losses/index.ts",
-    "src/models/metrics/index.ts",
+    "src/units.ts",
+    "src/models/**/*.ts",
+    "!src/models/**/*.test.ts",
+    "!src/models/**/*.bench.ts",
   ],
   format: ["esm"],
   dts: true,

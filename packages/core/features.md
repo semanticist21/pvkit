@@ -1,8 +1,12 @@
 # @pvkit/core — features checklist
 
 Implementation tracker. Order = dependency order (each builds on prior).
-Spec = the paper. Each model: implement from paper → pin reference outputs as
-fixtures → assert in `*.test.ts`. No core logic without a test.
+Spec = the paper. Each calculation method ships a co-located 4-file set:
+implement `<method>.ts` from the paper → write `<method>.md` (source URL +
+principle + the accuracy tolerance and its reference) → pin reference outputs →
+assert within that tolerance in `<method>.test.ts` → benchmark in
+`<method>.bench.ts`. Accuracy is tolerance-based (JS float64, platform `Math`),
+not bit-exact. No core logic without a test.
 
 Legend: `[ ]` todo · `[~]` in progress · `[x]` done + validated.
 
@@ -193,7 +197,9 @@ Skipped for 1.0 entirely: gti_dirint, scaling.wvm (cloud variability), ivtools
 
 ## Cross-cutting
 
-- [ ] Per-submodule subpath `index.ts` re-exports
-- [ ] Add each submodule entry to `tsdown.config.ts`
+- [ ] Module subpath `index.ts` re-exports its methods (convenience subpath entry)
 - [ ] Root entry `src/index.ts` re-exports submodules + unit types
+- [x] Wildcard `package.json` exports + glob tsdown entry — new method/module
+      files need no manual wiring (method = zero edits; new module = one
+      method-wildcard line). See `doc/architecture.md` → "Subpath exports".
 - [ ] Tree-shaking guard (function-level exports, `sideEffects: false`)
