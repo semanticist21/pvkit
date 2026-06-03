@@ -1,10 +1,6 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
-  // Glob entry: every module's `index.ts` (subpath entry) + every per-method file
-  // (`src/models/<module>/<method>.ts`). Adding a new calculation-method file needs
-  // NO wiring here — it is picked up automatically. Tests/benches are excluded so
-  // they never ship to `dist`.
   entry: [
     "src/index.ts",
     "src/units.ts",
@@ -16,9 +12,30 @@ export default defineConfig({
   dts: true,
   clean: true,
   treeshake: true,
-  // Stable entry filenames: don't hash. publishConfig.exports points at fixed
-  // paths (dist/models/<m>/index.{js,d.ts}); hashing the .d.ts entries (tsdown's
-  // default) breaks those `types` paths. A library wants deterministic names.
   hash: false,
   outDir: "dist",
+  // tsdown owns the package.json `exports` map (generated from the entry glob on
+  // every build). devExports → dev `exports` point at src, `publishConfig.exports`
+  // mirror to dist. customExports normalizes the raw keys into the public surface:
+  //   - pass through non-model entries (".", "./units", "./package.json")
+  //   - keep ONLY each folder's `index` entry → impl files (e.g. spa/spa.ts) stay
+  //     private and never become a public subpath
+  //   - strip the internal `models/` prefix and collapse the trailing `/index`
+  // Net public shape: "@pvkit/core/<module>" and "@pvkit/core/<module>/<method>".
+  // hash:false keeps the generated paths stable so package.json doesn't churn.
+  exports: {
+    devExports: true,
+    customExports(exports) {
+      const out = {};
+      for (const [key, val] of Object.entries(exports)) {
+        if (!key.startsWith("./models/")) {
+          out[key] = val; // ., ./units, ./package.json
+          continue;
+        }
+        if (!key.endsWith("/index")) continue; // drop impl files (e.g. spa/spa)
+        out[key.replace(/^\.\/models\//, "./").replace(/\/index$/, "")] = val;
+      }
+      return out;
+    },
+  },
 });

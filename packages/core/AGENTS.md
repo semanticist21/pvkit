@@ -16,15 +16,24 @@ PV modeling core. Durable notes for future sessions — update when `src/` chang
   plain object args with bare `number` fields, unit fixed by field name (no forced
   `degrees()`/`radians()` wrapping). Tag to branded `Radians`/`Degrees` internally;
   returned angles are branded. See `doc/architecture.md` → "API boundary".
-- **Per-method subpath exports + per-method 4-file set.** Each calculation method
-  is its own file `src/models/<module>/<method>.ts`, publicly importable at
-  `@pvkit/core/<module>/<method>` (preferred granularity); the module subpath
-  `@pvkit/core/<module>` re-exports them as a convenience. Wildcard `package.json`
-  `exports` + glob tsdown entry = zero per-method wiring (new method = no config
-  edit). Each method ships four co-located files: `<method>.ts` (impl),
+- **Per-method subpath exports + per-method folder (4-file set).** Each
+  calculation method is its own folder `src/models/<module>/<method>/`, publicly
+  importable at `@pvkit/core/<module>/<method>` (preferred granularity) via the
+  folder's `index.ts`; the module subpath `@pvkit/core/<module>` re-exports them
+  as a convenience. tsdown OWNS the exports map: `exports: { devExports: true,
+  customExports }` in `tsdown.config.ts` generates `exports` (→ `src`) +
+  `publishConfig.exports` (→ `dist`) + `main`/`module`/`types` from the glob
+  tsdown entry (`src/models/**/*.ts`) on every build — these fields are
+  machine-owned, never hand-edited (run `bun run build` to regenerate after
+  adding/removing a method or module, then commit `package.json`; pre-commit
+  hooks don't build). `customExports` strips the `models/` prefix, collapses the
+  trailing `/index`, and drops non-index impl files so only `<module>` and
+  `<module>/<method>` are public (per-method impl files stay private). Each method folder
+  holds: `index.ts` (subpath entry, re-exports impl), `<method>.ts` (impl),
   `<method>.md` (source URL + principle + tolerance), `<method>.test.ts`
   (tolerance-based accuracy, not bit-exact — JS float64), `<method>.bench.ts`
-  (perf). See `doc/architecture.md` → "Subpath exports".
+  (perf). Chosen over flat co-located files so method×4 files don't crowd a
+  single module dir. See `doc/architecture.md` → "Subpath exports".
 
 ## Open decisions (lock before implementing)
 

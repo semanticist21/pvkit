@@ -34,9 +34,9 @@ Full checklist: `packages/core/features.md`.
 Each module is a subpath export (`@pvkit/core/solarposition`, …) whose
 `src/models/<module>/index.ts` is the convenience subpath entry re-exporting that
 module's calculation methods. Individual methods are also importable one level
-finer (`@pvkit/core/<module>/<method>`) — see "Subpath exports" below. Both the
-`exports` map and the tsdown entry are wildcard/glob, so a new method or module
-file needs no wiring.
+finer (`@pvkit/core/<module>/<method>`) — see "Subpath exports" below. The tsdown
+entry is a glob and tsdown generates the `exports` map from it on build, so a new
+method or module file needs no hand-wiring.
 
 ## Core invariants
 
@@ -71,15 +71,20 @@ file needs no wiring.
   `constants.ts` (universal physics constants). The 11 PV models nest one layer
   down: `src/models/<module>/`. Public subpath names are unchanged
   (`@pvkit/core/clearsky`) — only the internal path is `src/models/...`.
-- Within each `src/models/<module>/`, every calculation method is its own file
-  `<method>.ts` (e.g. `solarposition/spa.ts`), each with three companions:
-  `<method>.md` (theory + tolerance), `<method>.test.ts` (accuracy test),
-  `<method>.bench.ts` (perf). `index.ts` is the convenience subpath entry that
-  re-exports the module's methods. See "Module boundaries & tests".
-- `dist/` mirrors this: `dist/models/<module>/<method>.js` + `index.js`;
-  `package.json` `publishConfig.exports` points there. The tsdown entry is a
-  **glob** (`src/models/**/*.ts` minus tests/benches), not an explicit list, so
-  new method files are auto-built with no wiring.
+- Within each `src/models/<module>/`, every calculation method is its **own
+  folder** `<method>/` (e.g. `solarposition/spa/`) holding the method's 4-file
+  set plus a method-level `index.ts` (the subpath entry that re-exports the
+  impl): `<method>/index.ts`, `<method>/<method>.ts` (impl),
+  `<method>/<method>.md` (theory + tolerance), `<method>/<method>.test.ts`
+  (accuracy), `<method>/<method>.bench.ts` (perf). The module's own `index.ts`
+  is the convenience subpath entry that re-exports each method folder. See
+  "Module boundaries & tests".
+- `dist/` mirrors this: `dist/models/<module>/<method>/index.js` + the module
+  `index.js`; `package.json` `publishConfig.exports` points there. The tsdown
+  entry is a **glob** (`src/models/**/*.ts` minus tests/benches), not an explicit
+  list, so new method folders are auto-built with no wiring — and tsdown
+  regenerates the `exports` map from that same entry glob on build (no
+  hand-written wildcard lines).
 
 ## Subpath exports (method-level)
 
@@ -87,32 +92,56 @@ file needs no wiring.
   tree-shaking): `import { spa } from "@pvkit/core/solarposition/spa"`. The
   module subpath `@pvkit/core/solarposition` still works as a convenience — its
   `index.ts` re-exports the methods.
-- **Zero wiring per method.** `package.json` `exports` is wildcard:
+- **tsdown owns the `exports` map — it is generated, do not hand-edit.**
+  `tsdown.config.ts` sets:
 
-  ```jsonc
-  {
-    "./*": "./src/models/*/index.ts",          // module level (auto for all)
-    "./solarposition/*": "./src/models/solarposition/*.ts", // method level
-    "./atmosphere/*": "./src/models/atmosphere/*.ts"
-    // …one method-wildcard line per module; module level is auto via "./*"
+  ```ts
+  exports: {
+    devExports: true,        // dev `exports` → point at src
+    customExports(exports) { /* normalize raw entries → public surface */ },
   }
   ```
 
-  `publishConfig.exports` mirrors the same patterns to `dist` with
-  `types` + `default`. Adding a **method** file needs no `package.json` edit;
-  adding a **module** needs one method-wildcard line (module level is already
-  covered by `./*`).
+  On every `bun run build`, tsdown writes BOTH `exports` (dev → `src`) and
+  `publishConfig.exports` (→ `dist`), plus `main`/`module`/`types`, from the
+  tsdown entry glob. The `customExports` callback normalizes raw keys with three
+  rules: (1) pass through non-model entries (`.`, `./units`, `./package.json`);
+  (2) keep ONLY each folder's `index` entry, so per-method impl files (e.g.
+  `solarposition/spa/spa.ts`) stay **private** — never a public subpath; (3)
+  strip the internal `models/` prefix and collapse the trailing `/index`. Net
+  public shape: `@pvkit/core/<module>` and `@pvkit/core/<module>/<method>`,
+  identical to before.
+- **`exports`/`publishConfig`/`main`/`module`/`types` are machine-owned —
+  regenerate, don't edit.** After adding or removing a method folder or module,
+  run `bun run build` to regenerate them and commit the updated `package.json`.
+  Pre-commit hooks run biome/tsgo/harness but NOT build, so a stale `exports` map
+  is not auto-caught — rebuild whenever you change the module/method set. Why
+  auto over hand-written wildcards: the map always matches real `dist` output (no
+  drift), impl files are filtered out centrally, and there is nothing to
+  hand-maintain; the cost is that build mutates `package.json` plus a small
+  `customExports` callback.
 - **Glob tsdown entry, zero wiring per method.** `tsdown.config.ts` entry is
-  `["src/index.ts", "src/models/**/*.ts", "!src/models/**/*.test.ts",
-  "!src/models/**/*.bench.ts"]` — new method files are auto-built; tests and
-  benches never ship to `dist`.
+  `["src/index.ts", "src/units.ts", "src/models/**/*.ts", "!**/*.test.ts",
+  "!**/*.bench.ts"]` — the `**` glob reaches into method folders, so new method
+  folders are auto-built and feed the entry list that exports generation reads;
+  tests and benches never ship to `dist`. `hash: false` keeps generated `dist`
+  filenames (and thus the generated exports paths) stable, so `package.json` does
+  not churn on every content change.
 - **TS consumers need `moduleResolution: "bundler"`** (or `node16`+) to resolve
-  the wildcard subpath types.
+  the generated subpath types.
+- **Depth-agnostic.** Per-method subpath stays the preferred granularity, but
+  deeper nesting (`@pvkit/core/<module>/<theory>/<method>`) works automatically:
+  the entry glob (`**`) and the `customExports` key-normalization are both
+  depth-agnostic. Use a middle folder only where a model-family groups several
+  methods.
 
 ## Module boundaries & tests
 
-- **Per-method 4-file set.** Each calculation method ships four co-located files
-  under `src/models/<module>/`:
+- **Per-method folder, 4-file set.** Each calculation method lives in its own
+  folder `src/models/<module>/<method>/` holding four files plus a method-level
+  `index.ts`:
+  - `index.ts` — method subpath entry; re-exports the impl (`export * from
+    "./<method>.ts"`).
   - `<method>.ts` — implementation.
   - `<method>.md` — theory: source URL(s) of the paper/reference, the
     principle/equations, assumptions, and the stated accuracy tolerance + which
@@ -120,19 +149,87 @@ file needs no wiring.
   - `<method>.test.ts` — accuracy test: assert against pinned reference outputs
     within a documented tolerance.
   - `<method>.bench.ts` — performance benchmark (per-call timing, regression watch).
-- **Tests co-locate per method**, independent: `<method>.test.ts` next to
-  `<method>.ts` (as `units.test.ts` already does at top level). Each method pins
-  its own reference fixtures — no shared fixture state across methods or modules.
+- **Tests co-locate per method**, independent: `<method>.test.ts` sits in the
+  method folder next to `<method>.ts` (top-level files like `units.ts` keep their
+  flat `units.test.ts` companion). Each method pins its own reference fixtures —
+  no shared fixture state across methods or modules.
 - **JS numerical-limit caveat — tolerance-based, not bit-exact.** Accuracy tests
   assert within a documented tolerance, never exact equality: float64 only,
   large-angle accumulation (e.g. SPA Julian-day scaling), and platform-specific
   `Math.sin`/`Math.cos` differences all perturb the low bits. Each `<method>.md`
-  must state the tolerance and its justification.
+  must state the tolerance and its justification. Full rationale + the production
+  failure modes and their fixes: "Numerical strategy — float64, zero deps" below.
 - **Sharing is one-directional only.** A small foundation layer (`units.ts`,
   shared geo/time types) is imported *upward* by modules. Modules must NOT import
   each other (no `clearsky` → `irradiance`); cross-module relationships are
   data/function pipelines (`solarposition` output → `clearsky`/`irradiance`
   input), not code sharing. Cycles break tree-shaking and the build.
+
+## Numerical strategy — float64, zero deps
+
+pvkit computes in JS `number` (IEEE 754 float64) and nothing else. **No
+decimal/BigInt/bignum library**, ever — they would break the zero-runtime-dep
+invariant and buy *zero* accuracy that PV physics can use. This section is the
+durable rationale and the rules; treat it as locked.
+
+### Precision floor is a non-issue
+
+float64 = 52-bit mantissa, ε ≈ 2.22e-16, ~15–16 significant decimal digits —
+*identical* to C `double` (NREL SPA reference impl) and Python `float` (pvlib).
+So pvkit matches the reference implementations natively. The headline SPA
+accuracy (±0.0003°) needs ~7 digits; float64 gives ~15. Input data is the real
+floor anyway: measured irradiance is ±2–5%, so a 1e-15 compute error is noise
+~13 orders down. **Do not** reach for higher-precision arithmetic to "improve"
+results — the bottleneck is physics and input data, not the float.
+
+### What actually bites in production (ranked) and the fix
+
+Each has a known, decades-old, zero-dep fix. Nothing here needs research.
+
+1. **Time-series accumulation error — #1 real risk.** Lifetime energy =
+   sum over 8760 hourly (or 525,600 minute) steps × 25 yr. Naïve `sum += x`
+   accumulates rounding error over ~10^5–10^6 additions; the *money number*
+   (lifetime kWh → ROI) drifts. **Fix:** Kahan/Neumaier compensated summation
+   for every energy integral / long reduction. Cheap, pure, zero-dep. Lock this
+   into `pvsystem`/`metrics` when they land — do NOT ship a plain
+   `reduce((a,b)=>a+b)` for energy totals.
+2. **Time stored as float.** A Julian Date is ~2.46e6; float64 leaves ~9 digits
+   after the decimal → ms-ish resolution, and *accumulating* JD over decades
+   loses sub-second binning. **Fix:** store time as integer ms-epoch (`Date` /
+   `number` ms is exact to ~285k yr via the 53-bit integer range); convert to JD
+   only at the point of use, never persist an accumulated JD.
+3. **Catastrophic cancellation near the horizon.** Sunrise/sunset, zenith > 85°,
+   air mass ∝ 1/cos(z) blows up near 90°; small angle error → large irradiance
+   error at dawn/dusk (matters for E/W-facing arrays, winter). **Fix:** clamp /
+   guard near-horizon; follow each paper's refraction handling; put tolerance
+   tests *at the hard angles* (85–90° zenith, sunrise/sunset), not only at noon.
+4. **Large-argument trig.** SPA accumulates angles to thousands of degrees, then
+   takes sin/cos; `Math.sin` of a huge argument loses precision in range
+   reduction. **Fix:** reduce mod 360° (or 2π) *before every* trig call —
+   `limitDegrees`/`limitRadians` in `src/units.ts`. This is in the SPA spec
+   (`limit_degrees`); pvlib does it. Never skip it.
+5. **Cross-engine reproducibility.** `Math.sin/cos/pow` differ by 1–2 ULP across
+   V8 / JavaScriptCore / Hermes — same code, slightly different last bits on
+   iPhone vs web. Usually noise, but a real support-ticket risk if any code does
+   equality/threshold compares. **Fix:** never `===` a computed float; assert
+   tolerance-equality only; document "results are tolerance-equal across
+   platforms, not bit-identical."
+6. **React Native / Hermes specifically.** pvkit's "everywhere JS" thesis
+   includes RN, and Hermes has historically differed on `Math` edge cases and
+   `Intl`. **Fix:** when CI matures, run the accuracy suite on Hermes, not just
+   Node — this is the *one* novel verification point; everything else has prior
+   art in pvlib/NREL.
+
+### Rules (enforce in review)
+
+- Energy/long sums → compensated (Kahan/Neumaier) summation, never naïve `+=`.
+- Time persisted as integer ms-epoch; JD derived at use-site, never accumulated.
+- Every trig call on an accumulated angle is preceded by
+  `limitDegrees`/`limitRadians`.
+- Tests assert documented tolerance, never bit-exact equality; include
+  near-horizon angles. Each `<method>.md` states its tolerance + justification.
+- No `===`/`!==` on computed floats anywhere.
+- Eventually: Hermes in CI.
 
 ## Banned terminology
 
