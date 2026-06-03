@@ -111,10 +111,46 @@ function matchesAny(file, globs) {
 }
 
 // Source logic changed but no test file changed -> nudge to add/adjust a test.
+// In 'module' mode each source is paired against tests in the SAME module key, so
+// touching one model can't be satisfied by an unrelated test elsewhere in the diff.
 function checkTestPairing(sourceFiles, testFiles) {
   const testable = sourceFiles.filter((f) => !isTest(f) && matchesAny(f, cfg.testableGlobs))
-  if (testable.length === 0 || testFiles.length > 0) return
-  warnings.push('testable code changed but no test file changed; add/adjust a test or record why omitted in handoff')
+  if (testable.length === 0) return
+  const root = cfg.modulePairingRoot
+  if (cfg.testPairingMode !== 'module' || !root) {
+    if (testFiles.length === 0)
+      warnings.push('testable code changed but no test file changed; add/adjust a test or record why omitted in handoff')
+    return
+  }
+  const testedKeys = new Set(testFiles.map((f) => moduleKey(f, root)).filter(Boolean))
+  const uncovered = new Set()
+  let nullKeyUntested = false
+  for (const f of testable) {
+    const k = moduleKey(f, root)
+    if (k === null) {
+      // Outside the module root: fall back to the global check so it's never silently exempt.
+      if (testFiles.length === 0) nullKeyUntested = true
+      continue
+    }
+    if (!testedKeys.has(k)) uncovered.add(k)
+  }
+  for (const k of uncovered)
+    warnings.push(`${k}: source changed but no test in the same module changed; add/adjust a test or record why omitted in handoff`)
+  if (nullKeyUntested)
+    warnings.push('testable code changed but no test file changed; add/adjust a test or record why omitted in handoff')
+}
+
+// Module key for pairing: <root><submodule-dir> for nested files, else <root><filename-stem>
+// for files directly under root. Stripping the .test/.spec suffix keys a source and its
+// sibling test identically (units.ts <-> units.test.ts), so they pair. No config-supplied
+// regex is compiled here -- a bad config can't throw and break the hook.
+function moduleKey(file, root) {
+  if (!file.startsWith(root)) return null
+  const rel = file.slice(root.length)
+  const slash = rel.indexOf('/')
+  if (slash !== -1) return root + rel.slice(0, slash)
+  const stem = rel.replace(/\.(test|spec)\.[^.]+$/, '').replace(/\.[^.]+$/, '')
+  return stem ? root + stem : null
 }
 
 // A touched source tree should keep its nearest agent-doc current.
