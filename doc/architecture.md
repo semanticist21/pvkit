@@ -193,9 +193,10 @@ Each has a known, decades-old, zero-dep fix. Nothing here needs research.
    for every energy integral / long reduction. Cheap, pure, zero-dep. Lock this
    into `pvsystem`/`metrics` when they land — do NOT ship a plain
    `reduce((a,b)=>a+b)` for energy totals.
-2. **Time stored as float.** A Julian Date is ~2.46e6; float64 leaves ~9 digits
-   after the decimal → ms-ish resolution, and *accumulating* JD over decades
-   loses sub-second binning. **Fix:** store time as integer ms-epoch (`Date` /
+2. **Time stored as float.** A Julian Date is ~2.46e6 (≈7 integer digits), so the
+   float64 ULP there is ~0.04 ms — fine for a single conversion, but *accumulating*
+   JD over decades erodes sub-second binning. **Fix:** store time as integer
+   ms-epoch (`Date` /
    `number` ms is exact to ~285k yr via the 53-bit integer range); convert to JD
    only at the point of use, never persist an accumulated JD.
 3. **Catastrophic cancellation near the horizon.** Sunrise/sunset, zenith > 85°,
@@ -226,8 +227,11 @@ Each has a known, decades-old, zero-dep fix. Nothing here needs research.
 - Time persisted as integer ms-epoch; JD derived at use-site, never accumulated.
 - Every trig call on an accumulated angle is preceded by
   `limitDegrees`/`limitRadians`.
-- Tests assert documented tolerance, never bit-exact equality; include
-  near-horizon angles. Each `<method>.md` states its tolerance + justification.
+- Tests of *physical-model accuracy* assert documented tolerance, never bit-exact
+  equality; include near-horizon angles. Each `<method>.md` states its tolerance +
+  justification. (Pure utility/identity tests — e.g. `limitDegrees(-1e-15) === 0`
+  — may assert exact values; the tolerance rule scopes to model outputs perturbed
+  by `Math`/float accumulation, not to exact arithmetic facts.)
 - No `===`/`!==` on computed floats anywhere.
 - Eventually: Hermes in CI.
 
