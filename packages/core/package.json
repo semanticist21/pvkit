@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Independent, ESM-first PV (solar) performance modeling engine — solar position, irradiance, cell temperature, system output. Validated against pvlib outputs.",
   "type": "module",
-  "license": "0BSD",
+  "license": "MIT",
   "author": "semanticist21",
   "repository": {
     "type": "git",
