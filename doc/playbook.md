@@ -138,3 +138,10 @@ attw (bundler/node16 resolution) were all green.
 **Truth:** the root entry exports only `units.ts`; models are imported from their subpaths.
 **Apply:** keep `scripts/check-consumer.mjs` in CI — it installs the packed tarball and
 typechecks with `skipLibCheck: false`, which is what catches this class of bug.
+
+## 2026-10-05 — tsdown 0.23 changed the exports keys and output extension
+**Trap:** after bumping tsdown 0.12 → 0.23 the generated `exports` map collapsed to `.`/`./units`.
+**Truth:** tsdown now strips the trailing `/index` from keys itself (impl files like `spa/spa`
+still appear as keys) and defaults to `.mjs`/`.d.mts` on node.
+**Apply:** `customExports` filters on the *value* ending in `/index.<ext>`; keep
+`fixedExtension: false`. After a tsdown bump, diff the regenerated `package.json` exports.

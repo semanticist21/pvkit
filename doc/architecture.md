@@ -116,7 +116,7 @@ method or module file needs no hand-wiring.
 - **`exports`/`publishConfig`/`main`/`module`/`types` are machine-owned —
   regenerate, don't edit.** After adding or removing a method folder or module,
   run `pnpm build` to regenerate them and commit the updated `package.json`.
-  Pre-commit hooks run biome/tsgo/harness but NOT build, so a stale `exports` map
+  Pre-commit hooks run biome/tsc/harness but NOT build, so a stale `exports` map
   is not auto-caught — rebuild whenever you change the module/method set. Why
   auto over hand-written wildcards: the map always matches real `dist` output (no
   drift), impl files are filtered out centrally, and there is nothing to

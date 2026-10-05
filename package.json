@@ -15,10 +15,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.0",
-    "@typescript/native-preview": "^7.0.0-dev",
     "lefthook": "^1.7.0",
-    "tsdown": "^0.12.0",
-    "typescript": "^5.7.0",
+    "tsdown": "^0.23.0",
+    "typescript": "^7.0.2",
     "vitest": "^5.0.3"
   }
 }

@@ -17,14 +17,14 @@ for the pitch, `ROADMAP.md` for planned/under-review packages (`sizer`, `economi
 ## Commands
 
 Package manager is **pnpm** (`packageManager` pins the version; `corepack enable pnpm`);
-tests run on **vitest** under Node; typechecker is **tsgo** (`@typescript/native-preview`),
-not `tsc`. Publish with `pnpm publish` only (why: `doc/architecture.md` → "Subpath exports").
+tests run on **vitest** under Node; typechecker is TypeScript 7's native `tsc`.
+Publish with `pnpm publish` only (why: `doc/architecture.md` → "Subpath exports").
 
 ```bash
 pnpm install
 pnpm build                          # all packages (tsdown)
 pnpm test                           # all packages (vitest run)
-pnpm typecheck                      # tsgo --noEmit
+pnpm typecheck                      # tsc --noEmit
 pnpm lint                           # biome check .   (read-only)
 pnpm format                         # biome check --write .
 
@@ -33,7 +33,7 @@ pnpm vitest run src/units.test.ts   # one test file
 pnpm vitest run -t "foo"            # one test by name
 ```
 
-Pre-commit hooks (lefthook): biome write + tsgo typecheck + harness check. Installed by the
+Pre-commit hooks (lefthook): biome write + tsc typecheck + harness check. Installed by the
 `prepare` script on `pnpm install`. CI (`.github/workflows/ci.yml`) runs lint/typecheck/test/
 build on every PR and push to `main`. Releases are manual and local (`pnpm version` +
 `pnpm publish`) by the user; the npm org `@pvkit` exists.
