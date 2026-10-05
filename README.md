@@ -38,8 +38,9 @@ See [ROADMAP.md](ROADMAP.md) for packages under consideration.
 - Aggressive tree-shaking. `"sideEffects": false`, functional exports.
 - Zero runtime dependencies. Pure TS.
 - Build: `tsdown` (rolldown-based). ESM + `.d.ts` + subpath exports map.
-- Heavy time-series numeric loops (e.g. SPA) may later move to an opt-in WASM
-  (Rust) accelerated subpath. 1.0 ships pure JS first.
+- Pure JS is fast enough: SPA ≈ 18 µs/call (a year at 1-minute steps ≈ 10 s), every
+  other model < 0.4 µs. No WASM planned; a lighter sun-position algorithm is the
+  route if SPA ever becomes the bottleneck.
 
 ## Development
 

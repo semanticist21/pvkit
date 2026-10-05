@@ -1,7 +1,7 @@
 {
   "name": "@pvkit/core",
-  "version": "0.0.0",
-  "description": "ESM-first PV (solar) performance modeling engine — solar position, irradiance, cell temperature, system output. Numerically validated against reference implementations.",
+  "version": "0.1.0",
+  "description": "ESM-first PV (solar) performance modeling engine \u2014 solar position, irradiance, cell temperature, system output. Numerically validated against reference implementations.",
   "type": "module",
   "license": "MIT",
   "author": "semanticist21",
