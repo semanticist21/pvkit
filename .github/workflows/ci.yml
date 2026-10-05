@@ -20,5 +20,6 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm build
+      - run: git diff --exit-code packages/core/package.json # committed exports map is current
       - run: node scripts/check-treeshake.mjs
       - run: node scripts/check-consumer.mjs

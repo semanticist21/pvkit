@@ -1,6 +1,8 @@
 # /// script
 # requires-python = ">=3.11"
 # dependencies = ["pvlib==0.16.1"]
+# [tool.uv]
+# exclude-newer = "2026-10-06T00:00:00Z"
 # ///
 """End-to-end fixture: sun position → clear-sky → Perez POA → SAPM cell temp → PVWatts DC/AC → kWh.
 

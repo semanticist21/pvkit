@@ -14,22 +14,11 @@ file is the consolidated skeleton.
 
 ## `@pvkit/core` module order
 
-Each depends on the prior; implement in order:
+Dependency order: `solarposition` → `atmosphere` → `clearsky` → `irradiance` →
+`decomposition` → `iam` → `temperature` → `tracking` → `pvsystem` → `losses` → `metrics`.
+Method list (owner): `packages/core/README.md` → "Modules".
 
-1. `solarposition` (NREL SPA) — everything depends on sun position → first.
-2. `atmosphere` (Kasten-Young air mass, alt2pres, precipitable water, Linke/AOD) —
-   dataless helpers consumed by clearsky/irradiance.
-3. `clearsky` (Haurwitz / Ineichen / Simplified Solis) — fallback irradiance when no weather data.
-4. `irradiance` (Perez / Hay-Davies / Isotropic + AOI).
-5. `decomposition` (Erbs / Boland / DISC / DIRINT) — GHI → DNI/DHI splitters.
-6. `iam` (physical / ashrae / martin_ruiz / sapm) — incidence-angle modifier.
-7. `temperature` (SAPM / PVsyst).
-8. `tracking` (singleaxis / backtracking) — pure geometry, depends on solarposition.
-9. `pvsystem` (PVWatts) → kWh.
-10. `losses` (soiling kimber/hsu, combine_loss_factors) — optional derates.
-11. `metrics` (IEC 61724-1: PR, specific yield, capacity factor, availability).
-
-Full checklist: `packages/core/features.md`.
+Status checklist: `packages/core/features.md`.
 
 Each module is a subpath export (`@pvkit/core/solarposition`, …) whose
 `src/models/<module>/index.ts` is the convenience subpath entry re-exporting that
@@ -129,10 +118,17 @@ method or module file needs no hand-wiring.
   tests and benches never ship to `dist`. `hash: false` keeps generated `dist`
   filenames (and thus the generated exports paths) stable, so `package.json` does
   not churn on every content change.
-- **Publish only with `pnpm publish`.** Only pnpm (and yarn) apply
-  `publishConfig.exports`; `npm publish`/`bun publish` ship the dev `exports`
-  (→ `src/*.ts`), which `files: ["dist"]` excludes — a broken package. Verify with
-  `pnpm pack`: the tarball's `exports` must point at `./dist`.
+- **Release procedure (owner of this fact).** Only pnpm (and yarn) apply
+  `publishConfig.exports`; `npm publish` of the package *directory* ships the dev
+  `exports` (→ `src/*.ts`), which `files: ["dist"]` excludes — a broken package.
+  1. Clean tree, then `cd packages/core && pnpm version <patch|minor|major>` — bumps,
+     commits and tags (`v<x.y.z>`); it refuses on a dirty tree. Push commit + tag.
+  2. `pnpm pack` and check the tarball's `package.json` `exports` point at `./dist`.
+  3. Publish: `pnpm publish` from an interactive terminal, or from an agent shell (no
+     TTY → pnpm's OTP fails) `script -q /dev/null npm publish ./pvkit-core-<v>.tgz
+     --auth-type=web --access public` and hand the printed auth URL to the user.
+  4. Poll `https://registry.npmjs.org/@pvkit%2fcore` until the version is `latest`
+     (a brand-new package first shows a `0.0.0-stage` placeholder for minutes).
 - **TS consumers need `moduleResolution: "bundler"`** (or `node16`+) to resolve
   the generated subpath types.
 - **Depth-agnostic.** Per-method subpath stays the preferred granularity, but
@@ -166,7 +162,7 @@ method or module file needs no hand-wiring.
   must state the tolerance and its justification. Full rationale + the production
   failure modes and their fixes: "Numerical strategy — float64, zero deps" below.
 - **Sharing is one-directional only.** A small foundation layer (`units.ts`,
-  shared geo/time types) is imported *upward* by modules. Modules must NOT import
+  `sum.ts`) is imported *upward* by modules. Modules must NOT import
   each other (no `clearsky` → `irradiance`); cross-module relationships are
   data/function pipelines (`solarposition` output → `clearsky`/`irradiance`
   input), not code sharing. Cycles break tree-shaking and the build.
@@ -196,9 +192,8 @@ Each has a known, decades-old, zero-dep fix. Nothing here needs research.
    sum over 8760 hourly (or 525,600 minute) steps × 25 yr. Naïve `sum += x`
    accumulates rounding error over ~10^5–10^6 additions; the *money number*
    (lifetime kWh → ROI) drifts. **Fix:** Kahan/Neumaier compensated summation
-   for every energy integral / long reduction. Cheap, pure, zero-dep. Lock this
-   into `pvsystem`/`metrics` when they land — do NOT ship a plain
-   `reduce((a,b)=>a+b)` for energy totals.
+   for every energy integral / long reduction — `compensatedSum` in `src/sum.ts`,
+   used by `pvsystem/energy-kwh` and `metrics`. Never a plain `reduce((a,b)=>a+b)`.
 2. **Time stored as float.** A Julian Date is ~2.46e6 (≈7 integer digits), so the
    float64 ULP there is ~0.04 ms — fine for a single conversion, but *accumulating*
    JD over decades erodes sub-second binning. **Fix:** store time as integer
@@ -245,16 +240,11 @@ Each has a known, decades-old, zero-dep fix. Nothing here needs research.
 
 - **Do NOT use the term "barrel" / "barrel file"** anywhere — code comments,
   docs, commit messages, PR text, or chat. Call `src/index.ts` the **root entry**
-  (or "re-export entry"); call `src/<module>/index.ts` the **subpath entry**. The
+  (or "re-export entry"); call `src/models/<module>/index.ts` the **subpath entry**. The
   pattern itself is fine; only the word is banned.
 
 ## File-naming convention
 
 - **All repo file names are kebab-case** (e.g. `features.md`, not `FEATURES.md`).
-  Applies to docs and source alike. Code identifiers stay camelCase (see Open
-  decisions); only filenames are kebab.
-
-## Open decisions
-
-See `packages/core/AGENTS.md` — naming (camelCase proposed) and time-series shape
-(scalar in/out core + thin adapter, to keep a future WASM boundary clean).
+  Applies to docs and source alike. Code identifiers stay camelCase; only
+  filenames are kebab.

@@ -9,7 +9,7 @@ export default defineConfig({
     "!src/models/**/*.bench.ts",
   ],
   format: ["esm"],
-  dts: true,
+  dts: { sourcemap: false }, // no .d.ts.map: they point at src/, which is not published
   clean: true,
   treeshake: true,
   hash: false,

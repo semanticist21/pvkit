@@ -71,6 +71,10 @@ const tempCell = sapmCell({
 const watts = pvwattsDc({ effectiveIrradiance: poa.poaGlobal, tempCell, pdc0: 5000, gammaPdc: -0.004 });
 ```
 
+Like pvlib, models return `NaN` where the math is undefined (e.g. Perez with
+dni = dhi = 0 at low sun in measured data), and `energyKwh` does not skip it — map
+`NaN` to 0 before summing if that is what you mean.
+
 Full chain to kWh (Perez, inverter, energy sum): [`src/pipeline.test.ts`](https://github.com/semanticist21/pvkit/blob/main/packages/core/src/pipeline.test.ts).
 Conventions (time, angles, azimuth origin, ΔT): [`doc/conventions.md`](https://github.com/semanticist21/pvkit/blob/main/doc/conventions.md).
 

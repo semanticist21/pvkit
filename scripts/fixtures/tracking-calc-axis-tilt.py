@@ -1,6 +1,8 @@
 # /// script
 # requires-python = ">=3.11"
 # dependencies = ["pvlib==0.16.1"]
+# [tool.uv]
+# exclude-newer = "2026-10-06T00:00:00Z"
 # ///
 """Fixtures for @pvkit/core tracking/calc-axis-tilt and tracking/calc-cross-axis-tilt
 from pvlib.tracking.calc_axis_tilt / calc_cross_axis_tilt (same slope geometry).

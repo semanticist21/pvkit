@@ -19,7 +19,8 @@ const MODELS: Record<string, (p: Params) => (aoi: number) => number> = {
     sapm({ aoi, b0: 0, b1: 0, b2: 0, b3: 0, b4: 0, b5: 0, ...(p as Partial<Params>) }),
 };
 
-describe("marion vs pvlib", () => {
+// num = 2000 cases are O(num²) — ~0.7 s alone, several s under a loaded CI runner.
+describe("marion vs pvlib", { timeout: 30_000 }, () => {
   test.each(fixtures.cases.map((c, i) => [i, c] as const))("case %i", (_, { input, expected }) => {
     const model = MODELS[input.model];
     if (!model) throw new Error(`unknown model ${input.model}`);

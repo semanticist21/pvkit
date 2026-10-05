@@ -1,6 +1,8 @@
 # /// script
 # requires-python = ">=3.11"
 # dependencies = ["pvlib==0.16.1"]
+# [tool.uv]
+# exclude-newer = "2026-10-06T00:00:00Z"
 # ///
 """Fixtures for @pvkit/core temperature/generic-linear and temperature/generic-linear-model
 from pvlib.temperature.generic_linear and pvlib.temperature.GenericLinearModel.

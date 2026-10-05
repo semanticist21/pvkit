@@ -52,6 +52,8 @@ const need = (value: number | undefined, name: string, model: string): number =>
 /**
  * Plane-of-array irradiance from sun/panel geometry and DNI/GHI/DHI: sky diffuse
  * (selected model) + ground diffuse (albedo) + beam (`dni · cos aoi`), W/m².
+ * With `model: "perez"`, dni = dhi = 0 while the sun is up gives NaN (sky clearness 0/0),
+ * exactly as pvlib — common at sunrise/sunset in measured data; guard before summing.
  *
  * @example
  * totalIrradiance({ surfaceTilt: 30, surfaceAzimuth: 180, solarZenith: 40,

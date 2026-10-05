@@ -25,9 +25,6 @@ models never import each other.
 - [x] Compensated summation (`src/sum.ts`) for energy/series reductions
 - [x] Constants live with the method that cites them (no shared constants file)
 - [x] Shared time/geo convention (`timeMs` UTC, degrees, Pa, °C) — `doc/conventions.md`
-      - Standard weather input shape is `{ ghi, dni, dhi, tempAir, windSpeed }`
-        (scalar or time-series), so data can come from any source (user CSV, `io`
-        pkg, `clearsky`) — core never fetches.
 - [x] Time-series adapter shape — scalar core locked; batch adapter on demand (`doc/conventions.md`)
 - [x] Naming convention locked (camelCase)
 
@@ -109,7 +106,7 @@ chain has no beam component.
 - [x] Erbs (kt → diffuse fraction, 1982) — the essential cheap splitter
 - [x] Boland (logistic diffuse-fraction)
 - [x] DISC (kt + airmass → DNI)
-- [x] DIRINT (DISC + 3-hour stability window + dewpoint) — needs time-series adapter
+- [x] DIRINT (DISC + 3-hour stability window + dewpoint) — explicit previous/next neighbour inputs
 - [x] DIRINDEX (dirint × clearsky ratio)
 - [x] Validation fixtures vs reference (pvlib)
 
@@ -133,7 +130,7 @@ POA→effective irradiance is incomplete without it.
 - [x] SAPM cell/module temperature (King, Sandia)
 - [x] PVsyst thermal model (U-value)
 - [x] Faiman model (optional)
-- [x] Fuentes (energy-balance, iterative/prior-timestep — needs time-series adapter)
+- [x] Fuentes (energy-balance) — step function with prior module temperature
 - [x] noct_sam (from NOCT rating)
 - [x] ross (single-param linear)
 - [x] GenericLinearModel (convert coeffs between faiman/pvsyst/sapm/noct — a pvkit differentiator)

@@ -1,6 +1,8 @@
 # /// script
 # requires-python = ">=3.11"
 # dependencies = ["pvlib==0.16.1"]
+# [tool.uv]
+# exclude-newer = "2026-10-06T00:00:00Z"
 # ///
 """Fixtures for @pvkit/core decomposition/dirint and decomposition/dirindex, plus the DIRINT
 coefficient table, from pvlib.irradiance.dirint / dirindex / _get_dirint_coeffs.

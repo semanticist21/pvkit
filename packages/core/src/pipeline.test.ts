@@ -85,3 +85,22 @@ test("energy total matches pvlib", () => {
     Math.abs(energyKwh({ power: pac, stepHours: p.stepMinutes / 60 }) - fixture.energyKwh),
   ).toBeLessThan(1e-9);
 });
+
+test("measured-style dark step at low sun: Perez → NaN propagates to energy unless guarded", () => {
+  const poa = totalIrradiance({
+    surfaceTilt: 30,
+    surfaceAzimuth: 180,
+    solarZenith: 88,
+    solarAzimuth: 90,
+    ghi: 0,
+    dni: 0,
+    dhi: 0,
+    model: "perez",
+    dniExtra: 1360,
+    airmassRelative: 20,
+  });
+  expect(poa.poaGlobal).toBeNaN(); // pvlib gives NaN here too
+  const power = [poa.poaGlobal, 1000];
+  expect(energyKwh({ power, stepHours: 1 })).toBeNaN();
+  expect(energyKwh({ power: power.map((p) => (Number.isNaN(p) ? 0 : p)), stepHours: 1 })).toBe(1);
+});
