@@ -32,6 +32,7 @@
     "./metrics": "./src/models/metrics/index.ts",
     "./pvsystem": "./src/models/pvsystem/index.ts",
     "./solarposition": "./src/models/solarposition/index.ts",
+    "./solarposition/spa": "./src/models/solarposition/spa/index.ts",
     "./temperature": "./src/models/temperature/index.ts",
     "./tracking": "./src/models/tracking/index.ts",
     "./units": "./src/units.ts",
@@ -49,6 +50,7 @@
       "./metrics": "./dist/models/metrics/index.js",
       "./pvsystem": "./dist/models/pvsystem/index.js",
       "./solarposition": "./dist/models/solarposition/index.js",
+      "./solarposition/spa": "./dist/models/solarposition/spa/index.js",
       "./temperature": "./dist/models/temperature/index.js",
       "./tracking": "./dist/models/tracking/index.js",
       "./units": "./dist/units.js",
@@ -61,7 +63,8 @@
   "scripts": {
     "build": "tsdown",
     "test": "vitest run",
-    "typecheck": "tsgo --noEmit"
+    "typecheck": "tsgo --noEmit",
+    "bench": "vitest bench --run"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",

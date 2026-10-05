@@ -11,7 +11,8 @@ Cross-module rules every model follows. Method-specific math lives next to the c
   timezone, or a local time; callers pass `date.getTime()`. Julian dates are derived inside
   the model, never accepted or persisted.
 - **ΔT** (TT − UT) is an optional per-call `deltaT?: number` in seconds, default `67`
-  (pvlib's default, so fixtures line up). No global setter.
+  (SPA paper example value). No global setter. Fixture scripts always pass ΔT explicitly —
+  pvlib (0.16.1) otherwise estimates it from the date.
 - **Angles** are degrees at the public surface (inputs: bare `number`; outputs: branded
   `Degrees`); radians only internally.
 - **Geometry:** latitude north-positive, longitude **east-positive**; azimuth measured from

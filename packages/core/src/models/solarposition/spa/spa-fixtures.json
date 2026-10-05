@@ -1,0 +1,3200 @@
+{
+  "meta": {
+    "reference": "pvlib.solarposition.spa_python (how='numpy') @ pvlib 0.16.1",
+    "atmosRefract": 0.5667
+  },
+  "cases": [
+    {
+      "input": {
+        "timeMs": 1066419030000,
+        "latitude": 39.742476,
+        "longitude": -105.1786,
+        "elevation": 1830.14,
+        "pressure": 82000.0,
+        "temperature": 11.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 50.127954096160074,
+        "apparentZenith": 50.11162202403697,
+        "elevation": 39.872045903839926,
+        "apparentElevation": 39.88837797596303,
+        "azimuth": 194.34024051024002,
+        "equationOfTime": 14.641510770821696
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1709208000000,
+        "latitude": 37.5665,
+        "longitude": 126.978,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 121.28764005735893,
+        "apparentZenith": 121.28764005735893,
+        "elevation": -31.28764005735893,
+        "apparentElevation": -31.28764005735893,
+        "azimuth": 285.68191965802293,
+        "equationOfTime": -12.391056207408838
+      }
+    },
+    {
+      "input": {
+        "timeMs": 946728000000,
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 23.047293648748166,
+        "apparentZenith": 23.04013849627927,
+        "elevation": 66.95270635125183,
+        "apparentElevation": 66.95986150372073,
+        "azimuth": 178.0689531920708,
+        "equationOfTime": -3.281710741641291
+      }
+    },
+    {
+      "input": {
+        "timeMs": -2194192800000,
+        "latitude": 51.4779,
+        "longitude": -0.0015,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 72.06862143409927,
+        "apparentZenith": 72.01764873401615,
+        "elevation": 17.93137856590073,
+        "apparentElevation": 17.982351265983844,
+        "azimuth": 74.63133093250053,
+        "equationOfTime": -1.3640730788756628
+      }
+    },
+    {
+      "input": {
+        "timeMs": 4133095200000,
+        "latitude": -33.8688,
+        "longitude": 151.2093,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 98.03129341184463,
+        "apparentZenith": 98.03129341184463,
+        "elevation": -8.031293411844626,
+        "apparentElevation": -8.031293411844626,
+        "azimuth": 125.3286743257919,
+        "equationOfTime": 1.9446147554845084
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1750464000000,
+        "latitude": 89.9,
+        "longitude": 0.0,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 66.66385782625238,
+        "apparentZenith": 66.62527553345093,
+        "elevation": 23.336142173747618,
+        "apparentElevation": 23.37472446654907,
+        "azimuth": 359.56335691883464,
+        "equationOfTime": -1.7446059302455978
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1766318400000,
+        "latitude": -89.9,
+        "longitude": 180.0,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 66.66408167059468,
+        "apparentZenith": 66.62549897343034,
+        "elevation": 23.33591832940532,
+        "apparentElevation": 23.374501026569664,
+        "azimuth": 179.54637690338313,
+        "equationOfTime": 1.8191424130491214
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1742461200000,
+        "latitude": 10.0,
+        "longitude": -180.0,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 132.34203294882025,
+        "apparentZenith": 132.34203294882025,
+        "elevation": -42.34203294882023,
+        "apparentElevation": -42.34203294882023,
+        "azimuth": 279.2450332674551,
+        "equationOfTime": -7.393796938165906
+      }
+    },
+    {
+      "input": {
+        "timeMs": 760675386288,
+        "latitude": -17.470217587331753,
+        "longitude": -112.67801773658688,
+        "elevation": 1792.6966909657328,
+        "pressure": 88257.34878721579,
+        "temperature": 27.09399754034394,
+        "deltaT": 65.41015395627284
+      },
+      "expected": {
+        "zenith": 98.81776949071661,
+        "apparentZenith": 98.81776949071661,
+        "elevation": -8.817769490716614,
+        "apparentElevation": -8.817769490716614,
+        "azimuth": 251.03027079172955,
+        "equationOfTime": -14.174556670584934
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1408471453235,
+        "latitude": -37.82722629890542,
+        "longitude": -97.20792581117237,
+        "elevation": 2415.61183554008,
+        "pressure": 62111.503414655934,
+        "temperature": -12.056496300789508,
+        "deltaT": 71.82489973496054
+      },
+      "expected": {
+        "zenith": 50.87887532600078,
+        "apparentZenith": 50.86504950090726,
+        "elevation": 39.12112467399922,
+        "apparentElevation": 39.13495049909274,
+        "azimuth": 8.87605532362386,
+        "equationOfTime": -3.569175620585156
+      }
+    },
+    {
+      "input": {
+        "timeMs": -261897726470,
+        "latitude": 83.51444569882185,
+        "longitude": -173.4975142886804,
+        "elevation": 3499.0524474003005,
+        "pressure": 87899.66102576058,
+        "temperature": -13.844310347079984,
+        "deltaT": 72.11836185379816
+      },
+      "expected": {
+        "zenith": 84.45271398307995,
+        "apparentZenith": 84.31121459747453,
+        "elevation": 5.5472860169200535,
+        "apparentElevation": 5.688785402525469,
+        "azimuth": 106.5077806207164,
+        "equationOfTime": 4.139846500962449
+      }
+    },
+    {
+      "input": {
+        "timeMs": 785625935432,
+        "latitude": -7.994687950859271,
+        "longitude": 73.27603407225484,
+        "elevation": 1342.2187009296938,
+        "pressure": 98557.75168036173,
+        "temperature": -29.94652292891608,
+        "deltaT": 70.42485999773416
+      },
+      "expected": {
+        "zenith": 133.01559421488383,
+        "apparentZenith": 133.01559421488383,
+        "elevation": -43.01559421488384,
+        "apparentElevation": -43.01559421488384,
+        "azimuth": 127.81782148243087,
+        "equationOfTime": 13.521852101390323
+      }
+    },
+    {
+      "input": {
+        "timeMs": -42181632403,
+        "latitude": 40.40795617443086,
+        "longitude": -158.61361520470075,
+        "elevation": 2506.481749030565,
+        "pressure": 89459.01135090494,
+        "temperature": -24.893542433970033,
+        "deltaT": 61.59767774200483
+      },
+      "expected": {
+        "zenith": 58.340988342684255,
+        "apparentZenith": 58.31343731214666,
+        "elevation": 31.659011657315748,
+        "apparentElevation": 31.686562687853336,
+        "azimuth": 106.82454737537233,
+        "equationOfTime": -0.4447412855515722
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1947477194802,
+        "latitude": -46.626963369965125,
+        "longitude": 4.20913483265132,
+        "elevation": 3609.0231132094837,
+        "pressure": 72419.71307150999,
+        "temperature": -15.0180757607431,
+        "deltaT": 66.10410664144199
+      },
+      "expected": {
+        "zenith": 88.69762928436018,
+        "apparentZenith": 88.43445665031238,
+        "elevation": 1.302370715639828,
+        "apparentElevation": 1.565543349687614,
+        "azimuth": 85.80302727360481,
+        "equationOfTime": 5.714378703683906
+      }
+    },
+    {
+      "input": {
+        "timeMs": 797722395516,
+        "latitude": -1.63396684594737,
+        "longitude": 9.698242110741798,
+        "elevation": 2758.250266851696,
+        "pressure": 83919.70343472563,
+        "temperature": 22.840524036573694,
+        "deltaT": 57.08984642508743
+      },
+      "expected": {
+        "zenith": 152.01996349881915,
+        "apparentZenith": 152.01996349881915,
+        "elevation": -62.01996349881915,
+        "apparentElevation": -62.01996349881915,
+        "azimuth": 285.7232060138259,
+        "equationOfTime": -0.8114844191431985
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2444566826496,
+        "latitude": -32.56539236564047,
+        "longitude": -159.41582693545834,
+        "elevation": 603.2948692710848,
+        "pressure": 81620.45080584244,
+        "temperature": 23.338639591248604,
+        "deltaT": 60.6064366519037
+      },
+      "expected": {
+        "zenith": 130.83274671242387,
+        "apparentZenith": 130.83274671242387,
+        "elevation": -40.83274671242388,
+        "apparentElevation": -40.83274671242388,
+        "azimuth": 85.90144699227977,
+        "equationOfTime": -1.4400046551891137
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1270046090744,
+        "latitude": -17.30100568143158,
+        "longitude": -71.78446356995079,
+        "elevation": 343.07655690700176,
+        "pressure": 90743.01987851433,
+        "temperature": -7.926749713522236,
+        "deltaT": 69.73318128049496
+      },
+      "expected": {
+        "zenith": 39.988033084317244,
+        "apparentZenith": 39.974446436987286,
+        "elevation": 50.011966915682756,
+        "apparentElevation": 50.025553563012714,
+        "azimuth": 60.491363204972856,
+        "equationOfTime": -4.148949477719725
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3034629698480,
+        "latitude": -65.54824535482356,
+        "longitude": 146.93596571120705,
+        "elevation": 2526.5826364490867,
+        "pressure": 61121.6034012048,
+        "temperature": 41.088129762785776,
+        "deltaT": 74.11150396180753
+      },
+      "expected": {
+        "zenith": 60.72220070935218,
+        "apparentZenith": 60.70586835804375,
+        "elevation": 29.277799290647824,
+        "apparentElevation": 29.29413164195625,
+        "azimuth": 29.558491419922518,
+        "equationOfTime": -12.277928853334743
+      }
+    },
+    {
+      "input": {
+        "timeMs": 780199044022,
+        "latitude": 58.94498548940876,
+        "longitude": -178.9715875735712,
+        "elevation": 157.10753628853925,
+        "pressure": 79237.1098311826,
+        "temperature": -15.332203987963377,
+        "deltaT": 61.28809387273986
+      },
+      "expected": {
+        "zenith": 63.66653290216668,
+        "apparentZenith": 63.63735891411899,
+        "elevation": 26.333467097833324,
+        "apparentElevation": 26.36264108588101,
+        "azimuth": 216.42072795868825,
+        "equationOfTime": 7.080834992074415
+      }
+    },
+    {
+      "input": {
+        "timeMs": -598315387891,
+        "latitude": 61.97016328201075,
+        "longitude": -172.0516118960376,
+        "elevation": 544.2382138151988,
+        "pressure": 90746.42813462322,
+        "temperature": 11.946451663846881,
+        "deltaT": 64.10391580824694
+      },
+      "expected": {
+        "zenith": 85.42119054120695,
+        "apparentZenith": 85.26763294494373,
+        "elevation": 4.578809458793049,
+        "apparentElevation": 4.732367055056272,
+        "azimuth": 203.10623236669747,
+        "equationOfTime": -9.482410716460436
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2866907189001,
+        "latitude": -69.34856124518096,
+        "longitude": -29.631697131844128,
+        "elevation": 894.4397109258468,
+        "pressure": 78826.44199892564,
+        "temperature": 32.15677783635229,
+        "deltaT": 63.45938387607234
+      },
+      "expected": {
+        "zenith": 71.84545412053448,
+        "apparentZenith": 71.80888638660643,
+        "elevation": 18.154545879465516,
+        "apparentElevation": 18.191113613393565,
+        "azimuth": 272.50842934462753,
+        "equationOfTime": 16.40801399105112
+      }
+    },
+    {
+      "input": {
+        "timeMs": -123912194526,
+        "latitude": 86.00793065662988,
+        "longitude": 99.08048508438819,
+        "elevation": 3628.810070287629,
+        "pressure": 76477.00610378709,
+        "temperature": -1.0545882397896538,
+        "deltaT": 72.39704830734725
+      },
+      "expected": {
+        "zenith": 111.66797950731731,
+        "apparentZenith": 111.66797950731731,
+        "elevation": -21.66797950731732,
+        "apparentElevation": -21.66797950731732,
+        "azimuth": 35.905625945959855,
+        "equationOfTime": -12.835638298405684
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1139629989122,
+        "latitude": 83.71261824676596,
+        "longitude": 56.899550291799585,
+        "elevation": 3019.2106226504548,
+        "pressure": 75587.26654627993,
+        "temperature": 40.27707346341599,
+        "deltaT": 70.01941086448721
+      },
+      "expected": {
+        "zenith": 101.70178121032373,
+        "apparentZenith": 101.70178121032373,
+        "elevation": -11.70178121032373,
+        "apparentElevation": -11.70178121032373,
+        "azimuth": 112.96123962183026,
+        "equationOfTime": -14.233589602619759
+      }
+    },
+    {
+      "input": {
+        "timeMs": -128134050812,
+        "latitude": -18.840670015428422,
+        "longitude": 32.7150604854521,
+        "elevation": 958.5656707452852,
+        "pressure": 66766.80901687605,
+        "temperature": -12.967378551716964,
+        "deltaT": 74.9466746369202
+      },
+      "expected": {
+        "zenith": 132.7614736273951,
+        "apparentZenith": 132.7614736273951,
+        "elevation": -42.7614736273951,
+        "apparentElevation": -42.7614736273951,
+        "azimuth": 151.03618664555876,
+        "equationOfTime": 7.453933534736279
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1686053359305,
+        "latitude": 51.45540143944153,
+        "longitude": 6.667757878008782,
+        "elevation": 3182.4299008565963,
+        "pressure": 70109.22962498403,
+        "temperature": 34.02068530799237,
+        "deltaT": 61.02188618887274
+      },
+      "expected": {
+        "zenith": 29.694405275636463,
+        "apparentZenith": 29.688241925550628,
+        "elevation": 60.30559472436354,
+        "apparentElevation": 60.31175807444937,
+        "azimuth": 197.58522571242574,
+        "equationOfTime": 1.342165265836229
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3099286742494,
+        "latitude": 0.600103862310426,
+        "longitude": -138.45597150326984,
+        "elevation": 1707.6330994977998,
+        "pressure": 72171.28599583372,
+        "temperature": 23.262002689841992,
+        "deltaT": 62.868729522678755
+      },
+      "expected": {
+        "zenith": 174.35064194581827,
+        "apparentZenith": 174.35064194581827,
+        "elevation": -84.35064194581825,
+        "apparentElevation": -84.35064194581825,
+        "azimuth": 270.40321533695237,
+        "equationOfTime": -7.81401688560436
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1221543369065,
+        "latitude": 1.3080799135110044,
+        "longitude": -143.61401967195965,
+        "elevation": 546.1837089574501,
+        "pressure": 104733.88261990425,
+        "temperature": 12.76275713791205,
+        "deltaT": 61.20879384272696
+      },
+      "expected": {
+        "zenith": 121.61987225870158,
+        "apparentZenith": 121.61987225870158,
+        "elevation": -31.619872258701573,
+        "apparentElevation": -31.619872258701573,
+        "azimuth": 273.73319026407205,
+        "equationOfTime": 5.217279655067614
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3242304623673,
+        "latitude": 59.70927437055656,
+        "longitude": 175.18840033896942,
+        "elevation": 1788.854503581697,
+        "pressure": 81221.45021906312,
+        "temperature": -25.778274220361162,
+        "deltaT": 73.11374390047853
+      },
+      "expected": {
+        "zenith": 106.77528419976963,
+        "apparentZenith": 106.77528419976963,
+        "elevation": -16.77528419976963,
+        "apparentElevation": -16.77528419976963,
+        "azimuth": 64.89506489950321,
+        "equationOfTime": 9.697812624668586
+      }
+    },
+    {
+      "input": {
+        "timeMs": -358466242333,
+        "latitude": 56.32113482225746,
+        "longitude": -74.21879686805495,
+        "elevation": 729.4588809488536,
+        "pressure": 69251.73659095026,
+        "temperature": -11.416247173881775,
+        "deltaT": 70.25130352431152
+      },
+      "expected": {
+        "zenith": 102.75028007189216,
+        "apparentZenith": 102.75028007189216,
+        "elevation": -12.750280071892169,
+        "apparentElevation": -12.750280071892169,
+        "azimuth": 315.5103597100642,
+        "equationOfTime": -2.7916292239460745
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1577597101289,
+        "latitude": -19.034057140338355,
+        "longitude": -154.5531853189048,
+        "elevation": 157.02851585584244,
+        "pressure": 76009.70273415284,
+        "temperature": 10.256112531127144,
+        "deltaT": 66.33939967398227
+      },
+      "expected": {
+        "zenith": 96.58323366627394,
+        "apparentZenith": 96.58323366627394,
+        "elevation": -6.583233666273939,
+        "apparentElevation": -6.583233666273939,
+        "azimuth": 242.6129086007826,
+        "equationOfTime": -1.7409150350031268
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1274418356562,
+        "latitude": -33.67233826062834,
+        "longitude": 7.775608916724179,
+        "elevation": 2678.4140856660415,
+        "pressure": 91860.87314332864,
+        "temperature": 14.789132193229154,
+        "deltaT": 68.44399173865439
+      },
+      "expected": {
+        "zenith": 104.92805073411249,
+        "apparentZenith": 104.92805073411249,
+        "elevation": -14.928050734112484,
+        "apparentElevation": -14.928050734112484,
+        "azimuth": 75.46038781532559,
+        "equationOfTime": 3.4382825126194803
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1461291348140,
+        "latitude": 18.642971433039936,
+        "longitude": 176.20850266223988,
+        "elevation": 2717.7833699266753,
+        "pressure": 62393.05328584445,
+        "temperature": 32.342585474622126,
+        "deltaT": 73.03326238410375
+      },
+      "expected": {
+        "zenith": 30.061557372755715,
+        "apparentZenith": 30.055959715271975,
+        "elevation": 59.938442627244285,
+        "apparentElevation": 59.944040284728025,
+        "azimuth": 262.2946329319533,
+        "equationOfTime": 1.5038280046755972
+      }
+    },
+    {
+      "input": {
+        "timeMs": -518067565478,
+        "latitude": 78.23214319594231,
+        "longitude": -15.152852023779154,
+        "elevation": 3319.362659772852,
+        "pressure": 102082.09608826533,
+        "temperature": 33.13388897002758,
+        "deltaT": 69.61706152506933
+      },
+      "expected": {
+        "zenith": 76.10073973852178,
+        "apparentZenith": 76.03906046434892,
+        "elevation": 13.899260261478219,
+        "apparentElevation": 13.960939535651082,
+        "azimuth": 291.6046653848535,
+        "equationOfTime": -6.205053016790771
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1390123603842,
+        "latitude": 85.12490182997976,
+        "longitude": -75.87376552635573,
+        "elevation": 1749.3754168961125,
+        "pressure": 88228.69462096586,
+        "temperature": -12.028246881261444,
+        "deltaT": 67.74383289839288
+      },
+      "expected": {
+        "zenith": 112.45117168183769,
+        "apparentZenith": 112.45117168183769,
+        "elevation": -22.451171681837696,
+        "apparentElevation": -22.451171681837696,
+        "azimuth": 64.85902409633644,
+        "equationOfTime": -10.662080504560436
+      }
+    },
+    {
+      "input": {
+        "timeMs": 277568139293,
+        "latitude": 52.82790613458113,
+        "longitude": -101.54591744168452,
+        "elevation": 3728.571928269775,
+        "pressure": 71637.80762306845,
+        "temperature": -6.539992909399953,
+        "deltaT": 63.523007350643
+      },
+      "expected": {
+        "zenith": 82.61755672094725,
+        "apparentZenith": 82.52876324624438,
+        "elevation": 7.382443279052752,
+        "apparentElevation": 7.471236753755614,
+        "azimuth": 116.73667207399694,
+        "equationOfTime": 14.782854066859727
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2780828236568,
+        "latitude": 49.43876460274653,
+        "longitude": 120.13730337604875,
+        "elevation": 49.29081129314872,
+        "pressure": 75821.8523917534,
+        "temperature": 17.159330363156926,
+        "deltaT": 59.440603208022445
+      },
+      "expected": {
+        "zenith": 119.91497667828273,
+        "apparentZenith": 119.91497667828273,
+        "elevation": -29.914976678282734,
+        "apparentElevation": -29.914976678282734,
+        "azimuth": 285.53142687790853,
+        "equationOfTime": -14.064798219347722
+      }
+    },
+    {
+      "input": {
+        "timeMs": 636263361903,
+        "latitude": 77.69300842906082,
+        "longitude": 50.464099356657044,
+        "elevation": 1815.5870686885814,
+        "pressure": 60389.432954202304,
+        "temperature": 22.66116760373999,
+        "deltaT": 60.64241364749068
+      },
+      "expected": {
+        "zenith": 94.44540513767761,
+        "apparentZenith": 94.44540513767761,
+        "elevation": -4.445405137677617,
+        "apparentElevation": -4.445405137677617,
+        "azimuth": 105.95601857922094,
+        "equationOfTime": -12.466577853874696
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1274147054490,
+        "latitude": 5.175472409296031,
+        "longitude": 5.7170411320271874,
+        "elevation": 2863.4687065712833,
+        "pressure": 71712.2535586532,
+        "temperature": 20.139822347529947,
+        "deltaT": 68.79431669730646
+      },
+      "expected": {
+        "zenith": 139.47779614144545,
+        "apparentZenith": 139.47779614144545,
+        "elevation": -49.47779614144546,
+        "apparentElevation": -49.47779614144546,
+        "azimuth": 51.560252770569434,
+        "equationOfTime": 3.598206700205992
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3070650354931,
+        "latitude": -28.786864918799015,
+        "longitude": -133.6363736698206,
+        "elevation": 1879.4821986862873,
+        "pressure": 91614.99000624573,
+        "temperature": 30.40349015353498,
+        "deltaT": 71.05834754933072
+      },
+      "expected": {
+        "zenith": 46.650717325238105,
+        "apparentZenith": 46.63559316193526,
+        "elevation": 43.349282674761895,
+        "apparentElevation": 43.36440683806474,
+        "azimuth": 328.0500381521931,
+        "equationOfTime": 1.3452294093731325
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1504511880687,
+        "latitude": 78.09523047858632,
+        "longitude": -145.50139539705455,
+        "elevation": 3613.3653742495517,
+        "pressure": 79288.0735883769,
+        "temperature": 17.030399772078965,
+        "deltaT": 68.46695198901187
+      },
+      "expected": {
+        "zenith": 93.67333525208753,
+        "apparentZenith": 93.67333525208753,
+        "elevation": -3.673335252087524,
+        "apparentElevation": -3.673335252087524,
+        "azimuth": 334.4023565397406,
+        "equationOfTime": 0.9933888253253826
+      }
+    },
+    {
+      "input": {
+        "timeMs": 187976674673,
+        "latitude": -68.07959429921806,
+        "longitude": 171.01914943303495,
+        "elevation": 562.6233867369446,
+        "pressure": 103209.05191159937,
+        "temperature": -19.928034869481866,
+        "deltaT": 66.90541945620083
+      },
+      "expected": {
+        "zenith": 82.01530539716703,
+        "apparentZenith": 81.88940230496355,
+        "elevation": 7.984694602832977,
+        "apparentElevation": 8.110597695036452,
+        "azimuth": 136.1835604192254,
+        "equationOfTime": 4.521125801205926
+      }
+    },
+    {
+      "input": {
+        "timeMs": -31894378828,
+        "latitude": -24.412319090605315,
+        "longitude": 87.6445011090929,
+        "elevation": 511.965318675804,
+        "pressure": 61319.49668536096,
+        "temperature": 14.79043738253701,
+        "deltaT": 64.29439118696622
+      },
+      "expected": {
+        "zenith": 121.96897535734016,
+        "apparentZenith": 121.96897535734016,
+        "elevation": -31.968975357340156,
+        "apparentElevation": -31.968975357340156,
+        "azimuth": 142.68470514731757,
+        "equationOfTime": -1.3859825341278338
+      }
+    },
+    {
+      "input": {
+        "timeMs": 444772035342,
+        "latitude": -66.28686829617978,
+        "longitude": 143.92737160975958,
+        "elevation": 3391.572686608397,
+        "pressure": 90731.41604346887,
+        "temperature": -9.430697435246863,
+        "deltaT": 64.91874199921398
+      },
+      "expected": {
+        "zenith": 80.12560036778879,
+        "apparentZenith": 80.03765686527883,
+        "elevation": 9.874399632211201,
+        "apparentElevation": 9.962343134721163,
+        "azimuth": 108.13615349858787,
+        "equationOfTime": -13.947746554378682
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1113900847665,
+        "latitude": 22.870155993959436,
+        "longitude": 6.4770191372766295,
+        "elevation": 3399.87063494016,
+        "pressure": 92869.97029227584,
+        "temperature": 2.310835227382828,
+        "deltaT": 73.93541802363207
+      },
+      "expected": {
+        "zenith": 39.60691203949883,
+        "apparentZenith": 39.593703484889744,
+        "elevation": 50.39308796050117,
+        "apparentElevation": 50.406296515110256,
+        "azimuth": 100.2120415332414,
+        "equationOfTime": 0.8856855105423165
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2806577589376,
+        "latitude": 35.574176146858974,
+        "longitude": 70.34621883452265,
+        "elevation": 1686.923128670669,
+        "pressure": 67895.68930673864,
+        "temperature": 15.630068898439024,
+        "deltaT": 58.246389024596844
+      },
+      "expected": {
+        "zenith": 99.69130268740837,
+        "apparentZenith": 99.69130268740837,
+        "elevation": -9.691302687408365,
+        "apparentElevation": -9.691302687408365,
+        "azimuth": 248.8687438883227,
+        "equationOfTime": 8.084392920136452
+      }
+    },
+    {
+      "input": {
+        "timeMs": 565248778070,
+        "latitude": 47.644625958563516,
+        "longitude": -16.347589889812536,
+        "elevation": 3298.515510884765,
+        "pressure": 66465.92543270127,
+        "temperature": 40.34695416820113,
+        "deltaT": 66.79109656308687
+      },
+      "expected": {
+        "zenith": 119.21141945946854,
+        "apparentZenith": 119.21141945946854,
+        "elevation": -29.211419459468548,
+        "apparentElevation": -29.211419459468548,
+        "azimuth": 90.66676327636924,
+        "equationOfTime": 11.591201600502245
+      }
+    },
+    {
+      "input": {
+        "timeMs": 918653104490,
+        "latitude": 26.25382239222037,
+        "longitude": -44.40931479994048,
+        "elevation": 2818.0500666808484,
+        "pressure": 94703.04254021165,
+        "temperature": 33.8546131059823,
+        "deltaT": 66.83245980813132
+      },
+      "expected": {
+        "zenith": 48.221864685856666,
+        "apparentZenith": 48.20553637542646,
+        "elevation": 41.778135314143334,
+        "apparentElevation": 41.79446362457354,
+        "azimuth": 144.30358454321384,
+        "equationOfTime": -14.201902550197019
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2105190877563,
+        "latitude": 13.794222578949611,
+        "longitude": 179.70005543568436,
+        "elevation": 1135.2479915399347,
+        "pressure": 87326.05765709023,
+        "temperature": -21.743088995331384,
+        "deltaT": 71.81056930085514
+      },
+      "expected": {
+        "zenith": 128.1859933686328,
+        "apparentZenith": 128.1859933686328,
+        "elevation": -38.18599336863281,
+        "apparentElevation": -38.18599336863281,
+        "azimuth": 75.84681091167045,
+        "equationOfTime": 5.408530638203956
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3296829526064,
+        "latitude": 9.125035080434605,
+        "longitude": -63.54541475798882,
+        "elevation": 2542.422391169611,
+        "pressure": 69828.45510874563,
+        "temperature": -0.09170750025131291,
+        "deltaT": 55.470760832035786
+      },
+      "expected": {
+        "zenith": 28.37790189235487,
+        "apparentZenith": 28.371360333478215,
+        "elevation": 61.62209810764513,
+        "apparentElevation": 61.628639666521785,
+        "azimuth": 303.3578800305317,
+        "equationOfTime": -2.0463709525647573
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1826992812592,
+        "latitude": -51.43886469414721,
+        "longitude": -156.21611124914193,
+        "elevation": 2881.4281160281453,
+        "pressure": 67839.24480690976,
+        "temperature": 41.09588352704287,
+        "deltaT": 56.462364348854805
+      },
+      "expected": {
+        "zenith": 57.31795116084606,
+        "apparentZenith": 57.30208144502357,
+        "elevation": 32.68204883915394,
+        "apparentElevation": 32.69791855497643,
+        "azimuth": 81.9272725163463,
+        "equationOfTime": 13.62398479811236
+      }
+    },
+    {
+      "input": {
+        "timeMs": -23552357663,
+        "latitude": -83.65497391062999,
+        "longitude": -179.17681770920524,
+        "elevation": 1837.498971418516,
+        "pressure": 94755.3757675053,
+        "temperature": 24.24981191330351,
+        "deltaT": 64.10831118240624
+      },
+      "expected": {
+        "zenith": 100.50928797753798,
+        "apparentZenith": 100.50928797753798,
+        "elevation": -10.509287977537987,
+        "apparentElevation": -10.509287977537987,
+        "azimuth": 215.34608018915998,
+        "equationOfTime": -3.349640642743907
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1586512309530,
+        "latitude": -6.489045966735782,
+        "longitude": -65.53372651595463,
+        "elevation": 2817.9725478034898,
+        "pressure": 95074.1036256504,
+        "temperature": 27.18111736040523,
+        "deltaT": 65.65550912330315
+      },
+      "expected": {
+        "zenith": 98.6850980336771,
+        "apparentZenith": 98.6850980336771,
+        "elevation": -8.685098033677088,
+        "apparentElevation": -8.685098033677088,
+        "azimuth": 82.66461883966201,
+        "equationOfTime": -1.2145146208786173
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2395895232791,
+        "latitude": 50.45178333861949,
+        "longitude": 19.739041707166578,
+        "elevation": 322.8385905205573,
+        "pressure": 104031.56745137312,
+        "temperature": 18.587231793731558,
+        "deltaT": 74.6314748988878
+      },
+      "expected": {
+        "zenith": 90.23488712097327,
+        "apparentZenith": 89.71655414878566,
+        "elevation": -0.23488712097326442,
+        "apparentElevation": 0.28344585121434146,
+        "azimuth": 125.97136419555113,
+        "equationOfTime": 10.208895693314844
+      }
+    },
+    {
+      "input": {
+        "timeMs": -221209414705,
+        "latitude": 19.352537084046816,
+        "longitude": 44.420083648662235,
+        "elevation": 3905.58492650957,
+        "pressure": 71845.96421918565,
+        "temperature": 16.046106204659374,
+        "deltaT": 55.06972314109038
+      },
+      "expected": {
+        "zenith": 122.669158627126,
+        "apparentZenith": 122.669158627126,
+        "elevation": -32.66915862712599,
+        "apparentElevation": -32.66915862712599,
+        "azimuth": 254.1879867288472,
+        "equationOfTime": -1.5304054106964031
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2501128666030,
+        "latitude": -22.19399050365768,
+        "longitude": 86.5566734895155,
+        "elevation": 3510.9375675724987,
+        "pressure": 95491.28972627828,
+        "temperature": 12.215888315259157,
+        "deltaT": 63.18300085801409
+      },
+      "expected": {
+        "zenith": 28.445954398353322,
+        "apparentZenith": 28.437370398746886,
+        "elevation": 61.55404560164668,
+        "apparentElevation": 61.562629601253114,
+        "azimuth": 9.913290692392366,
+        "equationOfTime": -2.904768375417916
+      }
+    },
+    {
+      "input": {
+        "timeMs": -169388612472,
+        "latitude": -88.26660364296782,
+        "longitude": -130.4254144867582,
+        "elevation": 2343.628488649732,
+        "pressure": 78276.25494896603,
+        "temperature": -19.409577042193813,
+        "deltaT": 74.04481517661085
+      },
+      "expected": {
+        "zenith": 103.95604627996326,
+        "apparentZenith": 103.95604627996326,
+        "elevation": -13.956046279963257,
+        "apparentElevation": -13.956046279963257,
+        "azimuth": 136.91535821321577,
+        "equationOfTime": -3.532861352985492
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2530504578813,
+        "latitude": 15.022947424832797,
+        "longitude": 99.6443304757681,
+        "elevation": 1325.3482228929272,
+        "pressure": 98986.86881598026,
+        "temperature": 29.694309235750854,
+        "deltaT": 71.03493016159783
+      },
+      "expected": {
+        "zenith": 19.997977573482913,
+        "apparentZenith": 19.99235076871237,
+        "elevation": 70.00202242651709,
+        "apparentElevation": 70.00764923128763,
+        "azimuth": 198.26308136114423,
+        "equationOfTime": -10.218519166883198
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3102488280326,
+        "latitude": 80.04418203448225,
+        "longitude": -85.33260071105038,
+        "elevation": 3413.449295113818,
+        "pressure": 70524.32656281418,
+        "temperature": 23.528373084187457,
+        "deltaT": 56.37551692376476
+      },
+      "expected": {
+        "zenith": 80.41538431195829,
+        "apparentZenith": 80.35295607879813,
+        "elevation": 9.584615688041714,
+        "apparentElevation": 9.647043921201865,
+        "azimuth": 67.7831081263605,
+        "equationOfTime": 1.959722285726457
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3349607708744,
+        "latitude": 15.738775855039579,
+        "longitude": -50.946596791761436,
+        "elevation": 1021.4893584500619,
+        "pressure": 100523.91694285546,
+        "temperature": -16.156136608572513,
+        "deltaT": 70.88979510744929
+      },
+      "expected": {
+        "zenith": 30.050373199488753,
+        "apparentZenith": 30.039656477552263,
+        "elevation": 59.94962680051125,
+        "apparentElevation": 59.96034352244774,
+        "azimuth": 148.3020386671077,
+        "equationOfTime": -13.358839088890818
+      }
+    },
+    {
+      "input": {
+        "timeMs": 244964275512,
+        "latitude": -89.8757607500707,
+        "longitude": -72.45351682495175,
+        "elevation": 772.535677766232,
+        "pressure": 80928.095764048,
+        "temperature": -20.933308980887105,
+        "deltaT": 74.75518825667352
+      },
+      "expected": {
+        "zenith": 85.04386310096054,
+        "apparentZenith": 84.89785248385866,
+        "elevation": 4.95613689903947,
+        "apparentElevation": 5.102147516141349,
+        "azimuth": 165.0305809096667,
+        "equationOfTime": 11.781892907150905
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2452320383551,
+        "latitude": 6.126707839514028,
+        "longitude": 45.55758168649658,
+        "elevation": 1752.831215862861,
+        "pressure": 91900.72625156323,
+        "temperature": -13.398180938425343,
+        "deltaT": 64.32385757827447
+      },
+      "expected": {
+        "zenith": 12.101542171650422,
+        "apparentZenith": 12.097964843276799,
+        "elevation": 77.89845782834958,
+        "apparentElevation": 77.9020351567232,
+        "azimuth": 108.29103596683547,
+        "equationOfTime": 5.4204384297918295
+      }
+    },
+    {
+      "input": {
+        "timeMs": 387959050979,
+        "latitude": 81.41059924900561,
+        "longitude": 167.50013195570784,
+        "elevation": 640.9891586234653,
+        "pressure": 91965.46353099693,
+        "temperature": -10.22305342457304,
+        "deltaT": 64.45835958284458
+      },
+      "expected": {
+        "zenith": 78.45614892319192,
+        "apparentZenith": 78.3787981009834,
+        "elevation": 11.543851076808076,
+        "apparentElevation": 11.621201899016592,
+        "azimuth": 265.3727755388952,
+        "equationOfTime": 0.5659567387410789
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2645386701595,
+        "latitude": -82.49834890331203,
+        "longitude": 29.420026094096453,
+        "elevation": 849.4856603550049,
+        "pressure": 81259.71717171973,
+        "temperature": 38.04766116576389,
+        "deltaT": 67.81097569179475
+      },
+      "expected": {
+        "zenith": 83.67775955761903,
+        "apparentZenith": 83.57957438504559,
+        "elevation": 6.322240442380975,
+        "apparentElevation": 6.420425614954418,
+        "azimuth": 181.8565970674479,
+        "equationOfTime": 16.36159283501911
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2730623446750,
+        "latitude": 59.20918543990529,
+        "longitude": -30.793240169771643,
+        "elevation": 1723.6096245048645,
+        "pressure": 94750.05536735676,
+        "temperature": 12.411419688521917,
+        "deltaT": 59.33373909881384
+      },
+      "expected": {
+        "zenith": 53.496703973799995,
+        "apparentZenith": 53.475528043248296,
+        "elevation": 36.503296026200005,
+        "apparentElevation": 36.524471956751704,
+        "azimuth": 109.79753998994488,
+        "equationOfTime": -5.816310672307736
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2682290004637,
+        "latitude": 88.64373934604896,
+        "longitude": -27.05408825080972,
+        "elevation": 874.2465811559143,
+        "pressure": 100663.77884279804,
+        "temperature": -5.535810890977712,
+        "deltaT": 62.66353903794514
+      },
+      "expected": {
+        "zenith": 114.36862703168192,
+        "apparentZenith": 114.36862703168192,
+        "elevation": -24.368627031681925,
+        "apparentElevation": -24.368627031681925,
+        "azimuth": 340.4057922516017,
+        "equationOfTime": -2.772565294042579
+      }
+    },
+    {
+      "input": {
+        "timeMs": -80890058467,
+        "latitude": -86.14338670200577,
+        "longitude": 27.74727581387406,
+        "elevation": 2998.6357596878024,
+        "pressure": 94253.1079220908,
+        "temperature": 35.772954516361324,
+        "deltaT": 61.22998417844521
+      },
+      "expected": {
+        "zenith": 115.15939630294099,
+        "apparentZenith": 115.15939630294099,
+        "elevation": -25.15939630294099,
+        "apparentElevation": -25.15939630294099,
+        "azimuth": 235.33118278393064,
+        "equationOfTime": 0.9443540176653187
+      }
+    },
+    {
+      "input": {
+        "timeMs": 918408931180,
+        "latitude": 43.36564675341191,
+        "longitude": 162.9581423764135,
+        "elevation": 3821.3141187363785,
+        "pressure": 62956.906792089016,
+        "temperature": 44.632927249825975,
+        "deltaT": 71.00904678552014
+      },
+      "expected": {
+        "zenith": 119.73657331700977,
+        "apparentZenith": 119.73657331700977,
+        "elevation": -29.73657331700978,
+        "apparentElevation": -29.73657331700978,
+        "azimuth": 82.99755593916501,
+        "equationOfTime": -14.104189930847724
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1237915747146,
+        "latitude": 79.26158546664462,
+        "longitude": 152.43981997837247,
+        "elevation": 240.95011974289403,
+        "pressure": 66724.12787937236,
+        "temperature": -12.516670031508276,
+        "deltaT": 69.53306614540918
+      },
+      "expected": {
+        "zenith": 94.7600998139738,
+        "apparentZenith": 94.7600998139738,
+        "elevation": -4.760099813973798,
+        "apparentElevation": -4.760099813973798,
+        "azimuth": 53.41085794297777,
+        "equationOfTime": -6.161377280783199
+      }
+    },
+    {
+      "input": {
+        "timeMs": -145042929831,
+        "latitude": -66.08804262361154,
+        "longitude": 56.81172321503514,
+        "elevation": 3094.022375195909,
+        "pressure": 82083.37274055919,
+        "temperature": -22.508400462727817,
+        "deltaT": 70.7681194499155
+      },
+      "expected": {
+        "zenith": 90.05602436965513,
+        "apparentZenith": 89.60497180282925,
+        "elevation": -0.056024369655129046,
+        "apparentElevation": 0.3950281971707391,
+        "azimuth": 25.91743156826476,
+        "equationOfTime": 2.9010645503367414
+      }
+    },
+    {
+      "input": {
+        "timeMs": -583773831353,
+        "latitude": 85.82305234420379,
+        "longitude": -85.2474071311764,
+        "elevation": 2824.829504209722,
+        "pressure": 74158.32191515322,
+        "temperature": 37.55997840099243,
+        "deltaT": 68.22045939852366
+      },
+      "expected": {
+        "zenith": 70.07146331867676,
+        "apparentZenith": 70.04078001651163,
+        "elevation": 19.928536681323234,
+        "apparentElevation": 19.95921998348836,
+        "azimuth": 41.69954606689595,
+        "equationOfTime": -3.930227168952115
+      }
+    },
+    {
+      "input": {
+        "timeMs": -603371004717,
+        "latitude": 41.254235550814975,
+        "longitude": 164.99279328610785,
+        "elevation": 2671.171302382576,
+        "pressure": 93236.88535182085,
+        "temperature": 28.9334372505907,
+        "deltaT": 62.46799115997143
+      },
+      "expected": {
+        "zenith": 157.78555154108102,
+        "apparentZenith": 157.78555154108102,
+        "elevation": -67.785551541081,
+        "apparentElevation": -67.785551541081,
+        "azimuth": 7.143262585462537,
+        "equationOfTime": 14.857149021467194
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2679612578673,
+        "latitude": 31.396181332630796,
+        "longitude": 135.99417893778036,
+        "elevation": 1334.912066011528,
+        "pressure": 99751.9205397859,
+        "temperature": -9.36761054518219,
+        "deltaT": 72.0837977477187
+      },
+      "expected": {
+        "zenith": 59.753335891565236,
+        "apparentZenith": 59.722784576224086,
+        "elevation": 30.246664108434764,
+        "apparentElevation": 30.277215423775917,
+        "azimuth": 148.86491804462077,
+        "equationOfTime": 11.505959608679404
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1396708487519,
+        "latitude": -21.025441596438487,
+        "longitude": -55.01468562126406,
+        "elevation": 1951.4004506288707,
+        "pressure": 66251.79457432787,
+        "temperature": 15.163100516012431,
+        "deltaT": 60.43981498353223
+      },
+      "expected": {
+        "zenith": 31.918831263319355,
+        "apparentZenith": 31.912052732717896,
+        "elevation": 58.081168736680645,
+        "apparentElevation": 58.087947267282104,
+        "azimuth": 33.32262288610718,
+        "equationOfTime": -2.6758199445284845
+      }
+    },
+    {
+      "input": {
+        "timeMs": 900531199519,
+        "latitude": 73.32924993378539,
+        "longitude": -54.858683900077764,
+        "elevation": 809.2907858348766,
+        "pressure": 76925.29683170642,
+        "temperature": -28.701047776310407,
+        "deltaT": 64.97651103896102
+      },
+      "expected": {
+        "zenith": 60.27016958474793,
+        "apparentZenith": 60.24421724807604,
+        "elevation": 29.729830415252067,
+        "apparentElevation": 29.755782751923956,
+        "azimuth": 243.9849578667137,
+        "equationOfTime": -5.959510993355025
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2034365540657,
+        "latitude": 11.53497346560117,
+        "longitude": -84.23273524765514,
+        "elevation": 239.09128914817933,
+        "pressure": 78077.9431615571,
+        "temperature": -6.62633636931879,
+        "deltaT": 65.36914341463154
+      },
+      "expected": {
+        "zenith": 56.66264836494483,
+        "apparentZenith": 56.64163787696962,
+        "elevation": 33.33735163505517,
+        "apparentElevation": 33.35836212303038,
+        "azimuth": 290.5738791783022,
+        "equationOfTime": -1.514635956424172
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2681033063799,
+        "latitude": -38.42233753431261,
+        "longitude": 135.93582446233498,
+        "elevation": 1620.2249998644897,
+        "pressure": 62181.06888224877,
+        "temperature": 6.663882148336649,
+        "deltaT": 71.56734267574647
+      },
+      "expected": {
+        "zenith": 101.43177558060891,
+        "apparentZenith": 101.43177558060891,
+        "elevation": -11.431775580608916,
+        "apparentElevation": -11.431775580608916,
+        "azimuth": 227.4709949479429,
+        "equationOfTime": 4.385943809087621
+      }
+    },
+    {
+      "input": {
+        "timeMs": -230867405097,
+        "latitude": -14.231984364785548,
+        "longitude": 84.43243580983192,
+        "elevation": 907.9835238842961,
+        "pressure": 76768.48611268109,
+        "temperature": -19.922716942056905,
+        "deltaT": 59.109034196992326
+      },
+      "expected": {
+        "zenith": 123.01549756850326,
+        "apparentZenith": 123.01549756850326,
+        "elevation": -33.01549756850326,
+        "apparentElevation": -33.01549756850326,
+        "azimuth": 92.08701120155024,
+        "equationOfTime": 2.0155421050076257
+      }
+    },
+    {
+      "input": {
+        "timeMs": 208462265716,
+        "latitude": -8.525666072434001,
+        "longitude": 34.23725017347285,
+        "elevation": 151.17134677241052,
+        "pressure": 70919.03548671071,
+        "temperature": 19.19827324650346,
+        "deltaT": 74.50705776340921
+      },
+      "expected": {
+        "zenith": 126.53014964409752,
+        "apparentZenith": 126.53014964409752,
+        "elevation": -36.53014964409751,
+        "apparentElevation": -36.53014964409751,
+        "azimuth": 283.2202305959834,
+        "equationOfTime": -5.379351028990641
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3301293546235,
+        "latitude": 62.65389391260478,
+        "longitude": -47.18991310327434,
+        "elevation": 766.323213069903,
+        "pressure": 73466.24167668991,
+        "temperature": 32.762921280027584,
+        "deltaT": 73.21687244376017
+      },
+      "expected": {
+        "zenith": 71.72094348437734,
+        "apparentZenith": 71.68716832222634,
+        "elevation": 18.27905651562266,
+        "apparentElevation": 18.312831677773662,
+        "azimuth": 93.1016340793775,
+        "equationOfTime": -5.077721781141008
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1103665275152,
+        "latitude": 48.963386770131464,
+        "longitude": -119.52633555604093,
+        "elevation": 1262.9052505282878,
+        "pressure": 73530.083451972,
+        "temperature": 39.7400495922251,
+        "deltaT": 65.34091110926128
+      },
+      "expected": {
+        "zenith": 76.0806960937075,
+        "apparentZenith": 76.03726789239106,
+        "elevation": 13.919303906292503,
+        "apparentElevation": 13.962732107608938,
+        "azimuth": 204.63142261830222,
+        "equationOfTime": 1.5074623101627367
+      }
+    },
+    {
+      "input": {
+        "timeMs": -527173526988,
+        "latitude": 59.908598326125066,
+        "longitude": 157.78245469608348,
+        "elevation": 3920.2187006595645,
+        "pressure": 93038.96179081625,
+        "temperature": 28.62039307640781,
+        "deltaT": 58.541573050865715
+      },
+      "expected": {
+        "zenith": 102.92485627020518,
+        "apparentZenith": 102.92485627020518,
+        "elevation": -12.924856270205177,
+        "apparentElevation": -12.924856270205177,
+        "azimuth": 321.2198897488837,
+        "equationOfTime": 0.6238788769405801
+      }
+    },
+    {
+      "input": {
+        "timeMs": -185849645185,
+        "latitude": -89.56126613942772,
+        "longitude": 157.68109999877248,
+        "elevation": 498.90387967673576,
+        "pressure": 60970.90416065839,
+        "temperature": 43.131091275623696,
+        "deltaT": 64.25823844595566
+      },
+      "expected": {
+        "zenith": 75.24358957525261,
+        "apparentZenith": 75.2099499380287,
+        "elevation": 14.756410424747383,
+        "apparentElevation": 14.790050061971293,
+        "azimuth": 39.48518319113066,
+        "equationOfTime": -14.284787789918482
+      }
+    },
+    {
+      "input": {
+        "timeMs": -102027340148,
+        "latitude": -57.5369171669024,
+        "longitude": 142.82196845353627,
+        "elevation": 1711.476146243056,
+        "pressure": 83742.41273822154,
+        "temperature": 27.47976765386784,
+        "deltaT": 62.77354340580061
+      },
+      "expected": {
+        "zenith": 52.70518204762531,
+        "apparentZenith": 52.68790490446142,
+        "elevation": 37.29481795237469,
+        "apparentElevation": 37.31209509553858,
+        "azimuth": 344.9716586631049,
+        "equationOfTime": 12.238789343427925
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3372371445381,
+        "latitude": -72.9507082992308,
+        "longitude": -16.11076173289858,
+        "elevation": 595.4113723959415,
+        "pressure": 70763.28622776929,
+        "temperature": 28.5463993323609,
+        "deltaT": 55.424197547201
+      },
+      "expected": {
+        "zenith": 88.58325199065168,
+        "apparentZenith": 88.3695951458744,
+        "elevation": 1.4167480093483285,
+        "apparentElevation": 1.630404854125604,
+        "azimuth": 165.22170632192228,
+        "equationOfTime": 15.857631741368095
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2018631019739,
+        "latitude": -29.450592466890214,
+        "longitude": -14.855679624130849,
+        "elevation": 2391.967595990784,
+        "pressure": 73735.90182960153,
+        "temperature": 16.23955208007373,
+        "deltaT": 62.66045278748557
+      },
+      "expected": {
+        "zenith": 77.42277457285297,
+        "apparentZenith": 77.3708366814995,
+        "elevation": 12.577225427147024,
+        "apparentElevation": 12.629163318500497,
+        "azimuth": 250.02152538481283,
+        "equationOfTime": 2.677795881332713
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1523679852111,
+        "latitude": -33.95114128065182,
+        "longitude": -143.18637031806733,
+        "elevation": 3824.55933708336,
+        "pressure": 74460.05440420103,
+        "temperature": -8.08387156512101,
+        "deltaT": 71.82884840495602
+      },
+      "expected": {
+        "zenith": 105.78221081088667,
+        "apparentZenith": 105.78221081088667,
+        "elevation": -15.782210810886662,
+        "apparentElevation": -15.782210810886662,
+        "azimuth": 270.79040575220614,
+        "equationOfTime": -0.35370833807610325
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1201571813773,
+        "latitude": -25.400000309639008,
+        "longitude": -147.89818121585665,
+        "elevation": 3001.792435587515,
+        "pressure": 67040.06047063047,
+        "temperature": -26.840768687123568,
+        "deltaT": 73.39275645875588
+      },
+      "expected": {
+        "zenith": 54.034959440368645,
+        "apparentZenith": 54.01724466960326,
+        "elevation": 35.965040559631355,
+        "apparentElevation": 35.98275533039674,
+        "azimuth": 265.3484473275101,
+        "equationOfTime": -12.955789703970368
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1572905380905,
+        "latitude": 14.485273604564576,
+        "longitude": 167.87638627871817,
+        "elevation": 3339.0556768693996,
+        "pressure": 71291.8377956312,
+        "temperature": 27.091060675207363,
+        "deltaT": 64.01370869140723
+      },
+      "expected": {
+        "zenith": 46.22072790774149,
+        "apparentZenith": 46.20900552312693,
+        "elevation": 43.77927209225851,
+        "apparentElevation": 43.79099447687307,
+        "azimuth": 129.02785971714246,
+        "equationOfTime": 16.44551319737002
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2005293710293,
+        "latitude": 42.53831446192082,
+        "longitude": 14.484500548937982,
+        "elevation": 2495.1266739807697,
+        "pressure": 98499.44262149055,
+        "temperature": -12.32778414022214,
+        "deltaT": 71.00057132073307
+      },
+      "expected": {
+        "zenith": 25.727127914686335,
+        "apparentZenith": 25.718512381782006,
+        "elevation": 64.27287208531367,
+        "apparentElevation": 64.281487618218,
+        "azimuth": 141.98438162816103,
+        "equationOfTime": -6.295776085142279
+      }
+    },
+    {
+      "input": {
+        "timeMs": 284110318721,
+        "latitude": 59.16379361413942,
+        "longitude": 26.490492062376966,
+        "elevation": 896.6882088368426,
+        "pressure": 69566.84222346457,
+        "temperature": 19.715321222985015,
+        "deltaT": 72.75016286849521
+      },
+      "expected": {
+        "zenith": 88.92552973587559,
+        "apparentZenith": 88.6889800364842,
+        "elevation": 1.074470264124413,
+        "apparentElevation": 1.3110199635157989,
+        "azimuth": 142.42777936995128,
+        "equationOfTime": -3.7768885753575887
+      }
+    },
+    {
+      "input": {
+        "timeMs": -294159418701,
+        "latitude": -21.99954178005987,
+        "longitude": 28.344895847291106,
+        "elevation": 1898.783683523543,
+        "pressure": 103662.8056561906,
+        "temperature": -5.7507422469588105,
+        "deltaT": 70.18708390043828
+      },
+      "expected": {
+        "zenith": 32.55528617909204,
+        "apparentZenith": 32.54356485392797,
+        "elevation": 57.44471382090796,
+        "apparentElevation": 57.45643514607203,
+        "azimuth": 29.681195917458524,
+        "equationOfTime": 1.346606589591829
+      }
+    },
+    {
+      "input": {
+        "timeMs": 693649330595,
+        "latitude": -40.29724287509802,
+        "longitude": -7.25974679531578,
+        "elevation": 1727.2045249494315,
+        "pressure": 64213.392311903764,
+        "temperature": -17.93840432554342,
+        "deltaT": 65.80261264872583
+      },
+      "expected": {
+        "zenith": 53.907473352519865,
+        "apparentZenith": 53.89117347509979,
+        "elevation": 36.092526647480135,
+        "apparentElevation": 36.10882652490021,
+        "azimuth": 91.50902052536685,
+        "equationOfTime": 0.20259504624118563
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2396978963748,
+        "latitude": -62.173842742552694,
+        "longitude": 101.64521456431694,
+        "elevation": 3813.5396159094144,
+        "pressure": 94673.3633433009,
+        "temperature": -28.372330000924105,
+        "deltaT": 71.12428655798347
+      },
+      "expected": {
+        "zenith": 90.03774154619414,
+        "apparentZenith": 89.507961604637,
+        "elevation": -0.03774154619414565,
+        "apparentElevation": 0.4920383953629995,
+        "azimuth": 148.0874116843097,
+        "equationOfTime": 4.594354099477641
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1565825928417,
+        "latitude": 16.587736630254845,
+        "longitude": -96.19264942289222,
+        "elevation": 1627.16347697022,
+        "pressure": 92131.50163489877,
+        "temperature": -2.8564001413766817,
+        "deltaT": 60.42562488017421
+      },
+      "expected": {
+        "zenith": 74.12650601707678,
+        "apparentZenith": 74.07118221310405,
+        "elevation": 15.873493982923227,
+        "apparentElevation": 15.928817786895943,
+        "azimuth": 280.46061300738387,
+        "equationOfTime": -4.637869633999799
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3309559669653,
+        "latitude": -45.28482040458131,
+        "longitude": 31.33756880418457,
+        "elevation": 3423.0594104102474,
+        "pressure": 92372.56152115384,
+        "temperature": -0.41984921181916046,
+        "deltaT": 55.93322489566457
+      },
+      "expected": {
+        "zenith": 91.73073058340839,
+        "apparentZenith": 91.73073058340839,
+        "elevation": -1.7307305834083853,
+        "apparentElevation": -1.7307305834083853,
+        "azimuth": 119.23019291321089,
+        "equationOfTime": 15.311854231578764
+      }
+    },
+    {
+      "input": {
+        "timeMs": -335471062494,
+        "latitude": -17.963286866788096,
+        "longitude": 30.333912098883538,
+        "elevation": 675.2026293159025,
+        "pressure": 89733.57232592658,
+        "temperature": 27.65566675834047,
+        "deltaT": 74.41686814515536
+      },
+      "expected": {
+        "zenith": 73.58249013820586,
+        "apparentZenith": 73.53568554506622,
+        "elevation": 16.41750986179414,
+        "apparentElevation": 16.46431445493378,
+        "azimuth": 63.190771854135505,
+        "equationOfTime": 3.7258198240524507
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1491873500912,
+        "latitude": -50.55807369572918,
+        "longitude": 0.13160376048746425,
+        "elevation": 2531.4305016907233,
+        "pressure": 74419.5659742496,
+        "temperature": 38.59192420870023,
+        "deltaT": 61.9542257296894
+      },
+      "expected": {
+        "zenith": 134.7959058040438,
+        "apparentZenith": 134.7959058040438,
+        "elevation": -44.795905804043784,
+        "apparentElevation": -44.795905804043784,
+        "azimuth": 152.34529952923685,
+        "equationOfTime": -1.0966002534987638
+      }
+    },
+    {
+      "input": {
+        "timeMs": -102825320233,
+        "latitude": 29.25653930481642,
+        "longitude": 77.83376516600174,
+        "elevation": 3153.8648318391706,
+        "pressure": 69451.98648954077,
+        "temperature": 9.470167718491611,
+        "deltaT": 73.1471930740476
+      },
+      "expected": {
+        "zenith": 132.2676528113511,
+        "apparentZenith": 132.2676528113511,
+        "elevation": -42.26765281135109,
+        "apparentElevation": -42.26765281135109,
+        "azimuth": 63.11423313177153,
+        "equationOfTime": 9.354583125503268
+      }
+    },
+    {
+      "input": {
+        "timeMs": 850868879499,
+        "latitude": 77.8549332330181,
+        "longitude": -1.5242109904096957,
+        "elevation": 3807.3472425776968,
+        "pressure": 71184.86289647919,
+        "temperature": 22.85457707352549,
+        "deltaT": 55.81529231390581
+      },
+      "expected": {
+        "zenith": 125.4511889922947,
+        "apparentZenith": 125.4511889922947,
+        "elevation": -35.4511889922947,
+        "apparentElevation": -35.4511889922947,
+        "azimuth": 7.142849553318797,
+        "equationOfTime": 3.452721981546347
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1969293193167,
+        "latitude": 87.14668397626787,
+        "longitude": 158.39905605516188,
+        "elevation": 2005.1201857454255,
+        "pressure": 69214.0369244258,
+        "temperature": -27.3764412313239,
+        "deltaT": 65.6121775386015
+      },
+      "expected": {
+        "zenith": 69.6513226615638,
+        "apparentZenith": 69.61590026564835,
+        "elevation": 20.348677338436207,
+        "apparentElevation": 20.384099734351658,
+        "azimuth": 66.37992205689909,
+        "equationOfTime": 2.7186992693023058
+      }
+    },
+    {
+      "input": {
+        "timeMs": 304528378485,
+        "latitude": -77.68755084417678,
+        "longitude": -162.16734593885076,
+        "elevation": 3292.291706046314,
+        "pressure": 70787.31701782088,
+        "temperature": -1.8476314261154854,
+        "deltaT": 61.49583058374352
+      },
+      "expected": {
+        "zenith": 105.32804616139912,
+        "apparentZenith": 105.32804616139912,
+        "elevation": -15.32804616139912,
+        "apparentElevation": -15.32804616139912,
+        "azimuth": 111.79155814619463,
+        "equationOfTime": -1.8870111256655946
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1933502226688,
+        "latitude": -26.362204342736472,
+        "longitude": 154.9570032535153,
+        "elevation": 2562.7707198442554,
+        "pressure": 93021.17964840222,
+        "temperature": 24.106780454858132,
+        "deltaT": 71.15002602750224
+      },
+      "expected": {
+        "zenith": 148.8546104118477,
+        "apparentZenith": 148.8546104118477,
+        "elevation": -58.854610411847695,
+        "apparentElevation": -58.854610411847695,
+        "azimuth": 237.7005450672299,
+        "equationOfTime": -1.6274667574689374
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2654655605766,
+        "latitude": 57.47043945346586,
+        "longitude": -87.28107403989127,
+        "elevation": 2570.155082664023,
+        "pressure": 85321.58005133542,
+        "temperature": 12.198877934539253,
+        "deltaT": 56.53674742332434
+      },
+      "expected": {
+        "zenith": 131.36915730266193,
+        "apparentZenith": 131.36915730266193,
+        "elevation": -41.36915730266194,
+        "apparentElevation": -41.36915730266194,
+        "azimuth": 325.6151249040191,
+        "equationOfTime": -14.086185748194112
+      }
+    },
+    {
+      "input": {
+        "timeMs": 139945054731,
+        "latitude": -2.7594064223124737,
+        "longitude": 51.19679013570229,
+        "elevation": 3241.4021069531477,
+        "pressure": 94331.93538525999,
+        "temperature": 43.275008629691094,
+        "deltaT": 70.43311117627492
+      },
+      "expected": {
+        "zenith": 132.77732352128567,
+        "apparentZenith": 132.77732352128567,
+        "elevation": -42.77732352128566,
+        "apparentElevation": -42.77732352128566,
+        "azimuth": 299.0280440536774,
+        "equationOfTime": 1.0463442641630536
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2943649693397,
+        "latitude": -48.095563775106534,
+        "longitude": -53.35089907360387,
+        "elevation": 3726.626989141359,
+        "pressure": 95045.10529073692,
+        "temperature": 19.37632463960587,
+        "deltaT": 58.2534975920306
+      },
+      "expected": {
+        "zenith": 124.80897838667347,
+        "apparentZenith": 124.80897838667347,
+        "elevation": -34.80897838667347,
+        "apparentElevation": -34.80897838667347,
+        "azimuth": 240.68166196983032,
+        "equationOfTime": -0.6324061089253519
+      }
+    },
+    {
+      "input": {
+        "timeMs": 772261026720,
+        "latitude": 65.03741069866518,
+        "longitude": -61.11840295462826,
+        "elevation": 1119.0517929073792,
+        "pressure": 77219.61303142531,
+        "temperature": -12.781606766942062,
+        "deltaT": 58.79982814551744
+      },
+      "expected": {
+        "zenith": 90.98514306000905,
+        "apparentZenith": 90.98514306000905,
+        "elevation": -0.9851430600090499,
+        "apparentElevation": -0.9851430600090499,
+        "azimuth": 11.637545077324717,
+        "equationOfTime": -1.8398526593491624
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2311077199533,
+        "latitude": -46.17268392967786,
+        "longitude": -30.31301626644126,
+        "elevation": 626.986852303793,
+        "pressure": 79590.47325243708,
+        "temperature": -20.03863011013735,
+        "deltaT": 63.67026705324105
+      },
+      "expected": {
+        "zenith": 48.95953407190853,
+        "apparentZenith": 48.94245264154217,
+        "elevation": 41.04046592809147,
+        "apparentElevation": 41.05754735845783,
+        "azimuth": 4.404147157760519,
+        "equationOfTime": -5.366512731714465
+      }
+    },
+    {
+      "input": {
+        "timeMs": -276862611403,
+        "latitude": -23.576703933663694,
+        "longitude": 101.14590129101441,
+        "elevation": 2154.484201387632,
+        "pressure": 61499.88864698596,
+        "temperature": -16.536433227619877,
+        "deltaT": 56.65672796920227
+      },
+      "expected": {
+        "zenith": 122.69906497660998,
+        "apparentZenith": 122.69906497660998,
+        "elevation": -32.69906497660997,
+        "apparentElevation": -32.69906497660997,
+        "azimuth": 255.70165919736854,
+        "equationOfTime": -6.364924090143177
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2580289469730,
+        "latitude": 78.37702436540009,
+        "longitude": 94.2754861740333,
+        "elevation": 2495.444280145099,
+        "pressure": 102367.83256874178,
+        "temperature": -23.034112226957156,
+        "deltaT": 59.33671932788344
+      },
+      "expected": {
+        "zenith": 94.14671775525534,
+        "apparentZenith": 94.14671775525534,
+        "elevation": -4.146717755255334,
+        "apparentElevation": -4.146717755255334,
+        "azimuth": 262.45314238514095,
+        "equationOfTime": 12.154834519300493
+      }
+    },
+    {
+      "input": {
+        "timeMs": 533304122366,
+        "latitude": -19.00972402111853,
+        "longitude": -62.60214588096068,
+        "elevation": 863.4942533869619,
+        "pressure": 61019.5675842142,
+        "temperature": 12.812619633047325,
+        "deltaT": 74.17586081829782
+      },
+      "expected": {
+        "zenith": 55.0359561248889,
+        "apparentZenith": 55.0215511178542,
+        "elevation": 34.9640438751111,
+        "apparentElevation": 34.9784488821458,
+        "azimuth": 102.488847893193,
+        "equationOfTime": 13.079759709071368
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2485419825187,
+        "latitude": 3.458657600483779,
+        "longitude": 99.58062033593652,
+        "elevation": 3415.1288684681317,
+        "pressure": 102172.76351281929,
+        "temperature": 8.14015707909556,
+        "deltaT": 56.81374265464711
+      },
+      "expected": {
+        "zenith": 78.7436744245172,
+        "apparentZenith": 78.66142509964524,
+        "elevation": 11.25632557548281,
+        "apparentElevation": 11.338574900354761,
+        "azimuth": 264.5128131004821,
+        "equationOfTime": 11.494494508151547
+      }
+    },
+    {
+      "input": {
+        "timeMs": 795489705074,
+        "latitude": -63.08957344043534,
+        "longitude": 66.20628514214646,
+        "elevation": 1485.128840183963,
+        "pressure": 78425.34535317324,
+        "temperature": 34.886159208685456,
+        "deltaT": 57.66725361473725
+      },
+      "expected": {
+        "zenith": 91.39176610248413,
+        "apparentZenith": 91.39176610248413,
+        "elevation": -1.3917661024841266,
+        "apparentElevation": -1.3917661024841266,
+        "azimuth": 95.39771642494759,
+        "equationOfTime": -8.344436890107318
+      }
+    },
+    {
+      "input": {
+        "timeMs": -571231141057,
+        "latitude": 73.24467498147835,
+        "longitude": -51.665406363990115,
+        "elevation": 3096.6411124943816,
+        "pressure": 101082.25256165356,
+        "temperature": -0.8633516844840494,
+        "deltaT": 60.59976173363528
+      },
+      "expected": {
+        "zenith": 97.21714744655145,
+        "apparentZenith": 97.21714744655145,
+        "elevation": -7.217147446551458,
+        "apparentElevation": -7.217147446551458,
+        "azimuth": 144.38195950255619,
+        "equationOfTime": 13.159193278479506
+      }
+    },
+    {
+      "input": {
+        "timeMs": 955221447441,
+        "latitude": -68.88953213503922,
+        "longitude": 125.8628844585634,
+        "elevation": 3692.1623629166825,
+        "pressure": 98089.8138566244,
+        "temperature": -3.960831186532622,
+        "deltaT": 67.87071656921404
+      },
+      "expected": {
+        "zenith": 109.15822544757773,
+        "apparentZenith": 109.15822544757773,
+        "elevation": -19.15822544757774,
+        "apparentElevation": -19.15822544757774,
+        "azimuth": 120.94665856776379,
+        "equationOfTime": -1.6763873305442303
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1473583902768,
+        "latitude": -87.89754915310485,
+        "longitude": -44.28428965395936,
+        "elevation": 2971.354450496572,
+        "pressure": 61673.83645429448,
+        "temperature": -27.435427119442306,
+        "deltaT": 56.70658363713408
+      },
+      "expected": {
+        "zenith": 94.35037660307357,
+        "apparentZenith": 94.35037660307357,
+        "elevation": -4.350376603073576,
+        "apparentElevation": -4.350376603073576,
+        "azimuth": 90.3212296233441,
+        "equationOfTime": 3.5039631724721403
+      }
+    },
+    {
+      "input": {
+        "timeMs": 582717441176,
+        "latitude": -63.05678364984592,
+        "longitude": -63.81874988723049,
+        "elevation": 546.9749733386502,
+        "pressure": 69651.58487348745,
+        "temperature": 40.57626161086556,
+        "deltaT": 71.13489576158055
+      },
+      "expected": {
+        "zenith": 112.91980466206493,
+        "apparentZenith": 112.91980466206493,
+        "elevation": -22.91980466206493,
+        "apparentElevation": -22.91980466206493,
+        "azimuth": 83.04567715245759,
+        "equationOfTime": -1.3368299802077672
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1648879495722,
+        "latitude": -31.223626603305394,
+        "longitude": 133.92443797033266,
+        "elevation": 2283.7363603341046,
+        "pressure": 81251.65423322252,
+        "temperature": 43.3106860433132,
+        "deltaT": 74.80831933204553
+      },
+      "expected": {
+        "zenith": 55.54680191819461,
+        "apparentZenith": 55.52914010040881,
+        "elevation": 34.45319808180539,
+        "apparentElevation": 34.47085989959119,
+        "azimuth": 302.53721345443194,
+        "equationOfTime": -3.6422424154225155
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1306306192361,
+        "latitude": 47.50145667856201,
+        "longitude": 57.24218643903987,
+        "elevation": 3106.117487847862,
+        "pressure": 70353.66362593106,
+        "temperature": 25.97250828496424,
+        "deltaT": 56.127152339902025
+      },
+      "expected": {
+        "zenith": 30.91995880062892,
+        "apparentZenith": 30.91328759080875,
+        "elevation": 59.08004119937108,
+        "apparentElevation": 59.08671240919125,
+        "azimuth": 142.6132637786921,
+        "equationOfTime": 3.124705184080085
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2340074995308,
+        "latitude": 30.033382846308566,
+        "longitude": -28.956488878941016,
+        "elevation": 1493.8194328560317,
+        "pressure": 99368.70872814248,
+        "temperature": 37.460337479447055,
+        "deltaT": 58.43669836970021
+      },
+      "expected": {
+        "zenith": 136.85049247420537,
+        "apparentZenith": 136.85049247420537,
+        "elevation": -46.85049247420537,
+        "apparentElevation": -46.85049247420537,
+        "azimuth": 69.10129713034712,
+        "equationOfTime": -12.938392276206287
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1464394480790,
+        "latitude": 13.655653461020183,
+        "longitude": -122.73867311782432,
+        "elevation": 1681.1821312443817,
+        "pressure": 74402.34481900114,
+        "temperature": -26.48079626028841,
+        "deltaT": 74.06864983985672
+      },
+      "expected": {
+        "zenith": 58.918332116779105,
+        "apparentZenith": 58.89474859476387,
+        "elevation": 31.081667883220895,
+        "apparentElevation": 31.105251405236135,
+        "azimuth": 287.0850359423068,
+        "equationOfTime": 2.7503107155025646
+      }
+    },
+    {
+      "input": {
+        "timeMs": 505207605452,
+        "latitude": -39.91443261887468,
+        "longitude": -160.07442553430857,
+        "elevation": 1025.8178837283776,
+        "pressure": 78365.6878809672,
+        "temperature": -5.34515034492531,
+        "deltaT": 55.57072098431958
+      },
+      "expected": {
+        "zenith": 102.15446601136765,
+        "apparentZenith": 102.15446601136765,
+        "elevation": -12.15446601136764,
+        "apparentElevation": -12.15446601136764,
+        "azimuth": 225.91279320651634,
+        "equationOfTime": -4.805079102527088
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2171603470686,
+        "latitude": -62.202997290305625,
+        "longitude": -39.92486231831399,
+        "elevation": 438.20487655918106,
+        "pressure": 64981.172664118116,
+        "temperature": 40.99758190189644,
+        "deltaT": 63.65928361279862
+      },
+      "expected": {
+        "zenith": 87.46483027273521,
+        "apparentZenith": 87.31957587129412,
+        "elevation": 2.5351697272647833,
+        "apparentElevation": 2.6804241287058743,
+        "azimuth": 111.58802402879422,
+        "equationOfTime": 15.927901170660334
+      }
+    },
+    {
+      "input": {
+        "timeMs": 145102008486,
+        "latitude": 14.350224300025138,
+        "longitude": 21.608153256197525,
+        "elevation": 996.7315377961628,
+        "pressure": 78110.87121329272,
+        "temperature": 40.77420286580993,
+        "deltaT": 67.19730584359509
+      },
+      "expected": {
+        "zenith": 8.122226937599251,
+        "apparentZenith": 8.120559610620944,
+        "elevation": 81.87777306240075,
+        "apparentElevation": 81.87944038937906,
+        "azimuth": 73.77080342706131,
+        "equationOfTime": -5.765885331478785
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3312341148575,
+        "latitude": 46.42772730541695,
+        "longitude": 49.860743482420254,
+        "elevation": 1064.4944993895842,
+        "pressure": 64142.99661549342,
+        "temperature": 29.171249913421892,
+        "deltaT": 73.50547772510113
+      },
+      "expected": {
+        "zenith": 74.2233478324234,
+        "apparentZenith": 74.18870183545955,
+        "elevation": 15.776652167576605,
+        "apparentElevation": 15.811298164540444,
+        "azimuth": 153.5670380236877,
+        "equationOfTime": 3.4642331926734187
+      }
+    },
+    {
+      "input": {
+        "timeMs": 29370387844,
+        "latitude": -40.590250881767986,
+        "longitude": -124.64000970631699,
+        "elevation": 2444.101448219518,
+        "pressure": 62420.04194580421,
+        "temperature": 34.204177810150014,
+        "deltaT": 59.2924953957192
+      },
+      "expected": {
+        "zenith": 33.95128836785231,
+        "apparentZenith": 33.944813322653054,
+        "elevation": 56.04871163214769,
+        "apparentElevation": 56.055186677346946,
+        "azimuth": 291.6577740050725,
+        "equationOfTime": 8.859903209551703
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1046371756740,
+        "latitude": 56.68127077431763,
+        "longitude": -55.47105474075982,
+        "elevation": 1264.5559322275014,
+        "pressure": 96865.57911591622,
+        "temperature": 38.31983885172186,
+        "deltaT": 64.31852781937661
+      },
+      "expected": {
+        "zenith": 74.17260166445853,
+        "apparentZenith": 74.12198133356821,
+        "elevation": 15.827398335541476,
+        "apparentElevation": 15.878018666431792,
+        "azimuth": 225.24795466991554,
+        "equationOfTime": -12.732824660994083
+      }
+    },
+    {
+      "input": {
+        "timeMs": 188780400063,
+        "latitude": 32.054419740394664,
+        "longitude": -136.81710409270838,
+        "elevation": 3965.778159081449,
+        "pressure": 99112.27154020373,
+        "temperature": -21.86398237103431,
+        "deltaT": 71.14870446651793
+      },
+      "expected": {
+        "zenith": 61.639549540486556,
+        "apparentZenith": 61.6051673385965,
+        "elevation": 28.36045045951344,
+        "apparentElevation": 28.394832661403502,
+        "azimuth": 209.49225590698265,
+        "equationOfTime": -0.06985617184545845
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2839481462736,
+        "latitude": 71.53117126009036,
+        "longitude": 115.94099086838813,
+        "elevation": 1938.6602004609865,
+        "pressure": 85146.19489440077,
+        "temperature": 19.835243983813452,
+        "deltaT": 55.19483537249982
+      },
+      "expected": {
+        "zenith": 105.78318810395935,
+        "apparentZenith": 105.78318810395935,
+        "elevation": -15.783188103959352,
+        "apparentElevation": -15.783188103959352,
+        "azimuth": 242.80167168356002,
+        "equationOfTime": 0.6131350526848109
+      }
+    },
+    {
+      "input": {
+        "timeMs": 656754724644,
+        "latitude": -5.76800562006847,
+        "longitude": 144.80697565180233,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 85.67310890245444,
+        "apparentZenith": 85.49456551312548,
+        "elevation": 4.326891097545559,
+        "apparentElevation": 4.505434486874516,
+        "azimuth": 258.651840595964,
+        "equationOfTime": 15.728011346205676
+      }
+    },
+    {
+      "input": {
+        "timeMs": 423402725148,
+        "latitude": -28.76205725214309,
+        "longitude": 76.56672841775803,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 88.45789161997155,
+        "apparentZenith": 88.14423128332561,
+        "elevation": 1.5421083800284499,
+        "apparentElevation": 1.855768716674389,
+        "azimuth": 296.4245318021625,
+        "equationOfTime": 2.1733188868747675
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1896508846696,
+        "latitude": -13.289216739502422,
+        "longitude": -24.64379755531372,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 84.46268465079041,
+        "apparentZenith": 84.31415609905277,
+        "elevation": 5.537315349209592,
+        "apparentElevation": 5.68584390094723,
+        "azimuth": 105.03465549577516,
+        "equationOfTime": -13.953556808948633
+      }
+    },
+    {
+      "input": {
+        "timeMs": 194314029412,
+        "latitude": -54.13179548577767,
+        "longitude": -72.82251045196975,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 92.26718817799774,
+        "apparentZenith": 92.26718817799774,
+        "elevation": -2.2671881779977334,
+        "apparentElevation": -2.2671881779977334,
+        "azimuth": 252.34146844477112,
+        "equationOfTime": -12.807190540632291
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2704558478339,
+        "latitude": -55.08379362252192,
+        "longitude": 176.54911366101948,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 91.8635556741106,
+        "apparentZenith": 91.8635556741106,
+        "elevation": -1.8635556741105974,
+        "apparentElevation": -1.8635556741105974,
+        "azimuth": 87.07035961886402,
+        "equationOfTime": 4.515865816720179
+      }
+    },
+    {
+      "input": {
+        "timeMs": 597258665085,
+        "latitude": 42.56792029082602,
+        "longitude": -143.40084698824006,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 87.15363417379432,
+        "apparentZenith": 86.91972150603364,
+        "elevation": 2.8463658262056772,
+        "apparentElevation": 3.0802784939663654,
+        "azimuth": 124.21730147172917,
+        "equationOfTime": 9.577440127079171
+      }
+    },
+    {
+      "input": {
+        "timeMs": 583293727491,
+        "latitude": -64.78626104767403,
+        "longitude": 148.2095583447078,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 88.16131358823468,
+        "apparentZenith": 87.86946657807525,
+        "elevation": 1.8386864117653194,
+        "apparentElevation": 2.1305334219247474,
+        "azimuth": 1.7940146580384067,
+        "equationOfTime": -2.772413255803258
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1249852908152,
+        "latitude": -25.04654538143145,
+        "longitude": 139.38195891572474,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 89.163321311466,
+        "apparentZenith": 88.7858382658468,
+        "elevation": 0.8366786885339991,
+        "apparentElevation": 1.2141617341531887,
+        "azimuth": 72.3009438355723,
+        "equationOfTime": -5.421333561966094
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2437303294707,
+        "latitude": -65.75165903654975,
+        "longitude": 86.21646022086237,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 94.61822886394027,
+        "apparentZenith": 94.61822886394027,
+        "elevation": -4.618228863940268,
+        "apparentElevation": -4.618228863940268,
+        "azimuth": 266.2928981410902,
+        "equationOfTime": -5.346926241501933
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3374206080585,
+        "latitude": -63.096600103396106,
+        "longitude": -141.16778601562422,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 92.12725608489406,
+        "apparentZenith": 92.12725608489406,
+        "elevation": -2.127256084894054,
+        "apparentElevation": -2.127256084894054,
+        "azimuth": 204.5623275406699,
+        "equationOfTime": 10.016160798521014
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2097852668457,
+        "latitude": 59.969121527633085,
+        "longitude": 58.1711122795174,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 87.3359153684837,
+        "apparentZenith": 87.09306324511108,
+        "elevation": 2.664084631516302,
+        "apparentElevation": 2.9069367548889162,
+        "azimuth": 315.55594315216536,
+        "equationOfTime": -2.439319646291551
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3075867927306,
+        "latitude": 62.45215396323167,
+        "longitude": -162.48780056802585,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 86.50554012311515,
+        "apparentZenith": 86.29918119319909,
+        "elevation": 3.4944598768848416,
+        "apparentElevation": 3.7008188068009087,
+        "azimuth": 318.0908856928175,
+        "equationOfTime": -1.9157051765942015
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2861504528750,
+        "latitude": -38.89174539920916,
+        "longitude": 166.7364186700092,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 88.56187738049823,
+        "apparentZenith": 88.23993052772379,
+        "elevation": 1.4381226195017727,
+        "apparentElevation": 1.7600694722762185,
+        "azimuth": 280.017382686174,
+        "equationOfTime": 1.1080010495788883
+      }
+    },
+    {
+      "input": {
+        "timeMs": -5543923274,
+        "latitude": -17.06296138897213,
+        "longitude": 137.85705954268118,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 93.35897329293596,
+        "apparentZenith": 93.35897329293596,
+        "elevation": -3.3589732929359597,
+        "apparentElevation": -3.3589732929359597,
+        "azimuth": 104.98055584840938,
+        "equationOfTime": 16.192835836438462
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1005310221693,
+        "latitude": 38.08613769839263,
+        "longitude": -96.0782957032638,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 92.41708844788423,
+        "apparentZenith": 92.41708844788423,
+        "elevation": -2.417088447884228,
+        "apparentElevation": -2.417088447884228,
+        "azimuth": 109.75501053844118,
+        "equationOfTime": 16.160450693469556
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2031555833887,
+        "latitude": 40.619090801444266,
+        "longitude": -62.4454502451282,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 88.49818589005683,
+        "apparentZenith": 88.18135601031307,
+        "elevation": 1.5018141099431719,
+        "apparentElevation": 1.818643989686939,
+        "azimuth": 65.19366387510024,
+        "equationOfTime": 3.5420710579201113
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1936450640298,
+        "latitude": -35.53054448712173,
+        "longitude": -113.95893122633564,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 84.46508757576632,
+        "apparentZenith": 84.31650869377944,
+        "elevation": 5.534912424233678,
+        "apparentElevation": 5.683491306220556,
+        "azimuth": 62.63695856321351,
+        "equationOfTime": 3.6427168873051414
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1907695227899,
+        "latitude": -60.10650697601685,
+        "longitude": -96.73089780871283,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 84.10398190969505,
+        "apparentZenith": 83.96262934533479,
+        "elevation": 5.896018090304951,
+        "apparentElevation": 6.0373706546652155,
+        "azimuth": 347.7476485267829,
+        "equationOfTime": -0.39248651152593084
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1457562348994,
+        "latitude": 13.850392904783915,
+        "longitude": -66.03054149425152,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 88.8873481789482,
+        "apparentZenith": 88.53706379364718,
+        "elevation": 1.112651821051802,
+        "apparentElevation": 1.4629362063528157,
+        "azimuth": 265.5568165858357,
+        "equationOfTime": -10.29445165918878
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1282529626967,
+        "latitude": -4.655833377505438,
+        "longitude": -124.3112548326788,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 89.4113842225737,
+        "apparentZenith": 89.00666374290653,
+        "elevation": 0.5886157774263002,
+        "apparentElevation": 0.9933362570934718,
+        "azimuth": 281.60549111187294,
+        "equationOfTime": -2.758856921147526
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2031036413453,
+        "latitude": -38.3265392580028,
+        "longitude": -33.452856655872125,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 94.28740417949776,
+        "apparentZenith": 94.28740417949776,
+        "elevation": -4.2874041794977495,
+        "apparentElevation": -4.2874041794977495,
+        "azimuth": 70.13652790035889,
+        "equationOfTime": 3.629716608360468
+      }
+    },
+    {
+      "input": {
+        "timeMs": 272068570110,
+        "latitude": -44.13777055181421,
+        "longitude": 133.33489781789746,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 85.12759476421135,
+        "apparentZenith": 84.96383593650087,
+        "elevation": 4.872405235788642,
+        "apparentElevation": 5.036164063499128,
+        "azimuth": 65.18900190116705,
+        "equationOfTime": -4.406599935529812
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1841729076652,
+        "latitude": -66.84658258580367,
+        "longitude": 124.44809577561585,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 94.73916696779601,
+        "apparentZenith": 94.73916696779601,
+        "elevation": -4.739166967796011,
+        "apparentElevation": -4.739166967796011,
+        "azimuth": 307.38354970372677,
+        "equationOfTime": 3.6525903066503815
+      }
+    },
+    {
+      "input": {
+        "timeMs": -238517314783,
+        "latitude": 55.497989668278315,
+        "longitude": -85.01528163638537,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 89.48206267516906,
+        "apparentZenith": 89.06906282846714,
+        "elevation": 0.5179373248309391,
+        "apparentElevation": 0.9309371715328667,
+        "azimuth": 47.28003464441724,
+        "equationOfTime": 0.5805133003595984
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2267955134263,
+        "latitude": -66.79831075762809,
+        "longitude": -120.9195409831494,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 85.59252587336326,
+        "apparentZenith": 85.41631674330526,
+        "elevation": 4.407474126636735,
+        "apparentElevation": 4.583683256694738,
+        "azimuth": 127.73643673396111,
+        "equationOfTime": 15.69794059824926
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3438232539825,
+        "latitude": 49.82748325355662,
+        "longitude": 99.07247012291583,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 85.1310688729789,
+        "apparentZenith": 84.96722299065328,
+        "elevation": 4.868931127021098,
+        "apparentElevation": 5.032777009346716,
+        "azimuth": 224.3867074819355,
+        "equationOfTime": 5.367053050780669
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3072175196322,
+        "latitude": 21.060999531783636,
+        "longitude": -125.82194246835166,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 88.23239763943258,
+        "apparentZenith": 87.93555535352479,
+        "elevation": 1.7676023605674271,
+        "apparentElevation": 2.0644446464752075,
+        "azimuth": 71.93519969183467,
+        "equationOfTime": 3.4903477301704697
+      }
+    },
+    {
+      "input": {
+        "timeMs": -303431804428,
+        "latitude": 5.86466729282868,
+        "longitude": -110.45677036204012,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 89.1423099885605,
+        "apparentZenith": 88.76700873137878,
+        "elevation": 0.857690011439504,
+        "apparentElevation": 1.2329912686212239,
+        "azimuth": 290.169994514834,
+        "equationOfTime": 3.526468507196114
+      }
+    },
+    {
+      "input": {
+        "timeMs": 56340078678,
+        "latitude": -64.38834795672176,
+        "longitude": 29.507656820646293,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 93.61819257655037,
+        "apparentZenith": 93.61819257655037,
+        "elevation": -3.618192576550365,
+        "apparentElevation": -3.618192576550365,
+        "azimuth": 117.59720840405811,
+        "equationOfTime": 14.0010410862742
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2278647093465,
+        "latitude": 3.128764278673073,
+        "longitude": 6.187150706052322,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 93.07729037516044,
+        "apparentZenith": 93.07729037516044,
+        "elevation": -3.0772903751604455,
+        "apparentElevation": -3.0772903751604455,
+        "azimuth": 91.12724299430306,
+        "equationOfTime": -8.341246918032994
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2267334971129,
+        "latitude": -29.509134612602356,
+        "longitude": -30.662737584860142,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 88.44190711135477,
+        "apparentZenith": 88.12948985332851,
+        "elevation": 1.5580928886452385,
+        "apparentElevation": 1.8705101466714948,
+        "azimuth": 107.67364699648374,
+        "equationOfTime": 16.376070932266884
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3075189000031,
+        "latitude": 25.50061607007297,
+        "longitude": 108.56087108491984,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 85.2448342360506,
+        "apparentZenith": 85.07809016458407,
+        "elevation": 4.755165763949409,
+        "apparentElevation": 4.921909835415926,
+        "azimuth": 293.49404923161353,
+        "equationOfTime": -0.21184974574134685
+      }
+    },
+    {
+      "input": {
+        "timeMs": -529273605331,
+        "latitude": -14.722785542805898,
+        "longitude": -148.19252355939813,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 84.21398359214577,
+        "apparentZenith": 84.07049947636875,
+        "elevation": 5.786016407854237,
+        "apparentElevation": 5.929500523631244,
+        "azimuth": 273.2617922159145,
+        "equationOfTime": -6.188000688125612
+      }
+    },
+    {
+      "input": {
+        "timeMs": 987601179976,
+        "latitude": 69.76819297573387,
+        "longitude": -139.64345134213482,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 87.8536507149755,
+        "apparentZenith": 87.58188749078799,
+        "elevation": 2.1463492850245047,
+        "apparentElevation": 2.418112509212011,
+        "azimuth": 63.334331147940304,
+        "equationOfTime": 0.7278031404325702
+      }
+    },
+    {
+      "input": {
+        "timeMs": 616764941009,
+        "latitude": 47.041861939663285,
+        "longitude": 113.62459020068908,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 85.02784517657747,
+        "apparentZenith": 84.86655028833626,
+        "elevation": 4.972154823422534,
+        "apparentElevation": 5.13344971166375,
+        "azimuth": 295.7229498193374,
+        "equationOfTime": -6.179850815819009
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3237979681204,
+        "latitude": -1.9484944051067354,
+        "longitude": 49.82023269784251,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 90.96773794281994,
+        "apparentZenith": 90.96773794281994,
+        "elevation": -0.9677379428199429,
+        "apparentElevation": -0.9677379428199429,
+        "azimuth": 285.44228172696853,
+        "equationOfTime": -5.446933713625185
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1509543068741,
+        "latitude": 46.57096407892082,
+        "longitude": -93.38791984487943,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 85.2831750506428,
+        "apparentZenith": 85.11543306590642,
+        "elevation": 4.716824949357199,
+        "apparentElevation": 4.884566934093591,
+        "azimuth": 117.06695872276879,
+        "equationOfTime": 16.413304429992422
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1085528247358,
+        "latitude": 60.23329772323593,
+        "longitude": 58.308830662789966,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 87.86952950308785,
+        "apparentZenith": 87.5967873261366,
+        "elevation": 2.130470496912149,
+        "apparentElevation": 2.4032126738633948,
+        "azimuth": 48.54716590624429,
+        "equationOfTime": 3.0036600677931347
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2858189261696,
+        "latitude": 65.94800898393156,
+        "longitude": 19.262464317507053,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 93.79159140151471,
+        "apparentZenith": 93.79159140151471,
+        "elevation": -3.7915914015147116,
+        "apparentElevation": -3.7915914015147116,
+        "azimuth": 340.63759085334505,
+        "equationOfTime": -6.592097338943859
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2874711248087,
+        "latitude": 57.840295118034604,
+        "longitude": -147.95883878250243,
+        "elevation": 0.0,
+        "pressure": 101325.0,
+        "temperature": 12.0,
+        "deltaT": 67.0
+      },
+      "expected": {
+        "zenith": 94.45788370400797,
+        "apparentZenith": 94.45788370400797,
+        "elevation": -4.457883704007975,
+        "apparentElevation": -4.457883704007975,
+        "azimuth": 246.51564060582712,
+        "equationOfTime": -13.816018329831422
+      }
+    }
+  ]
+}

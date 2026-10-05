@@ -121,3 +121,10 @@ package would fail. `publishConfig.exports` is honored only by pnpm/yarn.
 **Truth:** repo switched bun → pnpm (+ vitest); `pnpm pack` rewrites `exports` → `./dist`.
 **Apply:** publish only with `pnpm publish`; before a release, `pnpm pack` and check the
 tarball's `package.json` `exports` point at `./dist`.
+
+## 2026-10-05 — vitest 5 removed the top-level `bench` export
+**Trap:** `import { bench } from "vitest"` → `TypeError: bench is not a function` under vitest 5.
+**Truth:** benchmarks are a test-context fixture: `test("x", async ({ bench }) => { await
+bench("name", fn).run(); })` in a `*.bench.ts` file, run by `pnpm bench` (`vitest bench --run`);
+`pnpm test` does not pick up `*.bench.ts`.
+**Apply:** copy `src/models/solarposition/spa/spa.bench.ts` as the template.

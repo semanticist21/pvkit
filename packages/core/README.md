@@ -9,7 +9,7 @@ function-level tree-shaking.
 
 | Module | Subpath | Spec (papers) |
 | --- | --- | --- |
-| `solarposition` | `@pvkit/core/solarposition` | NOAA SPA (Reda & Andreas 2004) |
+| `solarposition` | `@pvkit/core/solarposition` | NREL SPA (Reda & Andreas 2004) ✓ |
 | `irradiance` | `@pvkit/core/irradiance` | Perez 1990 · Hay-Davies · Isotropic |
 | `temperature` | `@pvkit/core/temperature` | SAPM · PVsyst |
 | `pvsystem` | `@pvkit/core/pvsystem` | PVWatts (NREL) |
@@ -33,20 +33,24 @@ import { radians, toDegrees } from "@pvkit/core";
 toDegrees(radians(Math.PI)); // 180
 ```
 
-## Open decisions (lock before implementing)
+## Usage
 
-1. **Naming convention** — `snake_case` vs `camelCase`.
-   _Proposed: camelCase_, following JS ecosystem convention.
-2. **Time-series data structure** — `{t, v}[]` array (better DX) vs
-   `Float64Array + timestamps` (perf / WASM-friendly).
-   _Proposed: keep the core scalar (in/out), with time series as a thin
-   adapter on top._ A scalar core supports both representations and keeps a
-   future WASM boundary clean.
+```ts
+import { spa } from "@pvkit/core/solarposition/spa";
+
+// Seoul, 2025-06-21 12:00 KST (03:00 UTC). Time is UTC epoch ms; angles in degrees.
+const sun = spa({ timeMs: Date.UTC(2025, 5, 21, 3), latitude: 37.5665, longitude: 126.978 });
+sun.apparentZenith; // refraction-corrected zenith
+sun.azimuth;        // from north, clockwise
+```
+
+Conventions (time, angles, azimuth origin, ΔT): [`doc/conventions.md`](../../doc/conventions.md).
 
 ## Development
 
 ```bash
 pnpm install       # from the monorepo root
 pnpm test          # this package (vitest run)
+pnpm bench         # perf-critical methods (vitest bench)
 pnpm build         # tsdown → dist (ESM + .d.ts + subpath exports)
 ```

@@ -28,30 +28,30 @@ models never import each other.
       - Standard weather input shape is `{ ghi, dni, dhi, tempAir, windSpeed }`
         (scalar or time-series), so data can come from any source (user CSV, `io`
         pkg, `clearsky`) — core never fetches.
-- [ ] Time-series adapter shape (scalar core + thin batch wrapper) — open decision
-- [ ] Naming convention locked (camelCase) — open decision
+- [x] Time-series adapter shape — scalar core locked; batch adapter on demand (`doc/conventions.md`)
+- [x] Naming convention locked (camelCase)
 
-## 1. `solarposition` — NOAA SPA (Reda & Andreas, 2004)
+## 1. `solarposition` — NREL SPA (Reda & Andreas, 2004) — `spa` ✓
 
-- [ ] Julian date / Julian ephemeris day
-- [ ] Earth heliocentric longitude / latitude / radius (L, B, R)
-- [ ] Geocentric longitude / latitude
-- [ ] Nutation in longitude + obliquity (Δψ, Δε)
-- [ ] True obliquity of ecliptic
-- [ ] Apparent sun longitude
-- [ ] Greenwich / local sidereal time
-- [ ] Geocentric sun right ascension + declination
-- [ ] Observer local hour angle
-- [ ] Topocentric sun right ascension / declination / hour angle
-- [ ] Topocentric zenith angle (+ atmospheric refraction correction)
-- [ ] Topocentric azimuth angle
-- [ ] Topocentric elevation angle
-- [ ] Equation of time (spencer / NOAA)
+- [x] Julian date / Julian ephemeris day
+- [x] Earth heliocentric longitude / latitude / radius (L, B, R)
+- [x] Geocentric longitude / latitude
+- [x] Nutation in longitude + obliquity (Δψ, Δε)
+- [x] True obliquity of ecliptic
+- [x] Apparent sun longitude
+- [x] Greenwich / local sidereal time
+- [x] Geocentric sun right ascension + declination
+- [x] Observer local hour angle
+- [x] Topocentric sun right ascension / declination / hour angle
+- [x] Topocentric zenith angle (+ atmospheric refraction correction)
+- [x] Topocentric azimuth angle
+- [x] Topocentric elevation angle
+- [~] Equation of time (SPA ✓ in `spa`; spencer / NOAA simple forms todo)
 - [ ] Solar hour angle
 - [ ] Declination (simple closed-form, Cooper/Spencer)
 - [ ] Sunrise / sunset / solar noon (SPA + geometric)
 - [ ] Earth-sun distance (AU) for extraterrestrial scaling
-- [ ] Validation fixtures vs reference (NREL SPA / pvlib)
+- [x] Validation fixtures vs reference (NREL SPA / pvlib)
 
 ## 2. `atmosphere` — closed-form atmospheric helpers
 
