@@ -1,11 +1,16 @@
 /**
- * Irradiance.
- *
- * Spec: Perez (1990), Hay-Davies, Isotropic diffuse models + AOI.
- * Scope: GHI → POA transposition, diffuse component models, angle of incidence.
- * Validation: pin reference outputs as fixtures and assert against them.
- *
- * TODO: implement in order AOI → isotropic → hay-davies → perez.
+ * Irradiance: angle of incidence, extraterrestrial irradiance, sky/ground diffuse
+ * transposition models and plane-of-array totals. Shared rules: `irradiance.md`.
  */
 
-export {};
+export * from "./aoi/index.ts";
+export * from "./extra-radiation/index.ts";
+export * from "./ground-diffuse/index.ts";
+export * from "./hay-davies/index.ts";
+export * from "./isotropic/index.ts";
+export * from "./king/index.ts";
+export * from "./klucher/index.ts";
+export * from "./perez/index.ts";
+export * from "./poa-components/index.ts";
+export * from "./reindl/index.ts";
+export * from "./total-irradiance/index.ts";

@@ -1,0 +1,2808 @@
+{
+  "meta": {
+    "reference": "pvlib.tracking.singleaxis @ pvlib 0.16.1",
+    "nan": "null in expected means NaN (sun below horizon)"
+  },
+  "cases": [
+    {
+      "input": {
+        "apparentZenith": 10.0,
+        "solarAzimuth": 180.0,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 90.0,
+        "backtrack": true,
+        "gcr": 0.2857142857142857,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 1.2372351651196657e-15,
+        "aoi": 10.000000000000012,
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 10.0,
+        "solarAzimuth": 180.0,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 90.0,
+        "backtrack": true,
+        "gcr": 0.2857142857142857,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 0.0,
+        "aoi": 10.000000000000012,
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 0.0,
+        "solarAzimuth": 0.0,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 90.0,
+        "backtrack": true,
+        "gcr": 0.2857142857142857,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 0.0,
+        "aoi": 0.0,
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 90.0,
+        "solarAzimuth": 90.0,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 90.0,
+        "backtrack": true,
+        "gcr": 0.2857142857142857,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -1.4210854715202004e-14,
+        "aoi": 90.0,
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 90.0,
+        "solarAzimuth": 270.0,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 90.0,
+        "backtrack": false,
+        "gcr": 0.2857142857142857,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 90.0,
+        "aoi": 0.0,
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 90.001,
+        "solarAzimuth": 90.0,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 90.0,
+        "backtrack": true,
+        "gcr": 0.2857142857142857,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": null,
+        "aoi": null,
+        "surfaceTilt": null,
+        "surfaceAzimuth": null
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 120.0,
+        "solarAzimuth": 0.0,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 90.0,
+        "backtrack": true,
+        "gcr": 0.2857142857142857,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": null,
+        "aoi": null,
+        "surfaceTilt": null,
+        "surfaceAzimuth": null
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 60.0,
+        "solarAzimuth": 100.0,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 0.0,
+        "backtrack": true,
+        "gcr": 0.2857142857142857,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -0.0,
+        "aoi": 59.99999999999999,
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 60.0,
+        "solarAzimuth": 100.0,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 60.0,
+        "backtrack": false,
+        "gcr": 0.2857142857142857,
+        "crossAxisTilt": 0.0,
+        "minAngle": -30.0
+      },
+      "expected": {
+        "trackerTheta": -30.0,
+        "aoi": 30.745454928584742,
+        "surfaceTilt": 29.999999999999996,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 70.0,
+        "solarAzimuth": 260.0,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 20.0,
+        "backtrack": true,
+        "gcr": 0.2857142857142857,
+        "crossAxisTilt": 0.0,
+        "minAngle": -50.0
+      },
+      "expected": {
+        "trackerTheta": 20.0,
+        "aoi": 50.36422885312346,
+        "surfaceTilt": 19.999999999999993,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 80.0,
+        "solarAzimuth": 95.0,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 90.0,
+        "backtrack": true,
+        "gcr": 1.0,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 0.0,
+        "aoi": 80.0,
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 40.0,
+        "solarAzimuth": 180.0,
+        "axisTilt": 10.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 90.0,
+        "backtrack": true,
+        "gcr": 0.2857142857142857,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 0.0,
+        "aoi": 29.999999999999996,
+        "surfaceTilt": 10.000000000000012,
+        "surfaceAzimuth": 180.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.0,
+        "solarAzimuth": 100.0,
+        "axisTilt": 5.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 90.0,
+        "backtrack": true,
+        "gcr": 0.5,
+        "crossAxisTilt": -10.0
+      },
+      "expected": {
+        "trackerTheta": -27.945659325082076,
+        "aoi": 56.64830807219723,
+        "surfaceTilt": 28.353911479906,
+        "surfaceAzimuth": 99.32988051460131
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.0,
+        "solarAzimuth": 260.0,
+        "axisTilt": 5.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 90.0,
+        "backtrack": true,
+        "gcr": 0.5,
+        "crossAxisTilt": 10.0
+      },
+      "expected": {
+        "trackerTheta": 27.945659325082076,
+        "aoi": 56.64830807219723,
+        "surfaceTilt": 28.353911479906,
+        "surfaceAzimuth": 260.6701194853987
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 33.926779131508034,
+        "solarAzimuth": 145.05956482533648,
+        "axisTilt": 22.837599016137574,
+        "axisAzimuth": 67.32198226341312,
+        "maxAngle": 61.230461868818495,
+        "backtrack": true,
+        "gcr": 0.643512662996518,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 33.93025598319512,
+        "aoi": 12.286173712744652,
+        "surfaceTilt": 40.1219162363638,
+        "surfaceAzimuth": 127.3402241062896
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 4.692229810346515,
+        "solarAzimuth": 86.12881775621037,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 87.83814856627394,
+        "backtrack": false,
+        "gcr": 0.41081469807685167,
+        "crossAxisTilt": -11.383632185109324,
+        "minAngle": -82.48578671100451
+      },
+      "expected": {
+        "trackerTheta": -4.681571481717103,
+        "aoi": 0.31643639579441857,
+        "surfaceTilt": 4.681571481717068,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 45.55850669396707,
+        "solarAzimuth": 253.27603407225484,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 76.27457999320248,
+        "backtrack": true,
+        "gcr": 0.6891802270180988,
+        "crossAxisTilt": 0.0,
+        "minAngle": -73.4693187248103
+      },
+      "expected": {
+        "trackerTheta": -44.32049007018645,
+        "aoi": 11.85593715259622,
+        "surfaceTilt": 44.320490070186445,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 6.808610088039957,
+        "solarAzimuth": 118.75819935608686,
+        "axisTilt": 0.0,
+        "axisAzimuth": 226.28129210390577,
+        "maxAngle": 60.70152247210855,
+        "backtrack": true,
+        "gcr": 0.5996847988648895,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -6.49542598934855,
+        "aoi": 2.045618746264786,
+        "surfaceTilt": 6.495425989348571,
+        "surfaceAzimuth": 136.2812921039058
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 34.82982624206694,
+        "solarAzimuth": 176.73206630810526,
+        "axisTilt": 21.13620961462948,
+        "axisAzimuth": 180.0,
+        "maxAngle": 36.26953927526229,
+        "backtrack": true,
+        "gcr": 0.2357413455859941,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -1.919957490040481,
+        "aoi": 13.642536761168062,
+        "surfaceTilt": 21.219256140876485,
+        "surfaceAzimuth": 174.6887290787535
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 48.04544623520543,
+        "solarAzimuth": 256.0254700379933,
+        "axisTilt": 12.116499053094737,
+        "axisAzimuth": 100.91585973426662,
+        "maxAngle": 48.03592273834153,
+        "backtrack": false,
+        "gcr": 0.9042042463636203,
+        "crossAxisTilt": 0.0,
+        "minAngle": -70.99069317135243
+      },
+      "expected": {
+        "trackerTheta": 31.43622414378633,
+        "aoi": 53.120310426505505,
+        "surfaceTilt": 33.46592974063585,
+        "surfaceAzimuth": 171.9642477213114
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 13.584308136209133,
+        "solarAzimuth": 326.9359657112071,
+        "axisTilt": 28.667255942711293,
+        "axisAzimuth": 180.0,
+        "maxAngle": 50.64160927682249,
+        "backtrack": true,
+        "gcr": 0.48474219662365203,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 9.58979703629114,
+        "aoi": 39.71832766357125,
+        "surfaceTilt": 30.099117627703684,
+        "surfaceAzimuth": 199.4018428331807
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 19.557061349382167,
+        "solarAzimuth": 113.18568970931743,
+        "axisTilt": 0.6623656753301999,
+        "axisAzimuth": 0.0,
+        "maxAngle": 38.163573207227984,
+        "backtrack": false,
+        "gcr": 0.20325719377409518,
+        "crossAxisTilt": -1.792168383506132
+      },
+      "expected": {
+        "trackerTheta": 18.112873386428955,
+        "aoi": 8.202834331182702,
+        "surfaceTilt": 18.124574394859174,
+        "surfaceAzimuth": 87.97591802741863
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 41.768973018932186,
+        "solarAzimuth": 80.49957398332621,
+        "axisTilt": 3.709298943944593,
+        "axisAzimuth": 150.61153599140513,
+        "maxAngle": 88.66931021887663,
+        "backtrack": true,
+        "gcr": 0.882867173830626,
+        "crossAxisTilt": -5.353772352189252
+      },
+      "expected": {
+        "trackerTheta": -19.77639323498425,
+        "aoi": 22.162847571883297,
+        "surfaceTilt": 20.107553020101477,
+        "surfaceAzimuth": 70.8115030178422
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 43.164066195912746,
+        "solarAzimuth": 347.4252364935319,
+        "axisTilt": 10.39151103085329,
+        "axisAzimuth": 236.89955029179959,
+        "maxAngle": 86.22165877073279,
+        "backtrack": true,
+        "gcr": 0.6317876512136302,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 43.5400874839716,
+        "aoi": 21.560924487398648,
+        "surfaceTilt": 44.52022069816966,
+        "surfaceAzimuth": 316.1522132809732
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 23.964141768632132,
+        "solarAzimuth": 54.13447213500837,
+        "axisTilt": 23.57590023990692,
+        "axisAzimuth": 180.0,
+        "maxAngle": 61.11129297966813,
+        "backtrack": false,
+        "gcr": 0.37098487849927353,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -23.91226856170595,
+        "aoi": 35.70342146729413,
+        "surfaceTilt": 33.08490085279653,
+        "surfaceAzimuth": 132.0519619801016
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 90.93208865343851,
+        "solarAzimuth": 181.20020772462084,
+        "axisTilt": 8.114190663889145,
+        "axisAzimuth": 41.54402849673016,
+        "maxAngle": 72.60960215187359,
+        "backtrack": true,
+        "gcr": 0.2228913345154263,
+        "crossAxisTilt": 0.29068442522466764
+      },
+      "expected": {
+        "trackerTheta": null,
+        "aoi": null,
+        "surfaceTilt": null,
+        "surfaceAzimuth": null
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 99.40862804423169,
+        "solarAzimuth": 205.26123426197785,
+        "axisTilt": 29.599033361580787,
+        "axisAzimuth": 111.75828916908529,
+        "maxAngle": 56.832817553725455,
+        "backtrack": false,
+        "gcr": 0.15982217771722895,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": null,
+        "aoi": null,
+        "surfaceTilt": null,
+        "surfaceAzimuth": null
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 81.2895193456986,
+        "solarAzimuth": 105.78120313194505,
+        "axisTilt": 0.0,
+        "axisAzimuth": 65.65129928539682,
+        "maxAngle": 44.86700226089458,
+        "backtrack": true,
+        "gcr": 0.13533141606756455,
+        "crossAxisTilt": -4.229790475630746
+      },
+      "expected": {
+        "trackerTheta": 44.86700226089458,
+        "aoi": 56.16682228768201,
+        "surfaceTilt": 44.86700226089458,
+        "surfaceAzimuth": 155.65129928539682
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 35.57711718700634,
+        "solarAzimuth": 193.2293401494103,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 61.29593481945403,
+        "backtrack": true,
+        "gcr": 0.5590431084719026,
+        "crossAxisTilt": 3.887537169722215
+      },
+      "expected": {
+        "trackerTheta": -9.296963816018819,
+        "aoi": 34.49666972923272,
+        "surfaceTilt": 9.296963816018804,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 60.35720635168885,
+        "solarAzimuth": 356.2085026622399,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 79.8740683796977,
+        "backtrack": false,
+        "gcr": 0.5121178699405521,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 6.628063906472402,
+        "aoi": 60.137578455246754,
+        "surfaceTilt": 6.628063906472379,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 82.98406649432131,
+        "solarAzimuth": 336.65676870612265,
+        "axisTilt": 29.18748363832996,
+        "axisAzimuth": 303.04266705613236,
+        "maxAngle": 47.354372412274046,
+        "backtrack": true,
+        "gcr": 0.2993562778381784,
+        "crossAxisTilt": -10.415065003339436
+      },
+      "expected": {
+        "trackerTheta": 47.148320683047636,
+        "aoi": 41.455236485170424,
+        "surfaceTilt": 53.57648012522132,
+        "surfaceAzimuth": 8.700474526341582
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 79.34883674143396,
+        "solarAzimuth": 78.45408255831548,
+        "axisTilt": 0.0,
+        "axisAzimuth": 335.57147354427974,
+        "maxAngle": 48.76800567248004,
+        "backtrack": false,
+        "gcr": 0.11109043254095846,
+        "crossAxisTilt": 10.986392133943674
+      },
+      "expected": {
+        "trackerTheta": 48.76800567248004,
+        "aoi": 32.615289816792014,
+        "surfaceTilt": 48.768005672480044,
+        "surfaceAzimuth": 65.57147354427975
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 35.15967198167422,
+        "solarAzimuth": 226.36478574315325,
+        "axisTilt": 19.205341613054753,
+        "axisAzimuth": 180.0,
+        "maxAngle": 57.23380603032872,
+        "backtrack": true,
+        "gcr": 0.5758773620464802,
+        "crossAxisTilt": 0.0,
+        "minAngle": -72.12893408299199
+      },
+      "expected": {
+        "trackerTheta": 24.78101801878313,
+        "aoi": 6.103546566789438,
+        "surfaceTilt": 30.975556630666606,
+        "surfaceAzimuth": 234.52849202438665
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 51.588066981118665,
+        "solarAzimuth": 257.7121835914155,
+        "axisTilt": 20.691475045959677,
+        "axisAzimuth": 0.0,
+        "maxAngle": 84.14043384469119,
+        "backtrack": true,
+        "gcr": 0.7322998001249147,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -16.013428759327894,
+        "aoi": 44.500128042569315,
+        "surfaceTilt": 25.947335877319208,
+        "surfaceAzimuth": 320.91455892253697
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 80.53798687137997,
+        "solarAzimuth": 289.0502558879529,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 84.20048061374328,
+        "backtrack": true,
+        "gcr": 0.20960202850390974,
+        "crossAxisTilt": 6.933903978023763
+      },
+      "expected": {
+        "trackerTheta": 80.00052298719743,
+        "aoi": 18.781297610033675,
+        "surfaceTilt": 80.00052298719743,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 97.50531928695415,
+        "solarAzimuth": 50.63610480632501,
+        "axisTilt": 0.0,
+        "axisAzimuth": 345.67241529279494,
+        "maxAngle": 65.71625836860248,
+        "backtrack": true,
+        "gcr": 0.6374852485904441,
+        "crossAxisTilt": -14.88034681324196,
+        "minAngle": -51.86256030313156
+      },
+      "expected": {
+        "trackerTheta": null,
+        "aoi": null,
+        "surfaceTilt": null,
+        "surfaceAzimuth": null
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 46.47195593483112,
+        "solarAzimuth": 94.41507969181485,
+        "axisTilt": 20.487610695645916,
+        "axisAzimuth": 47.42626340764045,
+        "maxAngle": 46.45544205180251,
+        "backtrack": true,
+        "gcr": 0.8649708928615361,
+        "crossAxisTilt": 5.082256887546541
+      },
+      "expected": {
+        "trackerTheta": 32.94003432783231,
+        "aoi": 12.84081132128719,
+        "surfaceTilt": 38.1722400343929,
+        "surfaceAzimuth": 109.04847502362513
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 73.04437842727964,
+        "solarAzimuth": 155.09200909143757,
+        "axisTilt": 20.92902935780983,
+        "axisAzimuth": 340.8375244253772,
+        "maxAngle": 71.72436980575377,
+        "backtrack": true,
+        "gcr": 0.24608750610685795,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 71.72436980575377,
+        "aoi": 86.00112099980427,
+        "surfaceTilt": 72.96839544934244,
+        "surfaceAzimuth": 64.10956169115143
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 29.16311702891482,
+        "solarAzimuth": 275.28925191712705,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 86.27756333456091,
+        "backtrack": true,
+        "gcr": 0.4389767130001488,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -29.05919868950535,
+        "aoi": 2.5746470473296332,
+        "surfaceTilt": 29.059198689505358,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 70.45125166702121,
+        "solarAzimuth": 277.6243403216932,
+        "axisTilt": 20.010089185579446,
+        "axisAzimuth": 306.5021429087151,
+        "maxAngle": 64.5980741929832,
+        "backtrack": true,
+        "gcr": 0.1990829320560234,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -37.329509055659535,
+        "aoi": 41.36582843991965,
+        "surfaceTilt": 41.65509854288433,
+        "surfaceAzimuth": 240.66807051184597
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 84.05284650427569,
+        "solarAzimuth": 344.69040250903254,
+        "axisTilt": 6.552303405830424,
+        "axisAzimuth": 198.2500701608692,
+        "maxAngle": 53.92663399979895,
+        "backtrack": true,
+        "gcr": 0.7483213261063327,
+        "crossAxisTilt": 0.0,
+        "minAngle": -65.951413351265
+      },
+      "expected": {
+        "trackerTheta": 0.29289888942378184,
+        "aoi": 89.36013276814127,
+        "surfaceTilt": 6.558818137972236,
+        "surfaceAzimuth": 200.81518541147906
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 17.420544015355034,
+        "solarAzimuth": 341.2602409298058,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 32.11500869645667,
+        "backtrack": true,
+        "gcr": 0.5865142557378223,
+        "crossAxisTilt": 8.933233020428538,
+        "minAngle": -57.562484571277736
+      },
+      "expected": {
+        "trackerTheta": -5.7563411425346125,
+        "aoi": 16.469918748823247,
+        "surfaceTilt": 5.756341142534642,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 46.394974462924566,
+        "solarAzimuth": 114.46627348404537,
+        "axisTilt": 15.98326368495472,
+        "axisAzimuth": 180.0,
+        "maxAngle": 74.27185320506257,
+        "backtrack": false,
+        "gcr": 0.6830467815247787,
+        "crossAxisTilt": -16.771614094794426
+      },
+      "expected": {
+        "trackerTheta": -41.475808039788575,
+        "aoi": 5.646702581771254,
+        "surfaceTilt": 43.92308993426714,
+        "surfaceAzimuth": 107.30175372061139
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 98.15737449443903,
+        "solarAzimuth": 35.97350796926187,
+        "axisTilt": 29.291886948821773,
+        "axisAzimuth": 218.70507416809363,
+        "maxAngle": 45.79461895891421,
+        "backtrack": false,
+        "gcr": 0.4390300474817116,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": null,
+        "aoi": null,
+        "surfaceTilt": null,
+        "surfaceAzimuth": null
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 74.04352041375431,
+        "solarAzimuth": 315.9843810815249,
+        "axisTilt": 3.376742966985402,
+        "axisAzimuth": 283.93031781022626,
+        "maxAngle": 30.57779878567739,
+        "backtrack": false,
+        "gcr": 0.7936085821148814,
+        "crossAxisTilt": -14.351774422503368,
+        "minAngle": -65.15442732974599
+      },
+      "expected": {
+        "trackerTheta": 30.57779878567739,
+        "aoi": 57.50882155665088,
+        "surfaceTilt": 30.74573582971459,
+        "surfaceAzimuth": 8.237618632171811
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 58.34608190268489,
+        "solarAzimuth": 279.64433047576813,
+        "axisTilt": 23.877723694300343,
+        "axisAzimuth": 180.0,
+        "maxAngle": 78.10479048479348,
+        "backtrack": false,
+        "gcr": 0.3104865312562836,
+        "crossAxisTilt": -9.481400079005597
+      },
+      "expected": {
+        "trackerTheta": 63.2961609136122,
+        "aoi": 20.049349334557444,
+        "surfaceTilt": 65.737538127631,
+        "surfaceAzimuth": 258.49076362434505
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 71.37116411224994,
+        "solarAzimuth": 24.759304627765705,
+        "axisTilt": 0.0,
+        "axisAzimuth": 349.3218227209303,
+        "maxAngle": 45.32234037675093,
+        "backtrack": false,
+        "gcr": 0.29220359722125344,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 45.32234037675093,
+        "aoi": 52.02692638158339,
+        "surfaceTilt": 45.32234037675092,
+        "surfaceAzimuth": 79.32182272093029
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 0.06902180551627835,
+        "solarAzimuth": 107.54648317504825,
+        "axisTilt": 3.6266764076451583,
+        "axisAzimuth": 180.0,
+        "maxAngle": 89.26556477002056,
+        "backtrack": true,
+        "gcr": 0.7380145250312646,
+        "crossAxisTilt": 5.0619535207218425
+      },
+      "expected": {
+        "trackerTheta": -0.06594094802608369,
+        "aoi": 3.605865361724763,
+        "surfaceTilt": 3.627275033095197,
+        "surfaceAzimuth": 178.95765537292812
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 22.13575874876621,
+        "solarAzimuth": 167.82943640894035,
+        "axisTilt": 4.807418689675989,
+        "axisAzimuth": 89.42959533608405,
+        "maxAngle": 72.62061804132924,
+        "backtrack": true,
+        "gcr": 0.6235500652352411,
+        "crossAxisTilt": 11.947181364592918
+      },
+      "expected": {
+        "trackerTheta": 21.660552593614813,
+        "aoi": 0.1219624028672229,
+        "surfaceTilt": 22.16255066797887,
+        "surfaceAzimuth": 167.513846404632
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 21.237141508875123,
+        "solarAzimuth": 170.07773737375788,
+        "axisTilt": 24.583697848299412,
+        "axisAzimuth": 326.6287735956667,
+        "maxAngle": 79.7363951466351,
+        "backtrack": true,
+        "gcr": 0.2950182594466228,
+        "crossAxisTilt": 10.888938104317125
+      },
+      "expected": {
+        "trackerTheta": -11.486324215059994,
+        "aoi": 43.62702609434241,
+        "surfaceTilt": 26.982871748760143,
+        "surfaceAzimuth": 300.59582623027364
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 80.76749758187214,
+        "solarAzimuth": 357.2874786920979,
+        "axisTilt": 9.785675643608915,
+        "axisAzimuth": 152.9459117491903,
+        "maxAngle": 52.99061711383542,
+        "backtrack": false,
+        "gcr": 0.8892754541963359,
+        "crossAxisTilt": 9.986357596878026,
+        "minAngle": -31.28553776599808
+      },
+      "expected": {
+        "trackerTheta": -31.28553776599808,
+        "aoi": 77.53957106813682,
+        "surfaceTilt": 32.63150551937173,
+        "surfaceAzimuth": 78.57217881885678
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 31.149920892226046,
+        "solarAzimuth": 135.97792594915384,
+        "axisTilt": 28.659855890522838,
+        "axisAzimuth": 0.0,
+        "maxAngle": 33.942542389452015,
+        "backtrack": false,
+        "gcr": 0.9310995499459311,
+        "crossAxisTilt": -1.7760595131297219
+      },
+      "expected": {
+        "trackerTheta": 32.12184039788209,
+        "aoi": 47.463474629293415,
+        "surfaceTilt": 41.998975411209855,
+        "surfaceAzimuth": 52.62325027510802
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 6.0237529935723515,
+        "solarAzimuth": 53.793023034978894,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 37.97065245879615,
+        "backtrack": true,
+        "gcr": 0.809565375246198,
+        "crossAxisTilt": -0.3703353417251565
+      },
+      "expected": {
+        "trackerTheta": 4.866745642117743,
+        "aoi": 3.5539817285894366,
+        "surfaceTilt": 4.866745642117706,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 1.1548764445785897,
+        "solarAzimuth": 351.64610468840755,
+        "axisTilt": 9.43888127676882,
+        "axisAzimuth": 94.7525928688236,
+        "maxAngle": 84.04798272079394,
+        "backtrack": false,
+        "gcr": 0.9624819832152697,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -1.1411005673331234,
+        "aoi": 9.69890927297615,
+        "surfaceTilt": 9.506986336697423,
+        "surfaceAzimuth": 87.82746853972084
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 66.77928255956441,
+        "solarAzimuth": 265.89508281456676,
+        "axisTilt": 20.232696888771798,
+        "axisAzimuth": 282.88049880283535,
+        "maxAngle": 82.66569648963007,
+        "backtrack": false,
+        "gcr": 0.5448748314097538,
+        "crossAxisTilt": -8.996058957430503
+      },
+      "expected": {
+        "trackerTheta": -21.720988567041413,
+        "aoi": 43.49727783632071,
+        "surfaceTilt": 29.346237219702235,
+        "surfaceAzimuth": 233.8422676268766
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 38.31919911308973,
+        "solarAzimuth": 124.98531437873594,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 66.13048041280994,
+        "backtrack": false,
+        "gcr": 0.4128532902498056,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -32.92262388850036,
+        "aoi": 20.824781953055147,
+        "surfaceTilt": 32.92262388850037,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 20.232269645871913,
+        "solarAzimuth": 135.40237465365135,
+        "axisTilt": 16.922495577600195,
+        "axisAzimuth": 0.0,
+        "maxAngle": 45.96121079205748,
+        "backtrack": true,
+        "gcr": 0.8266317288217023,
+        "crossAxisTilt": 0.0,
+        "minAngle": -54.103924215409464
+      },
+      "expected": {
+        "trackerTheta": 16.381507382640567,
+        "aoi": 30.577467854362727,
+        "surfaceTilt": 23.384473693362665,
+        "surfaceAzimuth": 45.28278161801161
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 28.654256925381883,
+        "solarAzimuth": 315.93582446233495,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 59.33110571866932,
+        "backtrack": true,
+        "gcr": 0.7610810895245798,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 20.808487240412788,
+        "aoi": 20.15534799800061,
+        "surfaceTilt": 20.808487240412795,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 22.699588097107405,
+        "solarAzimuth": 134.14788890144865,
+        "axisTilt": 0.0,
+        "axisAzimuth": 48.37095867812686,
+        "maxAngle": 57.15811130918867,
+        "backtrack": true,
+        "gcr": 0.6903792789580415,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 22.644183922708493,
+        "aoi": 1.6284241820872574,
+        "surfaceTilt": 22.644183922708503,
+        "surfaceAzimuth": 138.37095867812687
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 97.53528881704605,
+        "solarAzimuth": 345.0821316705565,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 41.494848196048544,
+        "backtrack": true,
+        "gcr": 0.7948169338506573,
+        "crossAxisTilt": 16.433744887520326
+      },
+      "expected": {
+        "trackerTheta": null,
+        "aoi": null,
+        "surfaceTilt": null,
+        "surfaceAzimuth": null
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 16.79824012332196,
+        "solarAzimuth": 113.66147254754591,
+        "axisTilt": 0.7603646953083987,
+        "axisAzimuth": 108.24066761577598,
+        "maxAngle": 79.96953277537503,
+        "backtrack": false,
+        "gcr": 0.259370787288957,
+        "crossAxisTilt": 9.367966036281107
+      },
+      "expected": {
+        "trackerTheta": 1.6272297031164535,
+        "aoi": 15.96084343259754,
+        "surfaceTilt": 1.7960722485432086,
+        "surfaceAzimuth": 173.20168573523915
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 10.854560549238624,
+        "solarAzimuth": 0.8774677211445647,
+        "axisTilt": 0.0,
+        "axisAzimuth": 337.6810999987725,
+        "maxAngle": 31.29453888087786,
+        "backtrack": true,
+        "gcr": 0.9070549211338408,
+        "crossAxisTilt": -14.840884539364723
+      },
+      "expected": {
+        "trackerTheta": 4.319128142052031,
+        "aoi": 9.967711233113105,
+        "surfaceTilt": 4.319128142052044,
+        "surfaceAzimuth": 67.68109999877248
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 42.786903656076404,
+        "solarAzimuth": 189.9393019057723,
+        "axisTilt": 2.8415486167948667,
+        "axisAzimuth": 0.0,
+        "maxAngle": 57.3148730445169,
+        "backtrack": true,
+        "gcr": 0.4027470376655489,
+        "crossAxisTilt": -19.151604905598,
+        "minAngle": -44.35104830369239
+      },
+      "expected": {
+        "trackerTheta": -9.510926299121602,
+        "aoi": 44.80026254867667,
+        "surfaceTilt": 9.922590668296104,
+        "surfaceAzimuth": 286.4832852856465
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 45.87342232663032,
+        "solarAzimuth": 215.27708363917057,
+        "axisTilt": 11.490679181228355,
+        "axisAzimuth": 180.0,
+        "maxAngle": 61.51533230298773,
+        "backtrack": false,
+        "gcr": 0.38920108808402054,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 27.42137434660968,
+        "aoi": 25.820240896940724,
+        "surfaceTilt": 29.558471614426033,
+        "surfaceAzimuth": 248.99513091212697
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 29.22150457983865,
+        "solarAzimuth": 302.91927128920827,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 75.02688653381273,
+        "backtrack": true,
+        "gcr": 0.9696909656967955,
+        "crossAxisTilt": 1.4901843983879282,
+        "minAngle": -32.52738505030115
+      },
+      "expected": {
+        "trackerTheta": -2.3830175590273335,
+        "aoi": 27.2491978677127,
+        "surfaceTilt": 2.383017559027359,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 83.476391921735,
+        "solarAzimuth": 90.33470236504964,
+        "axisTilt": 19.279569906416643,
+        "axisAzimuth": 180.0,
+        "maxAngle": 74.1794381539736,
+        "backtrack": true,
+        "gcr": 0.8200257094329886,
+        "crossAxisTilt": 14.221726774658276
+      },
+      "expected": {
+        "trackerTheta": -3.752521761900681,
+        "aoi": 79.98270186914036,
+        "surfaceTilt": 19.6277244294129,
+        "surfaceAzimuth": 168.76482214299088
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 22.31016779851769,
+        "solarAzimuth": 298.32758722827884,
+        "axisTilt": 0.0,
+        "axisAzimuth": 206.49049206237697,
+        "maxAngle": 69.77225697838801,
+        "backtrack": true,
+        "gcr": 0.6208622396182277,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 22.299824389830366,
+        "aoi": 0.697296420960374,
+        "surfaceTilt": 22.29982438983037,
+        "surfaceAzimuth": 296.490492062377
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 47.469592088088575,
+        "solarAzimuth": 349.30244524952474,
+        "axisTilt": 9.687891453861925,
+        "axisAzimuth": 0.0,
+        "maxAngle": 46.56758570830066,
+        "backtrack": true,
+        "gcr": 0.5861175691926621,
+        "crossAxisTilt": -16.254762389418875
+      },
+      "expected": {
+        "trackerTheta": -9.84554216882361,
+        "aoi": 36.87205947591591,
+        "surfaceTilt": 13.779062976319214,
+        "surfaceAzimuth": 314.11713826328867
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 73.81283871871948,
+        "solarAzimuth": 55.652314514894606,
+        "axisTilt": 0.6510679996303581,
+        "axisAzimuth": 0.0,
+        "maxAngle": 78.37285967395042,
+        "backtrack": true,
+        "gcr": 0.7426300326979753,
+        "crossAxisTilt": -10.688072158099136
+      },
+      "expected": {
+        "trackerTheta": -7.279898095778506,
+        "aoi": 79.50528110644818,
+        "surfaceTilt": 7.30879759511316,
+        "surfaceAzimuth": 275.083080119413
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 36.19146647816442,
+        "solarAzimuth": 97.66124784313584,
+        "axisTilt": 0.0,
+        "axisAzimuth": 345.80750509433943,
+        "maxAngle": 65.22292813403077,
+        "backtrack": true,
+        "gcr": 0.1648668919946952,
+        "crossAxisTilt": -4.223919579636886
+      },
+      "expected": {
+        "trackerTheta": 34.17969650760659,
+        "aoi": 12.697372917886092,
+        "surfaceTilt": 34.17969650760659,
+        "surfaceAzimuth": 75.8075050943394
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 40.020396185117725,
+        "solarAzimuth": 210.33391209888353,
+        "axisTilt": 29.12530221773305,
+        "axisAzimuth": 60.76823663843123,
+        "maxAngle": 61.05015088923,
+        "backtrack": true,
+        "gcr": 0.9231030905044028,
+        "crossAxisTilt": 5.314305016907235
+      },
+      "expected": {
+        "trackerTheta": 13.772150790336436,
+        "aoi": 62.27736750621933,
+        "surfaceTilt": 31.957310628550466,
+        "surfaceAzimuth": 87.49763375990813
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 34.771128648447004,
+        "solarAzimuth": 46.3620143569687,
+        "axisTilt": 23.653986238793777,
+        "axisAzimuth": 180.0,
+        "maxAngle": 42.60264865272102,
+        "backtrack": false,
+        "gcr": 0.5461894725239758,
+        "crossAxisTilt": -5.549876215276601
+      },
+      "expected": {
+        "trackerTheta": -34.76952180067211,
+        "aoi": 43.63555829160651,
+        "surfaceTilt": 41.19795525811121,
+        "surfaceAzimuth": 120.0246728199819
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 95.18368106444241,
+        "solarAzimuth": 89.4789031718335,
+        "axisTilt": 29.524447329377978,
+        "axisAzimuth": 0.0,
+        "maxAngle": 86.39984267586031,
+        "backtrack": true,
+        "gcr": 0.5775479892370676,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": null,
+        "aoi": null,
+        "surfaceTilt": null,
+        "surfaceAzimuth": null
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 22.807872478504088,
+        "solarAzimuth": 24.624898311646433,
+        "axisTilt": 7.19154467854726,
+        "axisAzimuth": 0.0,
+        "maxAngle": 52.52189485910761,
+        "backtrack": false,
+        "gcr": 0.6766234119649575,
+        "crossAxisTilt": -5.858267631719216
+      },
+      "expected": {
+        "trackerTheta": 9.563614312513028,
+        "aoi": 13.54550437411798,
+        "surfaceTilt": 11.94568232473912,
+        "surfaceAzimuth": 53.38697896343739
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 73.38039921867161,
+        "solarAzimuth": 259.71254618331903,
+        "axisTilt": 7.7265771633423945,
+        "axisAzimuth": 0.0,
+        "maxAngle": 68.55232623996035,
+        "backtrack": true,
+        "gcr": 0.5362029678884377,
+        "crossAxisTilt": -16.92650515335131
+      },
+      "expected": {
+        "trackerTheta": -68.55232623996035,
+        "aoi": 13.405885618158996,
+        "surfaceTilt": 68.75654405719702,
+        "surfaceAzimuth": 273.0234300077325
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 64.22133059325064,
+        "solarAzimuth": 291.72618962578326,
+        "axisTilt": 23.149666764412384,
+        "axisAzimuth": 274.6554830820799,
+        "maxAngle": 82.28299515544043,
+        "backtrack": false,
+        "gcr": 0.8009021058147384,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 19.699368404790146,
+        "aoi": 38.35445180400808,
+        "surfaceTilt": 30.040959163829267,
+        "surfaceAzimuth": 316.9805634080887
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 65.8350995194745,
+        "solarAzimuth": 58.562956656550774,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 46.78577689361069,
+        "backtrack": true,
+        "gcr": 0.7454703009239716,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -10.896318734477632,
+        "aoi": 56.69227664109711,
+        "surfaceTilt": 10.896318734477632,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 24.348508927956747,
+        "solarAzimuth": 149.68698373355875,
+        "axisTilt": 3.984547955945059,
+        "axisAzimuth": 56.42881670734136,
+        "maxAngle": 56.01080115972315,
+        "backtrack": true,
+        "gcr": 0.26156280126856146,
+        "crossAxisTilt": 1.5448420138763197,
+        "minAngle": -52.14109868877877
+      },
+      "expected": {
+        "trackerTheta": 24.404415422551807,
+        "aoi": 4.972782985525032,
+        "surfaceTilt": 24.70789090003201,
+        "surfaceAzimuth": 137.72146420114788
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 8.28363984601137,
+        "solarAzimuth": 281.8121840671805,
+        "axisTilt": 28.245221712494516,
+        "axisAzimuth": 336.7540487308002,
+        "maxAngle": 35.572710218434274,
+        "backtrack": true,
+        "gcr": 0.3934946352975983,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -7.37702280274389,
+        "aoi": 23.29127945008233,
+        "surfaceTilt": 29.11574851857213,
+        "surfaceAzimuth": 321.45359344485485
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 21.587356334674045,
+        "solarAzimuth": 8.156540673713595,
+        "axisTilt": 22.790594222160824,
+        "axisAzimuth": 205.50057423862717,
+        "maxAngle": 61.15288586682793,
+        "backtrack": true,
+        "gcr": 0.18161841945911986,
+        "crossAxisTilt": 17.48690090028381
+      },
+      "expected": {
+        "trackerTheta": 8.647009160084485,
+        "aoi": 43.154329028535244,
+        "surfaceTilt": 24.29383575237916,
+        "surfaceAzimuth": 226.93502226462755
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 34.77540282989862,
+        "solarAzimuth": 53.820853119129325,
+        "axisTilt": 25.95446368347418,
+        "axisAzimuth": 246.20628514214644,
+        "maxAngle": 38.00176084421174,
+        "backtrack": false,
+        "gcr": 0.9216450512330713,
+        "crossAxisTilt": 0.0,
+        "minAngle": -84.41489166049278
+      },
+      "expected": {
+        "trackerTheta": 13.889076976233168,
+        "aoi": 59.36028238608133,
+        "surfaceTilt": 29.208078935130075,
+        "surfaceAzimuth": 275.6724005031013
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 38.84886442068793,
+        "solarAzimuth": 100.79571120543508,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 80.97714740976056,
+        "backtrack": true,
+        "gcr": 0.5617398660651582,
+        "crossAxisTilt": -6.112443299484065
+      },
+      "expected": {
+        "trackerTheta": -38.35001477405542,
+        "aoi": 6.7473937552701235,
+        "surfaceTilt": 38.350014774055424,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 1.168028248275088,
+        "solarAzimuth": 135.71571034604062,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 35.11975091140225,
+        "backtrack": true,
+        "gcr": 0.2230693690011963,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 0.815597438272974,
+        "aoi": 0.836144742951516,
+        "surfaceTilt": 0.8155974382729828,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 21.44796638552766,
+        "solarAzimuth": 338.76605573215465,
+        "axisTilt": 9.796062232782434,
+        "axisAzimuth": 0.0,
+        "maxAngle": 82.32073966172211,
+        "backtrack": false,
+        "gcr": 0.5250422511779368,
+        "crossAxisTilt": 19.099032556433706
+      },
+      "expected": {
+        "trackerTheta": -7.733703227542474,
+        "aoi": 10.224325430678265,
+        "surfaceTilt": 12.457462325273283,
+        "surfaceAzimuth": 321.4037140485224
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 76.38969815475667,
+        "solarAzimuth": 237.24218643903987,
+        "axisTilt": 1.69072850985304,
+        "axisAzimuth": 0.0,
+        "maxAngle": 73.45545849112136,
+        "backtrack": false,
+        "gcr": 0.9095240497533646,
+        "crossAxisTilt": -5.061805671439683
+      },
+      "expected": {
+        "trackerTheta": -73.45545849112136,
+        "aoi": 32.213042268540065,
+        "surfaceTilt": 73.46286815345208,
+        "surfaceAzimuth": 270.50216087677006
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 17.183491848501063,
+        "solarAzimuth": 183.88955119750003,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 55.217731968665724,
+        "backtrack": false,
+        "gcr": 0.34929613797783365,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -1.201689433808792,
+        "aoi": 17.14268605394889,
+        "surfaceTilt": 1.2016894338088122,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 27.82531521173629,
+        "solarAzimuth": 19.92557446569141,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 31.712162952958725,
+        "backtrack": true,
+        "gcr": 0.19859609722581575,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 10.197065513734584,
+        "aoi": 26.02952954102032,
+        "surfaceTilt": 10.197065513734573,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 11.069272586929147,
+        "solarAzimuth": 340.78839312910293,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 64.78340810000837,
+        "backtrack": true,
+        "gcr": 0.9492904343897193,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 3.6833537457683447,
+        "aoi": 10.445687547354238,
+        "surfaceTilt": 3.6833537457683034,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 60.98652921797544,
+        "solarAzimuth": 346.051586967614,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 35.52399548732456,
+        "backtrack": true,
+        "gcr": 0.23839997573420754,
+        "crossAxisTilt": -13.559719435160957
+      },
+      "expected": {
+        "trackerTheta": 23.490797619397757,
+        "aoi": 58.07264343071283,
+        "surfaceTilt": 23.49079761939776,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 61.102536205487944,
+        "solarAzimuth": 19.360335566433655,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 54.53449840554929,
+        "backtrack": true,
+        "gcr": 0.8373115823183244,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -30.98855113271235,
+        "aoi": 55.687900471901656,
+        "surfaceTilt": 30.98855113271234,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 91.09311846896249,
+        "solarAzimuth": 167.73350074877905,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 89.48667238622173,
+        "backtrack": false,
+        "gcr": 0.8613923571776737,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": null,
+        "aoi": null,
+        "surfaceTilt": null,
+        "surfaceAzimuth": null
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.73953958893908,
+        "solarAzimuth": 295.94099086838816,
+        "axisTilt": 19.93409759352538,
+        "axisAzimuth": 174.4794180414888,
+        "maxAngle": 30.58450611749945,
+        "backtrack": false,
+        "gcr": 0.6921718846532223,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 30.58450611749945,
+        "aoi": 73.47130029174046,
+        "surfaceTilt": 35.97236651555831,
+        "surfaceAzimuth": 234.50081495315277
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 66.63219229671373,
+        "solarAzimuth": 272.9921591772304,
+        "axisTilt": 8.333351386117702,
+        "axisAzimuth": 298.43727863517324,
+        "maxAngle": 58.368231232530185,
+        "backtrack": true,
+        "gcr": 0.382542754062137,
+        "crossAxisTilt": 18.570223546785485
+      },
+      "expected": {
+        "trackerTheta": -37.57638567674983,
+        "aoi": 49.70230044630533,
+        "surfaceTilt": 38.355737636292915,
+        "surfaceAzimuth": 219.1044609938455
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 45.87999598566538,
+        "solarAzimuth": 324.8069756518023,
+        "axisTilt": 27.571409283317703,
+        "axisAzimuth": 238.5999573722773,
+        "maxAngle": 38.248787153891094,
+        "backtrack": true,
+        "gcr": 0.6250596675679755,
+        "crossAxisTilt": 10.577419939817414
+      },
+      "expected": {
+        "trackerTheta": 38.248787153891094,
+        "aoi": 19.030764128407483,
+        "surfaceTilt": 45.88156976661429,
+        "surfaceAzimuth": 298.1805142811149
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 25.705518941977555,
+        "solarAzimuth": 106.04042420877491,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 37.73422586236645,
+        "backtrack": true,
+        "gcr": 0.24994976940391583,
+        "crossAxisTilt": -12.013530110323863
+      },
+      "expected": {
+        "trackerTheta": 24.82735302159563,
+        "aoi": 6.883486442450856,
+        "surfaceTilt": 24.827353021595624,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 21.109176703612963,
+        "solarAzimuth": 165.2378453467661,
+        "axisTilt": 24.266348543678056,
+        "axisAzimuth": 265.70085063504513,
+        "maxAngle": 40.70976600067892,
+        "backtrack": false,
+        "gcr": 0.7143905778026264,
+        "crossAxisTilt": -17.696970775638704
+      },
+      "expected": {
+        "trackerTheta": -23.26852274790481,
+        "aoi": 26.297029248791674,
+        "surfaceTilt": 33.12347923732507,
+        "surfaceAzimuth": 219.40404735016634
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 19.12150505315583,
+        "solarAzimuth": 344.6764704351496,
+        "axisTilt": 12.218933112010959,
+        "axisAzimuth": 0.0,
+        "maxAngle": 68.9905477377045,
+        "backtrack": true,
+        "gcr": 0.409086973893462,
+        "crossAxisTilt": 9.856018858753517
+      },
+      "expected": {
+        "trackerTheta": -4.995889542435428,
+        "aoi": 6.24612700527798,
+        "surfaceTilt": 13.186414159519986,
+        "surfaceAzimuth": 337.5580227703119
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 58.92332226786433,
+        "solarAzimuth": 133.30891185114746,
+        "axisTilt": 15.831564051566266,
+        "axisAzimuth": 180.0,
+        "maxAngle": 73.48604712362551,
+        "backtrack": true,
+        "gcr": 0.5521929396489371,
+        "crossAxisTilt": -12.39039693068268
+      },
+      "expected": {
+        "trackerTheta": -43.49434529645195,
+        "aoi": 25.111407096368772,
+        "surfaceTilt": 45.7392600498406,
+        "surfaceAzimuth": 106.04200133041145
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 57.628868045842744,
+        "solarAzimuth": 203.12835980170925,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 53.57790900070937,
+        "backtrack": false,
+        "gcr": 0.9192151789446542,
+        "crossAxisTilt": -9.234194966305992
+      },
+      "expected": {
+        "trackerTheta": -31.783661805647043,
+        "aoi": 50.96078851818975,
+        "surfaceTilt": 31.78366180564705,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 63.34238951811558,
+        "solarAzimuth": 8.475986095123321,
+        "axisTilt": 5.772266995930565,
+        "axisAzimuth": 279.01341981603406,
+        "maxAngle": 78.20061346110171,
+        "backtrack": true,
+        "gcr": 0.5517203108022242,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 27.62337111265962,
+        "aoi": 35.84511741863623,
+        "surfaceTilt": 28.17349068255951,
+        "surfaceAzimuth": 358.13435502225366
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 46.76757044726114,
+        "solarAzimuth": 153.9704686035926,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 75.60705209561846,
+        "backtrack": false,
+        "gcr": 0.8792109919707958,
+        "crossAxisTilt": 0.0,
+        "minAngle": -72.84570251558505
+      },
+      "expected": {
+        "trackerTheta": -25.022290822579716,
+        "aoi": 40.895360625431906,
+        "surfaceTilt": 25.02229082257971,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 45.79774942056945,
+        "solarAzimuth": 140.90309244341577,
+        "axisTilt": 9.216811751704443,
+        "axisAzimuth": 180.0,
+        "maxAngle": 83.16669097327038,
+        "backtrack": false,
+        "gcr": 0.3895736829120424,
+        "crossAxisTilt": -16.54324375157629
+      },
+      "expected": {
+        "trackerTheta": -30.182865238198715,
+        "aoi": 25.944865282616462,
+        "surfaceTilt": 31.431429508118025,
+        "surfaceAzimuth": 105.39704687292625
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 44.56301704396445,
+        "solarAzimuth": 92.63451301577294,
+        "axisTilt": 7.158454417242092,
+        "axisAzimuth": 0.0,
+        "maxAngle": 78.52459291954396,
+        "backtrack": true,
+        "gcr": 0.6895794506527779,
+        "crossAxisTilt": -2.0998548779148596
+      },
+      "expected": {
+        "trackerTheta": 36.530626581163666,
+        "aoi": 10.870572287565807,
+        "surfaceTilt": 37.1292895696804,
+        "surfaceAzimuth": 80.45122972314942
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 1.6544267795664092,
+        "solarAzimuth": 22.781702736316902,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 65.13558146303728,
+        "backtrack": false,
+        "gcr": 0.9393760107293257,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 0.6407804665084701,
+        "aoi": 1.525327954763868,
+        "surfaceTilt": 0.6407804665087138,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 71.79873825449573,
+        "solarAzimuth": 248.61661029037074,
+        "axisTilt": 12.538044561225348,
+        "axisAzimuth": 201.7573448102501,
+        "maxAngle": 67.82694994465854,
+        "backtrack": true,
+        "gcr": 0.7328778384126341,
+        "crossAxisTilt": 0.0,
+        "minAngle": -79.57724649218976
+      },
+      "expected": {
+        "trackerTheta": 14.826703851263765,
+        "aoi": 52.522189349494894,
+        "surfaceTilt": 19.326092334661727,
+        "surfaceAzimuth": 252.4022820386572
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 13.257699617650886,
+        "solarAzimuth": 185.8065506740986,
+        "axisTilt": 19.735857608696968,
+        "axisAzimuth": 316.90473849269415,
+        "maxAngle": 75.75690491373594,
+        "backtrack": true,
+        "gcr": 0.43613691555953576,
+        "crossAxisTilt": 6.8103538097537
+      },
+      "expected": {
+        "trackerTheta": -11.295093369699616,
+        "aoi": 28.071988025282614,
+        "surfaceTilt": 22.627069744973245,
+        "surfaceAzimuth": 286.30163766855185
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 3.933366575002495,
+        "solarAzimuth": 105.3805801142804,
+        "axisTilt": 5.470535836522803,
+        "axisAzimuth": 27.01664726534601,
+        "maxAngle": 33.57936201396461,
+        "backtrack": false,
+        "gcr": 0.45067753379636033,
+        "crossAxisTilt": -4.283415950558029
+      },
+      "expected": {
+        "trackerTheta": 3.8652327364670795,
+        "aoi": 4.665410481640969,
+        "surfaceTilt": 6.694874626173095,
+        "surfaceAzimuth": 62.34202990980533
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 77.53926012024401,
+        "solarAzimuth": 328.90875488555645,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 75.77229565724988,
+        "backtrack": true,
+        "gcr": 0.5404255298926708,
+        "crossAxisTilt": -1.4613212090593874
+      },
+      "expected": {
+        "trackerTheta": 20.034485425134385,
+        "aoi": 67.94735626000451,
+        "surfaceTilt": 20.03448542513438,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 63.992165706991585,
+        "solarAzimuth": 179.55363862436027,
+        "axisTilt": 4.03201959427731,
+        "axisAzimuth": 0.0,
+        "maxAngle": 30.383702480497192,
+        "backtrack": true,
+        "gcr": 0.6545217237357724,
+        "crossAxisTilt": 0.0,
+        "minAngle": -41.04283662700713
+      },
+      "expected": {
+        "trackerTheta": 1.0718626437274381,
+        "aoi": 68.02002032204027,
+        "surfaceTilt": 4.1718310544412995,
+        "surfaceAzimuth": 14.900471609236313
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 40.50770232892684,
+        "solarAzimuth": 155.3562024446863,
+        "axisTilt": 13.654735810539087,
+        "axisAzimuth": 0.0,
+        "maxAngle": 82.54580460254326,
+        "backtrack": true,
+        "gcr": 0.5642686006721682,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 24.31444819977413,
+        "aoi": 48.86744538219643,
+        "surfaceTilt": 27.68165222148407,
+        "surfaceAzimuth": 62.413519456709466
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 19.165868209718482,
+        "solarAzimuth": 143.08446148918733,
+        "axisTilt": 4.819671549157928,
+        "axisAzimuth": 314.92662827021354,
+        "maxAngle": 40.01959268443577,
+        "backtrack": true,
+        "gcr": 0.2020098861628578,
+        "crossAxisTilt": 13.173607462546425
+      },
+      "expected": {
+        "trackerTheta": -2.9180674426406825,
+        "aoi": 23.7781088788507,
+        "surfaceTilt": 5.632428790874693,
+        "surfaceAzimuth": 283.68191297385783
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 29.771524874452847,
+        "solarAzimuth": 338.6658060918403,
+        "axisTilt": 20.64475510565518,
+        "axisAzimuth": 180.0,
+        "maxAngle": 89.10453963493957,
+        "backtrack": true,
+        "gcr": 0.3377689629343361,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 15.549670420053795,
+        "aoi": 47.633832572800024,
+        "surfaceTilt": 25.639659033952608,
+        "surfaceAzimuth": 218.2812993101178
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 81.31030741326478,
+        "solarAzimuth": 38.35595925637221,
+        "axisTilt": 29.969741273968047,
+        "axisAzimuth": 0.0,
+        "maxAngle": 89.06067077465569,
+        "backtrack": false,
+        "gcr": 0.8356581491995163,
+        "crossAxisTilt": -15.392300344959375
+      },
+      "expected": {
+        "trackerTheta": 49.81472521484118,
+        "aoi": 36.5874111666641,
+        "surfaceTilt": 56.01450234003558,
+        "surfaceAzimuth": 67.12384545214726
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 7.742399187572701,
+        "solarAzimuth": 280.50080660448583,
+        "axisTilt": 8.529552524304426,
+        "axisAzimuth": 35.86398247576739,
+        "maxAngle": 41.43619651957283,
+        "backtrack": true,
+        "gcr": 0.7235197087302219,
+        "crossAxisTilt": 0.0,
+        "minAngle": -60.55901513223707
+      },
+      "expected": {
+        "trackerTheta": -7.143214793921942,
+        "aoi": 11.773121040849837,
+        "surfaceTilt": 11.108595556701363,
+        "surfaceAzimuth": 355.66783848245575
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.78083866053996,
+        "solarAzimuth": 198.2300332212426,
+        "axisTilt": 2.5509698216090895,
+        "axisAzimuth": 180.0,
+        "maxAngle": 43.25786442592973,
+        "backtrack": true,
+        "gcr": 0.8610844811447042,
+        "crossAxisTilt": -6.3543944318020396
+      },
+      "expected": {
+        "trackerTheta": -5.487716505762506,
+        "aoi": 88.09060886395835,
+        "surfaceTilt": 6.050005441856141,
+        "surfaceAzimuth": 114.8571321576636
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.3189632048248,
+        "solarAzimuth": 321.0936591072767,
+        "axisTilt": 22.48981581908178,
+        "axisAzimuth": 27.226273488084725,
+        "maxAngle": 48.08482610911674,
+        "backtrack": true,
+        "gcr": 0.289570346921929,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -34.74467513065361,
+        "aoi": 46.90852687720719,
+        "surfaceTilt": 40.605607958657835,
+        "surfaceAzimuth": 326.10338668334794
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.81704651099696,
+        "solarAzimuth": 65.24470908457994,
+        "axisTilt": 17.353563829711373,
+        "axisAzimuth": 180.0,
+        "maxAngle": 61.98304703672506,
+        "backtrack": true,
+        "gcr": 0.8393622196329217,
+        "crossAxisTilt": -12.596197296455308
+      },
+      "expected": {
+        "trackerTheta": -14.394899619995655,
+        "aoi": 81.02790920757552,
+        "surfaceTilt": 22.40441236652819,
+        "surfaceAzimuth": 139.2877345654749
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.34516402437812,
+        "solarAzimuth": 81.37351058240759,
+        "axisTilt": 12.621247666156473,
+        "axisAzimuth": 337.67466869250774,
+        "maxAngle": 77.28207213669732,
+        "backtrack": false,
+        "gcr": 0.3819240508111472,
+        "crossAxisTilt": -1.8174165132816622,
+        "minAngle": -51.556239479585464
+      },
+      "expected": {
+        "trackerTheta": 77.28207213669732,
+        "aoi": 19.586063986675093,
+        "surfaceTilt": 77.59434894735612,
+        "surfaceAzimuth": 64.85146557083037
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.8177717095331,
+        "solarAzimuth": 315.3371476897584,
+        "axisTilt": 12.199431044817509,
+        "axisAzimuth": 180.0,
+        "maxAngle": 30.891908088294635,
+        "backtrack": true,
+        "gcr": 0.8819700762990947,
+        "crossAxisTilt": 13.87582758496816
+      },
+      "expected": {
+        "trackerTheta": 15.140455844684013,
+        "aoi": 83.84492764896186,
+        "surfaceTilt": 19.353780364368166,
+        "surfaceAzimuth": 232.0110312750629
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.72991174788986,
+        "solarAzimuth": 304.80411408136126,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 78.243394410354,
+        "backtrack": false,
+        "gcr": 0.9103774145800708,
+        "crossAxisTilt": -12.483064028821715,
+        "minAngle": -86.99752777164048
+      },
+      "expected": {
+        "trackerTheta": 78.243394410354,
+        "aoi": 36.07938608025224,
+        "surfaceTilt": 78.243394410354,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.78177288367797,
+        "solarAzimuth": 279.78041862386624,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 40.84505472156352,
+        "backtrack": false,
+        "gcr": 0.7288756136904917,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -40.84505472156352,
+        "aoi": 47.67715441331119,
+        "surfaceTilt": 40.84505472156352,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.97419571158233,
+        "solarAzimuth": 238.85232558922212,
+        "axisTilt": 25.727341149300006,
+        "axisAzimuth": 180.0,
+        "maxAngle": 66.86188692273538,
+        "backtrack": false,
+        "gcr": 0.13041074304784553,
+        "crossAxisTilt": 13.371436712507627
+      },
+      "expected": {
+        "trackerTheta": 66.86188692273538,
+        "aoi": 28.909765543585518,
+        "surfaceTilt": 69.26808436926598,
+        "surfaceAzimuth": 259.4913035155229
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.46071834948332,
+        "solarAzimuth": 277.303348479302,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 30.07772333855478,
+        "backtrack": true,
+        "gcr": 0.7723511771874294,
+        "crossAxisTilt": 8.418130650023343
+      },
+      "expected": {
+        "trackerTheta": 12.539434831953614,
+        "aoi": 73.02650055597846,
+        "surfaceTilt": 12.539434831953619,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.28980070684338,
+        "solarAzimuth": 268.9919407362211,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 80.21596367376475,
+        "backtrack": true,
+        "gcr": 0.1935448617704876,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 2.9621086033675113,
+        "aoi": 86.3281512511082,
+        "surfaceTilt": 2.962108603367453,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.18566385578676,
+        "solarAzimuth": 50.10703492357476,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 64.91112177712445,
+        "backtrack": false,
+        "gcr": 0.6629067617767863,
+        "crossAxisTilt": -16.269158419228063
+      },
+      "expected": {
+        "trackerTheta": 64.91112177712445,
+        "aoi": 43.28177371888684,
+        "surfaceTilt": 64.91112177712445,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.75237395778248,
+        "solarAzimuth": 187.62899192355854,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 32.234459550996846,
+        "backtrack": false,
+        "gcr": 0.676119024109236,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 32.234459550996846,
+        "aoi": 82.34152201403566,
+        "surfaceTilt": 32.23445955099685,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.64530726566186,
+        "solarAzimuth": 320.340084700305,
+        "axisTilt": 0.0,
+        "axisAzimuth": 357.9292811802243,
+        "maxAngle": 37.25061488275825,
+        "backtrack": true,
+        "gcr": 0.9821203868473267,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -0.13023372402622613,
+        "aoi": 85.56587236692104,
+        "surfaceTilt": 0.1302337240262419,
+        "surfaceAzimuth": 267.9292811802243
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.08844092611669,
+        "solarAzimuth": 41.388013870711376,
+        "axisTilt": 2.719314605765123,
+        "axisAzimuth": 0.0,
+        "maxAngle": 44.80577754881424,
+        "backtrack": true,
+        "gcr": 0.2009057426093325,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 25.122341113751034,
+        "aoi": 69.94540928738142,
+        "surfaceTilt": 25.259583424591007,
+        "surfaceAzimuth": 84.22261015855119
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.86029378897452,
+        "solarAzimuth": 195.44550008362458,
+        "axisTilt": 8.16611326497806,
+        "axisAzimuth": 0.0,
+        "maxAngle": 35.14114984350115,
+        "backtrack": true,
+        "gcr": 0.7135481125975182,
+        "crossAxisTilt": 13.543864862627494,
+        "minAngle": -64.37821611624433
+      },
+      "expected": {
+        "trackerTheta": -64.37821611624433,
+        "aoi": 78.22311294211168,
+        "surfaceTilt": 64.6565119493894,
+        "surfaceAzimuth": 273.89709743966876
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.60394024461468,
+        "solarAzimuth": 113.68597908777966,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 39.37576783936092,
+        "backtrack": true,
+        "gcr": 0.22699104375564202,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -16.826650601633318,
+        "aoi": 70.26437653429426,
+        "surfaceTilt": 16.826650601633325,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.03726475604913,
+        "solarAzimuth": 205.7870468889283,
+        "axisTilt": 20.408279749942217,
+        "axisAzimuth": 180.0,
+        "maxAngle": 85.03662957344785,
+        "backtrack": true,
+        "gcr": 0.7809185998023955,
+        "crossAxisTilt": 0.0,
+        "minAngle": -32.71922901514202
+      },
+      "expected": {
+        "trackerTheta": 14.362874181729836,
+        "aoi": 63.70857947740128,
+        "surfaceTilt": 24.778120080317898,
+        "surfaceAzimuth": 216.2908928281762
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.35546594970259,
+        "solarAzimuth": 249.78026736891727,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 83.9935617321118,
+        "backtrack": true,
+        "gcr": 0.42247651907155115,
+        "crossAxisTilt": -17.06127160843652
+      },
+      "expected": {
+        "trackerTheta": 43.580300682765795,
+        "aoi": 49.080702388600955,
+        "surfaceTilt": 43.58030068276579,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.37078092305336,
+        "solarAzimuth": 308.1320185159893,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 57.51049678697456,
+        "backtrack": true,
+        "gcr": 0.20048174965526347,
+        "crossAxisTilt": 17.284630433418677
+      },
+      "expected": {
+        "trackerTheta": -57.51049678697456,
+        "aoi": 47.27468287835009,
+        "surfaceTilt": 57.51049678697456,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.6639086638573,
+        "solarAzimuth": 315.47028626383633,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 83.31455237500404,
+        "backtrack": true,
+        "gcr": 0.3927779100130555,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 2.9497718906985284,
+        "aoi": 86.59666148656413,
+        "surfaceTilt": 2.9497718906985892,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.86161650625117,
+        "solarAzimuth": 221.061551862333,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 54.37705017694021,
+        "backtrack": false,
+        "gcr": 0.8707509429512686,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -54.37705017694021,
+        "aoi": 56.26799974193163,
+        "surfaceTilt": 54.37705017694021,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.00707437116381,
+        "solarAzimuth": 301.16416892416737,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 88.15882735115947,
+        "backtrack": true,
+        "gcr": 0.9787009815530265,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": -0.025255516265445976,
+        "aoi": 88.9854635536758,
+        "surfaceTilt": 0.025255516272586327,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.24654999630728,
+        "solarAzimuth": 38.83221398437578,
+        "axisTilt": 0.0,
+        "axisAzimuth": 296.7982753852236,
+        "maxAngle": 60.28615929877659,
+        "backtrack": true,
+        "gcr": 0.8295489260132937,
+        "crossAxisTilt": -5.351350455757151
+      },
+      "expected": {
+        "trackerTheta": -4.264544483685725,
+        "aoi": 89.41778247952406,
+        "surfaceTilt": 4.264544483685685,
+        "surfaceAzimuth": 206.79827538522355
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.80145472798127,
+        "solarAzimuth": 116.91935713470538,
+        "axisTilt": 27.372532674145628,
+        "axisAzimuth": 304.6341228188243,
+        "maxAngle": 49.62137966500821,
+        "backtrack": true,
+        "gcr": 0.5119869404389682,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 49.62137966500821,
+        "aoi": 99.82779706498464,
+        "surfaceTilt": 54.87926123279842,
+        "surfaceAzimuth": 13.278489717079522
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.45380936547973,
+        "solarAzimuth": 1.5326212214035229,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 32.11308301594981,
+        "backtrack": true,
+        "gcr": 0.6149060521535158,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 32.11308301594981,
+        "aoi": 87.87571255980887,
+        "surfaceTilt": 32.11308301594981,
+        "surfaceAzimuth": 90.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.73990273551489,
+        "solarAzimuth": 293.12710776540587,
+        "axisTilt": 19.956426970991057,
+        "axisAzimuth": 134.1270363398762,
+        "maxAngle": 85.70105208327132,
+        "backtrack": true,
+        "gcr": 0.5871209343389224,
+        "crossAxisTilt": -8.111070885883978
+      },
+      "expected": {
+        "trackerTheta": 85.70105208327132,
+        "aoi": 70.50103458313497,
+        "surfaceTilt": 85.9596358807639,
+        "surfaceAzimuth": 222.65734498460048
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.50190024492207,
+        "solarAzimuth": 358.56750266932397,
+        "axisTilt": 0.0,
+        "axisAzimuth": 180.0,
+        "maxAngle": 40.3321015383828,
+        "backtrack": true,
+        "gcr": 0.550678856983614,
+        "crossAxisTilt": -13.091776971942108
+      },
+      "expected": {
+        "trackerTheta": 17.629193660511962,
+        "aoi": 85.27975294002397,
+        "surfaceTilt": 17.62919366051196,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.10926904970314,
+        "solarAzimuth": 294.77516778755137,
+        "axisTilt": 18.871267385699827,
+        "axisAzimuth": 180.0,
+        "maxAngle": 72.75291398008498,
+        "backtrack": false,
+        "gcr": 0.8351013582822601,
+        "crossAxisTilt": 3.053607928540445,
+        "minAngle": -47.41731336754989
+      },
+      "expected": {
+        "trackerTheta": 72.75291398008498,
+        "aoi": 33.30577683815152,
+        "surfaceTilt": 73.70661965680351,
+        "surfaceAzimuth": 264.2659412024873
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.04037251014118,
+        "solarAzimuth": 62.85211891852967,
+        "axisTilt": 1.4593499526645126,
+        "axisAzimuth": 235.35459580004851,
+        "maxAngle": 74.51673613946855,
+        "backtrack": true,
+        "gcr": 0.5945258788696588,
+        "crossAxisTilt": 0.0,
+        "minAngle": -80.88154541333103
+      },
+      "expected": {
+        "trackerTheta": -13.857130443223411,
+        "aoi": 85.77106410381,
+        "surfaceTilt": 13.93226750451127,
+        "surfaceAzimuth": 151.24901060687966
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.25679893212717,
+        "solarAzimuth": 79.99265468774787,
+        "axisTilt": 15.906446986352599,
+        "axisAzimuth": 346.7364186700092,
+        "maxAngle": 86.39420374419889,
+        "backtrack": false,
+        "gcr": 0.24415410251697175,
+        "crossAxisTilt": 8.605109383374536,
+        "minAngle": -51.773089649429586
+      },
+      "expected": {
+        "trackerTheta": 86.39420374419889,
+        "aoi": 5.041839695781144,
+        "surfaceTilt": 86.53244014743547,
+        "surfaceAzimuth": 75.74697899194406
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.176055155631,
+        "solarAzimuth": 152.18838113962508,
+        "axisTilt": 2.1628546808147497,
+        "axisAzimuth": 0.0,
+        "maxAngle": 78.47060061143917,
+        "backtrack": false,
+        "gcr": 0.25917047461614956,
+        "crossAxisTilt": 0.6809438427798353
+      },
+      "expected": {
+        "trackerTheta": 78.47060061143917,
+        "aoi": 62.43225035154284,
+        "surfaceTilt": 78.47892679384036,
+        "surfaceAzimuth": 89.55891987616724
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.89332910730771,
+        "solarAzimuth": 207.272535760163,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 52.687302261869085,
+        "backtrack": true,
+        "gcr": 0.12162329537182308,
+        "crossAxisTilt": -10.439226439841352
+      },
+      "expected": {
+        "trackerTheta": -52.687302261869085,
+        "aoi": 68.55727057269972,
+        "surfaceTilt": 52.687302261869085,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.88313766905455,
+        "solarAzimuth": 174.1694323384126,
+        "axisTilt": 21.101897775931608,
+        "axisAzimuth": 0.0,
+        "maxAngle": 80.09891797610358,
+        "backtrack": true,
+        "gcr": 0.4992802972477225,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 80.09891797610358,
+        "aoi": 87.77547895998737,
+        "surfaceTilt": 80.76888904752212,
+        "surfaceAzimuth": 86.40415281997862
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.41064716736456,
+        "solarAzimuth": 58.325429257008864,
+        "axisTilt": 27.356819361617937,
+        "axisAzimuth": 180.0,
+        "maxAngle": 86.20030439099904,
+        "backtrack": true,
+        "gcr": 0.4968305308136584,
+        "crossAxisTilt": 7.748812943869492
+      },
+      "expected": {
+        "trackerTheta": -60.139019173712754,
+        "aoi": 50.41201695263409,
+        "surfaceTilt": 63.754809551605746,
+        "surfaceAzimuth": 104.77933211529775
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.7397903411279,
+        "solarAzimuth": 302.4763891660433,
+        "axisTilt": 16.987637552506143,
+        "axisAzimuth": 99.2692098910916,
+        "maxAngle": 43.21311778743541,
+        "backtrack": true,
+        "gcr": 0.5713761924810465,
+        "crossAxisTilt": 0.0,
+        "minAngle": -80.83535092539236
+      },
+      "expected": {
+        "trackerTheta": -80.83535092539236,
+        "aoi": 69.54176215484212,
+        "surfaceTilt": 81.23844466354753,
+        "surfaceAzimuth": 11.967877084047057
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.9889728495962,
+        "solarAzimuth": 273.25375773696163,
+        "axisTilt": 0.0,
+        "axisAzimuth": 0.0,
+        "maxAngle": 84.11174702477969,
+        "backtrack": true,
+        "gcr": 0.5011383280505856,
+        "crossAxisTilt": -3.568637072909553
+      },
+      "expected": {
+        "trackerTheta": -7.159986443962865,
+        "aoi": 82.84058925326259,
+        "surfaceTilt": 7.159986443962858,
+        "surfaceAzimuth": 270.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.65704514852565,
+        "solarAzimuth": 15.088096376837314,
+        "axisTilt": 24.715031279179204,
+        "axisAzimuth": 0.0,
+        "maxAngle": 33.62171868645242,
+        "backtrack": true,
+        "gcr": 0.14551769439322965,
+        "crossAxisTilt": 17.63781070408981
+      },
+      "expected": {
+        "trackerTheta": 30.559595220028957,
+        "aoi": 59.23329686241156,
+        "surfaceTilt": 38.535465083675525,
+        "surfaceAzimuth": 54.69704703480459
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.49796766603703,
+        "solarAzimuth": 3.8240563560665253,
+        "axisTilt": 29.443251491134657,
+        "axisAzimuth": 180.0,
+        "maxAngle": 73.65186306317607,
+        "backtrack": true,
+        "gcr": 0.7948394566325241,
+        "crossAxisTilt": -13.07637456281796
+      },
+      "expected": {
+        "trackerTheta": -73.65186306317607,
+        "aoi": 93.62842047874429,
+        "surfaceTilt": 75.81114672680106,
+        "surfaceAzimuth": 98.20498339723207
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.16557922634355,
+        "solarAzimuth": 233.6594072391855,
+        "axisTilt": 26.549560672732657,
+        "axisAzimuth": 180.0,
+        "maxAngle": 84.51265432974073,
+        "backtrack": true,
+        "gcr": 0.2521506753101989,
+        "crossAxisTilt": 0.0
+      },
+      "expected": {
+        "trackerTheta": 68.03808641294974,
+        "aoi": 29.93503704812286,
+        "surfaceTilt": 70.45469064346827,
+        "surfaceAzimuth": 259.782552625424
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.2735649924601,
+        "solarAzimuth": 147.2546952836289,
+        "axisTilt": 28.266070028018415,
+        "axisAzimuth": 0.0,
+        "maxAngle": 83.43492664184812,
+        "backtrack": false,
+        "gcr": 0.6757413559746975,
+        "crossAxisTilt": 2.4547630872688586
+      },
+      "expected": {
+        "trackerTheta": 83.43492664184812,
+        "aoi": 60.354654061190125,
+        "surfaceTilt": 84.22060816761794,
+        "surfaceAzimuth": 86.88040816781755
+      }
+    }
+  ]
+}

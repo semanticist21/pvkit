@@ -1,0 +1,2632 @@
+{
+  "meta": {
+    "reference": "pvlib.irradiance.get_total_irradiance (explicit airmass, surface_type=None) @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 0.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 0.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 0.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 0.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 0.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 1.1539922333636758,
+        "perezModel": "phoenix1988"
+      },
+      "expected": {
+        "poaGlobal": "NaN",
+        "poaDirect": 0.0,
+        "poaDiffuse": "NaN",
+        "poaSkyDiffuse": "NaN",
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 900.0,
+        "ghi": 779.4,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 913.0524750363011,
+        "poaDirect": 900.0,
+        "poaDiffuse": 13.05247503630106,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 13.05247503630106
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 900.0,
+        "ghi": 779.4,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 913.0524750363011,
+        "poaDirect": 900.0,
+        "poaDiffuse": 13.05247503630106,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 13.05247503630106
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 900.0,
+        "ghi": 779.4,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 913.0524750363011,
+        "poaDirect": 900.0,
+        "poaDiffuse": 13.05247503630106,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 13.05247503630106
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 900.0,
+        "ghi": 779.4,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 913.0524750363011,
+        "poaDirect": 900.0,
+        "poaDiffuse": 13.05247503630106,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 13.05247503630106
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 900.0,
+        "ghi": 779.4,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 929.7596430827664,
+        "poaDirect": 900.0,
+        "poaDiffuse": 29.759643082766416,
+        "poaSkyDiffuse": 16.707168046465355,
+        "poaGroundDiffuse": 13.05247503630106
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 900.0,
+        "ghi": 779.4,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 1.1539922333636758,
+        "perezModel": "elmonte1988"
+      },
+      "expected": {
+        "poaGlobal": 913.0524750363011,
+        "poaDirect": 900.0,
+        "poaDiffuse": 13.05247503630106,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 13.05247503630106
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 120.0,
+        "dhi": 120.0,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 113.97114317029975,
+        "poaDirect": 0.0,
+        "poaDiffuse": 113.97114317029975,
+        "poaSkyDiffuse": 111.96152422706633,
+        "poaGroundDiffuse": 2.0096189432334195
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 120.0,
+        "dhi": 120.0,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 113.97114317029975,
+        "poaDirect": 0.0,
+        "poaDiffuse": 113.97114317029975,
+        "poaSkyDiffuse": 111.96152422706633,
+        "poaGroundDiffuse": 2.0096189432334195
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 120.0,
+        "dhi": 120.0,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 113.97114317029975,
+        "poaDirect": 0.0,
+        "poaDiffuse": 113.97114317029975,
+        "poaSkyDiffuse": 111.96152422706633,
+        "poaGroundDiffuse": 2.0096189432334195
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 120.0,
+        "dhi": 120.0,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 113.97114317029975,
+        "poaDirect": 0.0,
+        "poaDiffuse": 113.97114317029975,
+        "poaSkyDiffuse": 111.96152422706633,
+        "poaGroundDiffuse": 2.0096189432334195
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 120.0,
+        "dhi": 120.0,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 117.50807251039058,
+        "poaDirect": 0.0,
+        "poaDiffuse": 117.50807251039058,
+        "poaSkyDiffuse": 115.49845356715716,
+        "poaGroundDiffuse": 2.0096189432334195
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 120.0,
+        "dhi": 120.0,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 1.304223540913535,
+        "perezModel": "osage1988"
+      },
+      "expected": {
+        "poaGlobal": 105.99278531157525,
+        "poaDirect": 0.0,
+        "poaDiffuse": 105.99278531157525,
+        "poaSkyDiffuse": 103.98316636834183,
+        "poaGroundDiffuse": 2.0096189432334195
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 50.0,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 46.65063509461097,
+        "poaDirect": 0.0,
+        "poaDiffuse": 46.65063509461097,
+        "poaSkyDiffuse": 46.65063509461097,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 50.0,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": "Infinity",
+        "poaDirect": 0.0,
+        "poaDiffuse": "Infinity",
+        "poaSkyDiffuse": "Infinity",
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 50.0,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 46.65063509461097,
+        "poaDirect": 0.0,
+        "poaDiffuse": 46.65063509461097,
+        "poaSkyDiffuse": 46.65063509461097,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 50.0,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 46.65063509461097,
+        "poaDirect": 0.0,
+        "poaDiffuse": 46.65063509461097,
+        "poaSkyDiffuse": 46.65063509461097,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 50.0,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 46.65063509461097,
+        "poaDirect": 0.0,
+        "poaDiffuse": 46.65063509461097,
+        "poaSkyDiffuse": 46.65063509461097,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 50.0,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 1.304223540913535,
+        "perezModel": "albuquerque1988"
+      },
+      "expected": {
+        "poaGlobal": 44.43418873714467,
+        "poaDirect": 0.0,
+        "poaDiffuse": 44.43418873714467,
+        "poaSkyDiffuse": 44.43418873714467,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 100.0,
+        "ghi": 70.0,
+        "dhi": -2.0,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 93.48116709131652,
+        "poaDirect": 94.1749147782148,
+        "poaDiffuse": -0.6937476868982775,
+        "poaSkyDiffuse": -1.8660254037844388,
+        "poaGroundDiffuse": 1.1722777168861613
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 100.0,
+        "ghi": 70.0,
+        "dhi": -2.0,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 93.0020599188479,
+        "poaDirect": 94.1749147782148,
+        "poaDiffuse": -1.1728548593668986,
+        "poaSkyDiffuse": -2.34513257625306,
+        "poaGroundDiffuse": 1.1722777168861613
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 100.0,
+        "ghi": 70.0,
+        "dhi": -2.0,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 95.34719249510096,
+        "poaDirect": 94.1749147782148,
+        "poaDiffuse": 1.1722777168861613,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 1.1722777168861613
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 100.0,
+        "ghi": 70.0,
+        "dhi": -2.0,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 93.4064135321678,
+        "poaDirect": 94.1749147782148,
+        "poaDiffuse": -0.7685012460469991,
+        "poaSkyDiffuse": -1.9407789629331604,
+        "poaGroundDiffuse": 1.1722777168861613
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 100.0,
+        "ghi": 70.0,
+        "dhi": -2.0,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 95.54437587303616,
+        "poaDirect": 94.1749147782148,
+        "poaDiffuse": 1.3694610948213666,
+        "poaSkyDiffuse": 0.19718337793520524,
+        "poaGroundDiffuse": 1.1722777168861613
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "dni": 100.0,
+        "ghi": 70.0,
+        "dhi": -2.0,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 1.304223540913535,
+        "perezModel": "capecanaveral1988"
+      },
+      "expected": {
+        "poaGlobal": "NaN",
+        "poaDirect": 94.1749147782148,
+        "poaDiffuse": "NaN",
+        "poaSkyDiffuse": "NaN",
+        "poaGroundDiffuse": 1.1722777168861613
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 85.0,
+        "solarAzimuth": 120.0,
+        "dni": 200.0,
+        "ghi": 47.0,
+        "dhi": 30.0,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 93.68303417515497,
+        "poaDirect": 64.90555236562197,
+        "poaDiffuse": 28.777481809533008,
+        "poaSkyDiffuse": 27.990381056766584,
+        "poaGroundDiffuse": 0.7871007527664226
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 85.0,
+        "solarAzimuth": 120.0,
+        "dni": 200.0,
+        "ghi": 47.0,
+        "dhi": 30.0,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 95.71533277910254,
+        "poaDirect": 64.90555236562197,
+        "poaDiffuse": 30.80978041348056,
+        "poaSkyDiffuse": 30.022679660714136,
+        "poaGroundDiffuse": 0.7871007527664226
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 85.0,
+        "solarAzimuth": 120.0,
+        "dni": 200.0,
+        "ghi": 47.0,
+        "dhi": 30.0,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 105.93920478162254,
+        "poaDirect": 64.90555236562197,
+        "poaDiffuse": 41.033652416000564,
+        "poaSkyDiffuse": 40.24655166323414,
+        "poaGroundDiffuse": 0.7871007527664226
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 85.0,
+        "solarAzimuth": 120.0,
+        "dni": 200.0,
+        "ghi": 47.0,
+        "dhi": 30.0,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 106.19147435902484,
+        "poaDirect": 64.90555236562197,
+        "poaDiffuse": 41.285921993402866,
+        "poaSkyDiffuse": 40.498821240636445,
+        "poaGroundDiffuse": 0.7871007527664226
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 85.0,
+        "solarAzimuth": 120.0,
+        "dni": 200.0,
+        "ghi": 47.0,
+        "dhi": 30.0,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 96.76846912599936,
+        "poaDirect": 64.90555236562197,
+        "poaDiffuse": 31.862916760377384,
+        "poaSkyDiffuse": 31.07581600761096,
+        "poaGroundDiffuse": 0.7871007527664226
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 85.0,
+        "solarAzimuth": 120.0,
+        "dni": 200.0,
+        "ghi": 47.0,
+        "dhi": 30.0,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 10.305791327930304,
+        "perezModel": "albany1988"
+      },
+      "expected": {
+        "poaGlobal": 119.30140516223825,
+        "poaDirect": 64.90555236562197,
+        "poaDiffuse": 54.39585279661628,
+        "poaSkyDiffuse": 53.60875204384986,
+        "poaGroundDiffuse": 0.7871007527664226
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 87.0,
+        "solarAzimuth": 90.0,
+        "dni": 150.0,
+        "ghi": 30.0,
+        "dhi": 22.0,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 102.72453942969123,
+        "poaDirect": 81.69585525225405,
+        "poaDiffuse": 21.02868417743718,
+        "poaSkyDiffuse": 20.526279441628827,
+        "poaGroundDiffuse": 0.5024047358083549
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 87.0,
+        "solarAzimuth": 90.0,
+        "dni": 150.0,
+        "ghi": 30.0,
+        "dhi": 22.0,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 105.7142924745572,
+        "poaDirect": 81.69585525225405,
+        "poaDiffuse": 24.018437222303156,
+        "poaSkyDiffuse": 23.5160324864948,
+        "poaGroundDiffuse": 0.5024047358083549
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 87.0,
+        "solarAzimuth": 90.0,
+        "dni": 150.0,
+        "ghi": 30.0,
+        "dhi": 22.0,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 125.60926049769195,
+        "poaDirect": 81.69585525225405,
+        "poaDiffuse": 43.9134052454379,
+        "poaSkyDiffuse": 43.411000509629545,
+        "poaGroundDiffuse": 0.5024047358083549
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 87.0,
+        "solarAzimuth": 90.0,
+        "dni": 150.0,
+        "ghi": 30.0,
+        "dhi": 22.0,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 125.7713186227048,
+        "poaDirect": 81.69585525225405,
+        "poaDiffuse": 44.07546337045074,
+        "poaSkyDiffuse": 43.573058634642386,
+        "poaGroundDiffuse": 0.5024047358083549
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 87.0,
+        "solarAzimuth": 90.0,
+        "dni": 150.0,
+        "ghi": 30.0,
+        "dhi": 22.0,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 104.74219684869757,
+        "poaDirect": 81.69585525225405,
+        "poaDiffuse": 23.046341596443533,
+        "poaSkyDiffuse": 22.543936860635178,
+        "poaGroundDiffuse": 0.5024047358083549
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 87.0,
+        "solarAzimuth": 90.0,
+        "dni": 150.0,
+        "ghi": 30.0,
+        "dhi": 22.0,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 15.147735442530344,
+        "perezModel": "allsitescomposite1990"
+      },
+      "expected": {
+        "poaGlobal": 130.6176455322676,
+        "poaDirect": 81.69585525225405,
+        "poaDiffuse": 48.92179028001354,
+        "poaSkyDiffuse": 48.419385544205184,
+        "poaGroundDiffuse": 0.5024047358083549
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 89.9,
+        "solarAzimuth": 90.0,
+        "dni": 50.0,
+        "ghi": 10.0,
+        "dhi": 10.0,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 56.249923845664384,
+        "poaDirect": 49.999923845664384,
+        "poaDiffuse": 6.25,
+        "poaSkyDiffuse": 5.0,
+        "poaGroundDiffuse": 1.2499999999999998
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 89.9,
+        "solarAzimuth": 90.0,
+        "dni": 50.0,
+        "ghi": 10.0,
+        "dhi": 10.0,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 56.249923845664384,
+        "poaDirect": 49.999923845664384,
+        "poaDiffuse": 6.25,
+        "poaSkyDiffuse": 5.0,
+        "poaGroundDiffuse": 1.2499999999999998
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 89.9,
+        "solarAzimuth": 90.0,
+        "dni": 50.0,
+        "ghi": 10.0,
+        "dhi": 10.0,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 77.04141164852416,
+        "poaDirect": 49.999923845664384,
+        "poaDiffuse": 27.041487802859784,
+        "poaSkyDiffuse": 25.791487802859784,
+        "poaGroundDiffuse": 1.2499999999999998
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 89.9,
+        "solarAzimuth": 90.0,
+        "dni": 50.0,
+        "ghi": 10.0,
+        "dhi": 10.0,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 77.20050608195615,
+        "poaDirect": 49.999923845664384,
+        "poaDiffuse": 27.200582236291773,
+        "poaSkyDiffuse": 25.950582236291773,
+        "poaGroundDiffuse": 1.2499999999999998
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 89.9,
+        "solarAzimuth": 90.0,
+        "dni": 50.0,
+        "ghi": 10.0,
+        "dhi": 10.0,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 61.443923845664386,
+        "poaDirect": 49.999923845664384,
+        "poaDiffuse": 11.443999999999999,
+        "poaSkyDiffuse": 10.193999999999999,
+        "poaGroundDiffuse": 1.2499999999999998
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 89.9,
+        "solarAzimuth": 90.0,
+        "dni": 50.0,
+        "ghi": 10.0,
+        "dhi": 10.0,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 36.46678629892429,
+        "perezModel": "allsitescomposite1988"
+      },
+      "expected": {
+        "poaGlobal": 78.21149207035101,
+        "poaDirect": 49.999923845664384,
+        "poaDiffuse": 28.21156822468663,
+        "poaSkyDiffuse": 26.96156822468663,
+        "poaGroundDiffuse": 1.2499999999999998
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 90.0,
+        "solarAzimuth": 270.0,
+        "dni": 0.0,
+        "ghi": 5.0,
+        "dhi": 5.0,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 4.748797632095823,
+        "poaDirect": 0.0,
+        "poaDiffuse": 4.748797632095823,
+        "poaSkyDiffuse": 4.665063509461097,
+        "poaGroundDiffuse": 0.08373412263472581
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 90.0,
+        "solarAzimuth": 270.0,
+        "dni": 0.0,
+        "ghi": 5.0,
+        "dhi": 5.0,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 4.748797632095823,
+        "poaDirect": 0.0,
+        "poaDiffuse": 4.748797632095823,
+        "poaSkyDiffuse": 4.665063509461097,
+        "poaGroundDiffuse": 0.08373412263472581
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 90.0,
+        "solarAzimuth": 270.0,
+        "dni": 0.0,
+        "ghi": 5.0,
+        "dhi": 5.0,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 4.748797632095823,
+        "poaDirect": 0.0,
+        "poaDiffuse": 4.748797632095823,
+        "poaSkyDiffuse": 4.665063509461097,
+        "poaGroundDiffuse": 0.08373412263472581
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 90.0,
+        "solarAzimuth": 270.0,
+        "dni": 0.0,
+        "ghi": 5.0,
+        "dhi": 5.0,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 4.748797632095823,
+        "poaDirect": 0.0,
+        "poaDiffuse": 4.748797632095823,
+        "poaSkyDiffuse": 4.665063509461097,
+        "poaGroundDiffuse": 0.08373412263472581
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 90.0,
+        "solarAzimuth": 270.0,
+        "dni": 0.0,
+        "ghi": 5.0,
+        "dhi": 5.0,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 5.097131582256282,
+        "poaDirect": 0.0,
+        "poaDiffuse": 5.097131582256282,
+        "poaSkyDiffuse": 5.013397459621556,
+        "poaGroundDiffuse": 0.08373412263472581
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 90.0,
+        "solarAzimuth": 270.0,
+        "dni": 0.0,
+        "ghi": 5.0,
+        "dhi": 5.0,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 37.91960837783625,
+        "perezModel": "sandiacomposite1988"
+      },
+      "expected": {
+        "poaGlobal": 4.451639325898248,
+        "poaDirect": 0.0,
+        "poaDiffuse": 4.451639325898248,
+        "poaSkyDiffuse": 4.367905203263522,
+        "poaGroundDiffuse": 0.08373412263472581
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 92.0,
+        "solarAzimuth": 300.0,
+        "dni": 0.0,
+        "ghi": 2.0,
+        "dhi": 2.0,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 1.8995190528383292,
+        "poaDirect": 0.0,
+        "poaDiffuse": 1.8995190528383292,
+        "poaSkyDiffuse": 1.8660254037844388,
+        "poaGroundDiffuse": 0.03349364905389032
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 92.0,
+        "solarAzimuth": 300.0,
+        "dni": 0.0,
+        "ghi": 2.0,
+        "dhi": 2.0,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 1.8995190528383292,
+        "poaDirect": 0.0,
+        "poaDiffuse": 1.8995190528383292,
+        "poaSkyDiffuse": 1.8660254037844388,
+        "poaGroundDiffuse": 0.03349364905389032
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 92.0,
+        "solarAzimuth": 300.0,
+        "dni": 0.0,
+        "ghi": 2.0,
+        "dhi": 2.0,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 1.8995190528383292,
+        "poaDirect": 0.0,
+        "poaDiffuse": 1.8995190528383292,
+        "poaSkyDiffuse": 1.8660254037844388,
+        "poaGroundDiffuse": 0.03349364905389032
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 92.0,
+        "solarAzimuth": 300.0,
+        "dni": 0.0,
+        "ghi": 2.0,
+        "dhi": 2.0,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 1.8995190528383292,
+        "poaDirect": 0.0,
+        "poaDiffuse": 1.8995190528383292,
+        "poaSkyDiffuse": 1.8660254037844388,
+        "poaGroundDiffuse": 0.03349364905389032
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 92.0,
+        "solarAzimuth": 300.0,
+        "dni": 0.0,
+        "ghi": 2.0,
+        "dhi": 2.0,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 2.0420680232116863,
+        "poaDirect": 0.0,
+        "poaDiffuse": 2.0420680232116863,
+        "poaSkyDiffuse": 2.008574374157796,
+        "poaGroundDiffuse": 0.03349364905389032
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 92.0,
+        "solarAzimuth": 300.0,
+        "dni": 0.0,
+        "ghi": 2.0,
+        "dhi": 2.0,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": "NaN",
+        "perezModel": "usacomposite1988"
+      },
+      "expected": {
+        "poaGlobal": 0.03349364905389032,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.03349364905389032,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.03349364905389032
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 100.0,
+        "solarAzimuth": 330.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 0.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 100.0,
+        "solarAzimuth": 330.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 0.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 100.0,
+        "solarAzimuth": 330.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 0.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 100.0,
+        "solarAzimuth": 330.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 0.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 100.0,
+        "solarAzimuth": 330.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 0.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 100.0,
+        "solarAzimuth": 330.0,
+        "dni": 0.0,
+        "ghi": 0.0,
+        "dhi": 0.0,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": "NaN",
+        "perezModel": "france1988"
+      },
+      "expected": {
+        "poaGlobal": 0.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 0.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 35.0,
+        "solarAzimuth": 200.0,
+        "dni": 700.0,
+        "ghi": 700.0,
+        "dhi": 126.6,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 700.0064310022943,
+        "poaDirect": 573.4064310022943,
+        "poaDiffuse": 126.6,
+        "poaSkyDiffuse": 126.6,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 35.0,
+        "solarAzimuth": 200.0,
+        "dni": 700.0,
+        "ghi": 700.0,
+        "dhi": 126.6,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 715.5122124420595,
+        "poaDirect": 573.4064310022943,
+        "poaDiffuse": 142.10578143976525,
+        "poaSkyDiffuse": 142.10578143976525,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 35.0,
+        "solarAzimuth": 200.0,
+        "dni": 700.0,
+        "ghi": 700.0,
+        "dhi": 126.6,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 700.0064310022943,
+        "poaDirect": 573.4064310022943,
+        "poaDiffuse": 126.6,
+        "poaSkyDiffuse": 126.6,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 35.0,
+        "solarAzimuth": 200.0,
+        "dni": 700.0,
+        "ghi": 700.0,
+        "dhi": 126.6,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 700.0064310022943,
+        "poaDirect": 573.4064310022943,
+        "poaDiffuse": 126.6,
+        "poaSkyDiffuse": 126.6,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 35.0,
+        "solarAzimuth": 200.0,
+        "dni": 700.0,
+        "ghi": 700.0,
+        "dhi": 126.6,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 700.0064310022943,
+        "poaDirect": 573.4064310022943,
+        "poaDiffuse": 126.6,
+        "poaSkyDiffuse": 126.6,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 35.0,
+        "solarAzimuth": 200.0,
+        "dni": 700.0,
+        "ghi": 700.0,
+        "dhi": 126.6,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 1.2198742289986713,
+        "perezModel": "phoenix1988"
+      },
+      "expected": {
+        "poaGlobal": 700.0064310022943,
+        "poaDirect": 573.4064310022943,
+        "poaDiffuse": 126.6,
+        "poaSkyDiffuse": 126.6,
+        "poaGroundDiffuse": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 50.0,
+        "solarAzimuth": 0.0,
+        "dni": 600.0,
+        "ghi": 500.0,
+        "dhi": 114.3,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 119.64999999999999,
+        "poaDirect": 0.0,
+        "poaDiffuse": 119.64999999999999,
+        "poaSkyDiffuse": 57.15,
+        "poaGroundDiffuse": 62.49999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 50.0,
+        "solarAzimuth": 0.0,
+        "dni": 600.0,
+        "ghi": 500.0,
+        "dhi": 114.3,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 138.79967407578525,
+        "poaDirect": 0.0,
+        "poaDiffuse": 138.79967407578525,
+        "poaSkyDiffuse": 76.29967407578526,
+        "poaGroundDiffuse": 62.49999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 50.0,
+        "solarAzimuth": 0.0,
+        "dni": 600.0,
+        "ghi": 500.0,
+        "dhi": 114.3,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 94.54934851035794,
+        "poaDirect": 0.0,
+        "poaDiffuse": 94.54934851035794,
+        "poaSkyDiffuse": 32.04934851035795,
+        "poaGroundDiffuse": 62.49999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 50.0,
+        "solarAzimuth": 0.0,
+        "dni": 600.0,
+        "ghi": 500.0,
+        "dhi": 114.3,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 104.50107848651423,
+        "poaDirect": 0.0,
+        "poaDiffuse": 104.50107848651423,
+        "poaSkyDiffuse": 42.00107848651424,
+        "poaGroundDiffuse": 62.49999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 50.0,
+        "solarAzimuth": 0.0,
+        "dni": 600.0,
+        "ghi": 500.0,
+        "dhi": 114.3,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 259.6499999999999,
+        "poaDirect": 0.0,
+        "poaDiffuse": 259.6499999999999,
+        "poaSkyDiffuse": 197.14999999999995,
+        "poaGroundDiffuse": 62.49999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 50.0,
+        "solarAzimuth": 0.0,
+        "dni": 600.0,
+        "ghi": 500.0,
+        "dhi": 114.3,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 1.5534066629239196,
+        "perezModel": "elmonte1988"
+      },
+      "expected": {
+        "poaGlobal": 95.80630818380766,
+        "poaDirect": 0.0,
+        "poaDiffuse": 95.80630818380766,
+        "poaSkyDiffuse": 33.30630818380766,
+        "poaGroundDiffuse": 62.49999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 180.0,
+        "surfaceAzimuth": 0.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 800.0,
+        "ghi": 800.0,
+        "dhi": 107.2,
+        "albedo": 0.25,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 200.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 200.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 200.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 180.0,
+        "surfaceAzimuth": 0.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 800.0,
+        "ghi": 800.0,
+        "dhi": 107.2,
+        "albedo": 0.25,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 200.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 200.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 200.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 180.0,
+        "surfaceAzimuth": 0.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 800.0,
+        "ghi": 800.0,
+        "dhi": 107.2,
+        "albedo": 0.25,
+        "model": "haydavies",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 200.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 200.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 200.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 180.0,
+        "surfaceAzimuth": 0.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 800.0,
+        "ghi": 800.0,
+        "dhi": 107.2,
+        "albedo": 0.25,
+        "model": "reindl",
+        "dniExtra": 1366.1
+      },
+      "expected": {
+        "poaGlobal": 200.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 200.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 200.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 180.0,
+        "surfaceAzimuth": 0.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 800.0,
+        "ghi": 800.0,
+        "dhi": 107.2,
+        "albedo": 0.25,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 456.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 456.0,
+        "poaSkyDiffuse": 256.0,
+        "poaGroundDiffuse": 200.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 180.0,
+        "surfaceAzimuth": 0.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "dni": 800.0,
+        "ghi": 800.0,
+        "dhi": 107.2,
+        "albedo": 0.25,
+        "model": "perez",
+        "dniExtra": 1366.1,
+        "airmassRelative": 1.1539922333636758,
+        "perezModel": "osage1988"
+      },
+      "expected": {
+        "poaGlobal": 200.0,
+        "poaDirect": 0.0,
+        "poaDiffuse": 200.0,
+        "poaSkyDiffuse": 0.0,
+        "poaGroundDiffuse": 200.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 25.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 10.0,
+        "solarAzimuth": 180.0,
+        "dni": 1050.0,
+        "ghi": 1150.0,
+        "dhi": 116.0,
+        "albedo": 0.9,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 1173.273689460181,
+        "poaDirect": 1014.2221176035216,
+        "poaDiffuse": 159.05157185665936,
+        "poaSkyDiffuse": 110.5658516481257,
+        "poaGroundDiffuse": 48.48572020853366
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 25.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 10.0,
+        "solarAzimuth": 180.0,
+        "dni": 1050.0,
+        "ghi": 1150.0,
+        "dhi": 116.0,
+        "albedo": 0.9,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 1174.9233753161166,
+        "poaDirect": 1014.2221176035216,
+        "poaDiffuse": 160.70125771259492,
+        "poaSkyDiffuse": 112.21553750406127,
+        "poaGroundDiffuse": 48.48572020853366
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 25.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 10.0,
+        "solarAzimuth": 180.0,
+        "dni": 1050.0,
+        "ghi": 1150.0,
+        "dhi": 116.0,
+        "albedo": 0.9,
+        "model": "haydavies",
+        "dniExtra": 1412.0
+      },
+      "expected": {
+        "poaGlobal": 1175.6607706814873,
+        "poaDirect": 1014.2221176035216,
+        "poaDiffuse": 161.43865307796577,
+        "poaSkyDiffuse": 112.9529328694321,
+        "poaGroundDiffuse": 48.48572020853366
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 25.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 10.0,
+        "solarAzimuth": 180.0,
+        "dni": 1050.0,
+        "ghi": 1150.0,
+        "dhi": 116.0,
+        "albedo": 0.9,
+        "model": "reindl",
+        "dniExtra": 1412.0
+      },
+      "expected": {
+        "poaGlobal": 1175.9333083899455,
+        "poaDirect": 1014.2221176035216,
+        "poaDiffuse": 161.71119078642383,
+        "poaSkyDiffuse": 113.22547057789018,
+        "poaGroundDiffuse": 48.48572020853366
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 25.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 10.0,
+        "solarAzimuth": 180.0,
+        "dni": 1050.0,
+        "ghi": 1150.0,
+        "dhi": 116.0,
+        "albedo": 0.9,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 1177.583531256495,
+        "poaDirect": 1014.2221176035216,
+        "poaDiffuse": 163.36141365297345,
+        "poaSkyDiffuse": 114.8756934444398,
+        "poaGroundDiffuse": 48.48572020853366
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 25.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 10.0,
+        "solarAzimuth": 180.0,
+        "dni": 1050.0,
+        "ghi": 1150.0,
+        "dhi": 116.0,
+        "albedo": 0.9,
+        "model": "perez",
+        "dniExtra": 1412.0,
+        "airmassRelative": 1.0150711594323112,
+        "perezModel": "albuquerque1988"
+      },
+      "expected": {
+        "poaGlobal": 1168.2704780473812,
+        "poaDirect": 1014.2221176035216,
+        "poaDiffuse": 154.04836044385965,
+        "poaSkyDiffuse": 105.562640235326,
+        "poaGroundDiffuse": 48.48572020853366
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 60.0,
+        "surfaceAzimuth": 200.0,
+        "solarZenith": 70.0,
+        "solarAzimuth": 230.0,
+        "dni": 1000.0,
+        "ghi": 400.0,
+        "dhi": 58.0,
+        "albedo": 0.05,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 924.2795372522656,
+        "poaDirect": 875.7795372522656,
+        "poaDiffuse": 48.5,
+        "poaSkyDiffuse": 43.5,
+        "poaGroundDiffuse": 4.999999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 60.0,
+        "surfaceAzimuth": 200.0,
+        "solarZenith": 70.0,
+        "solarAzimuth": 230.0,
+        "dni": 1000.0,
+        "ghi": 400.0,
+        "dhi": 58.0,
+        "albedo": 0.05,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 960.0216954214599,
+        "poaDirect": 875.7795372522656,
+        "poaDiffuse": 84.24215816919424,
+        "poaSkyDiffuse": 79.24215816919424,
+        "poaGroundDiffuse": 4.999999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 60.0,
+        "surfaceAzimuth": 200.0,
+        "solarZenith": 70.0,
+        "solarAzimuth": 230.0,
+        "dni": 1000.0,
+        "ghi": 400.0,
+        "dhi": 58.0,
+        "albedo": 0.05,
+        "model": "haydavies",
+        "dniExtra": 1325.0
+      },
+      "expected": {
+        "poaGlobal": 1003.5363430985117,
+        "poaDirect": 875.7795372522656,
+        "poaDiffuse": 127.75680584624607,
+        "poaSkyDiffuse": 122.75680584624607,
+        "poaGroundDiffuse": 4.999999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 60.0,
+        "surfaceAzimuth": 200.0,
+        "solarZenith": 70.0,
+        "solarAzimuth": 230.0,
+        "dni": 1000.0,
+        "ghi": 400.0,
+        "dhi": 58.0,
+        "albedo": 0.05,
+        "model": "reindl",
+        "dniExtra": 1325.0
+      },
+      "expected": {
+        "poaGlobal": 1004.769625684625,
+        "poaDirect": 875.7795372522656,
+        "poaDiffuse": 128.9900884323593,
+        "poaSkyDiffuse": 123.9900884323593,
+        "poaGroundDiffuse": 4.999999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 60.0,
+        "surfaceAzimuth": 200.0,
+        "solarZenith": 70.0,
+        "solarAzimuth": 230.0,
+        "dni": 1000.0,
+        "ghi": 400.0,
+        "dhi": 58.0,
+        "albedo": 0.05,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 1004.2795372522656,
+        "poaDirect": 875.7795372522656,
+        "poaDiffuse": 128.49999999999997,
+        "poaSkyDiffuse": 123.49999999999999,
+        "poaGroundDiffuse": 4.999999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 60.0,
+        "surfaceAzimuth": 200.0,
+        "solarZenith": 70.0,
+        "solarAzimuth": 230.0,
+        "dni": 1000.0,
+        "ghi": 400.0,
+        "dhi": 58.0,
+        "albedo": 0.05,
+        "model": "perez",
+        "dniExtra": 1325.0,
+        "airmassRelative": 2.9031466488030997,
+        "perezModel": "capecanaveral1988"
+      },
+      "expected": {
+        "poaGlobal": 1065.1346821057846,
+        "poaDirect": 875.7795372522656,
+        "poaDiffuse": 189.35514485351894,
+        "poaSkyDiffuse": 184.35514485351894,
+        "poaGroundDiffuse": 4.999999999999999
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 80.67135109345799,
+        "surfaceAzimuth": 226.05879029772623,
+        "solarZenith": 30.19483342704215,
+        "solarAzimuth": 274.0511881936509,
+        "dni": 402.9432356259347,
+        "ghi": 427.1391359092403,
+        "dhi": 78.86717498346717,
+        "albedo": 0.47259677333132905,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 378.36396760293087,
+        "poaDirect": 190.28430567537274,
+        "poaDiffuse": 188.0796619275581,
+        "poaSkyDiffuse": 103.50821928616205,
+        "poaGroundDiffuse": 84.57144264139606
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 44.183016577026315,
+        "surfaceAzimuth": 189.6982421107418,
+        "solarZenith": 17.77855009725152,
+        "solarAzimuth": 248.24252401665262,
+        "dni": 555.2053320720994,
+        "ghi": 671.2686319731388,
+        "dhi": 142.5778136561644,
+        "albedo": 0.6488592724145018,
+        "model": "perez",
+        "dniExtra": 1370.4971516955318,
+        "airmassRelative": 1.0497073855831622,
+        "perezModel": "elmonte1988"
+      },
+      "expected": {
+        "poaGlobal": 625.0717205092808,
+        "poaDirect": 440.7893563990579,
+        "poaDiffuse": 184.28236411022294,
+        "poaSkyDiffuse": 122.67631287513004,
+        "poaGroundDiffuse": 61.60605123509292
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 81.9352422742224,
+        "surfaceAzimuth": 306.9636203369887,
+        "solarZenith": 12.109300257388176,
+        "solarAzimuth": 41.302877509638066,
+        "dni": 683.2539585471826,
+        "ghi": 893.9689891513756,
+        "dhi": 225.9179787629269,
+        "albedo": 0.24006843857174245,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 304.0437242271249,
+        "poaDirect": 82.98491658809039,
+        "poaDiffuse": 221.0588076390345,
+        "poaSkyDiffuse": 128.80625993202725,
+        "poaGroundDiffuse": 92.25254770700727
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 24.342571991667437,
+        "surfaceAzimuth": 255.65761291124156,
+        "solarZenith": 44.796718020809045,
+        "solarAzimuth": 141.6371314082176,
+        "dni": 115.40007915758378,
+        "ghi": 255.51794542872352,
+        "dhi": 173.62876857540772,
+        "albedo": 0.4811770440360242,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 241.9416238630606,
+        "poaDirect": 60.96614021057245,
+        "poaDiffuse": 180.97548365248815,
+        "poaSkyDiffuse": 175.5102157969002,
+        "poaGroundDiffuse": 5.4652678555879275
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 178.10425133111994,
+        "surfaceAzimuth": 244.60050329340078,
+        "solarZenith": 59.82576323701205,
+        "solarAzimuth": 19.14442628675557,
+        "dni": 510.04789830211405,
+        "ghi": 499.776988873306,
+        "dhi": 243.41096508917096,
+        "albedo": 0.8164136513244094,
+        "model": "haydavies",
+        "dniExtra": 1398.9672749345214
+      },
+      "expected": {
+        "poaGlobal": 407.95542133734676,
+        "poaDirect": 0.0,
+        "poaDiffuse": 407.95542133734676,
+        "poaSkyDiffuse": 0.04232642596958298,
+        "poaGroundDiffuse": 407.9130949113772
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 41.798713514480006,
+        "surfaceAzimuth": 190.35094481859207,
+        "solarZenith": 0.77021184275567,
+        "solarAzimuth": 185.7170411320272,
+        "dni": 702.1489013831998,
+        "ghi": 818.5231302448151,
+        "dhi": 116.43766953794089,
+        "albedo": 0.2712314561078939,
+        "model": "reindl",
+        "dniExtra": 1388.007381781068
+      },
+      "expected": {
+        "poaGlobal": 654.6824673132975,
+        "poaDirect": 529.6687236168416,
+        "poaDiffuse": 125.01374369645586,
+        "poaSkyDiffuse": 96.76206751112737,
+        "poaGroundDiffuse": 28.251676185328492
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 49.36632615540753,
+        "surfaceAzimuth": 178.53735598585172,
+        "solarZenith": 80.08204464796835,
+        "solarAzimuth": 153.13284048562207,
+        "dni": 847.8931716520992,
+        "ghi": 420.79279992823166,
+        "dhi": 274.75354082600455,
+        "albedo": 0.49029296185190313,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 998.0543254934953,
+        "poaDirect": 667.6526645390692,
+        "poaDiffuse": 330.4016609544261,
+        "poaSkyDiffuse": 294.4229906059311,
+        "poaGroundDiffuse": 35.97867034849504
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 57.20450380131624,
+        "surfaceAzimuth": 78.62764086996509,
+        "solarZenith": 85.21512728695527,
+        "solarAzimuth": 143.5598039987937,
+        "dni": 550.6946393357478,
+        "ghi": 178.7126119478798,
+        "dhi": 132.7765588072067,
+        "albedo": 0.559311689142921,
+        "model": "perez",
+        "dniExtra": 1322.23611395217,
+        "airmassRelative": 10.682178354626199,
+        "perezModel": "allsitescomposite1988"
+      },
+      "expected": {
+        "poaGlobal": 382.40904392064397,
+        "poaDirect": 220.33196396047106,
+        "poaDiffuse": 162.0770799601729,
+        "poaSkyDiffuse": 139.16925846361093,
+        "poaGroundDiffuse": 22.907821496561986
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 67.80600949634231,
+        "surfaceAzimuth": 266.5566734895155,
+        "solarZenith": 54.64137936286246,
+        "solarAzimuth": 315.9843810815249,
+        "dni": 3.4861570545190457,
+        "ghi": 308.606080426936,
+        "dhi": 306.5886680746972,
+        "albedo": 0.5284467342396038,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 264.41390813128544,
+        "poaDirect": 2.4742448247757136,
+        "poaDiffuse": 261.9396633065097,
+        "poaSkyDiffuse": 211.20029903263722,
+        "poaGroundDiffuse": 50.73936427387248
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 88.89834715503083,
+        "surfaceAzimuth": 270.58257019780393,
+        "solarZenith": 17.18891883029866,
+        "solarAzimuth": 192.25341567902805,
+        "dni": 465.0687947566223,
+        "ghi": 497.04798524091245,
+        "dhi": 52.75123936732792,
+        "albedo": 0.42247663337085795,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 175.3323224499352,
+        "poaDirect": 36.3393657853096,
+        "poaDiffuse": 138.99295666462558,
+        "poaSkyDiffuse": 36.016051854305985,
+        "poaGroundDiffuse": 102.97690481031958
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 137.0124316883632,
+        "surfaceAzimuth": 315.71018167853435,
+        "solarZenith": 1.9068810195638144,
+        "solarAzimuth": 112.13971521201377,
+        "dni": 577.0757661496501,
+        "ghi": 877.8714783915326,
+        "dhi": 301.1152812691705,
+        "albedo": 0.6797822207800006,
+        "model": "haydavies",
+        "dniExtra": 1355.8830637921378
+      },
+      "expected": {
+        "poaGlobal": 539.8661609896013,
+        "poaDirect": 0.0,
+        "poaDiffuse": 539.8661609896013,
+        "poaSkyDiffuse": 23.219463521489708,
+        "poaGroundDiffuse": 516.6466974681116
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 78.99854473444509,
+        "surfaceAzimuth": 120.14208594103751,
+        "solarZenith": 33.23256066187286,
+        "solarAzimuth": 318.0153643182872,
+        "dni": 807.0223342611185,
+        "ghi": 946.433430875788,
+        "dhi": 271.39717570216203,
+        "albedo": 0.7760614042780449,
+        "model": "reindl",
+        "dniExtra": 1346.1343599761026
+      },
+      "expected": {
+        "poaGlobal": 375.94443476738934,
+        "poaDirect": 0.0,
+        "poaDiffuse": 375.94443476738934,
+        "poaSkyDiffuse": 78.78205553069313,
+        "poaGroundDiffuse": 297.1623792366962
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 36.839147190722265,
+        "surfaceAzimuth": 162.948667855132,
+        "solarZenith": 33.164339200635915,
+        "solarAzimuth": 214.23725017347286,
+        "dni": 134.36377410590794,
+        "ghi": 198.63000630834057,
+        "dhi": 86.15342539059837,
+        "albedo": 0.2562484480823135,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 207.31136689030643,
+        "poaDirect": 117.57879147111689,
+        "poaDiffuse": 89.73257541918953,
+        "poaSkyDiffuse": 84.65090453867191,
+        "poaGroundDiffuse": 5.081670880517614
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 68.9757211846414,
+        "surfaceAzimuth": 139.92378130441094,
+        "solarZenith": 79.80876442323536,
+        "solarAzimuth": 351.31939870031766,
+        "dni": 427.869036560764,
+        "ghi": 289.11028338138306,
+        "dhi": 213.40562292438906,
+        "albedo": 0.43696070146398946,
+        "model": "perez",
+        "dniExtra": 1328.998237286517,
+        "airmassRelative": 5.488445572189197,
+        "perezModel": "osage1988"
+      },
+      "expected": {
+        "poaGlobal": 125.31389829306644,
+        "poaDirect": 0.0,
+        "poaDiffuse": 125.31389829306644,
+        "poaSkyDiffuse": 84.8102496763172,
+        "poaGroundDiffuse": 40.503648616749246
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 112.28070032913465,
+        "surfaceAzimuth": 307.99554097192447,
+        "solarZenith": 57.19605738903604,
+        "solarAzimuth": 84.82663612693372,
+        "dni": 736.3239692328934,
+        "ghi": 617.3080439795535,
+        "dhi": 218.39271588008472,
+        "albedo": 0.23963642628740034,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 169.8032335655182,
+        "poaDirect": 0.0,
+        "poaDiffuse": 169.8032335655182,
+        "poaSkyDiffuse": 67.79516074201597,
+        "poaGroundDiffuse": 102.00807282350223
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 22.357589797709345,
+        "surfaceAzimuth": 211.33756880418457,
+        "solarZenith": 32.210405165566335,
+        "solarAzimuth": 308.07534693692224,
+        "dni": 271.2812440087107,
+        "ghi": 613.9577575824327,
+        "dhi": 384.4276792007335,
+        "albedo": 0.3852417089327162,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 606.0249727463035,
+        "poaDirect": 205.8224103415592,
+        "poaDiffuse": 400.2025624047443,
+        "poaSkyDiffuse": 391.31262340117274,
+        "poaGroundDiffuse": 8.889939003571541
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 95.50959784741352,
+        "surfaceAzimuth": 82.10834092261472,
+        "solarZenith": 44.61392413283572,
+        "solarAzimuth": 24.624898311646433,
+        "dni": 204.75637609835118,
+        "ghi": 164.5743387307735,
+        "dhi": 18.817409515027467,
+        "albedo": 0.7496119875348418,
+        "model": "haydavies",
+        "dniExtra": 1324.7058392661365
+      },
+      "expected": {
+        "poaGlobal": 139.0028971032737,
+        "poaDirect": 62.950203288448684,
+        "poaDiffuse": 76.05269381482502,
+        "poaSkyDiffuse": 8.446863501136153,
+        "poaGroundDiffuse": 67.60583031368887
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 34.439226062850615,
+        "surfaceAzimuth": 82.6482875186781,
+        "solarZenith": 76.65738640100668,
+        "solarAzimuth": 68.39690661931382,
+        "dni": 330.2266584593659,
+        "ghi": 191.71391738409778,
+        "dhi": 115.50636454960369,
+        "albedo": 0.25696232588763235,
+        "model": "reindl",
+        "dniExtra": 1388.1329762086414
+      },
+      "expected": {
+        "poaGlobal": 411.08119800159824,
+        "poaDirect": 238.97089346667963,
+        "poaDiffuse": 172.1103045349186,
+        "poaSkyDiffuse": 167.79303341918762,
+        "poaGroundDiffuse": 4.317271115730984
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 123.10314257107322,
+        "surfaceAzimuth": 133.66159561655667,
+        "solarZenith": 8.07115481317963,
+        "solarAzimuth": 147.40276282538593,
+        "dni": 347.75402829898616,
+        "ghi": 408.36277572469635,
+        "dhi": 64.05343606126691,
+        "albedo": 0.16335827862633295,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 84.0551809420915,
+        "poaDirect": 0.0,
+        "poaDiffuse": 84.0551809420915,
+        "poaSkyDiffuse": 32.4838503312691,
+        "poaGroundDiffuse": 51.57133061082239
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 42.50422511779368,
+        "surfaceAzimuth": 275.002913357124,
+        "solarZenith": 42.03104948348455,
+        "solarAzimuth": 237.24218643903987,
+        "dni": 977.4758139108426,
+        "ghi": 1122.2658484557335,
+        "dhi": 396.21430680789916,
+        "albedo": 0.24556920182314226,
+        "model": "perez",
+        "dniExtra": 1393.7702903363868,
+        "airmassRelative": 1.3449525573636052,
+        "perezModel": "sandiacomposite1988"
+      },
+      "expected": {
+        "poaGlobal": 1325.9547647723637,
+        "poaDirect": 884.8394722076613,
+        "poaDiffuse": 441.11529256470243,
+        "poaSkyDiffuse": 404.906041864467,
+        "poaGroundDiffuse": 36.209250700235415
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 169.85808687794383,
+        "surfaceAzimuth": 219.55150518471157,
+        "solarZenith": 49.8420156661155,
+        "solarAzimuth": 346.051586967614,
+        "dni": 249.1828844490407,
+        "ghi": 324.6706005805837,
+        "dhi": 163.97320287223604,
+        "albedo": 0.5927267554446034,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 192.2185421441942,
+        "poaDirect": 0.0,
+        "poaDiffuse": 192.2185421441942,
+        "poaSkyDiffuse": 1.2810708221644118,
+        "poaGroundDiffuse": 190.93747132202978
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 59.21718846532223,
+        "surfaceAzimuth": 239.8758922681694,
+        "solarZenith": 29.582587297639886,
+        "solarAzimuth": 272.9921591772304,
+        "dni": 197.90839006185567,
+        "ghi": 496.5271595479719,
+        "dhi": 324.41711713390845,
+        "albedo": 0.6804866414944595,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 514.6190183274455,
+        "poaDirect": 158.38670674253356,
+        "poaDiffuse": 356.2323115849119,
+        "poaSkyDiffuse": 273.75327194054614,
+        "poaGroundDiffuse": 82.47903964436574
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 32.12929800203676,
+        "surfaceAzimuth": 132.43650115324493,
+        "solarZenith": 65.6871547403306,
+        "solarAzimuth": 236.0054728987958,
+        "dni": 851.5793407716594,
+        "ghi": 675.1180425908067,
+        "dhi": 324.5069224917611,
+        "albedo": 0.6486875355622759,
+        "model": "haydavies",
+        "dniExtra": 1325.469694407858
+      },
+      "expected": {
+        "poaGlobal": 459.729686403503,
+        "poaDirect": 200.08213372426476,
+        "poaDiffuse": 259.6475526792383,
+        "poaSkyDiffuse": 226.1122646050694,
+        "poaGroundDiffuse": 33.535288074168854
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 57.008150566304025,
+        "surfaceAzimuth": 8.475986095123321,
+        "solarZenith": 23.953916199969164,
+        "solarAzimuth": 279.01341981603406,
+        "dni": 763.5803196387258,
+        "ghi": 1062.359347252574,
+        "dhi": 364.54443964793154,
+        "albedo": 0.21354756488469934,
+        "model": "reindl",
+        "dniExtra": 1370.676853047259
+      },
+      "expected": {
+        "poaGlobal": 681.0453670862644,
+        "poaDirect": 382.41297177660573,
+        "poaDiffuse": 298.63239530965865,
+        "poaSkyDiffuse": 246.96629945667917,
+        "poaGroundDiffuse": 51.666095852979495
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 48.398876896843305,
+        "surfaceAzimuth": 161.10130609876626,
+        "solarZenith": 87.38615147241403,
+        "solarAzimuth": 230.1695105862235,
+        "dni": 808.7432153257328,
+        "ghi": 252.8718722805222,
+        "dhi": 215.98959052717376,
+        "albedo": 0.06406262762631448,
+        "model": "king"
+      },
+      "expected": {
+        "poaGlobal": 465.5951796328335,
+        "poaDirect": 240.3194069904736,
+        "poaDiffuse": 225.27577264235987,
+        "poaSkyDiffuse": 222.55375475887115,
+        "poaGroundDiffuse": 2.722017883488715
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 65.42123989904982,
+        "surfaceAzimuth": 65.64643003827364,
+        "solarZenith": 87.92723833650778,
+        "solarAzimuth": 21.476172083787667,
+        "dni": 75.04624240373892,
+        "ghi": 236.40418002918503,
+        "dhi": 233.6898606143023,
+        "albedo": 0.44621373673849196,
+        "model": "perez",
+        "dniExtra": 1368.164420845563,
+        "airmassRelative": 19.052630046849128,
+        "perezModel": "albuquerque1988"
+      },
+      "expected": {
+        "poaGlobal": 2673.8254535887168,
+        "poaDirect": 50.04818455509895,
+        "poaDiffuse": 2623.777269033618,
+        "poaSkyDiffuse": 2592.972156378398,
+        "poaGroundDiffuse": 30.805112655220146
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 17.249281388746635,
+        "surfaceAzimuth": 143.08446148918733,
+        "solarZenith": 85.04168724985351,
+        "solarAzimuth": 314.92662827021354,
+        "dni": 237.82754349953728,
+        "ghi": 229.3179809786531,
+        "dhi": 208.7623302950072,
+        "albedo": 0.4593933510606062,
+        "model": "isotropic"
+      },
+      "expected": {
+        "poaGlobal": 206.43671245755385,
+        "poaDirect": 0.0,
+        "poaDiffuse": 206.43671245755385,
+        "poaSkyDiffuse": 204.06764790228675,
+        "poaGroundDiffuse": 2.369064555267092
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 4.112469136216484,
+        "surfaceAzimuth": 183.35409079342242,
+        "solarZenith": 93.81539801996838,
+        "solarAzimuth": 109.70892712128716,
+        "dni": 284.3184174768142,
+        "ghi": 80.28829375385449,
+        "dhi": 80.28829375385449,
+        "albedo": 0.6388797249118762,
+        "model": "klucher"
+      },
+      "expected": {
+        "poaGlobal": 80.25096721769803,
+        "poaDirect": 0.0,
+        "poaDiffuse": 80.25096721769803,
+        "poaSkyDiffuse": 80.18493058448566,
+        "poaGroundDiffuse": 0.06603663321237717
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 20.343377645601898,
+        "surfaceAzimuth": 337.67466869250774,
+        "solarZenith": 90.56985660580966,
+        "solarAzimuth": 261.7239374952045,
+        "dni": 821.5135773699129,
+        "ghi": 269.26795792587194,
+        "dhi": 269.26795792587194,
+        "albedo": 0.7198293552698788,
+        "model": "haydavies",
+        "dniExtra": 1359.9672842761622
+      },
+      "expected": {
+        "poaGlobal": 870.6860286525983,
+        "poaDirect": 61.66575453417702,
+        "poaDiffuse": 809.0202741184213,
+        "poaSkyDiffuse": 802.975392740613,
+        "poaGroundDiffuse": 6.044881377808377
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 65.95224665932936,
+        "surfaceAzimuth": 122.82753120167483,
+        "solarZenith": 89.19779264897856,
+        "solarAzimuth": 258.03199563235006,
+        "dni": 399.7868647852285,
+        "ghi": 81.99390705425267,
+        "dhi": 76.39661025029316,
+        "albedo": 0.8956132709689962,
+        "model": "reindl",
+        "dniExtra": 1386.3813147784408
+      },
+      "expected": {
+        "poaGlobal": 61.627289798128544,
+        "poaDirect": 0.0,
+        "poaDiffuse": 61.627289798128544,
+        "poaSkyDiffuse": 39.87214388118664,
+        "poaGroundDiffuse": 21.755145916941906
+      }
+    }
+  ]
+}

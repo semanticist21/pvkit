@@ -1,15 +1,14 @@
 /**
- * Atmosphere.
- *
- * Spec: Kasten-Young (1989) air mass; Gueymard (1994) precipitable water;
- * barometric altitude relation. Linke turbidity / AOD Angstrom helpers.
- * Scope: dataless closed-form helpers consumed by `clearsky` and `irradiance`.
- * Air mass lives here (moved out of clearsky/irradiance). Caller supplies
- * turbidity / AOD; no bundled climatology raster (that is `@pvkit/io`).
- * Validation: pin reference outputs as fixtures and assert against them.
- *
- * TODO: relative air mass → absolute (pressure-corrected) → alt2pres/pres2alt →
- * precipitable water → Linke/AOD helpers.
+ * Atmosphere — dataless closed-form helpers consumed by `clearsky` and `irradiance`:
+ * air mass (relative, absolute), standard-atmosphere altitude ↔ pressure, precipitable
+ * water, Angstrom AOD, broadband AOD and Linke turbidity. Caller supplies every input;
+ * no bundled climatology (that is `@pvkit/io`).
  */
 
-export {};
+export * from "./absolute-airmass/index.ts";
+export * from "./altitude-pressure/index.ts";
+export * from "./angstrom/index.ts";
+export * from "./bird-hulstrom80-aod-bb/index.ts";
+export * from "./gueymard94-pw/index.ts";
+export * from "./kasten96-lt/index.ts";
+export * from "./relative-airmass/index.ts";

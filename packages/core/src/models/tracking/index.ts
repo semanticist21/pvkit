@@ -1,13 +1,9 @@
 /**
- * Tracking (single-axis tracker geometry).
- *
- * Spec: pvlib `tracking.singleaxis` + backtracking; sloped-terrain axis tilt.
- * Scope: pure solar geometry — GCR is a scalar param, not a 3D scene, so this is
- * core, NOT `@pvkit/layout`. High real-world usage (utility-scale PV is
- * overwhelmingly single-axis tracked). Depends only on `solarposition`.
- * Validation: pin reference outputs as fixtures and assert against them.
- *
- * TODO: singleaxis → backtracking → calc_axis_tilt → calc_cross_axis_tilt.
+ * Single-axis tracker geometry: rotation with slope-aware backtracking, plus the
+ * sloped-terrain axis-tilt helpers. Pure geometry — sun position and slope are caller
+ * inputs. Conventions (angles, azimuth origin): `doc/conventions.md`.
  */
 
-export {};
+export * from "./calc-axis-tilt/index.ts";
+export * from "./calc-cross-axis-tilt/index.ts";
+export * from "./singleaxis/index.ts";

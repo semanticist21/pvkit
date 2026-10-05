@@ -1,0 +1,2676 @@
+{
+  "meta": {
+    "reference": "pvlib.temperature.generic_linear / GenericLinearModel @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "u0": 16.0,
+        "u1": 8.0
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "uC": 11.404800000000002,
+        "uV": 5.702400000000001,
+        "moduleEfficiency": 0.19,
+        "alphaAbsorption": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "noct": 52.19974171330177,
+        "moduleEfficiency": 0.19,
+        "transmittanceAbsorptance": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.031020374296148,
+        "b": -0.19442614214700227
+      }
+    },
+    {
+      "fn": "genericLinearFromFaiman",
+      "input": {
+        "u0": 17.6,
+        "u1": 7.2,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "uConst": 12.144,
+        "duWind": 4.968,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "u0": 16.0,
+        "u1": 8.0
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "uC": 11.404800000000002,
+        "uV": 5.702400000000001,
+        "moduleEfficiency": 0.19,
+        "alphaAbsorption": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "noct": 52.19974171330177,
+        "moduleEfficiency": 0.19,
+        "transmittanceAbsorptance": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.031020374296148,
+        "b": -0.19442614214700227
+      }
+    },
+    {
+      "fn": "genericLinearFromPvsyst",
+      "input": {
+        "uC": 12.545280000000004,
+        "uV": 5.132160000000001,
+        "moduleEfficiency": 0.19,
+        "alphaAbsorption": 0.88
+      },
+      "expected": {
+        "uConst": 12.144,
+        "duWind": 4.967999999999999,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "u0": 16.0,
+        "u1": 8.0
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "uC": 11.404800000000002,
+        "uV": 5.702400000000001,
+        "moduleEfficiency": 0.19,
+        "alphaAbsorption": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "noct": 52.19974171330177,
+        "moduleEfficiency": 0.19,
+        "transmittanceAbsorptance": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.031020374296148,
+        "b": -0.19442614214700227
+      }
+    },
+    {
+      "fn": "genericLinearFromNoctSam",
+      "input": {
+        "noct": 53.19974171330177,
+        "moduleEfficiency": 0.19,
+        "transmittanceAbsorptance": 0.88
+      },
+      "expected": {
+        "uConst": 12.722990547566871,
+        "duWind": 4.325816786172736,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "u0": 16.0,
+        "u1": 8.0
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "uC": 11.404800000000002,
+        "uV": 5.702400000000001,
+        "moduleEfficiency": 0.19,
+        "alphaAbsorption": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "noct": 52.19974171330177,
+        "moduleEfficiency": 0.19,
+        "transmittanceAbsorptance": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.031020374296148,
+        "b": -0.19442614214700227
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -2.9810203742961483,
+        "b": -0.18470483503965215,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 10.871276622205558,
+        "duWind": 4.814336635100201,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -3.47,
+        "b": -0.0594,
+        "moduleEfficiency": 0.2,
+        "absorptance": 0.9,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 22.15164724212724,
+        "duWind": 1.6391456120645913,
+        "moduleEfficiency": 0.2,
+        "absorptance": 0.9
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -2.98,
+        "b": -0.0471,
+        "moduleEfficiency": 0.2,
+        "absorptance": 0.9,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 13.652697240984402,
+        "duWind": 0.762968357972414,
+        "moduleEfficiency": 0.2,
+        "absorptance": 0.9
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -3.56,
+        "b": -0.075,
+        "moduleEfficiency": 0.2,
+        "absorptance": 0.9,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 23.991582673665306,
+        "duWind": 2.391223314645889,
+        "moduleEfficiency": 0.2,
+        "absorptance": 0.9
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -2.81,
+        "b": -0.0455,
+        "moduleEfficiency": 0.2,
+        "absorptance": 0.9,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 11.525933097800591,
+        "duWind": 0.6183886652275343,
+        "moduleEfficiency": 0.2,
+        "absorptance": 0.9
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 26.388579234161423,
+        "duWind": 2.267221585977786,
+        "moduleEfficiency": 0.15804694474941,
+        "absorptance": 0.9122807003291347
+      },
+      "expected": {
+        "u0": 34.987268918875735,
+        "u1": 3.0059932603190602
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 26.388579234161423,
+        "duWind": 2.267221585977786,
+        "moduleEfficiency": 0.15804694474941,
+        "absorptance": 0.9122807003291347
+      },
+      "expected": {
+        "uC": 26.873634589213967,
+        "uV": 2.308895977069884,
+        "moduleEfficiency": 0.15804694474941,
+        "alphaAbsorption": 0.9122807003291347
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 26.388579234161423,
+        "duWind": 2.267221585977786,
+        "moduleEfficiency": 0.15804694474941,
+        "absorptance": 0.9122807003291347
+      },
+      "expected": {
+        "noct": 43.66938817780966,
+        "moduleEfficiency": 0.15804694474941,
+        "transmittanceAbsorptance": 0.9122807003291347
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 26.388579234161423,
+        "duWind": 2.267221585977786,
+        "moduleEfficiency": 0.15804694474941,
+        "absorptance": 0.9122807003291347,
+        "windFitLow": 1.4639784953208321,
+        "windFitHigh": 6.945295876931574
+      },
+      "expected": {
+        "a": -3.58012146927482,
+        "b": -0.0637572097190078
+      }
+    },
+    {
+      "fn": "genericLinearFromFaiman",
+      "input": {
+        "u0": 38.48599581076331,
+        "u1": 2.7053939342871542,
+        "moduleEfficiency": 0.15804694474941,
+        "absorptance": 0.9122807003291347
+      },
+      "expected": {
+        "uConst": 29.027437157577566,
+        "duWind": 2.0404994273800074,
+        "moduleEfficiency": 0.15804694474941,
+        "absorptance": 0.9122807003291347
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 25.717193557519366,
+        "duWind": 4.80188525129952,
+        "moduleEfficiency": 0.2100057132073308,
+        "absorptance": 0.8401583020373319
+      },
+      "expected": {
+        "u0": 40.811057533332146,
+        "u1": 7.620194436104976
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 25.717193557519366,
+        "duWind": 4.80188525129952,
+        "moduleEfficiency": 0.2100057132073308,
+        "absorptance": 0.8401583020373319
+      },
+      "expected": {
+        "uC": 27.08712566020843,
+        "uV": 5.057677421797104,
+        "moduleEfficiency": 0.2100057132073308,
+        "alphaAbsorption": 0.8401583020373319
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 25.717193557519366,
+        "duWind": 4.80188525129952,
+        "moduleEfficiency": 0.2100057132073308,
+        "absorptance": 0.8401583020373319
+      },
+      "expected": {
+        "noct": 39.13110878738274,
+        "moduleEfficiency": 0.2100057132073308,
+        "transmittanceAbsorptance": 0.8401583020373319
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 25.717193557519366,
+        "duWind": 4.80188525129952,
+        "moduleEfficiency": 0.2100057132073308,
+        "absorptance": 0.8401583020373319,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.7784120677268764,
+        "b": -0.11626306798437414
+      }
+    },
+    {
+      "fn": "genericLinearFromPvsyst",
+      "input": {
+        "uC": 29.795838226229275,
+        "uV": 4.551909679617394,
+        "moduleEfficiency": 0.2100057132073308,
+        "alphaAbsorption": 0.8401583020373319
+      },
+      "expected": {
+        "uConst": 28.288912913271307,
+        "duWind": 4.321696726169569,
+        "moduleEfficiency": 0.2100057132073308,
+        "absorptance": 0.8401583020373319
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 7.053608261221515,
+        "duWind": 3.3333524258308387,
+        "moduleEfficiency": 0.18257418992796004,
+        "absorptance": 0.9597514658164569
+      },
+      "expected": {
+        "u0": 9.075932197268092,
+        "u1": 4.2890502968193855
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 7.053608261221515,
+        "duWind": 3.3333524258308387,
+        "moduleEfficiency": 0.18257418992796004,
+        "absorptance": 0.9597514658164569
+      },
+      "expected": {
+        "uC": 7.120301328810734,
+        "uV": 3.364869840805075,
+        "moduleEfficiency": 0.18257418992796004,
+        "alphaAbsorption": 0.9597514658164569
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 7.053608261221515,
+        "duWind": 3.3333524258308387,
+        "moduleEfficiency": 0.18257418992796004,
+        "absorptance": 0.9597514658164569
+      },
+      "expected": {
+        "noct": 76.49920122652753,
+        "moduleEfficiency": 0.18257418992796004,
+        "transmittanceAbsorptance": 0.9597514658164569
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 7.053608261221515,
+        "duWind": 3.3333524258308387,
+        "moduleEfficiency": 0.18257418992796004,
+        "absorptance": 0.9597514658164569,
+        "windFitLow": 0.836258078313816,
+        "windFitHigh": 4.850385975419073
+      },
+      "expected": {
+        "a": -2.359806688044464,
+        "b": -0.21387273674524612
+      }
+    },
+    {
+      "fn": "genericLinearFromNoctSam",
+      "input": {
+        "noct": 77.49920122652753,
+        "moduleEfficiency": 0.18257418992796004,
+        "transmittanceAbsorptance": 0.9597514658164569
+      },
+      "expected": {
+        "uConst": 8.011949623038625,
+        "duWind": 2.7240628718331332,
+        "moduleEfficiency": 0.18257418992796004,
+        "absorptance": 0.9597514658164569
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 29.25711425343922,
+        "duWind": 2.924925775304119,
+        "moduleEfficiency": 0.16574716435960618,
+        "absorptance": 0.8854452657585594
+      },
+      "expected": {
+        "u0": 40.65192640715472,
+        "u1": 4.064101002376735
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 29.25711425343922,
+        "duWind": 2.924925775304119,
+        "moduleEfficiency": 0.16574716435960618,
+        "absorptance": 0.8854452657585594
+      },
+      "expected": {
+        "uC": 30.02897735448399,
+        "uV": 3.0020913583378808,
+        "moduleEfficiency": 0.16574716435960618,
+        "alphaAbsorption": 0.8854452657585594
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 29.25711425343922,
+        "duWind": 2.924925775304119,
+        "moduleEfficiency": 0.16574716435960618,
+        "absorptance": 0.8854452657585594
+      },
+      "expected": {
+        "noct": 40.24322393776754,
+        "moduleEfficiency": 0.16574716435960618,
+        "transmittanceAbsorptance": 0.8854452657585594
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 29.25711425343922,
+        "duWind": 2.924925775304119,
+        "moduleEfficiency": 0.16574716435960618,
+        "absorptance": 0.8854452657585594,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.730798970656534,
+        "b": -0.07517324173657802
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -3.680798970656534,
+        "b": -0.07141457964974912,
+        "moduleEfficiency": 0.16574716435960618,
+        "absorptance": 0.8854452657585594,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 27.906810887120866,
+        "duWind": 2.6086414493246965,
+        "moduleEfficiency": 0.16574716435960618,
+        "absorptance": 0.8854452657585594
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 15.795028280933947,
+        "duWind": 1.2022320519839609,
+        "moduleEfficiency": 0.10522528569433554,
+        "absorptance": 0.8863701266023422
+      },
+      "expected": {
+        "u0": 20.220357933329915,
+        "u1": 1.539064190178201
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 15.795028280933947,
+        "duWind": 1.2022320519839609,
+        "moduleEfficiency": 0.10522528569433554,
+        "absorptance": 0.8863701266023422
+      },
+      "expected": {
+        "uC": 16.036797760378004,
+        "uV": 1.2206342360262634,
+        "moduleEfficiency": 0.10522528569433554,
+        "alphaAbsorption": 0.8863701266023422
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 15.795028280933947,
+        "duWind": 1.2022320519839609,
+        "moduleEfficiency": 0.10522528569433554,
+        "absorptance": 0.8863701266023422
+      },
+      "expected": {
+        "noct": 59.063606440347066,
+        "moduleEfficiency": 0.10522528569433554,
+        "transmittanceAbsorptance": 0.8863701266023422
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 15.795028280933947,
+        "duWind": 1.2022320519839609,
+        "moduleEfficiency": 0.10522528569433554,
+        "absorptance": 0.8863701266023422,
+        "windFitLow": 1.639031292532871,
+        "windFitHigh": 5.291718860514923
+      },
+      "expected": {
+        "a": -3.0251371323921,
+        "b": -0.060473096002551886
+      }
+    },
+    {
+      "fn": "genericLinearFromFaiman",
+      "input": {
+        "u0": 22.242393726662907,
+        "u1": 1.3851577711603809,
+        "moduleEfficiency": 0.10522528569433554,
+        "absorptance": 0.8863701266023422
+      },
+      "expected": {
+        "uConst": 17.37453110902734,
+        "duWind": 1.0820088467855646,
+        "moduleEfficiency": 0.10522528569433554,
+        "absorptance": 0.8863701266023422
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 23.45320967967987,
+        "duWind": 1.6594232190603044,
+        "moduleEfficiency": 0.08216425513188422,
+        "absorptance": 0.8972235138385324
+      },
+      "expected": {
+        "u0": 28.77485217074385,
+        "u1": 2.035954074914147
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 23.45320967967987,
+        "duWind": 1.6594232190603044,
+        "moduleEfficiency": 0.08216425513188422,
+        "absorptance": 0.8972235138385324
+      },
+      "expected": {
+        "uC": 23.6962004562913,
+        "uV": 1.6766159420280211,
+        "moduleEfficiency": 0.08216425513188422,
+        "alphaAbsorption": 0.8972235138385324
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 23.45320967967987,
+        "duWind": 1.6594232190603044,
+        "moduleEfficiency": 0.08216425513188422,
+        "absorptance": 0.8972235138385324
+      },
+      "expected": {
+        "noct": 46.87607480614571,
+        "moduleEfficiency": 0.08216425513188422,
+        "transmittanceAbsorptance": 0.8972235138385324
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 23.45320967967987,
+        "duWind": 1.6594232190603044,
+        "moduleEfficiency": 0.08216425513188422,
+        "absorptance": 0.8972235138385324,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.3737570117189963,
+        "b": -0.05728348288730334
+      }
+    },
+    {
+      "fn": "genericLinearFromPvsyst",
+      "input": {
+        "uC": 26.065820501920435,
+        "uV": 1.508954347825219,
+        "moduleEfficiency": 0.08216425513188422,
+        "alphaAbsorption": 0.8972235138385324
+      },
+      "expected": {
+        "uConst": 25.79853064764786,
+        "duWind": 1.493480897154274,
+        "moduleEfficiency": 0.08216425513188422,
+        "absorptance": 0.8972235138385324
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 25.15535819747934,
+        "duWind": 4.516467074251553,
+        "moduleEfficiency": 0.20410383708133734,
+        "absorptance": 0.8039064079977822
+      },
+      "expected": {
+        "u0": 41.9393970903529,
+        "u1": 7.529922833359639
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 25.15535819747934,
+        "duWind": 4.516467074251553,
+        "moduleEfficiency": 0.20410383708133734,
+        "absorptance": 0.8039064079977822
+      },
+      "expected": {
+        "uC": 26.83391775097722,
+        "uV": 4.817840598573032,
+        "moduleEfficiency": 0.20410383708133734,
+        "alphaAbsorption": 0.8039064079977822
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 25.15535819747934,
+        "duWind": 4.516467074251553,
+        "moduleEfficiency": 0.20410383708133734,
+        "absorptance": 0.8039064079977822
+      },
+      "expected": {
+        "noct": 38.90922932464524,
+        "moduleEfficiency": 0.20410383708133734,
+        "transmittanceAbsorptance": 0.8039064079977822
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 25.15535819747934,
+        "duWind": 4.516467074251553,
+        "moduleEfficiency": 0.20410383708133734,
+        "absorptance": 0.8039064079977822,
+        "windFitLow": 1.6735217273513205,
+        "windFitHigh": 7.813539615909415
+      },
+      "expected": {
+        "a": -3.8316160720890955,
+        "b": -0.09998947586795923
+      }
+    },
+    {
+      "fn": "genericLinearFromNoctSam",
+      "input": {
+        "noct": 39.90922932464524,
+        "moduleEfficiency": 0.20410383708133734,
+        "transmittanceAbsorptance": 0.8039064079977822
+      },
+      "expected": {
+        "uConst": 19.381718375269724,
+        "duWind": 6.589784247591707,
+        "moduleEfficiency": 0.20410383708133734,
+        "absorptance": 0.8039064079977822
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 15.169771731063875,
+        "duWind": 5.8552502724831275,
+        "moduleEfficiency": 0.16843081847806096,
+        "absorptance": 0.8419036752885539
+      },
+      "expected": {
+        "u0": 22.524696545168208,
+        "u1": 8.694114711932219
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 15.169771731063875,
+        "duWind": 5.8552502724831275,
+        "moduleEfficiency": 0.16843081847806096,
+        "absorptance": 0.8419036752885539
+      },
+      "expected": {
+        "uC": 15.769565958728077,
+        "uV": 6.086759709620737,
+        "moduleEfficiency": 0.16843081847806096,
+        "alphaAbsorption": 0.8419036752885539
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 15.169771731063875,
+        "duWind": 5.8552502724831275,
+        "moduleEfficiency": 0.16843081847806096,
+        "absorptance": 0.8419036752885539
+      },
+      "expected": {
+        "noct": 45.272285048064894,
+        "moduleEfficiency": 0.16843081847806096,
+        "transmittanceAbsorptance": 0.8419036752885539
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 15.169771731063875,
+        "duWind": 5.8552502724831275,
+        "moduleEfficiency": 0.16843081847806096,
+        "absorptance": 0.8419036752885539,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.303632793291724,
+        "b": -0.17357484913623922
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -3.2536327932917244,
+        "b": -0.16489610667942725,
+        "moduleEfficiency": 0.16843081847806096,
+        "absorptance": 0.8419036752885539,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 14.780731236486265,
+        "duWind": 5.127376847226121,
+        "moduleEfficiency": 0.16843081847806096,
+        "absorptance": 0.8419036752885539
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 19.67622005584615,
+        "duWind": 6.918236394519214,
+        "moduleEfficiency": 0.24211528060796636,
+        "absorptance": 0.8447151795954188
+      },
+      "expected": {
+        "u0": 32.65221266865141,
+        "u1": 11.480646455706209
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 19.67622005584615,
+        "duWind": 6.918236394519214,
+        "moduleEfficiency": 0.24211528060796636,
+        "absorptance": 0.8447151795954188
+      },
+      "expected": {
+        "uC": 20.903839675006942,
+        "uV": 7.349872283109542,
+        "moduleEfficiency": 0.24211528060796636,
+        "alphaAbsorption": 0.8447151795954188
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 19.67622005584615,
+        "duWind": 6.918236394519214,
+        "moduleEfficiency": 0.24211528060796636,
+        "absorptance": 0.8447151795954188
+      },
+      "expected": {
+        "noct": 40.329238780865424,
+        "moduleEfficiency": 0.24211528060796636,
+        "transmittanceAbsorptance": 0.8447151795954188
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 19.67622005584615,
+        "duWind": 6.918236394519214,
+        "moduleEfficiency": 0.24211528060796636,
+        "absorptance": 0.8447151795954188,
+        "windFitLow": 1.0428719971724663,
+        "windFitHigh": 5.085124976034843
+      },
+      "expected": {
+        "a": -3.6143663895033127,
+        "b": -0.17636789234311046
+      }
+    },
+    {
+      "fn": "genericLinearFromFaiman",
+      "input": {
+        "u0": 35.917433935516556,
+        "u1": 10.332581810135588,
+        "moduleEfficiency": 0.24211528060796636,
+        "absorptance": 0.8447151795954188
+      },
+      "expected": {
+        "uConst": 21.64384206143077,
+        "duWind": 6.226412755067293,
+        "moduleEfficiency": 0.24211528060796636,
+        "absorptance": 0.8447151795954188
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 6.166531119580716,
+        "duWind": 1.0405574332891265,
+        "moduleEfficiency": 0.1938780512051282,
+        "absorptance": 0.870992361891634
+      },
+      "expected": {
+        "u0": 9.107075455736057,
+        "u1": 1.536752977845257
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 6.166531119580716,
+        "duWind": 1.0405574332891265,
+        "moduleEfficiency": 0.1938780512051282,
+        "absorptance": 0.870992361891634
+      },
+      "expected": {
+        "uC": 6.394315009256892,
+        "uV": 1.078994313763699,
+        "moduleEfficiency": 0.1938780512051282,
+        "alphaAbsorption": 0.870992361891634
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 6.166531119580716,
+        "duWind": 1.0405574332891265,
+        "moduleEfficiency": 0.1938780512051282,
+        "absorptance": 0.870992361891634
+      },
+      "expected": {
+        "noct": 104.90404412044278,
+        "moduleEfficiency": 0.1938780512051282,
+        "transmittanceAbsorptance": 0.870992361891634
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 6.166531119580716,
+        "duWind": 1.0405574332891265,
+        "moduleEfficiency": 0.1938780512051282,
+        "absorptance": 0.870992361891634,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -2.2686441187053834,
+        "b": -0.10891565109215429
+      }
+    },
+    {
+      "fn": "genericLinearFromPvsyst",
+      "input": {
+        "uC": 7.033746510182581,
+        "uV": 0.9710948823873291,
+        "moduleEfficiency": 0.1938780512051282,
+        "alphaAbsorption": 0.870992361891634
+      },
+      "expected": {
+        "uConst": 6.783184231538788,
+        "duWind": 0.9365016899602139,
+        "moduleEfficiency": 0.1938780512051282,
+        "absorptance": 0.870992361891634
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 24.21855558611349,
+        "duWind": 7.781325554433263,
+        "moduleEfficiency": 0.08376013146579514,
+        "absorptance": 0.9189342893037064
+      },
+      "expected": {
+        "u0": 28.998209964745786,
+        "u1": 9.317009490065479
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 24.21855558611349,
+        "duWind": 7.781325554433263,
+        "moduleEfficiency": 0.08376013146579514,
+        "absorptance": 0.9189342893037064
+      },
+      "expected": {
+        "uC": 24.415455594614,
+        "uV": 7.844588743782658,
+        "moduleEfficiency": 0.08376013146579514,
+        "alphaAbsorption": 0.9189342893037064
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 24.21855558611349,
+        "duWind": 7.781325554433263,
+        "moduleEfficiency": 0.08376013146579514,
+        "absorptance": 0.9189342893037064
+      },
+      "expected": {
+        "noct": 38.62261566620336,
+        "moduleEfficiency": 0.08376013146579514,
+        "transmittanceAbsorptance": 0.9189342893037064
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 24.21855558611349,
+        "duWind": 7.781325554433263,
+        "moduleEfficiency": 0.08376013146579514,
+        "absorptance": 0.9189342893037064,
+        "windFitLow": 1.1003059427767659,
+        "windFitHigh": 6.337043467765373
+      },
+      "expected": {
+        "a": -3.5002056367997225,
+        "b": -0.1542661574818542
+      }
+    },
+    {
+      "fn": "genericLinearFromNoctSam",
+      "input": {
+        "noct": 39.62261566620336,
+        "moduleEfficiency": 0.08376013146579514,
+        "transmittanceAbsorptance": 0.9189342893037064
+      },
+      "expected": {
+        "uConst": 22.478576065956357,
+        "duWind": 7.642715862425161,
+        "moduleEfficiency": 0.08376013146579514,
+        "absorptance": 0.9189342893037064
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 17.509139150033853,
+        "duWind": 5.246432190670107,
+        "moduleEfficiency": 0.1535005029641,
+        "absorptance": 0.8394419263042708
+      },
+      "expected": {
+        "u0": 25.52570606506549,
+        "u1": 7.648513433002435
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 17.509139150033853,
+        "duWind": 5.246432190670107,
+        "moduleEfficiency": 0.1535005029641,
+        "absorptance": 0.8394419263042708
+      },
+      "expected": {
+        "uC": 18.138239194374798,
+        "uV": 5.434935502883257,
+        "moduleEfficiency": 0.1535005029641,
+        "alphaAbsorption": 0.8394419263042708
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 17.509139150033853,
+        "duWind": 5.246432190670107,
+        "moduleEfficiency": 0.1535005029641,
+        "absorptance": 0.8394419263042708
+      },
+      "expected": {
+        "noct": 44.159851528521926,
+        "moduleEfficiency": 0.1535005029641,
+        "transmittanceAbsorptance": 0.8394419263042708
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 17.509139150033853,
+        "duWind": 5.246432190670107,
+        "moduleEfficiency": 0.1535005029641,
+        "absorptance": 0.8394419263042708,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.3757421238199234,
+        "b": -0.15303244837995544
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -3.3257421238199236,
+        "b": -0.14538082596095767,
+        "moduleEfficiency": 0.1535005029641,
+        "absorptance": 0.8394419263042708,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 16.93286847917923,
+        "duWind": 4.612297881179333,
+        "moduleEfficiency": 0.1535005029641,
+        "absorptance": 0.8394419263042708
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 21.56340823678006,
+        "duWind": 5.8715367742917035,
+        "moduleEfficiency": 0.11954225729689401,
+        "absorptance": 0.8231810071784844
+      },
+      "expected": {
+        "u0": 30.645566692295997,
+        "u1": 8.344533008279855
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 21.56340823678006,
+        "duWind": 5.8715367742917035,
+        "moduleEfficiency": 0.11954225729689401,
+        "absorptance": 0.8231810071784844
+      },
+      "expected": {
+        "uC": 22.21117404648406,
+        "uV": 6.047918018436522,
+        "moduleEfficiency": 0.11954225729689401,
+        "alphaAbsorption": 0.8231810071784844
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 21.56340823678006,
+        "duWind": 5.8715367742917035,
+        "moduleEfficiency": 0.11954225729689401,
+        "absorptance": 0.8231810071784844
+      },
+      "expected": {
+        "noct": 39.909914053283536,
+        "moduleEfficiency": 0.11954225729689401,
+        "transmittanceAbsorptance": 0.8231810071784844
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 21.56340823678006,
+        "duWind": 5.8715367742917035,
+        "moduleEfficiency": 0.11954225729689401,
+        "absorptance": 0.8231810071784844,
+        "windFitLow": 0.9806521991416537,
+        "windFitHigh": 7.658235957797345
+      },
+      "expected": {
+        "a": -3.5284597733761487,
+        "b": -0.13327725914997965
+      }
+    },
+    {
+      "fn": "genericLinearFromFaiman",
+      "input": {
+        "u0": 33.710123361525596,
+        "u1": 7.51007970745187,
+        "moduleEfficiency": 0.11954225729689401,
+        "absorptance": 0.8231810071784844
+      },
+      "expected": {
+        "uConst": 23.719749060458064,
+        "duWind": 5.284383096862533,
+        "moduleEfficiency": 0.11954225729689401,
+        "absorptance": 0.8231810071784844
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 18.15672257283054,
+        "duWind": 7.305197402767851,
+        "moduleEfficiency": 0.20769324159195854,
+        "absorptance": 0.8378079459581631
+      },
+      "expected": {
+        "u0": 28.81494821025217,
+        "u1": 11.593440610334147
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 18.15672257283054,
+        "duWind": 7.305197402767851,
+        "moduleEfficiency": 0.20769324159195854,
+        "absorptance": 0.8378079459581631
+      },
+      "expected": {
+        "uC": 19.12738849290797,
+        "uV": 7.695736286085683,
+        "moduleEfficiency": 0.20769324159195854,
+        "alphaAbsorption": 0.8378079459581631
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 18.15672257283054,
+        "duWind": 7.305197402767851,
+        "moduleEfficiency": 0.20769324159195854,
+        "absorptance": 0.8378079459581631
+      },
+      "expected": {
+        "noct": 40.635257691777,
+        "moduleEfficiency": 0.20769324159195854,
+        "transmittanceAbsorptance": 0.8378079459581631
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 18.15672257283054,
+        "duWind": 7.305197402767851,
+        "moduleEfficiency": 0.20769324159195854,
+        "absorptance": 0.8378079459581631,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.559955928881345,
+        "b": -0.17694503252256566
+      }
+    },
+    {
+      "fn": "genericLinearFromPvsyst",
+      "input": {
+        "uC": 21.040127342198765,
+        "uV": 6.926162657477115,
+        "moduleEfficiency": 0.20769324159195854,
+        "alphaAbsorption": 0.8378079459581631
+      },
+      "expected": {
+        "uConst": 19.97239483011359,
+        "duWind": 6.574677662491066,
+        "moduleEfficiency": 0.20769324159195854,
+        "absorptance": 0.8378079459581631
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 11.213812720266215,
+        "duWind": 5.785457707352549,
+        "moduleEfficiency": 0.14915321611643906,
+        "absorptance": 0.9713306259159963
+      },
+      "expected": {
+        "u0": 13.639164232206388,
+        "u1": 7.036750996069102
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 11.213812720266215,
+        "duWind": 5.785457707352549,
+        "moduleEfficiency": 0.14915321611643906,
+        "absorptance": 0.9713306259159963
+      },
+      "expected": {
+        "uC": 11.272135550730944,
+        "uV": 5.815547764806155,
+        "moduleEfficiency": 0.14915321611643906,
+        "alphaAbsorption": 0.9713306259159963
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 11.213812720266215,
+        "duWind": 5.785457707352549,
+        "moduleEfficiency": 0.14915321611643906,
+        "absorptance": 0.9713306259159963
+      },
+      "expected": {
+        "noct": 54.447635253327284,
+        "moduleEfficiency": 0.14915321611643906,
+        "transmittanceAbsorptance": 0.9713306259159963
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 11.213812720266215,
+        "duWind": 5.785457707352549,
+        "moduleEfficiency": 0.14915321611643906,
+        "absorptance": 0.9713306259159963,
+        "windFitLow": 1.0418796419271275,
+        "windFitHigh": 7.730109627400402
+      },
+      "expected": {
+        "a": -2.859788998098737,
+        "b": -0.1759637255077521
+      }
+    },
+    {
+      "fn": "genericLinearFromNoctSam",
+      "input": {
+        "noct": 55.447635253327284,
+        "moduleEfficiency": 0.14915321611643906,
+        "transmittanceAbsorptance": 0.9713306259159963
+      },
+      "expected": {
+        "uConst": 13.152885858469636,
+        "duWind": 4.471981191879677,
+        "moduleEfficiency": 0.14915321611643906,
+        "absorptance": 0.9713306259159963
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 29.603706107814983,
+        "duWind": 7.549980334482539,
+        "moduleEfficiency": 0.058152923139058066,
+        "absorptance": 0.914097850815705
+      },
+      "expected": {
+        "u0": 34.58599397062899,
+        "u1": 8.82063797606231
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 29.603706107814983,
+        "duWind": 7.549980334482539,
+        "moduleEfficiency": 0.058152923139058066,
+        "absorptance": 0.914097850815705
+      },
+      "expected": {
+        "uC": 29.776479094573585,
+        "uV": 7.594043488183856,
+        "moduleEfficiency": 0.058152923139058066,
+        "alphaAbsorption": 0.914097850815705
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 29.603706107814983,
+        "duWind": 7.549980334482539,
+        "moduleEfficiency": 0.058152923139058066,
+        "absorptance": 0.914097850815705
+      },
+      "expected": {
+        "noct": 36.46741683572132,
+        "moduleEfficiency": 0.058152923139058066,
+        "transmittanceAbsorptance": 0.914097850815705
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 29.603706107814983,
+        "duWind": 7.549980334482539,
+        "moduleEfficiency": 0.058152923139058066,
+        "absorptance": 0.914097850815705,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.6525491008433812,
+        "b": -0.14015154305652255
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -3.6025491008433814,
+        "b": -0.13314396590369643,
+        "moduleEfficiency": 0.058152923139058066,
+        "absorptance": 0.914097850815705,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 28.526296072995212,
+        "duWind": 6.65358268296695,
+        "moduleEfficiency": 0.058152923139058066,
+        "absorptance": 0.914097850815705
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 10.701968119626022,
+        "duWind": 1.0130187148259675,
+        "moduleEfficiency": 0.056996156716469605,
+        "absorptance": 0.8955095978474136
+      },
+      "expected": {
+        "u0": 12.763025128364974,
+        "u1": 1.2081126731369503
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 10.701968119626022,
+        "duWind": 1.0130187148259675,
+        "moduleEfficiency": 0.056996156716469605,
+        "absorptance": 0.8955095978474136
+      },
+      "expected": {
+        "uC": 10.777978970986474,
+        "uV": 1.0202136918710574,
+        "moduleEfficiency": 0.056996156716469605,
+        "alphaAbsorption": 0.8955095978474136
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 10.701968119626022,
+        "duWind": 1.0130187148259675,
+        "moduleEfficiency": 0.056996156716469605,
+        "absorptance": 0.8955095978474136
+      },
+      "expected": {
+        "noct": 76.4621616468468,
+        "moduleEfficiency": 0.056996156716469605,
+        "transmittanceAbsorptance": 0.8955095978474136
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 10.701968119626022,
+        "duWind": 1.0130187148259675,
+        "moduleEfficiency": 0.056996156716469605,
+        "absorptance": 0.8955095978474136,
+        "windFitLow": 1.2519200696545345,
+        "windFitHigh": 4.819025504393405
+      },
+      "expected": {
+        "a": -2.5659569359409375,
+        "b": -0.07395587058652575
+      }
+    },
+    {
+      "fn": "genericLinearFromFaiman",
+      "input": {
+        "u0": 14.039327641201472,
+        "u1": 1.0873014058232553,
+        "moduleEfficiency": 0.056996156716469605,
+        "absorptance": 0.8955095978474136
+      },
+      "expected": {
+        "uConst": 11.772164931588625,
+        "duWind": 0.9117168433433708,
+        "moduleEfficiency": 0.056996156716469605,
+        "absorptance": 0.8955095978474136
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 10.992953898789382,
+        "duWind": 3.3152368573884514,
+        "moduleEfficiency": 0.0599070300339718,
+        "absorptance": 0.9481531267720842
+      },
+      "expected": {
+        "u0": 12.376022747703118,
+        "u1": 3.732340473617533
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 10.992953898789382,
+        "duWind": 3.3152368573884514,
+        "moduleEfficiency": 0.0599070300339718,
+        "absorptance": 0.9481531267720842
+      },
+      "expected": {
+        "uC": 11.031393728807211,
+        "uV": 3.3268294777560206,
+        "moduleEfficiency": 0.0599070300339718,
+        "alphaAbsorption": 0.9481531267720842
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 10.992953898789382,
+        "duWind": 3.3152368573884514,
+        "moduleEfficiency": 0.0599070300339718,
+        "absorptance": 0.9481531267720842
+      },
+      "expected": {
+        "noct": 63.36045061769703,
+        "moduleEfficiency": 0.0599070300339718,
+        "transmittanceAbsorptance": 0.9481531267720842
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 10.992953898789382,
+        "duWind": 3.3152368573884514,
+        "moduleEfficiency": 0.0599070300339718,
+        "absorptance": 0.9481531267720842,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -2.652999110514289,
+        "b": -0.15355258497268454
+      }
+    },
+    {
+      "fn": "genericLinearFromPvsyst",
+      "input": {
+        "uC": 12.134533101687934,
+        "uV": 2.9941465299804184,
+        "moduleEfficiency": 0.0599070300339718,
+        "alphaAbsorption": 0.9481531267720842
+      },
+      "expected": {
+        "uConst": 12.092249288668322,
+        "duWind": 2.9837131716496064,
+        "moduleEfficiency": 0.0599070300339718,
+        "absorptance": 0.9481531267720842
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 21.017316999026594,
+        "duWind": 6.00352994140037,
+        "moduleEfficiency": 0.12070866184140393,
+        "absorptance": 0.9674785016267576
+      },
+      "expected": {
+        "u0": 24.82057816838899,
+        "u1": 7.0899194318519845
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 21.017316999026594,
+        "duWind": 6.00352994140037,
+        "moduleEfficiency": 0.12070866184140393,
+        "absorptance": 0.9674785016267576
+      },
+      "expected": {
+        "uC": 21.114753319663613,
+        "uV": 6.031362317357364,
+        "moduleEfficiency": 0.12070866184140393,
+        "alphaAbsorption": 0.9674785016267576
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 21.017316999026594,
+        "duWind": 6.00352994140037,
+        "moduleEfficiency": 0.12070866184140393,
+        "absorptance": 0.9674785016267576
+      },
+      "expected": {
+        "noct": 43.60499299371267,
+        "moduleEfficiency": 0.12070866184140393,
+        "transmittanceAbsorptance": 0.9674785016267576
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 21.017316999026594,
+        "duWind": 6.00352994140037,
+        "moduleEfficiency": 0.12070866184140393,
+        "absorptance": 0.9674785016267576,
+        "windFitLow": 0.987187293780764,
+        "windFitHigh": 6.500610588776806
+      },
+      "expected": {
+        "a": -3.316606857217574,
+        "b": -0.14533956511434776
+      }
+    },
+    {
+      "fn": "genericLinearFromNoctSam",
+      "input": {
+        "noct": 44.60499299371267,
+        "moduleEfficiency": 0.12070866184140393,
+        "transmittanceAbsorptance": 0.9674785016267576
+      },
+      "expected": {
+        "uConst": 18.873798537537052,
+        "duWind": 6.417091502762599,
+        "moduleEfficiency": 0.12070866184140393,
+        "absorptance": 0.9674785016267576
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 25.02347238021871,
+        "duWind": 6.64460164389441,
+        "moduleEfficiency": 0.1942847478796217,
+        "absorptance": 0.9453502342475201
+      },
+      "expected": {
+        "u0": 33.31729767164581,
+        "u1": 8.846900522652495
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 25.02347238021871,
+        "duWind": 6.64460164389441,
+        "moduleEfficiency": 0.1942847478796217,
+        "absorptance": 0.9453502342475201
+      },
+      "expected": {
+        "uC": 25.377222651751264,
+        "uV": 6.738534636088229,
+        "moduleEfficiency": 0.1942847478796217,
+        "alphaAbsorption": 0.9453502342475201
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 25.02347238021871,
+        "duWind": 6.64460164389441,
+        "moduleEfficiency": 0.1942847478796217,
+        "absorptance": 0.9453502342475201
+      },
+      "expected": {
+        "noct": 39.8748591192032,
+        "moduleEfficiency": 0.1942847478796217,
+        "transmittanceAbsorptance": 0.9453502342475201
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 25.02347238021871,
+        "duWind": 6.64460164389441,
+        "moduleEfficiency": 0.1942847478796217,
+        "absorptance": 0.9453502342475201,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.6214717956701277,
+        "b": -0.14335088245575656
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -3.571471795670128,
+        "b": -0.13618333833296872,
+        "moduleEfficiency": 0.1942847478796217,
+        "absorptance": 0.9453502342475201,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 24.132770001386486,
+        "duWind": 5.852172694292757,
+        "moduleEfficiency": 0.1942847478796217,
+        "absorptance": 0.9453502342475201
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 6.920934279155431,
+        "duWind": 1.9097027973383394,
+        "moduleEfficiency": 0.162540355783713,
+        "absorptance": 0.9012773070428942
+      },
+      "expected": {
+        "u0": 9.368604436746612,
+        "u1": 2.585091748941542
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 6.920934279155431,
+        "duWind": 1.9097027973383394,
+        "moduleEfficiency": 0.162540355783713,
+        "absorptance": 0.9012773070428942
+      },
+      "expected": {
+        "uC": 7.071266856099368,
+        "uV": 1.9511842695126353,
+        "moduleEfficiency": 0.162540355783713,
+        "alphaAbsorption": 0.9012773070428942
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 6.920934279155431,
+        "duWind": 1.9097027973383394,
+        "moduleEfficiency": 0.162540355783713,
+        "absorptance": 0.9012773070428942
+      },
+      "expected": {
+        "noct": 87.60351179137989,
+        "moduleEfficiency": 0.162540355783713,
+        "transmittanceAbsorptance": 0.9012773070428942
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 6.920934279155431,
+        "duWind": 1.9097027973383394,
+        "moduleEfficiency": 0.162540355783713,
+        "absorptance": 0.9012773070428942,
+        "windFitLow": 0.8863288581671197,
+        "windFitHigh": 6.570155082664023
+      },
+      "expected": {
+        "a": -2.328993286554328,
+        "b": -0.14346556936811747
+      }
+    },
+    {
+      "fn": "genericLinearFromFaiman",
+      "input": {
+        "u0": 10.305464880421274,
+        "u1": 2.326582574047388,
+        "moduleEfficiency": 0.162540355783713,
+        "absorptance": 0.9012773070428942
+      },
+      "expected": {
+        "uConst": 7.613027707070975,
+        "duWind": 1.7187325176045058,
+        "moduleEfficiency": 0.162540355783713,
+        "absorptance": 0.9012773070428942
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 25.258763168457172,
+        "duWind": 6.221989230876665,
+        "moduleEfficiency": 0.14693399286409725,
+        "absorptance": 0.9155983950678511
+      },
+      "expected": {
+        "u0": 32.86058661756747,
+        "u1": 8.094545829152851
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 25.258763168457172,
+        "duWind": 6.221989230876665,
+        "moduleEfficiency": 0.14693399286409725,
+        "absorptance": 0.9155983950678511
+      },
+      "expected": {
+        "uC": 25.666282577254957,
+        "uV": 6.322373456185031,
+        "moduleEfficiency": 0.14693399286409725,
+        "alphaAbsorption": 0.9155983950678511
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 25.258763168457172,
+        "duWind": 6.221989230876665,
+        "moduleEfficiency": 0.14693399286409725,
+        "absorptance": 0.9155983950678511
+      },
+      "expected": {
+        "noct": 39.554279613210525,
+        "moduleEfficiency": 0.14693399286409725,
+        "transmittanceAbsorptance": 0.9155983950678511
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 25.258763168457172,
+        "duWind": 6.221989230876665,
+        "moduleEfficiency": 0.14693399286409725,
+        "absorptance": 0.9155983950678511,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.596186085630225,
+        "b": -0.13741371863028173
+      }
+    },
+    {
+      "fn": "genericLinearFromPvsyst",
+      "input": {
+        "uC": 28.232910834980455,
+        "uV": 5.690136110566528,
+        "moduleEfficiency": 0.14693399286409725,
+        "alphaAbsorption": 0.9155983950678511
+      },
+      "expected": {
+        "uConst": 27.78463948530289,
+        "duWind": 5.599790307788999,
+        "moduleEfficiency": 0.14693399286409725,
+        "absorptance": 0.9155983950678511
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 13.795076453221954,
+        "duWind": 7.487425604640048,
+        "moduleEfficiency": 0.2242766505181348,
+        "absorptance": 0.8419044362248935
+      },
+      "expected": {
+        "u0": 22.335582647785326,
+        "u1": 12.122876881376216
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 13.795076453221954,
+        "duWind": 7.487425604640048,
+        "moduleEfficiency": 0.2242766505181348,
+        "absorptance": 0.8419044362248935
+      },
+      "expected": {
+        "uC": 14.58703241243801,
+        "uV": 7.917268189919569,
+        "moduleEfficiency": 0.2242766505181348,
+        "alphaAbsorption": 0.8419044362248935
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 13.795076453221954,
+        "duWind": 7.487425604640048,
+        "moduleEfficiency": 0.2242766505181348,
+        "absorptance": 0.8419044362248935
+      },
+      "expected": {
+        "noct": 43.65207119509547,
+        "moduleEfficiency": 0.2242766505181348,
+        "transmittanceAbsorptance": 0.8419044362248935
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 13.795076453221954,
+        "duWind": 7.487425604640048,
+        "moduleEfficiency": 0.2242766505181348,
+        "absorptance": 0.8419044362248935,
+        "windFitLow": 1.965500172593822,
+        "windFitHigh": 7.086622235254985
+      },
+      "expected": {
+        "a": -3.5050949023593883,
+        "b": -0.1664135488878856
+      }
+    },
+    {
+      "fn": "genericLinearFromNoctSam",
+      "input": {
+        "noct": 44.65207119509547,
+        "moduleEfficiency": 0.2242766505181348,
+        "transmittanceAbsorptance": 0.8419044362248935
+      },
+      "expected": {
+        "uConst": 16.39270494514665,
+        "duWind": 5.573519681349862,
+        "moduleEfficiency": 0.2242766505181348,
+        "absorptance": 0.8419044362248935
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 9.066871990038248,
+        "duWind": 3.0656890497102802,
+        "moduleEfficiency": 0.20575602351438632,
+        "absorptance": 0.9185031791350541
+      },
+      "expected": {
+        "u0": 12.721021639353609,
+        "u1": 4.301229440951814
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 9.066871990038248,
+        "duWind": 3.0656890497102802,
+        "moduleEfficiency": 0.20575602351438632,
+        "absorptance": 0.9185031791350541
+      },
+      "expected": {
+        "uC": 9.280183955330509,
+        "uV": 3.1378140512419175,
+        "moduleEfficiency": 0.20575602351438632,
+        "alphaAbsorption": 0.9185031791350541
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 9.066871990038248,
+        "duWind": 3.0656890497102802,
+        "moduleEfficiency": 0.20575602351438632,
+        "absorptance": 0.9185031791350541
+      },
+      "expected": {
+        "noct": 68.73333519174605,
+        "moduleEfficiency": 0.20575602351438632,
+        "transmittanceAbsorptance": 0.9185031791350541
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 9.066871990038248,
+        "duWind": 3.0656890497102802,
+        "moduleEfficiency": 0.20575602351438632,
+        "absorptance": 0.9185031791350541,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -2.702866547181308,
+        "b": -0.16281434476388168
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -2.652866547181308,
+        "b": -0.15467362752568758,
+        "moduleEfficiency": 0.20575602351438632,
+        "absorptance": 0.9185031791350541,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 8.797135089888815,
+        "duWind": 2.690128726829072,
+        "moduleEfficiency": 0.20575602351438632,
+        "absorptance": 0.9185031791350541
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 10.739464411019313,
+        "duWind": 1.9249355545690379,
+        "moduleEfficiency": 0.10595258964536897,
+        "absorptance": 0.8688784521257013
+      },
+      "expected": {
+        "u0": 14.076681548197179,
+        "u1": 2.5230964753389276
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 10.739464411019313,
+        "duWind": 1.9249355545690379,
+        "moduleEfficiency": 0.10595258964536897,
+        "absorptance": 0.8688784521257013
+      },
+      "expected": {
+        "uC": 10.935027068054339,
+        "uV": 1.959988095111605,
+        "moduleEfficiency": 0.10595258964536897,
+        "alphaAbsorption": 0.8688784521257013
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 10.739464411019313,
+        "duWind": 1.9249355545690379,
+        "moduleEfficiency": 0.10595258964536897,
+        "absorptance": 0.8688784521257013
+      },
+      "expected": {
+        "noct": 67.89238311023564,
+        "moduleEfficiency": 0.10595258964536897,
+        "transmittanceAbsorptance": 0.8688784521257013
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 10.739464411019313,
+        "duWind": 1.9249355545690379,
+        "moduleEfficiency": 0.10595258964536897,
+        "absorptance": 0.8688784521257013,
+        "windFitLow": 1.7919784224888766,
+        "windFitHigh": 5.320906633837463
+      },
+      "expected": {
+        "a": -2.7244057739014957,
+        "b": -0.11085464614060445
+      }
+    },
+    {
+      "fn": "genericLinearFromFaiman",
+      "input": {
+        "u0": 15.484349703016898,
+        "u1": 2.270786827805035,
+        "moduleEfficiency": 0.10595258964536897,
+        "absorptance": 0.8688784521257013
+      },
+      "expected": {
+        "uConst": 11.813410852121244,
+        "duWind": 1.7324419991121343,
+        "moduleEfficiency": 0.10595258964536897,
+        "absorptance": 0.8688784521257013
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 15.39492942594158,
+        "duWind": 1.6756003480696118,
+        "moduleEfficiency": 0.19343784464977148,
+        "absorptance": 0.8438273160703221
+      },
+      "expected": {
+        "u0": 23.6703238635101,
+        "u1": 2.576303002583733
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 15.39492942594158,
+        "duWind": 1.6756003480696118,
+        "moduleEfficiency": 0.19343784464977148,
+        "absorptance": 0.8438273160703221
+      },
+      "expected": {
+        "uC": 16.11000298327116,
+        "uV": 1.7534297078806285,
+        "moduleEfficiency": 0.19343784464977148,
+        "alphaAbsorption": 0.8438273160703221
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 15.39492942594158,
+        "duWind": 1.6756003480696118,
+        "moduleEfficiency": 0.19343784464977148,
+        "absorptance": 0.8438273160703221
+      },
+      "expected": {
+        "noct": 56.137401720736335,
+        "moduleEfficiency": 0.19343784464977148,
+        "transmittanceAbsorptance": 0.8438273160703221
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 15.39492942594158,
+        "duWind": 1.6756003480696118,
+        "moduleEfficiency": 0.19343784464977148,
+        "absorptance": 0.8438273160703221,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.193879356394527,
+        "b": -0.08012137722990564
+      }
+    },
+    {
+      "fn": "genericLinearFromPvsyst",
+      "input": {
+        "uC": 17.721003281598275,
+        "uV": 1.5780867370925658,
+        "moduleEfficiency": 0.19343784464977148,
+        "alphaAbsorption": 0.8438273160703221
+      },
+      "expected": {
+        "uConst": 16.93442236853574,
+        "duWind": 1.5080403132626508,
+        "moduleEfficiency": 0.19343784464977148,
+        "absorptance": 0.8438273160703221
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 14.225457786991154,
+        "duWind": 6.357206276896133,
+        "moduleEfficiency": 0.1367026705324105,
+        "absorptance": 0.8155448989703721
+      },
+      "expected": {
+        "u0": 20.955469755799374,
+        "u1": 9.36477727899202
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 14.225457786991154,
+        "duWind": 6.357206276896133,
+        "moduleEfficiency": 0.1367026705324105,
+        "absorptance": 0.8155448989703721
+      },
+      "expected": {
+        "uC": 14.753860537385725,
+        "uV": 6.593343864300134,
+        "moduleEfficiency": 0.1367026705324105,
+        "alphaAbsorption": 0.8155448989703721
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 14.225457786991154,
+        "duWind": 6.357206276896133,
+        "moduleEfficiency": 0.1367026705324105,
+        "absorptance": 0.8155448989703721
+      },
+      "expected": {
+        "noct": 44.444437297269204,
+        "moduleEfficiency": 0.1367026705324105,
+        "transmittanceAbsorptance": 0.8155448989703721
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 14.225457786991154,
+        "duWind": 6.357206276896133,
+        "moduleEfficiency": 0.1367026705324105,
+        "absorptance": 0.8155448989703721,
+        "windFitLow": 1.1530157750812362,
+        "windFitHigh": 4.531273060792675
+      },
+      "expected": {
+        "a": -3.2220462642388674,
+        "b": -0.20463503420540086
+      }
+    },
+    {
+      "fn": "genericLinearFromNoctSam",
+      "input": {
+        "noct": 45.444437297269204,
+        "moduleEfficiency": 0.1367026705324105,
+        "transmittanceAbsorptance": 0.8155448989703721
+      },
+      "expected": {
+        "uConst": 15.38495612743583,
+        "duWind": 5.230885083328182,
+        "moduleEfficiency": 0.1367026705324105,
+        "absorptance": 0.8155448989703721
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 9.487855590793375,
+        "duWind": 1.1212729884508528,
+        "moduleEfficiency": 0.15772421006938162,
+        "absorptance": 0.8059995545879439
+      },
+      "expected": {
+        "u0": 14.635533606232507,
+        "u1": 1.7296246077097985
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 9.487855590793375,
+        "duWind": 1.1212729884508528,
+        "moduleEfficiency": 0.15772421006938162,
+        "absorptance": 0.8059995545879439
+      },
+      "expected": {
+        "uC": 9.935681946508216,
+        "uV": 1.1741970229046115,
+        "moduleEfficiency": 0.15772421006938162,
+        "alphaAbsorption": 0.8059995545879439
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 9.487855590793375,
+        "duWind": 1.1212729884508528,
+        "moduleEfficiency": 0.15772421006938162,
+        "absorptance": 0.8059995545879439
+      },
+      "expected": {
+        "noct": 75.17507394211515,
+        "moduleEfficiency": 0.15772421006938162,
+        "transmittanceAbsorptance": 0.8059995545879439
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 9.487855590793375,
+        "duWind": 1.1212729884508528,
+        "moduleEfficiency": 0.15772421006938162,
+        "absorptance": 0.8059995545879439,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -2.717396089999033,
+        "b": -0.08511789929894209
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -2.667396089999033,
+        "b": -0.08086200433399499,
+        "moduleEfficiency": 0.15772421006938162,
+        "absorptance": 0.8059995545879439,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 9.058339842610035,
+        "duWind": 0.9982327973051682,
+        "moduleEfficiency": 0.15772421006938162,
+        "absorptance": 0.8059995545879439
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 28.5376847604121,
+        "duWind": 1.1965887773042845,
+        "moduleEfficiency": 0.20237527009668518,
+        "absorptance": 0.9122949926065295
+      },
+      "expected": {
+        "u0": 40.19846731334665,
+        "u1": 1.6855268833409425
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 28.5376847604121,
+        "duWind": 1.1965887773042845,
+        "moduleEfficiency": 0.20237527009668518,
+        "absorptance": 0.9122949926065295
+      },
+      "expected": {
+        "uC": 29.251180403574672,
+        "uV": 1.2265057410114522,
+        "moduleEfficiency": 0.20237527009668518,
+        "alphaAbsorption": 0.9122949926065295
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 28.5376847604121,
+        "duWind": 1.1965887773042845,
+        "moduleEfficiency": 0.20237527009668518,
+        "absorptance": 0.9122949926065295
+      },
+      "expected": {
+        "noct": 43.631572225539244,
+        "moduleEfficiency": 0.20237527009668518,
+        "transmittanceAbsorptance": 0.9122949926065295
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 28.5376847604121,
+        "duWind": 1.1965887773042845,
+        "moduleEfficiency": 0.20237527009668518,
+        "absorptance": 0.9122949926065295,
+        "windFitLow": 1.674217433613252,
+        "windFitHigh": 7.7417116525644465
+      },
+      "expected": {
+        "a": -3.702825623041242,
+        "b": -0.035150114041220856
+      }
+    },
+    {
+      "fn": "genericLinearFromFaiman",
+      "input": {
+        "u0": 44.218314044681314,
+        "u1": 1.5169741950068483,
+        "moduleEfficiency": 0.20237527009668518,
+        "absorptance": 0.9122949926065295
+      },
+      "expected": {
+        "uConst": 31.39145323645331,
+        "duWind": 1.076929899573856,
+        "moduleEfficiency": 0.20237527009668518,
+        "absorptance": 0.9122949926065295
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 14.859760552622426,
+        "duWind": 2.945788627479986,
+        "moduleEfficiency": 0.09336719327883447,
+        "absorptance": 0.8510919981241176
+      },
+      "expected": {
+        "u0": 19.61102560929965,
+        "u1": 3.88767611756022
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 14.859760552622426,
+        "duWind": 2.945788627479986,
+        "moduleEfficiency": 0.09336719327883447,
+        "absorptance": 0.8510919981241176
+      },
+      "expected": {
+        "uC": 15.132415037977207,
+        "uV": 2.9998394635849985,
+        "moduleEfficiency": 0.09336719327883447,
+        "alphaAbsorption": 0.8510919981241176
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 14.859760552622426,
+        "duWind": 2.945788627479986,
+        "moduleEfficiency": 0.09336719327883447,
+        "absorptance": 0.8510919981241176
+      },
+      "expected": {
+        "noct": 52.9947493183695,
+        "moduleEfficiency": 0.09336719327883447,
+        "transmittanceAbsorptance": 0.8510919981241176
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 14.859760552622426,
+        "duWind": 2.945788627479986,
+        "moduleEfficiency": 0.09336719327883447,
+        "absorptance": 0.8510919981241176,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.0520255297250425,
+        "b": -0.12071348018051498
+      }
+    },
+    {
+      "fn": "genericLinearFromPvsyst",
+      "input": {
+        "uC": 16.64565654177493,
+        "uV": 2.699855517226499,
+        "moduleEfficiency": 0.09336719327883447,
+        "alphaAbsorption": 0.8510919981241176
+      },
+      "expected": {
+        "uConst": 16.34573660788467,
+        "duWind": 2.6512097647319877,
+        "moduleEfficiency": 0.09336719327883447,
+        "absorptance": 0.8510919981241176
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 23.992161851800688,
+        "duWind": 4.394110733353491,
+        "moduleEfficiency": 0.1641669856881262,
+        "absorptance": 0.9725827473646804
+      },
+      "expected": {
+        "u0": 29.67799861057127,
+        "u1": 5.43545900718295
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 23.992161851800688,
+        "duWind": 4.394110733353491,
+        "moduleEfficiency": 0.1641669856881262,
+        "absorptance": 0.9725827473646804
+      },
+      "expected": {
+        "uC": 24.125742752690407,
+        "uV": 4.418575776311948,
+        "moduleEfficiency": 0.1641669856881262,
+        "alphaAbsorption": 0.9725827473646804
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 23.992161851800688,
+        "duWind": 4.394110733353491,
+        "moduleEfficiency": 0.1641669856881262,
+        "absorptance": 0.9725827473646804
+      },
+      "expected": {
+        "noct": 43.861158026817485,
+        "moduleEfficiency": 0.1641669856881262,
+        "transmittanceAbsorptance": 0.9725827473646804
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 23.992161851800688,
+        "duWind": 4.394110733353491,
+        "moduleEfficiency": 0.1641669856881262,
+        "absorptance": 0.9725827473646804,
+        "windFitLow": 0.8238103450201106,
+        "windFitHigh": 4.090628229707929
+      },
+      "expected": {
+        "a": -3.4253648008448083,
+        "b": -0.1281450270542026
+      }
+    },
+    {
+      "fn": "genericLinearFromNoctSam",
+      "input": {
+        "noct": 44.861158026817485,
+        "moduleEfficiency": 0.1641669856881262,
+        "transmittanceAbsorptance": 0.9725827473646804
+      },
+      "expected": {
+        "uConst": 18.777875038301563,
+        "duWind": 6.3844775130225315,
+        "moduleEfficiency": 0.1641669856881262,
+        "absorptance": 0.9725827473646804
+      }
+    },
+    {
+      "fn": "genericLinearToFaiman",
+      "input": {
+        "uConst": 28.42931306267738,
+        "duWind": 4.314015707909556,
+        "moduleEfficiency": 0.20532256685329808,
+        "absorptance": 0.953680799081066
+      },
+      "expected": {
+        "u0": 37.98890937305107,
+        "u1": 5.764639877171227
+      }
+    },
+    {
+      "fn": "genericLinearToPvsyst",
+      "input": {
+        "uConst": 28.42931306267738,
+        "duWind": 4.314015707909556,
+        "moduleEfficiency": 0.20532256685329808,
+        "absorptance": 0.953680799081066
+      },
+      "expected": {
+        "uC": 28.79060192126764,
+        "uV": 4.368839607720814,
+        "moduleEfficiency": 0.20532256685329808,
+        "alphaAbsorption": 0.953680799081066
+      }
+    },
+    {
+      "fn": "genericLinearToNoctSam",
+      "input": {
+        "uConst": 28.42931306267738,
+        "duWind": 4.314015707909556,
+        "moduleEfficiency": 0.20532256685329808,
+        "absorptance": 0.953680799081066
+      },
+      "expected": {
+        "noct": 40.682638721492516,
+        "moduleEfficiency": 0.20532256685329808,
+        "transmittanceAbsorptance": 0.953680799081066
+      }
+    },
+    {
+      "fn": "genericLinearToSapm",
+      "input": {
+        "uConst": 28.42931306267738,
+        "duWind": 4.314015707909556,
+        "moduleEfficiency": 0.20532256685329808,
+        "absorptance": 0.953680799081066,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "a": -3.687873036592155,
+        "b": -0.10147067439265522
+      }
+    },
+    {
+      "fn": "genericLinearFromSapm",
+      "input": {
+        "a": -3.637873036592155,
+        "b": -0.09639714067302246,
+        "moduleEfficiency": 0.20532256685329808,
+        "absorptance": 0.953680799081066,
+        "windFitLow": 1.4,
+        "windFitHigh": 5.4
+      },
+      "expected": {
+        "uConst": 27.194906750257662,
+        "duWind": 3.8292094126314,
+        "moduleEfficiency": 0.20532256685329808,
+        "absorptance": 0.953680799081066
+      }
+    }
+  ]
+}

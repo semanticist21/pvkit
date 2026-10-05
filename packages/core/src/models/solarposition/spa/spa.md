@@ -27,8 +27,8 @@ Pressure arrives in Pa and is converted to mbar for step 9. Refraction constant 
 0.5667° (paper default). `deltaT` defaults to 67 s, the paper's example value — at PV-era
 dates the difference to the true ΔT (~69 s) moves the sun by ~1e-5°.
 
-Not implemented here (later methods): sunrise/sunset/transit, incidence on a tilted
-surface, ΔUT1 input.
+Steps 1–7 live in the private `spa-geocentric.ts`, shared with `sunrise-spa` and
+`earth-sun-distance`. Not implemented: incidence on a tilted surface, ΔUT1 input.
 
 ## Reference
 

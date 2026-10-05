@@ -1,0 +1,2137 @@
+{
+  "meta": {
+    "reference": "pvlib.clearsky.ineichen @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "apparentZenith": 0.0,
+        "airmassAbsolute": 1.0,
+        "linkeTurbidity": 1.0,
+        "altitude": 0.0,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1139.0083268430626,
+        "dni": 1108.3593621479738,
+        "dhi": 30.648964695088807
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 30.0,
+        "airmassAbsolute": 1.1539922333636758,
+        "linkeTurbidity": 3.0,
+        "altitude": 0.0,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 896.7649069334967,
+        "dni": 916.4501301557442,
+        "dhi": 103.09581291706695
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 60.0,
+        "airmassAbsolute": 2.0,
+        "linkeTurbidity": 7.0,
+        "altitude": 4000.0,
+        "dniExtra": 1412.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 542.3906388395833,
+        "dni": 447.2578662431009,
+        "dhi": 318.7617057180328
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 60.0,
+        "airmassAbsolute": 2.0,
+        "linkeTurbidity": 3.0,
+        "altitude": 1500.0,
+        "dniExtra": 1321.0,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 488.54632932885977,
+        "dni": 793.169458777066,
+        "dhi": 91.96159994032666
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.0,
+        "airmassAbsolute": 26.3,
+        "linkeTurbidity": 3.0,
+        "altitude": 0.0,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.9752177875863208,
+        "dni": 9.916759994060033,
+        "dhi": 0.8021464616289911
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.9,
+        "airmassAbsolute": 36.0,
+        "linkeTurbidity": 3.0,
+        "altitude": 0.0,
+        "dniExtra": 1364.0,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 17.731412422475792,
+        "dni": 1.7301813929770171,
+        "dhi": 17.72839268781248
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 90.0,
+        "airmassAbsolute": 38.0,
+        "linkeTurbidity": 3.0,
+        "altitude": 0.0,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 8.796189081067386e-16,
+        "dni": 1.2071065976886637,
+        "dhi": 8.057049465522849e-16
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 95.0,
+        "airmassAbsolute": 38.0,
+        "linkeTurbidity": 3.0,
+        "altitude": 0.0,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.0,
+        "dni": 0.0,
+        "dhi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 120.0,
+        "airmassAbsolute": 38.0,
+        "linkeTurbidity": 3.0,
+        "altitude": 0.0,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.0,
+        "dni": 0.0,
+        "dhi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": -5.0,
+        "airmassAbsolute": 1.0,
+        "linkeTurbidity": 2.0,
+        "altitude": 0.0,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1091.6010094662593,
+        "dni": 1014.388073961886,
+        "dhi": 81.07298837793098
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 45.0,
+        "airmassAbsolute": 1.0,
+        "linkeTurbidity": 0.5,
+        "altitude": 8848.0,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1119.445556275875,
+        "dni": 1595.3314424695432,
+        "dhi": -8.624124934455494
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 45.0,
+        "airmassAbsolute": 1.4,
+        "linkeTurbidity": 2.5,
+        "altitude": -400.0,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 739.4084770578263,
+        "dni": 924.790453595078,
+        "dhi": 85.48287614416336
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 32.23044017493263,
+        "airmassAbsolute": 0.8287001086993698,
+        "linkeTurbidity": 2.3090385440108108,
+        "altitude": 1792.6966909657328,
+        "dniExtra": 1375.352930099242,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 1016.6810998150045,
+        "dni": 1082.6896267350194,
+        "dhi": 100.823183134852
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 72.31906355110232,
+        "airmassAbsolute": 2.480028969190441,
+        "linkeTurbidity": 4.480208721552121,
+        "altitude": 1159.394971135435,
+        "dniExtra": 1327.5973580629425,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 234.12848124668196,
+        "dni": 520.4317458730707,
+        "dhi": 76.06499516579984
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 57.3707810940769,
+        "airmassAbsolute": 0.9685194214476381,
+        "linkeTurbidity": 2.6747270119263127,
+        "altitude": 3364.9799469921068,
+        "dniExtra": 1310.801001593893,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 646.7783513098419,
+        "dni": 1033.3432107620251,
+        "dhi": 89.59934372280838
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 91.57706856326709,
+        "airmassAbsolute": 19.226654649162928,
+        "linkeTurbidity": 7.123341782950526,
+        "altitude": 2479.9698689564952,
+        "dniExtra": 1325.849103444672,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.0,
+        "dni": 0.0,
+        "dhi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 81.31221880554125,
+        "airmassAbsolute": 4.278495477663435,
+        "linkeTurbidity": 4.189095468577695,
+        "altitude": 2814.1781563583872,
+        "dniExtra": 1340.2665610278907,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 121.02899410533841,
+        "dni": 351.59739387678155,
+        "dhi": 67.92020347181742
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 81.39969799187477,
+        "airmassAbsolute": 3.212084894216348,
+        "linkeTurbidity": 6.398700999206956,
+        "altitude": 574.2628079701731,
+        "dniExtra": 1386.9386374496205,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 79.26091331019731,
+        "dni": 244.3905950849799,
+        "dhi": 42.71460803253403
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 5.643629320981744,
+        "airmassAbsolute": 0.8170105452286305,
+        "linkeTurbidity": 5.582512876807435,
+        "altitude": 272.3444035215983,
+        "dniExtra": 1339.586066452029,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 974.4535944128266,
+        "dni": 796.327856619862,
+        "dhi": 181.98569461013415
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 59.7131187496418,
+        "airmassAbsolute": 1.2268710236985998,
+        "linkeTurbidity": 4.581844288412665,
+        "altitude": 3609.0231132094837,
+        "dniExtra": 1333.11923485736,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 587.7164882281796,
+        "dni": 825.7651234404727,
+        "dhi": 171.2584271851747
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 18.977104036392074,
+        "airmassAbsolute": 0.8219366460986064,
+        "linkeTurbidity": 3.438087836944686,
+        "altitude": 1963.689625645614,
+        "dniExtra": 1363.2327473702474,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 1111.6686117112492,
+        "dni": 992.9614906902988,
+        "dhi": 172.67596781283737
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 65.50844383772777,
+        "airmassAbsolute": 1.838878581912403,
+        "linkeTurbidity": 5.9317822434135445,
+        "altitude": 417.96928501748584,
+        "dniExtra": 1389.967391926773,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 325.52320502346515,
+        "dni": 513.5746907917395,
+        "dhi": 112.61612563559476
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 30.312709584800864,
+        "airmassAbsolute": 0.6119209459312572,
+        "linkeTurbidity": 2.0557660212243984,
+        "altitude": 1921.8178494082174,
+        "dniExtra": 1385.3418233459977,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1076.208979081277,
+        "dni": 1138.815627416048,
+        "dhi": 93.08810972877961
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 26.63057409654258,
+        "airmassAbsolute": 0.8181026531343695,
+        "linkeTurbidity": 3.827183112388772,
+        "altitude": 1202.394849222769,
+        "dniExtra": 1310.29229670721,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 949.6951504075972,
+        "dni": 908.1023389619681,
+        "dhi": 137.92868738950426
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 64.90193085464136,
+        "airmassAbsolute": 1.5191931415735695,
+        "linkeTurbidity": 6.156613448173237,
+        "altitude": 3574.2410949494233,
+        "dniExtra": 1316.301169763451,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 464.4571457526265,
+        "dni": 597.5620499240019,
+        "dhi": 210.98990534082117
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.2747687293463,
+        "airmassAbsolute": 10.59018131799428,
+        "linkeTurbidity": 1.174471640187413,
+        "altitude": 3791.366920681908,
+        "dniExtra": 1414.6690237708451,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 27.89262056134219,
+        "dni": 418.49051442735623,
+        "dhi": 0.7025582952846037
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 32.68254802163561,
+        "airmassAbsolute": 1.0848826556831785,
+        "linkeTurbidity": 1.019996908291671,
+        "altitude": 157.10753628853925,
+        "dniExtra": 1351.2989595498202,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 949.0766795041902,
+        "dni": 1096.1498276764548,
+        "dhi": 26.47444759851112
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 18.579208281913058,
+        "airmassAbsolute": 0.6930367919145138,
+        "linkeTurbidity": 1.0560290987383185,
+        "altitude": 3377.114739600239,
+        "dniExtra": 1302.6494627013208,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1187.456886950477,
+        "dni": 1184.6649513917869,
+        "dhi": 64.53182421208999
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 12.925657578110973,
+        "airmassAbsolute": 0.8631840921104336,
+        "linkeTurbidity": 4.915002155292376,
+        "altitude": 1820.7831616493868,
+        "dniExtra": 1402.3212067789962,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 1124.86933015347,
+        "dni": 898.6890735528187,
+        "dhi": 248.95202849739132
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 10.899370453932267,
+        "airmassAbsolute": 0.7216089558952349,
+        "linkeTurbidity": 2.565269494120232,
+        "altitude": 1673.4615110156126,
+        "dniExtra": 1399.4508445381637,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1194.8024096370311,
+        "dni": 1093.4212876250247,
+        "dhi": 121.10557785302831
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 40.18207341134361,
+        "airmassAbsolute": 0.7346984468226924,
+        "linkeTurbidity": 7.84475285886894,
+        "altitude": 3100.894278715424,
+        "dniExtra": 1408.8643021086289,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 952.8997706664261,
+        "dni": 810.1429055147079,
+        "dhi": 333.95225913673505
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 34.784790663550524,
+        "airmassAbsolute": 0.8431292011024034,
+        "linkeTurbidity": 7.088966907571535,
+        "altitude": 1726.5626478365098,
+        "dniExtra": 1415.8084121645106,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 901.4117807328487,
+        "dni": 772.6675792883052,
+        "dhi": 266.8193741274463
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 62.515159104780444,
+        "airmassAbsolute": 1.8945262852469333,
+        "linkeTurbidity": 3.424685907199101,
+        "altitude": 3748.110584715519,
+        "dniExtra": 1390.1164651869233,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 539.1325423665644,
+        "dni": 849.899673927294,
+        "dhi": 146.89201646036776
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 11.64834811986509,
+        "airmassAbsolute": 0.7120764023891822,
+        "linkeTurbidity": 5.136126176106013,
+        "altitude": 958.5656707452852,
+        "dniExtra": 1318.0448240450028,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1016.0666655062176,
+        "dni": 857.1926474203876,
+        "dhi": 176.52770821856154
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 21.574653834491848,
+        "airmassAbsolute": 1.0734013346932705,
+        "linkeTurbidity": 4.953846622174116,
+        "altitude": 3143.453365320923,
+        "dniExtra": 1362.2225859593364,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1095.4676096419157,
+        "dni": 841.8392531110111,
+        "dhi": 312.6082513267511
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 75.58271014534417,
+        "airmassAbsolute": 2.4241682294258586,
+        "linkeTurbidity": 6.975263962079288,
+        "altitude": 1204.377237774549,
+        "dniExtra": 1409.1185063841262,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 169.5333028101285,
+        "dni": 326.56710983888615,
+        "dhi": 88.22391834260567
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 47.81672148288606,
+        "airmassAbsolute": 0.8294254175544301,
+        "linkeTurbidity": 3.9883579241211495,
+        "altitude": 1081.8920885185528,
+        "dniExtra": 1385.2192043037471,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 749.2689923605204,
+        "dni": 942.6818448307007,
+        "dhi": 116.25402284874792
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 37.376465232724094,
+        "airmassAbsolute": 0.91260583197091,
+        "linkeTurbidity": 4.550869774414317,
+        "altitude": 404.2886703115594,
+        "dniExtra": 1316.3855112687236,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 780.1064691488928,
+        "dni": 821.5642333169794,
+        "dhi": 127.23891744087473
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 94.4381966420201,
+        "airmassAbsolute": 29.65350294042758,
+        "linkeTurbidity": 3.1730778449544363,
+        "altitude": 3776.7300353909463,
+        "dniExtra": 1399.8061829137043,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.0,
+        "dni": 0.0,
+        "dhi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 93.7302723116725,
+        "airmassAbsolute": 27.33140418536084,
+        "linkeTurbidity": 4.301114478520929,
+        "altitude": 225.1587082474047,
+        "dniExtra": 1408.682463402871,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.0,
+        "dni": 0.0,
+        "dhi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 6.314563203485278,
+        "airmassAbsolute": 0.9116852083932736,
+        "linkeTurbidity": 3.0568567275655982,
+        "altitude": 729.4588809488536,
+        "dniExtra": 1324.6712975758674,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 1059.1435576356469,
+        "dni": 942.7888750868126,
+        "dhi": 122.07455292216741
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 23.539420246416416,
+        "airmassAbsolute": 0.9607963466295139,
+        "linkeTurbidity": 4.768787750423301,
+        "altitude": 1577.0209524369254,
+        "dniExtra": 1308.482271560365,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 947.898923942399,
+        "dni": 814.708260888817,
+        "dhi": 200.98619322038553
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 3.729427251576258,
+        "airmassAbsolute": 0.6791149773788441,
+        "linkeTurbidity": 4.757237169571867,
+        "altitude": 2267.8799347964527,
+        "dniExtra": 1355.7395538356882,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1181.9951308644188,
+        "dni": 948.712708847288,
+        "dhi": 235.29147040634768
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 29.728488140223934,
+        "airmassAbsolute": 0.8755760415276391,
+        "linkeTurbidity": 5.6872246499155725,
+        "altitude": 2832.0776127403237,
+        "dniExtra": 1371.6626115091667,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1031.712833761346,
+        "dni": 849.6860432628717,
+        "dhi": 293.8581688163863
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 63.85896075860837,
+        "airmassAbsolute": 1.7070244442225004,
+        "linkeTurbidity": 5.22500444461822,
+        "altitude": 3957.8722518026652,
+        "dniExtra": 1381.5335010978004,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 514.8727348917438,
+        "dni": 672.3043695275944,
+        "dhi": 218.66733816793442
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 5.052001381227164,
+        "airmassAbsolute": 0.9188977934909301,
+        "linkeTurbidity": 7.311641834436313,
+        "altitude": 110.26053003540115,
+        "dniExtra": 1412.1547621306281,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 940.5056797892803,
+        "dni": 694.8355389236855,
+        "dhi": 248.36944793030113
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 43.50133071594717,
+        "airmassAbsolute": 1.2599934461287676,
+        "linkeTurbidity": 7.546103835952385,
+        "altitude": 3367.140745068137,
+        "dniExtra": 1387.702369150416,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 825.9610743100695,
+        "dni": 602.6251524246929,
+        "dhi": 388.8418678765642
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 46.80652433520493,
+        "airmassAbsolute": 1.4394053162531266,
+        "linkeTurbidity": 3.024676781431972,
+        "altitude": 1749.3754168961125,
+        "dniExtra": 1375.2765189892423,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 736.6895653567829,
+        "dni": 917.1037155405519,
+        "dhi": 108.96500250432928
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 22.764220617068837,
+        "airmassAbsolute": 0.8873153819304985,
+        "linkeTurbidity": 2.550548827630277,
+        "altitude": 3173.9534696573583,
+        "dniExtra": 1326.1513608527719,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 1131.2498740180424,
+        "dni": 1062.0030236046252,
+        "dhi": 151.9716153107264
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.55358329640715,
+        "airmassAbsolute": 14.354664195673141,
+        "linkeTurbidity": 3.1896006617893375,
+        "altitude": 1704.6014701285994,
+        "dniExtra": 1399.8033242003055,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 4.247823613797262,
+        "dni": 71.59978061435103,
+        "dhi": 2.440498190975931
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 73.59268131811622,
+        "airmassAbsolute": 3.2106704836441975,
+        "linkeTurbidity": 1.0862589197630101,
+        "altitude": 1406.386879266969,
+        "dniExtra": 1375.454928581051,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 281.15089237273037,
+        "dni": 967.2548280047955,
+        "dhi": 7.936231791336695
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 21.09286523810661,
+        "airmassAbsolute": 0.7011456145456689,
+        "linkeTurbidity": 7.521394772241254,
+        "altitude": 2560.7122150739674,
+        "dniExtra": 1354.4676120606575,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1082.861314590011,
+        "dni": 797.4456167387497,
+        "dhi": 338.845864993462
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 0.8221362366493107,
+        "airmassAbsolute": 0.8509134356306909,
+        "linkeTurbidity": 2.9748447766217376,
+        "altitude": 1857.7206006435558,
+        "dniExtra": 1363.4503149395307,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 1175.394204332873,
+        "dni": 1019.249228362949,
+        "dhi": 156.24990248784957
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 49.00866363206273,
+        "airmassAbsolute": 1.3060916257888489,
+        "linkeTurbidity": 2.8219061091238324,
+        "altitude": 2674.1238585349306,
+        "dniExtra": 1382.7659001838388,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 764.9894467246053,
+        "dni": 995.3060324793347,
+        "dhi": 112.1235281112821
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.7223535874277,
+        "airmassAbsolute": 7.825811934557331,
+        "linkeTurbidity": 1.9015149564201546,
+        "altitude": 1879.4821986862873,
+        "dniExtra": 1384.3066400166554,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 41.62180035284986,
+        "dni": 525.8163471891114,
+        "dhi": 2.4013295739905374
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 76.51108752781097,
+        "airmassAbsolute": 3.8011987492546258,
+        "linkeTurbidity": 4.644082466340398,
+        "altitude": 3735.449566190807,
+        "dniExtra": 1311.4995348676484,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 182.9982763582947,
+        "dni": 348.3521234351865,
+        "dhi": 101.74263807106881
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.81742763842685,
+        "airmassAbsolute": 8.490407734145236,
+        "linkeTurbidity": 5.38950397872737,
+        "altitude": 2693.3903978023764,
+        "dniExtra": 1323.9602104971289,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 34.70939505004517,
+        "dni": 41.272161527836076,
+        "dhi": 31.69921651427734
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 11.569103008746028,
+        "airmassAbsolute": 1.007640168655759,
+        "linkeTurbidity": 1.9845909267896529,
+        "altitude": 3840.8046143643883,
+        "dniExtra": 1316.115144208829,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1208.082336160061,
+        "dni": 1116.36077403775,
+        "dhi": 114.40206193176823
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 56.55074241695392,
+        "airmassAbsolute": 1.0373007866886181,
+        "linkeTurbidity": 3.550632035365349,
+        "altitude": 2973.827790101032,
+        "dniExtra": 1315.3589595602741,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 636.6804859953706,
+        "dni": 933.3842293448671,
+        "dhi": 122.20072181966486
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 2.7856041135398,
+        "airmassAbsolute": 0.7993057613446474,
+        "linkeTurbidity": 4.253036915438178,
+        "altitude": 1049.056441020165,
+        "dniExtra": 1315.8087544692135,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1046.836174916851,
+        "dni": 884.907707294176,
+        "dhi": 162.9740926275981
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.48083417479766,
+        "airmassAbsolute": 10.333423262359847,
+        "linkeTurbidity": 5.780442495650713,
+        "altitude": 1097.0294701201672,
+        "dniExtra": 1359.512451995284,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 17.28624317558598,
+        "dni": 13.566962150475575,
+        "dhi": 16.21726740253847
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 40.41005512815027,
+        "airmassAbsolute": 1.0674426847368077,
+        "linkeTurbidity": 4.625942038780379,
+        "altitude": 3399.87063494016,
+        "dniExtra": 1387.6532541127356,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 933.7129152873196,
+        "dni": 894.5812932561583,
+        "dhi": 252.55675309959304
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 40.92705795468491,
+        "airmassAbsolute": 1.2871064628585183,
+        "linkeTurbidity": 6.865796689241411,
+        "altitude": 2790.5372477079773,
+        "dniExtra": 1383.4487396115076,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 818.6017595908866,
+        "dni": 627.6297220147193,
+        "dhi": 344.39977386662883
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 40.06442430592839,
+        "airmassAbsolute": 0.7672535664668497,
+        "linkeTurbidity": 5.258806430520975,
+        "altitude": 649.2778049193686,
+        "dniExtra": 1334.9957404346978,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 776.6171421326978,
+        "dni": 836.4580389601589,
+        "dhi": 136.4580735336092
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 72.64577481146408,
+        "airmassAbsolute": 2.414837666512596,
+        "linkeTurbidity": 6.772402144048338,
+        "altitude": 574.7489273512243,
+        "dniExtra": 1412.5551266691218,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 201.8191402618139,
+        "dni": 338.0629772644855,
+        "dhi": 100.98227858314841
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 56.00770867466261,
+        "airmassAbsolute": 1.2295282194775372,
+        "linkeTurbidity": 5.520981981919681,
+        "altitude": 1506.5631688895503,
+        "dniExtra": 1384.5415020004255,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 562.4956993494767,
+        "dni": 722.6490157348404,
+        "dhi": 158.4761061009404
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 73.26197869600236,
+        "airmassAbsolute": 3.18082243630665,
+        "linkeTurbidity": 5.141360932845961,
+        "altitude": 2668.011891410593,
+        "dniExtra": 1369.1961483859664,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 228.407242943974,
+        "dni": 373.0047305277219,
+        "dhi": 120.98334847138564
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 94.92084796219449,
+        "airmassAbsolute": 24.245476952651074,
+        "linkeTurbidity": 5.250720079991814,
+        "altitude": 440.3685869156595,
+        "dniExtra": 1400.863415805131,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.0,
+        "dni": 0.0,
+        "dhi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 90.95996732877248,
+        "airmassAbsolute": 29.285698529499786,
+        "linkeTurbidity": 3.264394713039106,
+        "altitude": 2542.422391169611,
+        "dniExtra": 1326.2092136233216,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 0.0,
+        "dni": 0.0,
+        "dhi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 37.883837166348336,
+        "airmassAbsolute": 0.6478812763610102,
+        "linkeTurbidity": 5.194331557647584,
+        "altitude": 856.9141179078397,
+        "dniExtra": 1307.9279629169528,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 817.2531219367739,
+        "dni": 865.8570142014446,
+        "dhi": 133.86911807681656
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 68.43391775566846,
+        "airmassAbsolute": 1.587681224984956,
+        "linkeTurbidity": 7.635615795857335,
+        "altitude": 292.47286977096155,
+        "dniExtra": 1317.7728063715842,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 260.67629052624545,
+        "dni": 425.33970944750877,
+        "dhi": 104.33243712871007
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 3.3487637693897248,
+        "airmassAbsolute": 0.5018470119069544,
+        "linkeTurbidity": 4.215623199982403,
+        "altitude": 3089.366734889361,
+        "dniExtra": 1386.7996990612855,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1315.133953854386,
+        "dni": 1083.9856676439736,
+        "dhi": 232.99923187445347
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 43.264478116429636,
+        "airmassAbsolute": 1.0566843717122871,
+        "linkeTurbidity": 4.2476482124047195,
+        "altitude": 1271.8474831560598,
+        "dniExtra": 1384.5391764341048,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 786.5587177779157,
+        "dni": 869.3228498334961,
+        "dhi": 153.51972478791163
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 74.04532987637306,
+        "airmassAbsolute": 3.168860120272957,
+        "linkeTurbidity": 4.729428193156101,
+        "altitude": 2951.4568803375046,
+        "dniExtra": 1393.6345222257464,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 234.13692599462948,
+        "dni": 432.84742661781917,
+        "dhi": 115.15722689751951
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 52.70891378383563,
+        "airmassAbsolute": 0.890318001837503,
+        "linkeTurbidity": 7.849354936880264,
+        "altitude": 2591.3190289990166,
+        "dniExtra": 1417.788849393327,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 704.6499478125294,
+        "dni": 728.3361061791032,
+        "dhi": 263.3768570506623
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 9.493009047444104,
+        "airmassAbsolute": 0.8146346279080654,
+        "linkeTurbidity": 5.363723848723988,
+        "altitude": 3905.58492650957,
+        "dniExtra": 1331.5892379178283,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1235.3774088609123,
+        "dni": 898.9069871026778,
+        "dhi": 348.78029449530516
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 58.325067859235205,
+        "airmassAbsolute": 0.953108962534059,
+        "linkeTurbidity": 6.344609307652862,
+        "altitude": 1506.8002110298294,
+        "dniExtra": 1388.8522244965052,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 554.4475898266472,
+        "dni": 755.8630749104468,
+        "dhi": 157.54437540836398
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 83.38476722984684,
+        "airmassAbsolute": 7.264829434818311,
+        "linkeTurbidity": 4.940149576090855,
+        "altitude": 1636.6001716028177,
+        "dniExtra": 1313.5069718679415,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 35.35748276700136,
+        "dni": 86.32065505717564,
+        "dhi": 25.413235706464757
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 0.9148480773225381,
+        "airmassAbsolute": 0.5687596515975233,
+        "linkeTurbidity": 5.101349855137031,
+        "altitude": 1624.5559954636472,
+        "dniExtra": 1316.9446767324898,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1118.4897077021724,
+        "dni": 922.0498531603516,
+        "dhi": 196.55738972133952
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 90.46287208890156,
+        "airmassAbsolute": 33.440168128517236,
+        "linkeTurbidity": 5.084225733187942,
+        "altitude": 3107.1592275085345,
+        "dniExtra": 1339.7604466867879,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.0,
+        "dni": 0.0,
+        "dhi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 82.30561194484721,
+        "airmassAbsolute": 6.377281956112708,
+        "linkeTurbidity": 6.61222555655924,
+        "altitude": 3640.4051362995324,
+        "dniExtra": 1413.362788022988,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 89.02122413557704,
+        "dni": 51.94513317237463,
+        "dhi": 82.06633591341998
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 24.981674812361707,
+        "airmassAbsolute": 1.0217955538566792,
+        "linkeTurbidity": 2.63711746532665,
+        "altitude": 2854.8465644899975,
+        "dniExtra": 1308.2531015425886,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1051.6014970600254,
+        "dni": 1009.372721931587,
+        "dhi": 136.66275099763482
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 92.18214766246771,
+        "airmassAbsolute": 29.97960983853563,
+        "linkeTurbidity": 3.509371729049083,
+        "altitude": 1021.4893584500619,
+        "dniExtra": 1408.0637785142812,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.0,
+        "dni": 0.0,
+        "dhi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 17.535560295808153,
+        "airmassAbsolute": 0.9405765174242524,
+        "linkeTurbidity": 2.4949168672764155,
+        "altitude": 2.760872220651134,
+        "dniExtra": 1335.848827725016,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1009.6909089514193,
+        "dni": 968.8877045645013,
+        "dhi": 85.82728449072727
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 18.34772234694801,
+        "airmassAbsolute": 0.7714371042924385,
+        "linkeTurbidity": 1.8462244951172035,
+        "altitude": 3951.0376513347037,
+        "dniExtra": 1390.1941900659347,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 1289.0075382457267,
+        "dni": 1220.5529401519022,
+        "dhi": 130.50309088411655
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 50.7335402486324,
+        "airmassAbsolute": 1.2829450875463069,
+        "linkeTurbidity": 4.067454627760006,
+        "altitude": 2835.6201112500653,
+        "dniExtra": 1326.5629104985194,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 698.759430611777,
+        "dni": 834.4122055219444,
+        "dhi": 170.636776166682
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 44.288323496803706,
+        "airmassAbsolute": 0.871035801466066,
+        "linkeTurbidity": 7.665967748572441,
+        "altitude": 3861.1125772856426,
+        "dniExtra": 1319.229674758704,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 863.1573632111723,
+        "dni": 726.064075586874,
+        "dhi": 343.41524842762635
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 67.48264523210463,
+        "airmassAbsolute": 1.6409192624239803,
+        "linkeTurbidity": 4.310425853995602,
+        "altitude": 3194.7181364592916,
+        "dniExtra": 1305.0011007311252,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 401.30724119869615,
+        "dni": 725.9355502074628,
+        "dhi": 123.30059930228276
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 55.26361799705323,
+        "airmassAbsolute": 1.0616754964289263,
+        "linkeTurbidity": 4.307067115600848,
+        "altitude": 3629.2085955074076,
+        "dniExtra": 1376.8658541507684,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 713.8818988035397,
+        "dni": 924.0903765895197,
+        "dhi": 187.33385455784753
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 77.8483765196148,
+        "airmassAbsolute": 4.255889620978006,
+        "linkeTurbidity": 3.9012425522544403,
+        "altitude": 1723.6096245048645,
+        "dniExtra": 1392.6668143129514,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 139.82126450479296,
+        "dni": 397.04917282441875,
+        "dhi": 56.24262798917829
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 53.721131605461096,
+        "airmassAbsolute": 1.0261920999214702,
+        "linkeTurbidity": 6.65372483073105,
+        "altitude": 3969.8608743566438,
+        "dniExtra": 1350.9819705830635,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 722.7751234747448,
+        "dni": 746.7370989387946,
+        "dhi": 280.91890949340524
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 20.763356302452966,
+        "airmassAbsolute": 1.01746486571022,
+        "linkeTurbidity": 3.28332431684208,
+        "altitude": 1532.7078075890279,
+        "dniExtra": 1316.0956298507688,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1001.7017032194342,
+        "dni": 919.8077527785628,
+        "dhi": 141.63307710130744
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 2.035434796163622,
+        "airmassAbsolute": 0.7888002248364387,
+        "linkeTurbidity": 6.247612579453655,
+        "altitude": 3044.7207041858487,
+        "dniExtra": 1405.2367272261781,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 1254.0048623764549,
+        "dni": 873.7796089552666,
+        "dhi": 380.77656277299104
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 29.592424847614744,
+        "airmassAbsolute": 0.7917123899871901,
+        "linkeTurbidity": 6.186441818188241,
+        "altitude": 3810.646026404594,
+        "dniExtra": 1414.6394235620915,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1148.1121768410092,
+        "dni": 905.6792360862925,
+        "dhi": 360.5695350584957
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 6.242358783299028,
+        "airmassAbsolute": 1.0031782554541437,
+        "linkeTurbidity": 6.60316637493205,
+        "altitude": 1822.3940486870279,
+        "dniExtra": 1412.8410569777632,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1069.9072013650937,
+        "dni": 740.046976798266,
+        "dhi": 334.2480753229855
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.72717471651495,
+        "airmassAbsolute": 9.579171147072609,
+        "linkeTurbidity": 2.0459754479023675,
+        "altitude": 932.4442649862252,
+        "dniExtra": 1387.198396872455,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 18.54318752397688,
+        "dni": 435.8010925712156,
+        "dhi": 1.2602392851279873
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 11.256790503574575,
+        "airmassAbsolute": 0.5773246443602198,
+        "linkeTurbidity": 5.604672395847905,
+        "altitude": 3094.022375195909,
+        "dniExtra": 1358.8889939748246,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 1243.093087833635,
+        "dni": 967.0068204528535,
+        "dhi": 294.6893975451011
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 9.4893594138781,
+        "airmassAbsolute": 0.906294982926452,
+        "linkeTurbidity": 1.0808413511205013,
+        "altitude": 3907.1789409823064,
+        "dniExtra": 1331.5841976229412,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1258.6150514361245,
+        "dni": 1229.7601293529326,
+        "dhi": 45.68266939836167
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 67.0897007249809,
+        "airmassAbsolute": 1.6796667941522394,
+        "linkeTurbidity": 7.305597984092627,
+        "altitude": 2644.0918797047316,
+        "dniExtra": 1300.812617742969,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 356.4751610771026,
+        "dni": 446.7239964829108,
+        "dhi": 182.5701852423963
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 69.27306876293012,
+        "airmassAbsolute": 2.748578328883858,
+        "linkeTurbidity": 5.674549779169508,
+        "altitude": 2954.389809050742,
+        "dniExtra": 1394.293499600945,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 310.85094217529496,
+        "dni": 394.73885111142783,
+        "dhi": 171.14713918537032
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 35.47295800986429,
+        "airmassAbsolute": 1.108600157199008,
+        "linkeTurbidity": 5.720962607380087,
+        "altitude": 3511.0464326420038,
+        "dniExtra": 1340.0473619803458,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 964.0778284045456,
+        "dni": 767.0667557007495,
+        "dhi": 339.3867144082793
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 83.92072113954801,
+        "airmassAbsolute": 5.5735745763467275,
+        "linkeTurbidity": 6.979329211701547,
+        "altitude": 1977.2214729322388,
+        "dniExtra": 1345.9830389357078,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 37.54983038718451,
+        "dni": 58.51928405402535,
+        "dhi": 31.35237721106263
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 32.9822357388331,
+        "airmassAbsolute": 0.8862447298681544,
+        "linkeTurbidity": 1.9725013782287795,
+        "altitude": 2408.6986941873297,
+        "dniExtra": 1332.6388899011934,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 997.9762725978471,
+        "dni": 1090.4554727297034,
+        "dhi": 83.2592688577489
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 35.46907052944515,
+        "airmassAbsolute": 1.1701155997042771,
+        "linkeTurbidity": 3.4333033686095993,
+        "altitude": 809.2907858348766,
+        "dniExtra": 1345.1341248845504,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 832.4387334368661,
+        "dni": 879.0231749399335,
+        "dhi": 116.53687759510342
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 1.6453394833401502,
+        "airmassAbsolute": 0.7494996749330137,
+        "linkeTurbidity": 5.548171564575514,
+        "altitude": 2256.332743680026,
+        "dniExtra": 1331.922421584115,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 1140.7655896645365,
+        "dni": 862.5339352682253,
+        "dhi": 278.5872710775193
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 5.67841811726926,
+        "airmassAbsolute": 0.7040969944213341,
+        "linkeTurbidity": 3.1815419388635795,
+        "altitude": 2073.8286829263075,
+        "dniExtra": 1396.8842305095602,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1224.159676075762,
+        "dni": 1064.7516989520336,
+        "dhi": 164.63280887037718
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 27.22154407911279,
+        "airmassAbsolute": 1.0551378355795624,
+        "linkeTurbidity": 3.835393749762857,
+        "altitude": 193.8727895332244,
+        "dniExtra": 1358.6622114373386,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 898.1299119296906,
+        "dni": 862.5323198700962,
+        "dhi": 131.12784674521288
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 78.69487770979576,
+        "airmassAbsolute": 2.733546871996286,
+        "linkeTurbidity": 3.946533941369451,
+        "altitude": 2938.1381756647993,
+        "dniExtra": 1327.2395057165288,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 175.79415629129764,
+        "dni": 578.1623993026583,
+        "dhi": 62.45477765013199
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 35.4001373489934,
+        "airmassAbsolute": 0.6952994785583532,
+        "linkeTurbidity": 2.438161968947313,
+        "altitude": 818.6477153493836,
+        "dniExtra": 1354.3162226183774,
+        "perezEnhancement": true
+      },
+      "expected": {
+        "ghi": 930.7196580419394,
+        "dni": 1045.3641129186485,
+        "dhi": 78.6157645903561
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 56.53482990688867,
+        "airmassAbsolute": 0.9389046789181821,
+        "linkeTurbidity": 2.698516631266111,
+        "altitude": 2623.9079064801845,
+        "dniExtra": 1417.0423465804552,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 691.7539694466582,
+        "dni": 1092.8803708332437,
+        "dhi": 89.1069825736954
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 91.06334030195242,
+        "airmassAbsolute": 34.901927191810024,
+        "linkeTurbidity": 3.582418356325221,
+        "altitude": 766.323213069903,
+        "dniExtra": 1335.9099778045065,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.0,
+        "dni": 0.0,
+        "dhi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 79.49970028803494,
+        "airmassAbsolute": 5.099724432834203,
+        "linkeTurbidity": 3.9601180559622433,
+        "altitude": 3088.075261558477,
+        "dniExtra": 1320.1578881479863,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 115.61442700020974,
+        "dni": 306.65598748945484,
+        "dhi": 59.729234731025485
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.57863156316036,
+        "airmassAbsolute": 13.815886718809235,
+        "linkeTurbidity": 3.1046796480845327,
+        "altitude": 2789.601983689004,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 12.230110067253284,
+        "dni": 89.14215331691517,
+        "dhi": 6.910225579024187
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.58522777731532,
+        "airmassAbsolute": 17.424762368459202,
+        "linkeTurbidity": 1.177418428905293,
+        "altitude": 2498.476638768751,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 9.458636401865649,
+        "dni": 217.89175230573244,
+        "dhi": 0.27814870662181157
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.69142298189004,
+        "airmassAbsolute": 33.664330635997715,
+        "linkeTurbidity": 7.860382726154238,
+        "altitude": 2202.5974527210833,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.0020697202031108313,
+        "dni": 1.1261644723968781e-6,
+        "dhi": 0.002069714137973088
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.90802620509385,
+        "airmassAbsolute": 25.52130971521756,
+        "linkeTurbidity": 2.239550567802999,
+        "altitude": 325.6368164771587,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 1.8579275257771504,
+        "dni": 65.97232728849268,
+        "dhi": 0.6006675300111379
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.01218705168256,
+        "airmassAbsolute": 10.326447144650414,
+        "linkeTurbidity": 7.56602138886502,
+        "altitude": 374.17790975755184,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 4.252346678533051,
+        "dni": 2.5479500818425365,
+        "dhi": 4.030818098993232
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.10787824007315,
+        "airmassAbsolute": 10.491372635622179,
+        "linkeTurbidity": 7.825568519058212,
+        "altitude": 1388.7357668933482,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 5.343065776383795,
+        "dni": 1.8590146015284004,
+        "dhi": 5.184529153142018
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.6448894325794,
+        "airmassAbsolute": 11.516320545253949,
+        "linkeTurbidity": 2.262453221287129,
+        "altitude": 2690.183070446136,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 24.918160570997927,
+        "dni": 308.6699317191643,
+        "dhi": 1.4784310354867216
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.13934518280382,
+        "airmassAbsolute": 15.64008857049049,
+        "linkeTurbidity": 4.69326420372335,
+        "altitude": 2299.1907061547136,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 4.5326290959619095,
+        "dni": 6.640050051259016,
+        "dhi": 4.201243423250144
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.94338585145015,
+        "airmassAbsolute": 14.955563882839723,
+        "linkeTurbidity": 7.831210530283955,
+        "altitude": 284.15486167948666,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.5411629912334188,
+        "dni": 0.11538430909854425,
+        "dhi": 0.5350103906807009
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.27623942037641,
+        "airmassAbsolute": 16.152315039411558,
+        "linkeTurbidity": 2.0419699016928976,
+        "altitude": 717.5524151846192,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 11.598973474891594,
+        "dni": 227.10874959971252,
+        "dhi": 0.806609755470939
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.90309328882407,
+        "airmassAbsolute": 25.480050154070067,
+        "linkeTurbidity": 1.1484691415203498,
+        "altitude": 1937.7101817962784,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 2.324129944273628,
+        "dni": 117.77725498966569,
+        "dhi": 0.06946527434087946
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.68192798703083,
+        "airmassAbsolute": 14.122308748230402,
+        "linkeTurbidity": 4.211139562864123,
+        "altitude": 1793.975696993088,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 6.819659694031116,
+        "dni": 19.989377684854702,
+        "dhi": 5.662696158092086
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.52621131440017,
+        "airmassAbsolute": 13.664964461187058,
+        "linkeTurbidity": 5.315691527473548,
+        "altitude": 1149.0679181228354,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 3.964437247004755,
+        "dni": 5.757921392634919,
+        "dhi": 3.6155537766155
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.62627769191565,
+        "airmassAbsolute": 17.607128740405983,
+        "linkeTurbidity": 3.1796778390857625,
+        "altitude": 306.780247349439,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 4.607904658635415,
+        "dni": 35.94153471369428,
+        "dhi": 3.1192990416705424
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.7806991713542,
+        "airmassAbsolute": 34.826901050004984,
+        "linkeTurbidity": 3.2493417962090483,
+        "altitude": 876.6451373951596,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.028499530054815377,
+        "dni": 1.0004112729988603,
+        "dhi": 0.02467044373566174
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.20721210123901,
+        "airmassAbsolute": 28.236383978401808,
+        "linkeTurbidity": 4.127175945527144,
+        "altitude": 1076.6666615060165,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.1155032418138489,
+        "dni": 0.410332233417485,
+        "dhi": 0.10982575471649554
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.44585859422422,
+        "airmassAbsolute": 11.115454637020424,
+        "linkeTurbidity": 6.253136762278151,
+        "altitude": 469.3373647086984,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 5.374467770975002,
+        "dni": 5.958833225681747,
+        "dhi": 4.901329897475768
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.21061542085843,
+        "airmassAbsolute": 10.674020645498498,
+        "linkeTurbidity": 7.437464760564562,
+        "altitude": 1611.7638298790946,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 6.466829693975439,
+        "dni": 2.4279602382514853,
+        "dhi": 6.264111481396701
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.9023687112379,
+        "airmassAbsolute": 18.925474435873628,
+        "linkeTurbidity": 7.764263066530631,
+        "altitude": 2504.29175765205,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.7038192174300504,
+        "dni": 0.011993983149636862,
+        "dhi": 0.7033802089256154
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.25464864395903,
+        "airmassAbsolute": 12.928951740021482,
+        "linkeTurbidity": 6.328498996352687,
+        "altitude": 1352.0563037110858,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 3.6017054692492203,
+        "dni": 2.371690530722709,
+        "dhi": 3.4467815005662144
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.21326165106944,
+        "airmassAbsolute": 20.627480491828035,
+        "linkeTurbidity": 6.154267784630254,
+        "altitude": 1620.7041712411499,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.36970118385321094,
+        "dni": 0.08231320828489203,
+        "dhi": 0.3671347063388264
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.11890834247596,
+        "airmassAbsolute": 20.084071232313132,
+        "linkeTurbidity": 6.9888021855651985,
+        "altitude": 706.8886343911144,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.1277192333591791,
+        "dni": 0.022848111630815626,
+        "dhi": 0.12696923620789927
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.00014283018326,
+        "airmassAbsolute": 26.311810778892742,
+        "linkeTurbidity": 2.561711745896238,
+        "altitude": 2486.0632269023235,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.7969836253122718,
+        "dni": 29.945102333348196,
+        "dhi": 0.27444416607391897
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.86792350086634,
+        "airmassAbsolute": 18.751765826253386,
+        "linkeTurbidity": 2.5692043654644747,
+        "altitude": 637.7894815643043,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 4.921738167064374,
+        "dni": 81.1394187167721,
+        "dhi": 1.9030947845406394
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.314354748199,
+        "airmassAbsolute": 21.237972124513938,
+        "linkeTurbidity": 7.212557003973325,
+        "altitude": 246.43299134658182,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.06923713175064723,
+        "dni": 0.00790375836811195,
+        "dhi": 0.06900463625029281
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.88890161722055,
+        "airmassAbsolute": 14.774719011199075,
+        "linkeTurbidity": 5.051150752586216,
+        "altitude": 1424.0877626426573,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 3.5376966179596305,
+        "dni": 5.360162158949204,
+        "dhi": 3.2467886545779834
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.85142285068784,
+        "airmassAbsolute": 35.7869393625467,
+        "linkeTurbidity": 3.263264056950511,
+        "altitude": 2278.062585065742,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.02077171297672147,
+        "dni": 0.8200095735160577,
+        "dhi": 0.018645298966277913
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.61464857564366,
+        "airmassAbsolute": 13.921348272890533,
+        "linkeTurbidity": 2.9328849993017436,
+        "altitude": 1439.5021100390352,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 11.16579972875124,
+        "dni": 104.02111678666661,
+        "dhi": 5.023232556900825
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.15900565618679,
+        "airmassAbsolute": 15.711862346773927,
+        "linkeTurbidity": 1.6554165818516968,
+        "altitude": 482.46382697826317,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 17.192919243091218,
+        "dni": 326.20555553071347,
+        "dhi": 1.0247400927266952
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.70065316218145,
+        "airmassAbsolute": 17.946184887308846,
+        "linkeTurbidity": 6.166898710310363,
+        "altitude": 463.7692876241217,
+        "dniExtra": 1364.0,
+        "perezEnhancement": false
+      },
+      "expected": {
+        "ghi": 0.48913985982025615,
+        "dni": 0.27105609694580585,
+        "dhi": 0.4782649802779271
+      }
+    }
+  ]
+}

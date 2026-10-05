@@ -1,0 +1,699 @@
+{
+  "meta": {
+    "reference": "pvlib.iam.marion_integrate / marion_diffuse @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 0.0
+      },
+      "expected": {
+        "sky": 0.9443942400960964,
+        "horizon": 0.03394329693522821,
+        "ground": 0.0
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 20.0
+      },
+      "expected": {
+        "sky": 0.9539178294437574,
+        "horizon": 0.7652650139134007,
+        "ground": 0.6387140117795903
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 45.0
+      },
+      "expected": {
+        "sky": 0.9596471972901257,
+        "horizon": 0.9335521018079052,
+        "ground": 0.8556609262627934
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 90.0
+      },
+      "expected": {
+        "sky": 0.9444047946322078,
+        "horizon": 0.9698192905743526,
+        "ground": 0.9444047946322078
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 135.0
+      },
+      "expected": {
+        "sky": 0.855660926262793,
+        "horizon": 0.9323374922204835,
+        "ground": 0.9596471972901257
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 180.0
+      },
+      "expected": {
+        "sky": 0.0,
+        "horizon": 0.0,
+        "ground": 0.9443942400960961
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 0.0
+      },
+      "expected": {
+        "sky": 0.9523611991069361,
+        "horizon": 0.0,
+        "ground": 0.0
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 20.0
+      },
+      "expected": {
+        "sky": 0.9596085829811408,
+        "horizon": 0.8329070417832541,
+        "ground": 0.7198235591063094
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 45.0
+      },
+      "expected": {
+        "sky": 0.9635425808609339,
+        "horizon": 0.9417433916809488,
+        "ground": 0.8873340921587056
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 90.0
+      },
+      "expected": {
+        "sky": 0.9523731473938242,
+        "horizon": 0.9726497992481187,
+        "ground": 0.9523731473938241
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 135.0
+      },
+      "expected": {
+        "sky": 0.8873340921587053,
+        "horizon": 0.9408710103499849,
+        "ground": 0.9635425808609339
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 180.0
+      },
+      "expected": {
+        "sky": 0.0,
+        "horizon": 0.0,
+        "ground": 0.9523611991069357
+      }
+    },
+    {
+      "input": {
+        "model": "martinRuiz",
+        "params": {
+          "aR": 0.16
+        },
+        "surfaceTilt": 0.0
+      },
+      "expected": {
+        "sky": 0.9513302399797373,
+        "horizon": 0.03534674711557176,
+        "ground": 0.0
+      }
+    },
+    {
+      "input": {
+        "model": "martinRuiz",
+        "params": {
+          "aR": 0.16
+        },
+        "surfaceTilt": 20.0
+      },
+      "expected": {
+        "sky": 0.9602531991221319,
+        "horizon": 0.7914155671792128,
+        "ground": 0.6649820465828432
+      }
+    },
+    {
+      "input": {
+        "model": "martinRuiz",
+        "params": {
+          "aR": 0.16
+        },
+        "surfaceTilt": 45.0
+      },
+      "expected": {
+        "sky": 0.9648710423399274,
+        "horizon": 0.9428333730475084,
+        "ground": 0.8725790146728992
+      }
+    },
+    {
+      "input": {
+        "model": "martinRuiz",
+        "params": {
+          "aR": 0.16
+        },
+        "surfaceTilt": 90.0
+      },
+      "expected": {
+        "sky": 0.951341058948119,
+        "horizon": 0.9735697742129082,
+        "ground": 0.9513410589481192
+      }
+    },
+    {
+      "input": {
+        "model": "martinRuiz",
+        "params": {
+          "aR": 0.16
+        },
+        "surfaceTilt": 135.0
+      },
+      "expected": {
+        "sky": 0.8725790146728988,
+        "horizon": 0.9418227894528766,
+        "ground": 0.9648710423399275
+      }
+    },
+    {
+      "input": {
+        "model": "martinRuiz",
+        "params": {
+          "aR": 0.16
+        },
+        "surfaceTilt": 180.0
+      },
+      "expected": {
+        "sky": 0.0,
+        "horizon": 0.0,
+        "ground": 0.9513302399797369
+      }
+    },
+    {
+      "input": {
+        "model": "sapm",
+        "params": {
+          "b0": 0.9986,
+          "b1": -0.002616,
+          "b2": 0.0003324,
+          "b3": -1.48e-5,
+          "b4": 2.556e-7,
+          "b5": -1.524e-9
+        },
+        "surfaceTilt": 0.0
+      },
+      "expected": {
+        "sky": 0.9636839808030784,
+        "horizon": 0.45578654840720534,
+        "ground": 0.0
+      }
+    },
+    {
+      "input": {
+        "model": "sapm",
+        "params": {
+          "b0": 0.9986,
+          "b1": -0.002616,
+          "b2": 0.0003324,
+          "b3": -1.48e-5,
+          "b4": 2.556e-7,
+          "b5": -1.524e-9
+        },
+        "surfaceTilt": 20.0
+      },
+      "expected": {
+        "sky": 0.9682875375767007,
+        "horizon": 0.8903340664715378,
+        "ground": 0.8159774819231701
+      }
+    },
+    {
+      "input": {
+        "model": "sapm",
+        "params": {
+          "b0": 0.9986,
+          "b1": -0.002616,
+          "b2": 0.0003324,
+          "b3": -1.48e-5,
+          "b4": 2.556e-7,
+          "b5": -1.524e-9
+        },
+        "surfaceTilt": 45.0
+      },
+      "expected": {
+        "sky": 0.9703199529507637,
+        "horizon": 0.954928075381314,
+        "ground": 0.9250984744452798
+      }
+    },
+    {
+      "input": {
+        "model": "sapm",
+        "params": {
+          "b0": 0.9986,
+          "b1": -0.002616,
+          "b2": 0.0003324,
+          "b3": -1.48e-5,
+          "b4": 2.556e-7,
+          "b5": -1.524e-9
+        },
+        "surfaceTilt": 90.0
+      },
+      "expected": {
+        "sky": 0.9636897522682554,
+        "horizon": 0.9767598877673221,
+        "ground": 0.9636897522682555
+      }
+    },
+    {
+      "input": {
+        "model": "sapm",
+        "params": {
+          "b0": 0.9986,
+          "b1": -0.002616,
+          "b2": 0.0003324,
+          "b3": -1.48e-5,
+          "b4": 2.556e-7,
+          "b5": -1.524e-9
+        },
+        "surfaceTilt": 135.0
+      },
+      "expected": {
+        "sky": 0.9250984744452795,
+        "horizon": 0.9545616019170988,
+        "ground": 0.9703199529507636
+      }
+    },
+    {
+      "input": {
+        "model": "sapm",
+        "params": {
+          "b0": 0.9986,
+          "b1": -0.002616,
+          "b2": 0.0003324,
+          "b3": -1.48e-5,
+          "b4": 2.556e-7,
+          "b5": -1.524e-9
+        },
+        "surfaceTilt": 180.0
+      },
+      "expected": {
+        "sky": 0.0,
+        "horizon": 0.0,
+        "ground": 0.963683980803078
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.04
+        },
+        "surfaceTilt": 20.0
+      },
+      "expected": {
+        "sky": 0.967489994422575,
+        "horizon": 0.8647842827418414,
+        "ground": 0.7700443455928435
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.04
+        },
+        "surfaceTilt": 30.0
+      },
+      "expected": {
+        "sky": 0.9693840753162599,
+        "horizon": 0.9182579245159872,
+        "ground": 0.8522435956819421
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.3,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 20.0
+      },
+      "expected": {
+        "sky": 0.9622503413733542,
+        "horizon": 0.7972763747987783,
+        "ground": 0.6727932326896637
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.3,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 30.0
+      },
+      "expected": {
+        "sky": 0.965321897858393,
+        "horizon": 0.8903610952124892,
+        "ground": 0.7891908567431017
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002,
+          "nAr": 1.29
+        },
+        "surfaceTilt": 30.0
+      },
+      "expected": {
+        "sky": 0.9658386399189337,
+        "horizon": 0.891836602410224,
+        "ground": 0.7918601138108432
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 30.0,
+        "num": 1
+      },
+      "expected": {
+        "sky": 0.0,
+        "horizon": 0.0,
+        "ground": 0.0
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 30.0,
+        "num": 7
+      },
+      "expected": {
+        "sky": 0.9673392875978837,
+        "horizon": 0.0,
+        "ground": 0.3126851534387135
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 30.0,
+        "num": 90
+      },
+      "expected": {
+        "sky": 0.9576752009900026,
+        "horizon": 0.0,
+        "ground": 0.7595335194958137
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 30.0,
+        "num": 360
+      },
+      "expected": {
+        "sky": 0.9576747050029406,
+        "horizon": 0.8680676671024843,
+        "ground": 0.7597506689647683
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 89.5,
+        "num": 2000
+      },
+      "expected": {
+        "sky": 0.9526749451888659,
+        "horizon": 0.972649546524231,
+        "ground": 0.9520818075014269
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 72.52978241266824
+      },
+      "expected": {
+        "sky": 0.9599978681541651,
+        "horizon": 0.9690725023391231,
+        "ground": 0.9382303749257161
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 33.66099113170656
+      },
+      "expected": {
+        "sky": 0.9625826072316792,
+        "horizon": 0.9130001943605824,
+        "ground": 0.840907004769392
+      }
+    },
+    {
+      "input": {
+        "model": "sapm",
+        "params": {
+          "b0": 0.9986,
+          "b1": -0.002616,
+          "b2": 0.0003324,
+          "b3": -1.48e-5,
+          "b4": 2.556e-7,
+          "b5": -1.524e-9
+        },
+        "surfaceTilt": 113.02939514886312
+      },
+      "expected": {
+        "sky": 0.9503102370930377,
+        "horizon": 0.9722716201641004,
+        "ground": 0.9695532494188985
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 137.02559409682544
+      },
+      "expected": {
+        "sky": 0.8808253478988644,
+        "horizon": 0.9368583127464771,
+        "ground": 0.9634681706101127
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 89.49108141134028
+      },
+      "expected": {
+        "sky": 0.9526789261119544,
+        "horizon": 0.9726495852172476,
+        "ground": 0.9520774475070192
+      }
+    },
+    {
+      "input": {
+        "model": "martinRuiz",
+        "params": {
+          "aR": 0.16
+        },
+        "surfaceTilt": 52.17277370109458
+      },
+      "expected": {
+        "sky": 0.9644744047971445,
+        "horizon": 0.9550353863934572,
+        "ground": 0.8966048296133325
+      }
+    },
+    {
+      "input": {
+        "model": "ashrae",
+        "params": {
+          "b": 0.05
+        },
+        "surfaceTilt": 108.7025325993036
+      },
+      "expected": {
+        "sky": 0.936877950152802,
+        "horizon": 0.96829657934099,
+        "ground": 0.9603545149354276
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 8.446013658623727
+      },
+      "expected": {
+        "sky": 0.9475258752610388,
+        "horizon": 0.48926649890992413,
+        "ground": 0.3732369287990332
+      }
+    },
+    {
+      "input": {
+        "model": "sapm",
+        "params": {
+          "b0": 0.9986,
+          "b1": -0.002616,
+          "b2": 0.0003324,
+          "b3": -1.48e-5,
+          "b4": 2.556e-7,
+          "b5": -1.524e-9
+        },
+        "surfaceTilt": 151.4240976146448
+      },
+      "expected": {
+        "sky": 0.875924445506168,
+        "horizon": 0.9313323784821839,
+        "ground": 0.9693893548220257
+      }
+    },
+    {
+      "input": {
+        "model": "physical",
+        "params": {
+          "n": 1.526,
+          "k": 4.0,
+          "l": 0.002
+        },
+        "surfaceTilt": 16.20150239083951
+      },
+      "expected": {
+        "sky": 0.9519696432398669,
+        "horizon": 0.7008920574515555,
+        "ground": 0.5713404014019793
+      }
+    }
+  ]
+}

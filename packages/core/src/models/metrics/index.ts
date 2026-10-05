@@ -1,12 +1,10 @@
 /**
- * Metrics (performance).
- *
- * Spec: IEC 61724-1 — the standard is the spec.
- * Scope: pure arithmetic on energy/irradiance. Performance Ratio, specific yield
- * (kWh/kWp), capacity factor, availability. Final module in the chain.
- * Validation: pin reference outputs as fixtures and assert against them.
- *
- * TODO: performance ratio → specific yield → capacity factor → availability.
+ * Metrics — IEC 61724-1 performance indices on energy / irradiation totals:
+ * performance ratio (optionally temperature-corrected), specific yield, capacity factor,
+ * time-based availability. Series reductions use `compensatedSum`.
  */
 
-export {};
+export * from "./availability/index.ts";
+export * from "./capacity-factor/index.ts";
+export * from "./performance-ratio/index.ts";
+export * from "./specific-yield/index.ts";

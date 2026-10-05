@@ -1,0 +1,1211 @@
+{
+  "meta": {
+    "reference": "pvlib.temperature.generic_linear / GenericLinearModel @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "poaGlobal": 1000.0,
+        "tempAir": 25.0,
+        "windSpeed": 1.0,
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "moduleTemperature": 66.66666666666667
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1000.0,
+        "tempAir": 10.0,
+        "windSpeed": 0.0,
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "moduleTemperature": 72.5
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 0.0,
+        "tempAir": 15.0,
+        "windSpeed": 3.0,
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "moduleTemperature": 15.0
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": -5.0,
+        "tempAir": -10.0,
+        "windSpeed": 2.0,
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "moduleTemperature": -10.15625
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1400.0,
+        "tempAir": 50.0,
+        "windSpeed": 0.0,
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "moduleTemperature": 137.5
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 800.0,
+        "tempAir": -40.0,
+        "windSpeed": 30.0,
+        "uConst": 11.04,
+        "duWind": 5.52,
+        "moduleEfficiency": 0.19,
+        "absorptance": 0.88
+      },
+      "expected": {
+        "moduleTemperature": -36.875
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 474.9749078411125,
+        "tempAir": 2.2354588500747763,
+        "windSpeed": 3.740110125745173,
+        "uConst": 16.20435431853583,
+        "duWind": 5.023528673282805,
+        "moduleEfficiency": 0.20225066010758386,
+        "absorptance": 0.8936913856064554
+      },
+      "expected": {
+        "moduleTemperature": 11.62070414392708
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 696.0417443104243,
+        "tempAir": -6.8121005772913,
+        "windSpeed": 4.599559677157091,
+        "uConst": 20.0975739721255,
+        "duWind": 0.37537838482772123,
+        "moduleEfficiency": 0.09784934319789465,
+        "absorptance": 0.9514240976146447
+      },
+      "expected": {
+        "moduleTemperature": 20.41112146133367
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 126.01168526208508,
+        "tempAir": 47.1175314216986,
+        "windSpeed": 0.3612492061844219,
+        "uConst": 26.86907779625188,
+        "duWind": 4.959939737912991,
+        "moduleEfficiency": 0.09308183907445339,
+        "absorptance": 0.9540652566841834
+      },
+      "expected": {
+        "moduleTemperature": 50.902972660419934
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 483.48953034176924,
+        "tempAir": 6.446805355173657,
+        "windSpeed": 14.070890781791936,
+        "uConst": 13.388866880810586,
+        "duWind": 6.8547114098420865,
+        "moduleEfficiency": 0.05014260552289045,
+        "absorptance": 0.9388237399796074
+      },
+      "expected": {
+        "moduleTemperature": 10.358540986485954
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 200.99198278956055,
+        "tempAir": 27.959091633080384,
+        "windSpeed": 1.1881324886277356,
+        "uConst": 20.66551093144103,
+        "duWind": 5.237157573494211,
+        "moduleEfficiency": 0.06361722017607992,
+        "absorptance": 0.8593790996780435
+      },
+      "expected": {
+        "moduleTemperature": 33.907546979454544
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 879.9828026263002,
+        "tempAir": -10.72309483109561,
+        "windSpeed": 10.233840824036184,
+        "uConst": 27.55639445755927,
+        "duWind": 2.2079489904906655,
+        "moduleEfficiency": 0.08995179797135174,
+        "absorptance": 0.8999369597729779
+      },
+      "expected": {
+        "moduleTemperature": 3.4891054836506523
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 487.6175673889372,
+        "tempAir": 9.27379251291228,
+        "windSpeed": 10.538791228374544,
+        "uConst": 22.2390641678231,
+        "duWind": 4.2523917217289995,
+        "moduleEfficiency": 0.19090806409752986,
+        "absorptance": 0.818808617825787
+      },
+      "expected": {
+        "moduleTemperature": 13.83988453498441
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1049.6195724790186,
+        "tempAir": -4.4735077180624305,
+        "windSpeed": 1.1435651702523142,
+        "uConst": 8.77059293294428,
+        "duWind": 3.843635698816435,
+        "moduleEfficiency": 0.19223637224332962,
+        "absorptance": 0.8504579298671333
+      },
+      "expected": {
+        "moduleTemperature": 48.00105453114009
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 648.8027156494977,
+        "tempAir": 2.3106641415859652,
+        "windSpeed": 6.011974246113844,
+        "uConst": 7.144228480668761,
+        "duWind": 5.465425756180325,
+        "moduleEfficiency": 0.1088620007639407,
+        "absorptance": 0.9325986315244547
+      },
+      "expected": {
+        "moduleTemperature": 15.67098425732398
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1250.9843832322981,
+        "tempAir": -19.132553491032695,
+        "windSpeed": 18.16310920617817,
+        "uConst": 20.791141477806793,
+        "duWind": 0.19939616021418605,
+        "moduleEfficiency": 0.2395683460340954,
+        "absorptance": 0.9720035356562677
+      },
+      "expected": {
+        "moduleTemperature": 18.399607708008375
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 481.6375497925248,
+        "tempAir": 36.19777132862612,
+        "windSpeed": 0.057134023690488256,
+        "uConst": 5.98192210180337,
+        "duWind": 3.4199306366546844,
+        "moduleEfficiency": 0.08911412269876434,
+        "absorptance": 0.8565928448546587
+      },
+      "expected": {
+        "moduleTemperature": 96.03711601299902
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 11.205819747663682,
+        "tempAir": 37.54229479200478,
+        "windSpeed": 0.4415771168867999,
+        "uConst": 8.401488836344994,
+        "duWind": 5.466031668377461,
+        "moduleEfficiency": 0.16185720443692503,
+        "absorptance": 0.8819352422742224
+      },
+      "expected": {
+        "moduleTemperature": 38.28838289457262
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1193.7474124216226,
+        "tempAir": -20.821582775635985,
+        "windSpeed": 8.353794603786437,
+        "uConst": 10.590248193286543,
+        "duWind": 3.346923022031225,
+        "moduleEfficiency": 0.2157514075636061,
+        "absorptance": 0.876134454884651
+      },
+      "expected": {
+        "moduleTemperature": -0.37189275391958887
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 173.10061738408103,
+        "tempAir": 48.22574695850217,
+        "windSpeed": 15.504471393577122,
+        "uConst": 27.68006293929768,
+        "duWind": 2.9292455295621496,
+        "moduleEfficiency": 0.12718776469389426,
+        "absorptance": 0.9565734347661252
+      },
+      "expected": {
+        "moduleTemperature": 50.189825093840746
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 604.2969267427784,
+        "tempAir": 47.20560810967376,
+        "windSpeed": 13.1610861273222,
+        "uConst": 23.870066391565345,
+        "duWind": 2.7710696082275437,
+        "moduleEfficiency": 0.23740552923577596,
+        "absorptance": 0.9351746977803849
+      },
+      "expected": {
+        "moduleTemperature": 54.19363103233816
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 171.65986702959083,
+        "tempAir": 1.6263688820318123,
+        "windSpeed": 11.817503360302894,
+        "uConst": 10.991035442158033,
+        "duWind": 1.2029882696668528,
+        "moduleEfficiency": 0.0954203238620881,
+        "absorptance": 0.9795200717322818
+      },
+      "expected": {
+        "moduleTemperature": 7.647010675905494
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 790.7693244348233,
+        "tempAir": 32.86906730641846,
+        "windSpeed": 10.37043099322271,
+        "uConst": 24.890186880353728,
+        "duWind": 1.797196377774938,
+        "moduleEfficiency": 0.22072182748797967,
+        "absorptance": 0.8541969756998548
+      },
+      "expected": {
+        "moduleTemperature": 44.37738390976973
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1273.0492411481391,
+        "tempAir": 10.266712827693523,
+        "windSpeed": 2.3080015831516754,
+        "uConst": 15.672706871861248,
+        "duWind": 2.1637841770371056,
+        "moduleEfficiency": 0.192032007172912,
+        "absorptance": 0.8708185657041089
+      },
+      "expected": {
+        "moduleTemperature": 52.07927614418685
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 632.2506805435072,
+        "tempAir": 10.581368850449335,
+        "windSpeed": 2.0214433515577968,
+        "uConst": 8.413648180984064,
+        "duWind": 7.952690243538535,
+        "moduleEfficiency": 0.16403401903443215,
+        "absorptance": 0.8558791445845426
+      },
+      "expected": {
+        "moduleTemperature": 28.442838537299558
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1321.8555123868312,
+        "tempAir": 36.53745527580291,
+        "windSpeed": 19.732688907720522,
+        "uConst": 16.180340647385606,
+        "duWind": 3.772702261166776,
+        "moduleEfficiency": 0.061257935412370235,
+        "absorptance": 0.9630236951043066
+      },
+      "expected": {
+        "moduleTemperature": 49.69047258114627
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 93.05672089346726,
+        "tempAir": 35.03161547655887,
+        "windSpeed": 5.876733507330281,
+        "uConst": 9.559118005930335,
+        "duWind": 1.6447531717244885,
+        "moduleEfficiency": 0.09955667420298193,
+        "absorptance": 0.9372617317188038
+      },
+      "expected": {
+        "moduleTemperature": 39.086466722961596
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 753.7575500846602,
+        "tempAir": 1.5404190487385083,
+        "windSpeed": 1.41371192672751,
+        "uConst": 5.981428224099015,
+        "duWind": 2.846169374960507,
+        "moduleEfficiency": 0.15734963341633906,
+        "absorptance": 0.9020545970658403
+      },
+      "expected": {
+        "moduleTemperature": 57.64455075661635
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 650.2947947496946,
+        "tempAir": -4.965483671390372,
+        "windSpeed": 10.431978273151344,
+        "uConst": 21.74008803541276,
+        "duWind": 5.6641552254806475,
+        "moduleEfficiency": 0.16943768584861107,
+        "absorptance": 0.9209959256478896
+      },
+      "expected": {
+        "moduleTemperature": 1.0810818438136902
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 714.0670576229596,
+        "tempAir": 18.28576508135108,
+        "windSpeed": 19.789361259013326,
+        "uConst": 21.986146062041723,
+        "duWind": 0.4254316952612349,
+        "moduleEfficiency": 0.21624689459899235,
+        "absorptance": 0.9622993614569337
+      },
+      "expected": {
+        "moduleTemperature": 35.806848910427135
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 38.5911855123904,
+        "tempAir": 44.7698414204188,
+        "windSpeed": 9.158174887567824,
+        "uConst": 25.746016623580328,
+        "duWind": 7.481261526802726,
+        "moduleEfficiency": 0.21835703725340688,
+        "absorptance": 0.931553553725624
+      },
+      "expected": {
+        "moduleTemperature": 45.06183048690134
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 689.7803586240726,
+        "tempAir": 47.83328970221323,
+        "windSpeed": 5.784790804091349,
+        "uConst": 15.933596355600702,
+        "duWind": 5.01843459928282,
+        "moduleEfficiency": 0.09792467498330282,
+        "absorptance": 0.914694496085536
+      },
+      "expected": {
+        "moduleTemperature": 60.36307777661743
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 310.10976552605536,
+        "tempAir": 33.47906939314717,
+        "windSpeed": 4.358560142128638,
+        "uConst": 28.303574551686093,
+        "duWind": 2.068943577434391,
+        "moduleEfficiency": 0.11256001890826679,
+        "absorptance": 0.876707066155787
+      },
+      "expected": {
+        "moduleTemperature": 39.82853103715911
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1164.3721156702316,
+        "tempAir": 31.97278426788735,
+        "windSpeed": 16.67429463200271,
+        "uConst": 5.308067570582179,
+        "duWind": 2.812773758533938,
+        "moduleEfficiency": 0.17575821430175181,
+        "absorptance": 0.839965428872202
+      },
+      "expected": {
+        "moduleTemperature": 46.78599820465323
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 432.5180698749267,
+        "tempAir": 44.53022596847148,
+        "windSpeed": 12.803561075369835,
+        "uConst": 16.347419179303632,
+        "duWind": 0.0692325251915209,
+        "moduleEfficiency": 0.19042978027663998,
+        "absorptance": 0.8507817228274162
+      },
+      "expected": {
+        "moduleTemperature": 61.10309154894339
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 650.2022102252446,
+        "tempAir": 12.300209959687125,
+        "windSpeed": 10.317613396223733,
+        "uConst": 22.896679416070523,
+        "duWind": 2.082178410427237,
+        "moduleEfficiency": 0.18370619292674653,
+        "absorptance": 0.9241488502757581
+      },
+      "expected": {
+        "moduleTemperature": 23.148333362304705
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1263.276789709461,
+        "tempAir": -2.794162186132896,
+        "windSpeed": 2.5757570183432987,
+        "uConst": 16.746763741789294,
+        "duWind": 5.620442667777019,
+        "moduleEfficiency": 0.21107597374275996,
+        "absorptance": 0.9445251279439765
+      },
+      "expected": {
+        "moduleTemperature": 26.88042883634821
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 728.8164932680796,
+        "tempAir": 44.70899132381614,
+        "windSpeed": 1.9165891446080807,
+        "uConst": 27.583533589059698,
+        "duWind": 3.428990860155891,
+        "moduleEfficiency": 0.1754143993922106,
+        "absorptance": 0.9212025679011069
+      },
+      "expected": {
+        "moduleTemperature": 60.62275964040929
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 279.53578913317125,
+        "tempAir": -20.257597466319133,
+        "windSpeed": 19.50106385739083,
+        "uConst": 8.516396167105903,
+        "duWind": 7.681609228728776,
+        "moduleEfficiency": 0.0768585736813817,
+        "absorptance": 0.9071487751058074
+      },
+      "expected": {
+        "moduleTemperature": -18.791568116720164
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 204.50261016090835,
+        "tempAir": -0.8499195958245842,
+        "windSpeed": 14.86913895050516,
+        "uConst": 8.199783241723775,
+        "duWind": 0.23457718850861475,
+        "moduleEfficiency": 0.16944116635343204,
+        "absorptance": 0.8836495206826961
+      },
+      "expected": {
+        "moduleTemperature": 11.646715512351312
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 367.16975435705774,
+        "tempAir": -19.46083035385768,
+        "windSpeed": 17.99596508943109,
+        "uConst": 26.19732929130248,
+        "duWind": 5.463362852172244,
+        "moduleEfficiency": 0.10485147350600837,
+        "absorptance": 0.8892686779929259
+      },
+      "expected": {
+        "moduleTemperature": -17.14775655731857
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 595.5166018885302,
+        "tempAir": 20.164513775093084,
+        "windSpeed": 10.359834396515367,
+        "uConst": 26.249191468376,
+        "duWind": 5.8435502741823715,
+        "moduleEfficiency": 0.13616222727302088,
+        "absorptance": 0.9704187622126886
+      },
+      "expected": {
+        "moduleTemperature": 25.88900362589264
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1173.1593378482821,
+        "tempAir": 25.810744954159546,
+        "windSpeed": 13.90812326858459,
+        "uConst": 15.543269554191681,
+        "duWind": 1.4036780989757593,
+        "moduleEfficiency": 0.17168018372917074,
+        "absorptance": 0.8292175012213716
+      },
+      "expected": {
+        "moduleTemperature": 47.80927620525432
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 408.2836384048075,
+        "tempAir": 31.17538931491712,
+        "windSpeed": 9.091800561677081,
+        "uConst": 25.61572194302978,
+        "duWind": 1.1494978547024486,
+        "moduleEfficiency": 0.2375918777818697,
+        "absorptance": 0.9061198690677817
+      },
+      "expected": {
+        "moduleTemperature": 38.743279777079735
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 528.8863719231238,
+        "tempAir": 21.668365507653498,
+        "windSpeed": 7.532815844447751,
+        "uConst": 22.612812916755303,
+        "duWind": 6.169429784926515,
+        "moduleEfficiency": 0.2202789682826195,
+        "absorptance": 0.9064921382731819
+      },
+      "expected": {
+        "moduleTemperature": 26.92165617831586
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 933.8041619937075,
+        "tempAir": 16.130765590644273,
+        "windSpeed": 19.983336413093575,
+        "uConst": 12.095299947124593,
+        "duWind": 4.85796580570493,
+        "moduleEfficiency": 0.07201842934578298,
+        "absorptance": 0.9512951237076962
+      },
+      "expected": {
+        "moduleTemperature": 23.651555859039405
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1340.4626764240154,
+        "tempAir": 14.055571146859824,
+        "windSpeed": 6.469699180111732,
+        "uConst": 20.890139944810066,
+        "duWind": 1.7472809082214464,
+        "moduleEfficiency": 0.1297554466659965,
+        "absorptance": 0.8042368474883221
+      },
+      "expected": {
+        "moduleTemperature": 42.138521073695586
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 838.8663115295168,
+        "tempAir": -12.861717641843207,
+        "windSpeed": 1.3213271528254489,
+        "uConst": 23.00892572517591,
+        "duWind": 1.3936435212284026,
+        "moduleEfficiency": 0.23958902273878102,
+        "absorptance": 0.8131612791396933
+      },
+      "expected": {
+        "moduleTemperature": 6.500173449228694
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 207.34940766848203,
+        "tempAir": -27.17998840472444,
+        "windSpeed": 0.04573234948859861,
+        "uConst": 16.484368571365724,
+        "duWind": 6.178733469778722,
+        "moduleEfficiency": 0.1946661651021427,
+        "absorptance": 0.8819748006416561
+      },
+      "expected": {
+        "moduleTemperature": -18.68034162242442
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 756.7999533699458,
+        "tempAir": 7.115979570339652,
+        "windSpeed": 6.359237415780299,
+        "uConst": 22.61232842377181,
+        "duWind": 6.235396200115626,
+        "moduleEfficiency": 0.2024829796277473,
+        "absorptance": 0.8958995821097283
+      },
+      "expected": {
+        "moduleTemperature": 15.544153308973558
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1033.0099081181265,
+        "tempAir": 32.423014817164216,
+        "windSpeed": 11.096613428175921,
+        "uConst": 7.017741190753483,
+        "duWind": 7.827834213577445,
+        "moduleEfficiency": 0.17956595144995083,
+        "absorptance": 0.9766832740899902
+      },
+      "expected": {
+        "moduleTemperature": 41.19408866779295
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 139.89697543601838,
+        "tempAir": 18.601127592909698,
+        "windSpeed": 12.46778242492568,
+        "uConst": 29.40990579068481,
+        "duWind": 2.1059491945218944,
+        "moduleEfficiency": 0.17278961654575833,
+        "absorptance": 0.8006275082698134
+      },
+      "expected": {
+        "moduleTemperature": 20.17896605872785
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1068.9218615305722,
+        "tempAir": 0.13600422059658612,
+        "windSpeed": 14.808704082750861,
+        "uConst": 26.943359797328117,
+        "duWind": 6.309562618005028,
+        "moduleEfficiency": 0.16257570217402442,
+        "absorptance": 0.8736470077221268
+      },
+      "expected": {
+        "moduleTemperature": 6.450017276665802
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 157.58133845931877,
+        "tempAir": -29.22960161909681,
+        "windSpeed": 2.7541436396245444,
+        "uConst": 19.647678054060826,
+        "duWind": 3.249111990927294,
+        "moduleEfficiency": 0.07824112788748316,
+        "absorptance": 0.9714033365894976
+      },
+      "expected": {
+        "moduleTemperature": -24.30776933533851
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1078.9466832898156,
+        "tempAir": 16.67686552214791,
+        "windSpeed": 15.535796137542672,
+        "uConst": 13.283426393080795,
+        "duWind": 6.930998900618713,
+        "moduleEfficiency": 0.20918482462866894,
+        "absorptance": 0.9443143714543805
+      },
+      "expected": {
+        "moduleTemperature": 23.234011612685006
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1274.1417977048363,
+        "tempAir": 45.57519201532544,
+        "windSpeed": 5.259299960497201,
+        "uConst": 26.334058094461366,
+        "duWind": 1.8709913889447432,
+        "moduleEfficiency": 0.19274232822449988,
+        "absorptance": 0.8123796523138829
+      },
+      "expected": {
+        "moduleTemperature": 67.40032210423703
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1358.47375502584,
+        "tempAir": 16.9950114911287,
+        "windSpeed": 7.16963351156881,
+        "uConst": 11.384308490312888,
+        "duWind": 7.204251900952082,
+        "moduleEfficiency": 0.08691696904380664,
+        "absorptance": 0.9430081559670436
+      },
+      "expected": {
+        "moduleTemperature": 35.44438267224663
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 298.9833734552831,
+        "tempAir": -29.944782555586976,
+        "windSpeed": 5.974804620836014,
+        "uConst": 9.828347986038949,
+        "duWind": 3.7205503580529786,
+        "moduleEfficiency": 0.07417784271763439,
+        "absorptance": 0.9777966943100617
+      },
+      "expected": {
+        "moduleTemperature": -21.517314353831253
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1052.2655507692375,
+        "tempAir": 12.722981262006234,
+        "windSpeed": 12.530976760360922,
+        "uConst": 15.95519509914288,
+        "duWind": 5.67124022250013,
+        "moduleEfficiency": 0.09427151749753243,
+        "absorptance": 0.8839147182044702
+      },
+      "expected": {
+        "moduleTemperature": 22.27137488361386
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 347.78175964032687,
+        "tempAir": 46.18248855511361,
+        "windSpeed": 19.305562886428213,
+        "uConst": 9.006182241396658,
+        "duWind": 5.6827490721772325,
+        "moduleEfficiency": 0.10273852420113856,
+        "absorptance": 0.8851252362456012
+      },
+      "expected": {
+        "moduleTemperature": 48.474533933241815
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1118.151347760752,
+        "tempAir": -26.66593284591646,
+        "windSpeed": 11.63444589411647,
+        "uConst": 10.309285377218782,
+        "duWind": 3.779505274972397,
+        "moduleEfficiency": 0.2314604297753704,
+        "absorptance": 0.9152987812261527
+      },
+      "expected": {
+        "moduleTemperature": -12.579522854619489
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1147.239232920639,
+        "tempAir": 36.3151935288468,
+        "windSpeed": 8.289264435012687,
+        "uConst": 15.772560153155403,
+        "duWind": 6.177787620863425,
+        "moduleEfficiency": 0.1630971191693918,
+        "absorptance": 0.8390036518893246
+      },
+      "expected": {
+        "moduleTemperature": 47.891854944915785
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1130.74496614621,
+        "tempAir": 49.39721748713288,
+        "windSpeed": 8.496995097177237,
+        "uConst": 10.464041132224464,
+        "duWind": 7.229116238719651,
+        "moduleEfficiency": 0.11523783762405944,
+        "absorptance": 0.8689718513415062
+      },
+      "expected": {
+        "moduleTemperature": 61.25259705851508
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 187.7823482589684,
+        "tempAir": -28.285949645335897,
+        "windSpeed": 11.541515322993003,
+        "uConst": 23.741473498048766,
+        "duWind": 6.089441408371697,
+        "moduleEfficiency": 0.22539454537696355,
+        "absorptance": 0.856069857606007
+      },
+      "expected": {
+        "moduleTemperature": -27.026365565013165
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 528.8030453578205,
+        "tempAir": 29.27362077929418,
+        "windSpeed": 19.05323013202297,
+        "uConst": 28.883213242102368,
+        "duWind": 0.5256723185936023,
+        "moduleEfficiency": 0.2490211393328693,
+        "absorptance": 0.9440814210696813
+      },
+      "expected": {
+        "moduleTemperature": 38.72245718965865
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 637.8379170404597,
+        "tempAir": 45.227371318508716,
+        "windSpeed": 18.46887888768736,
+        "uConst": 6.505938248393088,
+        "duWind": 1.19540051188842,
+        "moduleEfficiency": 0.09662221324931126,
+        "absorptance": 0.9307975953086827
+      },
+      "expected": {
+        "moduleTemperature": 63.84181599032854
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 165.88954426320427,
+        "tempAir": -19.372463388271797,
+        "windSpeed": 13.15620684527973,
+        "uConst": 24.33763984497443,
+        "duWind": 3.9259329316549687,
+        "moduleEfficiency": 0.06997759876605916,
+        "absorptance": 0.9419130750492396
+      },
+      "expected": {
+        "moduleTemperature": -17.46894006690649
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 16.168270224100254,
+        "tempAir": 48.14357881964612,
+        "windSpeed": 5.264032937156866,
+        "uConst": 22.655184401310763,
+        "duWind": 2.517035007138352,
+        "moduleEfficiency": 0.23015994240264648,
+        "absorptance": 0.9189841345867129
+      },
+      "expected": {
+        "moduleTemperature": 48.45376164700966
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 9.480540334639208,
+        "tempAir": 28.33521580036221,
+        "windSpeed": 19.166266293672656,
+        "uConst": 21.694820639891102,
+        "duWind": 5.908779618101484,
+        "moduleEfficiency": 0.2071558326682419,
+        "absorptance": 0.8672119204397429
+      },
+      "expected": {
+        "moduleTemperature": 28.381588261404087
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1129.831267965566,
+        "tempAir": 23.953858370058132,
+        "windSpeed": 17.555232163210018,
+        "uConst": 13.343200412572049,
+        "duWind": 7.0670080959619375,
+        "moduleEfficiency": 0.1050197052128475,
+        "absorptance": 0.9537541797294683
+      },
+      "expected": {
+        "moduleTemperature": 30.93263348486186
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 692.0275155262835,
+        "tempAir": 0.6553592904717842,
+        "windSpeed": 6.943628576596441,
+        "uConst": 17.19625281643044,
+        "duWind": 1.1114301465471765,
+        "moduleEfficiency": 0.1704349347093665,
+        "absorptance": 0.8489583348517901
+      },
+      "expected": {
+        "moduleTemperature": 19.502762178132464
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 522.7020920128758,
+        "tempAir": 42.59077774834906,
+        "windSpeed": 6.952295338884569,
+        "uConst": 10.05806741146798,
+        "duWind": 3.0089416589700297,
+        "moduleEfficiency": 0.053463872596505584,
+        "absorptance": 0.8897885993506492
+      },
+      "expected": {
+        "moduleTemperature": 56.70276445650848
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 909.6343129151028,
+        "tempAir": 15.12665487360052,
+        "windSpeed": 5.320403597352492,
+        "uConst": 6.4943205571761204,
+        "duWind": 3.2138565620545956,
+        "moduleEfficiency": 0.11232976968181657,
+        "absorptance": 0.8933222907316838
+      },
+      "expected": {
+        "moduleTemperature": 45.23759968854093
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1130.316022611537,
+        "tempAir": -7.076594459694494,
+        "windSpeed": 17.551990247907497,
+        "uConst": 15.12640624915306,
+        "duWind": 0.3877455790664488,
+        "moduleEfficiency": 0.1477703523955644,
+        "absorptance": 0.9491060840817183
+      },
+      "expected": {
+        "moduleTemperature": 34.22187150748623
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 136.601090370649,
+        "tempAir": 3.6746736156508675,
+        "windSpeed": 14.690690878323995,
+        "uConst": 10.67489702427685,
+        "duWind": 2.98106419780997,
+        "moduleEfficiency": 0.0768727548211816,
+        "absorptance": 0.8369813077729309
+      },
+      "expected": {
+        "moduleTemperature": 5.580933288654282
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 286.52670037228427,
+        "tempAir": 6.2108150789182215,
+        "windSpeed": 11.902069454081825,
+        "uConst": 5.944820917327566,
+        "duWind": 1.941161864304127,
+        "moduleEfficiency": 0.18119539532400925,
+        "absorptance": 0.9755635198706829
+      },
+      "expected": {
+        "moduleTemperature": 14.04620729058623
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1341.9860676077199,
+        "tempAir": 37.84617507226879,
+        "windSpeed": 7.378338160929204,
+        "uConst": 9.789520081686893,
+        "duWind": 2.3939985203004284,
+        "moduleEfficiency": 0.21736779008007356,
+        "absorptance": 0.9639518519938415
+      },
+      "expected": {
+        "moduleTemperature": 74.34113953239941
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 592.0236111924486,
+        "tempAir": 31.76150523116954,
+        "windSpeed": 3.3596480246643923,
+        "uConst": 12.8931578158018,
+        "duWind": 2.405348169239466,
+        "moduleEfficiency": 0.23597346557926693,
+        "absorptance": 0.8930681999833516
+      },
+      "expected": {
+        "moduleTemperature": 50.30877256266858
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 35.483685781058604,
+        "tempAir": 36.626043700500034,
+        "windSpeed": 18.765691927560194,
+        "uConst": 29.501366879122276,
+        "duWind": 5.873593207256222,
+        "moduleEfficiency": 0.2063210482037542,
+        "absorptance": 0.8318741574577915
+      },
+      "expected": {
+        "moduleTemperature": 36.7849070603552
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 151.96384768934072,
+        "tempAir": -29.805007173078984,
+        "windSpeed": 18.760061111042916,
+        "uConst": 8.118149247979598,
+        "duWind": 0.17260518411704773,
+        "moduleEfficiency": 0.2450162434016632,
+        "absorptance": 0.8833241460136009
+      },
+      "expected": {
+        "moduleTemperature": -21.26346664079975
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 180.5690411222347,
+        "tempAir": -15.571963185289954,
+        "windSpeed": 17.93455380297424,
+        "uConst": 15.696725914019101,
+        "duWind": 4.220873375683829,
+        "moduleEfficiency": 0.20327938041031424,
+        "absorptance": 0.8699618906522055
+      },
+      "expected": {
+        "moduleTemperature": -14.25481637875675
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1366.242106056791,
+        "tempAir": -22.422537021880355,
+        "windSpeed": 9.104957681505635,
+        "uConst": 8.721321077474634,
+        "duWind": 1.9134731071589846,
+        "moduleEfficiency": 0.2061237315529624,
+        "absorptance": 0.803817777924809
+      },
+      "expected": {
+        "moduleTemperature": 8.812664775398865
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 904.26475150493,
+        "tempAir": -3.0891522075067623,
+        "windSpeed": 9.174684465326063,
+        "uConst": 19.9497974749424,
+        "duWind": 2.441938103040271,
+        "moduleEfficiency": 0.17330547221352996,
+        "absorptance": 0.8689440750873701
+      },
+      "expected": {
+        "moduleTemperature": 11.76291145364023
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 735.3577537363805,
+        "tempAir": -5.08939612473414,
+        "windSpeed": 2.04520164899626,
+        "uConst": 28.903495856771,
+        "duWind": 2.5706763385246267,
+        "moduleEfficiency": 0.1084430091596773,
+        "absorptance": 0.9514596356446041
+      },
+      "expected": {
+        "moduleTemperature": 13.057553720904096
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 625.4351891054289,
+        "tempAir": -1.2888890265062258,
+        "windSpeed": 1.783434376896853,
+        "uConst": 23.76120272242197,
+        "duWind": 1.2515663058898623,
+        "moduleEfficiency": 0.058424616834337154,
+        "absorptance": 0.965534808128803
+      },
+      "expected": {
+        "moduleTemperature": 20.537461302140354
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 752.1564539435775,
+        "tempAir": 16.437899379806478,
+        "windSpeed": 19.32646590437323,
+        "uConst": 25.86909798043375,
+        "duWind": 2.0074378303344362,
+        "moduleEfficiency": 0.20224282846721964,
+        "absorptance": 0.8811233782226652
+      },
+      "expected": {
+        "moduleTemperature": 24.334261451238582
+      }
+    }
+  ]
+}

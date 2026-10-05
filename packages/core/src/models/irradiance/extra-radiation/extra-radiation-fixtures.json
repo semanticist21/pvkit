@@ -1,0 +1,1249 @@
+{
+  "meta": {
+    "reference": "pvlib.irradiance.get_extra_radiation(pd.Timestamp UTC) @ pvlib 0.16.1; method='nrel' passes how='numpy', delta_t"
+  },
+  "cases": [
+    {
+      "input": {
+        "timeMs": 1735689600000,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1413.981805
+    },
+    {
+      "input": {
+        "timeMs": 1735905600000,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1414.0192010311885
+    },
+    {
+      "input": {
+        "timeMs": 1751673599000,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1320.4577467900974
+    },
+    {
+      "input": {
+        "timeMs": 1709186400000,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1392.0345394690573
+    },
+    {
+      "input": {
+        "timeMs": 1735686000000,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1413.981805
+    },
+    {
+      "input": {
+        "timeMs": 1704024000000,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1413.940576307916
+    },
+    {
+      "input": {
+        "timeMs": 0,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1413.981805
+    },
+    {
+      "input": {
+        "timeMs": -2203891200000,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1392.0345394690573
+    },
+    {
+      "input": {
+        "timeMs": 4117219200000,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1321.6235925714136
+    },
+    {
+      "input": {
+        "timeMs": 1735689600000,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1411.1746207189378
+    },
+    {
+      "input": {
+        "timeMs": 1735905600000,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1411.1211983451456
+    },
+    {
+      "input": {
+        "timeMs": 1751673599000,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1321.0604400948419
+    },
+    {
+      "input": {
+        "timeMs": 1709186400000,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1389.1983693415852
+    },
+    {
+      "input": {
+        "timeMs": 1735686000000,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1411.1746207189378
+    },
+    {
+      "input": {
+        "timeMs": 1704024000000,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1411.1812999999997
+    },
+    {
+      "input": {
+        "timeMs": 0,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1411.1746207189378
+    },
+    {
+      "input": {
+        "timeMs": -2203891200000,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1389.1983693415852
+    },
+    {
+      "input": {
+        "timeMs": 4117219200000,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1321.7531062146036
+    },
+    {
+      "input": {
+        "timeMs": 1735689600000,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 67.0
+      },
+      "expected": 1412.7442441145708
+    },
+    {
+      "input": {
+        "timeMs": 1735905600000,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 67.0
+      },
+      "expected": 1412.8111433553108
+    },
+    {
+      "input": {
+        "timeMs": 1751673599000,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 67.0
+      },
+      "expected": 1321.7443036526015
+    },
+    {
+      "input": {
+        "timeMs": 1709186400000,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 67.0
+      },
+      "expected": 1392.0209934905572
+    },
+    {
+      "input": {
+        "timeMs": 1735686000000,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 67.0
+      },
+      "expected": 1412.742554100252
+    },
+    {
+      "input": {
+        "timeMs": 1704024000000,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 67.0
+      },
+      "expected": 1412.825843458536
+    },
+    {
+      "input": {
+        "timeMs": 0,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 67.0
+      },
+      "expected": 1412.864745623724
+    },
+    {
+      "input": {
+        "timeMs": -2203891200000,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 67.0
+      },
+      "expected": 1390.6416738533535
+    },
+    {
+      "input": {
+        "timeMs": 4117219200000,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 67.0
+      },
+      "expected": 1323.2205441734836
+    },
+    {
+      "input": {
+        "timeMs": 1748736000000,
+        "solarConstant": 1361.0,
+        "method": "spencer"
+      },
+      "expected": 1322.5197478660632
+    },
+    {
+      "input": {
+        "timeMs": 1748736000000,
+        "solarConstant": 1367.0,
+        "method": "nrel",
+        "deltaT": 69.2
+      },
+      "expected": 1329.596799699357
+    },
+    {
+      "input": {
+        "timeMs": 760675386288,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1404.7696672719724
+    },
+    {
+      "input": {
+        "timeMs": 760675386288,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1401.3977609478968
+    },
+    {
+      "input": {
+        "timeMs": 760675386288,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 63.05886471251869
+      },
+      "expected": 1403.7612336495545
+    },
+    {
+      "input": {
+        "timeMs": 136027766839,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1349.9893823820748
+    },
+    {
+      "input": {
+        "timeMs": 136027766839,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1348.8929537543927
+    },
+    {
+      "input": {
+        "timeMs": 136027766839,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 63.96348345482866
+      },
+      "expected": 1350.2875341237736
+    },
+    {
+      "input": {
+        "timeMs": 1944941635419,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1333.0434098043195
+    },
+    {
+      "input": {
+        "timeMs": 1944941635419,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1335.8387284749106
+    },
+    {
+      "input": {
+        "timeMs": 1944941635419,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 70.22506601075838
+      },
+      "expected": 1333.6500454317904
+    },
+    {
+      "input": {
+        "timeMs": 1504202098255,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1340.1005858914539
+    },
+    {
+      "input": {
+        "timeMs": 1504202098255,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1343.3356992037825
+    },
+    {
+      "input": {
+        "timeMs": 1504202098255,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 64.94345349014893
+      },
+      "expected": 1341.0874776740202
+    },
+    {
+      "input": {
+        "timeMs": 557936467620,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1344.0808959480316
+    },
+    {
+      "input": {
+        "timeMs": 557936467620,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1347.4688630989565
+    },
+    {
+      "input": {
+        "timeMs": 557936467620,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 59.59955967715709
+      },
+      "expected": 1344.6105523237438
+    },
+    {
+      "input": {
+        "timeMs": 1846326553382,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1320.4566508404746
+    },
+    {
+      "input": {
+        "timeMs": 1846326553382,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1321.1004984648139
+    },
+    {
+      "input": {
+        "timeMs": 1846326553382,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 55.9384459620693
+      },
+      "expected": 1321.643222862894
+    },
+    {
+      "input": {
+        "timeMs": 350344445928,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1405.7409810598595
+    },
+    {
+      "input": {
+        "timeMs": 350344445928,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1402.342117625774
+    },
+    {
+      "input": {
+        "timeMs": 350344445928,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 71.82489973496054
+      },
+      "expected": 1404.2010278781217
+    },
+    {
+      "input": {
+        "timeMs": -261897726470,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1349.0421879436985
+    },
+    {
+      "input": {
+        "timeMs": -261897726470,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1352.5386520060342
+    },
+    {
+      "input": {
+        "timeMs": -261897726470,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 74.27938285542464
+      },
+      "expected": 1350.0590222370859
+    },
+    {
+      "input": {
+        "timeMs": -557051753630,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1340.2633818899994
+    },
+    {
+      "input": {
+        "timeMs": -557051753630,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1339.4451654256716
+    },
+    {
+      "input": {
+        "timeMs": -557051753630,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 72.4952622370015
+      },
+      "expected": 1340.9333788492256
+    },
+    {
+      "input": {
+        "timeMs": 1912332873264,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1327.3929517797694
+    },
+    {
+      "input": {
+        "timeMs": 1912332873264,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1329.6284621714847
+    },
+    {
+      "input": {
+        "timeMs": 1912332873264,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 59.30818390744534
+      },
+      "expected": 1328.2272676101813
+    },
+    {
+      "input": {
+        "timeMs": 2880204728581,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1362.3868168299914
+    },
+    {
+      "input": {
+        "timeMs": 2880204728581,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1360.8735175352554
+    },
+    {
+      "input": {
+        "timeMs": 2880204728581,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 61.9069932905967
+      },
+      "expected": 1362.560787155251
+    },
+    {
+      "input": {
+        "timeMs": 1237860588824,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1374.4893978529208
+    },
+    {
+      "input": {
+        "timeMs": 1237860588824,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1372.4808205107681
+    },
+    {
+      "input": {
+        "timeMs": 1237860588824,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 69.07089078179193
+      },
+      "expected": 1374.3360253499054
+    },
+    {
+      "input": {
+        "timeMs": 745442532522,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1330.9929783791881
+    },
+    {
+      "input": {
+        "timeMs": 745442532522,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1333.6113880308174
+    },
+    {
+      "input": {
+        "timeMs": 745442532522,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 72.13677852460522
+      },
+      "expected": 1332.1740585291675
+    },
+    {
+      "input": {
+        "timeMs": -628226843571,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1407.1069894797527
+    },
+    {
+      "input": {
+        "timeMs": -628226843571,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1403.677777816986
+    },
+    {
+      "input": {
+        "timeMs": -628226843571,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 70.42485999773416
+      },
+      "expected": 1405.8870618250037
+    },
+    {
+      "input": {
+        "timeMs": -42181632403,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1340.1005858914539
+    },
+    {
+      "input": {
+        "timeMs": -42181632403,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1343.3356992037825
+    },
+    {
+      "input": {
+        "timeMs": -42181632403,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 69.4897729082701
+      },
+      "expected": 1340.842450956994
+    },
+    {
+      "input": {
+        "timeMs": -387439602516,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1355.052052083609
+    },
+    {
+      "input": {
+        "timeMs": -387439602516,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1358.5690955552511
+    },
+    {
+      "input": {
+        "timeMs": -387439602516,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 67.53240874515282
+      },
+      "expected": 1356.0452318477567
+    },
+    {
+      "input": {
+        "timeMs": 2054491731770,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1405.261276503107
+    },
+    {
+      "input": {
+        "timeMs": 2054491731770,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1401.8752397746543
+    },
+    {
+      "input": {
+        "timeMs": 2054491731770,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 56.36172201760799
+      },
+      "expected": 1404.3000633543554
+    },
+    {
+      "input": {
+        "timeMs": 722178437238,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1400.165092065352
+    },
+    {
+      "input": {
+        "timeMs": 722178437238,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1400.4115694159639
+    },
+    {
+      "input": {
+        "timeMs": 722178437238,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 67.57118289466143
+      },
+      "expected": 1399.1475805694388
+    },
+    {
+      "input": {
+        "timeMs": 357378492128,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1346.3643184102164
+    },
+    {
+      "input": {
+        "timeMs": 357378492128,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1345.3746504529377
+    },
+    {
+      "input": {
+        "timeMs": 357378492128,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 65.23384082403618
+      },
+      "expected": 1346.5755519063987
+    },
+    {
+      "input": {
+        "timeMs": 3070302525966,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1355.2904262137383
+    },
+    {
+      "input": {
+        "timeMs": 3070302525966,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1354.0265829646924
+    },
+    {
+      "input": {
+        "timeMs": 3070302525966,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 60.519872476226666
+      },
+      "expected": 1355.8662530527195
+    },
+    {
+      "input": {
+        "timeMs": 188348229191,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1412.5043984025688
+    },
+    {
+      "input": {
+        "timeMs": 188348229191,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1410.375499075817
+    },
+    {
+      "input": {
+        "timeMs": 188348229191,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 66.10410664144199
+      },
+      "expected": 1411.594294870171
+    },
+    {
+      "input": {
+        "timeMs": 797722395516,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1359.2027041083516
+    },
+    {
+      "input": {
+        "timeMs": 797722395516,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1357.8051151094146
+    },
+    {
+      "input": {
+        "timeMs": 797722395516,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 64.81844812822807
+      },
+      "expected": 1359.2640538521368
+    },
+    {
+      "input": {
+        "timeMs": 1530588463656,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1320.4715353124743
+    },
+    {
+      "input": {
+        "timeMs": 1530588463656,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1321.033727918503
+    },
+    {
+      "input": {
+        "timeMs": 1530588463656,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 68.79125133425848
+      },
+      "expected": 1321.674762668385
+    },
+    {
+      "input": {
+        "timeMs": 1549498288296,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1405.261276503107
+    },
+    {
+      "input": {
+        "timeMs": 1549498288296,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1401.8752397746543
+    },
+    {
+      "input": {
+        "timeMs": 1549498288296,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 69.09080640975299
+      },
+      "expected": 1404.643906839424
+    },
+    {
+      "input": {
+        "timeMs": -202478020031,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1325.5011980313595
+    },
+    {
+      "input": {
+        "timeMs": -202478020031,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1327.485567588488
+    },
+    {
+      "input": {
+        "timeMs": -202478020031,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 69.99456532112883
+      },
+      "expected": 1326.489688757301
+    },
+    {
+      "input": {
+        "timeMs": 677860819053,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1321.037974956699
+    },
+    {
+      "input": {
+        "timeMs": 677860819053,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1321.3006122833824
+    },
+    {
+      "input": {
+        "timeMs": 677860819053,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 56.143565170252316
+      },
+      "expected": 1322.2686272603064
+    },
+    {
+      "input": {
+        "timeMs": -12406025174,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1328.6622375141892
+    },
+    {
+      "input": {
+        "timeMs": -12406025174,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1331.0449097381377
+    },
+    {
+      "input": {
+        "timeMs": -12406025174,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 64.60908924704108
+      },
+      "expected": 1329.7521438551137
+    },
+    {
+      "input": {
+        "timeMs": 2286432328402,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1322.8747376896258
+    },
+    {
+      "input": {
+        "timeMs": 2286432328402,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1322.824986437642
+    },
+    {
+      "input": {
+        "timeMs": 2286432328402,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 60.6064366519037
+      },
+      "expected": 1324.0959497642277
+    },
+    {
+      "input": {
+        "timeMs": 1270046090744,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1368.8366672925208
+    },
+    {
+      "input": {
+        "timeMs": 1270046090744,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1367.0699736433514
+    },
+    {
+      "input": {
+        "timeMs": 1270046090744,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 63.07766603539649
+      },
+      "expected": 1368.8526827693581
+    },
+    {
+      "input": {
+        "timeMs": 602037624185,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1409.1305448179169
+    },
+    {
+      "input": {
+        "timeMs": 602037624185,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1405.679581966426
+    },
+    {
+      "input": {
+        "timeMs": 602037624185,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 56.71538278453501
+      },
+      "expected": 1408.0811573644412
+    },
+    {
+      "input": {
+        "timeMs": 2171548934153,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1381.318718297701
+    },
+    {
+      "input": {
+        "timeMs": 2171548934153,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1383.6650471844323
+    },
+    {
+      "input": {
+        "timeMs": 2171548934153,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 60.88620007639407
+      },
+      "expected": 1380.6737708541673
+    },
+    {
+      "input": {
+        "timeMs": 2390951146581,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1367.7428650602092
+    },
+    {
+      "input": {
+        "timeMs": 2390951146581,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1370.940890703371
+    },
+    {
+      "input": {
+        "timeMs": 2390951146581,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 72.87120547474711
+      },
+      "expected": 1367.1803838635687
+    },
+    {
+      "input": {
+        "timeMs": -73863257251,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1339.4644693251782
+    },
+    {
+      "input": {
+        "timeMs": -73863257251,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1342.6692732810734
+    },
+    {
+      "input": {
+        "timeMs": -73863257251,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 73.16310920617816
+      },
+      "expected": 1339.8964105802859
+    },
+    {
+      "input": {
+        "timeMs": 1960139449667,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1403.2251674501936
+    },
+    {
+      "input": {
+        "timeMs": 1960139449667,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1399.9031489406234
+    },
+    {
+      "input": {
+        "timeMs": 1960139449667,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 55.49849040053547
+      },
+      "expected": 1402.4877025890628
+    },
+    {
+      "input": {
+        "timeMs": 3257316377160,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1376.8923612194285
+    },
+    {
+      "input": {
+        "timeMs": 3257316377160,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1374.7759675023015
+    },
+    {
+      "input": {
+        "timeMs": 3257316377160,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 74.11150396180753
+      },
+      "expected": 1376.9676783194707
+    },
+    {
+      "input": {
+        "timeMs": 780199044022,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1355.823931221973
+    },
+    {
+      "input": {
+        "timeMs": 780199044022,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1359.3353075706052
+    },
+    {
+      "input": {
+        "timeMs": 780199044022,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 71.54944283215653
+      },
+      "expected": 1355.9499480000059
+    },
+    {
+      "input": {
+        "timeMs": -619432541081,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1335.384888941839
+    },
+    {
+      "input": {
+        "timeMs": -619432541081,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1334.7064544609996
+    },
+    {
+      "input": {
+        "timeMs": -619432541081,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 55.7855376814427
+      },
+      "expected": 1335.722566967076
+    },
+    {
+      "input": {
+        "timeMs": 1122607582088,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1324.1953038379972
+    },
+    {
+      "input": {
+        "timeMs": 1122607582088,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1325.9763998184753
+    },
+    {
+      "input": {
+        "timeMs": 1122607582088,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 58.911412269876436
+      },
+      "expected": 1325.1840659290995
+    },
+    {
+      "input": {
+        "timeMs": 658675900506,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1397.0984774640224
+    },
+    {
+      "input": {
+        "timeMs": 658675900506,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1397.7708518212619
+    },
+    {
+      "input": {
+        "timeMs": 658675900506,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 55.160083139252336
+      },
+      "expected": 1396.2857781743194
+    },
+    {
+      "input": {
+        "timeMs": 2832454700619,
+        "solarConstant": 1366.1,
+        "method": "spencer"
+      },
+      "expected": 1365.3257936441441
+    },
+    {
+      "input": {
+        "timeMs": 2832454700619,
+        "solarConstant": 1366.1,
+        "method": "asce"
+      },
+      "expected": 1368.6208106058223
+    },
+    {
+      "input": {
+        "timeMs": 2832454700619,
+        "solarConstant": 1366.1,
+        "method": "nrel",
+        "deltaT": 55.4415771168868
+      },
+      "expected": 1364.2621546478588
+    }
+  ]
+}

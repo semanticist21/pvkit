@@ -1,0 +1,907 @@
+{
+  "meta": {
+    "reference": "pvlib.irradiance.poa_components @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "aoi": 173.01353019656264,
+        "dni": 592.4878066744669,
+        "poaSkyDiffuse": 76.9066785368191,
+        "poaGroundDiffuse": 87.27780444281115
+      },
+      "expected": {
+        "poaGlobal": 164.18448297963025,
+        "poaDirect": 0.0,
+        "poaDiffuse": 164.18448297963025,
+        "poaSkyDiffuse": 76.9066785368191,
+        "poaGroundDiffuse": 87.27780444281115
+      }
+    },
+    {
+      "input": {
+        "aoi": 64.36221766324523,
+        "dni": 862.3870059128518,
+        "poaSkyDiffuse": 46.63551975964919,
+        "poaGroundDiffuse": 134.4211461446736
+      },
+      "expected": {
+        "poaGlobal": 554.1945746881435,
+        "poaDirect": 373.13790878382065,
+        "poaDiffuse": 181.05666590432278,
+        "poaSkyDiffuse": 46.63551975964919,
+        "poaGroundDiffuse": 134.4211461446736
+      }
+    },
+    {
+      "input": {
+        "aoi": 112.58135235535727,
+        "dni": 165.52227071214574,
+        "poaSkyDiffuse": 260.5958221160535,
+        "poaGroundDiffuse": 55.091775869832134
+      },
+      "expected": {
+        "poaGlobal": 315.68759798588565,
+        "poaDirect": 0.0,
+        "poaDiffuse": 315.68759798588565,
+        "poaSkyDiffuse": 260.5958221160535,
+        "poaGroundDiffuse": 55.091775869832134
+      }
+    },
+    {
+      "input": {
+        "aoi": 53.28535583182147,
+        "dni": 40.965091768275464,
+        "poaSkyDiffuse": 455.84660881209413,
+        "poaGroundDiffuse": 23.909389863815655
+      },
+      "expected": {
+        "poaGlobal": 504.24616163631356,
+        "poaDirect": 24.490162960403776,
+        "poaDiffuse": 479.7559986759098,
+        "poaSkyDiffuse": 455.84660881209413,
+        "poaGroundDiffuse": 23.909389863815655
+      }
+    },
+    {
+      "input": {
+        "aoi": 174.29651492532733,
+        "dni": 704.1454739112885,
+        "poaSkyDiffuse": 64.53072656618602,
+        "poaGroundDiffuse": 133.47503529179374
+      },
+      "expected": {
+        "poaGlobal": 198.00576185797976,
+        "poaDirect": 0.0,
+        "poaDiffuse": 198.00576185797976,
+        "poaSkyDiffuse": 64.53072656618602,
+        "poaGroundDiffuse": 133.47503529179374
+      }
+    },
+    {
+      "input": {
+        "aoi": 178.96464059011214,
+        "dni": 297.18258903980256,
+        "poaSkyDiffuse": 182.35905709768434,
+        "poaGroundDiffuse": 18.126537206895627
+      },
+      "expected": {
+        "poaGlobal": 200.48559430457996,
+        "poaDirect": 0.0,
+        "poaDiffuse": 200.48559430457996,
+        "poaSkyDiffuse": 182.35905709768434,
+        "poaGroundDiffuse": 18.126537206895627
+      }
+    },
+    {
+      "input": {
+        "aoi": 81.51155462562718,
+        "dni": 268.7860853014405,
+        "poaSkyDiffuse": 179.88347510139218,
+        "poaGroundDiffuse": 147.02006447455446
+      },
+      "expected": {
+        "poaGlobal": 366.57904206789084,
+        "poaDirect": 39.67550249194419,
+        "poaDiffuse": 326.90353957594664,
+        "poaSkyDiffuse": 179.88347510139218,
+        "poaGroundDiffuse": 147.02006447455446
+      }
+    },
+    {
+      "input": {
+        "aoi": 111.18387334020082,
+        "dni": 126.46337571606254,
+        "poaSkyDiffuse": 257.95654918521944,
+        "poaGroundDiffuse": 100.77227595166868
+      },
+      "expected": {
+        "poaGlobal": 358.72882513688813,
+        "poaDirect": 0.0,
+        "poaDiffuse": 358.72882513688813,
+        "poaSkyDiffuse": 257.95654918521944,
+        "poaGroundDiffuse": 100.77227595166868
+      }
+    },
+    {
+      "input": {
+        "aoi": 16.315887634590737,
+        "dni": 271.43925506159445,
+        "poaSkyDiffuse": 112.18328569160424,
+        "poaGroundDiffuse": 29.47494485213213
+      },
+      "expected": {
+        "poaGlobal": 402.1659288180251,
+        "poaDirect": 260.50769827428877,
+        "poaDiffuse": 141.65823054373638,
+        "poaSkyDiffuse": 112.18328569160424,
+        "poaGroundDiffuse": 29.47494485213213
+      }
+    },
+    {
+      "input": {
+        "aoi": 2.2201912564503523,
+        "dni": 123.32924096696195,
+        "poaSkyDiffuse": 186.02937889745112,
+        "poaGroundDiffuse": 81.43562503484357
+      },
+      "expected": {
+        "poaGlobal": 390.7016648876132,
+        "poaDirect": 123.23666095531851,
+        "poaDiffuse": 267.4650039322947,
+        "poaSkyDiffuse": 186.02937889745112,
+        "poaGroundDiffuse": 81.43562503484357
+      }
+    },
+    {
+      "input": {
+        "aoi": 14.758145705117991,
+        "dni": 519.5129465051481,
+        "poaSkyDiffuse": 224.16821491010302,
+        "poaGroundDiffuse": 40.8305663248903
+      },
+      "expected": {
+        "poaGlobal": 767.3728566867248,
+        "poaDirect": 502.37407545173147,
+        "poaDiffuse": 264.9987812349933,
+        "poaSkyDiffuse": 224.16821491010302,
+        "poaGroundDiffuse": 40.8305663248903
+      }
+    },
+    {
+      "input": {
+        "aoi": 15.423449530503442,
+        "dni": 75.81072472705635,
+        "poaSkyDiffuse": 286.48513430203616,
+        "poaGroundDiffuse": 117.5028781798948
+      },
+      "expected": {
+        "poaGlobal": 477.0685382070211,
+        "poaDirect": 73.08052572509021,
+        "poaDiffuse": 403.9880124819309,
+        "poaSkyDiffuse": 286.48513430203616,
+        "poaGroundDiffuse": 117.5028781798948
+      }
+    },
+    {
+      "input": {
+        "aoi": 150.94739188182373,
+        "dni": 268.41940817386643,
+        "poaSkyDiffuse": 340.86006255417675,
+        "poaGroundDiffuse": 18.118207338440257
+      },
+      "expected": {
+        "poaGlobal": 358.978269892617,
+        "poaDirect": 0.0,
+        "poaDiffuse": 358.978269892617,
+        "poaSkyDiffuse": 340.86006255417675,
+        "poaGroundDiffuse": 18.118207338440257
+      }
+    },
+    {
+      "input": {
+        "aoi": 56.84298954388983,
+        "dni": 37.69649389101966,
+        "poaSkyDiffuse": 164.09454314760208,
+        "poaGroundDiffuse": 23.4394195984023
+      },
+      "expected": {
+        "poaGlobal": 208.151503587322,
+        "poaDirect": 20.617540841317602,
+        "poaDiffuse": 187.5339627460044,
+        "poaSkyDiffuse": 164.09454314760208,
+        "poaGroundDiffuse": 23.4394195984023
+      }
+    },
+    {
+      "input": {
+        "aoi": 140.57429714600997,
+        "dni": 439.36744588729493,
+        "poaSkyDiffuse": 157.52403645921603,
+        "poaGroundDiffuse": 21.16517395927367
+      },
+      "expected": {
+        "poaGlobal": 178.6892104184897,
+        "poaDirect": 0.0,
+        "poaDiffuse": 178.6892104184897,
+        "poaSkyDiffuse": 157.52403645921603,
+        "poaGroundDiffuse": 21.16517395927367
+      }
+    },
+    {
+      "input": {
+        "aoi": 109.34153121776872,
+        "dni": 628.7937543828365,
+        "poaSkyDiffuse": 379.86927550025456,
+        "poaGroundDiffuse": 79.80218013141923
+      },
+      "expected": {
+        "poaGlobal": 459.6714556316738,
+        "poaDirect": 0.0,
+        "poaDiffuse": 459.6714556316738,
+        "poaSkyDiffuse": 379.86927550025456,
+        "poaGroundDiffuse": 79.80218013141923
+      }
+    },
+    {
+      "input": {
+        "aoi": 77.65598522633302,
+        "dni": 748.3035908312146,
+        "poaSkyDiffuse": 458.6385797787321,
+        "poaGroundDiffuse": 21.61640797927362
+      },
+      "expected": {
+        "poaGlobal": 640.227997199976,
+        "poaDirect": 159.97300944197036,
+        "poaDiffuse": 480.2549877580057,
+        "poaSkyDiffuse": 458.6385797787321,
+        "poaGroundDiffuse": 21.61640797927362
+      }
+    },
+    {
+      "input": {
+        "aoi": 8.157687045426051,
+        "dni": 72.54045321446772,
+        "poaSkyDiffuse": 244.99205831354038,
+        "poaGroundDiffuse": 113.48643330039926
+      },
+      "expected": {
+        "poaGlobal": 430.28492920154304,
+        "poaDirect": 71.80643758760343,
+        "poaDiffuse": 358.47849161393964,
+        "poaSkyDiffuse": 244.99205831354038,
+        "poaGroundDiffuse": 113.48643330039926
+      }
+    },
+    {
+      "input": {
+        "aoi": 156.79677418929305,
+        "dni": 763.2174836272472,
+        "poaSkyDiffuse": 128.3226195363382,
+        "poaGroundDiffuse": 39.344182271216894
+      },
+      "expected": {
+        "poaGlobal": 167.6668018075551,
+        "poaDirect": 0.0,
+        "poaDiffuse": 167.6668018075551,
+        "poaSkyDiffuse": 128.3226195363382,
+        "poaGroundDiffuse": 39.344182271216894
+      }
+    },
+    {
+      "input": {
+        "aoi": 161.9806851963354,
+        "dni": 720.5368666227461,
+        "poaSkyDiffuse": 202.94001933424784,
+        "poaGroundDiffuse": 11.020231468363045
+      },
+      "expected": {
+        "poaGlobal": 213.9602508026109,
+        "poaDirect": 0.0,
+        "poaDiffuse": 213.9602508026109,
+        "poaSkyDiffuse": 202.94001933424784,
+        "poaGroundDiffuse": 11.020231468363045
+      }
+    },
+    {
+      "input": {
+        "aoi": 18.00366611930479,
+        "dni": 394.13796775411805,
+        "poaSkyDiffuse": 337.0780923053358,
+        "poaGroundDiffuse": 128.38834104832887
+      },
+      "expected": {
+        "poaGlobal": 840.3061219601567,
+        "poaDirect": 374.839688606492,
+        "poaDiffuse": 465.4664333536647,
+        "poaSkyDiffuse": 337.0780923053358,
+        "poaGroundDiffuse": 128.38834104832887
+      }
+    },
+    {
+      "input": {
+        "aoi": 145.2598049739339,
+        "dni": 705.8694909215783,
+        "poaSkyDiffuse": 89.80077896012206,
+        "poaGroundDiffuse": 68.77624196743639
+      },
+      "expected": {
+        "poaGlobal": 158.57702092755846,
+        "poaDirect": 0.0,
+        "poaDiffuse": 158.57702092755846,
+        "poaSkyDiffuse": 89.80077896012206,
+        "poaGroundDiffuse": 68.77624196743639
+      }
+    },
+    {
+      "input": {
+        "aoi": 57.797298795302424,
+        "dni": 975.889318909159,
+        "poaSkyDiffuse": 466.05788041773343,
+        "poaGroundDiffuse": 39.04154298511388
+      },
+      "expected": {
+        "poaGlobal": 1025.166620783536,
+        "poaDirect": 520.0671973806888,
+        "poaDiffuse": 505.0994234028473,
+        "poaSkyDiffuse": 466.05788041773343,
+        "poaGroundDiffuse": 39.04154298511388
+      }
+    },
+    {
+      "input": {
+        "aoi": 20.096349931052693,
+        "dni": 806.0599060486057,
+        "poaSkyDiffuse": 438.1531753664393,
+        "poaGroundDiffuse": 108.02077213481344
+      },
+      "expected": {
+        "poaGlobal": 1303.157817720418,
+        "poaDirect": 756.9838702191653,
+        "poaDiffuse": 546.1739475012528,
+        "poaSkyDiffuse": 438.1531753664393,
+        "poaGroundDiffuse": 108.02077213481344
+      }
+    },
+    {
+      "input": {
+        "aoi": 19.902682032970027,
+        "dni": 977.4334602084073,
+        "poaSkyDiffuse": 299.21297387839,
+        "poaGroundDiffuse": 0.06080921613259571
+      },
+      "expected": {
+        "poaGlobal": 1218.327285952169,
+        "poaDirect": 919.0535028576463,
+        "poaDiffuse": 299.2737830945226,
+        "poaSkyDiffuse": 299.21297387839,
+        "poaGroundDiffuse": 0.06080921613259571
+      }
+    },
+    {
+      "input": {
+        "aoi": 22.2551029907769,
+        "dni": 357.83966779373446,
+        "poaSkyDiffuse": 286.1616506251171,
+        "poaGroundDiffuse": 92.10897994263875
+      },
+      "expected": {
+        "poaGlobal": 709.4536679719245,
+        "poaDirect": 331.18303740416866,
+        "poaDiffuse": 378.27063056775586,
+        "poaSkyDiffuse": 286.1616506251171,
+        "poaGroundDiffuse": 92.10897994263875
+      }
+    },
+    {
+      "input": {
+        "aoi": 107.61342747830739,
+        "dni": 92.07249444045857,
+        "poaSkyDiffuse": 127.0142667252287,
+        "poaGroundDiffuse": 60.942625442350526
+      },
+      "expected": {
+        "poaGlobal": 187.9568921675792,
+        "poaDirect": 0.0,
+        "poaDiffuse": 187.9568921675792,
+        "poaSkyDiffuse": 127.0142667252287,
+        "poaGroundDiffuse": 60.942625442350526
+      }
+    },
+    {
+      "input": {
+        "aoi": 134.6323911652125,
+        "dni": 33.37982185568053,
+        "poaSkyDiffuse": 369.74508364008665,
+        "poaGroundDiffuse": 128.4584904918781
+      },
+      "expected": {
+        "poaGlobal": 498.20357413196473,
+        "poaDirect": 0.0,
+        "poaDiffuse": 498.20357413196473,
+        "poaSkyDiffuse": 369.74508364008665,
+        "poaGroundDiffuse": 128.4584904918781
+      }
+    },
+    {
+      "input": {
+        "aoi": 144.25467736189708,
+        "dni": 920.2238494905114,
+        "poaSkyDiffuse": 396.9129294912945,
+        "poaGroundDiffuse": 26.974594023111738
+      },
+      "expected": {
+        "poaGlobal": 423.88752351440627,
+        "poaDirect": 0.0,
+        "poaDiffuse": 423.88752351440627,
+        "poaSkyDiffuse": 396.9129294912945,
+        "poaGroundDiffuse": 26.974594023111738
+      }
+    },
+    {
+      "input": {
+        "aoi": 174.47648205347843,
+        "dni": 1001.8756716233967,
+        "poaSkyDiffuse": 84.7312480203381,
+        "poaGroundDiffuse": 13.895798115521757
+      },
+      "expected": {
+        "poaGlobal": 98.62704613585986,
+        "poaDirect": 0.0,
+        "poaDiffuse": 98.62704613585986,
+        "poaSkyDiffuse": 84.7312480203381,
+        "poaGroundDiffuse": 13.895798115521757
+      }
+    },
+    {
+      "input": {
+        "aoi": 175.7401963106053,
+        "dni": 54.24099918760204,
+        "poaSkyDiffuse": 53.93363053385525,
+        "poaGroundDiffuse": 123.66594807717648
+      },
+      "expected": {
+        "poaGlobal": 177.59957861103175,
+        "poaDirect": 0.0,
+        "poaDiffuse": 177.59957861103175,
+        "poaSkyDiffuse": 53.93363053385525,
+        "poaGroundDiffuse": 123.66594807717648
+      }
+    },
+    {
+      "input": {
+        "aoi": 176.78055418901374,
+        "dni": 42.42672350593355,
+        "poaSkyDiffuse": 252.38466082313826,
+        "poaGroundDiffuse": 107.02805141634579
+      },
+      "expected": {
+        "poaGlobal": 359.41271223948405,
+        "poaDirect": 0.0,
+        "poaDiffuse": 359.41271223948405,
+        "poaSkyDiffuse": 252.38466082313826,
+        "poaGroundDiffuse": 107.02805141634579
+      }
+    },
+    {
+      "input": {
+        "aoi": 161.50882717593174,
+        "dni": 402.83786246667836,
+        "poaSkyDiffuse": 30.3224634523484,
+        "poaGroundDiffuse": 121.59148766888228
+      },
+      "expected": {
+        "poaGlobal": 151.9139511212307,
+        "poaDirect": 0.0,
+        "poaDiffuse": 151.9139511212307,
+        "poaSkyDiffuse": 30.3224634523484,
+        "poaGroundDiffuse": 121.59148766888228
+      }
+    },
+    {
+      "input": {
+        "aoi": 100.85237020732566,
+        "dni": 357.2535912449331,
+        "poaSkyDiffuse": 423.1029483594782,
+        "poaGroundDiffuse": 106.3179723242259
+      },
+      "expected": {
+        "poaGlobal": 529.4209206837041,
+        "poaDirect": 0.0,
+        "poaDiffuse": 529.4209206837041,
+        "poaSkyDiffuse": 423.1029483594782,
+        "poaGroundDiffuse": 106.3179723242259
+      }
+    },
+    {
+      "input": {
+        "aoi": 164.23519604487376,
+        "dni": 359.72529385848395,
+        "poaSkyDiffuse": 189.39224944039972,
+        "poaGroundDiffuse": 15.361803336146318
+      },
+      "expected": {
+        "poaGlobal": 204.75405277654605,
+        "poaDirect": 0.0,
+        "poaDiffuse": 204.75405277654605,
+        "poaSkyDiffuse": 189.39224944039972,
+        "poaGroundDiffuse": 15.361803336146318
+      }
+    },
+    {
+      "input": {
+        "aoi": 91.75873456634514,
+        "dni": 503.53959386984997,
+        "poaSkyDiffuse": 345.3809365479722,
+        "poaGroundDiffuse": 0.6385921755848012
+      },
+      "expected": {
+        "poaGlobal": 346.019528723557,
+        "poaDirect": 0.0,
+        "poaDiffuse": 346.019528723557,
+        "poaSkyDiffuse": 345.3809365479722,
+        "poaGroundDiffuse": 0.6385921755848012
+      }
+    },
+    {
+      "input": {
+        "aoi": 99.27025643987864,
+        "dni": 790.8135586565141,
+        "poaSkyDiffuse": 13.330277751870401,
+        "poaGroundDiffuse": 5.282707539874537
+      },
+      "expected": {
+        "poaGlobal": 18.612985291744938,
+        "poaDirect": 0.0,
+        "poaDiffuse": 18.612985291744938,
+        "poaSkyDiffuse": 13.330277751870401,
+        "poaGroundDiffuse": 5.282707539874537
+      }
+    },
+    {
+      "input": {
+        "aoi": 82.29415956173716,
+        "dni": 287.14210487392575,
+        "poaSkyDiffuse": 334.30143726938354,
+        "poaGroundDiffuse": 85.81767535891929
+      },
+      "expected": {
+        "poaGlobal": 458.6211936087792,
+        "poaDirect": 38.50208098047634,
+        "poaDiffuse": 420.11911262830284,
+        "poaSkyDiffuse": 334.30143726938354,
+        "poaGroundDiffuse": 85.81767535891929
+      }
+    },
+    {
+      "input": {
+        "aoi": 170.63649847853594,
+        "dni": 895.6661626165179,
+        "poaSkyDiffuse": 186.2875504720503,
+        "poaGroundDiffuse": 102.18828894277465
+      },
+      "expected": {
+        "poaGlobal": 288.4758394148249,
+        "poaDirect": 0.0,
+        "poaDiffuse": 288.4758394148249,
+        "poaSkyDiffuse": 186.2875504720503,
+        "poaGroundDiffuse": 102.18828894277465
+      }
+    },
+    {
+      "input": {
+        "aoi": 119.73856182594633,
+        "dni": 1021.1859548599742,
+        "poaSkyDiffuse": 330.79321149932974,
+        "poaGroundDiffuse": 106.9811733229959
+      },
+      "expected": {
+        "poaGlobal": 437.77438482232566,
+        "poaDirect": 0.0,
+        "poaDiffuse": 437.77438482232566,
+        "poaSkyDiffuse": 330.79321149932974,
+        "poaGroundDiffuse": 106.9811733229959
+      }
+    },
+    {
+      "input": {
+        "aoi": 53.5001810135221,
+        "dni": 337.6723230345137,
+        "poaSkyDiffuse": 270.62274129940135,
+        "poaGroundDiffuse": 15.057007347662083
+      },
+      "expected": {
+        "poaGlobal": 486.5340832860822,
+        "poaDirect": 200.85433463901876,
+        "poaDiffuse": 285.67974864706343,
+        "poaSkyDiffuse": 270.62274129940135,
+        "poaGroundDiffuse": 15.057007347662083
+      }
+    },
+    {
+      "input": {
+        "aoi": 179.28375133466199,
+        "dni": 844.337619376058,
+        "poaSkyDiffuse": 226.75060426766024,
+        "poaGroundDiffuse": 52.444509347220844
+      },
+      "expected": {
+        "poaGlobal": 279.19511361488105,
+        "poaDirect": 0.0,
+        "poaDiffuse": 279.19511361488105,
+        "poaSkyDiffuse": 226.75060426766024,
+        "poaGroundDiffuse": 52.444509347220844
+      }
+    },
+    {
+      "input": {
+        "aoi": 30.99630461514841,
+        "dni": 286.1276116197636,
+        "poaSkyDiffuse": 387.0505391985454,
+        "poaGroundDiffuse": 25.905836355217094
+      },
+      "expected": {
+        "poaGlobal": 658.2251122025001,
+        "poaDirect": 245.26873664873762,
+        "poaDiffuse": 412.9563755537625,
+        "poaSkyDiffuse": 387.0505391985454,
+        "poaGroundDiffuse": 25.905836355217094
+      }
+    },
+    {
+      "input": {
+        "aoi": 91.12231380935646,
+        "dni": 550.8297140910837,
+        "poaSkyDiffuse": 310.9269049703145,
+        "poaGroundDiffuse": 122.8229865781464
+      },
+      "expected": {
+        "poaGlobal": 433.74989154846094,
+        "poaDirect": 0.0,
+        "poaDiffuse": 433.74989154846094,
+        "poaSkyDiffuse": 310.9269049703145,
+        "poaGroundDiffuse": 122.8229865781464
+      }
+    },
+    {
+      "input": {
+        "aoi": 22.551545142624477,
+        "dni": 835.5394980084473,
+        "poaSkyDiffuse": 314.5211230949971,
+        "poaGroundDiffuse": 106.88228495021248
+      },
+      "expected": {
+        "poaGlobal": 1193.053281630938,
+        "poaDirect": 771.6498735857285,
+        "poaDiffuse": 421.4034080452096,
+        "poaSkyDiffuse": 314.5211230949971,
+        "poaGroundDiffuse": 106.88228495021248
+      }
+    },
+    {
+      "input": {
+        "aoi": 29.56092933904339,
+        "dni": 319.31741173841465,
+        "poaSkyDiffuse": 434.39215624472894,
+        "poaGroundDiffuse": 86.45102973202667
+      },
+      "expected": {
+        "poaGlobal": 798.5955458243088,
+        "poaDirect": 277.75235984755324,
+        "poaDiffuse": 520.8431859767556,
+        "poaSkyDiffuse": 434.39215624472894,
+        "poaGroundDiffuse": 86.45102973202667
+      }
+    },
+    {
+      "input": {
+        "aoi": 156.08584896969163,
+        "dni": 898.4572156783178,
+        "poaSkyDiffuse": 104.03725101411781,
+        "poaGroundDiffuse": 26.188382882720695
+      },
+      "expected": {
+        "poaGlobal": 130.2256338968385,
+        "poaDirect": 0.0,
+        "poaDiffuse": 130.2256338968385,
+        "poaSkyDiffuse": 104.03725101411781,
+        "poaGroundDiffuse": 26.188382882720695
+      }
+    },
+    {
+      "input": {
+        "aoi": 117.67729790002426,
+        "dni": 993.9736227620982,
+        "poaSkyDiffuse": 473.04340701154166,
+        "poaGroundDiffuse": 7.296749763322563
+      },
+      "expected": {
+        "poaGlobal": 480.3401567748642,
+        "poaDirect": 0.0,
+        "poaDiffuse": 480.3401567748642,
+        "poaSkyDiffuse": 473.04340701154166,
+        "poaGroundDiffuse": 7.296749763322563
+      }
+    },
+    {
+      "input": {
+        "aoi": 133.55020841840567,
+        "dni": 160.17113918786416,
+        "poaSkyDiffuse": 424.0128784444252,
+        "poaGroundDiffuse": 57.82169009264015
+      },
+      "expected": {
+        "poaGlobal": 481.83456853706537,
+        "poaDirect": 0.0,
+        "poaDiffuse": 481.83456853706537,
+        "poaSkyDiffuse": 424.0128784444252,
+        "poaGroundDiffuse": 57.82169009264015
+      }
+    },
+    {
+      "input": {
+        "aoi": 32.821368823075986,
+        "dni": 604.4205186184719,
+        "poaSkyDiffuse": 425.67989321271745,
+        "poaGroundDiffuse": 33.330272786561615
+      },
+      "expected": {
+        "poaGlobal": 966.9437198927676,
+        "poaDirect": 507.9335538934886,
+        "poaDiffuse": 459.0101659992791,
+        "poaSkyDiffuse": 425.67989321271745,
+        "poaGroundDiffuse": 33.330272786561615
+      }
+    },
+    {
+      "input": {
+        "aoi": 173.3682093350046,
+        "dni": 1036.0374608805566,
+        "poaSkyDiffuse": 265.1074497725433,
+        "poaGroundDiffuse": 140.98550936049725
+      },
+      "expected": {
+        "poaGlobal": 406.09295913304055,
+        "poaDirect": 0.0,
+        "poaDiffuse": 406.09295913304055,
+        "poaSkyDiffuse": 265.1074497725433,
+        "poaGroundDiffuse": 140.98550936049725
+      }
+    },
+    {
+      "input": {
+        "aoi": 0.5572733431948107,
+        "dni": 399.17331023954245,
+        "poaSkyDiffuse": 215.74674797314142,
+        "poaGroundDiffuse": 107.2691601876545
+      },
+      "expected": {
+        "poaGlobal": 722.1703376456302,
+        "poaDirect": 399.1544294848343,
+        "poaDiffuse": 323.0159081607959,
+        "poaSkyDiffuse": 215.74674797314142,
+        "poaGroundDiffuse": 107.2691601876545
+      }
+    },
+    {
+      "input": {
+        "aoi": 133.18343239203207,
+        "dni": 176.18834752074324,
+        "poaSkyDiffuse": 117.6055155631,
+        "poaGroundDiffuse": 63.41182547484378
+      },
+      "expected": {
+        "poaGlobal": 181.01734103794377,
+        "poaDirect": 0.0,
+        "poaDiffuse": 181.01734103794377,
+        "poaSkyDiffuse": 117.6055155631,
+        "poaGroundDiffuse": 63.41182547484378
+      }
+    },
+    {
+      "input": {
+        "aoi": 65.87833230862377,
+        "dni": 219.16638242593285,
+        "poaSkyDiffuse": 237.5163437879645,
+        "poaGroundDiffuse": 10.814273404073749
+      },
+      "expected": {
+        "poaGlobal": 337.89857879828594,
+        "poaDirect": 89.5679616062477,
+        "poaDiffuse": 248.33061719203826,
+        "poaSkyDiffuse": 237.5163437879645,
+        "poaGroundDiffuse": 10.814273404073749
+      }
+    },
+    {
+      "input": {
+        "aoi": 145.41180183431752,
+        "dni": 517.7362356217959,
+        "poaSkyDiffuse": 433.5096002211804,
+        "poaGroundDiffuse": 77.55353941042438
+      },
+      "expected": {
+        "poaGlobal": 511.06313963160477,
+        "poaDirect": 0.0,
+        "poaDiffuse": 511.06313963160477,
+        "poaSkyDiffuse": 433.5096002211804,
+        "poaGroundDiffuse": 77.55353941042438
+      }
+    },
+    {
+      "input": {
+        "aoi": 142.6760510115463,
+        "dni": 194.54169119751614,
+        "poaSkyDiffuse": 489.33291073077044,
+        "poaGroundDiffuse": 86.36355656673459
+      },
+      "expected": {
+        "poaGlobal": 575.696467297505,
+        "poaDirect": 0.0,
+        "poaDiffuse": 575.696467297505,
+        "poaSkyDiffuse": 489.33291073077044,
+        "poaGroundDiffuse": 86.36355656673459
+      }
+    },
+    {
+      "input": {
+        "aoi": 110.99698467650485,
+        "dni": 167.74604362737412,
+        "poaSkyDiffuse": 189.0608521822424,
+        "poaGroundDiffuse": 132.44044147611717
+      },
+      "expected": {
+        "poaGlobal": 321.5012936583596,
+        "poaDirect": 0.0,
+        "poaDiffuse": 321.5012936583596,
+        "poaSkyDiffuse": 189.0608521822424,
+        "poaGroundDiffuse": 132.44044147611717
+      }
+    },
+    {
+      "input": {
+        "aoi": 91.35950582264216,
+        "dni": 262.9212729043628,
+        "poaSkyDiffuse": 93.68876410347632,
+        "poaGroundDiffuse": 3.6038825619705115
+      },
+      "expected": {
+        "poaGlobal": 97.29264666544682,
+        "poaDirect": 0.0,
+        "poaDiffuse": 97.29264666544682,
+        "poaSkyDiffuse": 93.68876410347632,
+        "poaGroundDiffuse": 3.6038825619705115
+      }
+    },
+    {
+      "input": {
+        "aoi": 175.7929560859638,
+        "dni": 532.1843765895941,
+        "poaSkyDiffuse": 69.30828013595058,
+        "poaGroundDiffuse": 53.88179706567395
+      },
+      "expected": {
+        "poaGlobal": 123.19007720162453,
+        "poaDirect": 0.0,
+        "poaDiffuse": 123.19007720162453,
+        "poaSkyDiffuse": 69.30828013595058,
+        "poaGroundDiffuse": 53.88179706567395
+      }
+    },
+    {
+      "input": {
+        "aoi": 83.0152788409581,
+        "dni": 773.736251784159,
+        "poaSkyDiffuse": 417.4909831341965,
+        "poaGroundDiffuse": 111.19180168238002
+      },
+      "expected": {
+        "poaGlobal": 622.7727191729958,
+        "poaDirect": 94.08993435641938,
+        "poaDiffuse": 528.6827848165765,
+        "poaSkyDiffuse": 417.4909831341965,
+        "poaGroundDiffuse": 111.19180168238002
+      }
+    }
+  ]
+}

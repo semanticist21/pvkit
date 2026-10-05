@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 `pvkit` — ESM-first TypeScript library for PV (solar) performance modeling, built to run
 **everywhere JavaScript runs** (browser, edge, Workers, React Native). No backend round-trip.
-pnpm monorepo. Currently `@pvkit/core` is scaffolded; PV models are **stubs** (frame only).
+pnpm monorepo. `@pvkit/core` implements all 11 modules, validated against pvlib fixtures.
 
 Positioning: not "smarter PV science" but "PV modeling everywhere JS runs." See `README.md`
 for the pitch, `ROADMAP.md` for planned/under-review packages (`sizer`, `economics`, `io`,
@@ -61,8 +61,8 @@ Out of core → separate packages: `@pvkit/diode` (single-diode/SAPM precision),
 
 Each is a subpath export (`@pvkit/core/solarposition`, …). The module
 `src/models/<module>/index.ts` files are referenced by `package.json` `exports` and
-`src/index.ts`; stubs exist (`export {}`) — fill them when implementing. Shared foundation
-(`src/units.ts`, `src/constants.ts`) sits flat at top; models nest under `src/models/`.
+`src/index.ts`. Shared foundation (`src/units.ts`, `src/sum.ts`) sits flat at top; models
+nest under `src/models/`. Constants live with the method that cites them.
 The root entry (`src/index.ts`) only re-exports submodules + unit types; real usage should
 prefer subpath imports for tree-shaking.
 

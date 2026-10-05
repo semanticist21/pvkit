@@ -1,0 +1,1464 @@
+{
+  "meta": {
+    "reference": "pvlib.atmosphere.get_relative_airmass @ pvlib 0.16.1",
+    "nullMeans": "NaN"
+  },
+  "cases": [
+    {
+      "input": {
+        "zenith": 0.0,
+        "model": "simple"
+      },
+      "expected": 1.0
+    },
+    {
+      "input": {
+        "zenith": 1e-6,
+        "model": "simple"
+      },
+      "expected": 1.0000000000000002
+    },
+    {
+      "input": {
+        "zenith": 30.0,
+        "model": "simple"
+      },
+      "expected": 1.1547005383792515
+    },
+    {
+      "input": {
+        "zenith": 45.0,
+        "model": "simple"
+      },
+      "expected": 1.414213562373095
+    },
+    {
+      "input": {
+        "zenith": 60.0,
+        "model": "simple"
+      },
+      "expected": 1.9999999999999996
+    },
+    {
+      "input": {
+        "zenith": 75.0,
+        "model": "simple"
+      },
+      "expected": 3.8637033051562737
+    },
+    {
+      "input": {
+        "zenith": 85.0,
+        "model": "simple"
+      },
+      "expected": 11.47371324566986
+    },
+    {
+      "input": {
+        "zenith": 87.5,
+        "model": "simple"
+      },
+      "expected": 22.925585626053344
+    },
+    {
+      "input": {
+        "zenith": 89.0,
+        "model": "simple"
+      },
+      "expected": 57.2986884985499
+    },
+    {
+      "input": {
+        "zenith": 89.9,
+        "model": "simple"
+      },
+      "expected": 572.9580860191508
+    },
+    {
+      "input": {
+        "zenith": 90.0,
+        "model": "simple"
+      },
+      "expected": 1.633123935319537e16
+    },
+    {
+      "input": {
+        "zenith": 90.5,
+        "model": "simple"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": 120.0,
+        "model": "simple"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": -10.0,
+        "model": "simple"
+      },
+      "expected": 1.0154266118857451
+    },
+    {
+      "input": {
+        "zenith": 28.49849447046675,
+        "model": "simple"
+      },
+      "expected": 1.1378769475402242
+    },
+    {
+      "input": {
+        "zenith": 33.84723179257851,
+        "model": "simple"
+      },
+      "expected": 1.2040567979516466
+    },
+    {
+      "input": {
+        "zenith": 15.708462528129726,
+        "model": "simple"
+      },
+      "expected": 1.0387972397755505
+    },
+    {
+      "input": {
+        "zenith": 37.64663051028039,
+        "model": "simple"
+      },
+      "expected": 1.2629566553478369
+    },
+    {
+      "input": {
+        "zenith": 52.74705106946946,
+        "model": "simple"
+      },
+      "expected": 1.6519779496949463
+    },
+    {
+      "input": {
+        "zenith": 63.94527724518521,
+        "model": "simple"
+      },
+      "expected": 2.2767147422691707
+    },
+    {
+      "input": {
+        "zenith": 43.72264661634589,
+        "model": "simple"
+      },
+      "expected": 1.3837114775067851
+    },
+    {
+      "input": {
+        "zenith": 41.76250465862546,
+        "model": "simple"
+      },
+      "expected": 1.3406406645370483
+    },
+    {
+      "input": {
+        "zenith": 85.73909245670315,
+        "model": "simple"
+      },
+      "expected": 13.459251285893489
+    },
+    {
+      "input": {
+        "zenith": 85.37986790314713,
+        "model": "simple"
+      },
+      "expected": 12.414778915190476
+    },
+    {
+      "input": {
+        "zenith": 87.62341775331012,
+        "model": "simple"
+      },
+      "expected": 24.115392039944243
+    },
+    {
+      "input": {
+        "zenith": 84.28153378862079,
+        "model": "simple"
+      },
+      "expected": 10.036085024953024
+    },
+    {
+      "input": {
+        "zenith": 0.0,
+        "model": "kasten1966"
+      },
+      "expected": 0.9994939325912029
+    },
+    {
+      "input": {
+        "zenith": 1e-6,
+        "model": "kasten1966"
+      },
+      "expected": 0.9994939325844524
+    },
+    {
+      "input": {
+        "zenith": 30.0,
+        "model": "kasten1966"
+      },
+      "expected": 1.1536079563589077
+    },
+    {
+      "input": {
+        "zenith": 45.0,
+        "model": "kasten1966"
+      },
+      "expected": 1.4119233259420552
+    },
+    {
+      "input": {
+        "zenith": 60.0,
+        "model": "kasten1966"
+      },
+      "expected": 1.9927643456208861
+    },
+    {
+      "input": {
+        "zenith": 75.0,
+        "model": "kasten1966"
+      },
+      "expected": 3.808134290491427
+    },
+    {
+      "input": {
+        "zenith": 85.0,
+        "model": "kasten1966"
+      },
+      "expected": 10.323080326274901
+    },
+    {
+      "input": {
+        "zenith": 87.5,
+        "model": "kasten1966"
+      },
+      "expected": 17.147878879189296
+    },
+    {
+      "input": {
+        "zenith": 89.0,
+        "model": "kasten1966"
+      },
+      "expected": 26.30979396448969
+    },
+    {
+      "input": {
+        "zenith": 89.9,
+        "model": "kasten1966"
+      },
+      "expected": 35.36519807157341
+    },
+    {
+      "input": {
+        "zenith": 90.0,
+        "model": "kasten1966"
+      },
+      "expected": 36.510324500288725
+    },
+    {
+      "input": {
+        "zenith": 90.5,
+        "model": "kasten1966"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": 120.0,
+        "model": "kasten1966"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": -10.0,
+        "model": "kasten1966"
+      },
+      "expected": 1.0149669367833778
+    },
+    {
+      "input": {
+        "zenith": 28.49849447046675,
+        "model": "kasten1966"
+      },
+      "expected": 1.1368463675347076
+    },
+    {
+      "input": {
+        "zenith": 33.84723179257851,
+        "model": "kasten1966"
+      },
+      "expected": 1.2027728249496374
+    },
+    {
+      "input": {
+        "zenith": 15.708462528129726,
+        "model": "kasten1966"
+      },
+      "expected": 1.0381104231025988
+    },
+    {
+      "input": {
+        "zenith": 37.64663051028039,
+        "model": "kasten1966"
+      },
+      "expected": 1.26142362882845
+    },
+    {
+      "input": {
+        "zenith": 52.74705106946946,
+        "model": "kasten1966"
+      },
+      "expected": 1.6481015063571847
+    },
+    {
+      "input": {
+        "zenith": 63.94527724518521,
+        "model": "kasten1966"
+      },
+      "expected": 2.265778230685913
+    },
+    {
+      "input": {
+        "zenith": 43.72264661634589,
+        "model": "kasten1966"
+      },
+      "expected": 1.3815885165641892
+    },
+    {
+      "input": {
+        "zenith": 41.76250465862546,
+        "model": "kasten1966"
+      },
+      "expected": 1.3387410405269409
+    },
+    {
+      "input": {
+        "zenith": 85.73909245670315,
+        "model": "kasten1966"
+      },
+      "expected": 11.7467781638964
+    },
+    {
+      "input": {
+        "zenith": 85.37986790314713,
+        "model": "kasten1966"
+      },
+      "expected": 11.011951723083232
+    },
+    {
+      "input": {
+        "zenith": 87.62341775331012,
+        "model": "kasten1966"
+      },
+      "expected": 17.690340522624307
+    },
+    {
+      "input": {
+        "zenith": 84.28153378862079,
+        "model": "kasten1966"
+      },
+      "expected": 9.22057156390284
+    },
+    {
+      "input": {
+        "zenith": 0.0,
+        "model": "kastenyoung1989"
+      },
+      "expected": 0.9997119918558381
+    },
+    {
+      "input": {
+        "zenith": 1e-6,
+        "model": "kastenyoung1989"
+      },
+      "expected": 0.9997119918509344
+    },
+    {
+      "input": {
+        "zenith": 30.0,
+        "model": "kastenyoung1989"
+      },
+      "expected": 1.1539922333636758
+    },
+    {
+      "input": {
+        "zenith": 45.0,
+        "model": "kastenyoung1989"
+      },
+      "expected": 1.4125952520262743
+    },
+    {
+      "input": {
+        "zenith": 60.0,
+        "model": "kastenyoung1989"
+      },
+      "expected": 1.9942928525292494
+    },
+    {
+      "input": {
+        "zenith": 75.0,
+        "model": "kastenyoung1989"
+      },
+      "expected": 3.812911869220776
+    },
+    {
+      "input": {
+        "zenith": 85.0,
+        "model": "kastenyoung1989"
+      },
+      "expected": 10.305791327930304
+    },
+    {
+      "input": {
+        "zenith": 87.5,
+        "model": "kastenyoung1989"
+      },
+      "expected": 17.056544397284956
+    },
+    {
+      "input": {
+        "zenith": 89.0,
+        "model": "kastenyoung1989"
+      },
+      "expected": 26.310555068385266
+    },
+    {
+      "input": {
+        "zenith": 89.9,
+        "model": "kastenyoung1989"
+      },
+      "expected": 36.46678629892429
+    },
+    {
+      "input": {
+        "zenith": 90.0,
+        "model": "kastenyoung1989"
+      },
+      "expected": 37.91960837783625
+    },
+    {
+      "input": {
+        "zenith": 90.5,
+        "model": "kastenyoung1989"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": 120.0,
+        "model": "kastenyoung1989"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": -10.0,
+        "model": "kastenyoung1989"
+      },
+      "expected": 1.0151740587069231
+    },
+    {
+      "input": {
+        "zenith": 28.49849447046675,
+        "model": "kastenyoung1989"
+      },
+      "expected": 1.1372139409961166
+    },
+    {
+      "input": {
+        "zenith": 33.84723179257851,
+        "model": "kastenyoung1989"
+      },
+      "expected": 1.2032072943133039
+    },
+    {
+      "input": {
+        "zenith": 15.708462528129726,
+        "model": "kastenyoung1989"
+      },
+      "expected": 1.038381052547561
+    },
+    {
+      "input": {
+        "zenith": 37.64663051028039,
+        "model": "kastenyoung1989"
+      },
+      "expected": 1.2619206373978418
+    },
+    {
+      "input": {
+        "zenith": 52.74705106946946,
+        "model": "kastenyoung1989"
+      },
+      "expected": 1.649089465226865
+    },
+    {
+      "input": {
+        "zenith": 63.94527724518521,
+        "model": "kastenyoung1989"
+      },
+      "expected": 2.2677856217141383
+    },
+    {
+      "input": {
+        "zenith": 43.72264661634589,
+        "model": "kastenyoung1989"
+      },
+      "expected": 1.3822234891392158
+    },
+    {
+      "input": {
+        "zenith": 41.76250465862546,
+        "model": "kastenyoung1989"
+      },
+      "expected": 1.339325276604292
+    },
+    {
+      "input": {
+        "zenith": 85.73909245670315,
+        "model": "kastenyoung1989"
+      },
+      "expected": 11.71554553434169
+    },
+    {
+      "input": {
+        "zenith": 85.37986790314713,
+        "model": "kastenyoung1989"
+      },
+      "expected": 10.98822672606655
+    },
+    {
+      "input": {
+        "zenith": 87.62341775331012,
+        "model": "kastenyoung1989"
+      },
+      "expected": 17.59431507609218
+    },
+    {
+      "input": {
+        "zenith": 84.28153378862079,
+        "model": "kastenyoung1989"
+      },
+      "expected": 9.212132282712837
+    },
+    {
+      "input": {
+        "zenith": 0.0,
+        "model": "gueymard1993"
+      },
+      "expected": 1.0
+    },
+    {
+      "input": {
+        "zenith": 1e-6,
+        "model": "gueymard1993"
+      },
+      "expected": 0.9999999999929745
+    },
+    {
+      "input": {
+        "zenith": 30.0,
+        "model": "gueymard1993"
+      },
+      "expected": 1.1542532978920454
+    },
+    {
+      "input": {
+        "zenith": 45.0,
+        "model": "gueymard1993"
+      },
+      "expected": 1.4128251521106643
+    },
+    {
+      "input": {
+        "zenith": 60.0,
+        "model": "gueymard1993"
+      },
+      "expected": 1.9942609535129503
+    },
+    {
+      "input": {
+        "zenith": 75.0,
+        "model": "gueymard1993"
+      },
+      "expected": 3.8105391075882773
+    },
+    {
+      "input": {
+        "zenith": 85.0,
+        "model": "gueymard1993"
+      },
+      "expected": 10.304326481410033
+    },
+    {
+      "input": {
+        "zenith": 87.5,
+        "model": "gueymard1993"
+      },
+      "expected": 17.10458911041333
+    },
+    {
+      "input": {
+        "zenith": 89.0,
+        "model": "gueymard1993"
+      },
+      "expected": 26.442770586932454
+    },
+    {
+      "input": {
+        "zenith": 89.9,
+        "model": "gueymard1993"
+      },
+      "expected": 36.430820718660954
+    },
+    {
+      "input": {
+        "zenith": 90.0,
+        "model": "gueymard1993"
+      },
+      "expected": 37.808218229990786
+    },
+    {
+      "input": {
+        "zenith": 90.5,
+        "model": "gueymard1993"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": 120.0,
+        "model": "gueymard1993"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": -10.0,
+        "model": "gueymard1993"
+      },
+      "expected": 1.0154907090510406
+    },
+    {
+      "input": {
+        "zenith": 28.49849447046675,
+        "model": "gueymard1993"
+      },
+      "expected": 1.137475770304209
+    },
+    {
+      "input": {
+        "zenith": 33.84723179257851,
+        "model": "gueymard1993"
+      },
+      "expected": 1.2034655271032633
+    },
+    {
+      "input": {
+        "zenith": 15.708462528129726,
+        "model": "gueymard1993"
+      },
+      "expected": 1.0386486686460337
+    },
+    {
+      "input": {
+        "zenith": 37.64663051028039,
+        "model": "gueymard1993"
+      },
+      "expected": 1.262173871919447
+    },
+    {
+      "input": {
+        "zenith": 52.74705106946946,
+        "model": "gueymard1993"
+      },
+      "expected": 1.6492471188799385
+    },
+    {
+      "input": {
+        "zenith": 63.94527724518521,
+        "model": "gueymard1993"
+      },
+      "expected": 2.2675333578739845
+    },
+    {
+      "input": {
+        "zenith": 43.72264661634589,
+        "model": "gueymard1993"
+      },
+      "expected": 1.382459426831301
+    },
+    {
+      "input": {
+        "zenith": 41.76250465862546,
+        "model": "gueymard1993"
+      },
+      "expected": 1.3395685613113055
+    },
+    {
+      "input": {
+        "zenith": 85.73909245670315,
+        "model": "gueymard1993"
+      },
+      "expected": 11.720232400305106
+    },
+    {
+      "input": {
+        "zenith": 85.37986790314713,
+        "model": "gueymard1993"
+      },
+      "expected": 10.989427136541902
+    },
+    {
+      "input": {
+        "zenith": 87.62341775331012,
+        "model": "gueymard1993"
+      },
+      "expected": 17.647996234720093
+    },
+    {
+      "input": {
+        "zenith": 84.28153378862079,
+        "model": "gueymard1993"
+      },
+      "expected": 9.207616305640222
+    },
+    {
+      "input": {
+        "zenith": 0.0,
+        "model": "gueymard2003"
+      },
+      "expected": 1.0
+    },
+    {
+      "input": {
+        "zenith": 1e-6,
+        "model": "gueymard2003"
+      },
+      "expected": 0.9999576778124106
+    },
+    {
+      "input": {
+        "zenith": 30.0,
+        "model": "gueymard2003"
+      },
+      "expected": 1.1541372359852222
+    },
+    {
+      "input": {
+        "zenith": 45.0,
+        "model": "gueymard2003"
+      },
+      "expected": 1.4128413562372397
+    },
+    {
+      "input": {
+        "zenith": 60.0,
+        "model": "gueymard2003"
+      },
+      "expected": 1.994865231596497
+    },
+    {
+      "input": {
+        "zenith": 75.0,
+        "model": "gueymard2003"
+      },
+      "expected": 3.815056201900154
+    },
+    {
+      "input": {
+        "zenith": 85.0,
+        "model": "gueymard2003"
+      },
+      "expected": 10.309507599542334
+    },
+    {
+      "input": {
+        "zenith": 87.5,
+        "model": "gueymard2003"
+      },
+      "expected": 17.05322201254114
+    },
+    {
+      "input": {
+        "zenith": 89.0,
+        "model": "gueymard2003"
+      },
+      "expected": 26.33041517419343
+    },
+    {
+      "input": {
+        "zenith": 89.9,
+        "model": "gueymard2003"
+      },
+      "expected": 36.67637615215476
+    },
+    {
+      "input": {
+        "zenith": 90.0,
+        "model": "gueymard2003"
+      },
+      "expected": 38.18147640661432
+    },
+    {
+      "input": {
+        "zenith": 90.5,
+        "model": "gueymard2003"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": 120.0,
+        "model": "gueymard2003"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": -10.0,
+        "model": "gueymard2003"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": 28.49849447046675,
+        "model": "gueymard2003"
+      },
+      "expected": 1.1373534427915784
+    },
+    {
+      "input": {
+        "zenith": 33.84723179257851,
+        "model": "gueymard2003"
+      },
+      "expected": 1.2033692385541164
+    },
+    {
+      "input": {
+        "zenith": 15.708462528129726,
+        "model": "gueymard2003"
+      },
+      "expected": 1.0384923004287754
+    },
+    {
+      "input": {
+        "zenith": 37.64663051028039,
+        "model": "gueymard2003"
+      },
+      "expected": 1.262104257622978
+    },
+    {
+      "input": {
+        "zenith": 52.74705106946946,
+        "model": "gueymard2003"
+      },
+      "expected": 1.6494525967211748
+    },
+    {
+      "input": {
+        "zenith": 63.94527724518521,
+        "model": "gueymard2003"
+      },
+      "expected": 2.2685523588640435
+    },
+    {
+      "input": {
+        "zenith": 43.72264661634589,
+        "model": "gueymard2003"
+      },
+      "expected": 1.3824562227144186
+    },
+    {
+      "input": {
+        "zenith": 41.76250465862546,
+        "model": "gueymard2003"
+      },
+      "expected": 1.3395397868277843
+    },
+    {
+      "input": {
+        "zenith": 85.73909245670315,
+        "model": "gueymard2003"
+      },
+      "expected": 11.71803847887305
+    },
+    {
+      "input": {
+        "zenith": 85.37986790314713,
+        "model": "gueymard2003"
+      },
+      "expected": 10.991405532122526
+    },
+    {
+      "input": {
+        "zenith": 87.62341775331012,
+        "model": "gueymard2003"
+      },
+      "expected": 17.590653381742904
+    },
+    {
+      "input": {
+        "zenith": 84.28153378862079,
+        "model": "gueymard2003"
+      },
+      "expected": 9.216452326119036
+    },
+    {
+      "input": {
+        "zenith": 0.0,
+        "model": "pickering2002"
+      },
+      "expected": 1.000000196171337
+    },
+    {
+      "input": {
+        "zenith": 1e-6,
+        "model": "pickering2002"
+      },
+      "expected": 1.0000001961604095
+    },
+    {
+      "input": {
+        "zenith": 30.0,
+        "model": "pickering2002"
+      },
+      "expected": 1.1540579205733472
+    },
+    {
+      "input": {
+        "zenith": 45.0,
+        "model": "pickering2002"
+      },
+      "expected": 1.4123696442557017
+    },
+    {
+      "input": {
+        "zenith": 60.0,
+        "model": "pickering2002"
+      },
+      "expected": 1.9931538464145713
+    },
+    {
+      "input": {
+        "zenith": 75.0,
+        "model": "pickering2002"
+      },
+      "expected": 3.8081682504977614
+    },
+    {
+      "input": {
+        "zenith": 85.0,
+        "model": "pickering2002"
+      },
+      "expected": 10.333705599375577
+    },
+    {
+      "input": {
+        "zenith": 87.5,
+        "model": "pickering2002"
+      },
+      "expected": 17.2127008611475
+    },
+    {
+      "input": {
+        "zenith": 89.0,
+        "model": "pickering2002"
+      },
+      "expected": 26.643769397640778
+    },
+    {
+      "input": {
+        "zenith": 89.9,
+        "model": "pickering2002"
+      },
+      "expected": 37.06351115033062
+    },
+    {
+      "input": {
+        "zenith": 90.0,
+        "model": "pickering2002"
+      },
+      "expected": 38.749398755780355
+    },
+    {
+      "input": {
+        "zenith": 90.5,
+        "model": "pickering2002"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": 120.0,
+        "model": "pickering2002"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": -10.0,
+        "model": "pickering2002"
+      },
+      "expected": 1.0155269238824354
+    },
+    {
+      "input": {
+        "zenith": 28.49849447046675,
+        "model": "pickering2002"
+      },
+      "expected": 1.1372968357774502
+    },
+    {
+      "input": {
+        "zenith": 33.84723179257851,
+        "model": "pickering2002"
+      },
+      "expected": 1.2032220066866894
+    },
+    {
+      "input": {
+        "zenith": 15.708462528129726,
+        "model": "pickering2002"
+      },
+      "expected": 1.038572889026954
+    },
+    {
+      "input": {
+        "zenith": 37.64663051028039,
+        "model": "pickering2002"
+      },
+      "expected": 1.2618723838449981
+    },
+    {
+      "input": {
+        "zenith": 52.74705106946946,
+        "model": "pickering2002"
+      },
+      "expected": 1.6485342730350365
+    },
+    {
+      "input": {
+        "zenith": 63.94527724518521,
+        "model": "pickering2002"
+      },
+      "expected": 2.2661175182529907
+    },
+    {
+      "input": {
+        "zenith": 43.72264661634589,
+        "model": "pickering2002"
+      },
+      "expected": 1.382035636633268
+    },
+    {
+      "input": {
+        "zenith": 41.76250465862546,
+        "model": "pickering2002"
+      },
+      "expected": 1.3391889877772234
+    },
+    {
+      "input": {
+        "zenith": 85.73909245670315,
+        "model": "pickering2002"
+      },
+      "expected": 11.764060945212798
+    },
+    {
+      "input": {
+        "zenith": 85.37986790314713,
+        "model": "pickering2002"
+      },
+      "expected": 11.025556385419907
+    },
+    {
+      "input": {
+        "zenith": 87.62341775331012,
+        "model": "pickering2002"
+      },
+      "expected": 17.76258594305047
+    },
+    {
+      "input": {
+        "zenith": 84.28153378862079,
+        "model": "pickering2002"
+      },
+      "expected": 9.227304235298378
+    },
+    {
+      "input": {
+        "zenith": 0.0,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.0
+    },
+    {
+      "input": {
+        "zenith": 1e-6,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.0000000000000002
+    },
+    {
+      "input": {
+        "zenith": 30.0,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.1542386581639
+    },
+    {
+      "input": {
+        "zenith": 45.0,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.4125165060982472
+    },
+    {
+      "input": {
+        "zenith": 60.0,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.9927999999999995
+    },
+    {
+      "input": {
+        "zenith": 75.0,
+        "model": "youngirvine1967"
+      },
+      "expected": 3.7991259713294294
+    },
+    {
+      "input": {
+        "zenith": 85.0,
+        "model": "youngirvine1967"
+      },
+      "expected": 9.67491823996905
+    },
+    {
+      "input": {
+        "zenith": 87.5,
+        "model": "youngirvine1967"
+      },
+      "expected": 8.49395305211072
+    },
+    {
+      "input": {
+        "zenith": 89.0,
+        "model": "youngirvine1967"
+      },
+      "expected": -168.3760720875122
+    },
+    {
+      "input": {
+        "zenith": 89.9,
+        "model": "youngirvine1967"
+      },
+      "expected": -225135.83671657302
+    },
+    {
+      "input": {
+        "zenith": 90.0,
+        "model": "youngirvine1967"
+      },
+      "expected": -5.226833643732392e45
+    },
+    {
+      "input": {
+        "zenith": 90.5,
+        "model": "youngirvine1967"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": 120.0,
+        "model": "youngirvine1967"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": -10.0,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.0153887268824673
+    },
+    {
+      "input": {
+        "zenith": 28.49849447046675,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.1374744614189003
+    },
+    {
+      "input": {
+        "zenith": 33.84723179257851,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.2034069644916154
+    },
+    {
+      "input": {
+        "zenith": 15.708462528129726,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.0386986375088298
+    },
+    {
+      "input": {
+        "zenith": 37.64663051028039,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.2620548141006755
+    },
+    {
+      "input": {
+        "zenith": 52.74705106946946,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.6485503641013612
+    },
+    {
+      "input": {
+        "zenith": 63.94527724518521,
+        "model": "youngirvine1967"
+      },
+      "expected": 2.2652853701158056
+    },
+    {
+      "input": {
+        "zenith": 43.72264661634589,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.3821927310879678
+    },
+    {
+      "input": {
+        "zenith": 41.76250465862546,
+        "model": "youngirvine1967"
+      },
+      "expected": 1.3393579651960876
+    },
+    {
+      "input": {
+        "zenith": 85.73909245670315,
+        "model": "youngirvine1967"
+      },
+      "expected": 10.549607001711378
+    },
+    {
+      "input": {
+        "zenith": 85.37986790314713,
+        "model": "youngirvine1967"
+      },
+      "expected": 10.133537434311123
+    },
+    {
+      "input": {
+        "zenith": 87.62341775331012,
+        "model": "youngirvine1967"
+      },
+      "expected": 7.315101288688021
+    },
+    {
+      "input": {
+        "zenith": 84.28153378862079,
+        "model": "youngirvine1967"
+      },
+      "expected": 8.835090784970118
+    },
+    {
+      "input": {
+        "zenith": 0.0,
+        "model": "young1994"
+      },
+      "expected": 1.0000003636475572
+    },
+    {
+      "input": {
+        "zenith": 1e-6,
+        "model": "young1994"
+      },
+      "expected": 1.0000003636475574
+    },
+    {
+      "input": {
+        "zenith": 30.0,
+        "model": "young1994"
+      },
+      "expected": 1.1541084405015132
+    },
+    {
+      "input": {
+        "zenith": 45.0,
+        "model": "young1994"
+      },
+      "expected": 1.4121299663161122
+    },
+    {
+      "input": {
+        "zenith": 60.0,
+        "model": "young1994"
+      },
+      "expected": 1.9917307558359625
+    },
+    {
+      "input": {
+        "zenith": 75.0,
+        "model": "young1994"
+      },
+      "expected": 3.796355362612846
+    },
+    {
+      "input": {
+        "zenith": 85.0,
+        "model": "young1994"
+      },
+      "expected": 10.058658384373164
+    },
+    {
+      "input": {
+        "zenith": 87.5,
+        "model": "young1994"
+      },
+      "expected": 16.077452798753992
+    },
+    {
+      "input": {
+        "zenith": 89.0,
+        "model": "young1994"
+      },
+      "expected": 23.458448486811395
+    },
+    {
+      "input": {
+        "zenith": 89.9,
+        "model": "young1994"
+      },
+      "expected": 30.73331508615473
+    },
+    {
+      "input": {
+        "zenith": 90.0,
+        "model": "young1994"
+      },
+      "expected": 31.73486239135723
+    },
+    {
+      "input": {
+        "zenith": 90.5,
+        "model": "young1994"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": 120.0,
+        "model": "young1994"
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "zenith": -10.0,
+        "model": "young1994"
+      },
+      "expected": 1.0153769702170754
+    },
+    {
+      "input": {
+        "zenith": 28.49849447046675,
+        "model": "young1994"
+      },
+      "expected": 1.137359360599626
+    },
+    {
+      "input": {
+        "zenith": 33.84723179257851,
+        "model": "young1994"
+      },
+      "expected": 1.203231232224232
+    },
+    {
+      "input": {
+        "zenith": 15.708462528129726,
+        "model": "young1994"
+      },
+      "expected": 1.0386681171039325
+    },
+    {
+      "input": {
+        "zenith": 37.64663051028039,
+        "model": "young1994"
+      },
+      "expected": 1.2618226274935578
+    },
+    {
+      "input": {
+        "zenith": 52.74705106946946,
+        "model": "young1994"
+      },
+      "expected": 1.6478994610204103
+    },
+    {
+      "input": {
+        "zenith": 63.94527724518521,
+        "model": "young1994"
+      },
+      "expected": 2.263871060666859
+    },
+    {
+      "input": {
+        "zenith": 43.72264661634589,
+        "model": "young1994"
+      },
+      "expected": 1.3818383084281376
+    },
+    {
+      "input": {
+        "zenith": 41.76250465862546,
+        "model": "young1994"
+      },
+      "expected": 1.3390480756985133
+    },
+    {
+      "input": {
+        "zenith": 85.73909245670315,
+        "model": "young1994"
+      },
+      "expected": 11.361917671569834
+    },
+    {
+      "input": {
+        "zenith": 85.37986790314713,
+        "model": "young1994"
+      },
+      "expected": 10.692486905036732
+    },
+    {
+      "input": {
+        "zenith": 87.62341775331012,
+        "model": "young1994"
+      },
+      "expected": 16.53263768121317
+    },
+    {
+      "input": {
+        "zenith": 84.28153378862079,
+        "model": "young1994"
+      },
+      "expected": 9.031768930403022
+    }
+  ]
+}

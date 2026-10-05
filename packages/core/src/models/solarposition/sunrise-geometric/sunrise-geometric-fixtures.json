@@ -1,0 +1,1114 @@
+{
+  "meta": {
+    "reference": "pvlib.solarposition.sun_rise_set_transit_geometric @ pvlib 0.16.1",
+    "unit": "UTC epoch ms; null = no event"
+  },
+  "cases": [
+    {
+      "input": {
+        "timeMs": 1066348800000,
+        "latitude": 39.742476,
+        "longitude": -105.1786,
+        "declination": -8.9590730469046,
+        "equationOfTime": 14.803396047648606
+      },
+      "expected": {
+        "sunrise": 1066396562383.3844,
+        "sunset": 1066436146937.0898,
+        "transit": 1066416354660.2372
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1709218800000,
+        "latitude": 37.5665,
+        "longitude": 126.978,
+        "declination": -7.879351793739763,
+        "equationOfTime": -12.918377145173539
+      },
+      "expected": {
+        "sunrise": 1709158166940.2046,
+        "sunset": 1709198433825.0527,
+        "transit": 1709178300382.6287
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1750464000000,
+        "latitude": 0.0,
+        "longitude": 180.0,
+        "declination": 23.452046074516133,
+        "equationOfTime": -1.343724731691309
+      },
+      "expected": {
+        "sunrise": 1750442480623.484,
+        "sunset": 1750485680623.484,
+        "transit": 1750464080623.484
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1766275200000,
+        "latitude": -33.8688,
+        "longitude": 151.2093,
+        "declination": -23.419890406297718,
+        "equationOfTime": 2.155085618955181
+      },
+      "expected": {
+        "sunrise": 1766256324163.0796,
+        "sunset": 1766307636762.646,
+        "transit": 1766281980462.8628
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1742428800000,
+        "latitude": 60.0,
+        "longitude": 10.0,
+        "declination": 0.0,
+        "equationOfTime": -7.5
+      },
+      "expected": {
+        "sunrise": 1742448450000.0,
+        "sunset": 1742491650000.0,
+        "transit": 1742470050000.0
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1750464000000,
+        "latitude": 78.2232,
+        "longitude": 15.6267,
+        "declination": 23.44,
+        "equationOfTime": -1.8
+      },
+      "expected": {
+        "sunrise": null,
+        "sunset": null,
+        "transit": 1750503557592.0
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1766275200000,
+        "latitude": 78.2232,
+        "longitude": 15.6267,
+        "declination": -23.44,
+        "equationOfTime": 1.9
+      },
+      "expected": {
+        "sunrise": null,
+        "sunset": null,
+        "transit": 1766314535592.0
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1750464000000,
+        "latitude": -70.0,
+        "longitude": -60.0,
+        "declination": 23.44,
+        "equationOfTime": -1.8
+      },
+      "expected": {
+        "sunrise": null,
+        "sunset": null,
+        "transit": 1750521708000.0
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1750464000000,
+        "latitude": 66.56,
+        "longitude": 0.0,
+        "declination": 23.43,
+        "equationOfTime": -1.8
+      },
+      "expected": {
+        "sunrise": 1750464533269.9463,
+        "sunset": 1750550082730.0537,
+        "transit": 1750507308000.0
+      }
+    },
+    {
+      "input": {
+        "timeMs": 760675386288,
+        "latitude": -17.276104058583623,
+        "longitude": -112.67801773658688,
+        "declination": -2.4306312984267815,
+        "equationOfTime": 4.349996861451922
+      },
+      "expected": {
+        "sunrise": 760713800183.3558,
+        "sunset": 760757363265.5343,
+        "transit": 760735581724.4451
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2491847644274,
+        "latitude": 3.650370210828203,
+        "longitude": -1.017837177319456,
+        "declination": -9.856093963437024,
+        "equationOfTime": -9.180748548832947
+      },
+      "expected": {
+        "sunrise": 2491798547545.51,
+        "sunset": 2491841442706.161,
+        "transit": 2491819995125.8354
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1846326553382,
+        "latitude": -80.64783093758321,
+        "longitude": -93.87118224378963,
+        "declination": 16.004389878482453,
+        "equationOfTime": -13.939716215063648
+      },
+      "expected": {
+        "sunrise": null,
+        "sunset": null,
+        "transit": 1846348165466.7112
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3323478197122,
+        "latitude": -85.78488206495865,
+        "longitude": 134.91472026602705,
+        "declination": 5.627646713514907,
+        "equationOfTime": -9.676087357342926
+      },
+      "expected": {
+        "sunrise": null,
+        "sunset": null,
+        "transit": 3323473801032.3774
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2880204728581,
+        "latitude": -27.52775971368934,
+        "longitude": -15.989375901718542,
+        "declination": 9.54623888330209,
+        "equationOfTime": -5.591141042097603
+      },
+      "expected": {
+        "sunrise": 2880170979721.5083,
+        "sunset": 2880211766115.8496,
+        "transit": 2880191372918.679
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2883982397350,
+        "latitude": -88.8730810846275,
+        "longitude": 97.64747995921486,
+        "declination": -16.716768576549722,
+        "equationOfTime": 7.6326139440591625
+      },
+      "expected": {
+        "sunrise": null,
+        "sunset": null,
+        "transit": 2883964906647.973
+      }
+    },
+    {
+      "input": {
+        "timeMs": -387439602516,
+        "latitude": 22.538437831860147,
+        "longitude": 55.6720908072395,
+        "declination": -20.25676186870926,
+        "equationOfTime": -5.7839478385917955
+      },
+      "expected": {
+        "sunrise": -387493299881.2912,
+        "sunset": -387454328648.55566,
+        "transit": -387473814264.9234
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1947477194802,
+        "latitude": -46.108885999187734,
+        "longitude": 4.20913483265132,
+        "declination": 18.865796002381195,
+        "equationOfTime": -7.616216790414672
+      },
+      "expected": {
+        "sunrise": 1947482040137.0068,
+        "sunset": 1947515253424.2883,
+        "transit": 1947498646780.6477
+      }
+    },
+    {
+      "input": {
+        "timeMs": 188348229191,
+        "latitude": 9.8265491088337,
+        "longitude": -54.61262552855901,
+        "declination": -0.4257391393051758,
+        "equationOfTime": 0.9159450882367255
+      },
+      "expected": {
+        "sunrise": 188300269771.615,
+        "sunset": 188343434375.22815,
+        "transit": 188321852073.42157
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2197740366086,
+        "latitude": 5.615715808470238,
+        "longitude": 73.63451537555373,
+        "declination": -18.54931013316998,
+        "equationOfTime": 8.490761045919022
+      },
+      "expected": {
+        "sunrise": 2197674272055.0547,
+        "sunset": 2197716564486.2397,
+        "transit": 2197695418270.647
+      }
+    },
+    {
+      "input": {
+        "timeMs": 677860819053,
+        "latitude": -78.8222699847544,
+        "longitude": -125.70346176560236,
+        "declination": -0.9166857156886506,
+        "equationOfTime": 7.180183281366034
+      },
+      "expected": {
+        "sunrise": 677858223329.0724,
+        "sunset": 677903652710.5814,
+        "transit": 677880938019.8268
+      }
+    },
+    {
+      "input": {
+        "timeMs": 518852844456,
+        "latitude": -6.509369010278148,
+        "longitude": -34.60201136286316,
+        "declination": -9.351920392863034,
+        "equationOfTime": -14.083849266290486
+      },
+      "expected": {
+        "sunrise": 518862491103.92474,
+        "sunset": 518906207923.44135,
+        "transit": 518884349513.68304
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2171548934153,
+        "latitude": -36.612819320092775,
+        "longitude": 85.19726304890936,
+        "declination": 18.457976838281986,
+        "equationOfTime": -12.381335233688894
+      },
+      "expected": {
+        "sunrise": 2171496541782.8196,
+        "sunset": 2171532849291.145,
+        "transit": 2171514695536.9822
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3094505645735,
+        "latitude": 23.432927321984355,
+        "longitude": -171.02717279036162,
+        "declination": 21.00377714499537,
+        "equationOfTime": 15.489556735072798
+      },
+      "expected": {
+        "sunrise": 3094561818185.071,
+        "sunset": 3094609616111.0605,
+        "transit": 3094585717148.066
+      }
+    },
+    {
+      "input": {
+        "timeMs": 780199044022,
+        "latitude": 58.29004120619311,
+        "longitude": -178.9715875735712,
+        "declination": -21.607914137016877,
+        "equationOfTime": -2.4652947942175913
+      },
+      "expected": {
+        "sunrise": 780266270322.982,
+        "sunset": 780290331874.4286,
+        "transit": 780278301098.7053
+      }
+    },
+    {
+      "input": {
+        "timeMs": 171165646360,
+        "latitude": -33.03596453261527,
+        "longitude": -177.11850349345792,
+        "declination": 16.146670321812802,
+        "equationOfTime": -16.24931890129244
+      },
+      "expected": {
+        "sunrise": 171226087891.0818,
+        "sunset": 171264078908.86322,
+        "transit": 171245083399.9725
+      }
+    },
+    {
+      "input": {
+        "timeMs": -72975192444,
+        "latitude": 32.61920462139851,
+        "longitude": 21.34296798646503,
+        "declination": -2.1013174296609396,
+        "equationOfTime": 11.991008587382264
+      },
+      "expected": {
+        "sunrise": -72991918836.47997,
+        "sunset": -72949364709.18402,
+        "transit": -72970641772.832
+      }
+    },
+    {
+      "input": {
+        "timeMs": -160477624821,
+        "latitude": -14.651228026300707,
+        "longitude": -99.50042601667379,
+        "declination": -3.8286637833419426,
+        "equationOfTime": 11.17773928581304
+      },
+      "expected": {
+        "sunrise": -160486631160.23816,
+        "sunset": -160442949963.98813,
+        "transit": -160464790562.11316
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1104055769679,
+        "latitude": -66.9914929325954,
+        "longitude": 172.01586131325976,
+        "declination": 12.90798541793835,
+        "equationOfTime": 13.844885597444847
+      },
+      "expected": {
+        "sunrise": 1104006524427.5188,
+        "sunset": 1104034046572.779,
+        "transit": 1104020285500.149
+      }
+    },
+    {
+      "input": {
+        "timeMs": 870981511334,
+        "latitude": -20.302889422434113,
+        "longitude": 133.14686953225038,
+        "declination": -3.206052954116924,
+        "equationOfTime": 15.812383446611348
+      },
+      "expected": {
+        "sunrise": 870900411017.1045,
+        "sunset": 870944180999.5065,
+        "transit": 870922296008.3054
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2068479467269,
+        "latitude": 45.35487270794525,
+        "longitude": -55.30186762976054,
+        "declination": 20.496596605789463,
+        "equationOfTime": 8.53299846962826
+      },
+      "expected": {
+        "sunrise": 2068445023025.1987,
+        "sunset": 2068498897911.447,
+        "transit": 2068471960468.323
+      }
+    },
+    {
+      "input": {
+        "timeMs": -128134050812,
+        "latitude": -18.631329237479218,
+        "longitude": 32.7150604854521,
+        "declination": -12.21081751051153,
+        "equationOfTime": -11.887299853915875
+      },
+      "expected": {
+        "sunrise": -128204142543.28294,
+        "sunset": -128158934209.76761,
+        "transit": -128181538376.52528
+      }
+    },
+    {
+      "input": {
+        "timeMs": 300519857211,
+        "latitude": 88.52540426858982,
+        "longitude": 23.34068342609742,
+        "declination": 13.40699070838782,
+        "equationOfTime": 0.6297326884786072
+      },
+      "expected": {
+        "sunrise": null,
+        "sunset": null,
+        "transit": 300536760452.0164
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2632783749533,
+        "latitude": -49.01238059450763,
+        "longitude": 127.29928947836339,
+        "declination": -9.328676887093414,
+        "equationOfTime": 13.916910142169094
+      },
+      "expected": {
+        "sunrise": 2632768397739.1294,
+        "sunset": 2632816828572.7036,
+        "transit": 2632792613155.917
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1433747583163,
+        "latitude": -68.4587859099501,
+        "longitude": -26.313021045198024,
+        "declination": -10.764815262119969,
+        "equationOfTime": 7.145441219395036
+      },
+      "expected": {
+        "sunrise": 1433742176163.4421,
+        "sunset": 1433799196633.7134,
+        "transit": 1433770686398.5776
+      }
+    },
+    {
+      "input": {
+        "timeMs": 982899425645,
+        "latitude": -8.613842045182654,
+        "longitude": 2.6161598270220088,
+        "declination": -18.709715340596965,
+        "equationOfTime": -12.357438473861674
+      },
+      "expected": {
+        "sunrise": 982907407794.4618,
+        "sunset": 982952019341.4381,
+        "transit": 982929713567.95
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3447032091951,
+        "latitude": 12.490276940644598,
+        "longitude": -68.24171083091471,
+        "declination": 20.832159664958844,
+        "equationOfTime": 11.278418492216238
+      },
+      "expected": {
+        "sunrise": 3447050540877.469,
+        "sunset": 3447096061733.5107,
+        "transit": 3447073301305.4897
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3416461349974,
+        "latitude": -9.395974590614486,
+        "longitude": -10.22839824749508,
+        "declination": -20.81001414579918,
+        "equationOfTime": 13.793364630813482
+      },
+      "expected": {
+        "sunrise": 3416451161818.0117,
+        "sunset": 3416496092609.3916,
+        "transit": 3416473627213.7017
+      }
+    },
+    {
+      "input": {
+        "timeMs": -358466242333,
+        "latitude": 55.69534443534349,
+        "longitude": -74.21879686805495,
+        "declination": -14.897094620874691,
+        "equationOfTime": -10.009799020170924
+      },
+      "expected": {
+        "sunrise": -358428079162.0287,
+        "sunset": -358395894639.5923,
+        "transit": -358411986900.8104
+      }
+    },
+    {
+      "input": {
+        "timeMs": 385365601946,
+        "latitude": 46.73660136637258,
+        "longitude": 13.823370021769774,
+        "declination": -4.9594293326770496,
+        "equationOfTime": -14.596689724563234
+      },
+      "expected": {
+        "sunrise": 385364427858.00775,
+        "sunset": 385405088527.1488,
+        "transit": 385384758192.57825
+      }
+    },
+    {
+      "input": {
+        "timeMs": -470101795419,
+        "latitude": -25.672731407128722,
+        "longitude": 13.229340149410294,
+        "declination": 3.14089223548841,
+        "equationOfTime": -1.207126413221703
+      },
+      "expected": {
+        "sunrise": -470083539864.091,
+        "sunset": -470041065364.0111,
+        "transit": -470062302614.0511
+      }
+    },
+    {
+      "input": {
+        "timeMs": 652632016660,
+        "latitude": 3.8446066310469553,
+        "longitude": 61.05726770994373,
+        "declination": 9.756110009380295,
+        "equationOfTime": 3.3044065942638827
+      },
+      "expected": {
+        "sunrise": 652585789098.1544,
+        "sunset": 652629306884.5536,
+        "transit": 652607547991.354
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2126509699974,
+        "latitude": 1.7885258977763019,
+        "longitude": 37.28594286607987,
+        "declination": 22.956052152386253,
+        "equationOfTime": 6.10115864437674
+      },
+      "expected": {
+        "sunrise": 2126488903424.0476,
+        "sunset": 2126532467184.339,
+        "transit": 2126510685304.1936
+      }
+    },
+    {
+      "input": {
+        "timeMs": -412988244253,
+        "latitude": 58.959736193103176,
+        "longitude": 144.5987229138675,
+        "declination": -22.15719528533492,
+        "equationOfTime": 14.777182603677991
+      },
+      "expected": {
+        "sunrise": -412995770501.3424,
+        "sunset": -412973010147.5687,
+        "transit": -412984390324.45557
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1247393347249,
+        "latitude": 58.71163835989193,
+        "longitude": 156.65676870612265,
+        "declination": 16.029725235923912,
+        "equationOfTime": 7.849004592617869
+      },
+      "expected": {
+        "sunrise": 1247333560276.654,
+        "sunset": 1247390302593.816,
+        "transit": 1247361931435.235
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1390123603842,
+        "latitude": 84.17906958742444,
+        "longitude": -75.87376552635573,
+        "declination": -2.938573236893082,
+        "equationOfTime": 4.3283470469519845
+      },
+      "expected": {
+        "sunrise": 1390136406156.4023,
+        "sunset": 1390165093849.4048,
+        "transit": 1390150750002.9036
+      }
+    },
+    {
+      "input": {
+        "timeMs": 351889668384,
+        "latitude": 24.420112795696667,
+        "longitude": -100.25748886472863,
+        "declination": 13.764604431732526,
+        "equationOfTime": -9.590447758381316
+      },
+      "expected": {
+        "sunrise": 351865504580.15845,
+        "sunset": 351911769868.2276,
+        "transit": 351888637224.19305
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3192913129639,
+        "latitude": -42.966005402084804,
+        "longitude": -67.39196596511978,
+        "declination": -3.463547762742172,
+        "equationOfTime": 11.277608523419907
+      },
+      "expected": {
+        "sunrise": 3192948321826.739,
+        "sunset": 3192993073003.9014,
+        "transit": 3192970697415.32
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2546847082016,
+        "latitude": 59.4012222248241,
+        "longitude": -175.56382698361662,
+        "declination": -6.960113840594789,
+        "equationOfTime": 4.3788964312978065
+      },
+      "expected": {
+        "sunrise": 2546879131795.2886,
+        "sunset": 2546916613374.092,
+        "transit": 2546897872584.69
+      }
+    },
+    {
+      "input": {
+        "timeMs": 279714476980,
+        "latitude": -34.00841683018788,
+        "longitude": 155.38601685812165,
+        "declination": 6.574350721742265,
+        "equationOfTime": -1.5675099161470587
+      },
+      "expected": {
+        "sunrise": 279662271790.7794,
+        "sunset": 279703331022.3186,
+        "transit": 279682801406.549
+      }
+    },
+    {
+      "input": {
+        "timeMs": -595649173380,
+        "latitude": 35.982504446209575,
+        "longitude": -78.43655434516779,
+        "declination": -1.668225957454308,
+        "equationOfTime": 0.9775892328670281
+      },
+      "expected": {
+        "sunrise": -595687343076.3047,
+        "sunset": -595644724688.3176,
+        "transit": -595666033882.3112
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1485219971287,
+        "latitude": 38.424357442422114,
+        "longitude": -86.30197153077434,
+        "declination": 7.90410224132206,
+        "equationOfTime": 6.450338385420969
+      },
+      "expected": {
+        "sunrise": 1485256407910.026,
+        "sunset": 1485302642995.7026,
+        "transit": 1485279525452.8643
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3070650354931,
+        "latitude": -28.467010864145692,
+        "longitude": -133.6363736698206,
+        "declination": -1.4130712204032814,
+        "equationOfTime": 6.886881338052332
+      },
+      "expected": {
+        "sunrise": 3070622675590.357,
+        "sunset": 3070666243443.244,
+        "transit": 3070644459516.8003
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2672874454429,
+        "latitude": 53.919293189043394,
+        "longitude": 7.4099554117918975,
+        "declination": 20.348146163587213,
+        "equationOfTime": -13.741798454166263
+      },
+      "expected": {
+        "sunrise": 2672883703654.777,
+        "sunset": 2672941588582.4404,
+        "transit": 2672912646118.6084
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3074755997522,
+        "latitude": -12.704953361531421,
+        "longitude": 45.74591890597903,
+        "declination": 8.130002414232862,
+        "equationOfTime": -10.211273692480127
+      },
+      "expected": {
+        "sunrise": 3074728476608.107,
+        "sunset": 3074770790703.6616,
+        "transit": 3074749633655.8843
+      }
+    },
+    {
+      "input": {
+        "timeMs": -131556142328,
+        "latitude": 84.55946833077839,
+        "longitude": -129.36389519367498,
+        "declination": 21.58343410342245,
+        "equationOfTime": -12.434042474165112
+      },
+      "expected": {
+        "sunrise": null,
+        "sunset": null,
+        "transit": -131512206622.60507
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1810914306995,
+        "latitude": -62.998953850970224,
+        "longitude": -48.82463818121063,
+        "declination": 11.418130838934601,
+        "equationOfTime": -12.648294791255665
+      },
+      "expected": {
+        "sunrise": 1810897281010.0688,
+        "sunset": 1810929272611.633,
+        "transit": 1810913276810.851
+      }
+    },
+    {
+      "input": {
+        "timeMs": -510859504101,
+        "latitude": 17.302638054554503,
+        "longitude": -12.70095863460796,
+        "declination": -11.149813229038564,
+        "equationOfTime": -12.520852900389514
+      },
+      "expected": {
+        "sunrise": -510856955700.41895,
+        "sunset": -510815445337.0884,
+        "transit": -510836200518.75366
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3060220670105,
+        "latitude": 61.92498455407366,
+        "longitude": 65.85132834775098,
+        "declination": -10.587329462841039,
+        "equationOfTime": -0.13813860133622602
+      },
+      "expected": {
+        "sunrise": 3060212327242.5566,
+        "sunset": 3060245680696.4688,
+        "transit": 3060229003969.512
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1113900847665,
+        "latitude": 22.616043149582108,
+        "longitude": 6.4770191372766295,
+        "declination": 16.413483194673375,
+        "equationOfTime": 7.835088665275078
+      },
+      "expected": {
+        "sunrise": 1113886683691.274,
+        "sunset": 1113933267128.9004,
+        "transit": 1113909975410.0872
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1136226906163,
+        "latitude": 79.52522041032539,
+        "longitude": 121.6695440181297,
+        "declination": 9.269049229376034,
+        "equationOfTime": 6.643809556593805
+      },
+      "expected": {
+        "sunrise": 1136137127179.814,
+        "sunset": 1136210074181.9106,
+        "transit": 1136173600680.8623
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1098975254303,
+        "latitude": -57.76816229778935,
+        "longitude": 39.02433071250732,
+        "declination": -15.837217737320403,
+        "equationOfTime": -7.084540210168961
+      },
+      "expected": {
+        "sunrise": 1098927842123.0565,
+        "sunset": 1098983876343.0269,
+        "transit": 1098955859233.0416
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2505956222286,
+        "latitude": -8.082975001073976,
+        "longitude": 116.86639597962883,
+        "declination": -16.711068826806894,
+        "equationOfTime": 14.890619222917845
+      },
+      "expected": {
+        "sunrise": 2505937672144.682,
+        "sunset": 2505982045110.9414,
+        "transit": 2505959858627.8115
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1787464139076,
+        "latitude": -21.75587556977427,
+        "longitude": 52.50764478444074,
+        "declination": -5.785546844770024,
+        "equationOfTime": 6.953425566787211
+      },
+      "expected": {
+        "sunrise": 1787451224784.1472,
+        "sunset": 1787495537135.2883,
+        "transit": 1787473380959.7175
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2532566142517,
+        "latitude": 62.548281771531336,
+        "longitude": 32.98427654636371,
+        "declination": 7.8324394267892,
+        "equationOfTime": 2.6055753760238156
+      },
+      "expected": {
+        "sunrise": 2532566642301.183,
+        "sunset": 2532617212577.03,
+        "transit": 2532591927439.1064
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3467874727727,
+        "latitude": -38.48146437647291,
+        "longitude": 38.60846125672187,
+        "declination": -18.28667831841389,
+        "equationOfTime": 11.577967811453735
+      },
+      "expected": {
+        "sunrise": 3467844784216.738,
+        "sunset": 3467895294365.7217,
+        "transit": 3467870039291.2295
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3296829526064,
+        "latitude": 9.02364580176311,
+        "longitude": -63.54541475798882,
+        "declination": 6.359902536463685,
+        "equationOfTime": -9.574056140058852
+      },
+      "expected": {
+        "sunrise": 3296801981929.627,
+        "sunset": 3296845668756.1934,
+        "transit": 3296823825342.9106
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1004809587232,
+        "latitude": -84.81022859488152,
+        "longitude": 35.70848010759004,
+        "declination": -13.40268196753058,
+        "equationOfTime": -14.753743840196737
+      },
+      "expected": {
+        "sunrise": null,
+        "sunset": null,
+        "transit": 1004781115189.4045
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2324072947793,
+        "latitude": -57.99143165266804,
+        "longitude": 161.2602409298058,
+        "declination": -20.020755601935477,
+        "equationOfTime": -11.964371528051151
+      },
+      "expected": {
+        "sunrise": 2323962257637.164,
+        "sunset": 2324022573171.773,
+        "transit": 2323992415404.4688
+      }
+    },
+    {
+      "input": {
+        "timeMs": -486540226188,
+        "latitude": -88.59298208955147,
+        "longitude": -14.625092572333568,
+        "declination": 12.772824966577756,
+        "equationOfTime": 7.593248067364258
+      },
+      "expected": {
+        "sunrise": null,
+        "sunset": null,
+        "transit": -486558545572.6667
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1237165192352,
+        "latitude": 7.22170835703597,
+        "longitude": -12.978091933471564,
+        "declination": -8.537588259995198,
+        "equationOfTime": 6.952766656329663
+      },
+      "expected": {
+        "sunrise": 1237186159171.0605,
+        "sunset": 1237228835981.0688,
+        "transit": 1237207497576.0647
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2566394089638,
+        "latitude": 46.70985186869508,
+        "longitude": 11.799164219456632,
+        "declination": 11.15583192195724,
+        "equationOfTime": 9.529781297294793
+      },
+      "expected": {
+        "sunrise": 2566354496327.1753,
+        "sunset": 2566403496500.2437,
+        "transit": 2566378996413.7095
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1645010202801,
+        "latitude": -74.6336827218352,
+        "longitude": 172.25253961098502,
+        "declination": 6.933215615013467,
+        "equationOfTime": 16.37350732810927
+      },
+      "expected": {
+        "sunrise": 1644955180028.6047,
+        "sunset": 1644985773931.503,
+        "transit": 1644970476980.0537
+      }
+    },
+    {
+      "input": {
+        "timeMs": -221209414705,
+        "latitude": 19.137508894224073,
+        "longitude": 44.420083648662235,
+        "declination": 22.342983263324705,
+        "equationOfTime": -8.049715923281948
+      },
+      "expected": {
+        "sunrise": -221260945784.92755,
+        "sunset": -221213809889.31302,
+        "transit": -221237377837.1203
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1887536119460,
+        "latitude": -88.37946404429562,
+        "longitude": 94.86562153643285,
+        "declination": -5.7827675256752515,
+        "equationOfTime": 8.174796940676464
+      },
+      "expected": {
+        "sunrise": null,
+        "sunset": null,
+        "transit": 1887514341763.015
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2969704891803,
+        "latitude": 51.38776825061188,
+        "longitude": 22.63626391324395,
+        "declination": -4.260862987956961,
+        "equationOfTime": -13.173024637416544
+      },
+      "expected": {
+        "sunrise": 2969672642348.8125,
+        "sunset": 2969713273007.466,
+        "transit": 2969692957678.1387
+      }
+    },
+    {
+      "input": {
+        "timeMs": -591645539605,
+        "latitude": -64.48812160734155,
+        "longitude": 30.926563978475883,
+        "declination": -4.402080953188738,
+        "equationOfTime": -12.199008259127861
+      },
+      "expected": {
+        "sunrise": -591654518351.4194,
+        "sunset": -591606862518.2992,
+        "transit": -591630690434.8593
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3275363149412,
+        "latitude": 48.18036401827654,
+        "longitude": 30.045894849665594,
+        "declination": 12.981441942537566,
+        "equationOfTime": -5.734540105410119
+      },
+      "expected": {
+        "sunrise": 3275348749658.92,
+        "sunset": 3275399116456.365,
+        "transit": 3275373933057.6426
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2923103049831,
+        "latitude": 52.674493919515356,
+        "longitude": 108.62874290876093,
+        "declination": 19.23375022311202,
+        "equationOfTime": 15.119456606513314
+      },
+      "expected": {
+        "sunrise": 2923072886624.1353,
+        "sunset": 2923129157244.476,
+        "transit": 2923101021934.305
+      }
+    },
+    {
+      "input": {
+        "timeMs": 447647388729,
+        "latitude": 62.898493632564914,
+        "longitude": -95.80538749748656,
+        "declination": 10.023075968645221,
+        "equationOfTime": -14.661621229599906
+      },
+      "expected": {
+        "sunrise": 447679024050.8016,
+        "sunset": 447731921929.74475,
+        "transit": 447705472990.27313
+      }
+    }
+  ]
+}

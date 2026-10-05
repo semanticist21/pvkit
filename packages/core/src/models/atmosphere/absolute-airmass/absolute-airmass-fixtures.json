@@ -1,0 +1,357 @@
+{
+  "meta": {
+    "reference": "pvlib.atmosphere.get_absolute_airmass @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "airmassRelative": 1.0,
+        "pressure": 101325.0
+      },
+      "expected": 1.0
+    },
+    {
+      "input": {
+        "airmassRelative": 37.92,
+        "pressure": 101325.0
+      },
+      "expected": 37.92
+    },
+    {
+      "input": {
+        "airmassRelative": 1.0,
+        "pressure": 0.0
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "airmassRelative": 5.0,
+        "pressure": 60000.0
+      },
+      "expected": 2.9607698001480385
+    },
+    {
+      "input": {
+        "airmassRelative": 38.0,
+        "pressure": 110000.0
+      },
+      "expected": 41.25339254872934
+    },
+    {
+      "input": {
+        "airmassRelative": 1.5,
+        "pressure": 33000.0
+      },
+      "expected": 0.48852701702442636
+    },
+    {
+      "input": {
+        "airmassRelative": 13.552908278657972,
+        "pressure": 73370.70766630421
+      },
+      "expected": 9.813831446747084
+    },
+    {
+      "input": {
+        "airmassRelative": 7.91920373262857,
+        "pressure": 75994.10201900313
+      },
+      "expected": 5.939430312032035
+    },
+    {
+      "input": {
+        "airmassRelative": 24.233820113932975,
+        "pressure": 94152.69143119932
+      },
+      "expected": 22.518424745979008
+    },
+    {
+      "input": {
+        "airmassRelative": 20.25878481910474,
+        "pressure": 78836.01512143186
+      },
+      "expected": 15.762367296726135
+    },
+    {
+      "input": {
+        "airmassRelative": 11.724403483002774,
+        "pressure": 63338.72306375556
+      },
+      "expected": 7.328978488010302
+    },
+    {
+      "input": {
+        "airmassRelative": 23.34440947874574,
+        "pressure": 52721.49329000098
+      },
+      "expected": 12.146579103801912
+    },
+    {
+      "input": {
+        "airmassRelative": 9.85212849161051,
+        "pressure": 98792.20923138555
+      },
+      "expected": 9.605857777623296
+    },
+    {
+      "input": {
+        "airmassRelative": 4.330308824783677,
+        "pressure": 105910.21028073148
+      },
+      "expected": 4.526266155572134
+    },
+    {
+      "input": {
+        "airmassRelative": 1.6683110314411804,
+        "pressure": 100736.26048730436
+      },
+      "expected": 1.6586174649602976
+    },
+    {
+      "input": {
+        "airmassRelative": 23.939721287847583,
+        "pressure": 62493.73333159148
+      },
+      "expected": 14.765186856110244
+    },
+    {
+      "input": {
+        "airmassRelative": 32.66896942952659,
+        "pressure": 70030.28054273044
+      },
+      "expected": 22.578999202483413
+    },
+    {
+      "input": {
+        "airmassRelative": 17.856647476767815,
+        "pressure": 90805.58326719662
+      },
+      "expected": 16.00279584825676
+    },
+    {
+      "input": {
+        "airmassRelative": 13.415522983599667,
+        "pressure": 99696.65772135512
+      },
+      "expected": 13.199928971615186
+    },
+    {
+      "input": {
+        "airmassRelative": 1.026382021734733,
+        "pressure": 94732.09399342907
+      },
+      "expected": 0.9595985014176213
+    },
+    {
+      "input": {
+        "airmassRelative": 6.311930973724101,
+        "pressure": 92020.34143398328
+      },
+      "expected": 5.732307360570701
+    },
+    {
+      "input": {
+        "airmassRelative": 3.1980451039613107,
+        "pressure": 86343.98536094319
+      },
+      "expected": 2.725210556526735
+    },
+    {
+      "input": {
+        "airmassRelative": 25.221853777410725,
+        "pressure": 53948.99385106318
+      },
+      "expected": 13.429002066123322
+    },
+    {
+      "input": {
+        "airmassRelative": 13.205703822708928,
+        "pressure": 86456.43039451816
+      },
+      "expected": 11.26788071412442
+    },
+    {
+      "input": {
+        "airmassRelative": 9.91556864061828,
+        "pressure": 79678.13838970494
+      },
+      "expected": 7.79722724263313
+    },
+    {
+      "input": {
+        "airmassRelative": 34.38346379718772,
+        "pressure": 66007.63018105732
+      },
+      "expected": 22.398923885206415
+    },
+    {
+      "input": {
+        "airmassRelative": 8.39108262470007,
+        "pressure": 82201.90926018177
+      },
+      "expected": 6.807431655665265
+    },
+    {
+      "input": {
+        "airmassRelative": 13.887035709564769,
+        "pressure": 78473.49957186141
+      },
+      "expected": 10.75513733835633
+    },
+    {
+      "input": {
+        "airmassRelative": 20.49676377249291,
+        "pressure": 89994.62886934959
+      },
+      "expected": 18.204773241828068
+    },
+    {
+      "input": {
+        "airmassRelative": 20.66731171299662,
+        "pressure": 90863.33858828366
+      },
+      "expected": 18.533441321368002
+    },
+    {
+      "input": {
+        "airmassRelative": 4.866215886411744,
+        "pressure": 93484.23943127363
+      },
+      "expected": 4.489656955831068
+    },
+    {
+      "input": {
+        "airmassRelative": 12.806002680396126,
+        "pressure": 53316.33899373171
+      },
+      "expected": 6.738407896004311
+    },
+    {
+      "input": {
+        "airmassRelative": 6.580477540757535,
+        "pressure": 77866.35881641915
+      },
+      "expected": 5.056973356743288
+    },
+    {
+      "input": {
+        "airmassRelative": 27.313728865015978,
+        "pressure": 66258.66629052073
+      },
+      "expected": 17.861053501276658
+    },
+    {
+      "input": {
+        "airmassRelative": 18.146928913593868,
+        "pressure": 73425.23150264983
+      },
+      "expected": 13.150184619222891
+    },
+    {
+      "input": {
+        "airmassRelative": 12.122152355310613,
+        "pressure": 54974.610075151526
+      },
+      "expected": 6.57696125343973
+    },
+    {
+      "input": {
+        "airmassRelative": 26.277594122334005,
+        "pressure": 67069.9802215428
+      },
+      "expected": 17.393907900860313
+    },
+    {
+      "input": {
+        "airmassRelative": 28.256385368915684,
+        "pressure": 101826.49587676664
+      },
+      "expected": 28.396236943106064
+    },
+    {
+      "input": {
+        "airmassRelative": 6.026194010397379,
+        "pressure": 102673.0166979167
+      },
+      "expected": 6.106365835227394
+    },
+    {
+      "input": {
+        "airmassRelative": 24.37088938715405,
+        "pressure": 51445.62216155285
+      },
+      "expected": 12.373802784628921
+    },
+    {
+      "input": {
+        "airmassRelative": 36.07014401630765,
+        "pressure": 105423.36148924183
+      },
+      "expected": 37.52909777054246
+    },
+    {
+      "input": {
+        "airmassRelative": 13.72899238737387,
+        "pressure": 97993.38421325393
+      },
+      "expected": 13.27757637184077
+    },
+    {
+      "input": {
+        "airmassRelative": 1.1056979438274033,
+        "pressure": 52278.05927618382
+      },
+      "expected": 0.5704785852352683
+    },
+    {
+      "input": {
+        "airmassRelative": 16.817179194527917,
+        "pressure": 61343.095582641654
+      },
+      "expected": 10.181276395364803
+    },
+    {
+      "input": {
+        "airmassRelative": 12.632973664568736,
+        "pressure": 50464.24110383178
+      },
+      "expected": 6.29176835792898
+    },
+    {
+      "input": {
+        "airmassRelative": 32.23831134130221,
+        "pressure": 51280.57363897172
+      },
+      "expected": 16.31580655054276
+    },
+    {
+      "input": {
+        "airmassRelative": 6.03420347779059,
+        "pressure": 89628.72959573659
+      },
+      "expected": 5.337655976674523
+    },
+    {
+      "input": {
+        "airmassRelative": 21.69358282083113,
+        "pressure": 76401.35584391611
+      },
+      "expected": 16.35745512582072
+    },
+    {
+      "input": {
+        "airmassRelative": 32.54903875685717,
+        "pressure": 56654.35248766391
+      },
+      "expected": 18.199306339655763
+    },
+    {
+      "input": {
+        "airmassRelative": 16.45452001700491,
+        "pressure": 62969.37580842478
+      },
+      "expected": 10.225816478638345
+    }
+  ]
+}

@@ -1,0 +1,1688 @@
+{
+  "meta": {
+    "reference": "pvlib.irradiance.disc @ pvlib 0.16.1",
+    "nan": "null"
+  },
+  "cases": [
+    {
+      "input": {
+        "ghi": 0.0,
+        "solarZenith": 30.0,
+        "timeMs": 1718000000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.0,
+        "airmass": 1.1536079563589077
+      }
+    },
+    {
+      "input": {
+        "ghi": -3.0,
+        "solarZenith": 30.0,
+        "timeMs": 1718000000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.0,
+        "airmass": 1.1536079563589077
+      }
+    },
+    {
+      "input": {
+        "ghi": 300.0,
+        "solarZenith": 30.0,
+        "timeMs": 1718000000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 16.609033699189386,
+        "kt": 0.26090351497740333,
+        "airmass": 1.1536079563589077
+      }
+    },
+    {
+      "input": {
+        "ghi": 1000.0,
+        "solarZenith": 15.0,
+        "timeMs": 1718000000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 825.5434441631019,
+        "kt": 0.7797323071039008,
+        "airmass": 1.034601673137333
+      }
+    },
+    {
+      "input": {
+        "ghi": 1500.0,
+        "solarZenith": 10.0,
+        "timeMs": 1718000000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 871.9078640694541,
+        "kt": 1.0,
+        "airmass": 1.014825777400634
+      }
+    },
+    {
+      "input": {
+        "ghi": 800.0,
+        "solarZenith": 30.0,
+        "timeMs": 1718000000000,
+        "pressure": null,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 583.950811279447,
+        "kt": 0.6957427066064089,
+        "airmass": 1.1536079563589077
+      }
+    },
+    {
+      "input": {
+        "ghi": 800.0,
+        "solarZenith": 30.0,
+        "timeMs": 1718000000000,
+        "pressure": 70000.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 350.11120346716365,
+        "kt": 0.6957427066064089,
+        "airmass": 0.7969657729595216
+      }
+    },
+    {
+      "input": {
+        "ghi": 80.0,
+        "solarZenith": 84.0,
+        "timeMs": 1718000000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 529.3576071584274,
+        "kt": 0.5764275486152182,
+        "airmass": 8.847380218596973
+      }
+    },
+    {
+      "input": {
+        "ghi": 80.0,
+        "solarZenith": 84.0,
+        "timeMs": 1718000000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 20.0
+      },
+      "expected": {
+        "dni": 529.3576071584274,
+        "kt": 0.5764275486152182,
+        "airmass": 8.847380218596973
+      }
+    },
+    {
+      "input": {
+        "ghi": 30.0,
+        "solarZenith": 86.9,
+        "timeMs": 1718000000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 122.71352172925783,
+        "kt": 0.3476139567801309,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 30.0,
+        "solarZenith": 87.5,
+        "timeMs": 1718000000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.3476139567801309,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 5.0,
+        "solarZenith": 90.0,
+        "timeMs": 1718000000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.057935659463355146,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 0.0,
+        "solarZenith": 95.0,
+        "timeMs": 1718000000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.0,
+        "airmass": null
+      }
+    },
+    {
+      "input": {
+        "ghi": 300.0,
+        "solarZenith": 45.0,
+        "timeMs": 1709208000000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 27.8843600332188,
+        "kt": 0.3039122217797615,
+        "airmass": 1.411923325942055
+      }
+    },
+    {
+      "input": {
+        "ghi": 300.0,
+        "solarZenith": 45.0,
+        "timeMs": 1735689599000,
+        "pressure": 101325.0,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 26.555637196330633,
+        "kt": 0.29919501664606524,
+        "airmass": 1.411923325942055
+      }
+    },
+    {
+      "input": {
+        "ghi": 403.8176885346718,
+        "solarZenith": 35.86194797070819,
+        "timeMs": 1241765126898,
+        "pressure": 80167.83777336449,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 46.57480884354831,
+        "kt": 0.3707158237167568,
+        "airmass": 0.9751512546071431
+      }
+    },
+    {
+      "input": {
+        "ghi": 751.6690064132225,
+        "solarZenith": 67.7515437478748,
+        "timeMs": 1768005972158,
+        "pressure": 82372.77035283507,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 790.7720610535839,
+        "kt": 1.0,
+        "airmass": 2.132972798001909
+      }
+    },
+    {
+      "input": {
+        "ghi": 344.2677350545498,
+        "solarZenith": 20.46804056334905,
+        "timeMs": 1899597289373,
+        "pressure": 62111.503414655934,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 23.22931433533226,
+        "kt": 0.2649125604676652,
+        "airmass": 0.6538197125227466
+      }
+    },
+    {
+      "input": {
+        "ghi": 283.29229276731525,
+        "solarZenith": 74.87080382057438,
+        "timeMs": 1088711058318,
+        "pressure": 103378.61142470546,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 719.4981873442574,
+        "kt": 0.8196422379113698,
+        "airmass": 3.853832002233635
+      }
+    },
+    {
+      "input": {
+        "ghi": 16.76526467261142,
+        "solarZenith": 77.85391695465668,
+        "timeMs": 1924985297881,
+        "pressure": 69693.41379175201,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.05619339549826146,
+        "airmass": 3.1985357778752563
+      }
+    },
+    {
+      "input": {
+        "ghi": 1026.381301691339,
+        "solarZenith": 30.73612014315533,
+        "timeMs": 1665563046697,
+        "pressure": 91659.50425903186,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 1009.6496278360976,
+        "kt": 0.8680126589122115,
+        "airmass": 1.0514277632467146
+      }
+    },
+    {
+      "input": {
+        "ghi": 399.3433836550702,
+        "solarZenith": 76.25866443449321,
+        "timeMs": 947809902815,
+        "pressure": 94705.93499490187,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 628.5131626866676,
+        "kt": 1.0,
+        "airmass": 3.8677804907942437
+      }
+    },
+    {
+      "input": {
+        "ghi": 167.99667090101462,
+        "solarZenith": 64.47948944180193,
+        "timeMs": 1040423890923,
+        "pressure": 88197.91967659385,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 16.75627465175098,
+        "kt": 0.27527238566547163,
+        "airmass": 2.010255217091631
+      }
+    },
+    {
+      "input": {
+        "ghi": 783.8468595075656,
+        "solarZenith": 6.059662978355561,
+        "timeMs": 1467216238761,
+        "pressure": 88285.16151298823,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 275.53967677166514,
+        "kt": 0.5951944663205029,
+        "airmass": 0.8757178067553272
+      }
+    },
+    {
+      "input": {
+        "ghi": 285.3583841066224,
+        "solarZenith": 45.54059166696102,
+        "timeMs": 2370375124917,
+        "pressure": 72419.71307150999,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 23.48658530765838,
+        "kt": 0.2894102224745484,
+        "airmass": 1.0187582251253224
+      }
+    },
+    {
+      "input": {
+        "ghi": 235.7095827773942,
+        "solarZenith": 49.41327455441685,
+        "timeMs": 1496272708793,
+        "pressure": 82091.50828851316,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 17.9355684032879,
+        "kt": 0.2720595310136509,
+        "airmass": 1.242818039869368
+      }
+    },
+    {
+      "input": {
+        "ghi": 629.9621715095662,
+        "solarZenith": 61.371068437450226,
+        "timeMs": 1785428244150,
+        "pressure": 91704.31442194422,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 786.7823004694238,
+        "kt": 0.9898401032027713,
+        "airmass": 1.8814193295132184
+      }
+    },
+    {
+      "input": {
+        "ghi": 120.91324711151762,
+        "solarZenith": 66.72581567902333,
+        "timeMs": 1450170354828,
+        "pressure": 62573.02163306771,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 4.608550708858862,
+        "kt": 0.21621431187783932,
+        "airmass": 1.5534731345480446
+      }
+    },
+    {
+      "input": {
+        "ghi": 176.74257936791432,
+        "solarZenith": 42.76044714933284,
+        "timeMs": 2068875158232,
+        "pressure": 72614.48246678333,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 12.452484141036257,
+        "kt": 0.18146189204110852,
+        "airmass": 0.9746575480686794
+      }
+    },
+    {
+      "input": {
+        "ghi": 553.4337659697462,
+        "solarZenith": 35.94561385751439,
+        "timeMs": 1421006482037,
+        "pressure": 63859.61126520377,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 112.12816515289396,
+        "kt": 0.48222968510237696,
+        "airmass": 0.7775991800167904
+      }
+    },
+    {
+      "input": {
+        "ghi": 818.2297545246615,
+        "solarZenith": 26.193590339953612,
+        "timeMs": 2109076227614,
+        "pressure": 100210.21231818102,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 494.06523100554284,
+        "kt": 0.6553789671052934,
+        "airmass": 1.101247393860288
+      }
+    },
+    {
+      "input": {
+        "ghi": 158.69091304132004,
+        "solarZenith": 80.82583596749285,
+        "timeMs": 1943373139692,
+        "pressure": 61121.6034012048,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 736.7307239505047,
+        "kt": 0.7489624767168243,
+        "airmass": 3.646354792392255
+      }
+    },
+    {
+      "input": {
+        "ghi": 1137.1492848554249,
+        "solarZenith": 85.04619263004349,
+        "timeMs": 1489532702720,
+        "pressure": 97236.2463723522,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 341.51916298890467,
+        "kt": 1.0,
+        "airmass": 9.982723619310322
+      }
+    },
+    {
+      "input": {
+        "ghi": -1.5576750726480826,
+        "solarZenith": 3.495642682419998,
+        "timeMs": 1621233286746,
+        "pressure": 68800.67760722198,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.0,
+        "airmass": 0.6799138976367599
+      }
+    },
+    {
+      "input": {
+        "ghi": 373.85765583257637,
+        "solarZenith": 0.7123699696729054,
+        "timeMs": 2278891724169,
+        "pressure": 60993.5485129953,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 23.801981715979164,
+        "kt": 0.2706142199833709,
+        "airmass": 0.601698451923022
+      }
+    },
+    {
+      "input": {
+        "ghi": 158.95176191182867,
+        "solarZenith": 60.809602310699255,
+        "timeMs": 1829195189840,
+        "pressure": 80483.81056855561,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 6.079272792412367,
+        "kt": 0.2301124088213598,
+        "airmass": 1.6224229749170083
+      }
+    },
+    {
+      "input": {
+        "ghi": 1022.4754514057538,
+        "solarZenith": 10.210989162104967,
+        "timeMs": 1605767115667,
+        "pressure": 70062.44674791578,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 355.2563889232104,
+        "kt": 0.739893379120954,
+        "airmass": 0.7021731651965856
+      }
+    },
+    {
+      "input": {
+        "ghi": 499.1302801934533,
+        "solarZenith": 73.75937636580473,
+        "timeMs": 1614097703788,
+        "pressure": 65563.9484159169,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 764.4225822312302,
+        "kt": 1.0,
+        "airmass": 2.285166043213287
+      }
+    },
+    {
+      "input": {
+        "ghi": 1173.275313562439,
+        "solarZenith": 68.9948977014182,
+        "timeMs": 2378180699575,
+        "pressure": 76477.00610378709,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 752.857415361067,
+        "kt": 1.0,
+        "airmass": 2.09006006151421
+      }
+    },
+    {
+      "input": {
+        "ghi": 460.0562822807129,
+        "solarZenith": 77.41686496769523,
+        "timeMs": 1627780614568,
+        "pressure": 103428.1545616915,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 540.8329703892231,
+        "kt": 1.0,
+        "airmass": 4.590978072385525
+      }
+    },
+    {
+      "input": {
+        "ghi": 787.9554391711625,
+        "solarZenith": 67.17743635397262,
+        "timeMs": 1493251677954,
+        "pressure": 102166.2440780496,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 708.2026433505947,
+        "kt": 1.0,
+        "airmass": 2.58323852196946
+      }
+    },
+    {
+      "input": {
+        "ghi": 899.9195045853546,
+        "solarZenith": 10.912662975452559,
+        "timeMs": 1570484564883,
+        "pressure": 86589.38256068151,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 395.66291921294675,
+        "kt": 0.668169115575624,
+        "airmass": 0.8697850377166111
+      }
+    },
+    {
+      "input": {
+        "ghi": 283.76790831201714,
+        "solarZenith": 13.383244500043737,
+        "timeMs": 1305033713867,
+        "pressure": 104880.01793307046,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 13.273462984031141,
+        "kt": 0.2172221705936308,
+        "airmass": 1.0633081162492726
+      }
+    },
+    {
+      "input": {
+        "ghi": 675.6264542456872,
+        "solarZenith": 69.94183737839053,
+        "timeMs": 1764871982910,
+        "pressure": 95802.33638463671,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 724.4579409527322,
+        "kt": 1.0,
+        "airmass": 2.7343913583161488
+      }
+    },
+    {
+      "input": {
+        "ghi": 265.70270440235004,
+        "solarZenith": 75.97121323215094,
+        "timeMs": 1421788496259,
+        "pressure": 100919.43989404733,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 754.1666812769479,
+        "kt": 0.7740988169120129,
+        "airmass": 4.0414691043657704
+      }
+    },
+    {
+      "input": {
+        "ghi": 601.5173619671336,
+        "solarZenith": 10.270607045024956,
+        "timeMs": 1620313271196,
+        "pressure": 72171.28599583372,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 77.64561320251887,
+        "kt": 0.45437345799251694,
+        "airmass": 0.723443692115885
+      }
+    },
+    {
+      "input": {
+        "ghi": 850.7428432167947,
+        "solarZenith": 35.01584637592047,
+        "timeMs": 1659286955032,
+        "pressure": 82827.01997837775,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 814.6855475058047,
+        "kt": 0.7818462899572244,
+        "airmass": 0.9969960442282506
+      }
+    },
+    {
+      "input": {
+        "ghi": 116.79196193135725,
+        "solarZenith": 12.152587524303266,
+        "timeMs": 2515276604711,
+        "pressure": 85657.65428274723,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.5394434516842438,
+        "kt": 0.08825847428669197,
+        "airmass": 0.8642215736637323
+      }
+    },
+    {
+      "input": {
+        "ghi": 369.0798290242994,
+        "solarZenith": 84.03224328744855,
+        "timeMs": 2259072229358,
+        "pressure": 104398.55004237118,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 350.2101824566551,
+        "kt": 1.0,
+        "airmass": 9.158277370701827
+      }
+    },
+    {
+      "input": {
+        "ghi": 533.8924192039862,
+        "solarZenith": 41.97131265548038,
+        "timeMs": 1035505587356,
+        "pressure": 100755.92377607667,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 233.31069171435792,
+        "kt": 0.5180939658549492,
+        "airmass": 1.335561497353054
+      }
+    },
+    {
+      "input": {
+        "ghi": 75.09524905473432,
+        "solarZenith": 72.34767221767174,
+        "timeMs": 1410336507071,
+        "pressure": 68206.4124106746,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.18334087943610572,
+        "airmass": 2.196635435059938
+      }
+    },
+    {
+      "input": {
+        "ghi": 242.7409464910011,
+        "solarZenith": 22.05272002032696,
+        "timeMs": 2149954083062,
+        "pressure": 84227.92125272122,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 15.609834500096776,
+        "kt": 0.1864830707075477,
+        "airmass": 0.8961972009705461
+      }
+    },
+    {
+      "input": {
+        "ghi": 470.0775619216238,
+        "solarZenith": 6.291018073937419,
+        "timeMs": 1008629534557,
+        "pressure": 76009.70273415284,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 30.627890308123906,
+        "kt": 0.3340256101043681,
+        "airmass": 0.7542830371899408
+      }
+    },
+    {
+      "input": {
+        "ghi": 641.7815413334428,
+        "solarZenith": 50.460328549221074,
+        "timeMs": 1679624259624,
+        "pressure": 74081.91543484291,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 732.582546184257,
+        "kt": 0.7313625195825295,
+        "airmass": 1.1460771121164801
+      }
+    },
+    {
+      "input": {
+        "ghi": 623.5266909573685,
+        "solarZenith": 59.594713406069424,
+        "timeMs": 2063885042335,
+        "pressure": 86873.4793159375,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 893.1643779964794,
+        "kt": 0.923907286730398,
+        "airmass": 1.6880709530892128
+      }
+    },
+    {
+      "input": {
+        "ghi": 805.0005022539272,
+        "solarZenith": 45.39426294888815,
+        "timeMs": 1899075161895,
+        "pressure": 104526.06283278,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 982.7889880883466,
+        "kt": 0.8237264507769582,
+        "airmass": 1.4666149279826086
+      }
+    },
+    {
+      "input": {
+        "ghi": 813.732240190411,
+        "solarZenith": 4.732927609781239,
+        "timeMs": 2258308959578,
+        "pressure": 100574.84036423343,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 359.9175888835951,
+        "kt": 0.6154925680912963,
+        "airmass": 0.9954530921154063
+      }
+    },
+    {
+      "input": {
+        "ghi": 28.215984673164595,
+        "solarZenith": 83.18144858021591,
+        "timeMs": 1669229631237,
+        "pressure": 97342.8299224446,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.1690443102825429,
+        "airmass": 7.599359874896386
+      }
+    },
+    {
+      "input": {
+        "ghi": 1121.8650174746606,
+        "solarZenith": 74.91888157776606,
+        "timeMs": 2099914824811,
+        "pressure": 82171.51152720234,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 650.3413971987536,
+        "kt": 1.0,
+        "airmass": 3.0725204841841305
+      }
+    },
+    {
+      "input": {
+        "ghi": 1167.3639261395867,
+        "solarZenith": 25.742319078206503,
+        "timeMs": 1636779813957,
+        "pressure": 88228.69462096586,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 1023.3249202935073,
+        "kt": 0.9258387226673783,
+        "airmass": 0.9658757320307124
+      }
+    },
+    {
+      "input": {
+        "ghi": 283.74616677439946,
+        "solarZenith": 56.710056397848334,
+        "timeMs": 1296205795407,
+        "pressure": 95706.97653364528,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 70.37403273274762,
+        "kt": 0.3657242520364291,
+        "airmass": 1.7158349671729356
+      }
+    },
+    {
+      "input": {
+        "ghi": 257.6032485632504,
+        "solarZenith": 82.96072540400249,
+        "timeMs": 1354764058790,
+        "pressure": 74076.00425436003,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 513.5159767372726,
+        "kt": 1.0,
+        "airmass": 5.621549499640776
+      }
+    },
+    {
+      "input": {
+        "ghi": 508.51119287624056,
+        "solarZenith": 74.02079878189329,
+        "timeMs": 2169038475811,
+        "pressure": 97517.1629220061,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 636.3368457970952,
+        "kt": 1.0,
+        "airmass": 3.4515944738651583
+      }
+    },
+    {
+      "input": {
+        "ghi": 9.848856902061051,
+        "solarZenith": 31.29210806369006,
+        "timeMs": 1938868819686,
+        "pressure": 69991.3572180505,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.008678593537177492,
+        "airmass": 0.8075563602938008
+      }
+    },
+    {
+      "input": {
+        "ghi": 367.2744815709191,
+        "solarZenith": 82.91487638992452,
+        "timeMs": 1956836603172,
+        "pressure": 80425.35452274654,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 492.50374547739835,
+        "kt": 1.0,
+        "airmass": 6.068170831316176
+      }
+    },
+    {
+      "input": {
+        "ghi": 5.428149106972835,
+        "solarZenith": 62.49125222310479,
+        "timeMs": 1391849569918,
+        "pressure": 80899.35675724,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.008342104413063382,
+        "airmass": 1.7211594777024106
+      }
+    },
+    {
+      "input": {
+        "ghi": 632.1469125177873,
+        "solarZenith": 45.91337961319561,
+        "timeMs": 2076268226143,
+        "pressure": 71712.2535586532,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 461.01292840187904,
+        "kt": 0.6585327271756103,
+        "airmass": 1.0155332558049328
+      }
+    },
+    {
+      "input": {
+        "ghi": 800.5798123836478,
+        "solarZenith": 61.384709303013715,
+        "timeMs": 2370508910360,
+        "pressure": 75303.28377030024,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 853.8763403115979,
+        "kt": 1.0,
+        "airmass": 1.5456015848286175
+      }
+    },
+    {
+      "input": {
+        "ghi": 150.18936035518374,
+        "solarZenith": 41.81847892076989,
+        "timeMs": 2055263159969,
+        "pressure": 96242.09409212098,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.9191017226589231,
+        "kt": 0.14349320683568387,
+        "airmass": 1.272690736272968
+      }
+    },
+    {
+      "input": {
+        "ghi": 962.5154398471758,
+        "solarZenith": 46.331905643470776,
+        "timeMs": 2420247933230,
+        "pressure": 64312.32557536818,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 899.8957215910773,
+        "kt": 1.0,
+        "airmass": 0.9176572358636605
+      }
+    },
+    {
+      "input": {
+        "ghi": 1083.5263189926775,
+        "solarZenith": 38.14752331923429,
+        "timeMs": 1936156252075,
+        "pressure": 90300.64197527674,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 866.6685783838966,
+        "kt": 1.0,
+        "airmass": 1.1318294117142333
+      }
+    },
+    {
+      "input": {
+        "ghi": 235.60044707533672,
+        "solarZenith": 10.838422818719962,
+        "timeMs": 2485243854262,
+        "pressure": 66329.51310079063,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 20.77668548238208,
+        "kt": 0.17529705299281317,
+        "airmass": 0.6661105940153084
+      }
+    },
+    {
+      "input": {
+        "ghi": 1152.0423900772719,
+        "solarZenith": 11.952065288214854,
+        "timeMs": 1885976678283,
+        "pressure": 66573.29818374348,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 843.6965187198921,
+        "kt": 0.8590147150913955,
+        "airmass": 0.6711745737535267
+      }
+    },
+    {
+      "input": {
+        "ghi": 434.0730860878922,
+        "solarZenith": 66.16766832974797,
+        "timeMs": 1148645288483,
+        "pressure": 61319.49668536096,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 932.1390212311097,
+        "kt": 0.8053472639415155,
+        "airmass": 1.48912706579963
+      }
+    },
+    {
+      "input": {
+        "ghi": 714.633027279428,
+        "solarZenith": 41.3600407819997,
+        "timeMs": 1360517424098,
+        "pressure": 65928.28292595505,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 408.00398742171666,
+        "kt": 0.6763358035751339,
+        "airmass": 0.8656784601472106
+      }
+    },
+    {
+      "input": {
+        "ghi": 269.93947634146633,
+        "solarZenith": 90.1747180598252,
+        "timeMs": 2024280674307,
+        "pressure": 72341.58153885188,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 1.0,
+        "airmass": null
+      }
+    },
+    {
+      "input": {
+        "ghi": 148.78112998820978,
+        "solarZenith": 85.1044280161874,
+        "timeMs": 1936131676280,
+        "pressure": 83309.62739215959,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 369.591602192626,
+        "kt": 1.0,
+        "airmass": 8.63662437281643
+      }
+    },
+    {
+      "input": {
+        "ghi": 254.990297620512,
+        "solarZenith": 88.76532541127355,
+        "timeMs": 1626471686888,
+        "pressure": 102604.69055317216,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 1.0,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 251.39128668177474,
+        "solarZenith": 88.37161174312394,
+        "timeMs": 2043982318697,
+        "pressure": 78977.88519754502,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 1.0,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 52.63792871159097,
+        "solarZenith": 87.30081102375024,
+        "timeMs": 1202812427906,
+        "pressure": 73123.40266301167,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.5756869250811586,
+        "airmass": 11.785435096820661
+      }
+    },
+    {
+      "input": {
+        "ghi": 229.4077099309392,
+        "solarZenith": 85.45508033700625,
+        "timeMs": 2247885837546,
+        "pressure": 66465.92543270127,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 424.589036891473,
+        "kt": 1.0,
+        "airmass": 7.3196987907949485
+      }
+    },
+    {
+      "input": {
+        "ghi": 281.3878166728045,
+        "solarZenith": 87.07465793785212,
+        "timeMs": 1542786283158,
+        "pressure": 89063.4555980551,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 1.0,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 112.99223766671626,
+        "solarZenith": 88.45415020004255,
+        "timeMs": 2163545598550,
+        "pressure": 98312.76786358938,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 1.0,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 177.48689712196975,
+        "solarZenith": 88.00403567423177,
+        "timeMs": 1856569865740,
+        "pressure": 104962.50692946055,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 1.0,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 85.1435993654951,
+        "solarZenith": 87.28694870855739,
+        "timeMs": 1120401752461,
+        "pressure": 97823.78092692407,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.9891713505435779,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 287.2420020908604,
+        "solarZenith": 86.60833567202897,
+        "timeMs": 1457119221665,
+        "pressure": 88602.25190065811,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 291.61301662352867,
+        "kt": 1.0,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 65.52303405830425,
+        "solarZenith": 84.78532679995979,
+        "timeMs": 983826021926,
+        "pressure": 86963.56001344876,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 445.94116691141295,
+        "kt": 0.517479433594402,
+        "airmass": 8.555609989392751
+      }
+    },
+    {
+      "input": {
+        "ghi": 64.26855884308797,
+        "solarZenith": 80.79279629169527,
+        "timeMs": 2083352868353,
+        "pressure": 67839.24480690976,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 25.735990935135536,
+        "kt": 0.28327173181918763,
+        "airmass": 4.033693950209444
+      }
+    },
+    {
+      "input": {
+        "ghi": 284.3835341081715,
+        "solarZenith": 80.87741860931288,
+        "timeMs": 1180385829190,
+        "pressure": 61586.256522342504,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 604.0840620823386,
+        "kt": 1.0,
+        "airmass": 3.693252501119064
+      }
+    },
+    {
+      "input": {
+        "ghi": 0.6859852423289792,
+        "solarZenith": 85.51249691425555,
+        "timeMs": 2165380661072,
+        "pressure": 92549.88714798211,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.006570855290608793,
+        "airmass": 10.296779071648908
+      }
+    },
+    {
+      "input": {
+        "ghi": 136.62466773609358,
+        "solarZenith": 86.48685674317096,
+        "timeMs": 1678761865684,
+        "pressure": 74308.28418550568,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 341.6478122483667,
+        "kt": 1.0,
+        "airmass": 9.978068820189002
+      }
+    },
+    {
+      "input": {
+        "ghi": 211.34794108526174,
+        "solarZenith": 89.35309430017344,
+        "timeMs": 2149716955798,
+        "pressure": 83974.89552743208,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 1.0,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 221.35926602531285,
+        "solarZenith": 89.36345222257464,
+        "timeMs": 1822164988487,
+        "pressure": 63631.93414335627,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 1.0,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 293.5437830091542,
+        "solarZenith": 87.77395708699704,
+        "timeMs": 2495532784658,
+        "pressure": 64496.68849615773,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 1.0,
+        "airmass": 11.707632493935975
+      }
+    },
+    {
+      "input": {
+        "ghi": 182.25422847341136,
+        "solarZenith": 87.4806694549554,
+        "timeMs": 2487363066277,
+        "pressure": 71845.96421918565,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "maxAirmass": 12.0
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 1.0,
+        "airmass": 12.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 675.3428910016709,
+        "solarZenith": 0.31026797785219506,
+        "timeMs": 2151453803068,
+        "pressure": null,
+        "minCosZenith": 0.07534001055149148,
+        "maxZenith": 86.66391683723789,
+        "maxAirmass": 26.943359797328117
+      },
+      "expected": {
+        "dni": 142.104125528708,
+        "kt": 0.4850237011465051,
+        "airmass": 0.9995064777345992
+      }
+    },
+    {
+      "input": {
+        "ghi": 867.5648599756913,
+        "solarZenith": 50.09618746744086,
+        "timeMs": 1592292144974,
+        "pressure": null,
+        "minCosZenith": 0.02251161977990268,
+        "maxZenith": 80.08666981785161,
+        "maxAirmass": 8.44267954953068
+      },
+      "expected": {
+        "dni": 803.8210698191963,
+        "kt": 1.0,
+        "airmass": 1.5556519553242985
+      }
+    },
+    {
+      "input": {
+        "ghi": 644.4978343786763,
+        "solarZenith": 36.14637089906615,
+        "timeMs": 1169496454439,
+        "pressure": null,
+        "minCosZenith": 0.19044815176610855,
+        "maxZenith": 86.93608582114881,
+        "maxAirmass": 19.58652047567122
+      },
+      "expected": {
+        "dni": 310.15152063236417,
+        "kt": 0.5638753006617979,
+        "airmass": 1.2369443313302546
+      }
+    },
+    {
+      "input": {
+        "ghi": 854.4687875648469,
+        "solarZenith": 29.48899795936763,
+        "timeMs": 2313757795557,
+        "pressure": null,
+        "minCosZenith": 0.15918482462866895,
+        "maxZenith": 87.21571857271903,
+        "maxAirmass": 27.752532101872077
+      },
+      "expected": {
+        "dni": 699.7159313885967,
+        "kt": 0.7262563660621179,
+        "airmass": 1.1477599780637413
+      }
+    },
+    {
+      "input": {
+        "ghi": 1039.1588902107248,
+        "solarZenith": 23.403884824212547,
+        "timeMs": 2293225008695,
+        "pressure": null,
+        "minCosZenith": 0.04677478472361858,
+        "maxZenith": 86.4234047701025,
+        "maxAirmass": 6.719396154705952
+      },
+      "expected": {
+        "dni": 972.501560868328,
+        "kt": 0.8421392940522268,
+        "airmass": 1.088787468278965
+      }
+    },
+    {
+      "input": {
+        "ghi": 1067.3722360917313,
+        "solarZenith": 52.28195028388068,
+        "timeMs": 1512341352670,
+        "pressure": null,
+        "minCosZenith": 0.0510744679225031,
+        "maxZenith": 88.1047833885711,
+        "maxAirmass": 9.614621130475829
+      },
+      "expected": {
+        "dni": 845.8241553543904,
+        "kt": 1.0,
+        "airmass": 1.630842125382074
+      }
+    },
+    {
+      "input": {
+        "ghi": 873.9387309097107,
+        "solarZenith": 19.006800169657282,
+        "timeMs": 947773911082,
+        "pressure": null,
+        "minCosZenith": 0.05974804620836014,
+        "maxZenith": 81.73820527497402,
+        "maxAirmass": 16.626719868915558
+      },
+      "expected": {
+        "dni": 481.3457473852263,
+        "kt": 0.6521602820559635,
+        "airmass": 1.0569124435415442
+      }
+    },
+    {
+      "input": {
+        "ghi": 132.97813494698914,
+        "solarZenith": 87.91058774219717,
+        "timeMs": 2132680675085,
+        "pressure": null,
+        "minCosZenith": 0.1068074531550156,
+        "maxZenith": 85.63893954216242,
+        "maxAirmass": 15.95519509914288
+      },
+      "expected": {
+        "dni": 0.0,
+        "kt": 0.9370918135463857,
+        "airmass": 15.95519509914288
+      }
+    },
+    {
+      "input": {
+        "ghi": 779.7955305937679,
+        "solarZenith": 19.700825286401926,
+        "timeMs": 1682301359312,
+        "pressure": null,
+        "minCosZenith": 0.0496831085200467,
+        "maxZenith": 88.57052996245028,
+        "maxAirmass": 29.131953608035268
+      },
+      "expected": {
+        "dni": 371.3009983812747,
+        "kt": 0.6117976660682399,
+        "airmass": 1.06140682341007
+      }
+    },
+    {
+      "input": {
+        "ghi": 176.27201862145296,
+        "solarZenith": 63.22058342797171,
+        "timeMs": 1362771504353,
+        "pressure": null,
+        "minCosZenith": 0.09458359582844578,
+        "maxZenith": 87.18811580703341,
+        "maxAirmass": 6.041895985651106
+      },
+      "expected": {
+        "dni": 19.03167358200941,
+        "kt": 0.28127359938369983,
+        "airmass": 2.2093864599871043
+      }
+    }
+  ]
+}

@@ -27,7 +27,7 @@ Not "smarter PV science" — **"PV modeling everywhere JavaScript runs."**
 
 | Package | Status | Description |
 | --- | --- | --- |
-| [`@pvkit/core`](packages/core) | 🚧 WIP | PV modeling core (solarposition · irradiance · temperature · pvsystem) |
+| [`@pvkit/core`](packages/core) | ✅ 0.x | PV modeling core — sun position → irradiance → temperature → kWh (11 modules) |
 | `@pvkit/sizer` | 📋 Planned | String sizing — series/parallel panel configuration (inverter over-voltage safety) |
 
 See [ROADMAP.md](ROADMAP.md) for packages under consideration.

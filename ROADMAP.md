@@ -1,13 +1,13 @@
 # pvkit roadmap
 
-> Status: under review (candidates). Not finalized. `@pvkit/core` scaffolded
-> (frame only — PV models are stubs).
+> Status: under review (candidates). Not finalized. `@pvkit/core` implemented
+> (all 11 modules, fixture-validated against pvlib).
 
 ## Confirmed
 
 | Package | Status | Description |
 | --- | --- | --- |
-| `@pvkit/core` | 🚧 scaffolded | PV modeling core. solarposition · atmosphere · clearsky · irradiance · decomposition · iam · temperature · tracking · pvsystem · losses · metrics. Produces kWh. PVWatts-path precision (single-diode/SAPM precision lives in separate packages). |
+| `@pvkit/core` | ✅ implemented | PV modeling core. solarposition · atmosphere · clearsky · irradiance · decomposition · iam · temperature · tracking · pvsystem · losses · metrics. Produces kWh. PVWatts-path precision (single-diode/SAPM precision lives in separate packages). |
 | `@pvkit/sizer` | 📋 planned | String sizing. Series/parallel panel configuration. Inverter over-voltage safety; a gap in JS tooling. |
 
 ## Under review (considered instead of react)

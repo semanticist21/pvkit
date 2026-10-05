@@ -1,0 +1,591 @@
+{
+  "meta": {
+    "reference": "pvlib.clearsky.haurwitz @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "apparentZenith": 0.0
+      },
+      "expected": {
+        "ghi": 1035.0920325344955
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 30.0
+      },
+      "expected": {
+        "ghi": 888.2713352911506
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 60.0
+      },
+      "expected": {
+        "ghi": 487.89413288542505
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 80.0
+      },
+      "expected": {
+        "ghi": 135.74174809181346
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": -10.0
+      },
+      "expected": {
+        "ghi": 1018.4392837646471
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.0
+      },
+      "expected": {
+        "ghi": 0.6520365016666347
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.9
+      },
+      "expected": {
+        "ghi": 3.993557254198873e-15
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 89.999
+      },
+      "expected": {
+        "ghi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 90.0
+      },
+      "expected": {
+        "ghi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 90.001
+      },
+      "expected": {
+        "ghi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 95.0
+      },
+      "expected": {
+        "ghi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 120.0
+      },
+      "expected": {
+        "ghi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 180.0
+      },
+      "expected": {
+        "ghi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 33.926779131508034
+      },
+      "expected": {
+        "ghi": 848.5347109355508
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 40.29432356259347
+      },
+      "expected": {
+        "ghi": 775.1403628348195
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 18.700550628725864
+      },
+      "expected": {
+        "ghi": 977.2278382623077
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 44.817417274143324
+      },
+      "expected": {
+        "ghi": 716.7123633274244
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 62.794108416035066
+      },
+      "expected": {
+        "ghi": 441.2178226410258
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 76.12533005379191
+      },
+      "expected": {
+        "ghi": 205.87132962997887
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 52.05076978136416
+      },
+      "expected": {
+        "ghi": 613.4579220041333
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 49.71726745074459
+      },
+      "expected": {
+        "ghi": 648.0086295254061
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 28.984874278385874
+      },
+      "expected": {
+        "ghi": 897.8273423014651
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 22.99779838578545
+      },
+      "expected": {
+        "ghi": 947.9812363938108
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 60.390295888501996
+      },
+      "expected": {
+        "ghi": 481.4462543030261
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 4.692229810346515
+      },
+      "expected": {
+        "ghi": 1031.4182531377855
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 23.924671598947324
+      },
+      "expected": {
+        "ghi": 940.9236370400292
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 84.12449867480267
+      },
+      "expected": {
+        "ghi": 63.16184208627384
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 9.000834661577507
+      },
+      "expected": {
+        "ghi": 1021.59423203064
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 96.39691427712324
+      },
+      "expected": {
+        "ghi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 1.8062460309221096
+      },
+      "expected": {
+        "ghi": 1034.5473829782584
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.47631118500752
+      },
+      "expected": {
+        "ghi": 12.66061083357338
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 61.999246723912385
+      },
+      "expected": {
+        "ghi": 454.61581073667276
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 21.54091953722669
+      },
+      "expected": {
+        "ghi": 958.5406385268124
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.59180926899079
+      },
+      "expected": {
+        "ghi": 39.16887307109877
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 34.53496645298352
+      },
+      "expected": {
+        "ghi": 841.9943155601295
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 45.55850669396707
+      },
+      "expected": {
+        "ghi": 706.6705901155088
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 70.35445390895968
+      },
+      "expected": {
+        "ghi": 309.73185771018456
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 33.55546752324234
+      },
+      "expected": {
+        "ghi": 852.4775738325771
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.68389262302608
+      },
+      "expected": {
+        "ghi": 37.73046478827758
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 0.0713027614452244
+      },
+      "expected": {
+        "ghi": 1035.091183720937
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 77.1242999886708
+      },
+      "expected": {
+        "ghi": 187.7594455713046
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 14.356570199254326
+      },
+      "expected": {
+        "ghi": 1000.8622128001903
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 72.44886454135047
+      },
+      "expected": {
+        "ghi": 272.2709157184298
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 5.940662443138677
+      },
+      "expected": {
+        "ghi": 1029.2052707922537
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 62.66204372576413
+      },
+      "expected": {
+        "ghi": 443.4502258081215
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 65.46446966867764
+      },
+      "expected": {
+        "ghi": 395.56237908643845
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 6.808610088039957
+      },
+      "expected": {
+        "ghi": 1027.3616604033623
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 32.98838871002413
+      },
+      "expected": {
+        "ghi": 858.4253496067658
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 62.85591447330716
+      },
+      "expected": {
+        "ghi": 440.17220237007115
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 24.096131461130486
+      },
+      "expected": {
+        "ghi": 939.5893056976677
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 51.16920412018092
+      },
+      "expected": {
+        "ghi": 626.6432802248279
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 90.22557783023709
+      },
+      "expected": {
+        "ghi": 0.0
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 27.599362381133318
+      },
+      "expected": {
+        "ghi": 910.3845758934831
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.99879494928379
+      },
+      "expected": {
+        "ghi": 32.892872178547684
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.7760266603605
+      },
+      "expected": {
+        "ghi": 9.315465648196
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.74149131210335
+      },
+      "expected": {
+        "ghi": 22.104185580702715
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.45461203205701
+      },
+      "expected": {
+        "ghi": 12.915999010736906
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.63469780709363
+      },
+      "expected": {
+        "ghi": 10.848760322243557
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.44781283356463
+      },
+      "expected": {
+        "ghi": 3.368380067066251
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.65774482608063
+      },
+      "expected": {
+        "ghi": 10.593133548942092
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.52270160243825
+      },
+      "expected": {
+        "ghi": 2.8708374566050896
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.52246160627186
+      },
+      "expected": {
+        "ghi": 40.258664321946945
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.74864133028221
+      },
+      "expected": {
+        "ghi": 1.608866283670216
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.5954057676211
+      },
+      "expected": {
+        "ghi": 24.144646747834624
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.28589129256308
+      },
+      "expected": {
+        "ghi": 44.015772864233824
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.75411858658886
+      },
+      "expected": {
+        "ghi": 36.640409835713825
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.40227231176027
+      },
+      "expected": {
+        "ghi": 13.538756559026504
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 88.55590930608324
+      },
+      "expected": {
+        "ghi": 2.662483275328627
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.40160916297593
+      },
+      "expected": {
+        "ghi": 26.918021446470263
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.31715255589107
+      },
+      "expected": {
+        "ghi": 14.571211935865595
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 87.01941650884912
+      },
+      "expected": {
+        "ghi": 18.357120026056094
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 86.50299356152846
+      },
+      "expected": {
+        "ghi": 25.458117417848044
+      }
+    },
+    {
+      "input": {
+        "apparentZenith": 85.42884569613375
+      },
+      "expected": {
+        "ghi": 41.738343271438524
+      }
+    }
+  ]
+}

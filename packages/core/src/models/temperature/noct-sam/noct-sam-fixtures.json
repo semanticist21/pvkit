@@ -1,0 +1,1856 @@
+{
+  "meta": {
+    "reference": "pvlib.temperature.noct_sam @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "poaGlobal": 800.0,
+        "tempAir": 20.0,
+        "windSpeed": 1.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 4.0
+      },
+      "expected": {
+        "cellTemperature": 44.18463239358762
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1000.0,
+        "tempAir": 25.0,
+        "windSpeed": 0.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 4.0
+      },
+      "expected": {
+        "cellTemperature": 65.50925925925927
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 0.0,
+        "tempAir": 15.0,
+        "windSpeed": 3.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 4.0
+      },
+      "expected": {
+        "cellTemperature": 15.0
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": -5.0,
+        "tempAir": -10.0,
+        "windSpeed": 2.0,
+        "noct": 48.0,
+        "moduleEfficiency": 0.18,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 4.0
+      },
+      "expected": {
+        "cellTemperature": -10.13888888888889
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1400.0,
+        "tempAir": 50.0,
+        "windSpeed": 0.0,
+        "noct": 55.0,
+        "moduleEfficiency": 0.15,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 4.0
+      },
+      "expected": {
+        "cellTemperature": 135.06944444444446
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 800.0,
+        "tempAir": -40.0,
+        "windSpeed": 30.0,
+        "noct": 44.0,
+        "moduleEfficiency": 0.21,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 4.0
+      },
+      "expected": {
+        "cellTemperature": -37.26190476190476
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 30.0,
+        "windSpeed": 4.0,
+        "noct": 46.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 2,
+        "mountStandoff": 4.0
+      },
+      "expected": {
+        "cellTemperature": 44.43527918781726
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 30.0,
+        "windSpeed": 4.0,
+        "noct": 46.0,
+        "moduleEfficiency": 0.2,
+        "effectiveIrradiance": 850.0,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 4.0
+      },
+      "expected": {
+        "cellTemperature": 45.79636091724826
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 0.0,
+        "tempAir": 30.0,
+        "windSpeed": 4.0,
+        "noct": 46.0,
+        "moduleEfficiency": 0.2,
+        "effectiveIrradiance": 10.0,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 4.0
+      },
+      "expected": {
+        "cellTemperature": 30.0
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": -1.0
+      },
+      "expected": {
+        "cellTemperature": 46.701388888888886
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 0.0
+      },
+      "expected": {
+        "cellTemperature": 46.701388888888886
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 0.25
+      },
+      "expected": {
+        "cellTemperature": 62.326388888888886
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 0.5
+      },
+      "expected": {
+        "cellTemperature": 56.25
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 1.0
+      },
+      "expected": {
+        "cellTemperature": 56.25
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 1.5
+      },
+      "expected": {
+        "cellTemperature": 51.90972222222222
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 2.0
+      },
+      "expected": {
+        "cellTemperature": 51.90972222222222
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 2.5
+      },
+      "expected": {
+        "cellTemperature": 48.4375
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 3.0
+      },
+      "expected": {
+        "cellTemperature": 48.4375
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 3.5
+      },
+      "expected": {
+        "cellTemperature": 48.4375
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 3.6
+      },
+      "expected": {
+        "cellTemperature": 46.701388888888886
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 900.0,
+        "tempAir": 25.0,
+        "windSpeed": 2.0,
+        "noct": 45.0,
+        "moduleEfficiency": 0.2,
+        "transmittanceAbsorptance": 0.9,
+        "arrayHeight": 1,
+        "mountStandoff": 10.0
+      },
+      "expected": {
+        "cellTemperature": 46.701388888888886
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 475.6356400497974,
+        "tempAir": 2.2354588500747763,
+        "windSpeed": 3.740110125745173,
+        "noct": 46.7226125911215,
+        "moduleEfficiency": 0.1879117517824491,
+        "transmittanceAbsorptance": 0.8780761546720462,
+        "arrayHeight": 1,
+        "mountStandoff": 1.4492437139192937
+      },
+      "expected": {
+        "cellTemperature": 15.168964861215061
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 322.7391994171385,
+        "tempAir": 18.3122367108016,
+        "windSpeed": 0.9384459620693031,
+        "noct": 43.588700739842096,
+        "moduleEfficiency": 0.21777429814472374,
+        "effectiveIrradiance": 320.41348541387333,
+        "transmittanceAbsorptance": 0.8027093690463832,
+        "arrayHeight": 1,
+        "mountStandoff": 4.373815559250376
+      },
+      "expected": {
+        "cellTemperature": 27.050401664265515
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 868.3694616675342,
+        "tempAir": -12.76726437021865,
+        "windSpeed": 17.11836185379816,
+        "noct": 45.18024496794753,
+        "moduleEfficiency": 0.1637819093715539,
+        "transmittanceAbsorptance": 0.8503332012848636,
+        "arrayHeight": 1,
+        "mountStandoff": 0.0035651380722612203
+      },
+      "expected": {
+        "cellTemperature": -3.519592568802892
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1079.9689568415045,
+        "tempAir": -18.514743840596537,
+        "windSpeed": 14.489772908270096,
+        "noct": 40.891099366470804,
+        "moduleEfficiency": 0.18772686121606977,
+        "transmittanceAbsorptance": 0.81021291513206,
+        "arrayHeight": 2,
+        "mountStandoff": 1.6494194355012066
+      },
+      "expected": {
+        "cellTemperature": -11.77052273880253
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 880.3542434815672,
+        "tempAir": -10.72309483109561,
+        "windSpeed": 10.233840824036184,
+        "noct": 53.533836674535564,
+        "moduleEfficiency": 0.13863910733358664,
+        "effectiveIrradiance": 802.0388688039069,
+        "transmittanceAbsorptance": 0.8522447393631004,
+        "arrayHeight": 1,
+        "mountStandoff": 2.634697807093636
+      },
+      "expected": {
+        "cellTemperature": 1.2279043339505442
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 965.6980308313806,
+        "tempAir": 12.523917217289995,
+        "windSpeed": 14.090806409752986,
+        "noct": 41.56738481881557,
+        "moduleEfficiency": 0.20496195724790184,
+        "transmittanceAbsorptance": 0.8085767387768924,
+        "arrayHeight": 1,
+        "mountStandoff": 0.7541185865888561
+      },
+      "expected": {
+        "cellTemperature": 20.970430870459644
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 673.1557928305241,
+        "tempAir": 26.894548897331845,
+        "windSpeed": 5.606436651903701,
+        "noct": 46.95145766767319,
+        "moduleEfficiency": 0.15654366224777544,
+        "transmittanceAbsorptance": 0.8128653708840126,
+        "arrayHeight": 1,
+        "mountStandoff": 1.4715500190985176
+      },
+      "expected": {
+        "cellTemperature": 41.681450537507246
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1031.5860305706228,
+        "tempAir": 41.484821898988464,
+        "windSpeed": 2.7168616272418267,
+        "noct": 53.622331904633626,
+        "moduleEfficiency": 0.18843039227571803,
+        "effectiveIrradiance": 1020.8248820636489,
+        "transmittanceAbsorptance": 0.9433362797135564,
+        "arrayHeight": 2,
+        "mountStandoff": 1.7201341064018743
+      },
+      "expected": {
+        "cellTemperature": 73.77449591986371
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1158.6335261093493,
+        "tempAir": -29.771463905238047,
+        "windSpeed": 0.7855376814426962,
+        "noct": 46.41236994372753,
+        "moduleEfficiency": 0.12737988588913504,
+        "transmittanceAbsorptance": 0.8012006235443926,
+        "arrayHeight": 1,
+        "mountStandoff": 0.11039427922169998
+      },
+      "expected": {
+        "cellTemperature": 41.383777586597816
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 191.3473152818658,
+        "tempAir": 24.66031668377461,
+        "windSpeed": 11.185720443692501,
+        "noct": 46.827936856185204,
+        "moduleEfficiency": 0.21937474124216225,
+        "effectiveIrradiance": 169.06261392399938,
+        "transmittanceAbsorptance": 0.8335414891597193,
+        "arrayHeight": 2,
+        "mountStandoff": 2.091826888769516
+      },
+      "expected": {
+        "cellTemperature": 26.3162214777442
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1160.4310959074248,
+        "tempAir": 3.8375355042893577,
+        "windSpeed": 2.472865962629729,
+        "noct": 54.66732755471916,
+        "moduleEfficiency": 0.20853129975503984,
+        "transmittanceAbsorptance": 0.8549233536792903,
+        "arrayHeight": 1,
+        "mountStandoff": 4.34926207683681
+      },
+      "expected": {
+        "cellTemperature": 38.26196412501903
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 604.8652860808193,
+        "tempAir": 47.20560810967376,
+        "windSpeed": 13.1610861273222,
+        "noct": 51.322039834939204,
+        "moduleEfficiency": 0.14849371814398202,
+        "transmittanceAbsorptance": 0.912645581483654,
+        "arrayHeight": 1,
+        "mountStandoff": 0.6130709536771101
+      },
+      "expected": {
+        "cellTemperature": 55.361955482688906
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 554.0661258245314,
+        "tempAir": 17.270013441211578,
+        "windSpeed": 4.792828353726426,
+        "noct": 42.255603005625346,
+        "moduleEfficiency": 0.13179422670346166,
+        "transmittanceAbsorptance": 0.8847252847608739,
+        "arrayHeight": 1,
+        "mountStandoff": 2.5926077483056775
+      },
+      "expected": {
+        "cellTemperature": 26.331424975628906
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1114.0548578245946,
+        "tempAir": -12.02803622225062,
+        "windSpeed": 17.072182748797967,
+        "noct": 44.516414641654556,
+        "moduleEfficiency": 0.2273049241148139,
+        "transmittanceAbsorptance": 0.8173100118736376,
+        "arrayHeight": 2,
+        "mountStandoff": 2.1345413743722497
+      },
+      "expected": {
+        "cellTemperature": -5.5907873447931795
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 379.3917579593638,
+        "tempAir": 26.81280286916479,
+        "windSpeed": 7.868729522678757,
+        "noct": 46.77411443439472,
+        "moduleEfficiency": 0.17101739548828634,
+        "effectiveIrradiance": 313.8742862429977,
+        "transmittanceAbsorptance": 0.9491129420663474,
+        "arrayHeight": 2,
+        "mountStandoff": 1.55219846068174
+      },
+      "expected": {
+        "cellTemperature": 31.637302061649994
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1321.9113298779835,
+        "tempAir": 36.53745527580291,
+        "windSpeed": 19.732688907720522,
+        "noct": 46.70820438843136,
+        "moduleEfficiency": 0.1660222895704186,
+        "effectiveIrradiance": 1296.9766967878945,
+        "transmittanceAbsorptance": 0.8099703629528715,
+        "arrayHeight": 2,
+        "mountStandoff": 4.064475967284929
+      },
+      "expected": {
+        "cellTemperature": 42.985087499869294
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 412.07750883775316,
+        "tempAir": -15.410822381022928,
+        "windSpeed": 4.111882929311221,
+        "noct": 43.71675056522364,
+        "moduleEfficiency": 0.20675912467018068,
+        "transmittanceAbsorptance": 0.8591382857163847,
+        "arrayHeight": 2,
+        "mountStandoff": 0.19628564481980304
+      },
+      "expected": {
+        "cellTemperature": -5.233775745743051
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 498.72386944621866,
+        "tempAir": 12.93985336653562,
+        "windSpeed": 11.339399673982264,
+        "noct": 46.967444229461016,
+        "moduleEfficiency": 0.14381040357506686,
+        "transmittanceAbsorptance": 0.9004405282124766,
+        "arrayHeight": 1,
+        "mountStandoff": 3.540097015925405
+      },
+      "expected": {
+        "cellTemperature": 17.788970271437023
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 836.4666125110344,
+        "tempAir": 23.775966954617573,
+        "windSpeed": 10.200957966042282,
+        "noct": 49.05358095275333,
+        "moduleEfficiency": 0.23852552881309327,
+        "transmittanceAbsorptance": 0.8079768442861482,
+        "arrayHeight": 2,
+        "mountStandoff": 4.508315596025938
+      },
+      "expected": {
+        "cellTemperature": 30.706925888884825
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 39.56362037988155,
+        "tempAir": 44.7698414204188,
+        "windSpeed": 9.158174887567824,
+        "noct": 52.44760997414819,
+        "moduleEfficiency": 0.2309220767190477,
+        "transmittanceAbsorptance": 0.9096279614380199,
+        "arrayHeight": 2,
+        "mountStandoff": 2.4635012808002594
+      },
+      "expected": {
+        "cellTemperature": 45.27033929009411
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1362.1096536674538,
+        "tempAir": -6.860836783634605,
+        "windSpeed": 8.746877084480563,
+        "noct": 49.409564873655285,
+        "moduleEfficiency": 0.13354727248831197,
+        "transmittanceAbsorptance": 0.8332260463063631,
+        "arrayHeight": 2,
+        "mountStandoff": 1.0896400355321596
+      },
+      "expected": {
+        "cellTemperature": 14.26947004354834
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1305.0680319123537,
+        "tempAir": -9.31056422565609,
+        "windSpeed": 6.2560018908266795,
+        "noct": 46.392255512982246,
+        "moduleEfficiency": 0.21643721156702314,
+        "transmittanceAbsorptance": 0.9250572097400203,
+        "arrayHeight": 2,
+        "mountStandoff": 0.0616135141164359
+      },
+      "expected": {
+        "cellTemperature": 16.777211931645528
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 492.8838110236224,
+        "tempAir": 20.30328572070072,
+        "windSpeed": 4.440603208022445,
+        "noct": 44.634122177231355,
+        "moduleEfficiency": 0.2304278954448251,
+        "transmittanceAbsorptance": 0.8680845150758218,
+        "arrayHeight": 2,
+        "mountStandoff": 3.5107445069159993
+      },
+      "expected": {
+        "cellTemperature": 26.925474352796588
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 395.68683464197295,
+        "tempAir": 7.154412012871116,
+        "windSpeed": 10.57505248992178,
+        "noct": 47.7382100471678,
+        "moduleEfficiency": 0.20022140472999492,
+        "effectiveIrradiance": 369.4552479647916,
+        "transmittanceAbsorptance": 0.9034573752297984,
+        "arrayHeight": 1,
+        "mountStandoff": 4.511702820390932
+      },
+      "expected": {
+        "cellTemperature": 10.949121798909314
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 476.76208877000096,
+        "tempAir": -19.696971926626805,
+        "windSpeed": 9.397410993431436,
+        "noct": 50.53833000208191,
+        "moduleEfficiency": 0.21275318161993195,
+        "transmittanceAbsorptance": 0.87808748142158,
+        "arrayHeight": 2,
+        "mountStandoff": 0.4791472861520202
+      },
+      "expected": {
+        "cellTemperature": -12.120709451687464
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1264.7745396437808,
+        "tempAir": 4.289908601558912,
+        "windSpeed": 12.541439939221057,
+        "noct": 50.10021399175891,
+        "moduleEfficiency": 0.12795357891331713,
+        "effectiveIrradiance": 1258.4641223429792,
+        "transmittanceAbsorptance": 0.8210983770026354,
+        "arrayHeight": 2,
+        "mountStandoff": 4.801005767955485
+      },
+      "expected": {
+        "cellTemperature": 15.255321715114425
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 188.87572290126494,
+        "tempAir": 17.6216778248033,
+        "windSpeed": 2.9214658594415477,
+        "noct": 45.46564007578289,
+        "moduleEfficiency": 0.20408397265353612,
+        "effectiveIrradiance": 152.20822672240473,
+        "transmittanceAbsorptance": 0.889580874765074,
+        "arrayHeight": 1,
+        "mountStandoff": 1.3113205512752062
+      },
+      "expected": {
+        "cellTemperature": 22.77093990465913
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 185.30372918691384,
+        "tempAir": 41.98386035772435,
+        "windSpeed": 16.957863433041986,
+        "noct": 50.243805347822956,
+        "moduleEfficiency": 0.13839603145420584,
+        "transmittanceAbsorptance": 0.8638053502023425,
+        "arrayHeight": 1,
+        "mountStandoff": 3.1352821109433178
+      },
+      "expected": {
+        "cellTemperature": 43.528920586391
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 725.67041603625,
+        "tempAir": 37.9974126988032,
+        "windSpeed": 14.608875685455928,
+        "noct": 46.46216704547656,
+        "moduleEfficiency": 0.23254792616542447,
+        "transmittanceAbsorptance": 0.9046451467890492,
+        "arrayHeight": 1,
+        "mountStandoff": 2.108653910838336
+      },
+      "expected": {
+        "cellTemperature": 44.10784873625573
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 246.46820755838593,
+        "tempAir": 18.672073491668293,
+        "windSpeed": 3.246389024596843,
+        "noct": 44.37446755433722,
+        "moduleEfficiency": 0.20705693130110495,
+        "transmittanceAbsorptance": 0.9236943316581786,
+        "arrayHeight": 2,
+        "mountStandoff": 0.7184361591890304
+      },
+      "expected": {
+        "cellTemperature": 24.74580634473072
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1313.2051850841783,
+        "tempAir": 17.16438625234746,
+        "windSpeed": 7.555519598901768,
+        "noct": 49.68781853268503,
+        "moduleEfficiency": 0.15272971091113427,
+        "transmittanceAbsorptance": 0.9156768084673721,
+        "arrayHeight": 2,
+        "mountStandoff": 2.958114952032829
+      },
+      "expected": {
+        "cellTemperature": 34.90082798109701
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 934.1371590208548,
+        "tempAir": 16.130765590644273,
+        "windSpeed": 19.983336413093575,
+        "noct": 44.257179968274755,
+        "moduleEfficiency": 0.1850144015998363,
+        "effectiveIrradiance": 904.3435016989241,
+        "transmittanceAbsorptance": 0.9436210010454302,
+        "arrayHeight": 2,
+        "mountStandoff": 2.753473196678739
+      },
+      "expected": {
+        "cellTemperature": 20.595811730707165
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 453.55545764881566,
+        "tempAir": 20.848447823392213,
+        "windSpeed": 4.368202270553616,
+        "noct": 45.98165849994974,
+        "moduleEfficiency": 0.1032953258242505,
+        "transmittanceAbsorptance": 0.832134279421544,
+        "arrayHeight": 1,
+        "mountStandoff": 3.6017851450351817
+      },
+      "expected": {
+        "cellTemperature": 29.500812390331888
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 244.7134107748169,
+        "tempAir": 45.835609095512396,
+        "windSpeed": 1.4623643488548077,
+        "noct": 42.22160079644802,
+        "moduleEfficiency": 0.10493502029173223,
+        "effectiveIrradiance": 218.25376064940568,
+        "transmittanceAbsorptance": 0.915851252558351,
+        "arrayHeight": 1,
+        "mountStandoff": 3.6166541275535673
+      },
+      "expected": {
+        "cellTemperature": 52.43030497886882
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 638.1263672093164,
+        "tempAir": 13.245711621139762,
+        "windSpeed": 9.278994892584914,
+        "noct": 44.76942806183522,
+        "moduleEfficiency": 0.19862903917312213,
+        "transmittanceAbsorptance": 0.9143622347208105,
+        "arrayHeight": 1,
+        "mountStandoff": 3.6893211004218807
+      },
+      "expected": {
+        "cellTemperature": 19.449516041011144
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1092.6224716151592,
+        "tempAir": 14.386453712703684,
+        "windSpeed": 1.6141929526027865,
+        "noct": 54.67718915045771,
+        "moduleEfficiency": 0.19069616601496558,
+        "transmittanceAbsorptance": 0.8149889616538591,
+        "arrayHeight": 2,
+        "mountStandoff": 3.037570474556856
+      },
+      "expected": {
+        "cellTemperature": 52.995246724270736
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 873.1213806235513,
+        "tempAir": 48.11169853019139,
+        "windSpeed": 5.264872986304736,
+        "noct": 49.209221240931875,
+        "moduleEfficiency": 0.10048806198763267,
+        "transmittanceAbsorptance": 0.8565050079136186,
+        "arrayHeight": 2,
+        "mountStandoff": 4.388671959465623
+      },
+      "expected": {
+        "cellTemperature": 63.042405305397885
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1104.3847628236292,
+        "tempAir": 15.030280869609767,
+        "windSpeed": 8.18300085801409,
+        "noct": 41.6883714834927,
+        "moduleEfficiency": 0.10134819716658058,
+        "effectiveIrradiance": 1012.9211898881101,
+        "transmittanceAbsorptance": 0.8609208498298868,
+        "arrayHeight": 2,
+        "mountStandoff": 0.7060281971870791
+      },
+      "expected": {
+        "cellTemperature": 30.178159133851267
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1333.1848216039293,
+        "tempAir": 31.65409618798946,
+        "windSpeed": 11.669216380536977,
+        "noct": 51.651847103157,
+        "moduleEfficiency": 0.14638718780125246,
+        "transmittanceAbsorptance": 0.9193886184715017,
+        "arrayHeight": 2,
+        "mountStandoff": 4.550506420374416
+      },
+      "expected": {
+        "cellTemperature": 44.518893237647895
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1322.6211703680037,
+        "tempAir": -8.962800158011195,
+        "windSpeed": 17.067246475569092,
+        "noct": 43.50810885427139,
+        "moduleEfficiency": 0.1999196297571499,
+        "effectiveIrradiance": 1314.7749574067593,
+        "transmittanceAbsorptance": 0.8881156465458663,
+        "arrayHeight": 2,
+        "mountStandoff": 1.7924083778922024
+      },
+      "expected": {
+        "cellTemperature": -1.0420378020382124
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 358.26590311790915,
+        "tempAir": 42.04251900952082,
+        "windSpeed": 3.6916969043806636,
+        "noct": 51.917346330586966,
+        "moduleEfficiency": 0.1298983373455283,
+        "effectiveIrradiance": 308.01841022869604,
+        "transmittanceAbsorptance": 0.8289700879162337,
+        "arrayHeight": 2,
+        "mountStandoff": 0.6044460679408598
+      },
+      "expected": {
+        "cellTemperature": 52.514957051937124
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1382.8754185543128,
+        "tempAir": 30.129460043956435,
+        "windSpeed": 10.680745315501559,
+        "noct": 49.39823257027069,
+        "moduleEfficiency": 0.16134909255520014,
+        "transmittanceAbsorptance": 0.8332036381231493,
+        "arrayHeight": 1,
+        "mountStandoff": 2.330964394568616
+      },
+      "expected": {
+        "cellTemperature": 47.884849411018735
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 348.5333440977266,
+        "tempAir": 46.18248855511361,
+        "windSpeed": 19.305562886428213,
+        "noct": 42.40370934483799,
+        "moduleEfficiency": 0.19944810876310157,
+        "effectiveIrradiance": 311.7922122290573,
+        "transmittanceAbsorptance": 0.9198019301172234,
+        "arrayHeight": 1,
+        "mountStandoff": 2.9086114735291173
+      },
+      "expected": {
+        "cellTemperature": 47.95732918369676
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 298.107609709163,
+        "tempAir": 7.795052749723972,
+        "windSpeed": 18.14604297753704,
+        "noct": 49.60823176884606,
+        "moduleEfficiency": 0.2147239232920639,
+        "transmittanceAbsorptance": 0.8621694832625951,
+        "arrayHeight": 1,
+        "mountStandoff": 2.1545120306310803
+      },
+      "expected": {
+        "cellTemperature": 10.11135168956814
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1081.3406101984915,
+        "tempAir": 15.238847667756712,
+        "windSpeed": 4.33373909881384,
+        "noct": 52.11512463728082,
+        "moduleEfficiency": 0.23894513060248251,
+        "transmittanceAbsorptance": 0.8327842467933468,
+        "arrayHeight": 1,
+        "mountStandoff": 1.630945940601486
+      },
+      "expected": {
+        "cellTemperature": 39.99299923274653
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 537.0645557042625,
+        "tempAir": -19.26958009948752,
+        "windSpeed": 0.4285125886660257,
+        "noct": 48.656136492244755,
+        "moduleEfficiency": 0.2049522515890731,
+        "transmittanceAbsorptance": 0.9315459090327226,
+        "arrayHeight": 2,
+        "mountStandoff": 1.5574960446113022
+      },
+      "expected": {
+        "cellTemperature": 6.486977067374596
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 529.4253288968506,
+        "tempAir": 29.27362077929418,
+        "windSpeed": 19.05323013202297,
+        "noct": 54.32992794526142,
+        "moduleEfficiency": 0.10919926557538805,
+        "transmittanceAbsorptance": 0.9200678508914011,
+        "arrayHeight": 2,
+        "mountStandoff": 4.701710707406795
+      },
+      "expected": {
+        "cellTemperature": 33.08816493934874
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1292.8980781937307,
+        "tempAir": -25.180997605142117,
+        "windSpeed": 2.9885012797210497,
+        "noct": 43.49666599369834,
+        "moduleEfficiency": 0.20173146301786427,
+        "effectiveIrradiance": 1068.669266708077,
+        "transmittanceAbsorptance": 0.898671551339598,
+        "arrayHeight": 1,
+        "mountStandoff": 3.867527968994886
+      },
+      "expected": {
+        "cellTemperature": -2.3143392650485666
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 687.5475214231626,
+        "tempAir": -22.00896049357634,
+        "windSpeed": 15.76811944991551,
+        "noct": 40.17323146668679,
+        "moduleEfficiency": 0.2367512629343807,
+        "effectiveIrradiance": 647.1482433416509,
+        "transmittanceAbsorptance": 0.8471944063838441,
+        "arrayHeight": 1,
+        "mountStandoff": 3.3051148496309146
+      },
+      "expected": {
+        "cellTemperature": -18.498435515813895
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 10.473768520114467,
+        "tempAir": 28.33521580036221,
+        "windSpeed": 19.166266293672656,
+        "noct": 50.01689238393466,
+        "moduleEfficiency": 0.20340364331677596,
+        "transmittanceAbsorptance": 0.8560099336997857,
+        "arrayHeight": 2,
+        "mountStandoff": 4.035111671305593
+      },
+      "expected": {
+        "cellTemperature": 28.391996343694696
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 944.5180982463916,
+        "tempAir": 40.22092865284008,
+        "windSpeed": 6.6745603300576395,
+        "noct": 53.25064017992863,
+        "moduleEfficiency": 0.13851379364899324,
+        "transmittanceAbsorptance": 0.874145805234959,
+        "arrayHeight": 2,
+        "mountStandoff": 1.7359071441491103
+      },
+      "expected": {
+        "cellTemperature": 57.71992238868244
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 683.5023076074475,
+        "tempAir": -18.885698534528235,
+        "windSpeed": 12.043493470936648,
+        "noct": 44.07986123764917,
+        "moduleEfficiency": 0.1522702092012876,
+        "transmittanceAbsorptance": 0.8521422150416342,
+        "arrayHeight": 1,
+        "mountStandoff": 1.0116134822935958
+      },
+      "expected": {
+        "cellTemperature": -10.833081269727222
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 527.1886726123839,
+        "tempAir": -28.61445096139777,
+        "windSpeed": 9.976511038961025,
+        "noct": 49.74608192409039,
+        "moduleEfficiency": 0.17897164602880092,
+        "effectiveIrradiance": 428.0532490578678,
+        "transmittanceAbsorptance": 0.8602598105385236,
+        "arrayHeight": 2,
+        "mountStandoff": 2.5922858536578843
+      },
+      "expected": {
+        "cellTemperature": -23.48638875550097
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1130.5086540239572,
+        "tempAir": -7.076594459694494,
+        "windSpeed": 17.551990247907497,
+        "noct": 46.07584374949184,
+        "moduleEfficiency": 0.10678554763366285,
+        "transmittanceAbsorptance": 0.9242550700680986,
+        "arrayHeight": 1,
+        "mountStandoff": 0.4878610370380321
+      },
+      "expected": {
+        "cellTemperature": 6.100662859393703
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 589.8858548536946,
+        "tempAir": 28.76276351329598,
+        "windSpeed": 4.53991761942148,
+        "noct": 45.589495370893694,
+        "moduleEfficiency": 0.11881092837482711,
+        "effectiveIrradiance": 496.05411925260046,
+        "transmittanceAbsorptance": 0.8678952782729716,
+        "arrayHeight": 1,
+        "mountStandoff": 0.18896418346551314
+      },
+      "expected": {
+        "cellTemperature": 46.39465515453763
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 340.4606810201842,
+        "tempAir": 22.478158129603692,
+        "windSpeed": 19.50705776340921,
+        "noct": 54.378422152939855,
+        "moduleEfficiency": 0.21873080637647038,
+        "transmittanceAbsorptance": 0.8287371204901214,
+        "arrayHeight": 2,
+        "mountStandoff": 1.4962490751877677
+      },
+      "expected": {
+        "cellTemperature": 25.130329814367176
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1171.7376916101146,
+        "tempAir": 42.86748977504065,
+        "windSpeed": 8.457480159892123,
+        "noct": 51.58028223084429,
+        "moduleEfficiency": 0.12351753617265075,
+        "transmittanceAbsorptance": 0.84510027817324,
+        "arrayHeight": 2,
+        "mountStandoff": 2.5852277773153225
+      },
+      "expected": {
+        "cellTemperature": 58.633780837952386
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 36.458340291214995,
+        "tempAir": 36.626043700500034,
+        "windSpeed": 18.765691927560194,
+        "noct": 54.700820127473364,
+        "moduleEfficiency": 0.20278788112698387,
+        "transmittanceAbsorptance": 0.8265617978814929,
+        "arrayHeight": 2,
+        "mountStandoff": 0.5427280274619312
+      },
+      "expected": {
+        "cellTemperature": 36.929538480317895
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 4.409937060781239,
+        "tempAir": 45.04024444417166,
+        "windSpeed": 2.494519398383679,
+        "noct": 40.32363472021947,
+        "moduleEfficiency": 0.23651137038116424,
+        "transmittanceAbsorptance": 0.8193466829773823,
+        "arrayHeight": 1,
+        "mountStandoff": 4.48363845074356
+      },
+      "expected": {
+        "cellTemperature": 45.11211262050274
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 599.5887821485089,
+        "tempAir": 12.20873375683829,
+        "windSpeed": 15.327938041031423,
+        "noct": 45.83015755435046,
+        "moduleEfficiency": 0.2366242106056791,
+        "effectiveIrradiance": 534.2633305964839,
+        "transmittanceAbsorptance": 0.8223279264648479,
+        "arrayHeight": 1,
+        "mountStandoff": 1.1959206919743655
+      },
+      "expected": {
+        "cellTemperature": 17.22350520893102
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1093.085502212972,
+        "tempAir": -28.303209811196,
+        "windSpeed": 12.918067878641857,
+        "noct": 45.04578396109248,
+        "moduleEfficiency": 0.16422279125728245,
+        "transmittanceAbsorptance": 0.8457863394320051,
+        "arrayHeight": 2,
+        "mountStandoff": 1.9151131968713924
+      },
+      "expected": {
+        "cellTemperature": -19.19257484575892
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 735.8324981979973,
+        "tempAir": -5.08939612473414,
+        "windSpeed": 2.04520164899626,
+        "noct": 54.3420975140626,
+        "moduleEfficiency": 0.14498683592418096,
+        "effectiveIrradiance": 712.4981341945395,
+        "transmittanceAbsorptance": 0.8670109131184388,
+        "arrayHeight": 2,
+        "mountStandoff": 1.7944444358433609
+      },
+      "expected": {
+        "cellTemperature": 22.842460448589087
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 125.75123466393487,
+        "tempAir": 30.035848711750297,
+        "windSpeed": 3.1289157647246557,
+        "noct": 40.63184626257529,
+        "moduleEfficiency": 0.22874929521129123,
+        "transmittanceAbsorptance": 0.8870710613371371,
+        "arrayHeight": 1,
+        "mountStandoff": 4.17381959608675
+      },
+      "expected": {
+        "cellTemperature": 31.97948370248427
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 352.0506905797345,
+        "tempAir": 30.897131386887857,
+        "windSpeed": 9.013708691407238,
+        "noct": 49.63978495320832,
+        "moduleEfficiency": 0.20308535569260508,
+        "transmittanceAbsorptance": 0.8935672502742789,
+        "arrayHeight": 2,
+        "mountStandoff": 4.277715846832285
+      },
+      "expected": {
+        "cellTemperature": 34.49759893308191
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 330.64573317105635,
+        "tempAir": 34.00228528293232,
+        "windSpeed": 4.462033559703538,
+        "noct": 52.43031613451162,
+        "moduleEfficiency": 0.18030185802425772,
+        "effectiveIrradiance": 278.5754112528862,
+        "transmittanceAbsorptance": 0.89943064244597,
+        "arrayHeight": 2,
+        "mountStandoff": 0.410721652244303
+      },
+      "expected": {
+        "cellTemperature": 43.408103934161
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 529.5146724983125,
+        "tempAir": 16.29886574384247,
+        "windSpeed": 9.493918417617715,
+        "noct": 54.55426855206353,
+        "moduleEfficiency": 0.14526528113901022,
+        "transmittanceAbsorptance": 0.8484394572693096,
+        "arrayHeight": 2,
+        "mountStandoff": 1.3806321423583885
+      },
+      "expected": {
+        "cellTemperature": 24.867167788767496
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 672.28781731487,
+        "tempAir": 4.544090498988629,
+        "windSpeed": 1.8726188052905623,
+        "noct": 42.41231913489131,
+        "moduleEfficiency": 0.17561828854108077,
+        "transmittanceAbsorptance": 0.8231884643812061,
+        "arrayHeight": 1,
+        "mountStandoff": 4.766924519886768
+      },
+      "expected": {
+        "cellTemperature": 19.63174851091529
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1078.9563403839545,
+        "tempAir": -28.26381866765238,
+        "windSpeed": 16.124286557983474,
+        "noct": 48.0329341485031,
+        "moduleEfficiency": 0.18290157293464265,
+        "effectiveIrradiance": 950.9469898230745,
+        "transmittanceAbsorptance": 0.9071050054496625,
+        "arrayHeight": 2,
+        "mountStandoff": 1.8095733239082212
+      },
+      "expected": {
+        "cellTemperature": -20.456858256872206
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 380.5224603681862,
+        "tempAir": 46.84611224318654,
+        "windSpeed": 4.968353288379854,
+        "noct": 48.80573203350769,
+        "moduleEfficiency": 0.21980707936435864,
+        "transmittanceAbsorptance": 0.8591603015763617,
+        "arrayHeight": 1,
+        "mountStandoff": 0.3603716221927511
+      },
+      "expected": {
+        "cellTemperature": 57.11385963904678
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 560.8853426297969,
+        "tempAir": 16.740869355307453,
+        "windSpeed": 3.376013146579513,
+        "noct": 49.91119077530886,
+        "moduleEfficiency": 0.20762391128223553,
+        "transmittanceAbsorptance": 0.877625377223075,
+        "arrayHeight": 1,
+        "mountStandoff": 1.095609064007523
+      },
+      "expected": {
+        "cellTemperature": 33.73264340025938
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 701.0114268358943,
+        "tempAir": 20.628610033814468,
+        "windSpeed": 6.408695988555381,
+        "noct": 53.71838484174005,
+        "moduleEfficiency": 0.1486795801078258,
+        "effectiveIrradiance": 653.6982489993602,
+        "transmittanceAbsorptance": 0.9074307354858341,
+        "arrayHeight": 1,
+        "mountStandoff": 1.050220721060085
+      },
+      "expected": {
+        "cellTemperature": 37.56292807036215
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 737.2501951755969,
+        "tempAir": 42.58877229619041,
+        "windSpeed": 7.225061892361699,
+        "noct": 53.98791110275151,
+        "moduleEfficiency": 0.16940725128150733,
+        "transmittanceAbsorptance": 0.8372828763215974,
+        "arrayHeight": 2,
+        "mountStandoff": 3.523638471568366
+      },
+      "expected": {
+        "cellTemperature": 53.16241544404535
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 58.02969735771117,
+        "tempAir": 20.71015591809113,
+        "windSpeed": 19.682964886251987,
+        "noct": 54.09996066896508,
+        "moduleEfficiency": 0.1701792065010899,
+        "effectiveIrradiance": 46.82974274309279,
+        "transmittanceAbsorptance": 0.8795913315395113,
+        "arrayHeight": 2,
+        "mountStandoff": 0.34201247655064493
+      },
+      "expected": {
+        "cellTemperature": 21.241957059832103
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 70.29967508763272,
+        "tempAir": 35.845834120926284,
+        "windSpeed": 4.794363119031506,
+        "noct": 45.630473714776905,
+        "moduleEfficiency": 0.14547081408620463,
+        "transmittanceAbsorptance": 0.8530314963810529,
+        "arrayHeight": 1,
+        "mountStandoff": 4.652180600743268
+      },
+      "expected": {
+        "cellTemperature": 37.02968720130274
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 897.3290592655283,
+        "tempAir": 28.70431937493729,
+        "windSpeed": 14.42847478796217,
+        "noct": 52.11251952062668,
+        "moduleEfficiency": 0.21213144532922476,
+        "transmittanceAbsorptance": 0.838632885816712,
+        "arrayHeight": 1,
+        "mountStandoff": 2.813508894592825
+      },
+      "expected": {
+        "cellTemperature": 36.771178288082396
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 788.1497364056055,
+        "tempAir": -23.853010306702622,
+        "windSpeed": 3.759207459568905,
+        "noct": 47.27004946480729,
+        "moduleEfficiency": 0.1899098628305509,
+        "transmittanceAbsorptance": 0.9144397846175333,
+        "arrayHeight": 2,
+        "mountStandoff": 4.8850005753127395
+      },
+      "expected": {
+        "cellTemperature": -9.82326756144769
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1080.5461267804308,
+        "tempAir": 39.710660207253916,
+        "windSpeed": 4.656048469432608,
+        "noct": 45.27704587193317,
+        "moduleEfficiency": 0.23043194461994757,
+        "transmittanceAbsorptance": 0.8987526492792117,
+        "arrayHeight": 2,
+        "mountStandoff": 1.7104593664735201
+      },
+      "expected": {
+        "cellTemperature": 57.80551462522314
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1205.985208707959,
+        "tempAir": -3.5818673232507248,
+        "windSpeed": 5.595258964536896,
+        "noct": 45.739871010475106,
+        "moduleEfficiency": 0.13214100070170814,
+        "effectiveIrradiance": 1137.7720859829417,
+        "transmittanceAbsorptance": 0.8365227633919351,
+        "arrayHeight": 1,
+        "mountStandoff": 2.078985885188316
+      },
+      "expected": {
+        "cellTemperature": 19.293523158451706
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 220.2886515932516,
+        "tempAir": 4.827508004332595,
+        "windSpeed": 2.656365303963373,
+        "noct": 46.502700289930786,
+        "moduleEfficiency": 0.11209047697695605,
+        "transmittanceAbsorptance": 0.9171441255379227,
+        "arrayHeight": 1,
+        "mountStandoff": 0.16665429410955113
+      },
+      "expected": {
+        "cellTemperature": 14.247449903548674
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 252.14039886079723,
+        "tempAir": -23.373088123190904,
+        "windSpeed": 15.656232448176695,
+        "noct": 54.03141869711668,
+        "moduleEfficiency": 0.20666268906767962,
+        "transmittanceAbsorptance": 0.9412261085624726,
+        "arrayHeight": 2,
+        "mountStandoff": 0.4643925182028563
+      },
+      "expected": {
+        "cellTemperature": -20.47761647178823
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 304.35351698544713,
+        "tempAir": -7.292445278169968,
+        "windSpeed": 7.887808442097941,
+        "noct": 44.89157725495997,
+        "moduleEfficiency": 0.13022229886854367,
+        "effectiveIrradiance": 278.22993720616614,
+        "transmittanceAbsorptance": 0.9438189561372337,
+        "arrayHeight": 1,
+        "mountStandoff": 2.5960738222356605
+      },
+      "expected": {
+        "cellTemperature": -3.360287070422822
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1087.48135513882,
+        "tempAir": 38.30257736936264,
+        "windSpeed": 18.743450450141907,
+        "noct": 47.62803141581911,
+        "moduleEfficiency": 0.11269619858252976,
+        "transmittanceAbsorptance": 0.8224253554663039,
+        "arrayHeight": 2,
+        "mountStandoff": 3.419531738085367
+      },
+      "expected": {
+        "cellTemperature": 45.020802700070945
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 520.423811854341,
+        "tempAir": 2.756169516752429,
+        "windSpeed": 17.30297578898279,
+        "noct": 42.00044021105293,
+        "moduleEfficiency": 0.10204485877594506,
+        "transmittanceAbsorptance": 0.8534727473483374,
+        "arrayHeight": 1,
+        "mountStandoff": 4.5646947290726185
+      },
+      "expected": {
+        "cellTemperature": 5.807339703341748
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 544.4956132454242,
+        "tempAir": -7.600953065458871,
+        "windSpeed": 7.733795455046845,
+        "noct": 41.759205655413396,
+        "moduleEfficiency": 0.2189466772894413,
+        "transmittanceAbsorptance": 0.926966046188748,
+        "arrayHeight": 2,
+        "mountStandoff": 1.7359445875644919
+      },
+      "expected": {
+        "cellTemperature": -1.7985364157011858
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 901.3066240165218,
+        "tempAir": 11.04354365023629,
+        "windSpeed": 0.23360564965501762,
+        "noct": 45.65482126441836,
+        "moduleEfficiency": 0.20399740576738,
+        "effectiveIrradiance": 727.2092099466037,
+        "transmittanceAbsorptance": 0.8127993772785057,
+        "arrayHeight": 1,
+        "mountStandoff": 0.748422676393169
+      },
+      "expected": {
+        "cellTemperature": 54.972039789946834
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 452.49324696601263,
+        "tempAir": -19.060500533226996,
+        "windSpeed": 4.289593277105532,
+        "noct": 54.11525232217311,
+        "moduleEfficiency": 0.21294427033106383,
+        "transmittanceAbsorptance": 0.8489803111639121,
+        "arrayHeight": 1,
+        "mountStandoff": 4.360061638476843
+      },
+      "expected": {
+        "cellTemperature": -9.260183836761
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 799.7367920268531,
+        "tempAir": 7.780718636840049,
+        "windSpeed": 19.549516278216853,
+        "noct": 54.856239499034146,
+        "moduleEfficiency": 0.16611768351656794,
+        "transmittanceAbsorptance": 0.8988509110162666,
+        "arrayHeight": 2,
+        "mountStandoff": 1.1504070695478958
+      },
+      "expected": {
+        "cellTemperature": 14.739494274177048
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1045.0738545421996,
+        "tempAir": -25.49139064039189,
+        "windSpeed": 14.485152830373789,
+        "noct": 50.002781903859045,
+        "moduleEfficiency": 0.15873914321374516,
+        "transmittanceAbsorptance": 0.9312290290938082,
+        "arrayHeight": 2,
+        "mountStandoff": 4.497355831963137
+      },
+      "expected": {
+        "cellTemperature": -17.62736880714561
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 241.3970509605299,
+        "tempAir": 10.86434471055556,
+        "windSpeed": 11.517294829002243,
+        "noct": 42.385888620090654,
+        "moduleEfficiency": 0.15884137459355335,
+        "transmittanceAbsorptance": 0.8070384074794232,
+        "arrayHeight": 1,
+        "mountStandoff": 1.384978544321298
+      },
+      "expected": {
+        "cellTemperature": 13.607593548411868
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 390.2761598121907,
+        "tempAir": -25.572094563179686,
+        "windSpeed": 5.129089418641888,
+        "noct": 46.1218959603224,
+        "moduleEfficiency": 0.1460223860228061,
+        "effectiveIrradiance": 365.54759988649397,
+        "transmittanceAbsorptance": 0.8231641689247453,
+        "arrayHeight": 2,
+        "mountStandoff": 1.94548802335675
+      },
+      "expected": {
+        "cellTemperature": -18.71135364706026
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 154.26215557657358,
+        "tempAir": -21.14458193045668,
+        "windSpeed": 18.932688507172383,
+        "noct": 46.49446270959896,
+        "moduleEfficiency": 0.1264904383815609,
+        "transmittanceAbsorptance": 0.8840033971900823,
+        "arrayHeight": 1,
+        "mountStandoff": 2.012319023699191
+      },
+      "expected": {
+        "cellTemperature": -19.941322684898005
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1321.174797456908,
+        "tempAir": 18.78922337438035,
+        "windSpeed": 19.225088164867444,
+        "noct": 51.368977275451414,
+        "moduleEfficiency": 0.18939028913205233,
+        "effectiveIrradiance": 1081.267050029256,
+        "transmittanceAbsorptance": 0.9183424998268438,
+        "arrayHeight": 1,
+        "mountStandoff": 4.6263694312752826
+      },
+      "expected": {
+        "cellTemperature": 27.35874100678848
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 226.24881275524552,
+        "tempAir": -8.040111503007994,
+        "windSpeed": 3.075555016315723,
+        "noct": 49.16538043082319,
+        "moduleEfficiency": 0.10752901938694642,
+        "transmittanceAbsorptance": 0.832193715467894,
+        "arrayHeight": 2,
+        "mountStandoff": 4.074479743731045
+      },
+      "expected": {
+        "cellTemperature": -2.7214442810167307
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 484.9333178268806,
+        "tempAir": -4.70888135544997,
+        "windSpeed": 16.384701829296095,
+        "noct": 53.66396777034437,
+        "moduleEfficiency": 0.16522969473563628,
+        "effectiveIrradiance": 453.7113817283315,
+        "transmittanceAbsorptance": 0.8179928732947049,
+        "arrayHeight": 1,
+        "mountStandoff": 4.957222698851811
+      },
+      "expected": {
+        "cellTemperature": -0.6504088322455521
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1216.957064105445,
+        "tempAir": -21.32158119576993,
+        "windSpeed": 16.148704466517934,
+        "noct": 52.68987261962789,
+        "moduleEfficiency": 0.2256353554245147,
+        "transmittanceAbsorptance": 0.872699757517287,
+        "arrayHeight": 1,
+        "mountStandoff": 3.322349598920897
+      },
+      "expected": {
+        "cellTemperature": -11.274561822612807
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 14.628734306362237,
+        "tempAir": -3.408910294256282,
+        "windSpeed": 3.9581678012371135,
+        "noct": 52.12976394179399,
+        "moduleEfficiency": 0.19211562650161235,
+        "transmittanceAbsorptance": 0.9137467329905127,
+        "arrayHeight": 2,
+        "mountStandoff": 4.144962203266295
+      },
+      "expected": {
+        "cellTemperature": -3.1125777316022774
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1038.706837000881,
+        "tempAir": 15.391549184496851,
+        "windSpeed": 5.5555675907451345,
+        "noct": 47.092057808132544,
+        "moduleEfficiency": 0.2365507178772982,
+        "transmittanceAbsorptance": 0.9446383383004455,
+        "arrayHeight": 1,
+        "mountStandoff": 1.5696819670118722
+      },
+      "expected": {
+        "cellTemperature": 33.97239620142059
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 642.8611438394587,
+        "tempAir": 42.17932792262274,
+        "windSpeed": 13.255553187348738,
+        "noct": 50.933483219239235,
+        "moduleEfficiency": 0.2286665766554826,
+        "effectiveIrradiance": 629.5959624367839,
+        "transmittanceAbsorptance": 0.9255985429760014,
+        "arrayHeight": 1,
+        "mountStandoff": 3.8221774924771768
+      },
+      "expected": {
+        "cellTemperature": 47.804729814708914
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 50.93310080413398,
+        "tempAir": 16.671970450486704,
+        "windSpeed": 5.141103788395512,
+        "noct": 44.418351008698956,
+        "moduleEfficiency": 0.19977594994023923,
+        "transmittanceAbsorptance": 0.830212687713512,
+        "arrayHeight": 1,
+        "mountStandoff": 1.811664680472291
+      },
+      "expected": {
+        "cellTemperature": 17.563906814810817
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1017.078795736495,
+        "tempAir": -14.027060220647725,
+        "windSpeed": 12.230753825996192,
+        "noct": 42.4991628233986,
+        "moduleEfficiency": 0.12955284738505815,
+        "transmittanceAbsorptance": 0.9107086877646021,
+        "arrayHeight": 1,
+        "mountStandoff": 4.257896703858297
+      },
+      "expected": {
+        "cellTemperature": -6.099890251117218
+      }
+    }
+  ]
+}

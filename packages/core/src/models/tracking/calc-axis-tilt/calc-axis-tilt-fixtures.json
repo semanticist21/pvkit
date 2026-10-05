@@ -1,0 +1,1007 @@
+{
+  "meta": {
+    "reference": "pvlib.tracking.calc_axis_tilt @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "slopeAzimuth": 180.0,
+        "slopeTilt": 0.0,
+        "axisAzimuth": 180.0
+      },
+      "expected": {
+        "axisTilt": 0.0
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 180.0,
+        "slopeTilt": 10.0,
+        "axisAzimuth": 180.0
+      },
+      "expected": {
+        "axisTilt": 10.0
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 180.0,
+        "slopeTilt": 10.0,
+        "axisAzimuth": 0.0
+      },
+      "expected": {
+        "axisTilt": -10.0
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 90.0,
+        "slopeTilt": 10.0,
+        "axisAzimuth": 180.0
+      },
+      "expected": {
+        "axisTilt": 6.18617582559833e-16
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 270.0,
+        "slopeTilt": 10.0,
+        "axisAzimuth": 180.0
+      },
+      "expected": {
+        "axisTilt": 6.18617582559833e-16
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 135.0,
+        "slopeTilt": 20.0,
+        "axisAzimuth": 180.0
+      },
+      "expected": {
+        "axisTilt": 14.432755043267381
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 200.0,
+        "slopeTilt": 45.0,
+        "axisAzimuth": 170.0
+      },
+      "expected": {
+        "axisTilt": 40.893394649130904
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 0.0,
+        "slopeTilt": 80.0,
+        "axisAzimuth": 30.0
+      },
+      "expected": {
+        "axisTilt": 78.49160663417767
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 180.0,
+        "slopeTilt": 89.0,
+        "axisAzimuth": 180.0
+      },
+      "expected": {
+        "axisTilt": 89.0
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 350.0,
+        "slopeTilt": 15.0,
+        "axisAzimuth": 10.0
+      },
+      "expected": {
+        "axisTilt": 14.13272274960347
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 122.13640487342892,
+        "slopeTilt": 18.13244560316706,
+        "axisAzimuth": 67.32198226341312
+      },
+      "expected": {
+        "axisTilt": 10.68612260478172
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 161.34270218691597,
+        "slopeTilt": 28.25734878721578,
+        "axisAzimuth": 274.0511881936509
+      },
+      "expected": {
+        "axisTilt": -11.722082888886481
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 187.38277121291097,
+        "slopeTilt": 22.37277035283507,
+        "axisAzimuth": 104.34554740218915
+      },
+      "expected": {
+        "axisTilt": 2.8565607607050305
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 82.79207418882763,
+        "slopeTilt": 27.1756331498259,
+        "axisAzimuth": 16.892027317247454
+      },
+      "expected": {
+        "axisTilt": 11.839665352831672
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 86.12881775621037,
+        "slopeTilt": 37.8560244036612,
+        "axisAzimuth": 32.40300478167902
+      },
+      "expected": {
+        "axisTilt": 24.69572025403406
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 347.0288913976437,
+        "slopeTilt": 0.8128107139149493,
+        "axisAzimuth": 314.9147202660271
+      },
+      "expected": {
+        "axisTilt": 0.688455974515954
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 223.19728820608458,
+        "slopeTilt": 9.69341379175201,
+        "axisAzimuth": 308.13051336836685
+      },
+      "expected": {
+        "axisTilt": 0.864287088508953
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 124.32587923074067,
+        "slopeTilt": 20.50132801228518,
+        "axisAzimuth": 253.27603407225484
+      },
+      "expected": {
+        "axisTilt": -13.227645700056968
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 120.79968308367243,
+        "slopeTilt": 38.55775168036174,
+        "axisAzimuth": 0.25668994120280786
+      },
+      "expected": {
+        "axisTilt": -22.051166922882654
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 277.6474799592149,
+        "slopeTilt": 6.460456589664447,
+        "axisAzimuth": 260.81591234886173
+      },
+      "expected": {
+        "axisTilt": 6.185884407300705
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 21.38638479529924,
+        "slopeTilt": 28.19791967659386,
+        "axisAzimuth": 235.6720908072395
+      },
+      "expected": {
+        "axisTilt": -23.892708620416986
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 24.510996316943846,
+        "slopeTilt": 14.844774919510858,
+        "axisAzimuth": 226.28129210390577
+      },
+      "expected": {
+        "axisTilt": -13.828115235781867
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 86.74607326006975,
+        "slopeTilt": 23.026141854081416,
+        "axisAzimuth": 324.81208018885354
+      },
+      "expected": {
+        "axisTilt": -12.669879774168429
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 99.35770457207995,
+        "slopeTilt": 8.98915454355414,
+        "axisAzimuth": 199.8739195459558
+      },
+      "expected": {
+        "axisTilt": -1.6537803186003586
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 125.38737447144099,
+        "slopeTilt": 22.091508288513158,
+        "axisAzimuth": 189.6982421107418
+      },
+      "expected": {
+        "axisTilt": 9.978853537752693
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 248.24252401665262,
+        "slopeTilt": 23.919703434725623,
+        "axisAzimuth": 253.63451537555372
+      },
+      "expected": {
+        "axisTilt": 23.825669377522892
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 37.61723565157373,
+        "slopeTilt": 33.73777197253988,
+        "axisAzimuth": 114.86921526871906
+      },
+      "expected": {
+        "axisTilt": 8.383599732045212
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 20.584173064541655,
+        "slopeTilt": 6.787067279299705,
+        "axisAzimuth": 172.96360644673956
+      },
+      "expected": {
+        "axisTilt": -6.01963384908273
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 256.0254700379933,
+        "slopeTilt": 12.614482466783327,
+        "axisAzimuth": 166.83498402415657
+      },
+      "expected": {
+        "axisTilt": 0.1811560372162804
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 145.39798863713685,
+        "slopeTilt": 13.526942053756152,
+        "axisAzimuth": 30.87689012163016
+      },
+      "expected": {
+        "axisTilt": -5.701851604712892
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 245.94415902811463,
+        "slopeTilt": 13.243950171886658,
+        "axisAzimuth": 265.19726304890935
+      },
+      "expected": {
+        "axisTilt": 12.527269017417407
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 321.6816985454481,
+        "slopeTilt": 6.11293866129411,
+        "axisAzimuth": 326.9359657112071
+      },
+      "expected": {
+        "axisTilt": 6.087446030806265
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 227.3924372804178,
+        "slopeTilt": 1.1216034012047964,
+        "axisAzimuth": 341.2230228613717
+      },
+      "expected": {
+        "axisTilt": -0.4532139708452389
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 344.0070713125355,
+        "slopeTilt": 15.48120695761687,
+        "axisAzimuth": 297.88997097881753
+      },
+      "expected": {
+        "axisTilt": 10.868131229869547
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 1.0284124264287886,
+        "slopeTilt": 1.7674597832460663,
+        "axisAzimuth": 153.8968786494608
+      },
+      "expected": {
+        "axisTilt": -1.5730757166363607
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 70.4054208577758,
+        "slopeTilt": 14.148211213664679,
+        "axisAzimuth": 2.8814965065420894
+      },
+      "expected": {
+        "axisTilt": 5.504514744531545
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 303.9403265640215,
+        "slopeTilt": 0.9935485129952998,
+        "axisAzimuth": 48.9814392433679
+      },
+      "expected": {
+        "axisTilt": -0.25786194726417955
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 245.97142507698575,
+        "slopeTilt": 25.16787099830813,
+        "axisAzimuth": 163.8704845484448
+      },
+      "expected": {
+        "axisTilt": 3.6947301871191445
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 306.9636203369887,
+        "slopeTilt": 5.162859688704758,
+        "axisAzimuth": 150.36830286815587
+      },
+      "expected": {
+        "axisTilt": -4.740092452520999
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 80.49957398332621,
+        "slopeTilt": 18.82644199892564,
+        "axisAzimuth": 298.352533614491
+      },
+      "expected": {
+        "axisTilt": -15.067080583057269
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 152.2689097693021,
+        "slopeTilt": 5.56394841591689,
+        "axisAzimuth": 352.01586131325973
+      },
+      "expected": {
+        "axisTilt": -5.238631606101162
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 279.0804850843882,
+        "slopeTilt": 40.82411329073583,
+        "axisAzimuth": 131.81604883029672
+      },
+      "expected": {
+        "axisTilt": -36.0059437865329
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 138.93797644900965,
+        "slopeTilt": 39.1433586915313,
+        "axisAzimuth": 155.39063830528588
+      },
+      "expected": {
+        "axisTilt": 37.97588074633439
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 347.4252364935319,
+        "slopeTilt": 29.612443786474948,
+        "axisAzimuth": 271.72895603854096
+      },
+      "expected": {
+        "axisTilt": 7.993305463095547
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 124.69813237023946,
+        "slopeTilt": 42.16624407804959,
+        "axisAzimuth": 270.34939556076984
+      },
+      "expected": {
+        "axisTilt": -36.78691349268976
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 44.141108664751926,
+        "slopeTilt": 17.789832496142893,
+        "axisAzimuth": 212.7150604854521
+      },
+      "expected": {
+        "axisTilt": -17.458877890417927
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 86.27091036707567,
+        "slopeTilt": 6.766809016876047,
+        "axisAzimuth": 81.75658295175857
+      },
+      "expected": {
+        "axisTilt": 6.746010001414156
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 359.0401434645637,
+        "slopeTilt": 25.41758542826218,
+        "axisAzimuth": 282.91080287888303
+      },
+      "expected": {
+        "axisTilt": 6.499275009837436
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 186.66775787800879,
+        "slopeTilt": 35.80233638463671,
+        "axisAzimuth": 80.87383699987221
+      },
+      "expected": {
+        "axisTilt": -11.106937612757829
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 307.2992894783634,
+        "slopeTilt": 13.549243924963676,
+        "axisAzimuth": 327.35551915237863
+      },
+      "expected": {
+        "axisTilt": 12.75527080942296
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 181.20020772462084,
+        "slopeTilt": 5.19300356209127,
+        "axisAzimuth": 153.686978954802
+      },
+      "expected": {
+        "axisTilt": 4.608386368452134
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 97.37028796666975,
+        "slopeTilt": 31.957201613905195,
+        "axisAzimuth": 141.6371314082176
+      },
+      "expected": {
+        "axisTilt": 24.07143858306279
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 162.5787464254733,
+        "slopeTilt": 22.827019978377752,
+        "axisAzimuth": 36.38598032804034
+      },
+      "expected": {
+        "axisTilt": -13.958169513123638
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 49.156533806170515,
+        "slopeTilt": 44.73388261990426,
+        "axisAzimuth": 205.26123426197785
+      },
+      "expected": {
+        "axisTilt": -42.17133330758302
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 111.75828916908529,
+        "slopeTilt": 42.48821289814815,
+        "axisAzimuth": 299.4185487411131
+      },
+      "expected": {
+        "axisTilt": -42.23249873752277
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 355.1884003389694,
+        "slopeTilt": 20.12461316529409,
+        "axisAzimuth": 169.77160175250492
+      },
+      "expected": {
+        "axisTilt": -20.041910876613255
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 20.26428374226642,
+        "slopeTilt": 40.75592377607666,
+        "axisAzimuth": 23.928871086891583
+      },
+      "expected": {
+        "axisTilt": 40.69793891459143
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 292.64226964451495,
+        "slopeTilt": 13.222650391493131,
+        "axisAzimuth": 65.65129928539682
+      },
+      "expected": {
+        "axisTilt": -9.105517514838132
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 74.01389272760198,
+        "slopeTilt": 11.150251695670935,
+        "axisAzimuth": 274.52346343760746
+      },
+      "expected": {
+        "axisTilt": -10.459584608009777
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 193.82337002176976,
+        "slopeTilt": 17.74148571491541,
+        "axisAzimuth": 25.44681468109518
+      },
+      "expected": {
+        "axisTilt": -17.399826793239356
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 14.132566427025818,
+        "slopeTilt": 16.00970273415285,
+        "axisAzimuth": 193.2293401494103
+      },
+      "expected": {
+        "axisTilt": -16.00781539204802
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 204.10919413168077,
+        "slopeTilt": 20.90233268838304,
+        "axisAzimuth": 112.65532347874333
+      },
+      "expected": {
+        "axisTilt": -0.5551700814803157
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 187.77560891672417,
+        "slopeTilt": 30.132158463742968,
+        "axisAzimuth": 254.88698514662914
+      },
+      "expected": {
+        "axisTilt": 12.721440913442581
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 214.98783452749993,
+        "slopeTilt": 30.248981411972384,
+        "axisAzimuth": 183.61724338876107
+      },
+      "expected": {
+        "axisTilt": 26.469248939362572
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 217.28594286607986,
+        "slopeTilt": 44.526062832779985,
+        "axisAzimuth": 244.60050329340078
+      },
+      "expected": {
+        "axisTilt": 41.15092370094219
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 19.14442628675557,
+        "slopeTilt": 37.405551284773274,
+        "axisAzimuth": 324.5987229138675
+      },
+      "expected": {
+        "axisTilt": 23.92079798727145
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 9.923447703186103,
+        "slopeTilt": 42.05803579898558,
+        "axisAzimuth": 164.84714797622084
+      },
+      "expected": {
+        "axisTilt": -39.2556419723299
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 298.7426393795567,
+        "slopeTilt": 42.08209608826533,
+        "axisAzimuth": 303.04266705613236
+      },
+      "expected": {
+        "axisTilt": 42.00177149438702
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 263.107107451248,
+        "slopeTilt": 22.171511527202334,
+        "axisAzimuth": 350.2498036599595
+      },
+      "expected": {
+        "axisTilt": 1.1637444820360363
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 104.12623447364427,
+        "slopeTilt": 19.680473440081265,
+        "axisAzimuth": 225.8295569677269
+      },
+      "expected": {
+        "axisTilt": -10.645209290844289
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 86.26441496994507,
+        "slopeTilt": 28.67362402138399,
+        "axisAzimuth": 79.74251113527137
+      },
+      "expected": {
+        "axisTilt": 28.517297365175843
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 285.65581226916225,
+        "slopeTilt": 9.806760319789435,
+        "axisAzimuth": 335.57147354427974
+      },
+      "expected": {
+        "axisTilt": 6.350972310860422
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 93.10246098454759,
+        "slopeTilt": 14.076004254360027,
+        "axisAzimuth": 153.41413231157395
+      },
+      "expected": {
+        "axisTilt": 7.079072330559004
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 299.40997260091666,
+        "slopeTilt": 34.859691150686636,
+        "axisAzimuth": 300.13730337604875
+      },
+      "expected": {
+        "axisTilt": 34.85752597753544
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 4.436173016383385,
+        "slopeTilt": 15.821852391753401,
+        "axisAzimuth": 226.36478574315325
+      },
+      "expected": {
+        "axisTilt": -11.90537559591647
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 79.930857744404,
+        "slopeTilt": 13.902366531694074,
+        "axisAzimuth": 335.38601685812165
+      },
+      "expected": {
+        "axisTilt": -3.5570025977367017
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 230.46409935665704,
+        "slopeTilt": 20.42535452274654,
+        "axisAzimuth": 3.1154636336184405
+      },
+      "expected": {
+        "axisTilt": -14.160989774309472
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 252.77360449795194,
+        "slopeTilt": 12.695430706854026,
+        "axisAzimuth": 167.19485405792003
+      },
+      "expected": {
+        "axisTilt": 0.9949129665953399
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 190.35094481859207,
+        "slopeTilt": 23.2146301415034,
+        "axisAzimuth": 257.7121835914155
+      },
+      "expected": {
+        "axisTilt": 9.374582925624066
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 93.69802846922566,
+        "slopeTilt": 30.08389340851797,
+        "axisAzimuth": 248.29770055151613
+      },
+      "expected": {
+        "axisTilt": -27.623265601572268
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 324.8426030681471,
+        "slopeTilt": 15.303283770300245,
+        "axisAzimuth": 46.36362633017938
+      },
+      "expected": {
+        "axisTilt": 2.3103957348765354
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 169.15339788176587,
+        "slopeTilt": 31.614990006245733,
+        "axisAzimuth": 289.9367527369679
+      },
+      "expected": {
+        "axisTilt": -17.486613709416694
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 289.0502558879529,
+        "slopeTilt": 23.426244426473986,
+        "axisAzimuth": 336.19046095717266
+      },
+      "expected": {
+        "axisTilt": 16.42138918363633
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 34.498604602945456,
+        "slopeTilt": 40.65036046030745,
+        "axisAzimuth": 154.3045887070151
+      },
+      "expected": {
+        "axisTilt": -23.112513469964664
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 225.74591890597904,
+        "slopeTilt": 30.300641975276733,
+        "axisAzimuth": 71.8806314913869
+      },
+      "expected": {
+        "axisTilt": -27.68251855433961
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 43.84081140156389,
+        "slopeTilt": 43.87739367912937,
+        "axisAzimuth": 50.63610480632501
+      },
+      "expected": {
+        "axisTilt": 43.6756232677574
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 345.67241529279494,
+        "slopeTilt": 6.043179078310881,
+        "axisAzimuth": 214.29755021161486
+      },
+      "expected": {
+        "axisTilt": -4.002790621865599
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 52.58638546994786,
+        "slopeTilt": 16.396920227348673,
+        "axisAzimuth": 267.6445011090929
+      },
+      "expected": {
+        "axisTilt": -13.54287783362832
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 46.07687868082236,
+        "slopeTilt": 1.319496685360958,
+        "axisAzimuth": 214.99409943617763
+      },
+      "expected": {
+        "axisTilt": -1.2948971686782549
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 167.29904136539204,
+        "slopeTilt": 11.801884961476857,
+        "axisAzimuth": 47.42626340764045
+      },
+      "expected": {
+        "axisTilt": -5.94141554385682
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 323.9273716097596,
+        "slopeTilt": 38.15519272434447,
+        "axisAzimuth": 245.85132834775098
+      },
+      "expected": {
+        "axisTilt": 9.220237970562172
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 98.73265231081506,
+        "slopeTilt": 22.317169498231465,
+        "axisAzimuth": 153.13284048562207
+      },
+      "expected": {
+        "axisTilt": 13.4387675067652
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 225.74031198791886,
+        "slopeTilt": 23.30962739215958,
+        "axisAzimuth": 305.9883571446144
+      },
+      "expected": {
+        "axisTilt": 4.174139687726402
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 262.9597623382067,
+        "slopeTilt": 19.386501136429697,
+        "axisAzimuth": 340.8375244253772
+      },
+      "expected": {
+        "axisTilt": 4.2262691298242725
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 301.6695440181297,
+        "slopeTilt": 31.393544036714744,
+        "axisAzimuth": 250.34621883452263
+      },
+      "expected": {
+        "axisTilt": 20.87480716450466
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 151.8230815803602,
+        "slopeTilt": 7.895689306738646,
+        "axisAzimuth": 219.02433071250732
+      },
+      "expected": {
+        "axisTilt": 3.0761006552993932
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 58.435002442743176,
+        "slopeTilt": 13.12340266301167,
+        "axisAzimuth": 275.28925191712705
+      },
+      "expected": {
+        "axisTilt": -10.566981850317582
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 163.65241011018747,
+        "slopeTilt": 37.1082994974536,
+        "axisAzimuth": 51.72740346161019
+      },
+      "expected": {
+        "axisTilt": -15.773909563838012
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 337.6653800073654,
+        "slopeTilt": 26.529967266945444,
+        "axisAzimuth": 135.99935278023182
+      },
+      "expected": {
+        "axisTilt": -24.889636000603947
+      }
+    },
+    {
+      "input": {
+        "slopeAzimuth": 232.50764478444074,
+        "slopeTilt": 16.94883565000744,
+        "axisAzimuth": 253.62450600127636
+      },
+      "expected": {
+        "axisTilt": 15.86989348847179
+      }
+    }
+  ]
+}

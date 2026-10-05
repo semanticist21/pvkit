@@ -1,0 +1,674 @@
+{
+  "meta": {
+    "reference": "pvlib.solarposition.equation_of_time_spencer71 / equation_of_time_pvcdrom @ pvlib 0.16.1",
+    "unit": "minutes"
+  },
+  "cases": [
+    {
+      "input": {
+        "dayOfYear": 0.0
+      },
+      "expected": {
+        "spencer71": -2.468961011286576,
+        "pvcdrom": -3.256234923805361
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 1.0
+      },
+      "expected": {
+        "spencer71": -2.9196783324276487,
+        "pvcdrom": -3.7051783233960744
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 2.0
+      },
+      "expected": {
+        "spencer71": -3.366552677203196,
+        "pvcdrom": -4.149710085353458
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 59.0
+      },
+      "expected": {
+        "spencer71": -13.086923844374738,
+        "pvcdrom": -13.223058826027485
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 60.0
+      },
+      "expected": {
+        "spencer71": -12.918377145173539,
+        "pvcdrom": -13.043140157114735
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 81.0
+      },
+      "expected": {
+        "spencer71": -7.564640334995499,
+        "pvcdrom": -7.53
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 172.0
+      },
+      "expected": {
+        "spencer71": -1.343724731691309,
+        "pvcdrom": -1.44744069368365
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 264.0
+      },
+      "expected": {
+        "spencer71": 6.885322919237506,
+        "pvcdrom": 7.712527402736593
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 355.0
+      },
+      "expected": {
+        "spencer71": 2.155085618955181,
+        "pvcdrom": 1.382629406942221
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 365.0
+      },
+      "expected": {
+        "spencer71": -2.4689610112865594,
+        "pvcdrom": -3.2562349238053434
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 366.0
+      },
+      "expected": {
+        "spencer71": -2.9196783324276425,
+        "pvcdrom": -3.7051783233960682
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 367.0
+      },
+      "expected": {
+        "spencer71": -3.366552677203176,
+        "pvcdrom": -4.14971008535344
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 0.5
+      },
+      "expected": {
+        "spencer71": -2.6947737876204694,
+        "pvcdrom": -3.4812322823151707
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 365.75
+      },
+      "expected": {
+        "spencer71": -2.8073428822270254,
+        "pvcdrom": -3.593339954648553
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 124.83274383000432
+      },
+      "expected": {
+        "spencer71": 3.4366946536558993,
+        "pvcdrom": 3.3375519332959707
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 148.07428100346615
+      },
+      "expected": {
+        "spencer71": 3.0788756812155103,
+        "pvcdrom": 2.8828738421232702
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 69.25700979484941
+      },
+      "expected": {
+        "spencer71": -10.923526542670855,
+        "pvcdrom": -10.95806125117025
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 164.58357305062313
+      },
+      "expected": {
+        "spencer71": 0.2554746925644907,
+        "pvcdrom": 0.09715418745395876
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 230.198495718528
+      },
+      "expected": {
+        "spencer71": -4.2336316930412785,
+        "pvcdrom": -3.482207829539415
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 278.8574546963405
+      },
+      "expected": {
+        "spencer71": 12.000665685073377,
+        "pvcdrom": 12.639159858245332
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 190.9853097019792
+      },
+      "expected": {
+        "spencer71": -5.1031104612492735,
+        "pvcdrom": -4.970059514149802
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 182.46802619521776
+      },
+      "expected": {
+        "spencer71": -3.57176375826379,
+        "pvcdrom": -3.5601797096269903
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 106.79479111610844
+      },
+      "expected": {
+        "spencer71": 0.20615478727584183,
+        "pvcdrom": 0.21355771007092428
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 84.94196410811689
+      },
+      "expected": {
+        "spencer71": -6.324645123442832,
+        "pvcdrom": -6.278974199285913
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 221.4245799930323
+      },
+      "expected": {
+        "spencer71": -5.785171278987812,
+        "pvcdrom": -5.1505819278673854
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 18.12663880776478
+      },
+      "expected": {
+        "spencer71": -9.714488460083397,
+        "pvcdrom": -10.389421275808754
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 88.32505133615773
+      },
+      "expected": {
+        "spencer71": -5.246359257240759,
+        "pvcdrom": -5.19604412415652
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 308.05442016302976
+      },
+      "expected": {
+        "spencer71": 16.32080253880232,
+        "pvcdrom": 16.325961212382637
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 33.8530465147579
+      },
+      "expected": {
+        "spencer71": -13.473438526704216,
+        "pvcdrom": -13.951576745076792
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 352.8487371114999
+      },
+      "expected": {
+        "spencer71": 3.152525201031271,
+        "pvcdrom": 2.3912039456054504
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 7.5927980128657
+      },
+      "expected": {
+        "spencer71": -5.775811384515549,
+        "pvcdrom": -6.535772777446699
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 320.28853582527745
+      },
+      "expected": {
+        "spencer71": 14.881852739355159,
+        "pvcdrom": 14.60321265704578
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 227.29725054228018
+      },
+      "expected": {
+        "spencer71": -4.832183526719966,
+        "pvcdrom": -4.116214605527894
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 79.62435631087742
+      },
+      "expected": {
+        "spencer71": -7.988994846546844,
+        "pvcdrom": -7.959651780895741
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 313.4101038318164
+      },
+      "expected": {
+        "spencer71": 15.938343599170388,
+        "pvcdrom": 15.816358823352326
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 127.05262755338984
+      },
+      "expected": {
+        "spencer71": 3.627986265788357,
+        "pvcdrom": 3.515316200285122
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 167.2885494329798
+      },
+      "expected": {
+        "spencer71": -0.3179697581923281,
+        "pvcdrom": -0.45911286674336615
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 257.79375676770286
+      },
+      "expected": {
+        "spencer71": 4.553784621272965,
+        "pvcdrom": 5.420014814756721
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 123.47745645983456
+      },
+      "expected": {
+        "spencer71": 3.29611274889001,
+        "pvcdrom": 3.20538818186634
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 313.74620807404517
+      },
+      "expected": {
+        "spencer71": 15.901344818781311,
+        "pvcdrom": 15.77149078097743
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 1.260255079275069
+      },
+      "expected": {
+        "spencer71": -3.036366532185955,
+        "pvcdrom": -3.821311291909595
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 282.5036949586484
+      },
+      "expected": {
+        "spencer71": 13.045243723865182,
+        "pvcdrom": 13.619321786628012
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 53.40148122727829
+      },
+      "expected": {
+        "spencer71": -13.834723235991923,
+        "pvcdrom": -14.039358016950482
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 265.4383555759292
+      },
+      "expected": {
+        "spencer71": 7.419371251426069,
+        "pvcdrom": 8.234030912050127
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 22.683417917456175
+      },
+      "expected": {
+        "spencer71": -11.096728334971921,
+        "pvcdrom": -11.721240133329607
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 229.71645959903907
+      },
+      "expected": {
+        "spencer71": -4.338707979824612,
+        "pvcdrom": -3.5929318707481963
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 239.94531429067337
+      },
+      "expected": {
+        "spencer71": -1.669314314005954,
+        "pvcdrom": -0.8274321785990881
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 25.851426821345843
+      },
+      "expected": {
+        "spencer71": -11.923032213820893,
+        "pvcdrom": -12.50876823024858
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 121.40761879158808
+      },
+      "expected": {
+        "spencer71": 3.047059646711394,
+        "pvcdrom": 2.9693230665889363
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 230.42408782757113
+      },
+      "expected": {
+        "spencer71": -4.183699731027657,
+        "pvcdrom": -3.4296672466798808
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 88.95087983312628
+      },
+      "expected": {
+        "spencer71": -5.0467796515569665,
+        "pvcdrom": -4.99608165851448
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 187.76759503866037
+      },
+      "expected": {
+        "spencer71": -4.569651061608531,
+        "pvcdrom": -4.484929252420283
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 330.3233590803654
+      },
+      "expected": {
+        "spencer71": 12.281176048498281,
+        "pvcdrom": 11.799126052230584
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 101.73767269113661
+      },
+      "expected": {
+        "spencer71": -1.1452333806461505,
+        "pvcdrom": -1.1162200765454537
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 73.91203129771691
+      },
+      "expected": {
+        "spencer71": -9.675484961325624,
+        "pvcdrom": -9.676169716886598
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 203.6499462063163
+      },
+      "expected": {
+        "spencer71": -6.463160598865715,
+        "pvcdrom": -6.121127422006135
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 128.12886578354434
+      },
+      "expected": {
+        "spencer71": 3.7031785246846938,
+        "pvcdrom": 3.584108544507745
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 180.18667834016227
+      },
+      "expected": {
+        "spencer71": -3.1068958606058343,
+        "pvcdrom": -3.123958367155428
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 193.33293991783543
+      },
+      "expected": {
+        "spencer71": -5.450369381951082,
+        "pvcdrom": -5.2804984079945
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 252.69033685021722
+      },
+      "expected": {
+        "spencer71": 2.653788854496019,
+        "pvcdrom": 3.533490135575225
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 195.0153723038856
+      },
+      "expected": {
+        "spencer71": -5.675083132776409,
+        "pvcdrom": -5.4781339224452195
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 258.157216977992
+      },
+      "expected": {
+        "spencer71": 4.690481667659154,
+        "pvcdrom": 5.555109865316366
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 39.13969725784558
+      },
+      "expected": {
+        "spencer71": -14.05281981216649,
+        "pvcdrom": -14.455623907744853
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 274.6508171106013
+      },
+      "expected": {
+        "spencer71": 10.670007725924101,
+        "pvcdrom": 11.374614308048672
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 117.46462103634016
+      },
+      "expected": {
+        "spencer71": 2.4606748859272707,
+        "pvcdrom": 2.407674799016619
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 21.870064357104734
+      },
+      "expected": {
+        "spencer71": -10.866298453303735,
+        "pvcdrom": -11.500305874856405
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 56.0506568209865
+      },
+      "expected": {
+        "spencer71": -13.523517138185278,
+        "pvcdrom": -13.69477762510146
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 176.36587875849983
+      },
+      "expected": {
+        "spencer71": -2.296326322053163,
+        "pvcdrom": -2.357104800164117
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 260.58137934407654
+      },
+      "expected": {
+        "spencer71": 5.6033032746970095,
+        "pvcdrom": 6.455063580538349
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 103.31746889724255
+      },
+      "expected": {
+        "spencer71": -0.7070377989895423,
+        "pvcdrom": -0.6841212815396372
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 170.15213658004762
+      },
+      "expected": {
+        "spencer71": -0.9391219240980555,
+        "pvcdrom": -1.0586421368097398
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 148.41740514598595
+      },
+      "expected": {
+        "spencer71": 3.0373755992489633,
+        "pvcdrom": 2.8410547017184475
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 110.71852999157767
+      },
+      "expected": {
+        "spencer71": 1.1393276830175478,
+        "pvcdrom": 1.1263157390529108
+      }
+    },
+    {
+      "input": {
+        "dayOfYear": 32.30573581776391
+      },
+      "expected": {
+        "spencer71": -13.235899521727552,
+        "pvcdrom": -13.735646951173122
+      }
+    }
+  ]
+}

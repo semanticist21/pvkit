@@ -1,0 +1,667 @@
+{
+  "meta": {
+    "reference": "pvlib.solarposition.hour_angle (UTC times) @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "timeMs": 1750507200000,
+        "longitude": 0.0,
+        "equationOfTime": 0.0
+      },
+      "expected": {
+        "hourAngle": 0.0
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1709175600000,
+        "longitude": 126.978,
+        "equationOfTime": -12.5
+      },
+      "expected": {
+        "hourAngle": -11.147000000000006
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1735689600000,
+        "longitude": -180.0,
+        "equationOfTime": 3.2
+      },
+      "expected": {
+        "hourAngle": -359.2
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1735775999000,
+        "longitude": 180.0,
+        "equationOfTime": -3.2
+      },
+      "expected": {
+        "hourAngle": 359.19583333333327
+      }
+    },
+    {
+      "input": {
+        "timeMs": -14182940000,
+        "longitude": -105.1786,
+        "equationOfTime": 16.4
+      },
+      "expected": {
+        "hourAngle": 23.338066666666656
+      }
+    },
+    {
+      "input": {
+        "timeMs": 4133935800000,
+        "longitude": 179.999,
+        "equationOfTime": 14.0
+      },
+      "expected": {
+        "hourAngle": 175.999
+      }
+    },
+    {
+      "input": {
+        "timeMs": 760675386288,
+        "longitude": -34.940435174663506,
+        "equationOfTime": -10.641812786233206
+      },
+      "expected": {
+        "hourAngle": -176.82468837122178
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1207457804457,
+        "longitude": 46.05879029772624,
+        "equationOfTime": 8.882612218289252
+      },
+      "expected": {
+        "hourAngle": -57.53531914770145
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1504202098255,
+        "longitude": -1.017837177319456,
+        "equationOfTime": -7.145142745348803
+      },
+      "expected": {
+        "hourAngle": 85.93860630301005
+      }
+    },
+    {
+      "input": {
+        "timeMs": 312319983992,
+        "longitude": 37.4050651986072,
+        "equationOfTime": -15.404641864482185
+      },
+      "expected": {
+        "hourAngle": 146.82053806582002
+      }
+    },
+    {
+      "input": {
+        "timeMs": 350344445928,
+        "longitude": 122.84819522928962,
+        "equationOfTime": -13.939716215063648
+      },
+      "expected": {
+        "hourAngle": 267.8879661755237
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3323478197122,
+        "longitude": -173.4975142886804,
+        "equationOfTime": 12.741945802902556
+      },
+      "expected": {
+        "hourAngle": -284.4906861712881
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1912332873264,
+        "longitude": -102.45268966598393,
+        "equationOfTime": 12.10121515145687
+      },
+      "expected": {
+        "hourAngle": -105.78878587811971
+      }
+    },
+    {
+      "input": {
+        "timeMs": 785625935432,
+        "longitude": -15.989375901718542,
+        "equationOfTime": 6.920514329046291
+      },
+      "expected": {
+        "hourAngle": 127.13838601387637
+      }
+    },
+    {
+      "input": {
+        "timeMs": 745442532522,
+        "longitude": 128.4620134428939,
+        "equationOfTime": -16.975757061108624
+      },
+      "expected": {
+        "hourAngle": 234.77024917761673
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2532829834421,
+        "longitude": -128.31634728268443,
+        "equationOfTime": 7.6326139440591625
+      },
+      "expected": {
+        "hourAngle": -248.76477296333633
+      }
+    },
+    {
+      "input": {
+        "timeMs": -387439602516,
+        "longitude": 45.58335741275086,
+        "equationOfTime": 5.257919687350397
+      },
+      "expected": {
+        "hourAngle": 135.22068733458846
+      }
+    },
+    {
+      "input": {
+        "timeMs": -351832529491,
+        "longitude": -61.24180064391313,
+        "equationOfTime": 4.371010920924435
+      },
+      "expected": {
+        "hourAngle": 70.9780729196513
+      }
+    },
+    {
+      "input": {
+        "timeMs": 357378492128,
+        "longitude": 4.20913483265132,
+        "equationOfTime": 13.676696462280612
+      },
+      "expected": {
+        "hourAngle": -55.3211577184452
+      }
+    },
+    {
+      "input": {
+        "timeMs": 501096606837,
+        "longitude": -108.08676365156688,
+        "equationOfTime": 1.8769812904513807
+      },
+      "expected": {
+        "hourAngle": -25.089030828954026
+      }
+    },
+    {
+      "input": {
+        "timeMs": 797722395516,
+        "longitude": -3.26793369189474,
+        "equationOfTime": 0.9159450882367255
+      },
+      "expected": {
+        "hourAngle": 140.27570258016448
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2197740366086,
+        "longitude": 11.357627477804977,
+        "equationOfTime": 6.954370896580075
+      },
+      "expected": {
+        "hourAngle": 124.62157853528333
+      }
+    },
+    {
+      "input": {
+        "timeMs": -202478020031,
+        "longitude": 89.90217578031906,
+        "equationOfTime": -6.151240780176533
+      },
+      "expected": {
+        "hourAngle": 89.9475697519416
+      }
+    },
+    {
+      "input": {
+        "timeMs": -396581350692,
+        "longitude": -125.70346176560236,
+        "equationOfTime": -0.6645482800301519
+      },
+      "expected": {
+        "hourAngle": 31.83585116439012
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2286432328402,
+        "longitude": -79.08414026573338,
+        "equationOfTime": -1.2433626199407697
+      },
+      "expected": {
+        "hourAngle": -138.0266392540519
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1025756951152,
+        "longitude": -71.78446356995079,
+        "equationOfTime": -14.083849266290486
+      },
+      "expected": {
+        "hourAngle": -188.00895921985673
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2171548934153,
+        "longitude": -74.04839862490674,
+        "equationOfTime": 8.04640817684144
+      },
+      "expected": {
+        "hourAngle": -11.477825747363045
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3034629698480,
+        "longitude": -131.09649070964713,
+        "equationOfTime": 13.877285650502888
+      },
+      "expected": {
+        "hourAngle": -297.2168359636881
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1960139449667,
+        "longitude": -171.02717279036162,
+        "equationOfTime": 15.22661882579622
+      },
+      "expected": {
+        "hourAngle": -59.513572250579216
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3289042502414,
+        "longitude": -56.15034433906504,
+        "equationOfTime": 11.134052814666099
+      },
+      "expected": {
+        "hourAngle": -9.606772802065178
+      }
+    },
+    {
+      "input": {
+        "timeMs": -619432541081,
+        "longitude": -165.86032173403146,
+        "equationOfTime": -2.4652947942175913
+      },
+      "expected": {
+        "hourAngle": -115.39781626591918
+      }
+    },
+    {
+      "input": {
+        "timeMs": 171165646360,
+        "longitude": -66.81431029068257,
+        "equationOfTime": -16.727858663271025
+      },
+      "expected": {
+        "hourAngle": -220.8031082898337
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2832454700619,
+        "longitude": -172.0516118960376,
+        "equationOfTime": -12.37397518257081
+      },
+      "expected": {
+        "hourAngle": -340.5591931916803
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2171859649321,
+        "longitude": 21.34296798646503,
+        "equationOfTime": -1.5233431259802122
+      },
+      "expected": {
+        "hourAngle": -63.83236362836337
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2866907189001,
+        "longitude": -138.69712249036192,
+        "equationOfTime": -2.7985491735630563
+      },
+      "expected": {
+        "hourAngle": -32.775922283752664
+      }
+    },
+    {
+      "input": {
+        "timeMs": 286195385250,
+        "longitude": -29.388464008594866,
+        "equationOfTime": 11.17773928581304
+      },
+      "expected": {
+        "hourAngle": -45.8221541871416
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1104055769679,
+        "longitude": -135.48841267266488,
+        "equationOfTime": 16.245942457363423
+      },
+      "expected": {
+        "hourAngle": -159.05326455832403
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2549159902266,
+        "longitude": 146.59290632588662,
+        "equationOfTime": -4.550706499360865
+      },
+      "expected": {
+        "hourAngle": 25.048004701046402
+      }
+    },
+    {
+      "input": {
+        "timeMs": 952140719460,
+        "longitude": 133.14686953225038,
+        "equationOfTime": -2.3242174933896678
+      },
+      "expected": {
+        "hourAngle": 5.563565158902957
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3327994819004,
+        "longitude": 56.899550291799585,
+        "equationOfTime": 8.663290292528867
+      },
+      "expected": {
+        "hourAngle": 44.14455619826513
+      }
+    },
+    {
+      "input": {
+        "timeMs": 789868013088,
+        "longitude": 157.32995262439673,
+        "equationOfTime": 8.53299846962826
+      },
+      "expected": {
+        "hourAngle": 336.1844022418038
+      }
+    },
+    {
+      "input": {
+        "timeMs": -128134050812,
+        "longitude": -37.681340030856845,
+        "equationOfTime": 3.0897557125149206
+      },
+      "expected": {
+        "hourAngle": 131.21271556393856
+      }
+    },
+    {
+      "input": {
+        "timeMs": 351963687851,
+        "longitude": -125.86552786499162,
+        "equationOfTime": -9.278544943445024
+      },
+      "expected": {
+        "hourAngle": -72.81911826751954
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3460354582076,
+        "longitude": 23.34068342609742,
+        "equationOfTime": 9.719353605227845
+      },
+      "expected": {
+        "hourAngle": -10.137494839262294
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1496054035095,
+        "longitude": 106.41869107709367,
+        "equationOfTime": -9.361915394456513
+      },
+      "expected": {
+        "hourAngle": 82.55777472847956
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2870732367122,
+        "longitude": -71.60604860029059,
+        "equationOfTime": 13.916910142169094
+      },
+      "expected": {
+        "hourAngle": -223.263812731415
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1433747583163,
+        "longitude": -138.45597150326984,
+        "equationOfTime": -2.4851186542687023
+      },
+      "expected": {
+        "hourAngle": -210.81407200017034
+      }
+    },
+    {
+      "input": {
+        "timeMs": 478448643176,
+        "longitude": 75.65761291124156,
+        "equationOfTime": -3.623159811446113
+      },
+      "expected": {
+        "hourAngle": 110.76505629171336
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1221543369065,
+        "longitude": 2.6161598270220088,
+        "equationOfTime": -13.563546302351746
+      },
+      "expected": {
+        "hourAngle": -96.7369559152326
+      }
+    },
+    {
+      "input": {
+        "timeMs": -70979870836,
+        "longitude": 177.87106095923406,
+        "equationOfTime": 2.3857832358534625
+      },
+      "expected": {
+        "hourAngle": 169.00569010153075
+      }
+    },
+    {
+      "input": {
+        "timeMs": 642409700718,
+        "longitude": 159.90570318518516,
+        "equationOfTime": 11.278418492216238
+      },
+      "expected": {
+        "hourAngle": 89.81163280823922
+      }
+    },
+    {
+      "input": {
+        "timeMs": 3416461349974,
+        "longitude": -19.003094677647276,
+        "equationOfTime": -0.9660153900412021
+      },
+      "expected": {
+        "hourAngle": -63.61970685849091
+      }
+    },
+    {
+      "input": {
+        "timeMs": -400226707044,
+        "longitude": 146.04739020861334,
+        "equationOfTime": -14.740051064015795
+      },
+      "expected": {
+        "hourAngle": 231.0830274426094
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2703705659342,
+        "longitude": -74.21879686805495,
+        "equationOfTime": -10.799599511934744
+      },
+      "expected": {
+        "hourAngle": 63.328561587294686
+      }
+    },
+    {
+      "input": {
+        "timeMs": 212286637078,
+        "longitude": -90.79798643463252,
+        "equationOfTime": 8.927215991329593
+      },
+      "expected": {
+        "hourAngle": -260.9116907701335
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1577597101289,
+        "longitude": -38.06811428067671,
+        "equationOfTime": -14.596689724563234
+      },
+      "expected": {
+        "hourAngle": -140.4619158784842
+      }
+    },
+    {
+      "input": {
+        "timeMs": -470101795419,
+        "longitude": -51.92237812677719,
+        "equationOfTime": 1.2494376807776388
+      },
+      "expected": {
+        "hourAngle": -229.09093120658275
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1694811061382,
+        "longitude": -12.781338492935678,
+        "equationOfTime": -6.360330560340908
+      },
+      "expected": {
+        "hourAngle": 118.38433720031242
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1508678751020,
+        "longitude": 61.05726770994373,
+        "equationOfTime": 7.072659708292752
+      },
+      "expected": {
+        "hourAngle": 84.28801597035026
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1818780566168,
+        "longitude": 61.99185129577907,
+        "equationOfTime": 0.3416285422718779
+      },
+      "expected": {
+        "hourAngle": 134.43629176468036
+      }
+    },
+    {
+      "input": {
+        "timeMs": 1844969073400,
+        "longitude": 176.20850266223988,
+        "equationOfTime": 6.10115864437674
+      },
+      "expected": {
+        "hourAngle": 288.8729589900007
+      }
+    },
+    {
+      "input": {
+        "timeMs": -412988244253,
+        "longitude": 119.2444102781862,
+        "equationOfTime": 13.656546052976374
+      },
+      "expected": {
+        "hourAngle": -41.69250737523635
+      }
+    },
+    {
+      "input": {
+        "timeMs": -518067565478,
+        "longitude": 156.46428639188463,
+        "equationOfTime": -1.4311026911346978
+      },
+      "expected": {
+        "hourAngle": 281.2503523857676
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2773223520724,
+        "longitude": 156.65676870612265,
+        "equationOfTime": 11.620696333079168
+      },
+      "expected": {
+        "hourAngle": 157.5649594560591
+      }
+    },
+    {
+      "input": {
+        "timeMs": 2367132402240,
+        "longitude": -2.627907782381329,
+        "equationOfTime": 16.07914812344062
+      },
+      "expected": {
+        "hourAngle": -46.932120751521175
+      }
+    },
+    {
+      "input": {
+        "timeMs": 555437247666,
+        "longitude": -22.55621247934988,
+        "equationOfTime": 4.3283470469519845
+      },
+      "expected": {
+        "hourAngle": 40.3911492823881
+      }
+    }
+  ]
+}

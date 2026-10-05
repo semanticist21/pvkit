@@ -1,13 +1,12 @@
 /**
- * IAM (incidence angle modifier).
- *
- * Spec: physical (Fresnel/Snell), ASHRAE (b0), Martin-Ruiz (a_r), SAPM
- * polynomial, Marion diffuse integration.
- * Scope: AOI reflection/transmission loss. Closed-form, no data. POA → effective
- * irradiance is incomplete without it.
- * Validation: pin reference outputs as fixtures and assert against them.
- *
- * TODO: physical → ashrae → martin_ruiz → sapm → interp → marion.
+ * IAM (incidence angle modifier): fraction of beam irradiance transmitted through the module
+ * cover at a given angle of incidence (degrees). Closed-form per-instant models plus Marion's
+ * diffuse integration of any of them over sky / horizon / ground.
  */
 
-export {};
+export * from "./ashrae/index.ts";
+export * from "./interp/index.ts";
+export * from "./marion/index.ts";
+export * from "./martin-ruiz/index.ts";
+export * from "./physical/index.ts";
+export * from "./sapm/index.ts";

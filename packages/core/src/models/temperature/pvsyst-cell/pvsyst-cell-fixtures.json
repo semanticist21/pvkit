@@ -1,0 +1,1645 @@
+{
+  "meta": {
+    "reference": "pvlib.temperature.pvsyst_cell @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "poaGlobal": 1000.0,
+        "tempAir": 25.0,
+        "windSpeed": 1.0,
+        "uC": 29.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": 52.93103448275862
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 0.0,
+        "tempAir": 15.0,
+        "windSpeed": 3.0,
+        "uC": 29.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": 15.0
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": -5.0,
+        "tempAir": -10.0,
+        "windSpeed": 2.0,
+        "uC": 29.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": -10.139655172413793
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1400.0,
+        "tempAir": 50.0,
+        "windSpeed": 0.0,
+        "uC": 29.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": 89.10344827586206
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 800.0,
+        "tempAir": -40.0,
+        "windSpeed": 30.0,
+        "uC": 29.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": -17.655172413793103
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1000.0,
+        "tempAir": 25.0,
+        "windSpeed": 1.0,
+        "uC": 15.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": 79.0
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 0.0,
+        "tempAir": 15.0,
+        "windSpeed": 3.0,
+        "uC": 15.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": 15.0
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": -5.0,
+        "tempAir": -10.0,
+        "windSpeed": 2.0,
+        "uC": 15.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": -10.27
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1400.0,
+        "tempAir": 50.0,
+        "windSpeed": 0.0,
+        "uC": 15.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": 125.6
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 800.0,
+        "tempAir": -40.0,
+        "windSpeed": 30.0,
+        "uC": 15.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": 3.200000000000003
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1000.0,
+        "tempAir": 25.0,
+        "windSpeed": 1.0,
+        "uC": 20.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": 65.5
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 0.0,
+        "tempAir": 15.0,
+        "windSpeed": 3.0,
+        "uC": 20.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": 15.0
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": -5.0,
+        "tempAir": -10.0,
+        "windSpeed": 2.0,
+        "uC": 20.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": -10.2025
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1400.0,
+        "tempAir": 50.0,
+        "windSpeed": 0.0,
+        "uC": 20.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": 106.7
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 800.0,
+        "tempAir": -40.0,
+        "windSpeed": 30.0,
+        "uC": 20.0,
+        "uV": 0.0,
+        "moduleEfficiency": 0.1,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": -7.600000000000001
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 800.0,
+        "tempAir": 20.0,
+        "windSpeed": 5.0,
+        "uC": 25.0,
+        "uV": 1.2,
+        "moduleEfficiency": 0.2,
+        "alphaAbsorption": 0.9
+      },
+      "expected": {
+        "cellTemperature": 38.58064516129032
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1000.0,
+        "tempAir": 35.0,
+        "windSpeed": 12.0,
+        "uC": 25.0,
+        "uV": 1.2,
+        "moduleEfficiency": 0.22,
+        "alphaAbsorption": 0.95
+      },
+      "expected": {
+        "cellTemperature": 53.807106598984774
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 474.9749078411125,
+        "tempAir": 2.2354588500747763,
+        "windSpeed": 3.740110125745173,
+        "uC": 21.20435431853583,
+        "uV": 1.883823252481052,
+        "moduleEfficiency": 0.20225066010758386,
+        "alphaAbsorption": 0.8936913856064554
+      },
+      "expected": {
+        "cellTemperature": 14.222315356719545
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 696.0417443104243,
+        "tempAir": -6.8121005772913,
+        "windSpeed": 4.599559677157091,
+        "uC": 25.0975739721255,
+        "uV": 0.14076689431039546,
+        "moduleEfficiency": 0.09784934319789465,
+        "alphaAbsorption": 0.9514240976146447
+      },
+      "expected": {
+        "cellTemperature": 16.393613528791114
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 126.01168526208508,
+        "tempAir": 47.1175314216986,
+        "windSpeed": 0.3612492061844219,
+        "uC": 31.86907779625188,
+        "uV": 1.8599774017173716,
+        "moduleEfficiency": 0.09308183907445339,
+        "alphaAbsorption": 0.9540652566841834
+      },
+      "expected": {
+        "cellTemperature": 50.46815928556366
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 483.48953034176924,
+        "tempAir": 6.446805355173657,
+        "windSpeed": 14.070890781791936,
+        "uC": 18.388866880810586,
+        "uV": 2.5705167786907825,
+        "moduleEfficiency": 0.05014260552289045,
+        "alphaAbsorption": 0.9388237399796074
+      },
+      "expected": {
+        "cellTemperature": 14.349377965943058
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 200.99198278956055,
+        "tempAir": 27.959091633080384,
+        "windSpeed": 1.1881324886277356,
+        "uC": 25.66551093144103,
+        "uV": 1.963934090060329,
+        "moduleEfficiency": 0.06361722017607992,
+        "alphaAbsorption": 0.8593790996780435
+      },
+      "expected": {
+        "cellTemperature": 33.73573539065676
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 879.9828026263002,
+        "tempAir": -10.72309483109561,
+        "windSpeed": 10.233840824036184,
+        "uC": 32.55639445755927,
+        "uV": 0.8279808714339996,
+        "moduleEfficiency": 0.08995179797135174,
+        "alphaAbsorption": 0.8999369597729779
+      },
+      "expected": {
+        "cellTemperature": 6.8420230663649
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 487.6175673889372,
+        "tempAir": 9.27379251291228,
+        "windSpeed": 10.538791228374544,
+        "uC": 27.2390641678231,
+        "uV": 1.5946468956483748,
+        "moduleEfficiency": 0.19090806409752986,
+        "alphaAbsorption": 0.818808617825787
+      },
+      "expected": {
+        "cellTemperature": 16.6082132256806
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1049.6195724790186,
+        "tempAir": -4.4735077180624305,
+        "windSpeed": 1.1435651702523142,
+        "uC": 13.77059293294428,
+        "uV": 1.441363387056163,
+        "moduleEfficiency": 0.19223637224332962,
+        "alphaAbsorption": 0.8504579298671333
+      },
+      "expected": {
+        "cellTemperature": 42.29096635514439
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 648.8027156494977,
+        "tempAir": 2.3106641415859652,
+        "windSpeed": 6.011974246113844,
+        "uC": 12.144228480668762,
+        "uV": 2.049534658567622,
+        "moduleEfficiency": 0.1088620007639407,
+        "alphaAbsorption": 0.9325986315244547
+      },
+      "expected": {
+        "cellTemperature": 24.349559037663425
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1250.9843832322981,
+        "tempAir": -19.132553491032695,
+        "windSpeed": 18.16310920617817,
+        "uC": 25.791141477806793,
+        "uV": 0.07477356008031977,
+        "moduleEfficiency": 0.2395683460340954,
+        "alphaAbsorption": 0.9720035356562677
+      },
+      "expected": {
+        "cellTemperature": 14.925662378125722
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 481.6375497925248,
+        "tempAir": 36.19777132862612,
+        "windSpeed": 0.057134023690488256,
+        "uC": 10.98192210180337,
+        "uV": 1.2824739887455068,
+        "moduleEfficiency": 0.08911412269876434,
+        "alphaAbsorption": 0.8565928448546587
+      },
+      "expected": {
+        "cellTemperature": 70.19099422613068
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 11.205819747663682,
+        "tempAir": 37.54229479200478,
+        "windSpeed": 0.4415771168867999,
+        "uC": 13.401488836344994,
+        "uV": 2.049761875641548,
+        "moduleEfficiency": 0.16185720443692503,
+        "alphaAbsorption": 0.8819352422742224
+      },
+      "expected": {
+        "cellTemperature": 38.12127191242334
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1193.7474124216226,
+        "tempAir": -20.821582775635985,
+        "windSpeed": 8.353794603786437,
+        "uC": 15.590248193286543,
+        "uV": 1.2550961332617094,
+        "moduleEfficiency": 0.2157514075636061,
+        "alphaAbsorption": 0.876134454884651
+      },
+      "expected": {
+        "cellTemperature": 10.635002465432969
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 173.10061738408103,
+        "tempAir": 48.22574695850217,
+        "windSpeed": 15.504471393577122,
+        "uC": 32.680062939297684,
+        "uV": 1.0984670735858062,
+        "moduleEfficiency": 0.12718776469389426,
+        "alphaAbsorption": 0.9565734347661252
+      },
+      "expected": {
+        "cellTemperature": 51.13300370408972
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 604.2969267427784,
+        "tempAir": 47.20560810967376,
+        "windSpeed": 13.1610861273222,
+        "uC": 28.870066391565345,
+        "uV": 1.0391511030853289,
+        "moduleEfficiency": 0.23740552923577596,
+        "alphaAbsorption": 0.9351746977803849
+      },
+      "expected": {
+        "cellTemperature": 57.33477499139925
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 171.65986702959083,
+        "tempAir": 1.6263688820318123,
+        "windSpeed": 11.817503360302894,
+        "uC": 15.991035442158033,
+        "uV": 0.4511206011250698,
+        "moduleEfficiency": 0.0954203238620881,
+        "alphaAbsorption": 0.9795200717322818
+      },
+      "expected": {
+        "cellTemperature": 8.759789754491901
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 790.7693244348233,
+        "tempAir": 32.86906730641846,
+        "windSpeed": 10.37043099322271,
+        "uC": 29.890186880353728,
+        "uV": 0.6739486416656018,
+        "moduleEfficiency": 0.22072182748797967,
+        "alphaAbsorption": 0.8541969756998548
+      },
+      "expected": {
+        "cellTemperature": 47.14213726119871
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1273.0492411481391,
+        "tempAir": 10.266712827693523,
+        "windSpeed": 2.3080015831516754,
+        "uC": 20.672706871861248,
+        "uV": 0.8114190663889146,
+        "moduleEfficiency": 0.192032007172912,
+        "alphaAbsorption": 0.8708185657041089
+      },
+      "expected": {
+        "cellTemperature": 49.9957347312706
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 632.2506805435072,
+        "tempAir": 10.581368850449335,
+        "windSpeed": 2.0214433515577968,
+        "uC": 13.413648180984064,
+        "uV": 2.9822588413269506,
+        "moduleEfficiency": 0.16403401903443215,
+        "alphaAbsorption": 0.8558791445845426
+      },
+      "expected": {
+        "cellTemperature": 33.84871416704143
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1321.8555123868312,
+        "tempAir": 36.53745527580291,
+        "windSpeed": 19.732688907720522,
+        "uC": 21.180340647385606,
+        "uV": 1.414763347937541,
+        "moduleEfficiency": 0.061257935412370235,
+        "alphaAbsorption": 0.9630236951043066
+      },
+      "expected": {
+        "cellTemperature": 60.876779557898516
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 93.05672089346726,
+        "tempAir": 35.03161547655887,
+        "windSpeed": 5.876733507330281,
+        "uC": 14.559118005930335,
+        "uV": 0.6167824393966832,
+        "moduleEfficiency": 0.09955667420298193,
+        "alphaAbsorption": 0.9372617317188038
+      },
+      "expected": {
+        "cellTemperature": 39.35059105941586
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 753.7575500846602,
+        "tempAir": 1.5404190487385083,
+        "windSpeed": 1.41371192672751,
+        "uC": 10.981428224099016,
+        "uV": 1.06731351561019,
+        "moduleEfficiency": 0.15734963341633906,
+        "alphaAbsorption": 0.9020545970658403
+      },
+      "expected": {
+        "cellTemperature": 47.41149972904589
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 650.2947947496946,
+        "tempAir": -4.965483671390372,
+        "windSpeed": 10.431978273151344,
+        "uC": 26.74008803541276,
+        "uV": 2.1240582095552427,
+        "moduleEfficiency": 0.16943768584861107,
+        "alphaAbsorption": 0.9209959256478896
+      },
+      "expected": {
+        "cellTemperature": 5.207472738920362
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 714.0670576229596,
+        "tempAir": 18.28576508135108,
+        "windSpeed": 19.789361259013326,
+        "uC": 26.986146062041723,
+        "uV": 0.1595368857229631,
+        "moduleEfficiency": 0.21624689459899235,
+        "alphaAbsorption": 0.9622993614569337
+      },
+      "expected": {
+        "cellTemperature": 36.15220301953518
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 38.5911855123904,
+        "tempAir": 44.7698414204188,
+        "windSpeed": 9.158174887567824,
+        "uC": 30.746016623580328,
+        "uV": 2.805473072551022,
+        "moduleEfficiency": 0.21835703725340688,
+        "alphaAbsorption": 0.931553553725624
+      },
+      "expected": {
+        "cellTemperature": 45.2677215923864
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 689.7803586240726,
+        "tempAir": 47.83328970221323,
+        "windSpeed": 5.784790804091349,
+        "uC": 20.933596355600702,
+        "uV": 1.8819129747310575,
+        "moduleEfficiency": 0.09792467498330282,
+        "alphaAbsorption": 0.914694496085536
+      },
+      "expected": {
+        "cellTemperature": 65.71992174499894
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 310.10976552605536,
+        "tempAir": 33.47906939314717,
+        "windSpeed": 4.358560142128638,
+        "uC": 33.30357455168609,
+        "uV": 0.7758538415378966,
+        "moduleEfficiency": 0.11256001890826679,
+        "alphaAbsorption": 0.876707066155787
+      },
+      "expected": {
+        "cellTemperature": 40.05592464653784
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1164.3721156702316,
+        "tempAir": 31.97278426788735,
+        "windSpeed": 16.67429463200271,
+        "uC": 10.30806757058218,
+        "uV": 1.0547901594502267,
+        "moduleEfficiency": 0.17575821430175181,
+        "alphaAbsorption": 0.839965428872202
+      },
+      "expected": {
+        "cellTemperature": 60.87071118131887
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 432.5180698749267,
+        "tempAir": 44.53022596847148,
+        "windSpeed": 12.803561075369835,
+        "uC": 21.347419179303632,
+        "uV": 0.025962196946820337,
+        "moduleEfficiency": 0.19042978027663998,
+        "alphaAbsorption": 0.8507817228274162
+      },
+      "expected": {
+        "cellTemperature": 58.271313448428714
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 650.2022102252446,
+        "tempAir": 12.300209959687125,
+        "windSpeed": 10.317613396223733,
+        "uC": 27.896679416070523,
+        "uV": 0.7808169039102139,
+        "moduleEfficiency": 0.18370619292674653,
+        "alphaAbsorption": 0.9241488502757581
+      },
+      "expected": {
+        "cellTemperature": 25.943012449282058
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1263.276789709461,
+        "tempAir": -2.794162186132896,
+        "windSpeed": 2.5757570183432987,
+        "uC": 21.746763741789294,
+        "uV": 2.107666000416382,
+        "moduleEfficiency": 0.21107597374275996,
+        "alphaAbsorption": 0.9445251279439765
+      },
+      "expected": {
+        "cellTemperature": 31.845056401511663
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 728.8164932680796,
+        "tempAir": 44.70899132381614,
+        "windSpeed": 1.9165891446080807,
+        "uC": 32.5835335890597,
+        "uV": 1.285871572558459,
+        "moduleEfficiency": 0.1754143993922106,
+        "alphaAbsorption": 0.9212025679011069
+      },
+      "expected": {
+        "cellTemperature": 60.50493503035638
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 279.53578913317125,
+        "tempAir": -20.257597466319133,
+        "windSpeed": 19.50106385739083,
+        "uC": 13.516396167105903,
+        "uV": 2.8806034607732913,
+        "moduleEfficiency": 0.0768585736813817,
+        "alphaAbsorption": 0.9071487751058074
+      },
+      "expected": {
+        "cellTemperature": -16.89862797392147
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 204.50261016090835,
+        "tempAir": -0.8499195958245842,
+        "windSpeed": 14.86913895050516,
+        "uC": 13.199783241723775,
+        "uV": 0.08796644569073053,
+        "moduleEfficiency": 0.16944116635343204,
+        "alphaAbsorption": 0.8836495206826961
+      },
+      "expected": {
+        "cellTemperature": 9.495513704482866
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 367.16975435705774,
+        "tempAir": -19.46083035385768,
+        "windSpeed": 17.99596508943109,
+        "uC": 31.19732929130248,
+        "uV": 2.0487610695645913,
+        "moduleEfficiency": 0.10485147350600837,
+        "alphaAbsorption": 0.8892686779929259
+      },
+      "expected": {
+        "cellTemperature": -15.166851467212268
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 595.5166018885302,
+        "tempAir": 20.164513775093084,
+        "windSpeed": 10.359834396515367,
+        "uC": 31.249191468376,
+        "uV": 2.1913313528183895,
+        "moduleEfficiency": 0.13616222727302088,
+        "alphaAbsorption": 0.9704187622126886
+      },
+      "expected": {
+        "cellTemperature": 29.4175780138448
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1173.1593378482821,
+        "tempAir": 25.810744954159546,
+        "windSpeed": 13.90812326858459,
+        "uC": 20.54326955419168,
+        "uV": 0.5263792871159098,
+        "moduleEfficiency": 0.17168018372917074,
+        "alphaAbsorption": 0.8292175012213716
+      },
+      "expected": {
+        "cellTemperature": 54.72930473785087
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 408.2836384048075,
+        "tempAir": 31.17538931491712,
+        "windSpeed": 9.091800561677081,
+        "uC": 30.61572194302978,
+        "uV": 0.4310616955134182,
+        "moduleEfficiency": 0.2375918777818697,
+        "alphaAbsorption": 0.9061198690677817
+      },
+      "expected": {
+        "cellTemperature": 39.34267193124738
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 528.8863719231238,
+        "tempAir": 21.668365507653498,
+        "windSpeed": 7.532815844447751,
+        "uC": 27.612812916755303,
+        "uV": 2.313536169347443,
+        "moduleEfficiency": 0.2202789682826195,
+        "alphaAbsorption": 0.9064921382731819
+      },
+      "expected": {
+        "cellTemperature": 29.968112013558738
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 933.8041619937075,
+        "tempAir": 16.130765590644273,
+        "windSpeed": 19.983336413093575,
+        "uC": 17.09529994712459,
+        "uV": 1.821737177139349,
+        "moduleEfficiency": 0.07201842934578298,
+        "alphaAbsorption": 0.9512951237076962
+      },
+      "expected": {
+        "cellTemperature": 31.539223897147927
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1340.4626764240154,
+        "tempAir": 14.055571146859824,
+        "windSpeed": 6.469699180111732,
+        "uC": 25.890139944810066,
+        "uV": 0.6552303405830424,
+        "moduleEfficiency": 0.1297554466659965,
+        "alphaAbsorption": 0.8042368474883221
+      },
+      "expected": {
+        "cellTemperature": 45.19360656625711
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 838.8663115295168,
+        "tempAir": -12.861717641843207,
+        "windSpeed": 1.3213271528254489,
+        "uC": 28.00892572517591,
+        "uV": 0.522616320460651,
+        "moduleEfficiency": 0.23958902273878102,
+        "alphaAbsorption": 0.8131612791396933
+      },
+      "expected": {
+        "cellTemperature": 5.211850543323109
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 207.34940766848203,
+        "tempAir": -27.17998840472444,
+        "windSpeed": 0.04573234948859861,
+        "uC": 21.484368571365724,
+        "uV": 2.317025051167021,
+        "moduleEfficiency": 0.1946661651021427,
+        "alphaAbsorption": 0.8819748006416561
+      },
+      "expected": {
+        "cellTemperature": -20.35855553410569
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 756.7999533699458,
+        "tempAir": 7.115979570339652,
+        "windSpeed": 6.359237415780299,
+        "uC": 27.61232842377181,
+        "uV": 2.3382735750433596,
+        "moduleEfficiency": 0.2024829796277473,
+        "alphaAbsorption": 0.8958995821097283
+      },
+      "expected": {
+        "cellTemperature": 19.844437513150673
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1033.0099081181265,
+        "tempAir": 32.423014817164216,
+        "windSpeed": 11.096613428175921,
+        "uC": 12.017741190753483,
+        "uV": 2.9354378300915416,
+        "moduleEfficiency": 0.17956595144995083,
+        "alphaAbsorption": 0.9766832740899902
+      },
+      "expected": {
+        "cellTemperature": 50.986227582274594
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 139.89697543601838,
+        "tempAir": 18.601127592909698,
+        "windSpeed": 12.46778242492568,
+        "uC": 34.40990579068481,
+        "uV": 0.7897309479457104,
+        "moduleEfficiency": 0.17278961654575833,
+        "alphaAbsorption": 0.8006275082698134
+      },
+      "expected": {
+        "cellTemperature": 20.694669583132004
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1068.9218615305722,
+        "tempAir": 0.13600422059658612,
+        "windSpeed": 14.808704082750861,
+        "uC": 31.943359797328117,
+        "uV": 2.3660859817518856,
+        "moduleEfficiency": 0.16257570217402442,
+        "alphaAbsorption": 0.8736470077221268
+      },
+      "expected": {
+        "cellTemperature": 11.811335852653277
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 157.58133845931877,
+        "tempAir": -29.22960161909681,
+        "windSpeed": 2.7541436396245444,
+        "uC": 24.647678054060826,
+        "uV": 1.2184169965977354,
+        "moduleEfficiency": 0.07824112788748316,
+        "alphaAbsorption": 0.9714033365894976
+      },
+      "expected": {
+        "cellTemperature": -24.190984594451056
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1078.9466832898156,
+        "tempAir": 16.67686552214791,
+        "windSpeed": 15.535796137542672,
+        "uC": 18.283426393080795,
+        "uV": 2.5991245877320175,
+        "moduleEfficiency": 0.20918482462866894,
+        "alphaAbsorption": 0.9443143714543805
+      },
+      "expected": {
+        "cellTemperature": 30.411847008481956
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1274.1417977048363,
+        "tempAir": 45.57519201532544,
+        "windSpeed": 5.259299960497201,
+        "uC": 31.334058094461366,
+        "uV": 0.7016217708542787,
+        "moduleEfficiency": 0.19274232822449988,
+        "alphaAbsorption": 0.8123796523138829
+      },
+      "expected": {
+        "cellTemperature": 69.43253248053088
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1358.47375502584,
+        "tempAir": 16.9950114911287,
+        "windSpeed": 7.16963351156881,
+        "uC": 16.384308490312886,
+        "uV": 2.701594462857031,
+        "moduleEfficiency": 0.08691696904380664,
+        "alphaAbsorption": 0.9430081559670436
+      },
+      "expected": {
+        "cellTemperature": 49.71064735894146
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 298.9833734552831,
+        "tempAir": -29.944782555586976,
+        "windSpeed": 5.974804620836014,
+        "uC": 14.828347986038949,
+        "uV": 1.395206384269867,
+        "moduleEfficiency": 0.07417784271763439,
+        "alphaAbsorption": 0.9777966943100617
+      },
+      "expected": {
+        "cellTemperature": -18.2605151314192
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1052.2655507692375,
+        "tempAir": 12.722981262006234,
+        "windSpeed": 12.530976760360922,
+        "uC": 20.95519509914288,
+        "uV": 2.126715083437549,
+        "moduleEfficiency": 0.09427151749753243,
+        "alphaAbsorption": 0.8839147182044702
+      },
+      "expected": {
+        "cellTemperature": 30.419223755813753
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 347.78175964032687,
+        "tempAir": 46.18248855511361,
+        "windSpeed": 19.305562886428213,
+        "uC": 14.006182241396658,
+        "uV": 2.1310309020664624,
+        "moduleEfficiency": 0.10273852420113856,
+        "alphaAbsorption": 0.8851252362456012
+      },
+      "expected": {
+        "cellTemperature": 51.191005859965074
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1118.151347760752,
+        "tempAir": -26.66593284591646,
+        "windSpeed": 11.63444589411647,
+        "uC": 15.309285377218782,
+        "uV": 1.417314478114649,
+        "moduleEfficiency": 0.2314604297753704,
+        "alphaAbsorption": 0.9152987812261527
+      },
+      "expected": {
+        "cellTemperature": -1.9306503584503751
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1147.239232920639,
+        "tempAir": 36.3151935288468,
+        "windSpeed": 8.289264435012687,
+        "uC": 20.772560153155403,
+        "uV": 2.316670357823784,
+        "moduleEfficiency": 0.1630971191693918,
+        "alphaAbsorption": 0.8390036518893246
+      },
+      "expected": {
+        "cellTemperature": 56.466025809290834
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1130.74496614621,
+        "tempAir": 49.39721748713288,
+        "windSpeed": 8.496995097177237,
+        "uC": 15.464041132224464,
+        "uV": 2.710918589519869,
+        "moduleEfficiency": 0.11523783762405944,
+        "alphaAbsorption": 0.8689718513415062
+      },
+      "expected": {
+        "cellTemperature": 71.97861485993212
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 187.7823482589684,
+        "tempAir": -28.285949645335897,
+        "windSpeed": 11.541515322993003,
+        "uC": 28.741473498048766,
+        "uV": 2.2835405281393863,
+        "moduleEfficiency": 0.22539454537696355,
+        "alphaAbsorption": 0.856069857606007
+      },
+      "expected": {
+        "cellTemperature": -26.025906984907895
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 528.8030453578205,
+        "tempAir": 29.27362077929418,
+        "windSpeed": 19.05323013202297,
+        "uC": 33.883213242102364,
+        "uV": 0.19712711947260086,
+        "moduleEfficiency": 0.2490211393328693,
+        "alphaAbsorption": 0.9440814210696813
+      },
+      "expected": {
+        "cellTemperature": 39.234361399355606
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 637.8379170404597,
+        "tempAir": 45.227371318508716,
+        "windSpeed": 18.46887888768736,
+        "uC": 11.505938248393088,
+        "uV": 0.44827519195815746,
+        "moduleEfficiency": 0.09662221324931126,
+        "alphaAbsorption": 0.9307975953086827
+      },
+      "expected": {
+        "cellTemperature": 72.33535500931033
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 165.88954426320427,
+        "tempAir": -19.372463388271797,
+        "windSpeed": 13.15620684527973,
+        "uC": 29.33763984497443,
+        "uV": 1.4722248493706132,
+        "moduleEfficiency": 0.06997759876605916,
+        "alphaAbsorption": 0.9419130750492396
+      },
+      "expected": {
+        "cellTemperature": -16.388894850541178
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 16.168270224100254,
+        "tempAir": 48.14357881964612,
+        "windSpeed": 5.264032937156866,
+        "uC": 27.655184401310763,
+        "uV": 0.943888127676882,
+        "moduleEfficiency": 0.23015994240264648,
+        "alphaAbsorption": 0.9189841345867129
+      },
+      "expected": {
+        "cellTemperature": 48.494199045403825
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 9.480540334639208,
+        "tempAir": 28.33521580036221,
+        "windSpeed": 19.166266293672656,
+        "uC": 26.694820639891102,
+        "uV": 2.2157923567880564,
+        "moduleEfficiency": 0.2071558326682419,
+        "alphaAbsorption": 0.8672119204397429
+      },
+      "expected": {
+        "cellTemperature": 28.429463452434078
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1129.831267965566,
+        "tempAir": 23.953858370058132,
+        "windSpeed": 17.555232163210018,
+        "uC": 18.34320041257205,
+        "uV": 2.6501280359857264,
+        "moduleEfficiency": 0.1050197052128475,
+        "alphaAbsorption": 0.9537541797294683
+      },
+      "expected": {
+        "cellTemperature": 38.82146130282662
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 692.0275155262835,
+        "tempAir": 0.6553592904717842,
+        "windSpeed": 6.943628576596441,
+        "uC": 22.19625281643044,
+        "uV": 0.4167863049551912,
+        "moduleEfficiency": 0.1704349347093665,
+        "alphaAbsorption": 0.8489583348517901
+      },
+      "expected": {
+        "cellTemperature": 20.080089497249297
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 522.7020920128758,
+        "tempAir": 42.59077774834906,
+        "windSpeed": 6.952295338884569,
+        "uC": 15.05806741146798,
+        "uV": 1.128353122113761,
+        "moduleEfficiency": 0.053463872596505584,
+        "alphaAbsorption": 0.8897885993506492
+      },
+      "expected": {
+        "cellTemperature": 61.81245878758892
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 909.6343129151028,
+        "tempAir": 15.12665487360052,
+        "windSpeed": 5.320403597352492,
+        "uC": 11.49432055717612,
+        "uV": 1.2051962107704735,
+        "moduleEfficiency": 0.11232976968181657,
+        "alphaAbsorption": 0.8933222907316838
+      },
+      "expected": {
+        "cellTemperature": 55.409222639747824
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1130.316022611537,
+        "tempAir": -7.076594459694494,
+        "windSpeed": 17.551990247907497,
+        "uC": 20.12640624915306,
+        "uV": 0.1454045921499183,
+        "moduleEfficiency": 0.1477703523955644,
+        "alphaAbsorption": 0.9491060840817183
+      },
+      "expected": {
+        "cellTemperature": 33.23742195737836
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 136.601090370649,
+        "tempAir": 3.6746736156508675,
+        "windSpeed": 14.690690878323995,
+        "uC": 15.67489702427685,
+        "uV": 1.1178990741787387,
+        "moduleEfficiency": 0.0768727548211816,
+        "alphaAbsorption": 0.8369813077729309
+      },
+      "expected": {
+        "cellTemperature": 6.962878286706138
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 286.52670037228427,
+        "tempAir": 6.2108150789182215,
+        "windSpeed": 11.902069454081825,
+        "uC": 10.944820917327565,
+        "uV": 0.7279356991140477,
+        "moduleEfficiency": 0.18119539532400925,
+        "alphaAbsorption": 0.9755635198706829
+      },
+      "expected": {
+        "cellTemperature": 17.882962060671034
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1341.9860676077199,
+        "tempAir": 37.84617507226879,
+        "windSpeed": 7.378338160929204,
+        "uC": 14.789520081686893,
+        "uV": 0.8977494451126606,
+        "moduleEfficiency": 0.21736779008007356,
+        "alphaAbsorption": 0.9639518519938415
+      },
+      "expected": {
+        "cellTemperature": 85.12591188811123
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 592.0236111924486,
+        "tempAir": 31.76150523116954,
+        "windSpeed": 3.3596480246643923,
+        "uC": 17.8931578158018,
+        "uV": 0.9020055634647998,
+        "moduleEfficiency": 0.23597346557926693,
+        "alphaAbsorption": 0.8930681999833516
+      },
+      "expected": {
+        "cellTemperature": 51.06767502028998
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 35.483685781058604,
+        "tempAir": 36.626043700500034,
+        "windSpeed": 18.765691927560194,
+        "uC": 34.50136687912228,
+        "uV": 2.202597452721083,
+        "moduleEfficiency": 0.2063210482037542,
+        "alphaAbsorption": 0.8318741574577915
+      },
+      "expected": {
+        "cellTemperature": 36.93497622723991
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 151.96384768934072,
+        "tempAir": -29.805007173078984,
+        "windSpeed": 18.760061111042916,
+        "uC": 13.118149247979598,
+        "uV": 0.0647269440438929,
+        "moduleEfficiency": 0.2450162434016632,
+        "alphaAbsorption": 0.8833241460136009
+      },
+      "expected": {
+        "cellTemperature": -22.734051061760002
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 180.5690411222347,
+        "tempAir": -15.571963185289954,
+        "windSpeed": 17.93455380297424,
+        "uC": 20.6967259140191,
+        "uV": 1.5828275158814358,
+        "moduleEfficiency": 0.20327938041031424,
+        "alphaAbsorption": 0.8699618906522055
+      },
+      "expected": {
+        "cellTemperature": -13.022144177805108
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1366.242106056791,
+        "tempAir": -22.422537021880355,
+        "windSpeed": 9.104957681505635,
+        "uC": 13.721321077474634,
+        "uV": 0.7175524151846192,
+        "moduleEfficiency": 0.2061237315529624,
+        "alphaAbsorption": 0.803817777924809
+      },
+      "expected": {
+        "cellTemperature": 20.621629686331143
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 904.26475150493,
+        "tempAir": -3.0891522075067623,
+        "windSpeed": 9.174684465326063,
+        "uC": 24.9497974749424,
+        "uV": 0.9157267886401016,
+        "moduleEfficiency": 0.17330547221352996,
+        "alphaAbsorption": 0.8689440750873701
+      },
+      "expected": {
+        "cellTemperature": 16.387741799323628
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 735.3577537363805,
+        "tempAir": -5.08939612473414,
+        "windSpeed": 2.04520164899626,
+        "uC": 33.903495856770995,
+        "uV": 0.964003626946735,
+        "moduleEfficiency": 0.1084430091596773,
+        "alphaAbsorption": 0.9514596356446041
+      },
+      "expected": {
+        "cellTemperature": 12.298430634942228
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 625.4351891054289,
+        "tempAir": -1.2888890265062258,
+        "windSpeed": 1.783434376896853,
+        "uC": 28.76120272242197,
+        "uV": 0.46933736470869836,
+        "moduleEfficiency": 0.058424616834337154,
+        "alphaAbsorption": 0.965534808128803
+      },
+      "expected": {
+        "cellTemperature": 17.921648964446582
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 752.1564539435775,
+        "tempAir": 16.437899379806478,
+        "windSpeed": 19.32646590437323,
+        "uC": 30.86909798043375,
+        "uV": 0.7527891863754136,
+        "moduleEfficiency": 0.20224282846721964,
+        "alphaAbsorption": 0.8811233782226652
+      },
+      "expected": {
+        "cellTemperature": 28.078865675832528
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 899.7132622994434,
+        "tempAir": 28.905917538631478,
+        "windSpeed": 10.804694474940998,
+        "uC": 25.59454171237981,
+        "uV": 2.566629508099371,
+        "moduleEfficiency": 0.09712590895940763,
+        "alphaAbsorption": 0.9440051418865977
+      },
+      "expected": {
+        "cellTemperature": 43.28612402409247
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 312.34234917924766,
+        "tempAir": 36.295019384061966,
+        "windSpeed": 11.471694003465387,
+        "uC": 15.604301305230267,
+        "uV": 0.6377894815643043,
+        "moduleEfficiency": 0.18257418992796004,
+        "alphaAbsorption": 0.9597514658164569
+      },
+      "expected": {
+        "cellTemperature": 46.98575816684307
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 115.00206262840484,
+        "tempAir": 0.22242587552894655,
+        "windSpeed": 11.574716435960617,
+        "uC": 21.867398022022144,
+        "uV": 2.9108537104127064,
+        "moduleEfficiency": 0.11466468734144318,
+        "alphaAbsorption": 0.9366837551039445
+      },
+      "expected": {
+        "cellTemperature": 1.93893643442359
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 452.10160118022316,
+        "tempAir": -7.909885722265786,
+        "windSpeed": 9.596680733593567,
+        "uC": 20.795028280933945,
+        "uV": 0.28089282079358435,
+        "moduleEfficiency": 0.08216425513188422,
+        "alphaAbsorption": 0.8972235138385324
+      },
+      "expected": {
+        "cellTemperature": 7.939276500604652
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1033.3797420620726,
+        "tempAir": -17.632818996690087,
+        "windSpeed": 15.646956364684275,
+        "uC": 33.834622599433835,
+        "uV": 2.31155755622006,
+        "moduleEfficiency": 0.05434045333086906,
+        "alphaAbsorption": 0.9451185790218513
+      },
+      "expected": {
+        "cellTemperature": -4.439273110772618
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 749.7405205269565,
+        "tempAir": 17.372327391224374,
+        "windSpeed": 4.655963920950432,
+        "uC": 20.169771731063875,
+        "uV": 2.142100108993251,
+        "moduleEfficiency": 0.12238293295632885,
+        "alphaAbsorption": 0.8488306239215679
+      },
+      "expected": {
+        "cellTemperature": 35.90107675035976
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1344.8069642557643,
+        "tempAir": -10.126586846480583,
+        "windSpeed": 11.74097604467692,
+        "uC": 31.394121315064048,
+        "uV": 2.1581707680769227,
+        "moduleEfficiency": 0.1288804021018156,
+        "alphaAbsorption": 0.8083990240609812
+      },
+      "expected": {
+        "cellTemperature": 6.566113479536581
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 100.90405421397031,
+        "tempAir": 2.016316948094179,
+        "windSpeed": 11.685217338826863,
+        "uC": 14.22001643322439,
+        "uV": 1.9822381550617716,
+        "moduleEfficiency": 0.20374844468890793,
+        "alphaAbsorption": 0.9747518133063983
+      },
+      "expected": {
+        "cellTemperature": 4.111297382902183
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 724.5035207486999,
+        "tempAir": -12.470254975879635,
+        "windSpeed": 10.007311320027082,
+        "uC": 25.821440635567022,
+        "uV": 0.9613043982833073,
+        "moduleEfficiency": 0.23291179788986727,
+        "alphaAbsorption": 0.8625880315672046
+      },
+      "expected": {
+        "cellTemperature": 1.0559815570369846
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 180.29672249932273,
+        "tempAir": 23.002906357696187,
+        "windSpeed": 14.324098064777875,
+        "uC": 29.711655198994816,
+        "uV": 0.630132432636051,
+        "moduleEfficiency": 0.1552537805826443,
+        "alphaAbsorption": 0.9633247376664285
+      },
+      "expected": {
+        "cellTemperature": 26.79040590431931
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 505.75433246531895,
+        "tempAir": 44.60219254800805,
+        "windSpeed": 9.915321611643906,
+        "uC": 33.795920266110606,
+        "uV": 0.7456575264319458,
+        "moduleEfficiency": 0.19094553886273466,
+        "alphaAbsorption": 0.8073376308251523
+      },
+      "expected": {
+        "cellTemperature": 52.622436512580975
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 887.4277285665947,
+        "tempAir": 48.73185954500794,
+        "windSpeed": 18.799947558620104,
+        "uC": 22.53200116090891,
+        "uV": 0.6142691282950535,
+        "moduleEfficiency": 0.056996156716469605,
+        "alphaAbsorption": 0.8955095978474136
+      },
+      "expected": {
+        "cellTemperature": 70.72130126828516
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 319.3102146990572,
+        "tempAir": -24.52780037518968,
+        "windSpeed": 0.9907030033971798,
+        "uC": 30.576823162789466,
+        "uV": 0.7191544678547259,
+        "moduleEfficiency": 0.12507298286369203,
+        "alphaAbsorption": 0.8584624752536917
+      },
+      "expected": {
+        "cellTemperature": -16.86283452945912
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 875.2137060718821,
+        "tempAir": -1.7165352634384323,
+        "windSpeed": 18.608722402973072,
+        "uC": 26.017316999026594,
+        "uV": 2.2014119765601485,
+        "moduleEfficiency": 0.1942847478796217,
+        "alphaAbsorption": 0.9453502342475201
+      },
+      "expected": {
+        "cellTemperature": 8.235805879351467
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1121.3144532922477,
+        "tempAir": 35.542417534873714,
+        "windSpeed": 5.151051442228263,
+        "uC": 26.063469266650145,
+        "uV": 1.688105336755695,
+        "moduleEfficiency": 0.16253034115877135,
+        "alphaAbsorption": 0.8138307268099192
+      },
+      "expected": {
+        "cellTemperature": 57.529291019439526
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 263.14452216982335,
+        "tempAir": 8.7735971456389,
+        "windSpeed": 12.844266118650127,
+        "uC": 30.258763168457172,
+        "uV": 2.288795692350666,
+        "moduleEfficiency": 0.2454000230125096,
+        "alphaAbsorption": 0.9388980005864743
+      },
+      "expected": {
+        "cellTemperature": 11.898745011456821
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1219.9365536269436,
+        "tempAir": -11.37580612226957,
+        "windSpeed": 7.036061162577562,
+        "uC": 33.2914186821335,
+        "uV": 2.3363403527157947,
+        "moduleEfficiency": 0.181670199038949,
+        "alphaAbsorption": 0.8292814783282754
+      },
+      "expected": {
+        "cellTemperature": 5.2716799917488295
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 478.9286226125856,
+        "tempAir": 38.905515866073415,
+        "windSpeed": 6.604533169187318,
+        "uC": 16.99407370567112,
+        "uV": 1.1479742020950205,
+        "moduleEfficiency": 0.09591571528815451,
+        "alphaAbsorption": 0.8341984533096569
+      },
+      "expected": {
+        "cellTemperature": 53.602882613783706
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1004.0649125484003,
+        "tempAir": -10.521192857634603,
+        "windSpeed": 8.315943540753263,
+        "uC": 13.918667826898705,
+        "uV": 1.3060315501624724,
+        "moduleEfficiency": 0.07656365303963374,
+        "alphaAbsorption": 0.8780324034791694
+      },
+      "expected": {
+        "cellTemperature": 22.332624666763984
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 120.90476976956043,
+        "tempAir": -0.4785350816283085,
+        "windSpeed": 15.619216738389689,
+        "uC": 23.4655262586727,
+        "uV": 0.09999257646573068,
+        "moduleEfficiency": 0.085902844726347,
+        "alphaAbsorption": 0.8149105517228205
+      },
+      "expected": {
+        "cellTemperature": 3.12004505588696
+      }
+    }
+  ]
+}

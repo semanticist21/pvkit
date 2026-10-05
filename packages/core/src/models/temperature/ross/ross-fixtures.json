@@ -1,0 +1,677 @@
+{
+  "meta": {
+    "reference": "pvlib.temperature.ross(noct=...) @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "poaGlobal": 800.0,
+        "tempAir": 20.0,
+        "noct": 45.0
+      },
+      "expected": {
+        "cellTemperature": 45.0
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1000.0,
+        "tempAir": 25.0,
+        "noct": 45.0
+      },
+      "expected": {
+        "cellTemperature": 56.25
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 0.0,
+        "tempAir": 15.0,
+        "noct": 45.0
+      },
+      "expected": {
+        "cellTemperature": 15.0
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": -5.0,
+        "tempAir": -10.0,
+        "noct": 48.0
+      },
+      "expected": {
+        "cellTemperature": -10.175
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1400.0,
+        "tempAir": 50.0,
+        "noct": 55.0
+      },
+      "expected": {
+        "cellTemperature": 111.25
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 800.0,
+        "tempAir": -40.0,
+        "noct": 20.0
+      },
+      "expected": {
+        "cellTemperature": -40.0
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 200.0,
+        "tempAir": 0.0,
+        "noct": 42.0
+      },
+      "expected": {
+        "cellTemperature": 5.500000000000001
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 474.9749078411125,
+        "tempAir": 2.2354588500747763,
+        "noct": 42.80508259430888
+      },
+      "expected": {
+        "cellTemperature": 15.775261354500797
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 627.4438418380065,
+        "tempAir": 20.23528673282805,
+        "noct": 51.41879950806879
+      },
+      "expected": {
+        "cellTemperature": 44.87720206942899
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 728.7107769390982,
+        "tempAir": 9.773813960595676,
+        "noct": 44.34773114175788
+      },
+      "expected": {
+        "cellTemperature": 31.95188155686401
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 321.96917740099633,
+        "tempAir": 18.3122367108016,
+        "noct": 40.70383447155198
+      },
+      "expected": {
+        "cellTemperature": 26.644732403116578
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 334.9454023852625,
+        "tempAir": 37.29959893984214,
+        "noct": 41.35012519923663
+      },
+      "expected": {
+        "cellTemperature": 46.2385067846347
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1349.5567998797255,
+        "tempAir": -28.555003175262314,
+        "noct": 53.12144667775113
+      },
+      "expected": {
+        "cellTemperature": 27.319088807003666
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 867.9894541347734,
+        "tempAir": -12.76726437021865,
+        "noct": 52.83877139034862
+      },
+      "expected": {
+        "cellTemperature": 22.862369696737986
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 483.48953034176924,
+        "tempAir": 6.446805355173657,
+        "noct": 50.55316808634395
+      },
+      "expected": {
+        "cellTemperature": 24.911976465823123
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 469.7765453253928,
+        "tempAir": 38.54711409842086,
+        "noct": 40.010695414216784
+      },
+      "expected": {
+        "cellTemperature": 50.29780829998266
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1079.7401998413911,
+        "tempAir": -18.514743840596537,
+        "noct": 50.86732968120257
+      },
+      "expected": {
+        "cellTemperature": 23.14612705759317
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 83.16927420394148,
+        "tempAir": 20.1296349806113,
+        "noct": 49.81967045030164
+      },
+      "expected": {
+        "cellTemperature": 23.229735416051685
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 95.32054123255939,
+        "tempAir": -3.609289031980696,
+        "noct": 49.428387170996075
+      },
+      "expected": {
+        "cellTemperature": -0.10287679105487957
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 337.3458404558268,
+        "tempAir": 10.935363296144738,
+        "noct": 53.533836674535564
+      },
+      "expected": {
+        "cellTemperature": 25.075988691994276
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 386.39107333586645,
+        "tempAir": -14.019280811459307,
+        "noct": 48.328079981081494
+      },
+      "expected": {
+        "cellTemperature": -0.33713427466637036
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 487.6175673889372,
+        "tempAir": 9.27379251291228,
+        "noct": 47.904093421280905
+      },
+      "expected": {
+        "cellTemperature": 26.28195020576058
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 965.3875933980935,
+        "tempAir": 12.523917217289995,
+        "noct": 50.56810480731474
+      },
+      "expected": {
+        "cellTemperature": 49.411503635632826
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 146.28924975612006,
+        "tempAir": 29.978261284515348,
+        "noct": 44.78621730286329
+      },
+      "expected": {
+        "cellTemperature": 34.51070770142539
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 80.04956191766199,
+        "tempAir": -17.9341026145783,
+        "noct": 47.20681693528081
+      },
+      "expected": {
+        "cellTemperature": -15.21173539352423
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 995.6546057033073,
+        "tempAir": -7.574253392385195,
+        "noct": 46.95145766767319
+      },
+      "expected": {
+        "cellTemperature": 25.96867530416047
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 565.4366224777544,
+        "tempAir": -5.952103015544621,
+        "noct": 41.28653708840125
+      },
+      "expected": {
+        "cellTemperature": 9.0931315288467
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 956.4495073315569,
+        "tempAir": -6.455199694423719,
+        "noct": 51.04988596037122
+      },
+      "expected": {
+        "cellTemperature": 30.666860467448885
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1250.9843832322981,
+        "tempAir": -19.132553491032695,
+        "noct": 53.622331904633626
+      },
+      "expected": {
+        "cellTemperature": 33.44371168465446
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 884.3039227571803,
+        "tempAir": -28.00603839785814,
+        "noct": 54.21762595255716
+      },
+      "expected": {
+        "cellTemperature": 9.8174376737471
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1337.805277326527,
+        "tempAir": -2.47785429757001,
+        "noct": 52.4120821241174
+      },
+      "expected": {
+        "cellTemperature": 51.72346384591129
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 3.999381658334178,
+        "tempAir": -26.857849274229217,
+        "noct": 46.41236994372753
+      },
+      "expected": {
+        "cellTemperature": -26.725807839346615
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 273.79885889135033,
+        "tempAir": -4.847624509040571,
+        "noct": 40.120062354439256
+      },
+      "expected": {
+        "cellTemperature": 2.0384381327947843
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1181.9901588600837,
+        "tempAir": -28.233691532452802,
+        "noct": 42.040893301806996
+      },
+      "expected": {
+        "cellTemperature": 4.331457186573459
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 956.5555419660557,
+        "tempAir": 14.742881774770007,
+        "noct": 46.827936856185204
+      },
+      "expected": {
+        "cellTemperature": 46.8208963738942
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1193.7474124216226,
+        "tempAir": -20.821582775635985,
+        "noct": 46.26534595283983
+      },
+      "expected": {
+        "cellTemperature": 18.37115318381562
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 313.05389882404637,
+        "tempAir": 3.4692302203122516,
+        "noct": 52.43135556727046
+      },
+      "expected": {
+        "cellTemperature": 16.16018310091595
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 592.1568713250638,
+        "tempAir": -20.108536149481083,
+        "noct": 54.66732755471916
+      },
+      "expected": {
+        "cellTemperature": 5.552084128023505
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1085.3129975503984,
+        "tempAir": 42.576201405752585,
+        "noct": 45.49233536792903
+      },
+      "expected": {
+        "cellTemperature": 77.16015504666146
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 540.3143528572598,
+        "tempAir": 39.58819322938897,
+        "noct": 46.47460992938691
+      },
+      "expected": {
+        "cellTemperature": 57.46895789332031
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1351.0981419192908,
+        "tempAir": 22.644344509288796,
+        "noct": 51.322039834939204
+      },
+      "expected": {
+        "cellTemperature": 75.54328178692427
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 484.93718143982016,
+        "tempAir": 44.96221169431038,
+        "noct": 51.26455814836541
+      },
+      "expected": {
+        "cellTemperature": 63.91389507859749
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 171.65986702959083,
+        "tempAir": 1.6263688820318123,
+        "noct": 48.863127520227174
+      },
+      "expected": {
+        "cellTemperature": 7.819669672257213
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 335.4979847608498,
+        "tempAir": -17.97011730333147,
+        "noct": 43.40652428965661
+      },
+      "expected": {
+        "cellTemperature": -8.154065141536877
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1396.2672245844144,
+        "tempAir": 15.18681853913276,
+        "noct": 51.787950119953464
+      },
+      "expected": {
+        "cellTemperature": 70.6674096506518
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 725.9301695255897,
+        "tempAir": 33.64859801713193,
+        "noct": 43.36974320832801
+      },
+      "expected": {
+        "cellTemperature": 54.854600078370744
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1195.0527924158575,
+        "tempAir": -5.912455244509021,
+        "noct": 53.639813298015774
+      },
+      "expected": {
+        "cellTemperature": 44.339235778168295
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 704.6674744846366,
+        "tempAir": -20.7679936673933,
+        "noct": 46.40362412311675
+      },
+      "expected": {
+        "cellTemperature": 2.489225242704592
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 378.66223098149345,
+        "tempAir": 26.81280286916479,
+        "noct": 45.901547142009065
+      },
+      "expected": {
+        "cellTemperature": 39.07272490249664
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 632.2506805435072,
+        "tempAir": 10.581368850449335,
+        "noct": 41.516082513668344
+      },
+      "expected": {
+        "cellTemperature": 27.585816115320668
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 191.16429813510757,
+        "tempAir": 49.526902435385345,
+        "noct": 48.55255142758241
+      },
+      "expected": {
+        "cellTemperature": 56.34968800241079
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 434.61556899088725,
+        "tempAir": 45.534600707818925,
+        "noct": 52.47577286421305
+      },
+      "expected": {
+        "cellTemperature": 63.177696335067395
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1381.2882235404365,
+        "tempAir": 5.777090071633939,
+        "noct": 47.07381673968771
+      },
+      "expected": {
+        "cellTemperature": 52.52302035766215
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 78.80554788659164,
+        "tempAir": 42.45497560191407,
+        "noct": 40.99703629528715
+      },
+      "expected": {
+        "cellTemperature": 44.523329288470016
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1138.0532708397802,
+        "tempAir": -6.493065970678877,
+        "noct": 42.7354708035582
+      },
+      "expected": {
+        "cellTemperature": 25.849655169410795
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 287.8318050517855,
+        "tempAir": -10.177330318807227,
+        "noct": 51.43847764323365
+      },
+      "expected": {
+        "cellTemperature": 1.133911891357954
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 753.7575500846602,
+        "tempAir": 1.5404190487385083,
+        "noct": 41.06028394504563
+      },
+      "expected": {
+        "cellTemperature": 21.383354086869637
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 54.95998054954485,
+        "tempAir": -1.5383062503949319,
+        "noct": 48.05122250622543
+      },
+      "expected": {
+        "cellTemperature": 0.388812053771449
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 793.7579771787586,
+        "tempAir": 7.159702557125405,
+        "noct": 44.693971811614304
+      },
+      "expected": {
+        "cellTemperature": 31.660998949245723
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 730.238479120594,
+        "tempAir": 23.56828171332083,
+        "noct": 50.62029104777621
+      },
+      "expected": {
+        "cellTemperature": 51.51842516951838
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 836.0638009402775,
+        "tempAir": 23.775966954617573,
+        "noct": 47.65071847453171
+      },
+      "expected": {
+        "cellTemperature": 52.67317293780073
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 845.000888923644,
+        "tempAir": 49.15744503605331,
+        "noct": 50.19168763722503
+      },
+      "expected": {
+        "cellTemperature": 81.0474486505035
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 74.45054667071611,
+        "tempAir": 36.498757839596934,
+        "noct": 53.52494678807781
+      },
+      "expected": {
+        "cellTemperature": 39.61869610894576
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 38.5911855123904,
+        "tempAir": 44.7698414204188,
+        "noct": 46.86863116567587
+      },
+      "expected": {
+        "cellTemperature": 46.06595683264204
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1161.7769309204982,
+        "tempAir": 44.81261526802726,
+        "noct": 52.62677779400551
+      },
+      "expected": {
+        "cellTemperature": 92.19391248220825
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 1023.1943067548534,
+        "tempAir": 9.416020492804149,
+        "noct": 54.59374181916498
+      },
+      "expected": {
+        "cellTemperature": 53.661170091200276
+      }
+    },
+    {
+      "input": {
+        "poaGlobal": 404.93535628639444,
+        "tempAir": 4.9875083379222485,
+        "noct": 49.409564873655285
+      },
+      "expected": {
+        "cellTemperature": 19.873724125849037
+      }
+    }
+  ]
+}

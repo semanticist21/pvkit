@@ -75,5 +75,5 @@ while near < 40:
 
 meta = {"reference": f"pvlib.solarposition.spa_python (how='numpy') @ pvlib {pvlib.__version__}",
         "atmosRefract": 0.5667}
-OUT.write_text(json.dumps({"meta": meta, "cases": cases}, indent=1) + "\n")
+OUT.write_text(json.dumps({"meta": meta, "cases": cases}, indent=2) + "\n")
 print(f"wrote {len(cases)} cases → {OUT}")

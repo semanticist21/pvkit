@@ -44,7 +44,7 @@ PV modeling core. Durable notes for future sessions — update when `src/` chang
   (uv, pvlib pinned) writes JSON into the method folder; tests read only the JSON.
   Policy: `doc/conventions.md` → "References and fixtures".
 
-## Modules (all stubs — implementation order)
+## Modules (all implemented — dependency order)
 
 11 core submodules, dependency order:
 

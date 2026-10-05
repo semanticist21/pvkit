@@ -8,8 +8,8 @@ file is the consolidated skeleton.
 
 - ESM-first TypeScript library for PV (solar) performance modeling. Runs
   everywhere JS runs (browser, edge, Workers, React Native) — no backend.
-- pnpm monorepo, `packages/*` workspaces. Only `@pvkit/core` exists today; PV
-  models are stubs (frame only).
+- pnpm monorepo, `packages/*` workspaces. Only `@pvkit/core` exists today; all
+  11 modules implemented and fixture-validated.
 - Positioning: "PV modeling everywhere JS runs," not "smarter PV science."
 
 ## `@pvkit/core` module order
@@ -19,7 +19,7 @@ Each depends on the prior; implement in order:
 1. `solarposition` (NOAA SPA) — everything depends on sun position → first.
 2. `atmosphere` (Kasten-Young air mass, alt2pres, precipitable water, Linke/AOD) —
    dataless helpers consumed by clearsky/irradiance.
-3. `clearsky` (Haurwitz / Ineichen) — fallback irradiance when no weather data.
+3. `clearsky` (Haurwitz / Ineichen / Simplified Solis) — fallback irradiance when no weather data.
 4. `irradiance` (Perez / Hay-Davies / Isotropic + AOI).
 5. `decomposition` (Erbs / Boland / DISC / DIRINT) — GHI → DNI/DHI splitters.
 6. `iam` (physical / ashrae / martin_ruiz / sapm) — incidence-angle modifier.
@@ -68,7 +68,8 @@ method or module file needs no hand-wiring.
 ## Source layout
 
 - Shared foundation sits flat at `src/` top: `units.ts` (public unit types),
-  `constants.ts` (universal physics constants). The 11 PV models nest one layer
+  `sum.ts` (compensated summation). Physical constants and coefficients live in
+  the method that cites them (no shared constants file). The 11 PV models nest one layer
   down: `src/models/<module>/`. Public subpath names are unchanged
   (`@pvkit/core/clearsky`) — only the internal path is `src/models/...`.
 - Within each `src/models/<module>/`, every calculation method is its **own

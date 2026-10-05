@@ -1,0 +1,2331 @@
+{
+  "meta": {
+    "reference": "pvlib.irradiance.perez (airmass: get_relative_airmass kastenyoung1989) @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": 0.0,
+        "dni": 0.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "airmassRelative": 1.1539922333636758,
+        "model": "allsitescomposite1990"
+      },
+      "expected": "NaN"
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": 0.0,
+        "dni": 900.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "airmassRelative": 1.1539922333636758,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": 120.0,
+        "dni": 0.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "airmassRelative": 1.304223540913535,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 105.5629527551827
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": 50.0,
+        "dni": 0.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "airmassRelative": 1.304223540913535,
+        "model": "usacomposite1988"
+      },
+      "expected": 44.78957377342391
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": -2.0,
+        "dni": 100.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 40.0,
+        "solarAzimuth": 150.0,
+        "airmassRelative": 1.304223540913535,
+        "model": "france1988"
+      },
+      "expected": "NaN"
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": 30.0,
+        "dni": 200.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 85.0,
+        "solarAzimuth": 120.0,
+        "airmassRelative": 10.305791327930304,
+        "model": "phoenix1988"
+      },
+      "expected": 46.87270390555716
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 90.0,
+        "dhi": 22.0,
+        "dni": 150.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 87.0,
+        "solarAzimuth": 90.0,
+        "airmassRelative": 15.147735442530344,
+        "model": "elmonte1988"
+      },
+      "expected": 47.82608095107356
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 90.0,
+        "dhi": 10.0,
+        "dni": 50.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 89.9,
+        "solarAzimuth": 90.0,
+        "airmassRelative": 36.46678629892429,
+        "model": "osage1988"
+      },
+      "expected": 39.96232641691673
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": 5.0,
+        "dni": 0.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 90.0,
+        "solarAzimuth": 270.0,
+        "airmassRelative": 37.91960837783625,
+        "model": "albuquerque1988"
+      },
+      "expected": 4.371554686005155
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": 2.0,
+        "dni": 0.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 92.0,
+        "solarAzimuth": 300.0,
+        "airmassRelative": "NaN",
+        "model": "capecanaveral1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": 0.0,
+        "dni": 0.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 100.0,
+        "solarAzimuth": 330.0,
+        "airmassRelative": "NaN",
+        "model": "albany1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": 126.6,
+        "dni": 700.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 35.0,
+        "solarAzimuth": 200.0,
+        "airmassRelative": 1.2198742289986713,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 126.6
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": 114.3,
+        "dni": 600.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 50.0,
+        "solarAzimuth": 0.0,
+        "airmassRelative": 1.5534066629239196,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 49.44889259975696
+    },
+    {
+      "input": {
+        "surfaceTilt": 180.0,
+        "surfaceAzimuth": 0.0,
+        "dhi": 107.2,
+        "dni": 800.0,
+        "dniExtra": 1366.1,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0,
+        "airmassRelative": 1.1539922333636758,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 4.1755529701420366e-16
+    },
+    {
+      "input": {
+        "surfaceTilt": 25.0,
+        "surfaceAzimuth": 180.0,
+        "dhi": 116.0,
+        "dni": 1050.0,
+        "dniExtra": 1412.0,
+        "solarZenith": 10.0,
+        "solarAzimuth": 180.0,
+        "airmassRelative": 1.0150711594323112,
+        "model": "usacomposite1988"
+      },
+      "expected": 115.64932930324618
+    },
+    {
+      "input": {
+        "surfaceTilt": 60.0,
+        "surfaceAzimuth": 200.0,
+        "dhi": 58.0,
+        "dni": 1000.0,
+        "dniExtra": 1325.0,
+        "solarZenith": 70.0,
+        "solarAzimuth": 230.0,
+        "airmassRelative": 2.9031466488030997,
+        "model": "france1988"
+      },
+      "expected": 104.54021263551948
+    },
+    {
+      "input": {
+        "surfaceTilt": 80.67135109345799,
+        "surfaceAzimuth": 226.05879029772623,
+        "dhi": 78.86717498346717,
+        "dni": 402.9432356259347,
+        "dniExtra": 1369.448231292296,
+        "solarZenith": 30.19483342704215,
+        "solarAzimuth": 274.0511881936509,
+        "airmassRelative": 1.1562641417228108,
+        "model": "phoenix1988"
+      },
+      "expected": 51.7621949794162
+    },
+    {
+      "input": {
+        "surfaceTilt": 4.223006829311863,
+        "surfaceAzimuth": 86.12881775621037,
+        "dhi": 243.5416687595829,
+        "dni": 229.9779838578545,
+        "dniExtra": 1328.5507929284986,
+        "solarZenith": 25.79653810776343,
+        "solarAzimuth": 302.8481952292896,
+        "airmassRelative": 1.1100927901325313,
+        "model": "elmonte1988"
+      },
+      "expected": 240.21906323636486
+    },
+    {
+      "input": {
+        "surfaceTilt": 19.38682758350402,
+        "surfaceAzimuth": 308.13051336836685,
+        "dhi": 249.8970245594539,
+        "dni": 874.7631118500751,
+        "dniExtra": 1363.2805813592688,
+        "solarZenith": 1.6075589675206774,
+        "solarAzimuth": 124.32587923074067,
+        "airmassRelative": 1.0000974303821164,
+        "model": "osage1988"
+      },
+      "expected": 231.9633378589444
+    },
+    {
+      "input": {
+        "surfaceTilt": 69.41186998980372,
+        "surfaceAzimuth": 51.683652717315574,
+        "dhi": 5.281645907708636,
+        "dni": 856.8389262302608,
+        "dniExtra": 1325.6436293209817,
+        "solarZenith": 29.864366095685686,
+        "solarAzimuth": 260.81591234886173,
+        "airmassRelative": 1.152423735679068,
+        "model": "albuquerque1988"
+      },
+      "expected": 1.8288825041880385
+    },
+    {
+      "input": {
+        "surfaceTilt": 56.57032302597644,
+        "surfaceAzimuth": 86.74607326006975,
+        "dhi": 135.3041354045953,
+        "dni": 68.08610088039957,
+        "dniExtra": 1405.7142989387253,
+        "solarZenith": 58.2633780051231,
+        "solarAzimuth": 184.20913483265133,
+        "airmassRelative": 1.896308757724013,
+        "model": "capecanaveral1988"
+      },
+      "expected": 92.5163133953061
+    },
+    {
+      "input": {
+        "surfaceTilt": 44.183016577026315,
+        "surfaceAzimuth": 189.6982421107418,
+        "dhi": 142.5778136561644,
+        "dni": 555.2053320720994,
+        "dniExtra": 1370.4971516955318,
+        "solarZenith": 17.77855009725152,
+        "solarAzimuth": 248.24252401665262,
+        "airmassRelative": 1.0497073855831622,
+        "model": "albany1988"
+      },
+      "expected": 142.25896020811527
+    },
+    {
+      "input": {
+        "surfaceTilt": 5.146043266135414,
+        "surfaceAzimuth": 54.29653823439764,
+        "dhi": 131.03705564206675,
+        "dni": 749.7282660564418,
+        "dniExtra": 1387.5622768155815,
+        "solarZenith": 9.299816591639061,
+        "solarAzimuth": 172.96360644673956,
+        "airmassRelative": 1.0129695073051261,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 130.81738979933635
+    },
+    {
+      "input": {
+        "surfaceTilt": 7.71922253040754,
+        "surfaceAzimuth": 245.94415902811463,
+        "dhi": 123.73649136074843,
+        "dni": 403.8833017698246,
+        "dniExtra": 1389.982611082351,
+        "solarZenith": 41.245315494860925,
+        "solarAzimuth": 105.95160137509326,
+        "airmassRelative": 1.3287005604156443,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 119.14178255402376
+    },
+    {
+      "input": {
+        "surfaceTilt": 2.243206802409593,
+        "surfaceAzimuth": 341.2230228613717,
+        "dhi": 254.5000353493473,
+        "dni": 908.1554603089085,
+        "dniExtra": 1352.6825480216355,
+        "solarZenith": 12.090034241226128,
+        "solarAzimuth": 344.0070713125355,
+        "airmassRelative": 1.022308101365549,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 255.32306022079516
+    },
+    {
+      "input": {
+        "surfaceTilt": 17.60135521444395,
+        "surfaceAzimuth": 113.18568970931743,
+        "dhi": 173.85907518482503,
+        "dni": 39.27688407213481,
+        "dniExtra": 1400.2064750655056,
+        "solarZenith": 0.25424640542267274,
+        "solarAzimuth": 2.8814965065420894,
+        "airmassRelative": 0.9997205805192594,
+        "model": "usacomposite1988"
+      },
+      "expected": 169.33747359893917
+    },
+    {
+      "input": {
+        "surfaceTilt": 81.9352422742224,
+        "surfaceAzimuth": 306.9636203369887,
+        "dhi": 225.9179787629269,
+        "dni": 683.2539585471826,
+        "dniExtra": 1359.6805243679855,
+        "solarZenith": 12.109300257388176,
+        "solarAzimuth": 41.302877509638066,
+        "airmassRelative": 1.0223816290200944,
+        "model": "france1988"
+      },
+      "expected": 76.6669349365859
+    },
+    {
+      "input": {
+        "surfaceTilt": 11.12789683183378,
+        "surfaceAzimuth": 352.01586131325973,
+        "dhi": 172.0728315524287,
+        "dni": 828.7570378180305,
+        "dniExtra": 1406.1842391693312,
+        "solarZenith": 37.23451862009738,
+        "solarAzimuth": 279.0804850843882,
+        "airmassRelative": 1.2550072569631665,
+        "model": "phoenix1988"
+      },
+      "expected": 174.27738085932407
+    },
+    {
+      "input": {
+        "surfaceTilt": 86.85630912338297,
+        "surfaceAzimuth": 236.89955029179959,
+        "dhi": 175.49806147385533,
+        "dni": 869.8524153673621,
+        "dniExtra": 1352.906451597702,
+        "solarZenith": 34.34855528878295,
+        "solarAzimuth": 271.72895603854096,
+        "airmassRelative": 1.210339257049304,
+        "model": "elmonte1988"
+      },
+      "expected": 109.54914623800647
+    },
+    {
+      "input": {
+        "surfaceTilt": 53.17876512136303,
+        "surfaceAzimuth": 86.27091036707567,
+        "dhi": 161.15519635503207,
+        "dni": 122.61419073542201,
+        "dniExtra": 1341.5746538344918,
+        "solarZenith": 66.83637834696809,
+        "solarAzimuth": 54.13447213500837,
+        "airmassRelative": 2.529237074905495,
+        "model": "osage1988"
+      },
+      "expected": 181.53567526357327
+    },
+    {
+      "input": {
+        "surfaceTilt": 71.60467276927342,
+        "surfaceAzimuth": 80.87383699987221,
+        "dhi": 209.81601211614853,
+        "dni": 785.8633413302307,
+        "dniExtra": 1348.6039593971454,
+        "solarZenith": 50.2703356247852,
+        "solarAzimuth": 307.2992894783634,
+        "airmassRelative": 1.5621724743282408,
+        "model": "albuquerque1988"
+      },
+      "expected": 110.73616125039571
+    },
+    {
+      "input": {
+        "surfaceTilt": 24.342571991667437,
+        "surfaceAzimuth": 255.65761291124156,
+        "dhi": 173.62876857540772,
+        "dni": 115.40007915758378,
+        "dniExtra": 1362.9027247511665,
+        "solarZenith": 44.796718020809045,
+        "solarAzimuth": 141.6371314082176,
+        "airmassRelative": 1.4076260892379504,
+        "model": "capecanaveral1988"
+      },
+      "expected": 155.71230215724873
+    },
+    {
+      "input": {
+        "surfaceTilt": 51.31530856549446,
+        "surfaceAzimuth": 111.75828916908529,
+        "dhi": 397.66408077471516,
+        "dni": 136.54592723936253,
+        "dniExtra": 1399.013228140016,
+        "solarZenith": 8.995422914432195,
+        "solarAzimuth": 339.9057031851852,
+        "airmassRelative": 1.0121055891584827,
+        "model": "albany1988"
+      },
+      "expected": 288.4108179328583
+    },
+    {
+      "input": {
+        "surfaceTilt": 81.51184755215333,
+        "surfaceAzimuth": 23.928871086891583,
+        "dhi": 27.234422439431214,
+        "dni": 471.58778264584697,
+        "dniExtra": 1347.9144841598188,
+        "solarZenith": 39.80201270469276,
+        "solarAzimuth": 292.64226964451495,
+        "airmassRelative": 1.300470747029937,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 17.547307548430194
+    },
+    {
+      "input": {
+        "surfaceTilt": 48.45584250544244,
+        "surfaceAzimuth": 141.93188571932328,
+        "dhi": 306.2132446051526,
+        "dni": 247.78337101490965,
+        "dniExtra": 1323.7294272515762,
+        "solarZenith": 18.297879035434935,
+        "solarAzimuth": 25.44681468109518,
+        "airmassRelative": 1.052804265714152,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 224.58056629512117
+    },
+    {
+      "input": {
+        "surfaceTilt": 28.16383086968583,
+        "surfaceAzimuth": 187.77560891672417,
+        "dhi": 188.47603137580668,
+        "dni": 566.9699836991132,
+        "dniExtra": 1387.2618433025827,
+        "solarZenith": 47.770586870270876,
+        "solarAzimuth": 241.05726770994374,
+        "airmassRelative": 1.4859099713355273,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 207.12379237071326
+    },
+    {
+      "input": {
+        "surfaceTilt": 178.10425133111994,
+        "surfaceAzimuth": 244.60050329340078,
+        "dhi": 243.41096508917096,
+        "dni": 510.04789830211405,
+        "dniExtra": 1398.9672749345214,
+        "solarZenith": 59.82576323701205,
+        "solarAzimuth": 19.14442628675557,
+        "airmassRelative": 1.983926600190221,
+        "model": "usacomposite1988"
+      },
+      "expected": 0.36667811384288307
+    },
+    {
+      "input": {
+        "surfaceTilt": 74.68565984488917,
+        "surfaceAzimuth": 336.65676870612265,
+        "dhi": 185.87395402946453,
+        "dni": 934.6230177552351,
+        "dniExtra": 1389.4310422440794,
+        "solarZenith": 2.4532967932876755,
+        "solarAzimuth": 303.04266705613236,
+        "airmassRelative": 1.0006163880617702,
+        "model": "france1988"
+      },
+      "expected": 83.928575271144
+    },
+    {
+      "input": {
+        "surfaceTilt": 56.45738924193172,
+        "surfaceAzimuth": 86.26441496994507,
+        "dhi": 177.7508224184911,
+        "dni": 289.23954020456745,
+        "dniExtra": 1341.0431626606967,
+        "solarZenith": 86.58953479371222,
+        "solarAzimuth": 229.38899217107192,
+        "airmassRelative": 13.847659040557764,
+        "model": "phoenix1988"
+      },
+      "expected": 64.94820839841897
+    },
+    {
+      "input": {
+        "surfaceTilt": 28.152008508720055,
+        "surfaceAzimuth": 153.41413231157395,
+        "dhi": 107.15408913582306,
+        "dni": 932.1429820674438,
+        "dniExtra": 1393.5926813181163,
+        "solarZenith": 19.39559263247244,
+        "solarAzimuth": 299.40997260091666,
+        "airmassRelative": 1.0596982487884408,
+        "model": "elmonte1988"
+      },
+      "expected": 91.46045837445081
+    },
+    {
+      "input": {
+        "surfaceTilt": 19.982714436101,
+        "surfaceAzimuth": 111.2189322535526,
+        "dhi": 253.3724732459598,
+        "dni": 351.5967198167422,
+        "dniExtra": 1380.8169151080067,
+        "solarZenith": 1.096720551272559,
+        "solarAzimuth": 335.38601685812165,
+        "airmassRelative": 0.999889648422513,
+        "model": "osage1988"
+      },
+      "expected": 257.0960376193848
+    },
+    {
+      "input": {
+        "surfaceTilt": 41.798713514480006,
+        "surfaceAzimuth": 190.35094481859207,
+        "dhi": 116.43766953794089,
+        "dni": 702.1489013831998,
+        "dniExtra": 1388.007381781068,
+        "solarZenith": 0.77021184275567,
+        "solarAzimuth": 185.7170411320272,
+        "airmassRelative": 0.9997984821702992,
+        "model": "albuquerque1988"
+      },
+      "expected": 84.61855797041284
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.60656754060049,
+        "surfaceAzimuth": 46.36362633017938,
+        "dhi": 361.4245228108836,
+        "dni": 689.7158348653226,
+        "dniExtra": 1386.7427566798522,
+        "solarZenith": 59.49925585240221,
+        "solarAzimuth": 169.15339788176587,
+        "airmassRelative": 1.9648352973897105,
+        "model": "capecanaveral1988"
+      },
+      "expected": 277.7781945953319
+    },
+    {
+      "input": {
+        "surfaceTilt": 8.624651150736364,
+        "surfaceAzimuth": 325.2028836824596,
+        "dhi": 373.8756446613422,
+        "dni": 520.5832094771997,
+        "dniExtra": 1379.5718397113,
+        "solarZenith": 71.4596465945217,
+        "solarAzimuth": 154.3045887070151,
+        "airmassRelative": 3.1186972616094266,
+        "model": "albany1988"
+      },
+      "expected": 302.9317302785879
+    },
+    {
+      "input": {
+        "surfaceTilt": 12.659026201581252,
+        "surfaceAzimuth": 345.67241529279494,
+        "dhi": 390.1460111834689,
+        "dni": 121.78003167101082,
+        "dniExtra": 1376.5507424169539,
+        "solarZenith": 17.770489452037317,
+        "solarAzimuth": 48.345432626487046,
+        "airmassRelative": 1.0496601396423777,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 390.9739347259317
+    },
+    {
+      "input": {
+        "surfaceTilt": 2.638993370721916,
+        "surfaceAzimuth": 214.99409943617763,
+        "dhi": 55.55657521923564,
+        "dni": 743.456947525258,
+        "dniExtra": 1344.915090474229,
+        "solarZenith": 32.42946444964515,
+        "solarAzimuth": 167.29904136539204,
+        "airmassRelative": 1.1839680016726681,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 56.71719848118645
+    },
+    {
+      "input": {
+        "surfaceTilt": 49.36632615540753,
+        "surfaceAzimuth": 178.53735598585172,
+        "dhi": 274.75354082600455,
+        "dni": 847.8931716520992,
+        "dniExtra": 1379.570360107923,
+        "solarZenith": 80.08204464796835,
+        "solarAzimuth": 153.13284048562207,
+        "airmassRelative": 5.628963791050729,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 160.6855098141833
+    },
+    {
+      "input": {
+        "surfaceTilt": 85.2093811063443,
+        "surfaceAzimuth": 301.6695440181297,
+        "dhi": 175.17039886421622,
+        "dni": 730.4437842727964,
+        "dniExtra": 1386.0635855257767,
+        "solarZenith": 75.64712162741856,
+        "solarAzimuth": 251.14835229371795,
+        "airmassRelative": 3.97580497266408,
+        "model": "usacomposite1988"
+      },
+      "expected": 112.09708698340116
+    },
+    {
+      "input": {
+        "surfaceTilt": 26.24680532602334,
+        "surfaceAzimuth": 275.28925191712705,
+        "dhi": 69.11618323578764,
+        "dni": 608.4009186458536,
+        "dniExtra": 1398.3397433835132,
+        "solarZenith": 15.615918851105322,
+        "solarAzimuth": 163.65241011018747,
+        "airmassRelative": 1.0379118878079252,
+        "model": "france1988"
+      },
+      "expected": 70.63381388613308
+    },
+    {
+      "input": {
+        "surfaceTilt": 58.126911196110186,
+        "surfaceAzimuth": 135.5906852000595,
+        "dhi": 154.2215120783099,
+        "dni": 589.5548281543432,
+        "dniExtra": 1393.2619786960024,
+        "solarZenith": 83.478385612932,
+        "solarAzimuth": 253.62450600127636,
+        "airmassRelative": 8.225064139096615,
+        "model": "phoenix1988"
+      },
+      "expected": 89.65269231236428
+    },
+    {
+      "input": {
+        "surfaceTilt": 89.92501385892109,
+        "surfaceAzimuth": 102.17231923859413,
+        "dhi": 232.7706551038061,
+        "dni": 667.0029728526482,
+        "dniExtra": 1330.458753939247,
+        "solarZenith": 52.65444614618436,
+        "solarAzimuth": 218.60846125672188,
+        "airmassRelative": 1.645610405307135,
+        "model": "elmonte1988"
+      },
+      "expected": 75.52436455912068
+    },
+    {
+      "input": {
+        "surfaceTilt": 57.20450380131624,
+        "surfaceAzimuth": 78.62764086996509,
+        "dhi": 132.7765588072067,
+        "dni": 550.6946393357478,
+        "dniExtra": 1322.23611395217,
+        "solarZenith": 85.21512728695527,
+        "solarAzimuth": 143.5598039987937,
+        "airmassRelative": 10.682178354626199,
+        "model": "osage1988"
+      },
+      "expected": 240.16373420238952
+    },
+    {
+      "input": {
+        "surfaceTilt": 15.67848961381953,
+        "surfaceAzimuth": 341.2602409298058,
+        "dhi": 289.54102645777937,
+        "dni": 66.06635764127245,
+        "dniExtra": 1334.0701383775042,
+        "solarZenith": 19.06633912344943,
+        "solarAzimuth": 26.322558279386538,
+        "airmassRelative": 1.0575802409691009,
+        "model": "albuquerque1988"
+      },
+      "expected": 286.7222426983673
+    },
+    {
+      "input": {
+        "surfaceTilt": 65.09977429596421,
+        "surfaceAzimuth": 163.9496012833123,
+        "dhi": 310.0749650703244,
+        "dni": 459.374742854629,
+        "dniExtra": 1364.0752257397783,
+        "solarZenith": 0.20350895522426382,
+        "solarAzimuth": 194.60570229512894,
+        "airmassRelative": 0.9997172954767055,
+        "model": "capecanaveral1988"
+      },
+      "expected": 176.96375873285922
+    },
+    {
+      "input": {
+        "surfaceTilt": 47.94979105486416,
+        "surfaceAzimuth": 265.6311192303754,
+        "dhi": 306.15388476480086,
+        "dni": 779.4245250144533,
+        "dniExtra": 1372.7089137838357,
+        "solarZenith": 62.69988918862765,
+        "solarAzimuth": 280.903566677239,
+        "airmassRelative": 2.172607792494973,
+        "model": "albany1988"
+      },
+      "expected": 306.5866615919128
+    },
+    {
+      "input": {
+        "surfaceTilt": 8.993376992315467,
+        "surfaceAzimuth": 218.70507416809363,
+        "dhi": 392.72162925303417,
+        "dni": 647.8297572497542,
+        "dniExtra": 1412.7576420046023,
+        "solarZenith": 87.08465562604907,
+        "solarAzimuth": 224.42008364866223,
+        "airmassRelative": 15.44348309923107,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 1491.8796378034538
+    },
+    {
+      "input": {
+        "surfaceTilt": 67.80600949634231,
+        "surfaceAzimuth": 266.5566734895155,
+        "dhi": 306.5886680746972,
+        "dni": 3.4861570545190457,
+        "dniExtra": 1394.9260560888097,
+        "solarZenith": 54.64137936286246,
+        "solarAzimuth": 315.9843810815249,
+        "airmassRelative": 1.7246342775842076,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 228.58989153852215
+    },
+    {
+      "input": {
+        "surfaceTilt": 12.39364637831045,
+        "surfaceAzimuth": 210.92656397847588,
+        "dhi": 8.8038420057095,
+        "dni": 112.5580988995134,
+        "dniExtra": 1333.4145357465545,
+        "solarZenith": 36.414353818162695,
+        "solarAzimuth": 146.21003959172825,
+        "airmassRelative": 1.241660182575889,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 9.261400602939041
+    },
+    {
+      "input": {
+        "surfaceTilt": 29.820335015090862,
+        "surfaceAzimuth": 311.89495052784207,
+        "dhi": 311.83197371646776,
+        "dni": 583.4608190268489,
+        "dniExtra": 1396.1659182675896,
+        "solarZenith": 68.59018200913827,
+        "solarAzimuth": 286.5326843316041,
+        "airmassRelative": 2.7227989819114393,
+        "model": "usacomposite1988"
+      },
+      "expected": 363.3738248934814
+    },
+    {
+      "input": {
+        "surfaceTilt": 21.04865312562836,
+        "surfaceAzimuth": 256.9361908040998,
+        "dhi": 342.07811789248956,
+        "dni": 262.96499802486005,
+        "dniExtra": 1412.1821476624677,
+        "solarZenith": 84.07740111704956,
+        "solarAzimuth": 24.759304627765705,
+        "airmassRelative": 8.94052681631321,
+        "model": "france1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 16.612636069712988,
+        "surfaceAzimuth": 286.0163119340871,
+        "dhi": 360.70993760950904,
+        "dni": 255.37233961251547,
+        "dniExtra": 1320.0655707152405,
+        "solarZenith": 31.904869126481202,
+        "solarAzimuth": 76.88143888850136,
+        "airmassRelative": 1.177184663899575,
+        "model": "phoenix1988"
+      },
+      "expected": 325.1598139405242
+    },
+    {
+      "input": {
+        "surfaceTilt": 88.89834715503083,
+        "surfaceAzimuth": 270.58257019780393,
+        "dhi": 52.75123936732792,
+        "dni": 465.0687947566223,
+        "dniExtra": 1379.5221396117145,
+        "solarZenith": 17.18891883029866,
+        "solarAzimuth": 192.25341567902805,
+        "airmassRelative": 1.0463170132127184,
+        "model": "elmonte1988"
+      },
+      "expected": 18.15891936187017
+    },
+    {
+      "input": {
+        "surfaceTilt": 22.357398834021012,
+        "surfaceAzimuth": 342.82119849801126,
+        "dhi": 189.14618717092065,
+        "dni": 221.3575874876621,
+        "dniExtra": 1335.2234925173072,
+        "solarZenith": 63.09254747531395,
+        "solarAzimuth": 347.50013195570784,
+        "airmassRelative": 2.2016366239119556,
+        "model": "osage1988"
+      },
+      "expected": 216.2180089192434
+    },
+    {
+      "input": {
+        "surfaceTilt": 3.7508255483439825,
+        "surfaceAzimuth": 209.42002609409644,
+        "dhi": 320.47841597535506,
+        "dni": 472.9179791422289,
+        "dniExtra": 1364.8816251402973,
+        "solarZenith": 23.468643269506657,
+        "solarAzimuth": 76.45370943195044,
+        "airmassRelative": 1.089640659947215,
+        "model": "albuquerque1988"
+      },
+      "expected": 317.8250161202191
+    },
+    {
+      "input": {
+        "surfaceTilt": 37.30168995755709,
+        "surfaceAzimuth": 155.1248662054378,
+        "dhi": 332.43126804868103,
+        "dni": 819.4565949433137,
+        "dniExtra": 1373.721131605461,
+        "solarZenith": 57.00884182848662,
+        "solarAzimuth": 278.0004429388541,
+        "airmassRelative": 1.83228834565183,
+        "model": "capecanaveral1988"
+      },
+      "expected": 248.8989409032284
+    },
+    {
+      "input": {
+        "surfaceTilt": 19.670548076008075,
+        "surfaceAzimuth": 325.31023074238425,
+        "dhi": 172.81565316925045,
+        "dni": 992.4652185891609,
+        "dniExtra": 1356.4018104302395,
+        "solarZenith": 71.8830728478662,
+        "solarAzimuth": 117.42810772330698,
+        "airmassRelative": 3.187673059660537,
+        "model": "albany1988"
+      },
+      "expected": 166.4259315548366
+    },
+    {
+      "input": {
+        "surfaceTilt": 137.0124316883632,
+        "surfaceAzimuth": 315.71018167853435,
+        "dhi": 301.1152812691705,
+        "dni": 577.0757661496501,
+        "dniExtra": 1355.8830637921378,
+        "solarZenith": 1.9068810195638144,
+        "solarAzimuth": 112.13971521201377,
+        "airmassRelative": 1.0002561403185382,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 28.30385078190267
+    },
+    {
+      "input": {
+        "surfaceTilt": 89.55951269979117,
+        "surfaceAzimuth": 288.16284213936257,
+        "dhi": 30.955070730559115,
+        "dni": 955.3285296840946,
+        "dniExtra": 1409.3325034407292,
+        "solarZenith": 84.78687408750223,
+        "solarAzimuth": 164.01546438183252,
+        "airmassRelative": 9.956727117792736,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 18.233722736720704
+    },
+    {
+      "input": {
+        "surfaceTilt": 65.39879765434132,
+        "surfaceAzimuth": 42.65731138196681,
+        "dhi": 97.07887116738974,
+        "dni": 149.4250639860525,
+        "dniExtra": 1382.4919825150787,
+        "solarZenith": 5.3611401642793926,
+        "solarAzimuth": 47.823914752776915,
+        "airmassRelative": 1.004074500084443,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 69.79520934878722
+    },
+    {
+      "input": {
+        "surfaceTilt": 1.0393888001207308,
+        "surfaceAzimuth": 351.64610468840755,
+        "dhi": 316.4203591358313,
+        "dni": 99.88799383029578,
+        "dniExtra": 1387.089700724981,
+        "solarZenith": 43.676003864661524,
+        "solarAzimuth": 94.7525928688236,
+        "airmassRelative": 1.3811519589801127,
+        "model": "usacomposite1988"
+      },
+      "expected": 315.9996463806407
+    },
+    {
+      "input": {
+        "surfaceTilt": 65.62711777540748,
+        "surfaceAzimuth": 344.9927932861078,
+        "dhi": 7.674866737273206,
+        "dni": 661.0229699261829,
+        "dniExtra": 1390.1667579649552,
+        "solarZenith": 80.17117436917768,
+        "solarAzimuth": 240.40541721443185,
+        "airmassRelative": 5.676343254008139,
+        "model": "france1988"
+      },
+      "expected": 7.401252829521686
+    },
+    {
+      "input": {
+        "surfaceTilt": 78.99854473444509,
+        "surfaceAzimuth": 120.14208594103751,
+        "dhi": 271.39717570216203,
+        "dni": 807.0223342611185,
+        "dniExtra": 1346.1343599761026,
+        "solarZenith": 33.23256066187286,
+        "solarAzimuth": 318.0153643182872,
+        "airmassRelative": 1.1947002724272637,
+        "model": "phoenix1988"
+      },
+      "expected": 87.38423396099745
+    },
+    {
+      "input": {
+        "surfaceTilt": 43.90651013914959,
+        "surfaceAzimuth": 50.014356594622946,
+        "dhi": 142.13666438777972,
+        "dni": 383.1919911308973,
+        "dniExtra": 1345.839121171778,
+        "solarZenith": 43.993177772742314,
+        "solarAzimuth": 216.78288247685967,
+        "airmassRelative": 1.3884894575757367,
+        "model": "elmonte1988"
+      },
+      "expected": 61.82944800361938
+    },
+    {
+      "input": {
+        "surfaceTilt": 33.85059366341284,
+        "surfaceAzimuth": 6.234970673710043,
+        "dhi": 84.91746510119407,
+        "dni": 347.61476694422845,
+        "dniExtra": 1381.7251855192392,
+        "solarZenith": 80.75724024503833,
+        "solarAzimuth": 179.57719870129844,
+        "airmassRelative": 6.008585479388339,
+        "model": "osage1988"
+      },
+      "expected": 55.99085568323147
+    },
+    {
+      "input": {
+        "surfaceTilt": 28.048396356817452,
+        "surfaceAzimuth": 186.64458146336764,
+        "dhi": 163.68416775144567,
+        "dni": 59.77282228704483,
+        "dniExtra": 1347.2215440791128,
+        "solarZenith": 23.67579600821859,
+        "solarAzimuth": 290.6526915286809,
+        "airmassRelative": 1.0913575121272292,
+        "model": "albuquerque1988"
+      },
+      "expected": 149.4473405501823
+    },
+    {
+      "input": {
+        "surfaceTilt": 74.55304204085914,
+        "surfaceAzimuth": 35.12599466673831,
+        "dhi": 198.0964459812397,
+        "dni": 48.4681973833061,
+        "dniExtra": 1389.780781672039,
+        "solarZenith": 36.0500062469849,
+        "solarAzimuth": 151.5360312704289,
+        "airmassRelative": 1.2359019420097042,
+        "model": "capecanaveral1988"
+      },
+      "expected": 89.73970331011158
+    },
+    {
+      "input": {
+        "surfaceTilt": 36.839147190722265,
+        "surfaceAzimuth": 162.948667855132,
+        "dhi": 86.15342539059837,
+        "dni": 134.36377410590794,
+        "dniExtra": 1323.5903194858447,
+        "solarZenith": 33.164339200635915,
+        "solarAzimuth": 214.23725017347286,
+        "airmassRelative": 1.1937719204865838,
+        "model": "albany1988"
+      },
+      "expected": 98.72102502129641
+    },
+    {
+      "input": {
+        "surfaceTilt": 76.3269469563024,
+        "surfaceAzimuth": 132.81008689672566,
+        "dhi": 383.6317833607495,
+        "dni": 975.3528881704605,
+        "dniExtra": 1348.4287324285676,
+        "solarZenith": 58.381950919184106,
+        "solarAzimuth": 68.96908917629126,
+        "airmassRelative": 1.902638422681269,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 263.7284489359901
+    },
+    {
+      "input": {
+        "surfaceTilt": 15.118416110989765,
+        "surfaceAzimuth": 113.66147254754591,
+        "dhi": 309.9474320788996,
+        "dni": 422.8740079946062,
+        "dniExtra": 1408.3373961501518,
+        "solarZenith": 81.06508237473273,
+        "solarAzimuth": 108.24066761577598,
+        "airmassRelative": 6.198884520111396,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 597.8954428564824
+    },
+    {
+      "input": {
+        "surfaceTilt": 88.2049207648402,
+        "surfaceAzimuth": 264.31169432652996,
+        "dhi": 375.62241556931383,
+        "dni": 832.8255462562504,
+        "dniExtra": 1336.822471991612,
+        "solarZenith": 2.255748596081583,
+        "solarAzimuth": 281.3778867667575,
+        "airmassRelative": 1.0004756220220903,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 86.61303393171512
+    },
+    {
+      "input": {
+        "surfaceTilt": 1.941808321316787,
+        "surfaceAzimuth": 351.0292381229937,
+        "dhi": 54.26675811807766,
+        "dni": 938.0030555521458,
+        "dniExtra": 1332.252899219009,
+        "solarZenith": 0.2169295199496285,
+        "solarAzimuth": 166.6482920272018,
+        "airmassRelative": 0.9997180882006089,
+        "model": "usacomposite1988"
+      },
+      "expected": 54.49402147759287
+    },
+    {
+      "input": {
+        "surfaceTilt": 68.9757211846414,
+        "surfaceAzimuth": 139.92378130441094,
+        "dhi": 213.40562292438906,
+        "dni": 427.869036560764,
+        "dniExtra": 1328.998237286517,
+        "solarZenith": 79.80876442323536,
+        "solarAzimuth": 351.31939870031766,
+        "airmassRelative": 5.488445572189197,
+        "model": "france1988"
+      },
+      "expected": 87.17008071473158
+    },
+    {
+      "input": {
+        "surfaceTilt": 1.908888962404498,
+        "surfaceAzimuth": 232.52522181555344,
+        "dhi": 313.34436981710076,
+        "dni": 239.18413839487306,
+        "dniExtra": 1363.5797512102988,
+        "solarZenith": 13.2479030358097,
+        "solarAzimuth": 121.09881506621957,
+        "airmassRelative": 1.0269524666259533,
+        "model": "phoenix1988"
+      },
+      "expected": 313.4387943613716
+    },
+    {
+      "input": {
+        "surfaceTilt": 47.2729984544816,
+        "surfaceAzimuth": 112.09771743869636,
+        "dhi": 156.29394255284,
+        "dni": 616.5273610676497,
+        "dniExtra": 1410.8332842557297,
+        "solarZenith": 27.166561396323015,
+        "solarAzimuth": 36.81362968193268,
+        "airmassRelative": 1.1233692522463696,
+        "model": "elmonte1988"
+      },
+      "expected": 129.93539908703883
+    },
+    {
+      "input": {
+        "surfaceTilt": 32.299999845180494,
+        "surfaceAzimuth": 32.101818784143354,
+        "dhi": 181.46207121188885,
+        "dni": 841.4424202478007,
+        "dniExtra": 1334.862349882442,
+        "solarZenith": 26.0071390760564,
+        "solarAzimuth": 270.16131920287637,
+        "airmassRelative": 1.1120720485135158,
+        "model": "osage1988"
+      },
+      "expected": 149.56723809009304
+    },
+    {
+      "input": {
+        "surfaceTilt": 86.96909656967954,
+        "surfaceAzimuth": 300.515010918246,
+        "dhi": 234.28712818779448,
+        "dni": 537.2546099596982,
+        "dniExtra": 1392.3153435219294,
+        "solarZenith": 81.84776624146372,
+        "solarAzimuth": 90.33470236504964,
+        "airmassRelative": 6.740334049258613,
+        "model": "albuquerque1988"
+      },
+      "expected": 66.54603579803836
+    },
+    {
+      "input": {
+        "surfaceTilt": 112.28070032913465,
+        "surfaceAzimuth": 307.99554097192447,
+        "dhi": 218.39271588008472,
+        "dni": 736.3239692328934,
+        "dniExtra": 1396.0027137734821,
+        "solarZenith": 57.19605738903604,
+        "solarAzimuth": 84.82663612693372,
+        "airmassRelative": 1.841512159023399,
+        "model": "capecanaveral1988"
+      },
+      "expected": 53.17400755863549
+    },
+    {
+      "input": {
+        "surfaceTilt": 19.133684446929127,
+        "surfaceAzimuth": 238.63354187032806,
+        "dhi": 93.54796062263821,
+        "dni": 573.5847001732693,
+        "dniExtra": 1327.8037113926418,
+        "solarZenith": 73.75320906476894,
+        "solarAzimuth": 319.5029316329138,
+        "airmassRelative": 3.534648943318736,
+        "model": "albany1988"
+      },
+      "expected": 99.00291243340556
+    },
+    {
+      "input": {
+        "surfaceTilt": 29.099109303649428,
+        "surfaceAzimuth": 273.36751020788904,
+        "dhi": 388.26240520433964,
+        "dni": 474.69592088088575,
+        "dniExtra": 1346.2320107048095,
+        "solarZenith": 51.50748814002475,
+        "solarAzimuth": 116.25469744634309,
+        "airmassRelative": 1.6040426769760545,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 273.98528783864464
+    },
+    {
+      "input": {
+        "surfaceTilt": 48.61175691926621,
+        "surfaceAzimuth": 265.72621938739013,
+        "dhi": 68.52440388547132,
+        "dni": 93.63094026452812,
+        "dniExtra": 1394.3230427322503,
+        "solarZenith": 38.43030068012485,
+        "solarAzimuth": 55.652314514894606,
+        "airmassRelative": 1.2754623279131,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 36.883974293983556
+    },
+    {
+      "input": {
+        "surfaceTilt": 48.197604891018635,
+        "surfaceAzimuth": 213.1754732605097,
+        "dhi": 323.4546595201736,
+        "dni": 21.70226665434527,
+        "dniExtra": 1358.6451325780426,
+        "solarZenith": 68.57620750119511,
+        "solarAzimuth": 83.80735057710778,
+        "airmassRelative": 2.7211304298481136,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 130.16362936257912
+    },
+    {
+      "input": {
+        "surfaceTilt": 22.357589797709345,
+        "surfaceAzimuth": 211.33756880418457,
+        "dhi": 384.4276792007335,
+        "dni": 271.2812440087107,
+        "dniExtra": 1388.3420743224358,
+        "solarZenith": 32.210405165566335,
+        "solarAzimuth": 308.07534693692224,
+        "airmassRelative": 1.181113939178666,
+        "model": "usacomposite1988"
+      },
+      "expected": 366.13283479993925
+    },
+    {
+      "input": {
+        "surfaceTilt": 52.58347802472088,
+        "surfaceAzimuth": 60.76823663843123,
+        "dhi": 163.080564931215,
+        "dni": 72.07432443855022,
+        "dniExtra": 1393.0305112272313,
+        "solarZenith": 4.152850785707349,
+        "solarAzimuth": 237.8685786074126,
+        "airmassRelative": 1.0023212751387678,
+        "model": "france1988"
+      },
+      "expected": 118.17133156140471
+    },
+    {
+      "input": {
+        "surfaceTilt": 56.95718628804128,
+        "surfaceAzimuth": 115.35652779399688,
+        "dhi": 202.64439857053486,
+        "dni": 219.12181280150455,
+        "dniExtra": 1353.0325722160246,
+        "solarZenith": 46.057723819024496,
+        "solarAzimuth": 329.24123620176107,
+        "airmassRelative": 1.4393219196140683,
+        "model": "phoenix1988"
+      },
+      "expected": 94.60434482285304
+    },
+    {
+      "input": {
+        "surfaceTilt": 18.90397297908153,
+        "surfaceAzimuth": 189.45680504875975,
+        "dhi": 316.4441521441181,
+        "dni": 716.2049032388937,
+        "dniExtra": 1354.319043988718,
+        "solarZenith": 58.965733322937005,
+        "solarAzimuth": 326.64947533285687,
+        "airmassRelative": 1.9345472031405588,
+        "model": "elmonte1988"
+      },
+      "expected": 273.79297048342426
+    },
+    {
+      "input": {
+        "surfaceTilt": 63.42549248823059,
+        "surfaceAzimuth": 14.675261650304519,
+        "dhi": 103.1782409802062,
+        "dni": 951.8368106444242,
+        "dniExtra": 1413.494083209697,
+        "solarZenith": 44.12318117181538,
+        "solarAzimuth": 228.1957016314101,
+        "airmassRelative": 1.391531808467395,
+        "model": "osage1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 95.50959784741352,
+        "surfaceAzimuth": 82.10834092261472,
+        "dhi": 18.817409515027467,
+        "dni": 204.75637609835118,
+        "dniExtra": 1324.7058392661365,
+        "solarZenith": 44.61392413283572,
+        "solarAzimuth": 24.624898311646433,
+        "airmassRelative": 1.4032024345023966,
+        "model": "albuquerque1988"
+      },
+      "expected": 13.131247511356808
+    },
+    {
+      "input": {
+        "surfaceTilt": 56.26373824747814,
+        "surfaceAzimuth": 127.27559131452705,
+        "dhi": 133.29265402893452,
+        "dni": 375.3649143184602,
+        "dniExtra": 1380.8658045963011,
+        "solarZenith": 21.334915879690204,
+        "solarAzimuth": 334.9570032535153,
+        "airmassRelative": 1.0730716964863547,
+        "model": "capecanaveral1988"
+      },
+      "expected": 85.35746653597644
+    },
+    {
+      "input": {
+        "surfaceTilt": 73.73521972673292,
+        "surfaceAzimuth": 92.71892596010873,
+        "dhi": 321.3708636074556,
+        "dni": 807.5013013751118,
+        "dniExtra": 1373.4566689972637,
+        "solarZenith": 64.20671280643165,
+        "solarAzimuth": 231.3139574397621,
+        "airmassRelative": 2.2889669827285086,
+        "model": "albany1988"
+      },
+      "expected": 172.74142163901578
+    },
+    {
+      "input": {
+        "surfaceTilt": 57.79919753392557,
+        "surfaceAzimuth": 291.72618962578326,
+        "dhi": 196.44463590659208,
+        "dni": 187.96037297844526,
+        "dniExtra": 1412.815010930942,
+        "solarZenith": 6.838526033793335,
+        "solarAzimuth": 274.6554830820799,
+        "airmassRelative": 1.0068356511743015,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 156.61358912150678
+    },
+    {
+      "input": {
+        "surfaceTilt": 83.84910725568058,
+        "surfaceAzimuth": 280.36084232589536,
+        "dhi": 143.96220796090685,
+        "dni": 232.8024234716304,
+        "dniExtra": 1335.4541135621453,
+        "solarZenith": 77.55310948056999,
+        "solarAzimuth": 237.00635827010817,
+        "airmassRelative": 4.549729500375952,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 193.57800738702647
+    },
+    {
+      "input": {
+        "surfaceTilt": 34.439226062850615,
+        "surfaceAzimuth": 82.6482875186781,
+        "dhi": 115.50636454960369,
+        "dni": 330.2266584593659,
+        "dniExtra": 1388.1329762086414,
+        "solarZenith": 76.65738640100668,
+        "solarAzimuth": 68.39690661931382,
+        "airmassRelative": 4.2604761085292395,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 163.89465301737994
+    },
+    {
+      "input": {
+        "surfaceTilt": 11.953643867835178,
+        "surfaceAzimuth": 156.0648069583389,
+        "dhi": 176.96082077139218,
+        "dni": 156.74671307594824,
+        "dniExtra": 1355.0567395905664,
+        "solarZenith": 37.00594875635202,
+        "solarAzimuth": 31.089797940744113,
+        "airmassRelative": 1.2512331289450636,
+        "model": "usacomposite1988"
+      },
+      "expected": 169.95347817070953
+    },
+    {
+      "input": {
+        "surfaceTilt": 7.455275861410233,
+        "surfaceAzimuth": 281.8121840671805,
+        "dhi": 75.90811833453532,
+        "dni": 33.330858821910226,
+        "dniExtra": 1392.3782532959256,
+        "solarZenith": 47.93727348087481,
+        "solarAzimuth": 336.7540487308002,
+        "airmassRelative": 1.490676620022616,
+        "model": "france1988"
+      },
+      "expected": 77.73044192304313
+    },
+    {
+      "input": {
+        "surfaceTilt": 25.545999062058787,
+        "surfaceAzimuth": 141.98055195776294,
+        "dhi": 90.65020672569808,
+        "dni": 92.87850364057127,
+        "dniExtra": 1340.5079885179402,
+        "solarZenith": 83.79415774706706,
+        "solarAzimuth": 117.39785411903932,
+        "airmassRelative": 8.5879971920957,
+        "model": "phoenix1988"
+      },
+      "expected": 150.57220446795773
+    },
+    {
+      "input": {
+        "surfaceTilt": 46.72932880024189,
+        "surfaceAzimuth": 279.5806203359365,
+        "dhi": 305.07615725845085,
+        "dni": 958.793040914891,
+        "dniExtra": 1409.031389638174,
+        "solarZenith": 50.80430863121616,
+        "solarAzimuth": 307.3615981621319,
+        "airmassRelative": 1.579883956752179,
+        "model": "elmonte1988"
+      },
+      "expected": 299.38150732684306
+    },
+    {
+      "input": {
+        "surfaceTilt": 123.10314257107322,
+        "surfaceAzimuth": 133.66159561655667,
+        "dhi": 64.05343606126691,
+        "dni": 347.75402829898616,
+        "dniExtra": 1402.1891349976681,
+        "solarZenith": 8.07115481317963,
+        "solarAzimuth": 147.40276282538593,
+        "airmassRelative": 1.0096654857219913,
+        "model": "osage1988"
+      },
+      "expected": 68.91781477095773
+    },
+    {
+      "input": {
+        "surfaceTilt": 69.67442503112358,
+        "surfaceAzimuth": 328.6580204932285,
+        "dhi": 145.81156801728864,
+        "dni": 906.914861008213,
+        "dniExtra": 1346.5988682347677,
+        "solarZenith": 1.2999459361364967,
+        "solarAzimuth": 139.85591191447656,
+        "airmassRelative": 0.9999627854824361,
+        "model": "albuquerque1988"
+      },
+      "expected": 61.164263749680146
+    },
+    {
+      "input": {
+        "surfaceTilt": 76.17962771324879,
+        "surfaceAzimuth": 124.98801030464341,
+        "dhi": 369.60103333802243,
+        "dni": 849.6191234960095,
+        "dniExtra": 1368.7392080846555,
+        "solarZenith": 10.43795355545283,
+        "solarAzimuth": 231.67289824585265,
+        "airmassRelative": 1.0164673587326618,
+        "model": "capecanaveral1988"
+      },
+      "expected": 132.238549299898
+    },
+    {
+      "input": {
+        "surfaceTilt": 3.0774874566692336,
+        "surfaceAzimuth": 30.718505468413486,
+        "dhi": 19.69256443214041,
+        "dni": 742.838612624143,
+        "dniExtra": 1334.2200308514703,
+        "solarZenith": 33.5519395022156,
+        "solarAzimuth": 106.52014106898093,
+        "airmassRelative": 1.1990882224540482,
+        "model": "albany1988"
+      },
+      "expected": 20.277385273487695
+    },
+    {
+      "input": {
+        "surfaceTilt": 72.60703092711246,
+        "surfaceAzimuth": 200.0785820348192,
+        "dhi": 376.7016444838919,
+        "dni": 214.4796638552766,
+        "dniExtra": 1402.84117113106,
+        "solarZenith": 12.170193156784967,
+        "solarAzimuth": 117.55274679338922,
+        "airmassRelative": 1.022614852406097,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 199.86716111957773
+    },
+    {
+      "input": {
+        "surfaceTilt": 42.50422511779368,
+        "surfaceAzimuth": 275.002913357124,
+        "dhi": 396.21430680789916,
+        "dni": 977.4758139108426,
+        "dniExtra": 1393.7702903363868,
+        "solarZenith": 42.03104948348455,
+        "solarAzimuth": 237.24218643903987,
+        "airmassRelative": 1.3449525573636052,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 419.4475425103555
+    },
+    {
+      "input": {
+        "surfaceTilt": 60.016691423154285,
+        "surfaceAzimuth": 151.04351112105897,
+        "dhi": 291.0817683998823,
+        "dni": 56.35761699510133,
+        "dniExtra": 1403.1117184260786,
+        "solarZenith": 66.4207098314909,
+        "solarAzimuth": 134.44374895704286,
+        "airmassRelative": 2.4876265227966314,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 348.9107673278367
+    },
+    {
+      "input": {
+        "surfaceTilt": 14.315331720543918,
+        "surfaceAzimuth": 151.30639181199436,
+        "dhi": 232.4665728727943,
+        "dni": 510.8043088819445,
+        "dniExtra": 1324.4576580703012,
+        "solarZenith": 15.293307745165947,
+        "solarAzimuth": 115.21875855200915,
+        "airmassRelative": 1.036300757383496,
+        "model": "usacomposite1988"
+      },
+      "expected": 242.66282102727337
+    },
+    {
+      "input": {
+        "surfaceTilt": 23.080902383888496,
+        "surfaceAzimuth": 146.9255030477376,
+        "dhi": 26.8627830943003,
+        "dni": 278.2531521173629,
+        "dniExtra": 1322.710924675518,
+        "solarZenith": 24.652618088919105,
+        "solarAzimuth": 118.34327834435851,
+        "airmassRelative": 1.0997211391033477,
+        "model": "france1988"
+      },
+      "expected": 33.13695476138137
+    },
+    {
+      "input": {
+        "surfaceTilt": 9.962345328236232,
+        "surfaceAzimuth": 340.78839312910293,
+        "dhi": 48.27273156021913,
+        "dni": 389.09760467135004,
+        "dniExtra": 1337.9756546160593,
+        "solarZenith": 13.744073562015554,
+        "solarAzimuth": 155.8671050303751,
+        "airmassRelative": 1.0290844630270335,
+        "model": "phoenix1988"
+      },
+      "expected": 47.02626708613083
+    },
+    {
+      "input": {
+        "surfaceTilt": 169.85808687794383,
+        "surfaceAzimuth": 219.55150518471157,
+        "dhi": 163.97320287223604,
+        "dni": 249.1828844490407,
+        "dniExtra": 1392.0035227445255,
+        "solarZenith": 49.8420156661155,
+        "solarAzimuth": 346.051586967614,
+        "airmassRelative": 1.5483450226830038,
+        "model": "elmonte1988"
+      },
+      "expected": 2.900107411815012
+    },
+    {
+      "input": {
+        "surfaceTilt": 83.2746497629551,
+        "surfaceAzimuth": 57.962525083551384,
+        "dhi": 316.635249544022,
+        "dni": 92.06659145540941,
+        "dniExtra": 1334.6088863274997,
+        "solarZenith": 23.68500261141825,
+        "solarAzimuth": 98.81949823646403,
+        "airmassRelative": 1.091434271418027,
+        "model": "osage1988"
+      },
+      "expected": 158.418315618022
+    },
+    {
+      "input": {
+        "surfaceTilt": 36.80174760832394,
+        "surfaceAzimuth": 293.36254154863525,
+        "dhi": 89.77678406545425,
+        "dni": 856.0557041353335,
+        "dniExtra": 1350.033203390403,
+        "solarZenith": 4.786305181701653,
+        "solarAzimuth": 124.52894525924019,
+        "airmassRelative": 1.003184057686924,
+        "model": "albuquerque1988"
+      },
+      "expected": 70.35267163011888
+    },
+    {
+      "input": {
+        "surfaceTilt": 61.02720987019733,
+        "surfaceAzimuth": 43.18289590729164,
+        "dhi": 83.94641215523217,
+        "dni": 465.92639096883073,
+        "dniExtra": 1402.570351029319,
+        "solarZenith": 81.07287543737661,
+        "solarAzimuth": 356.92003431733036,
+        "airmassRelative": 6.203855478539377,
+        "model": "capecanaveral1988"
+      },
+      "expected": 108.9804861078512
+    },
+    {
+      "input": {
+        "surfaceTilt": 73.98524771709704,
+        "surfaceAzimuth": 174.4794180414888,
+        "dhi": 359.4711813763094,
+        "dni": 845.9915079751929,
+        "dniExtra": 1383.1246423794971,
+        "solarZenith": 71.8617348760048,
+        "solarAzimuth": 201.16955915520617,
+        "airmassRelative": 3.184120909705813,
+        "model": "albany1988"
+      },
+      "expected": 449.02472699149337
+    },
+    {
+      "input": {
+        "surfaceTilt": 59.21718846532223,
+        "surfaceAzimuth": 239.8758922681694,
+        "dhi": 324.41711713390845,
+        "dni": 197.90839006185567,
+        "dniExtra": 1398.7542818620595,
+        "solarZenith": 29.582587297639886,
+        "solarAzimuth": 272.9921591772304,
+        "airmassRelative": 1.1491992670952151,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 287.1221342968262
+    },
+    {
+      "input": {
+        "surfaceTilt": 87.7826043496917,
+        "surfaceAzimuth": 168.70872005499768,
+        "dhi": 191.7575222808237,
+        "dni": 277.7783795372567,
+        "dniExtra": 1320.0265726039436,
+        "solarZenith": 50.49809846775275,
+        "solarAzimuth": 347.13201192106936,
+        "airmassRelative": 1.569661930474165,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 76.33944612405182
+    },
+    {
+      "input": {
+        "surfaceTilt": 65.60089931543543,
+        "surfaceAzimuth": 330.8569113998124,
+        "dhi": 266.7971754501376,
+        "dni": 902.2415990327843,
+        "dniExtra": 1405.1985658541464,
+        "solarZenith": 40.833196427242186,
+        "solarAzimuth": 49.492722923346555,
+        "airmassRelative": 1.3204303189150606,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 178.87255833538137
+    },
+    {
+      "input": {
+        "surfaceTilt": 23.1349670477798,
+        "surfaceAzimuth": 106.04042420877491,
+        "dhi": 235.4428540992781,
+        "dni": 35.691994856421715,
+        "dniExtra": 1405.6922623944465,
+        "solarZenith": 68.03475936609375,
+        "solarAzimuth": 256.56672841775804,
+        "airmassRelative": 2.6581256901503143,
+        "model": "usacomposite1988"
+      },
+      "expected": 180.26821971377777
+    },
+    {
+      "input": {
+        "surfaceTilt": 17.96955725177131,
+        "surfaceAzimuth": 220.15356886793145,
+        "dhi": 291.8842918626987,
+        "dni": 362.33293609445815,
+        "dniExtra": 1340.0537178684324,
+        "solarZenith": 11.472435029176902,
+        "solarAzimuth": 59.979907761566324,
+        "airmassRelative": 1.0200176035140374,
+        "model": "france1988"
+      },
+      "expected": 277.87904779149534
+    },
+    {
+      "input": {
+        "surfaceTilt": 32.12929800203676,
+        "surfaceAzimuth": 132.43650115324493,
+        "dhi": 324.5069224917611,
+        "dni": 851.5793407716594,
+        "dniExtra": 1325.469694407858,
+        "solarZenith": 65.6871547403306,
+        "solarAzimuth": 236.0054728987958,
+        "airmassRelative": 2.417717694669751,
+        "model": "phoenix1988"
+      },
+      "expected": 271.5768310334423
+    },
+    {
+      "input": {
+        "surfaceTilt": 76.8172627536121,
+        "surfaceAzimuth": 173.6623845102451,
+        "dhi": 383.1866828385669,
+        "dni": 191.2150505315583,
+        "dniExtra": 1358.6932881880348,
+        "solarZenith": 60.756401582704164,
+        "solarAzimuth": 177.59806965139302,
+        "airmassRelative": 2.040795062427549,
+        "model": "elmonte1988"
+      },
+      "expected": 429.245619202851
+    },
+    {
+      "input": {
+        "surfaceTilt": 13.888378631593145,
+        "surfaceAzimuth": 123.63478955738479,
+        "dhi": 299.82818623019097,
+        "dni": 744.3800359110493,
+        "dniExtra": 1355.178740627386,
+        "solarZenith": 68.12589842258171,
+        "solarAzimuth": 212.1239601643116,
+        "airmassRelative": 2.6685112033492446,
+        "model": "osage1988"
+      },
+      "expected": 293.55823519849065
+    },
+    {
+      "input": {
+        "surfaceTilt": 63.54867840648964,
+        "surfaceAzimuth": 208.12487655752665,
+        "dhi": 291.28314356386795,
+        "dni": 527.7188017188755,
+        "dniExtra": 1369.9025560261364,
+        "solarZenith": 60.81073610834571,
+        "solarAzimuth": 68.48642762385587,
+        "airmassRelative": 2.0442324128792317,
+        "model": "albuquerque1988"
+      },
+      "expected": 151.08215349003726
+    },
+    {
+      "input": {
+        "surfaceTilt": 84.7080724893132,
+        "surfaceAzimuth": 57.03108510570185,
+        "dhi": 193.77716556400796,
+        "dni": 564.2454438936369,
+        "dniExtra": 1361.6856269181558,
+        "solarZenith": 51.28969256080004,
+        "solarAzimuth": 141.46745400425618,
+        "airmassRelative": 1.5964559697855754,
+        "model": "capecanaveral1988"
+      },
+      "expected": 92.04065983825258
+    },
+    {
+      "input": {
+        "surfaceTilt": 57.008150566304025,
+        "surfaceAzimuth": 8.475986095123321,
+        "dhi": 364.54443964793154,
+        "dni": 763.5803196387258,
+        "dniExtra": 1370.676853047259,
+        "solarZenith": 23.953916199969164,
+        "solarAzimuth": 279.01341981603406,
+        "airmassRelative": 1.0936935423212004,
+        "model": "albany1988"
+      },
+      "expected": 256.15334879785075
+    },
+    {
+      "input": {
+        "surfaceTilt": 25.070367674678582,
+        "surfaceAzimuth": 180.68812432088964,
+        "dhi": 5.496930854288832,
+        "dni": 306.06083164617735,
+        "dniExtra": 1360.6310958815036,
+        "solarZenith": 71.49757663396753,
+        "solarAzimuth": 168.3632536101401,
+        "airmassRelative": 3.1247486079701465,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 8.6576189870154
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.10709471166667095,
+        "surfaceAzimuth": 257.07421509351025,
+        "dhi": 305.2464262961548,
+        "dni": 274.5859613130992,
+        "dniExtra": 1409.1981348601341,
+        "solarZenith": 42.28710947844003,
+        "solarAzimuth": 128.88047580414684,
+        "airmassRelative": 1.3503900199561958,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 305.1419439684362
+    },
+    {
+      "input": {
+        "surfaceTilt": 53.35913084571926,
+        "surfaceAzimuth": 110.6017410204533,
+        "dhi": 120.26764265028632,
+        "dni": 391.3974790094883,
+        "dniExtra": 1378.1492839386594,
+        "solarZenith": 40.75999698430682,
+        "solarAzimuth": 319.00014583962223,
+        "airmassRelative": 1.3189792154097562,
+        "model": "sandiacomposite1988"
+      },
+      "expected": 52.1277656527044
+    },
+    {
+      "input": {
+        "surfaceTilt": 40.106715339568005,
+        "surfaceAzimuth": 92.63451301577294,
+        "dhi": 132.0906719447297,
+        "dni": 839.8384032614915,
+        "dniExtra": 1330.8967580918047,
+        "solarZenith": 7.691282652742748,
+        "solarAzimuth": 58.34355244304615,
+        "airmassRelative": 1.008741947825303,
+        "model": "usacomposite1988"
+      },
+      "expected": 114.63109477139146
+    },
+    {
+      "input": {
+        "surfaceTilt": 48.398876896843305,
+        "surfaceAzimuth": 161.10130609876626,
+        "dhi": 215.98959052717376,
+        "dni": 808.7432153257328,
+        "dniExtra": 1382.2333864577931,
+        "solarZenith": 87.38615147241403,
+        "solarAzimuth": 230.1695105862235,
+        "airmassRelative": 16.585595363177056,
+        "model": "france1988"
+      },
+      "expected": 147.57160001255295
+    },
+    {
+      "input": {
+        "surfaceTilt": 52.70337219455592,
+        "surfaceAzimuth": 264.5519905778386,
+        "dhi": 127.01613947589296,
+        "dni": 318.8507295603108,
+        "dniExtra": 1392.3070842744767,
+        "solarZenith": 85.6328250760088,
+        "solarAzimuth": 125.30558214397561,
+        "airmassRelative": 11.491259706231551,
+        "model": "phoenix1988"
+      },
+      "expected": 74.84101349256473
+    },
+    {
+      "input": {
+        "surfaceTilt": 88.62377399210679,
+        "surfaceAzimuth": 262.89685024419873,
+        "dhi": 226.37264222235774,
+        "dni": 690.6016952510299,
+        "dniExtra": 1379.8926707457094,
+        "solarZenith": 92.17987382544958,
+        "solarAzimuth": 150.45653473470418,
+        "airmassRelative": "NaN",
+        "model": "elmonte1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 63.287783841263405,
+        "surfaceAzimuth": 47.72771862354319,
+        "dhi": 26.853814348374442,
+        "dni": 305.8099534990321,
+        "dniExtra": 1403.627639324461,
+        "solarZenith": 93.26287441536496,
+        "solarAzimuth": 185.8065506740986,
+        "airmassRelative": "NaN",
+        "model": "osage1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 83.31384181806173,
+        "surfaceAzimuth": 241.2931842877833,
+        "dhi": 108.89100565834839,
+        "dni": 762.615081895599,
+        "dniExtra": 1355.4811188646177,
+        "solarZenith": 91.57861920289899,
+        "solarAzimuth": 112.5549113565296,
+        "airmassRelative": "NaN",
+        "model": "albuquerque1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 65.42123989904982,
+        "surfaceAzimuth": 65.64643003827364,
+        "dhi": 233.6898606143023,
+        "dni": 75.04624240373892,
+        "dniExtra": 1368.164420845563,
+        "solarZenith": 87.92723833650778,
+        "solarAzimuth": 21.476172083787667,
+        "airmassRelative": 19.052630046849128,
+        "model": "capecanaveral1988"
+      },
+      "expected": 2716.7191019398274
+    },
+    {
+      "input": {
+        "surfaceTilt": 69.7853341082196,
+        "surfaceAzimuth": 328.90875488555645,
+        "dhi": 158.90847316618036,
+        "dni": 758.5501394358221,
+        "dniExtra": 1320.7531073569446,
+        "solarZenith": 88.92914601236049,
+        "solarAzimuth": 62.41674480588907,
+        "airmassRelative": 25.69917332560399,
+        "model": "albany1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 55.80283320985845,
+        "surfaceAzimuth": 176.17021195706832,
+        "dhi": 188.06945306053854,
+        "dni": 824.875452480308,
+        "dniExtra": 1367.3822101925396,
+        "solarZenith": 92.2942804509157,
+        "solarAzimuth": 230.37179654516973,
+        "airmassRelative": "NaN",
+        "model": "allsitescomposite1990"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.575553720745785,
+        "surfaceAzimuth": 46.84130641990927,
+        "dhi": 58.08825799131791,
+        "dni": 600.4732458892173,
+        "dniExtra": 1321.6872561741059,
+        "solarZenith": 86.10068615137043,
+        "solarAzimuth": 66.25701976204277,
+        "airmassRelative": 12.543132597598158,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 58.041890480556866
+    },
+    {
+      "input": {
+        "surfaceTilt": 86.09835253236216,
+        "surfaceAzimuth": 233.75557781915813,
+        "dhi": 175.4602776823641,
+        "dni": 405.0770232892684,
+        "dniExtra": 1403.1975239540268,
+        "solarZenith": 91.16135248595303,
+        "solarAzimuth": 163.85682972646904,
+        "airmassRelative": "NaN",
+        "model": "sandiacomposite1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 17.249281388746635,
+        "surfaceAzimuth": 143.08446148918733,
+        "dhi": 208.7623302950072,
+        "dni": 237.82754349953728,
+        "dniExtra": 1377.7439540077823,
+        "solarZenith": 85.04168724985351,
+        "solarAzimuth": 314.92662827021354,
+        "airmassRelative": 10.37677008901721,
+        "model": "usacomposite1988"
+      },
+      "expected": 69.55352462431885
+    },
+    {
+      "input": {
+        "surfaceTilt": 85.73696551376058,
+        "surfaceAzimuth": 298.5624671629178,
+        "dhi": 292.65506747772446,
+        "dni": 166.99321140726286,
+        "dniExtra": 1330.7677102060795,
+        "solarZenith": 86.60655718305264,
+        "solarAzimuth": 72.43675054163808,
+        "airmassRelative": 13.89752881152645,
+        "model": "france1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 61.934265316965536,
+        "surfaceAzimuth": 354.62723780963745,
+        "dhi": 177.86768558275313,
+        "dni": 420.8640913759264,
+        "dniExtra": 1341.594318031936,
+        "solarZenith": 94.40738350255111,
+        "solarAzimuth": 342.2831126451816,
+        "airmassRelative": "NaN",
+        "model": "phoenix1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 89.13727841525487,
+        "surfaceAzimuth": 298.8490570470218,
+        "dhi": 47.085010850741725,
+        "dni": 813.1030741326479,
+        "dniExtra": 1414.904180700899,
+        "solarZenith": 87.64187736593706,
+        "solarAzimuth": 237.6025923443245,
+        "airmassRelative": 17.67731007529759,
+        "model": "elmonte1988"
+      },
+      "expected": 24.16108821571998
+    },
+    {
+      "input": {
+        "surfaceTilt": 67.08113512770439,
+        "surfaceAzimuth": 294.2632596798065,
+        "dhi": 50.501034093526165,
+        "dni": 411.8989489042114,
+        "dniExtra": 1394.0210461872948,
+        "solarZenith": 88.31382236187714,
+        "solarAzimuth": 27.872637075261725,
+        "airmassRelative": 21.234677366835783,
+        "model": "osage1988"
+      },
+      "expected": 12.507209231465406
+    },
+    {
+      "input": {
+        "surfaceTilt": 4.112469136216484,
+        "surfaceAzimuth": 183.35409079342242,
+        "dhi": 80.28829375385449,
+        "dni": 284.3184174768142,
+        "dniExtra": 1342.0969745916752,
+        "solarZenith": 93.81539801996838,
+        "solarAzimuth": 109.70892712128716,
+        "airmassRelative": "NaN",
+        "model": "albuquerque1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 88.54371824436524,
+        "surfaceAzimuth": 318.09275047137663,
+        "dhi": 92.10627279835197,
+        "dni": 550.6389811701183,
+        "dniExtra": 1340.9916186743887,
+        "solarZenith": 92.56167732107991,
+        "solarAzimuth": 30.61163785930907,
+        "airmassRelative": "NaN",
+        "model": "capecanaveral1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 76.1084481144704,
+        "surfaceAzimuth": 166.96535074738503,
+        "dhi": 95.32081308308669,
+        "dni": 341.14013920494904,
+        "dniExtra": 1327.1847110593558,
+        "solarZenith": 92.0712346087431,
+        "solarAzimuth": 321.0936591072767,
+        "airmassRelative": "NaN",
+        "model": "albany1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 18.078993115614143,
+        "surfaceAzimuth": 183.24239861406568,
+        "dhi": 133.6235756866937,
+        "dni": 301.41376848527904,
+        "dniExtra": 1354.5238837089423,
+        "solarZenith": 92.49660527302726,
+        "solarAzimuth": 75.8281387687716,
+        "airmassRelative": "NaN",
+        "model": "allsitescomposite1990"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 52.06069148913412,
+        "surfaceAzimuth": 191.89828222035038,
+        "dhi": 264.4516023590643,
+        "dni": 783.4450843196782,
+        "dniExtra": 1382.3043996560573,
+        "solarZenith": 85.60931806597382,
+        "solarAzimuth": 251.8338759029139,
+        "airmassRelative": 11.442719220977558,
+        "model": "allsitescomposite1988"
+      },
+      "expected": 101.80192082508506
+    },
+    {
+      "input": {
+        "surfaceTilt": 20.343377645601898,
+        "surfaceAzimuth": 337.67466869250774,
+        "dhi": 269.26795792587194,
+        "dni": 821.5135773699129,
+        "dniExtra": 1359.9672842761622,
+        "solarZenith": 90.56985660580966,
+        "solarAzimuth": 261.7239374952045,
+        "airmassRelative": "NaN",
+        "model": "sandiacomposite1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 40.91081284511626,
+        "surfaceAzimuth": 300.6500146313546,
+        "dhi": 324.72526144804436,
+        "dni": 359.2706579930911,
+        "dniExtra": 1335.5376624811288,
+        "solarZenith": 86.13613064014588,
+        "solarAzimuth": 112.76962032445888,
+        "airmassRelative": 12.630066805173104,
+        "model": "usacomposite1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 36.598293134452526,
+        "surfaceAzimuth": 5.3514485297678105,
+        "dhi": 355.53130961682706,
+        "dni": 628.9052468653949,
+        "dniExtra": 1414.8809050533725,
+        "solarZenith": 93.83618886020912,
+        "solarAzimuth": 116.58129180299181,
+        "airmassRelative": "NaN",
+        "model": "france1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 76.20102852034032,
+        "surfaceAzimuth": 169.6958080034811,
+        "dhi": 299.66302808329834,
+        "dni": 868.8556403323274,
+        "dniExtra": 1396.3853744830606,
+        "solarZenith": 91.77421040540436,
+        "solarAzimuth": 107.7961705738626,
+        "airmassRelative": "NaN",
+        "model": "phoenix1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 71.52986090913582,
+        "surfaceAzimuth": 324.1509658320283,
+        "dhi": 79.22974271538556,
+        "dni": 976.8737689284203,
+        "dniExtra": 1393.8309438035203,
+        "solarZenith": 94.49958796194008,
+        "solarAzimuth": 200.2876476248138,
+        "airmassRelative": "NaN",
+        "model": "elmonte1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 65.95224665932936,
+        "surfaceAzimuth": 122.82753120167483,
+        "dhi": 76.39661025029316,
+        "dni": 399.7868647852285,
+        "dniExtra": 1386.3813147784408,
+        "solarZenith": 89.19779264897856,
+        "solarAzimuth": 258.03199563235006,
+        "airmassRelative": 28.14414043210787,
+        "model": "osage1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 77.18202344790002,
+        "surfaceAzimuth": 221.17132153641228,
+        "dhi": 303.69661061810854,
+        "dni": 701.8345579301747,
+        "dniExtra": 1382.175251158869,
+        "solarZenith": 91.63478682192283,
+        "solarAzimuth": 97.13511804829209,
+        "airmassRelative": "NaN",
+        "model": "albuquerque1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 69.3258371198255,
+        "surfaceAzimuth": 117.87887604097003,
+        "dhi": 41.39674960918193,
+        "dni": 33.78971449760615,
+        "dniExtra": 1345.6093492850848,
+        "solarZenith": 92.02657968625607,
+        "solarAzimuth": 168.7125943859256,
+        "airmassRelative": "NaN",
+        "model": "capecanaveral1988"
+      },
+      "expected": 0.0
+    },
+    {
+      "input": {
+        "surfaceTilt": 23.04501274012272,
+        "surfaceAzimuth": 268.94047087497177,
+        "dhi": 285.6290401689805,
+        "dni": 489.7195740724787,
+        "dniExtra": 1390.9839843609473,
+        "solarZenith": 88.88492299646991,
+        "solarAzimuth": 308.8656508927229,
+        "airmassRelative": 25.32898990329387,
+        "model": "albany1988"
+      },
+      "expected": 1629.2129850318859
+    },
+    {
+      "input": {
+        "surfaceTilt": 27.479162923511097,
+        "surfaceAzimuth": 242.79022298082884,
+        "dhi": 292.45448444843703,
+        "dni": 836.9327278960791,
+        "dniExtra": 1323.5276132599483,
+        "solarZenith": 85.12321675344239,
+        "solarAzimuth": 37.41794470819504,
+        "airmassRelative": 10.518268867823638,
+        "model": "allsitescomposite1990"
+      },
+      "expected": 84.45101918854037
+    }
+  ]
+}

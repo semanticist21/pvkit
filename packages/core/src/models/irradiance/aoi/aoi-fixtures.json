@@ -1,0 +1,1663 @@
+{
+  "meta": {
+    "reference": "pvlib.irradiance.aoi / aoi_projection @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "surfaceTilt": 0.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 0.0,
+        "solarAzimuth": 180.0
+      },
+      "expected": {
+        "aoiProjection": 1.0,
+        "aoi": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 30.0,
+        "solarAzimuth": 180.0
+      },
+      "expected": {
+        "aoiProjection": 1.0,
+        "aoi": 0.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 90.0,
+        "solarAzimuth": 0.0
+      },
+      "expected": {
+        "aoiProjection": -1.0,
+        "aoi": 180.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.0,
+        "surfaceAzimuth": 90.0,
+        "solarZenith": 89.5,
+        "solarAzimuth": 90.0
+      },
+      "expected": {
+        "aoiProjection": 0.9999619230641713,
+        "aoi": 0.49999999999986244
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 180.0,
+        "surfaceAzimuth": 0.0,
+        "solarZenith": 10.0,
+        "solarAzimuth": 200.0
+      },
+      "expected": {
+        "aoiProjection": -0.984807753012208,
+        "aoi": 169.99999999999997
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 45.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 95.0,
+        "solarAzimuth": 180.0
+      },
+      "expected": {
+        "aoiProjection": 0.6427876096865391,
+        "aoi": 50.000000000000014
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 20.0,
+        "surfaceAzimuth": 359.9,
+        "solarZenith": 60.0,
+        "solarAzimuth": 0.1
+      },
+      "expected": {
+        "aoiProjection": 0.7660426385785917,
+        "aoi": 40.000160849981526
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 35.0,
+        "surfaceAzimuth": 180.0,
+        "solarZenith": 0.0,
+        "solarAzimuth": 0.0
+      },
+      "expected": {
+        "aoiProjection": 0.8191520442889918,
+        "aoi": 35.0
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 61.06820243671446,
+        "surfaceAzimuth": 145.05956482533648,
+        "solarZenith": 33.66099113170656,
+        "solarAzimuth": 161.34270218691597
+      },
+      "expected": {
+        "aoiProjection": 0.8682989788732809,
+        "aoi": 29.73843244781536
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 113.02939514886312,
+        "surfaceAzimuth": 274.0511881936509,
+        "solarZenith": 93.69138560645548,
+        "solarAzimuth": 178.98216282268055
+      },
+      "expected": {
+        "aoiProjection": -0.055958972637467255,
+        "aoi": 93.20788864643791
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 52.17277370109458,
+        "surfaceAzimuth": 82.79207418882763,
+        "solarZenith": 108.7025325993036,
+        "solarAzimuth": 16.892027317247454
+      },
+      "expected": {
+        "aoiProjection": 0.10884224296892483,
+        "aoi": 83.75141973947608
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 43.06440887810518,
+        "surfaceAzimuth": 302.8481952292896,
+        "solarZenith": 16.20150239083951,
+        "solarAzimuth": 347.0288913976437
+      },
+      "expected": {
+        "aoiProjection": 0.8382013899733378,
+        "aoi": 33.04932462279652
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 3.251242855659797,
+        "surfaceAzimuth": 314.9147202660271,
+        "solarZenith": 111.59864410304229,
+        "solarAzimuth": 77.54731033401607
+      },
+      "expected": {
+        "aoiProjection": -0.39594592708328624,
+        "aoi": 113.32498217698075
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 154.06525668418342,
+        "surfaceAzimuth": 124.32587923074067,
+        "solarZenith": 82.00531204914073,
+        "solarAzimuth": 253.27603407225484
+      },
+      "expected": {
+        "aoiProjection": -0.39733839902759377,
+        "aoi": 113.41189404764589
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 60.39984154183622,
+        "surfaceAzimuth": 308.4620134428939,
+        "solarZenith": 0.12834497060140393,
+        "solarAzimuth": 277.6474799592149
+      },
+      "expected": {
+        "aoiProjection": 0.49561577582287214,
+        "aoi": 60.289636509064685
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 25.841826358657787,
+        "surfaceAzimuth": 260.81591234886173,
+        "solarZenith": 10.69319239764962,
+        "solarAzimuth": 225.58335741275087
+      },
+      "expected": {
+        "aoiProjection": 0.9504355225713247,
+        "aoi": 18.114786531696122
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 117.83604540361975,
+        "surfaceAzimuth": 24.510996316943846,
+        "solarZenith": 59.37909967804343,
+        "solarAzimuth": 226.28129210390577
+      },
+      "expected": {
+        "aoiProjection": -0.9445446428411504,
+        "aoi": 160.82933834752623
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 43.373036630034875,
+        "surfaceAzimuth": 184.20913483265133,
+        "solarZenith": 162.40604009442677,
+        "solarAzimuth": 99.35770457207995
+      },
+      "expected": {
+        "aoiProjection": -0.6742673590029057,
+        "aoi": 132.39728223729998
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 35.95661817421656,
+        "surfaceAzimuth": 199.8739195459558,
+        "solarZenith": 62.693687235720496,
+        "solarAzimuth": 176.73206630810526
+      },
+      "expected": {
+        "aoiProjection": 0.8510983577544202,
+        "aoi": 31.66866546886175
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 94.8491210553709,
+        "surfaceAzimuth": 248.24252401665262,
+        "solarZenith": 95.67881373890249,
+        "solarAzimuth": 253.63451537555372
+      },
+      "expected": {
+        "aoiProjection": 0.9955077395204518,
+        "aoi": 5.4329137426182745
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 18.808617825786865,
+        "surfaceAzimuth": 269.90217578031906,
+        "solarZenith": 57.43460763435953,
+        "solarAzimuth": 20.584173064541655
+      },
+      "expected": {
+        "aoiProjection": 0.41355334336510224,
+        "aoi": 65.57175338734207
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 27.14826911719882,
+        "surfaceAzimuth": 172.96360644673956,
+        "solarZenith": 128.01273501899664,
+        "solarAzimuth": 100.91585973426662
+      },
+      "expected": {
+        "aoiProjection": -0.43718161991740667,
+        "aoi": 115.92419519606742
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 83.41749201207828,
+        "surfaceAzimuth": 145.39798863713685,
+        "solarZenith": 54.107768215024606,
+        "solarAzimuth": 30.87689012163016
+      },
+      "expected": {
+        "aoiProjection": -0.26680120215568964,
+        "aoi": 105.47400803811198
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 122.97207951405731,
+        "surfaceAzimuth": 105.95160137509326,
+        "solarZenith": 132.59863152445467,
+        "solarAzimuth": 321.6816985454481
+      },
+      "expected": {
+        "aoiProjection": -0.13294745638956096,
+        "aoi": 97.639947938866
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 24.45175464517644,
+        "surfaceAzimuth": 326.9359657112071,
+        "solarZenith": 113.6962186402089,
+        "solarAzimuth": 8.972827209638371
+      },
+      "expected": {
+        "aoiProjection": -0.08433240521597918,
+        "aoi": 94.83763666753177
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 170.61151143068585,
+        "surfaceAzimuth": 344.0070713125355,
+        "solarZenith": 61.92482783046748,
+        "solarAzimuth": 297.88997097881753
+      },
+      "expected": {
+        "aoiProjection": -0.3645532801867764,
+        "aoi": 111.38009339422767
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.5142062132143943,
+        "surfaceAzimuth": 14.13967826596853,
+        "solarZenith": 76.9484393247304,
+        "solarAzimuth": 70.4054208577758
+      },
+      "expected": {
+        "aoiProjection": 0.2306738584353864,
+        "aoi": 76.66325215451465
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 56.592844854658715,
+        "surfaceAzimuth": 2.8814965065420894,
+        "solarZenith": 151.97016328201076,
+        "solarAzimuth": 7.948388103962398
+      },
+      "expected": {
+        "aoiProjection": -0.09524715480934426,
+        "aoi": 95.46554524554837
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 24.49071962168395,
+        "surfaceAzimuth": 245.97142507698575,
+        "solarZenith": 100.67148399323251,
+        "solarAzimuth": 163.8704845484448
+      },
+      "expected": {
+        "aoiProjection": -0.11253180435867421,
+        "aoi": 96.46128367828733
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 153.48181016849435,
+        "surfaceAzimuth": 41.302877509638066,
+        "solarZenith": 75.18415143407793,
+        "solarAzimuth": 80.49957398332621
+      },
+      "expected": {
+        "aoiProjection": 0.10570062006478206,
+        "aoi": 83.9324662296926
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 75.30576799570257,
+        "surfaceAzimuth": 298.352533614491,
+        "solarZenith": 76.13445488465105,
+        "solarAzimuth": 44.51158732733512
+      },
+      "expected": {
+        "aoiProjection": -0.20056968341176962,
+        "aoi": 101.57027453686004
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 176.00793065662987,
+        "surfaceAzimuth": 279.0804850843882,
+        "solarZenith": 163.29645316294332,
+        "solarAzimuth": 131.81604883029672
+      },
+      "expected": {
+        "aoiProjection": 0.938649108902778,
+        "aoi": 20.174084492698274
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 69.46898822450483,
+        "surfaceAzimuth": 313.1468695322504,
+        "solarZenith": 77.69531915264294,
+        "solarAzimuth": 347.4252364935319
+      },
+      "expected": {
+        "aoiProjection": 0.8307903979028916,
+        "aoi": 33.81998321505156
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 118.44977514589979,
+        "surfaceAzimuth": 271.72895603854096,
+        "solarZenith": 62.34906618511973,
+        "solarAzimuth": 337.3299526243967
+      },
+      "expected": {
+        "aoiProjection": 0.10063718512161512,
+        "aoi": 84.22413640047475
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 135.17469778038492,
+        "surfaceAzimuth": 44.141108664751926,
+        "solarZenith": 71.15932998457157,
+        "solarAzimuth": 212.7150604854521
+      },
+      "expected": {
+        "aoiProjection": -0.8830005030476411,
+        "aoi": 152.00645800960982
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 43.135455183537836,
+        "surfaceAzimuth": 54.13447213500837,
+        "solarZenith": 40.87829147587929,
+        "solarAzimuth": 359.0401434645637
+      },
+      "expected": {
+        "aoiProjection": 0.8078097843883638,
+        "aoi": 36.117509918379724
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 101.67034171304871,
+        "surfaceAzimuth": 282.91080287888303,
+        "solarZenith": 93.33387893900439,
+        "solarAzimuth": 286.4186910770937
+      },
+      "expected": {
+        "aoiProjection": 0.9876019425624939,
+        "aoi": 9.031589215054634
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 40.436918499936105,
+        "surfaceAzimuth": 307.2992894783634,
+        "solarZenith": 54.196975699854704,
+        "solarAzimuth": 327.35551915237863
+      },
+      "expected": {
+        "aoiProjection": 0.9393991632276789,
+        "aoi": 20.049102692478886
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 90.60010386231042,
+        "surfaceAzimuth": 41.54402849673016,
+        "solarZenith": 76.843489477401,
+        "solarAzimuth": 97.37028796666975
+      },
+      "expected": {
+        "aoiProjection": 0.5445466988240758,
+        "aoi": 57.006307941560515
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 127.82880645562078,
+        "surfaceAzimuth": 141.6371314082176,
+        "solarZenith": 81.28937321273665,
+        "solarAzimuth": 182.61615982702202
+      },
+      "expected": {
+        "aoiProjection": 0.4965354323175349,
+        "aoi": 60.228950461619554
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 18.19299016402017,
+        "surfaceAzimuth": 49.156533806170515,
+        "solarZenith": 178.93553047961703,
+        "solarAzimuth": 205.26123426197785
+      },
+      "expected": {
+        "aoiProjection": -0.9551493760366042,
+        "aoi": 162.7750255058923
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 55.879144584542644,
+        "surfaceAzimuth": 339.9057031851852,
+        "solarZenith": 149.70927437055656,
+        "solarAzimuth": 355.1884003389694
+      },
+      "expected": {
+        "aoiProjection": -0.08156476949262448,
+        "aoi": 94.67851440663414
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 80.49845266117636,
+        "surfaceAzimuth": 169.77160175250492,
+        "solarZenith": 10.13214187113321,
+        "solarAzimuth": 326.0473902086133
+      },
+      "expected": {
+        "aoiProjection": 0.003656766326847083,
+        "aoi": 89.79048225586122
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 11.964435543445791,
+        "surfaceAzimuth": 292.64226964451495,
+        "solarZenith": 52.890601565972524,
+        "solarAzimuth": 65.65129928539682
+      },
+      "expected": {
+        "aoiProjection": 0.4774636217610727,
+        "aoi": 61.48012223161079
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 37.00694636380099,
+        "surfaceAzimuth": 89.20201356536748,
+        "solarZenith": 137.26173171880373,
+        "solarAzimuth": 193.82337002176976
+      },
+      "expected": {
+        "aoiProjection": -0.6896279968851747,
+        "aoi": 133.60066880875652
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 70.96594285966164,
+        "surfaceAzimuth": 25.44681468109518,
+        "solarZenith": 7.066283213512909,
+        "solarAzimuth": 128.0776218732228
+      },
+      "expected": {
+        "aoiProjection": 0.29822377674716144,
+        "aoi": 72.64904976905396
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 96.61467007470515,
+        "surfaceAzimuth": 204.10919413168077,
+        "solarZenith": 83.60933075353216,
+        "solarAzimuth": 112.65532347874333
+      },
+      "expected": {
+        "aoiProjection": -0.03786823117642303,
+        "aoi": 92.1702087158745
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 93.88780445836208,
+        "surfaceAzimuth": 241.05726770994374,
+        "solarZenith": 127.44349257331457,
+        "solarAzimuth": 214.98783452749993
+      },
+      "expected": {
+        "aoiProjection": 0.7527597588237095,
+        "aoi": 41.169994421970436
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 120.99592564788954,
+        "surfaceAzimuth": 183.61724338876107,
+        "solarZenith": 108.64297143303993,
+        "solarAzimuth": 356.2085026622399
+      },
+      "expected": {
+        "aoiProjection": -0.6408218943363322,
+        "aoi": 129.85313342532882
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 122.30025164670039,
+        "surfaceAzimuth": 19.14442628675557,
+        "solarZenith": 149.6222051390931,
+        "solarAzimuth": 324.5987229138675
+      },
+      "expected": {
+        "aoiProjection": 0.7089363942352274,
+        "aoi": 44.851556795833055
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 4.961723851593051,
+        "surfaceAzimuth": 336.4642863918846,
+        "solarZenith": 82.42357398811042,
+        "solarAzimuth": 298.7426393795567
+      },
+      "expected": {
+        "aoiProjection": 0.19917032857583666,
+        "aoi": 78.5115536923363
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 168.32838435306132,
+        "surfaceAzimuth": 303.04266705613236,
+        "solarZenith": 131.553553725624,
+        "solarAzimuth": 177.37209221761867
+      },
+      "expected": {
+        "aoiProjection": 0.5613252812985091,
+        "aoi": 55.852500591139204
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 175.12490182997976,
+        "surfaceAzimuth": 104.12623447364427,
+        "solarZenith": 78.72189376032506,
+        "solarAzimuth": 225.8295569677269
+      },
+      "expected": {
+        "aoiProjection": -0.23866229612275566,
+        "aoi": 103.8076014463427
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 43.13220748497253,
+        "surfaceAzimuth": 229.38899217107192,
+        "solarZenith": 39.871255567635686,
+        "solarAzimuth": 285.65581226916225
+      },
+      "expected": {
+        "aoiProjection": 0.803486597782245,
+        "aoi": 36.535650254125045
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 39.22704127915774,
+        "surfaceAzimuth": 335.57147354427974,
+        "solarZenith": 46.551230492273795,
+        "solarAzimuth": 112.60803403488022
+      },
+      "expected": {
+        "aoiProjection": 0.19675545338033634,
+        "aoi": 78.6527094288115
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 76.70706615578698,
+        "surfaceAzimuth": 299.40997260091666,
+        "solarZenith": 139.43876460274655,
+        "solarAzimuth": 300.13730337604875
+      },
+      "expected": {
+        "aoiProjection": 0.45810687482842455,
+        "aoi": 62.734985093521104
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 2.2180865081916923,
+        "surfaceAzimuth": 126.57481913402721,
+        "solarZenith": 113.18239287157662,
+        "solarAzimuth": 79.930857744404
+      },
+      "expected": {
+        "aoiProjection": -0.3689389913342851,
+        "aoi": 111.65019700822569
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 55.6094661267763,
+        "surfaceAzimuth": 335.38601685812165,
+        "solarZenith": 115.23204967832852,
+        "solarAzimuth": 163.40283618197233
+      },
+      "expected": {
+        "aoiProjection": -0.9799567030834154,
+        "aoi": 168.50919957664686
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 1.5577318168092202,
+        "surfaceAzimuth": 252.77360449795194,
+        "solarZenith": 50.781722827416104,
+        "solarAzimuth": 167.19485405792003
+      },
+      "expected": {
+        "aoiProjection": 0.6336663612294142,
+        "aoi": 50.67885899113112
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 95.17547240929603,
+        "surfaceAzimuth": 185.7170411320272,
+        "solarZenith": 128.85609179570775,
+        "solarAzimuth": 93.69802846922566
+      },
+      "expected": {
+        "aoiProjection": 0.029268896620896018,
+        "aoi": 88.32277622372453
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 120.33557363407188,
+        "surfaceAzimuth": 248.29770055151613,
+        "solarZenith": 162.42130153407356,
+        "solarAzimuth": 122.42627016240196
+      },
+      "expected": {
+        "aoiProjection": 0.3287376820903073,
+        "aoi": 70.80782416271741
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 23.18181316508969,
+        "surfaceAzimuth": 169.15339788176587,
+        "solarZenith": 126.45996002498293,
+        "solarAzimuth": 289.9367527369679
+      },
+      "expected": {
+        "aoiProjection": -0.7083152022942498,
+        "aoi": 135.09800037071355
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 144.52512794397646,
+        "surfaceAzimuth": 187.40995541179188,
+        "solarZenith": 168.09523047858633,
+        "solarAzimuth": 34.498604602945456
+      },
+      "expected": {
+        "aoiProjection": 0.690270071454084,
+        "aoi": 46.34850883379338
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 162.6014418412298,
+        "surfaceAzimuth": 154.3045887070151,
+        "solarZenith": 112.87295945298952,
+        "solarAzimuth": 242.40513580221386
+      },
+      "expected": {
+        "aoiProjection": 0.3800375740292288,
+        "aoi": 67.66398990142689
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 35.94031574569345,
+        "surfaceAzimuth": 43.84081140156389,
+        "solarZenith": 175.50957471651748,
+        "solarAzimuth": 50.63610480632501
+      },
+      "expected": {
+        "aoiProjection": -0.7615132711696493,
+        "aoi": 139.59778675888052
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 172.83620764639747,
+        "surfaceAzimuth": 48.345432626487046,
+        "solarZenith": 107.14877510580743,
+        "solarAzimuth": 52.58638546994786
+      },
+      "expected": {
+        "aoiProjection": 0.41138797834870455,
+        "aoi": 65.70794470334688
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 65.58768090939469,
+        "surfaceAzimuth": 267.6445011090929,
+        "solarZenith": 23.03843934041118,
+        "solarAzimuth": 10.555973482887664
+      },
+      "expected": {
+        "aoiProjection": 0.30070947067478815,
+        "aoi": 72.49977944954857
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 107.49704971808882,
+        "surfaceAzimuth": 167.29904136539204,
+        "solarZenith": 47.20753984590743,
+        "solarAzimuth": 47.42626340764045
+      },
+      "expected": {
+        "aoiProjection": -0.5528364820876313,
+        "aoi": 123.56182595820194
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 161.9636858048798,
+        "surfaceAzimuth": 305.24154179475573,
+        "solarZenith": 122.92566417387549,
+        "solarAzimuth": 98.73265231081506
+      },
+      "expected": {
+        "aoiProjection": 0.28427640167173535,
+        "aoi": 73.48439950147491
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 89.26867799292586,
+        "surfaceAzimuth": 153.13284048562207,
+        "solarZenith": 112.87015599395943,
+        "solarAzimuth": 186.47701913727664
+      },
+      "expected": {
+        "aoiProjection": 0.764689354654528,
+        "aoi": 40.12063645630199
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 152.9941785723072,
+        "surfaceAzimuth": 262.9597623382067,
+        "solarZenith": 77.54600454571879,
+        "solarAzimuth": 340.8375244253772
+      },
+      "expected": {
+        "aoiProjection": -0.09902828899318326,
+        "aoi": 95.68321779453302
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 150.83477200906486,
+        "surfaceAzimuth": 251.14835229371795,
+        "solarZenith": 125.17310941726132,
+        "solarAzimuth": 151.8230815803602
+      },
+      "expected": {
+        "aoiProjection": 0.4384677251941968,
+        "aoi": 63.993843216865336
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 31.582757226954584,
+        "surfaceAzimuth": 219.02433071250732,
+        "solarZenith": 29.217501221371588,
+        "solarAzimuth": 104.98722130409335
+      },
+      "expected": {
+        "aoiProjection": 0.6393699795543323,
+        "aoi": 50.25514351057574
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 137.64462595856352,
+        "surfaceAzimuth": 163.65241011018747,
+        "solarZenith": 148.4331979898144,
+        "solarAzimuth": 51.72740346161019
+      },
+      "expected": {
+        "aoiProjection": 0.4979414722124148,
+        "aoi": 60.13609790698415
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 168.8326900036827,
+        "surfaceAzimuth": 212.23973813556356,
+        "solarZenith": 67.99967639011591,
+        "solarAzimuth": 232.50764478444074
+      },
+      "expected": {
+        "aoiProjection": -0.19906578642596168,
+        "aoi": 101.48233408963955
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 67.79534260002976,
+        "surfaceAzimuth": 253.62450600127636,
+        "solarZenith": 138.8121701608466,
+        "solarAzimuth": 306.5021429087151
+      },
+      "expected": {
+        "aoiProjection": 0.08355891234034402,
+        "aoi": 85.20683819226616
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 106.49213827318185,
+        "surfaceAzimuth": 240.12107022695335,
+        "solarZenith": 103.79422257894961,
+        "solarAzimuth": 359.70005543568436
+      },
+      "expected": {
+        "aoiProjection": -0.3919754662787844,
+        "aoi": 113.07747465061072
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 51.086159619297064,
+        "surfaceAzimuth": 218.60846125672188,
+        "solarZenith": 19.81658641120468,
+        "solarAzimuth": 302.59024741539247
+      },
+      "expected": {
+        "aoiProjection": 0.61860961941325,
+        "aoi": 51.78532754354375
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 172.34520125451627,
+        "surfaceAzimuth": 198.2500701608692,
+        "solarZenith": 58.22729262100559,
+        "solarAzimuth": 228.81801520526497
+      },
+      "expected": {
+        "aoiProjection": -0.4243534909900374,
+        "aoi": 115.10974836148866
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 39.313820434982546,
+        "surfaceAzimuth": 143.5598039987937,
+        "solarZenith": 4.236847488322053,
+        "solarAzimuth": 215.70848010759005
+      },
+      "expected": {
+        "aoiProjection": 0.7859218603307317,
+        "aoi": 38.19398036581518
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 38.56113530585279,
+        "surfaceAzimuth": 23.78388875085808,
+        "solarZenith": 129.66426522126653,
+        "solarAzimuth": 62.71395845527812
+      },
+      "expected": {
+        "aoiProjection": -0.12582093195442845,
+        "aoi": 97.22816602577124
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 170.6301204649029,
+        "surfaceAzimuth": 26.322558279386538,
+        "solarZenith": 26.65920955737626,
+        "solarAzimuth": 12.690052178740011
+      },
+      "expected": {
+        "aoiProjection": -0.8107764443421583,
+        "aoi": 144.17186163758043
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.4115911453973875,
+        "surfaceAzimuth": 165.37490742766644,
+        "solarZenith": 139.02150307002125,
+        "solarAzimuth": 260.39909718385684
+      },
+      "expected": {
+        "aoiProjection": -0.7553488210141215,
+        "aoi": 139.05585831945265
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 81.97480064165615,
+        "surfaceAzimuth": 194.60570229512894,
+        "solarZenith": 83.51095403326421,
+        "solarAzimuth": 114.46627348404537
+      },
+      "expected": {
+        "aoiProjection": 0.1842652864540246,
+        "aoi": 79.38169997990317
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 126.80876465115705,
+        "surfaceAzimuth": 280.59282900520316,
+        "solarZenith": 137.23468166497256,
+        "solarAzimuth": 191.79916421945663
+      },
+      "expected": {
+        "aoiProjection": 0.4513027704972445,
+        "aoi": 63.17270088097505
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 132.8155596151877,
+        "surfaceAzimuth": 280.903566677239,
+        "solarZenith": 99.86952085358328,
+        "solarAzimuth": 29.055473146850158
+      },
+      "expected": {
+        "aoiProjection": -0.10865095173011459,
+        "aoi": 96.23755469277255
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 176.1262698054925,
+        "surfaceAzimuth": 233.21871260991148,
+        "solarZenith": 176.68327408999025,
+        "solarAzimuth": 35.97350796926187
+      },
+      "expected": {
+        "aoiProjection": 0.9923112762409151,
+        "aoi": 7.109571339647591
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 109.35253708404682,
+        "surfaceAzimuth": 224.42008364866223,
+        "solarZenith": 175.75132169293065,
+        "solarAzimuth": 94.76771375348525
+      },
+      "expected": {
+        "aoiProjection": 0.28586419249361905,
+        "aoi": 73.38948755737044
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 110.5106548911825,
+        "surfaceAzimuth": 1.2550165396268564,
+        "solarZenith": 137.43281076821643,
+        "solarAzimuth": 135.61201899268463
+      },
+      "expected": {
+        "aoiProjection": -0.18489657720328345,
+        "aoi": 100.65510268486597
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 133.27833674475775,
+        "surfaceAzimuth": 315.9843810815249,
+        "solarZenith": 141.96515890511313,
+        "solarAzimuth": 202.63626391324394
+      },
+      "expected": {
+        "aoiProjection": 0.3621828237630902,
+        "aoi": 68.76568864070614
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 73.6470077221268,
+        "surfaceAzimuth": 40.520915603824825,
+        "solarZenith": 1.7333963570321775,
+        "solarAzimuth": 49.5745855132418
+      },
+      "expected": {
+        "aoiProjection": 0.3100889998339026,
+        "aoi": 71.93540588597261
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 105.46328198923794,
+        "surfaceAzimuth": 146.21003959172825,
+        "solarZenith": 25.417015098734847,
+        "solarAzimuth": 342.80667317899537
+      },
+      "expected": {
+        "aoiProjection": -0.6372472245841011,
+        "aoi": 129.58685689416268
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 138.72171642297627,
+        "surfaceAzimuth": 210.0458948496656,
+        "solarZenith": 139.82216523788406,
+        "solarAzimuth": 119.28134006036345
+      },
+      "expected": {
+        "aoiProjection": 0.5685118359082313,
+        "aoi": 55.35348339059308
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 155.94747526392104,
+        "surfaceAzimuth": 286.5326843316041,
+        "solarZenith": 144.31437145438045,
+        "solarAzimuth": 327.6364622669579
+      },
+      "expected": {
+        "aoiProjection": 0.9208575194929429,
+        "aoi": 22.948230879146937
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 170.04418203448225,
+        "surfaceAzimuth": 94.66739928894962,
+        "solarZenith": 153.60521828012182,
+        "solarAzimuth": 84.19461250251344
+      },
+      "expected": {
+        "aoiProjection": 0.9578413921473351,
+        "aoi": 16.6962317219414
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 128.4680954020499,
+        "surfaceAzimuth": 24.759304627765705,
+        "solarZenith": 174.66091136046515,
+        "solarAzimuth": 211.47755171007915
+      },
+      "expected": {
+        "aoiProjection": 0.5470262524498479,
+        "aoi": 56.83676031463714
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 64.52670160411928,
+        "surfaceAzimuth": 91.93404226050558,
+        "solarZenith": 162.09566777142186,
+        "solarAzimuth": 66.45054427885195
+      },
+      "expected": {
+        "aoiProjection": -0.15872177312462565,
+        "aoi": 99.13271115474541
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 143.00815596704356,
+        "surfaceAzimuth": 76.88143888850136,
+        "solarZenith": 0.12423924992930102,
+        "solarAzimuth": 107.54648317504825
+      },
+      "expected": {
+        "aoiProjection": -0.7975970203091844,
+        "aoi": 142.90124351393936
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 34.764105499480436,
+        "surfaceAzimuth": 167.42476611238405,
+        "solarZenith": 21.76005844587095,
+        "solarAzimuth": 355.59338862012333
+      },
+      "expected": {
+        "aoiProjection": 0.5537299190654343,
+        "aoi": 56.37672075174588
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 135.29128509890197,
+        "surfaceAzimuth": 192.25341567902805,
+        "solarZenith": 112.77879084324829,
+        "solarAzimuth": 157.75480942765748
+      },
+      "expected": {
+        "aoiProjection": 0.8097272302905176,
+        "aoi": 35.930710364630905
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 127.60290500625294,
+        "surfaceAzimuth": 79.68873149555836,
+        "solarZenith": 83.91471820447018,
+        "solarAzimuth": 89.42959533608405
+      },
+      "expected": {
+        "aoiProjection": 0.7117519825570068,
+        "aoi": 44.622359187975945
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 171.41059924900563,
+        "surfaceAzimuth": 347.50013195570784,
+        "solarZenith": 28.844512138055936,
+        "solarAzimuth": 255.72370824797545
+      },
+      "expected": {
+        "aoiProjection": -0.8683413148916539,
+        "aoi": 150.26645798536663
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 47.464671781024705,
+        "surfaceAzimuth": 170.2504724912024,
+        "solarZenith": 143.76231614066813,
+        "solarAzimuth": 15.00330219337593
+      },
+      "expected": {
+        "aoiProjection": -0.9408430890602976,
+        "aoi": 160.1936276237313
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 104.71001304704822,
+        "surfaceAzimuth": 76.45370943195044,
+        "solarZenith": 85.03886868687894,
+        "solarAzimuth": 326.6287735956667
+      },
+      "expected": {
+        "aoiProjection": -0.34876191656553857,
+        "aoi": 110.41160708979251
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 115.29878122615271,
+        "surfaceAzimuth": 295.0043741795929,
+        "solarZenith": 149.2091854399053,
+        "solarAzimuth": 149.20675983022835
+      },
+      "expected": {
+        "aoiProjection": -0.01566781958445651,
+        "aoi": 90.89773666840166
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 77.5624331027189,
+        "surfaceAzimuth": 278.0004429388541,
+        "solarZenith": 101.7874072524526,
+        "solarAzimuth": 78.00730377864912
+      },
+      "expected": {
+        "aoiProjection": -0.9423246178794803,
+        "aoi": 160.44568346754227
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 145.38149564736986,
+        "surfaceAzimuth": 357.2874786920979,
+        "solarZenith": 76.47295587459514,
+        "solarAzimuth": 78.6821923040323
+      },
+      "expected": {
+        "aoiProjection": -0.10984600044658763,
+        "aoi": 96.30643824927077
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 162.65511537119212,
+        "surfaceAzimuth": 117.42810772330698,
+        "solarZenith": 68.97185134150625,
+        "solarAzimuth": 48.286889552306164
+      },
+      "expected": {
+        "aoiProjection": -0.24342774332758385,
+        "aoi": 104.08893727005135
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 1.9283066489971157,
+        "surfaceAzimuth": 207.74727581387407,
+        "solarZenith": 90.24761257945366,
+        "solarAzimuth": 274.0248633767264
+      },
+      "expected": {
+        "aoiProjection": 0.009217850308963545,
+        "aoi": 89.47184860153767
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 78.92754541963359,
+        "surfaceAzimuth": 112.13971521201377,
+        "solarZenith": 87.64401522678911,
+        "solarAzimuth": 266.7312935068238
+      },
+      "expected": {
+        "aoiProjection": -0.8778137818380891,
+        "aoi": 151.37975537186816
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 85.73953559410337,
+        "surfaceAzimuth": 343.91827068627407,
+        "solarZenith": 85.45996327876941,
+        "solarAzimuth": 358.2380507991647
+      },
+      "expected": {
+        "aoiProjection": 0.9691015735819304,
+        "aoi": 14.280073798811076
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 72.04071053484064,
+        "surfaceAzimuth": 164.01546438183252,
+        "solarZenith": 91.58239499036951,
+        "solarAzimuth": 332.43981997837244
+      },
+      "expected": {
+        "aoiProjection": -0.9400867889291774,
+        "aoi": 160.0661365866302
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 5.421377694215116,
+        "surfaceAzimuth": 53.793023034978894,
+        "solarZenith": 86.6317774637259,
+        "solarAzimuth": 261.5951906173653
+      },
+      "expected": {
+        "aoiProjection": -0.024939059983517503,
+        "aoi": 91.42905104284014
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 10.664327845491702,
+        "surfaceAzimuth": 47.823914752776915,
+        "solarZenith": 89.6046723958479,
+        "solarAzimuth": 278.4620137676318
+      },
+      "expected": {
+        "aoiProjection": -0.11058148355251424,
+        "aoi": 96.34883662290152
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 44.1667454811184,
+        "surfaceAzimuth": 35.95967777890648,
+        "solarZenith": 90.51884180747042,
+        "solarAzimuth": 4.157555200482923
+      },
+      "expected": {
+        "aoiProjection": 0.5856283530667097,
+        "aoi": 54.15260731352031
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 87.91152617210189,
+        "surfaceAzimuth": 94.7525928688236,
+        "solarZenith": 89.94345163236702,
+        "solarAzimuth": 113.26657532122584
+      },
+      "expected": {
+        "aoiProjection": 0.9476518206232413,
+        "aoi": 18.620931999382638
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 81.07197408119092,
+        "surfaceAzimuth": 237.96826917342585,
+        "solarZenith": 85.04740270167319,
+        "solarAzimuth": 262.50847110162994
+      },
+      "expected": {
+        "aoiProjection": 0.9086915434041364,
+        "aoi": 24.674845810226095
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 86.24819832152696,
+        "surfaceAzimuth": 240.40541721443185,
+        "solarZenith": 90.1701821658388,
+        "solarAzimuth": 282.88049880283535
+      },
+      "expected": {
+        "aoiProjection": 0.7357927708868792,
+        "aoi": 42.625753279441774
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 33.605960219871434,
+        "surfaceAzimuth": 290.5280403340027,
+        "solarZenith": 89.72096260738009,
+        "solarAzimuth": 315.99417893778036
+      },
+      "expected": {
+        "aoiProjection": 0.5037522093227154,
+        "aoi": 59.75144378122371
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 30.035521485259377,
+        "surfaceAzimuth": 318.0153643182872,
+        "solarZenith": 86.92568968244966,
+        "solarAzimuth": 307.5083594589367
+      },
+      "expected": {
+        "aoiProjection": 0.5378650912171473,
+        "aoi": 57.46157572246775
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 44.48748314097537,
+        "surfaceAzimuth": 137.94911680712303,
+        "solarZenith": 87.43027000180875,
+        "solarAzimuth": 175.62604055659835
+      },
+      "expected": {
+        "aoiProjection": 0.5860530213809604,
+        "aoi": 54.12258397316286
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 12.503589148655736,
+        "surfaceAzimuth": 216.78288247685967,
+        "solarZenith": 86.90393524423628,
+        "solarAzimuth": 134.4091093747395
+      },
+      "expected": {
+        "aoiProjection": 0.08141914159598544,
+        "aoi": 85.32985730153618
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 81.66462496689269,
+        "surfaceAzimuth": 125.14131609992224,
+        "solarZenith": 86.41625887521103,
+        "solarAzimuth": 135.40237465365135
+      },
+      "expected": {
+        "aoiProjection": 0.9807693700424815,
+        "aoi": 11.254671732113126
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 1.5587426684275107,
+        "surfaceAzimuth": 179.57719870129844,
+        "solarZenith": 89.54817156457551,
+        "solarAzimuth": 203.06994693120234
+      },
+      "expected": {
+        "aoiProjection": 0.03282920877275072,
+        "aoi": 88.11868685626537
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 23.941816188086214,
+        "surfaceAzimuth": 21.51821602333614,
+        "solarZenith": 87.81212449179777,
+        "solarAzimuth": 112.19358542726981
+      },
+      "expected": {
+        "aoiProjection": 0.030111743172306166,
+        "aoi": 88.27446337316871
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 46.66114536584191,
+        "surfaceAzimuth": 290.6526915286809,
+        "solarZenith": 87.00579798477673,
+        "solarAzimuth": 315.93582446233495
+      },
+      "expected": {
+        "aoiProjection": 0.6925891346352395,
+        "aoi": 46.16458762234755
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 36.45506249695102,
+        "surfaceAzimuth": 17.448551057990194,
+        "solarZenith": 88.42196233384476,
+        "solarAzimuth": 298.21216816343656
+      },
+      "expected": {
+        "aoiProjection": 0.13307759456864737,
+        "aoi": 82.35252884409009
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 8.781498666684577,
+        "surfaceAzimuth": 151.5360312704289,
+        "solarZenith": 90.1417418074134,
+        "solarAzimuth": 81.71851714958666
+      },
+      "expected": {
+        "aoiProjection": 0.050226723788011934,
+        "aoi": 87.12100935880812
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 33.53697222536216,
+        "surfaceAzimuth": 48.37095867812686,
+        "solarZenith": 86.43816196894731,
+        "solarAzimuth": 73.67829438144453
+      },
+      "expected": {
+        "aoiProjection": 0.5502716241384145,
+        "aoi": 56.61435048531904
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 40.737166963783,
+        "surfaceAzimuth": 214.23725017347286,
+        "solarZenith": 85.26454985685172,
+        "solarAzimuth": 87.35228389368572
+      },
+      "expected": {
+        "aoiProjection": -0.3278013385857027,
+        "aoi": 109.13537990584355
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 59.03792789580415,
+        "surfaceAzimuth": 351.12703974136576,
+        "solarZenith": 91.7099303380386,
+        "solarAzimuth": 305.3077878252096
+      },
+      "expected": {
+        "aoiProjection": 0.5820004376734615,
+        "aoi": 54.40863388138079
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 33.202521724181416,
+        "surfaceAzimuth": 68.96908917629126,
+        "solarZenith": 87.09474870526287,
+        "solarAzimuth": 301.2620221441324
+      },
+      "expected": {
+        "aoiProjection": -0.2920854642224897,
+        "aoi": 106.98285104994719
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 81.97592599692074,
+        "surfaceAzimuth": 152.23464287805822,
+        "solarZenith": 90.40413170772733,
+        "solarAzimuth": 60.47366444395906
+      },
+      "expected": {
+        "aoiProjection": -0.03141298805157068,
+        "aoi": 91.80012777382404
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 28.415368136886478,
+        "surfaceAzimuth": 108.24066761577598,
+        "solarZenith": 91.50907129527434,
+        "solarAzimuth": 186.13639996670324
+      },
+      "expected": {
+        "aoiProjection": 0.07658678985509632,
+        "aoi": 85.60759905251193
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 2.2810940859251962,
+        "surfaceAzimuth": 299.8171966522501,
+        "solarZenith": 91.56799217464606,
+        "solarAzimuth": 352.8196830593608
+      },
+      "expected": {
+        "aoiProjection": -0.0033983822066106437,
+        "aoi": 90.19471333240314
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 66.07792358163249,
+        "surfaceAzimuth": 281.3778867667575,
+        "solarZenith": 86.239550567803,
+        "solarAzimuth": 39.07641797725904
+      },
+      "expected": {
+        "aoiProjection": -0.39738117922604366,
+        "aoi": 113.41456509909445
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 0.21936693028614118,
+        "surfaceAzimuth": 337.6810999987725,
+        "solarZenith": 85.87308178943428,
+        "solarAzimuth": 7.767233285267148
+      },
+      "expected": {
+        "aoiProjection": 0.07526976839950948,
+        "aoi": 85.68327729078561
+      }
+    },
+    {
+      "input": {
+        "surfaceTilt": 87.75730953074843,
+        "surfaceAzimuth": 166.6482920272018,
+        "solarZenith": 85.90284520561117,
+        "solarAzimuth": 64.9261656661952
+      },
+      "expected": {
+        "aoiProjection": -0.19969506753774655,
+        "aoi": 101.51912798398565
+      }
+    }
+  ]
+}

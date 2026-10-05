@@ -1,0 +1,407 @@
+{
+  "meta": {
+    "reference": "pvlib.atmosphere.kasten96_lt @ pvlib 0.16.1"
+  },
+  "cases": [
+    {
+      "input": {
+        "airmassAbsolute": 1.0,
+        "precipitableWater": 1.0,
+        "aodBb": 0.1
+      },
+      "expected": 3.5638
+    },
+    {
+      "input": {
+        "airmassAbsolute": 1.0,
+        "precipitableWater": 0.0,
+        "aodBb": 0.0
+      },
+      "expected": 1.3801999999999994
+    },
+    {
+      "input": {
+        "airmassAbsolute": 38.0,
+        "precipitableWater": 0.1,
+        "aodBb": 0.0
+      },
+      "expected": 1.623450254728654
+    },
+    {
+      "input": {
+        "airmassAbsolute": 38.0,
+        "precipitableWater": 7.0,
+        "aodBb": 1.0
+      },
+      "expected": 46.201421267841724
+    },
+    {
+      "input": {
+        "airmassAbsolute": 0.5,
+        "precipitableWater": 3.0,
+        "aodBb": 0.05
+      },
+      "expected": 4.43050613203541
+    },
+    {
+      "input": {
+        "airmassAbsolute": 2.0,
+        "precipitableWater": 1.4164,
+        "aodBb": 0.0843
+      },
+      "expected": 3.133100535974645
+    },
+    {
+      "input": {
+        "airmassAbsolute": 10.0,
+        "precipitableWater": 5.0,
+        "aodBb": 0.5
+      },
+      "expected": 11.336966006440443
+    },
+    {
+      "input": {
+        "airmassAbsolute": 13.222542174315512,
+        "precipitableWater": 2.8803083258189495,
+        "aodBb": 0.18700550628725865
+      },
+      "expected": 5.969788944412959
+    },
+    {
+      "input": {
+        "airmassAbsolute": 17.306531477803745,
+        "precipitableWater": 4.43279348070642,
+        "aodBb": 0.7612533005379192
+      },
+      "expected": 21.17719666973719
+    },
+    {
+      "input": {
+        "airmassAbsolute": 20.01903866801156,
+        "precipitableWater": 3.5304914541013774,
+        "aodBb": 0.28984874278385875
+      },
+      "expected": 10.073860426130286
+    },
+    {
+      "input": {
+        "airmassAbsolute": 9.124174394669543,
+        "precipitableWater": 4.266930416306638,
+        "aodBb": 0.046922298103465154
+      },
+      "expected": 2.910754235788738
+    },
+    {
+      "input": {
+        "airmassAbsolute": 9.471751849605246,
+        "precipitableWater": 5.9045904085613845,
+        "aodBb": 0.09000834661577506
+      },
+      "expected": 3.8087675455281156
+    },
+    {
+      "input": {
+        "airmassAbsolute": 36.64884285392122,
+        "precipitableWater": 0.22463097613362557,
+        "aodBb": 0.8747631118500752
+      },
+      "expected": 38.78714634314652
+    },
+    {
+      "input": {
+        "airmassAbsolute": 23.749717521467144,
+        "precipitableWater": 1.5863234480686417,
+        "aodBb": 0.8559180926899079
+      },
+      "expected": 28.295315124669873
+    },
+    {
+      "input": {
+        "airmassAbsolute": 13.450612419868818,
+        "precipitableWater": 3.243536961883728,
+        "aodBb": 0.7035445390895968
+      },
+      "expected": 17.15288071075073
+    },
+    {
+      "input": {
+        "airmassAbsolute": 13.083300321215878,
+        "precipitableWater": 6.0121885909888,
+        "aodBb": 0.000713027614452244
+      },
+      "expected": 2.235167378355147
+    },
+    {
+      "input": {
+        "airmassAbsolute": 29.42161249575155,
+        "precipitableWater": 1.0906033437485485,
+        "aodBb": 0.7244886454135048
+      },
+      "expected": 27.92300784801202
+    },
+    {
+      "input": {
+        "airmassAbsolute": 2.727748416177004,
+        "precipitableWater": 4.423681017077725,
+        "aodBb": 0.6546446966867764
+      },
+      "expected": 10.203757147357493
+    },
+    {
+      "input": {
+        "airmassAbsolute": 3.053228783014984,
+        "precipitableWater": 2.376198820991665,
+        "aodBb": 0.6285591447330716
+      },
+      "expected": 9.784922863960439
+    },
+    {
+      "input": {
+        "airmassAbsolute": 9.536049297923933,
+        "precipitableWater": 3.6306750842924838,
+        "aodBb": 0.9022557783023709
+      },
+      "expected": 18.25768872949069
+    },
+    {
+      "input": {
+        "airmassAbsolute": 10.849760892924994,
+        "precipitableWater": 1.4783370300116347,
+        "aodBb": 0.5552053320720994
+      },
+      "expected": 12.440806954413597
+    },
+    {
+      "input": {
+        "airmassAbsolute": 13.561184840775104,
+        "precipitableWater": 3.4873646042386843,
+        "aodBb": 0.5269395614187272
+      },
+      "expected": 13.429893107166315
+    },
+    {
+      "input": {
+        "airmassAbsolute": 26.358596251734646,
+        "precipitableWater": 3.767687859991262,
+        "aodBb": 0.7045403204876493
+      },
+      "expected": 25.565621601091426
+    },
+    {
+      "input": {
+        "airmassAbsolute": 4.41846204703893,
+        "precipitableWater": 5.273125035789449,
+        "aodBb": 0.3190811535242196
+      },
+      "expected": 6.560161270345938
+    },
+    {
+      "input": {
+        "airmassAbsolute": 2.644184694223089,
+        "precipitableWater": 1.1406836494926216,
+        "aodBb": 0.48045446235205436
+      },
+      "expected": 7.647503408965859
+    },
+    {
+      "input": {
+        "airmassAbsolute": 27.169319795624304,
+        "precipitableWater": 2.0342206449067772,
+        "aodBb": 0.46343051117821266
+      },
+      "expected": 17.74457065593645
+    },
+    {
+      "input": {
+        "airmassAbsolute": 15.64562381636842,
+        "precipitableWater": 2.1741311149092764,
+        "aodBb": 0.08576913922675045
+      },
+      "expected": 3.9506445543898745
+    },
+    {
+      "input": {
+        "airmassAbsolute": 26.119183232095274,
+        "precipitableWater": 2.1307390263559545,
+        "aodBb": 0.7366590640247482
+      },
+      "expected": 26.298327708718624
+    },
+    {
+      "input": {
+        "airmassAbsolute": 34.00851026515084,
+        "precipitableWater": 1.0373172613984303,
+        "aodBb": 0.9081554603089085
+      },
+      "expected": 38.29220260715281
+    },
+    {
+      "input": {
+        "airmassAbsolute": 24.186712216710188,
+        "precipitableWater": 0.2719791881847355,
+        "aodBb": 0.947841730170477
+      },
+      "expected": 31.182694158702667
+    },
+    {
+      "input": {
+        "airmassAbsolute": 36.33406992838911,
+        "precipitableWater": 2.4737850668345867,
+        "aodBb": 0.8274721416078265
+      },
+      "expected": 37.04241204487513
+    },
+    {
+      "input": {
+        "airmassAbsolute": 0.6071262944196655,
+        "precipitableWater": 0.37101050009773023,
+        "aodBb": 0.42749132958183556
+      },
+      "expected": 6.825442105382354
+    },
+    {
+      "input": {
+        "airmassAbsolute": 7.833898006018312,
+        "precipitableWater": 2.2693923860952507,
+        "aodBb": 0.008004156962616915
+      },
+      "expected": 2.035960686917773
+    },
+    {
+      "input": {
+        "airmassAbsolute": 32.16045068375224,
+        "precipitableWater": 0.252344105325946,
+        "aodBb": 0.13605955345379972
+      },
+      "expected": 6.914251571525919
+    },
+    {
+      "input": {
+        "airmassAbsolute": 26.12202344551935,
+        "precipitableWater": 3.9590735530739134,
+        "aodBb": 0.4551957904123467
+      },
+      "expected": 17.2231103155651
+    },
+    {
+      "input": {
+        "airmassAbsolute": 32.47537711843632,
+        "precipitableWater": 0.8916384856013964,
+        "aodBb": 0.4176897301893219
+      },
+      "expected": 18.047951023012185
+    },
+    {
+      "input": {
+        "airmassAbsolute": 8.885372289929814,
+        "precipitableWater": 2.986721106501932,
+        "aodBb": 0.8287570378180306
+      },
+      "expected": 16.39316614315022
+    },
+    {
+      "input": {
+        "airmassAbsolute": 16.361344767635636,
+        "precipitableWater": 0.9531387571072565,
+        "aodBb": 0.9778218369812771
+      },
+      "expected": 25.350158435890346
+    },
+    {
+      "input": {
+        "airmassAbsolute": 29.570883862957103,
+        "precipitableWater": 6.359697371246161,
+        "aodBb": 0.3661556911952687
+      },
+      "expected": 15.646480068376295
+    },
+    {
+      "input": {
+        "airmassAbsolute": 14.972705880105172,
+        "precipitableWater": 6.101981666034799,
+        "aodBb": 0.4316406619591274
+      },
+      "expected": 12.11967209780822
+    },
+    {
+      "input": {
+        "airmassAbsolute": 36.69012880140957,
+        "precipitableWater": 4.640574713926159,
+        "aodBb": 0.7548026556626137
+      },
+      "expected": 34.44067383050485
+    },
+    {
+      "input": {
+        "airmassAbsolute": 13.489388788566611,
+        "precipitableWater": 6.565490758634271,
+        "aodBb": 0.7509705432243606
+      },
+      "expected": 18.432519725181667
+    },
+    {
+      "input": {
+        "airmassAbsolute": 5.098032152578326,
+        "precipitableWater": 2.827774316075244,
+        "aodBb": 0.5908751680151447
+      },
+      "expected": 10.29630299844438
+    },
+    {
+      "input": {
+        "airmassAbsolute": 9.48655316323705,
+        "precipitableWater": 1.1375773825876605,
+        "aodBb": 0.22710161931044048
+      },
+      "expected": 5.812040200430172
+    },
+    {
+      "input": {
+        "airmassAbsolute": 37.90001494422538,
+        "precipitableWater": 3.997363099000201,
+        "aodBb": 0.7858633413302307
+      },
+      "expected": 36.5713871713028
+    },
+    {
+      "input": {
+        "airmassAbsolute": 19.944558112292583,
+        "precipitableWater": 5.589691578977629,
+        "aodBb": 0.22464954722186725
+      },
+      "expected": 8.423597031891477
+    },
+    {
+      "input": {
+        "airmassAbsolute": 32.51034265399618,
+        "precipitableWater": 2.177550735161097,
+        "aodBb": 0.9093208865343851
+      },
+      "expected": 37.285182277353904
+    },
+    {
+      "input": {
+        "airmassAbsolute": 19.375021637981337,
+        "precipitableWater": 0.8962605461873281,
+        "aodBb": 0.42690827487444993
+      },
+      "expected": 13.23896614833874
+    },
+    {
+      "input": {
+        "airmassAbsolute": 10.642738329861432,
+        "precipitableWater": 5.000104247465464,
+        "aodBb": 0.39343647613393784
+      },
+      "expected": 9.605500986603314
+    },
+    {
+      "input": {
+        "airmassAbsolute": 17.4352860859868,
+        "precipitableWater": 3.6001430633512554,
+        "aodBb": 0.10107216757788984
+      },
+      "expected": 4.635860386143853
+    }
+  ]
+}
