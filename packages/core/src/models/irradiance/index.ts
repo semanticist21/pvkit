@@ -8,7 +8,6 @@ export * from "./extra-radiation/index.ts";
 export * from "./ground-diffuse/index.ts";
 export * from "./hay-davies/index.ts";
 export * from "./isotropic/index.ts";
-export * from "./king/index.ts";
 export * from "./klucher/index.ts";
 export * from "./perez/index.ts";
 export * from "./poa-components/index.ts";

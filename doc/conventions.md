@@ -23,6 +23,8 @@ Cross-module rules every model follows. Method-specific math lives next to the c
 - **Geometry:** latitude north-positive, longitude **east-positive**; azimuth measured from
   **north, clockwise** (N=0, E=90, S=180, W=270); zenith from vertical, elevation = 90 − zenith.
   Refraction-corrected values are separate `apparent*` fields.
+  Inputs: `apparentZenith` only where the model requires refraction-corrected zenith;
+  `solarZenith` where it accepts either — the method's JSDoc says which one it expects.
 - **Units are fixed by field name** — one name, one unit, package-wide: `altitude` m (site
   height); `elevation`/`apparentElevation` sun angle in degrees; `pressure` Pa; `temp*`
   (`tempAir`, `tempCell`, `tempModule`, `tempDew`, `tempRef`, `tempDelta`) °C; irradiance W/m²;

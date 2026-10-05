@@ -14,7 +14,7 @@ Every method is its own subpath (`@pvkit/core/<module>/<method>`) — import onl
 | `solarposition` | `spa`, `sunrise-spa`, `sunrise-geometric`, `equation-of-time`, `declination`, `hour-angle`, `earth-sun-distance` | NREL SPA (Reda & Andreas 2004), Spencer 1971, Cooper 1969 |
 | `atmosphere` | `relative-airmass`, `absolute-airmass`, `altitude-pressure`, `gueymard94-pw`, `angstrom`, `kasten96-lt`, `bird-hulstrom80-aod-bb` | Kasten & Young 1989, Gueymard 1994, … |
 | `clearsky` | `haurwitz`, `ineichen`, `simplified-solis` | Ineichen & Perez 2002, Ineichen 2008 |
-| `irradiance` | `aoi`, `extra-radiation`, `isotropic`, `klucher`, `hay-davies`, `reindl`, `king`, `perez`, `ground-diffuse`, `poa-components`, `total-irradiance` | Perez 1990, Hay & Davies 1980, … |
+| `irradiance` | `aoi`, `extra-radiation`, `isotropic`, `klucher`, `hay-davies`, `reindl`, `perez`, `ground-diffuse`, `poa-components`, `total-irradiance` | Perez 1990, Hay & Davies 1980, … |
 | `decomposition` | `clearness-index`, `complete-irradiance`, `erbs`, `boland`, `disc`, `dirint`, `dirindex` | Erbs 1982, Maxwell 1987 (DISC), Perez 1992 (DIRINT) |
 | `iam` | `physical`, `ashrae`, `martin-ruiz`, `sapm`, `interp`, `marion` | De Soto 2006, Martin & Ruiz 2001, Marion 2017 |
 | `temperature` | `sapm`, `pvsyst-cell`, `faiman`, `ross`, `noct-sam`, `fuentes`, `generic-linear`, `generic-linear-model` | King 2004 (SAPM), Faiman 2008, Fuentes 1987 |

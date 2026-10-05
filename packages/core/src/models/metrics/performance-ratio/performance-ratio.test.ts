@@ -57,6 +57,19 @@ test("rejects bad inputs", () => {
   expect(() => performanceRatio({ ...base, pdc0Kw: Number.NaN })).toThrow(RangeError);
   expect(() => performanceRatio({ ...base, irradRef: -1 })).toThrow(RangeError);
   expect(() => performanceRatio({ ...base, gammaPdc: -0.004 })).toThrow(RangeError);
+  expect(() => performanceRatio({ ...base, tempCell: [25] })).toThrow(RangeError);
+  expect(() => performanceRatio({ ...base, tempRef: 25 })).toThrow(RangeError);
+  expect(() =>
+    performanceRatio({ ...base, tempCell: [25], gammaPdc: Number.NaN, tempRef: 25 }),
+  ).toThrow(RangeError);
+  expect(() =>
+    performanceRatio({
+      ...base,
+      tempCell: [25],
+      gammaPdc: -0.004,
+      tempRef: Number.POSITIVE_INFINITY,
+    }),
+  ).toThrow(RangeError);
   expect(() =>
     performanceRatio({
       ...base,
@@ -68,4 +81,12 @@ test("rejects bad inputs", () => {
   expect(() => irradianceWeightedTemperature({ poaIrradiation: [1], tempCell: [1, 2] })).toThrow(
     RangeError,
   );
+});
+
+test("irradianceWeightedTemperature: Σ(H·T)/ΣH, NaN when ΣH = 0", () => {
+  expect(irradianceWeightedTemperature({ poaIrradiation: [1, 3], tempCell: [20, 40] })).toBeCloseTo(
+    35,
+    12,
+  );
+  expect(irradianceWeightedTemperature({ poaIrradiation: [0, 0], tempCell: [20, 40] })).toBeNaN();
 });

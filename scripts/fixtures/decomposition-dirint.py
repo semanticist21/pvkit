@@ -70,6 +70,8 @@ def series(start, periods, freq, lat, lon, pressure, use_dkt, with_dew,
         pvlib.atmosphere.get_relative_airmass(sp["apparent_zenith"]), 101325.0)
     cs = pvlib.clearsky.ineichen(sp["apparent_zenith"], am, 3.0, altitude=0.0,
                                  dni_extra=pvlib.irradiance.get_extra_radiation(times))
+    if pressure == "varying":  # per-step pressure series → neighbours carry their own
+        pressure = pd.Series(rng.uniform(80000.0, 102000.0, periods), index=times)
     cloud = rng.uniform(*cloud_range, periods)
     ghi = cs["ghi"] * cloud + rng.uniform(-noise, noise, periods)
     dew = pd.Series(rng.uniform(-25, 25, periods), index=times) if with_dew else None
@@ -85,16 +87,21 @@ def emit(s, picks, out_dirint, out_dirindex):
     ms = (times.as_unit("ms").asi8).tolist()
     n = len(times)
 
+    def p(j):
+        return float(pressure.iloc[j]) if isinstance(pressure, pd.Series) else pressure
+
     def nb(j, clear):
         if j < 0 or j >= n:
             return None
         d = {"ghi": float(ghi.iloc[j]), "solarZenith": float(zen.iloc[j]), "timeMs": ms[j]}
+        if isinstance(pressure, pd.Series):
+            d["pressure"] = p(j)
         if clear:
             d["ghiClearsky"] = float(cs["ghi"].iloc[j])
         return d
 
     for i in picks:
-        base = {"solarZenith": float(zen.iloc[i]), "timeMs": ms[i], "pressure": pressure,
+        base = {"solarZenith": float(zen.iloc[i]), "timeMs": ms[i], "pressure": p(i),
                 "useDeltaKtPrime": use_dkt, "minCosZenith": 0.065, "maxZenith": 87.0}
         if dew is not None:
             base["tempDew"] = float(dew.iloc[i])
@@ -134,6 +141,9 @@ emit(s, range(12), cases_dirint, cases_dirindex)
 # Single-sample series: ΔKt' has no neighbour → NaN.
 s = series("2024-06-20 18:00", 1, "1h", 39.742, -105.179, 101325.0, True, False)
 emit(s, [0], cases_dirint, cases_dirindex)
+# Per-step pressure (pvlib accepts a series): each neighbour's own pressure is exercised.
+s = series("2024-06-21", 24, "1h", 39.742, -105.179, "varying", True, True)
+emit(s, range(24), cases_dirint, cases_dirindex)
 
 for name, cases, fn in (("dirint", cases_dirint, "dirint"),
                         ("dirindex", cases_dirindex, "dirindex")):

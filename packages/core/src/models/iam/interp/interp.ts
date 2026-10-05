@@ -24,7 +24,8 @@ const linear = (xs: ArrayLike<number>, ys: ArrayLike<number>, x: number) => {
 /**
  * IAM by linear interpolation of reference (usually measured) values at |aoi|; outside
  * `thetaRef` the end segments are extrapolated and the result clamped to ≥ 0. With
- * `normalize`, divided by the (unclamped) interpolant at 0°. Linear only — pvlib's
+ * `normalize`, divided by the (unclamped) interpolant at 0°; that anchor is not guarded —
+ * a table extrapolating to ≤ 0 at 0° yields a negative or non-finite IAM, as in pvlib. Linear only — pvlib's
  * `method='quadratic'|'cubic'` splines are not provided.
  *
  * @throws RangeError on < 2 points, length mismatch, non-increasing `thetaRef`, negative

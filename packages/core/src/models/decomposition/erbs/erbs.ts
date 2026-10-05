@@ -67,9 +67,10 @@ export const erbs = (input: ErbsInput): ErbsResult => {
   const { ghi, solarZenith, maxZenith = 87 } = input;
   const kt = decompositionKt(input);
   let df: number;
-  if (kt <= 0.22) df = 1 - 0.09 * kt;
-  else if (kt <= 0.8)
+  // Ordered so a NaN kt falls through to a NaN df, as pvlib's np.where chain does.
+  if (kt > 0.8) df = 0.165;
+  else if (kt > 0.22)
     df = 0.9511 - 0.1604 * kt + 4.388 * kt ** 2 - 16.638 * kt ** 3 + 12.336 * kt ** 4;
-  else df = 0.165;
+  else df = 1 - 0.09 * kt;
   return splitByDiffuseFraction(ghi, solarZenith, maxZenith, df, kt);
 };

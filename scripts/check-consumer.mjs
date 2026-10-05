@@ -8,7 +8,7 @@ import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
-const tsgo = join(root, "node_modules/.bin/tsgo");
+const tsc = join(root, "node_modules/.bin/tsc");
 const dir = mkdtempSync(join(tmpdir(), "pvkit-consumer-"));
 const run = (cmd, args, cwd = dir) => execFileSync(cmd, args, { cwd, stdio: "inherit" });
 
@@ -27,7 +27,7 @@ export const out = [z, toDegrees(radians(1)), typeof perez, typeof totalIrradian
 `;
   writeFileSync(join(dir, "check.ts"), code);
   for (const [module, moduleResolution] of [["esnext", "bundler"], ["node16", "node16"]]) {
-    run(tsgo, ["--noEmit", "--strict", "--skipLibCheck", "false", "--module", module,
+    run(tsc, ["--noEmit", "--strict", "--skipLibCheck", "false", "--module", module,
       "--moduleResolution", moduleResolution, "--target", "es2022", "check.ts"]);
   }
   writeFileSync(join(dir, "run.mjs"), `import { spa } from "@pvkit/core/solarposition/spa";

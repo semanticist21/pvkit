@@ -41,3 +41,9 @@ test("rejects a non-finite time", () => {
     }),
   ).toThrow(RangeError);
 });
+
+test("rejects out-of-range latitude/longitude, like sunriseSpa", () => {
+  const base = { timeMs: 0, latitude: 0, longitude: 0, declination: 0, equationOfTime: 0 };
+  expect(() => sunriseGeometric({ ...base, latitude: 95 })).toThrow(RangeError);
+  expect(() => sunriseGeometric({ ...base, longitude: -181 })).toThrow(RangeError);
+});

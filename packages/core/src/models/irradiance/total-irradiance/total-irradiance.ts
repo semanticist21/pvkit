@@ -2,7 +2,6 @@ import { aoi } from "../aoi/aoi.ts";
 import { groundDiffuse } from "../ground-diffuse/ground-diffuse.ts";
 import { hayDavies } from "../hay-davies/hay-davies.ts";
 import { isotropic } from "../isotropic/isotropic.ts";
-import { king } from "../king/king.ts";
 import { klucher } from "../klucher/klucher.ts";
 import { type PerezModel, perez } from "../perez/perez.ts";
 import { type PoaComponents, poaComponents } from "../poa-components/poa-components.ts";
@@ -33,7 +32,7 @@ interface TotalIrradianceBase {
  */
 export type TotalIrradianceInput = TotalIrradianceBase &
   (
-    | { model?: "isotropic" | "klucher" | "king" }
+    | { model?: "isotropic" | "klucher" }
     | { model: "haydavies" | "reindl"; dniExtra: number }
     | {
         model: "perez";
@@ -69,7 +68,6 @@ export const totalIrradiance = (input: TotalIrradianceInput): PoaComponents => {
   let poaSkyDiffuse: number;
   if (model === "isotropic") poaSkyDiffuse = isotropic(p);
   else if (model === "klucher") poaSkyDiffuse = klucher(p);
-  else if (model === "king") poaSkyDiffuse = king(p);
   else if (model === "haydavies") {
     poaSkyDiffuse = hayDavies({ ...p, dniExtra: need(p.dniExtra, "dniExtra", model) });
   } else if (model === "reindl") {

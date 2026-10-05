@@ -46,7 +46,7 @@ build on every PR and push to `main`. Releases are manual and local (`pnpm versi
 1. `solarposition` (NREL SPA + simple models) — everything depends on sun position, so first.
 2. `atmosphere` (air mass, alt2pres, precipitable water, Linke/AOD) — dataless helpers.
 3. `clearsky` (Haurwitz / Ineichen / Solis) — fallback irradiance, no weather data needed.
-4. `irradiance` (isotropic / Klucher / Hay-Davies / Reindl / King / Perez + AOI).
+4. `irradiance` (isotropic / Klucher / Hay-Davies / Reindl / Perez + AOI).
 5. `decomposition` (Erbs / Boland / DISC / DIRINT / DIRINDEX) — GHI→DNI/DHI splitters.
 6. `iam` (physical / ashrae / martin_ruiz / sapm / interp / marion).
 7. `temperature` (SAPM / PVsyst / Faiman / Fuentes / GenericLinearModel).

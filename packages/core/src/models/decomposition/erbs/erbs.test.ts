@@ -23,3 +23,9 @@ test("needs timeMs or dniExtra, finite", () => {
   expect(() => erbs({ ghi: 100, solarZenith: 30 })).toThrow(RangeError);
   expect(() => erbs({ ghi: 100, solarZenith: 30, timeMs: Number.NaN })).toThrow(RangeError);
 });
+
+test("NaN dniExtra propagates NaN instead of inventing a split (pvlib behaviour)", () => {
+  const got = erbs({ ghi: 500, solarZenith: 30, dniExtra: Number.NaN });
+  expect(got.dhi).toBeNaN();
+  expect(got.dni).toBeNaN();
+});

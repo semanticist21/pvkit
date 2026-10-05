@@ -27,6 +27,10 @@ const MS_PER_DAY = 86_400_000;
 export const sunriseGeometric = (input: SunriseGeometricInput): SunriseResult => {
   const { timeMs, latitude, longitude, declination, equationOfTime } = input;
   if (!Number.isFinite(timeMs)) throw new RangeError(`timeMs must be finite, got ${timeMs}`);
+  if (!(Math.abs(latitude) <= 90)) throw new RangeError(`latitude out of [-90, 90]: ${latitude}`);
+  if (!(Math.abs(longitude) <= 180)) {
+    throw new RangeError(`longitude out of [-180, 180]: ${longitude}`);
+  }
   const utday = Math.floor(timeMs / MS_PER_DAY) * MS_PER_DAY;
   const sunsetAngle = Math.acos(-Math.tan(declination * D2R) * Math.tan(latitude * D2R)) * R2D;
   const at = (omega: number) =>

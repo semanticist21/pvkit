@@ -23,7 +23,9 @@ State in/out: `prevAccumulatedSoiling`/`accumulatedSoiling`, `prevTimeSinceRainM
 (`rainfallAccumulated`). pvlib starts the series at `initial_soiling` without adding a step
 of soiling at the first sample: reproduce it with `timestepMs: 0` and
 `prevAccumulatedSoiling: initialSoiling` on the first call. A manual wash is a per-step
-flag (pvlib `manual_wash_dates` matched against the index). Durations are integer ms so
+flag (pvlib `manual_wash_dates` matched against the index). Each step uses its own
+`timestepMs`; pvlib applies the first interval to every step, so results match only on
+regular series. Durations are integer ms so
 the grace boundary is exact.
 
 Guards: `RangeError` for negative/non-finite `timestepMs` or negative `prevTimeSinceRainMs`.

@@ -3,7 +3,7 @@
 # dependencies = ["pvlib==0.16.1"]
 # ///
 """Fixtures for @pvkit/core irradiance transposition: isotropic, klucher, hay-davies, reindl,
-king, perez, ground-diffuse, poa-components and total-irradiance (one JSON per method, one
+perez, ground-diffuse, poa-components and total-irradiance (one JSON per method, one
 shared scenario set). Also writes perez/perez-coefficients.ts from pvlib's Perez tables.
 
 Run: uv run scripts/fixtures/irradiance-total-irradiance.py
@@ -22,7 +22,7 @@ import numpy as np
 import pvlib
 from pvlib import irradiance as irr
 
-warnings.simplefilter("ignore")  # king is deprecated in 0.16; numpy divide warnings
+warnings.simplefilter("ignore")  # numpy divide warnings
 DIR = Path(__file__).resolve().parents[2] / "packages/core/src/models/irradiance"
 REF = f"@ pvlib {pvlib.__version__}"
 PEREZ_MODELS = re.findall(r"'(\w+)': \[", inspect.getsource(irr._get_perez_coefficients))
@@ -112,8 +112,6 @@ run("hay-davies", "pvlib.irradiance.haydavies", GEO + ["dhi", "dni", "dniExtra"]
 run("reindl", "pvlib.irradiance.reindl", GEO + ["dhi", "dni", "ghi", "dniExtra"] + SUN,
     lambda s: irr.reindl(s["surfaceTilt"], s["surfaceAzimuth"], s["dhi"], s["dni"], s["ghi"],
                          s["dniExtra"], s["solarZenith"], s["solarAzimuth"]))
-run("king", "pvlib.irradiance.king", ["surfaceTilt", "dhi", "ghi", "solarZenith"],
-    lambda s: irr.king(s["surfaceTilt"], s["dhi"], s["ghi"], s["solarZenith"]))
 run("ground-diffuse", "pvlib.irradiance.get_ground_diffuse", ["surfaceTilt", "ghi", "albedo"],
     lambda s: irr.get_ground_diffuse(s["surfaceTilt"], s["ghi"], albedo=s["albedo"]))
 
@@ -137,10 +135,10 @@ for _ in range(60):
                                    "poaGroundDiffuse": r["poa_ground_diffuse"]}})
 write("poa-components", "pvlib.irradiance.poa_components", poa_cases)
 
-MODELS = ["isotropic", "klucher", "haydavies", "reindl", "king", "perez"]
+MODELS = ["isotropic", "klucher", "haydavies", "reindl", "perez"]
 total_cases = []
 for i, s in enumerate(S[:16] + S[16:][::5]):
-    for j, model in enumerate(MODELS if i < 16 else [MODELS[i % 6]]):
+    for j, model in enumerate(MODELS if i < 16 else [MODELS[i % len(MODELS)]]):
         pm = PEREZ_MODELS[(i + j) % len(PEREZ_MODELS)]
         r = irr.get_total_irradiance(
             s["surfaceTilt"], s["surfaceAzimuth"], s["solarZenith"], s["solarAzimuth"], s["dni"],

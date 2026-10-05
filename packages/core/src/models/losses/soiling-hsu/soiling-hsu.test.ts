@@ -45,4 +45,5 @@ test("rejects out-of-range inputs", () => {
   expect(() => soilingHsu({ ...ok, timestepMs: Number.POSITIVE_INFINITY })).toThrow(RangeError);
   expect(() => soilingHsu({ ...ok, timestepMs: 1, pm25: -1 })).toThrow(RangeError);
   expect(() => soilingHsu({ ...ok, timestepMs: 1, prevAccumulatedMass: -1 })).toThrow(RangeError);
+  expect(() => soilingHsu({ ...ok, timestepMs: 1, surfaceTilt: 95 })).toThrow(RangeError);
 });

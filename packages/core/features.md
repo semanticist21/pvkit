@@ -91,7 +91,7 @@ Air mass now comes from the `atmosphere` module.
 - [x] Hay-Davies diffuse model
 - [x] Klucher transposition
 - [x] Reindl transposition
-- [x] King transposition
+- [ ] King transposition — dropped: no peer-reviewed source, deprecated in pvlib 0.16
 - [x] Perez (1990) diffuse model + coefficient lookup
 - [x] Ground-reflected (albedo) component
 - [x] GHI → POA (plane-of-array) total transposition

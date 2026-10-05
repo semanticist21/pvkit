@@ -87,6 +87,10 @@ export const soilingHsu = (input: SoilingHsuInput): SoilingHsuResult => {
   }
   // Negative mass would make m^0.8473 NaN downstream.
   if (!(pm25 >= 0 && pm10 >= 0)) throw new RangeError(`pm25/pm10 must be >= 0: ${pm25}, ${pm10}`);
+  // cos(tilt) < 0 would make mass negative and poison the next step.
+  if (!(surfaceTilt >= 0 && surfaceTilt <= 90)) {
+    throw new RangeError(`surfaceTilt must be in [0, 90], got ${surfaceTilt}`);
+  }
   if (!(prevAccumulatedMass >= 0)) {
     throw new RangeError(`prevAccumulatedMass must be >= 0, got ${prevAccumulatedMass}`);
   }

@@ -27,7 +27,7 @@ but no neighbour has a finite kt'.
 - **Reference implementation:** `pvlib.irradiance.dirint` @ pvlib 0.16.1 on whole pandas
   series (`min_cos_zenith=0.065`, `max_zenith=87`, pressure/`use_delta_kt_prime`/`temp_dew`
   per series).
-- **Fixtures:** `dirint-fixtures.json` (165 cases from 7 synthetic series — Ineichen clear
+- **Fixtures:** `dirint-fixtures.json` (189 cases from 8 synthetic series, one with per-step pressure — Ineichen clear
   sky × random cloud factor + noise incl. negative GHI: Golden 48 h hourly with dew point at
   82 kPa incl. both edges; Seoul 15-min with `pressure: null`; Sydney hourly with ΔKt' off;
   Tromsø winter 10-min near-horizon; steady very-clear and steady overcast 5-min series

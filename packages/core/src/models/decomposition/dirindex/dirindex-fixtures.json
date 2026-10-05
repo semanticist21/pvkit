@@ -4667,6 +4667,736 @@
       "expected": {
         "dni": null
       }
+    },
+    {
+      "input": {
+        "ghi": 412.2693362549622,
+        "ghiClearsky": 393.48639118511,
+        "dniClearsky": 730.3255657639921,
+        "solarZenith": 63.616945099364614,
+        "timeMs": 1718928000000,
+        "pressure": 101346.26054302651,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": -8.760423540641199,
+        "next": {
+          "ghi": 72.63316705153632,
+          "solarZenith": 74.80676409588506,
+          "timeMs": 1718931600000,
+          "pressure": 87113.11560755875,
+          "ghiClearsky": 195.18990379346982
+        }
+      },
+      "expected": {
+        "dni": 684.7614256446466
+      }
+    },
+    {
+      "input": {
+        "ghi": 72.63316705153632,
+        "ghiClearsky": 195.18990379346982,
+        "dniClearsky": 556.1535660314405,
+        "solarZenith": 74.80676409588506,
+        "timeMs": 1718931600000,
+        "pressure": 87113.11560755875,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 6.257632359710074,
+        "previous": {
+          "ghi": 412.2693362549622,
+          "solarZenith": 63.616945099364614,
+          "timeMs": 1718928000000,
+          "pressure": 101346.26054302651,
+          "ghiClearsky": 393.48639118511
+        },
+        "next": {
+          "ghi": 18.885401199359574,
+          "solarZenith": 85.45452183669141,
+          "timeMs": 1718935200000,
+          "pressure": 96705.7922904821,
+          "ghiClearsky": 26.90946597515862
+        }
+      },
+      "expected": {
+        "dni": 0.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 18.885401199359574,
+        "ghiClearsky": 26.90946597515862,
+        "dniClearsky": 156.2840267794893,
+        "solarZenith": 85.45452183669141,
+        "timeMs": 1718935200000,
+        "pressure": 96705.7922904821,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": -7.32283453964902,
+        "previous": {
+          "ghi": 72.63316705153632,
+          "solarZenith": 74.80676409588506,
+          "timeMs": 1718931600000,
+          "pressure": 87113.11560755875,
+          "ghiClearsky": 195.18990379346982
+        },
+        "next": {
+          "ghi": 2.4441579222142806,
+          "solarZenith": 95.25849351673939,
+          "timeMs": 1718938800000,
+          "pressure": 87104.45373283207,
+          "ghiClearsky": 0.0
+        }
+      },
+      "expected": {
+        "dni": 0.0
+      }
+    },
+    {
+      "input": {
+        "ghi": 2.4441579222142806,
+        "ghiClearsky": 0.0,
+        "dniClearsky": 0.0,
+        "solarZenith": 95.25849351673939,
+        "timeMs": 1718938800000,
+        "pressure": 87104.45373283207,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 21.52180600743268,
+        "previous": {
+          "ghi": 18.885401199359574,
+          "solarZenith": 85.45452183669141,
+          "timeMs": 1718935200000,
+          "pressure": 96705.7922904821,
+          "ghiClearsky": 26.90946597515862
+        },
+        "next": {
+          "ghi": -0.8324814322914902,
+          "solarZenith": 103.82642558378504,
+          "timeMs": 1718942400000,
+          "pressure": 86074.78142637691,
+          "ghiClearsky": 0.0
+        }
+      },
+      "expected": {
+        "dni": null
+      }
+    },
+    {
+      "input": {
+        "ghi": -0.8324814322914902,
+        "ghiClearsky": 0.0,
+        "dniClearsky": 0.0,
+        "solarZenith": 103.82642558378504,
+        "timeMs": 1718942400000,
+        "pressure": 86074.78142637691,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 7.034633998053192,
+        "previous": {
+          "ghi": 2.4441579222142806,
+          "solarZenith": 95.25849351673939,
+          "timeMs": 1718938800000,
+          "pressure": 87104.45373283207,
+          "ghiClearsky": 0.0
+        },
+        "next": {
+          "ghi": 2.5951644411006036,
+          "solarZenith": 110.65313478748557,
+          "timeMs": 1718946000000,
+          "pressure": 90556.34880695293,
+          "ghiClearsky": 0.0
+        }
+      },
+      "expected": {
+        "dni": null
+      }
+    },
+    {
+      "input": {
+        "ghi": 2.5951644411006036,
+        "ghiClearsky": 0.0,
+        "dniClearsky": 0.0,
+        "solarZenith": 110.65313478748557,
+        "timeMs": 1718946000000,
+        "pressure": 90556.34880695293,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 11.690199609335805,
+        "previous": {
+          "ghi": -0.8324814322914902,
+          "solarZenith": 103.82642558378504,
+          "timeMs": 1718942400000,
+          "pressure": 86074.78142637691,
+          "ghiClearsky": 0.0
+        },
+        "next": {
+          "ghi": -0.02540351650682826,
+          "solarZenith": 115.15616893094784,
+          "timeMs": 1718949600000,
+          "pressure": 89499.62488722187,
+          "ghiClearsky": 0.0
+        }
+      },
+      "expected": {
+        "dni": null
+      }
+    },
+    {
+      "input": {
+        "ghi": -0.02540351650682826,
+        "ghiClearsky": 0.0,
+        "dniClearsky": 0.0,
+        "solarZenith": 115.15616893094784,
+        "timeMs": 1718949600000,
+        "pressure": 89499.62488722187,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 11.071186969905423,
+        "previous": {
+          "ghi": 2.5951644411006036,
+          "solarZenith": 110.65313478748557,
+          "timeMs": 1718946000000,
+          "pressure": 90556.34880695293,
+          "ghiClearsky": 0.0
+        },
+        "next": {
+          "ghi": 2.711020863866545,
+          "solarZenith": 116.8196355465613,
+          "timeMs": 1718953200000,
+          "pressure": 82059.88068581962,
+          "ghiClearsky": 0.0
+        }
+      },
+      "expected": {
+        "dni": null
+      }
+    },
+    {
+      "input": {
+        "ghi": 2.711020863866545,
+        "ghiClearsky": 0.0,
+        "dniClearsky": 0.0,
+        "solarZenith": 116.8196355465613,
+        "timeMs": 1718953200000,
+        "pressure": 82059.88068581962,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 15.375065068755589,
+        "previous": {
+          "ghi": -0.02540351650682826,
+          "solarZenith": 115.15616893094784,
+          "timeMs": 1718949600000,
+          "pressure": 89499.62488722187,
+          "ghiClearsky": 0.0
+        },
+        "next": {
+          "ghi": -1.5086849471361083,
+          "solarZenith": 115.41815040034587,
+          "timeMs": 1718956800000,
+          "pressure": 83538.06806450726,
+          "ghiClearsky": 0.0
+        }
+      },
+      "expected": {
+        "dni": null
+      }
+    },
+    {
+      "input": {
+        "ghi": -1.5086849471361083,
+        "ghiClearsky": 0.0,
+        "dniClearsky": 0.0,
+        "solarZenith": 115.41815040034587,
+        "timeMs": 1718956800000,
+        "pressure": 83538.06806450726,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 15.04694476043742,
+        "previous": {
+          "ghi": 2.711020863866545,
+          "solarZenith": 116.8196355465613,
+          "timeMs": 1718953200000,
+          "pressure": 82059.88068581962,
+          "ghiClearsky": 0.0
+        },
+        "next": {
+          "ghi": 1.2283661658820393,
+          "solarZenith": 111.14297950803731,
+          "timeMs": 1718960400000,
+          "pressure": 91882.8739135984,
+          "ghiClearsky": 0.0
+        }
+      },
+      "expected": {
+        "dni": null
+      }
+    },
+    {
+      "input": {
+        "ghi": 1.2283661658820393,
+        "ghiClearsky": 0.0,
+        "dniClearsky": 0.0,
+        "solarZenith": 111.14297950803731,
+        "timeMs": 1718960400000,
+        "pressure": 91882.8739135984,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 15.964010959296072,
+        "previous": {
+          "ghi": -1.5086849471361083,
+          "solarZenith": 115.41815040034587,
+          "timeMs": 1718956800000,
+          "pressure": 83538.06806450726,
+          "ghiClearsky": 0.0
+        },
+        "next": {
+          "ghi": -2.755412305828258,
+          "solarZenith": 104.49389925119425,
+          "timeMs": 1718964000000,
+          "pressure": 96238.82451811829,
+          "ghiClearsky": 0.0
+        }
+      },
+      "expected": {
+        "dni": null
+      }
+    },
+    {
+      "input": {
+        "ghi": -2.755412305828258,
+        "ghiClearsky": 0.0,
+        "dniClearsky": 0.0,
+        "solarZenith": 104.49389925119425,
+        "timeMs": 1718964000000,
+        "pressure": 96238.82451811829,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": -12.122371394429344,
+        "previous": {
+          "ghi": 1.2283661658820393,
+          "solarZenith": 111.14297950803731,
+          "timeMs": 1718960400000,
+          "pressure": 91882.8739135984,
+          "ghiClearsky": 0.0
+        },
+        "next": {
+          "ghi": 0.8032616938568347,
+          "solarZenith": 96.05505262701415,
+          "timeMs": 1718967600000,
+          "pressure": 83400.97477591023,
+          "ghiClearsky": 0.0
+        }
+      },
+      "expected": {
+        "dni": null
+      }
+    },
+    {
+      "input": {
+        "ghi": 0.8032616938568347,
+        "ghiClearsky": 0.0,
+        "dniClearsky": 0.0,
+        "solarZenith": 96.05505262701415,
+        "timeMs": 1718967600000,
+        "pressure": 83400.97477591023,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 7.126938533300292,
+        "previous": {
+          "ghi": -2.755412305828258,
+          "solarZenith": 104.49389925119425,
+          "timeMs": 1718964000000,
+          "pressure": 96238.82451811829,
+          "ghiClearsky": 0.0
+        },
+        "next": {
+          "ghi": 18.29402340458818,
+          "solarZenith": 86.34096610699959,
+          "timeMs": 1718971200000,
+          "pressure": 97211.6520011527,
+          "ghiClearsky": 17.792340621625893
+        }
+      },
+      "expected": {
+        "dni": null
+      }
+    },
+    {
+      "input": {
+        "ghi": 18.29402340458818,
+        "ghiClearsky": 17.792340621625893,
+        "dniClearsky": 112.29126662115655,
+        "solarZenith": 86.34096610699959,
+        "timeMs": 1718971200000,
+        "pressure": 97211.6520011527,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 3.135088945928249,
+        "previous": {
+          "ghi": 0.8032616938568347,
+          "solarZenith": 96.05505262701415,
+          "timeMs": 1718967600000,
+          "pressure": 83400.97477591023,
+          "ghiClearsky": 0.0
+        },
+        "next": {
+          "ghi": 190.55004677873748,
+          "solarZenith": 75.75327198264868,
+          "timeMs": 1718974800000,
+          "pressure": 100974.46788750177,
+          "ghiClearsky": 178.47169935126894
+        }
+      },
+      "expected": {
+        "dni": null
+      }
+    },
+    {
+      "input": {
+        "ghi": 190.55004677873748,
+        "ghiClearsky": 178.47169935126894,
+        "dniClearsky": 533.2051825644103,
+        "solarZenith": 75.75327198264868,
+        "timeMs": 1718974800000,
+        "pressure": 100974.46788750177,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 3.1325852896928352,
+        "previous": {
+          "ghi": 18.29402340458818,
+          "solarZenith": 86.34096610699959,
+          "timeMs": 1718971200000,
+          "pressure": 97211.6520011527,
+          "ghiClearsky": 17.792340621625893
+        },
+        "next": {
+          "ghi": 237.60014482219424,
+          "solarZenith": 64.59998412547151,
+          "timeMs": 1718978400000,
+          "pressure": 96951.4220789471,
+          "ghiClearsky": 376.36780214792964
+        }
+      },
+      "expected": {
+        "dni": 418.4431216242897
+      }
+    },
+    {
+      "input": {
+        "ghi": 237.60014482219424,
+        "ghiClearsky": 376.36780214792964,
+        "dniClearsky": 719.9437946258324,
+        "solarZenith": 64.59998412547151,
+        "timeMs": 1718978400000,
+        "pressure": 96951.4220789471,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": -21.158131441689136,
+        "previous": {
+          "ghi": 190.55004677873748,
+          "solarZenith": 75.75327198264868,
+          "timeMs": 1718974800000,
+          "pressure": 100974.46788750177,
+          "ghiClearsky": 178.47169935126894
+        },
+        "next": {
+          "ghi": 199.01643316852127,
+          "solarZenith": 53.139098214629335,
+          "timeMs": 1718982000000,
+          "pressure": 80477.44986639559,
+          "ghiClearsky": 567.5448866898176
+        }
+      },
+      "expected": {
+        "dni": 126.99401880442998
+      }
+    },
+    {
+      "input": {
+        "ghi": 199.01643316852127,
+        "ghiClearsky": 567.5448866898176,
+        "dniClearsky": 810.1103460966833,
+        "solarZenith": 53.139098214629335,
+        "timeMs": 1718982000000,
+        "pressure": 80477.44986639559,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": -15.601981351077738,
+        "previous": {
+          "ghi": 237.60014482219424,
+          "solarZenith": 64.59998412547151,
+          "timeMs": 1718978400000,
+          "pressure": 96951.4220789471,
+          "ghiClearsky": 376.36780214792964
+        },
+        "next": {
+          "ghi": 448.93332552140964,
+          "solarZenith": 41.645698908851806,
+          "timeMs": 1718985600000,
+          "pressure": 97736.71521378182,
+          "ghiClearsky": 734.1038420361489
+        }
+      },
+      "expected": {
+        "dni": 12.5928718252776
+      }
+    },
+    {
+      "input": {
+        "ghi": 448.93332552140964,
+        "ghiClearsky": 734.1038420361489,
+        "dniClearsky": 859.1591010331872,
+        "solarZenith": 41.645698908851806,
+        "timeMs": 1718985600000,
+        "pressure": 97736.71521378182,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": -0.7665017839756871,
+        "previous": {
+          "ghi": 199.01643316852127,
+          "solarZenith": 53.139098214629335,
+          "timeMs": 1718982000000,
+          "pressure": 80477.44986639559,
+          "ghiClearsky": 567.5448866898176
+        },
+        "next": {
+          "ghi": 637.7548084594004,
+          "solarZenith": 30.562587330334658,
+          "timeMs": 1718989200000,
+          "pressure": 91781.63675113789,
+          "ghiClearsky": 863.2653193360243
+        }
+      },
+      "expected": {
+        "dni": 139.91728864861992
+      }
+    },
+    {
+      "input": {
+        "ghi": 637.7548084594004,
+        "ghiClearsky": 863.2653193360243,
+        "dniClearsky": 886.8284887635245,
+        "solarZenith": 30.562587330334658,
+        "timeMs": 1718989200000,
+        "pressure": 91781.63675113789,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 7.110665296625318,
+        "previous": {
+          "ghi": 448.93332552140964,
+          "solarZenith": 41.645698908851806,
+          "timeMs": 1718985600000,
+          "pressure": 97736.71521378182,
+          "ghiClearsky": 734.1038420361489
+        },
+        "next": {
+          "ghi": 422.0328738366494,
+          "solarZenith": 21.006867073293762,
+          "timeMs": 1718992800000,
+          "pressure": 93027.3900325867,
+          "ghiClearsky": 945.670256888839
+        }
+      },
+      "expected": {
+        "dni": 278.690869657601
+      }
+    },
+    {
+      "input": {
+        "ghi": 422.0328738366494,
+        "ghiClearsky": 945.670256888839,
+        "dniClearsky": 901.286418012107,
+        "solarZenith": 21.006867073293762,
+        "timeMs": 1718992800000,
+        "pressure": 93027.3900325867,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 15.517526336914344,
+        "previous": {
+          "ghi": 637.7548084594004,
+          "solarZenith": 30.562587330334658,
+          "timeMs": 1718989200000,
+          "pressure": 91781.63675113789,
+          "ghiClearsky": 863.2653193360243
+        },
+        "next": {
+          "ghi": 973.4063796547296,
+          "solarZenith": 16.317376325996676,
+          "timeMs": 1718996400000,
+          "pressure": 85121.56031304547,
+          "ghiClearsky": 975.4693476175901
+        }
+      },
+      "expected": {
+        "dni": 40.125771211235616
+      }
+    },
+    {
+      "input": {
+        "ghi": 973.4063796547296,
+        "ghiClearsky": 975.4693476175901,
+        "dniClearsky": 906.025112159292,
+        "solarZenith": 16.317376325996676,
+        "timeMs": 1718996400000,
+        "pressure": 85121.56031304547,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 13.146594872511102,
+        "previous": {
+          "ghi": 422.0328738366494,
+          "solarZenith": 21.006867073293762,
+          "timeMs": 1718992800000,
+          "pressure": 93027.3900325867,
+          "ghiClearsky": 945.670256888839
+        },
+        "next": {
+          "ghi": 447.26698968102414,
+          "solarZenith": 20.30844720720593,
+          "timeMs": 1719000000000,
+          "pressure": 88949.39912333622,
+          "ghiClearsky": 950.5637373035511
+        }
+      },
+      "expected": {
+        "dni": 679.57462500506
+      }
+    },
+    {
+      "input": {
+        "ghi": 447.26698968102414,
+        "ghiClearsky": 950.5637373035511,
+        "dniClearsky": 902.0811192264214,
+        "solarZenith": 20.30844720720593,
+        "timeMs": 1719000000000,
+        "pressure": 88949.39912333622,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 23.850005753127395,
+        "previous": {
+          "ghi": 973.4063796547296,
+          "solarZenith": 16.317376325996676,
+          "timeMs": 1718996400000,
+          "pressure": 85121.56031304547,
+          "ghiClearsky": 975.4693476175901
+        },
+        "next": {
+          "ghi": 237.36712554288266,
+          "solarZenith": 29.613204413477938,
+          "timeMs": 1719003600000,
+          "pressure": 95708.73413261717,
+          "ghiClearsky": 872.7062485655457
+        }
+      },
+      "expected": {
+        "dni": 63.61514373659859
+      }
+    },
+    {
+      "input": {
+        "ghi": 237.36712554288266,
+        "ghiClearsky": 872.7062485655457,
+        "dniClearsky": 888.5951563986268,
+        "solarZenith": 29.613204413477938,
+        "timeMs": 1719003600000,
+        "pressure": 95708.73413261717,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 13.582777940687308,
+        "previous": {
+          "ghi": 447.26698968102414,
+          "solarZenith": 20.30844720720593,
+          "timeMs": 1719000000000,
+          "pressure": 88949.39912333622,
+          "ghiClearsky": 950.5637373035511
+        },
+        "next": {
+          "ghi": 571.0781337192564,
+          "solarZenith": 40.62263284055765,
+          "timeMs": 1719007200000,
+          "pressure": 87962.12262519618,
+          "ghiClearsky": 747.4166386162644
+        }
+      },
+      "expected": {
+        "dni": 4.7336770083731174
+      }
+    },
+    {
+      "input": {
+        "ghi": 571.0781337192564,
+        "ghiClearsky": 747.4166386162644,
+        "dniClearsky": 862.3515594292468,
+        "solarZenith": 40.62263284055765,
+        "timeMs": 1719007200000,
+        "pressure": 87962.12262519618,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": 18.569162629533697,
+        "previous": {
+          "ghi": 237.36712554288266,
+          "solarZenith": 29.613204413477938,
+          "timeMs": 1719003600000,
+          "pressure": 95708.73413261717,
+          "ghiClearsky": 872.7062485655457
+        },
+        "next": {
+          "ghi": 475.63145254397466,
+          "solarZenith": 52.10206130354138,
+          "timeMs": 1719010800000,
+          "pressure": 85968.18736819163,
+          "ghiClearsky": 583.7476394822513
+        }
+      },
+      "expected": {
+        "dni": 285.01448279314764
+      }
+    },
+    {
+      "input": {
+        "ghi": 475.63145254397466,
+        "ghiClearsky": 583.7476394822513,
+        "dniClearsky": 815.7739576103654,
+        "solarZenith": 52.10206130354138,
+        "timeMs": 1719010800000,
+        "pressure": 85968.18736819163,
+        "useDeltaKtPrime": true,
+        "minCosZenith": 0.065,
+        "maxZenith": 87.0,
+        "tempDew": -13.35987882641848,
+        "previous": {
+          "ghi": 571.0781337192564,
+          "solarZenith": 40.62263284055765,
+          "timeMs": 1719007200000,
+          "pressure": 87962.12262519618,
+          "ghiClearsky": 747.4166386162644
+        }
+      },
+      "expected": {
+        "dni": 312.84280777791156
+      }
     }
   ]
 }

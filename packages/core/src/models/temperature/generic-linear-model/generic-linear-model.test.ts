@@ -70,3 +70,10 @@ test("rejects absorptance ≤ moduleEfficiency", () => {
   expect(() => genericLinearToSapm(bad)).toThrow(RangeError);
   expect(() => genericLinearFromFaiman({ u0: 25, u1: 6.84, ...bad })).toThrow(RangeError);
 });
+
+test("SAPM conversion defaults windFitLow = 1.4, windFitHigh = 5.4 (pvlib)", () => {
+  const p = { a: -3.47, b: -0.0594, moduleEfficiency: 0.19, absorptance: 0.88 };
+  expect(genericLinearFromSapm(p)).toEqual(
+    genericLinearFromSapm({ ...p, windFitLow: 1.4, windFitHigh: 5.4 }),
+  );
+});

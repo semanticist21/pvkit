@@ -32,3 +32,10 @@ test("equal wavelengths give -Infinity / NaN, as pvlib", () => {
   expect(angstromAlpha({ aod1: 0.2, lambda1: 500, aod2: 0.1, lambda2: 500 })).toBe(-Infinity);
   expect(angstromAlpha({ aod1: 0.1, lambda1: 500, aod2: 0.1, lambda2: 500 })).toBeNaN();
 });
+
+test("defaults alpha = 1.14, lambda1 = 700 match pvlib", () => {
+  // pvlib.atmosphere.angstrom_aod_at_lambda(0.1, 500) with its defaults
+  expect(
+    Math.abs(angstromAodAtLambda({ aod0: 0.1, lambda0: 500 }) - 0.06814186869746645),
+  ).toBeLessThan(1e-15);
+});

@@ -53,7 +53,7 @@ PV modeling core. Durable notes for future sessions — update when `src/` chang
    dataless helpers consumed by clearsky/irradiance. Air mass lives here.
 3. `clearsky` (Haurwitz / Ineichen / Solis) — fallback irradiance when no weather data.
    Linke turbidity is a caller input; lookup raster + detect_clearsky → `@pvkit/io`.
-4. `irradiance` (isotropic / Klucher / Hay-Davies / Reindl / King / Perez + AOI,
+4. `irradiance` (isotropic / Klucher / Hay-Davies / Reindl / Perez + AOI,
    get_total_irradiance, poa_components)
 5. `decomposition` (Erbs / Boland / DISC / DIRINT / DIRINDEX) — GHI→DNI/DHI splitters;
    essential because most weather feeds give GHI only. DIRINT needs time-series adapter.

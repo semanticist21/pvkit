@@ -27,7 +27,8 @@ vary per step.
 
 A NaN window sum does not clean (pvlib compares `>=`, false for NaN).
 
-Guards: `RangeError` for negative/non-finite `timestepMs`, negative PM or prior mass (which
+Guards: `RangeError` for negative/non-finite `timestepMs`, `surfaceTilt` outside [0, 90]
+(pvlib returns NaN past 90° and the next step then fails), negative PM or prior mass (which
 would make `m^0.8473` NaN).
 
 ## Reference
