@@ -106,6 +106,7 @@
     "./package.json": "./package.json"
   },
   "publishConfig": {
+    "access": "public",
     "exports": {
       ".": "./dist/index.js",
       "./atmosphere/absolute-airmass": "./dist/models/atmosphere/absolute-airmass/index.js",

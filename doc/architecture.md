@@ -111,6 +111,8 @@ method or module file needs no hand-wiring.
   strip the internal `models/` prefix and collapse the trailing `/index`. Net
   public shape: `@pvkit/core/<module>` and `@pvkit/core/<module>/<method>`,
   identical to before.
+- **`publishConfig.access: "public"` is hand-set** (scoped packages default to restricted);
+  tsdown's regeneration preserves it — keep it.
 - **`exports`/`publishConfig`/`main`/`module`/`types` are machine-owned —
   regenerate, don't edit.** After adding or removing a method folder or module,
   run `pnpm build` to regenerate them and commit the updated `package.json`.
