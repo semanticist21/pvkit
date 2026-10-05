@@ -24,10 +24,10 @@ const step = (timeMs: number) => {
     timeMs,
     latitude: p.latitude,
     longitude: p.longitude,
-    elevation: p.altitude,
+    altitude: p.altitude,
     deltaT: 67,
   });
-  const airmassRel = relativeAirmass({ zenith: sun.apparentZenith });
+  const airmassRel = relativeAirmass({ solarZenith: sun.apparentZenith });
   const airmassAbs = absoluteAirmass({
     airmassRelative: airmassRel,
     pressure: alt2pres({ altitude: p.altitude }),
@@ -81,5 +81,7 @@ test("sun position → POA → cell temp → AC matches pvlib at every step", ()
 
 test("energy total matches pvlib", () => {
   const pac = fixture.steps.map((s) => step(s.timeMs).pac);
-  expect(Math.abs(energyKwh(pac, p.stepMinutes / 60) - fixture.energyKwh)).toBeLessThan(1e-9);
+  expect(
+    Math.abs(energyKwh({ power: pac, stepHours: p.stepMinutes / 60 }) - fixture.energyKwh),
+  ).toBeLessThan(1e-9);
 });

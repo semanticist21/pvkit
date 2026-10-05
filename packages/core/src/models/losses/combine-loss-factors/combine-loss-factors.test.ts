@@ -12,5 +12,5 @@ describe("combineLossFactors vs pvlib pvsystem.combine_loss_factors", () => {
 });
 
 test("typed arrays work and match the hand value", () => {
-  expect(combineLossFactors(new Float64Array([0.02, 0.03]))).toBeCloseTo(0.0494, 15);
+  expect(combineLossFactors({ losses: new Float64Array([0.02, 0.03]) })).toBeCloseTo(0.0494, 15);
 });

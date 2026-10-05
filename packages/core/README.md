@@ -3,7 +3,7 @@
 PV (solar) performance modeling core. Zero dependencies, ESM-only,
 function-level tree-shaking.
 
-> For broader context and positioning, see the [monorepo README](../../README.md).
+> For broader context and positioning, see the [monorepo README](https://github.com/semanticist21/pvkit/blob/main/README.md).
 
 ## Modules
 
@@ -23,13 +23,14 @@ Every method is its own subpath (`@pvkit/core/<module>/<method>`) — import onl
 | `losses` | `soiling-kimber`, `soiling-hsu`, `combine-loss-factors` | Kimber 2006, Coello & Boyle 2019 |
 | `metrics` | `performance-ratio`, `specific-yield`, `capacity-factor`, `availability` | IEC 61724-1, Marion 2005 |
 
-Each method folder ships its theory note (`<method>.md`: equations, paper, tolerance).
+Each method has a theory note in the repository — `src/models/<module>/<method>/<method>.md` (equations, paper, tolerance): [browse](https://github.com/semanticist21/pvkit/tree/main/packages/core/src/models).
 
 ## Correctness
 
 Implementations are written from the published literature. Every method is
-checked against pvlib 0.16.1 outputs (≈6,700 fixture cases, typically within
-1e-9 or tighter), and an end-to-end test reproduces pvlib's sun-position → kWh
+checked against pvlib 0.16.1 outputs — or, where pvlib has no equivalent (metrics,
+energy integration), an exactly-rounded Python reference — ≈6,700 fixture cases,
+typically within 1e-9 or tighter; and an end-to-end test reproduces pvlib's sun-position → kWh
 chain. Results are tolerance-equal across JS engines, not bit-identical.
 
 ## Unit safety
@@ -57,7 +58,7 @@ import { spa } from "@pvkit/core/solarposition/spa";
 import { SAPM_TEMPERATURE_PARAMETERS, sapmCell } from "@pvkit/core/temperature/sapm";
 
 const sun = spa({ timeMs: Date.UTC(2025, 5, 21, 3), latitude: 37.5665, longitude: 126.978 });
-const am = relativeAirmass({ zenith: sun.apparentZenith }); // sea level: absolute = relative
+const am = relativeAirmass({ solarZenith: sun.apparentZenith }); // sea level: absolute = relative
 const sky = ineichen({ apparentZenith: sun.apparentZenith, airmassAbsolute: am, linkeTurbidity: 3 });
 const poa = totalIrradiance({
   surfaceTilt: 30, surfaceAzimuth: 180,
@@ -70,8 +71,8 @@ const tempCell = sapmCell({
 const watts = pvwattsDc({ effectiveIrradiance: poa.poaGlobal, tempCell, pdc0: 5000, gammaPdc: -0.004 });
 ```
 
-Full chain to kWh (Perez, inverter, energy sum): [`src/pipeline.test.ts`](src/pipeline.test.ts).
-Conventions (time, angles, azimuth origin, ΔT): [`doc/conventions.md`](../../doc/conventions.md).
+Full chain to kWh (Perez, inverter, energy sum): [`src/pipeline.test.ts`](https://github.com/semanticist21/pvkit/blob/main/packages/core/src/pipeline.test.ts).
+Conventions (time, angles, azimuth origin, ΔT): [`doc/conventions.md`](https://github.com/semanticist21/pvkit/blob/main/doc/conventions.md).
 
 ## Development
 

@@ -4,8 +4,8 @@
  * by `scripts/fixtures/temperature-sapm.py`. Do not hand-edit.
  */
 export const SAPM_TEMPERATURE_PARAMETERS = {
-  openRackGlassGlass: { a: -3.47, b: -0.0594, deltaT: 3 },
-  closeMountGlassGlass: { a: -2.98, b: -0.0471, deltaT: 1 },
-  openRackGlassPolymer: { a: -3.56, b: -0.075, deltaT: 3 },
-  insulatedBackGlassPolymer: { a: -2.81, b: -0.0455, deltaT: 0 },
+  openRackGlassGlass: { a: -3.47, b: -0.0594, tempDelta: 3 },
+  closeMountGlassGlass: { a: -2.98, b: -0.0471, tempDelta: 1 },
+  openRackGlassPolymer: { a: -3.56, b: -0.075, tempDelta: 3 },
+  insulatedBackGlassPolymer: { a: -2.81, b: -0.0455, tempDelta: 0 },
 } as const;

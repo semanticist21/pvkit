@@ -31,12 +31,12 @@ const clearNeighbor = (nb: DirindexNeighbor | undefined): DirintNeighbor | undef
 export const dirindex = (input: DirindexInput): number => {
   const { ghiClearsky, dniClearsky, previous, next, ...common } = input;
   const dni = dirint({ ...common, previous, next });
-  const dniClear = dirint({
+  const dniDirintClearsky = dirint({
     ...common,
     ghi: ghiClearsky,
     previous: clearNeighbor(previous),
     next: clearNeighbor(next),
   });
-  const out = (dniClearsky * dni) / dniClear;
+  const out = (dniClearsky * dni) / dniDirintClearsky;
   return out < 0 ? 0 : out;
 };

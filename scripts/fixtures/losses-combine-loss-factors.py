@@ -23,7 +23,7 @@ INDEX = pd.DatetimeIndex([pd.Timestamp("2024-01-01", tz="UTC")])
 def case(losses):
     series = [pd.Series([f], index=INDEX) for f in losses]
     r = pvlib.pvsystem.combine_loss_factors(INDEX, *series, fill_method="ffill")
-    return {"input": [float(f) for f in losses], "expected": float(np.ravel(np.asarray(r))[0])}  # empty → scalar 1 - 1
+    return {"input": {"losses": [float(f) for f in losses]}, "expected": float(np.ravel(np.asarray(r))[0])}  # empty → scalar 1 - 1
 
 
 cases = [

@@ -15,11 +15,11 @@ export interface SapmModuleInput {
 /** Inputs for {@link sapmCellFromModule}. */
 export interface SapmCellFromModuleInput {
   /** Module back-surface temperature, °C. */
-  moduleTemperature: number;
+  tempModule: number;
   /** Plane-of-array irradiance, W/m². */
   poaGlobal: number;
   /** Cell − back-surface temperature difference at `irradRef`, °C. */
-  deltaT: number;
+  tempDelta: number;
   /** Reference irradiance E₀, W/m². Default 1000. */
   irradRef?: number;
 }
@@ -27,7 +27,7 @@ export interface SapmCellFromModuleInput {
 /** Inputs for {@link sapmCell}. */
 export interface SapmCellInput extends SapmModuleInput {
   /** Cell − back-surface temperature difference at `irradRef`, °C. */
-  deltaT: number;
+  tempDelta: number;
   /** Reference irradiance E₀, W/m². Default 1000. */
   irradRef?: number;
 }
@@ -44,20 +44,20 @@ export const sapmModule = ({ poaGlobal, tempAir, windSpeed, a, b }: SapmModuleIn
  * `Tc = Tm + (E / E₀)·ΔT`.
  */
 export const sapmCellFromModule = ({
-  moduleTemperature,
+  tempModule,
   poaGlobal,
-  deltaT,
+  tempDelta,
   irradRef = 1000,
-}: SapmCellFromModuleInput): number => moduleTemperature + (poaGlobal / irradRef) * deltaT;
+}: SapmCellFromModuleInput): number => tempModule + (poaGlobal / irradRef) * tempDelta;
 
 /**
- * SAPM cell temperature, °C (King et al. 2004, eqs. 11–12). Presets for `a`, `b`, `deltaT`:
+ * SAPM cell temperature, °C (King et al. 2004, eqs. 11–12). Presets for `a`, `b`, `tempDelta`:
  * `SAPM_TEMPERATURE_PARAMETERS`.
  *
  * @example
  * sapmCell({ poaGlobal: 1000, tempAir: 10, windSpeed: 0, ...SAPM_TEMPERATURE_PARAMETERS.openRackGlassGlass });
  */
 export const sapmCell = (input: SapmCellInput): number => {
-  const { poaGlobal, deltaT, irradRef = 1000 } = input;
-  return sapmCellFromModule({ moduleTemperature: sapmModule(input), poaGlobal, deltaT, irradRef });
+  const { poaGlobal, tempDelta, irradRef = 1000 } = input;
+  return sapmCellFromModule({ tempModule: sapmModule(input), poaGlobal, tempDelta, irradRef });
 };

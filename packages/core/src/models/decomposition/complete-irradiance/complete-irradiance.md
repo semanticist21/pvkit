@@ -5,8 +5,8 @@
 `GHI = DHI + DNI · cos z`; given two components, solve for the third.
 
 - Missing DNI: `DNI = (GHI − DHI) / cos z` with pvlib `irradiance.dni` guards — negative →
-  NaN; zenith ≥ 88° and DNI ≠ 0 → NaN; with `dniClear`, zenith in [80°, 88°) and
-  DNI > 1.1·dniClear → clipped to 1.1·dniClear (pvlib `clearsky_tolerance=1.1`).
+  NaN; zenith ≥ 88° and DNI ≠ 0 → NaN; with `dniClearsky`, zenith in [80°, 88°) and
+  DNI > 1.1·dniClearsky → clipped to 1.1·dniClearsky (pvlib `clearsky_tolerance=1.1`).
 - Missing GHI or DHI: plain closure, no guards (negative DHI passes through, as pvlib).
 - Anything but exactly one omitted component → `RangeError` (pvlib raises `ValueError`).
 

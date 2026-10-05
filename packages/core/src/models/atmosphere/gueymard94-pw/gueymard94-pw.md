@@ -2,7 +2,7 @@
 
 ## Principle
 
-With `T = t + 273.15` K, `θ = T / 273.15`, `RH` in %:
+With air temperature `tempAir` in °C, `T = tempAir + 273.15` K, `θ = T / 273.15`, `RH` in %:
 
 - saturation vapour density `ρv = 216.7·RH/(100·T) · exp(22.330 − 49.140·(100/T) −
   10.922·(100/T)² − 0.39015·T/100)` (g/m³)

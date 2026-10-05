@@ -34,7 +34,7 @@ def case(zenith, ghi=None, dhi=None, dni=None, dni_clear=None):
         pd.Series([zenith], index=idx), ghi=s(ghi), dhi=s(dhi), dni=s(dni),
         dni_clear=s(dni_clear)).iloc[0]
     inp = {"solarZenith": zenith}
-    for k, v in (("ghi", ghi), ("dhi", dhi), ("dni", dni), ("dniClear", dni_clear)):
+    for k, v in (("ghi", ghi), ("dhi", dhi), ("dni", dni), ("dniClearsky", dni_clear)):
         if v is not None:
             inp[k] = v
     return {"input": inp, "expected": {k: num(r[k]) for k in ("ghi", "dhi", "dni")}}
@@ -45,7 +45,7 @@ cases = [
     case(30.0, ghi=100.0, dhi=150.0),               # negative DNI → NaN
     case(88.0, ghi=10.0, dhi=10.0),                 # zero DNI kept at the 88° cutoff
     case(88.5, ghi=12.0, dhi=10.0),                 # non-zero DNI ≥ 88° → NaN
-    case(85.0, ghi=60.0, dhi=20.0, dni_clear=100.0),  # clipped to 1.1·dniClear
+    case(85.0, ghi=60.0, dhi=20.0, dni_clear=100.0),  # clipped to 1.1·dniClearsky
     case(85.0, ghi=40.0, dhi=20.0, dni_clear=300.0),  # under the clear-sky limit
     case(79.0, ghi=60.0, dhi=20.0, dni_clear=10.0),   # below 80°: no clipping
     case(95.0, ghi=0.0, dhi=0.0),

@@ -1,46 +1,49 @@
-/** Loss categories for {@link pvwattsLosses}, each in percent. Defaults are pvlib's. */
+/**
+ * Loss categories for {@link pvwattsLosses}, each a fraction (0–1, unitless). Defaults are
+ * pvlib's percent defaults / 100.
+ */
 export interface PvwattsLossesInput {
-  /** Default 2. */
+  /** Default 0.02. */
   soiling?: number;
-  /** Default 3. */
+  /** Default 0.03. */
   shading?: number;
   /** Default 0. */
   snow?: number;
-  /** Default 2. */
+  /** Default 0.02. */
   mismatch?: number;
-  /** Default 2. */
+  /** Default 0.02. */
   wiring?: number;
-  /** Default 0.5. */
+  /** Default 0.005. */
   connections?: number;
-  /** Light-induced degradation. Default 1.5. */
+  /** Light-induced degradation. Default 0.015. */
   lid?: number;
-  /** Default 1. */
+  /** Default 0.01. */
   nameplateRating?: number;
   /** Default 0. */
   age?: number;
-  /** Default 3. */
-  availability?: number;
+  /** Default 0.03. */
+  availabilityLoss?: number;
 }
 
 /**
- * PVWatts system losses (Dobos 2014): `L = 100·(1 − Π(1 − Lᵢ/100))`, percent.
- * All defaults → ≈ 14.08 %.
+ * PVWatts system losses (Dobos 2014): `L = 1 − Π(1 − Lᵢ)`, fraction (pvlib returns percent).
+ * All defaults → ≈ 0.1408.
  *
  * @example
- * pvwattsLosses({}); // 14.075660688264469
+ * pvwattsLosses(); // 0.14075660688264469
  */
 export const pvwattsLosses = (input: PvwattsLossesInput = {}): number => {
   const {
-    soiling = 2,
-    shading = 3,
+    soiling = 0.02,
+    shading = 0.03,
     snow = 0,
-    mismatch = 2,
-    wiring = 2,
-    connections = 0.5,
-    lid = 1.5,
-    nameplateRating = 1,
+    mismatch = 0.02,
+    wiring = 0.02,
+    connections = 0.005,
+    lid = 0.015,
+    nameplateRating = 0.01,
     age = 0,
-    availability = 3,
+    availabilityLoss = 0.03,
   } = input;
   let perf = 1;
   for (const l of [
@@ -53,9 +56,9 @@ export const pvwattsLosses = (input: PvwattsLossesInput = {}): number => {
     lid,
     nameplateRating,
     age,
-    availability,
+    availabilityLoss,
   ]) {
-    perf *= 1 - l / 100;
+    perf *= 1 - l;
   }
-  return (1 - perf) * 100;
+  return 1 - perf;
 };

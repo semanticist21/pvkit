@@ -2,7 +2,7 @@
 
 First-principles energy balance with thermal mass (Fuentes 1987), used by PVWatts.
 **Step function:** one call advances one timestep; the caller iterates and carries the
-state (`prevModuleTemperature`, `prevPoaGlobal`) — see the `@example` in `fuentes.ts`.
+state (`prevTempModule`, `prevPoaGlobal`) — see the `@example` in `fuentes.ts`.
 
 ## Principle
 

@@ -9,12 +9,12 @@ export interface SpaInput {
   latitude: number;
   /** Observer longitude, degrees, east-positive, [-180, 180]. */
   longitude: number;
-  /** Observer elevation above sea level, metres. Default 0. */
-  elevation?: number;
+  /** Observer altitude above sea level, metres. Default 0. */
+  altitude?: number;
   /** Annual-average local pressure, Pa. Default 101325. */
   pressure?: number;
-  /** Annual-average local temperature, °C. Default 12. */
-  temperature?: number;
+  /** Annual-average local air temperature, °C. Default 12. */
+  tempAir?: number;
   /** ΔT = TT − UT, seconds. Default 67. */
   deltaT?: number;
 }
@@ -52,9 +52,9 @@ export const spa = (input: SpaInput): SpaResult => {
     timeMs,
     latitude,
     longitude,
-    elevation = 0,
+    altitude = 0,
     pressure = 101_325,
-    temperature = 12,
+    tempAir = 12,
     deltaT = 67,
   } = input;
   if (!Number.isFinite(timeMs)) throw new RangeError(`timeMs must be finite, got ${timeMs}`);
@@ -72,8 +72,8 @@ export const spa = (input: SpaInput): SpaResult => {
   const xiRad = (8.794 / (3600 * r)) * D2R;
   const latRad = latitude * D2R;
   const uRad = Math.atan(0.99664719 * Math.tan(latRad));
-  const x = Math.cos(uRad) + (elevation / 6_378_140) * Math.cos(latRad);
-  const y = 0.99664719 * Math.sin(uRad) + (elevation / 6_378_140) * Math.sin(latRad);
+  const x = Math.cos(uRad) + (altitude / 6_378_140) * Math.cos(latRad);
+  const y = 0.99664719 * Math.sin(uRad) + (altitude / 6_378_140) * Math.sin(latRad);
   const denom = Math.cos(delta) - x * Math.sin(xiRad) * Math.cos(hRad);
   const deltaAlpha = Math.atan2(-x * Math.sin(xiRad) * Math.sin(hRad), denom);
   const deltaPrime = Math.atan2(
@@ -90,7 +90,7 @@ export const spa = (input: SpaInput): SpaResult => {
     ) * R2D;
   const deltaE =
     e0 >= REFRACTION_CUTOFF
-      ? ((pressure / 100 / 1010) * (283 / (273 + temperature)) * 1.02) /
+      ? ((pressure / 100 / 1010) * (283 / (273 + tempAir)) * 1.02) /
         (60 * Math.tan((e0 + 10.3 / (e0 + 5.11)) * D2R))
       : 0;
   const e = e0 + deltaE;

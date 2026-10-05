@@ -23,8 +23,11 @@ Cross-module rules every model follows. Method-specific math lives next to the c
 - **Geometry:** latitude north-positive, longitude **east-positive**; azimuth measured from
   **north, clockwise** (N=0, E=90, S=180, W=270); zenith from vertical, elevation = 90 − zenith.
   Refraction-corrected values are separate `apparent*` fields.
-- **Units** are fixed by field name (`elevation` m, `pressure` Pa, `temperature` °C,
-  irradiance W/m²).
+- **Units are fixed by field name** — one name, one unit, package-wide: `altitude` m (site
+  height); `elevation`/`apparentElevation` sun angle in degrees; `pressure` Pa; `temp*`
+  (`tempAir`, `tempCell`, `tempModule`, `tempDew`, `tempRef`, `tempDelta`) °C; irradiance W/m²;
+  `pdc0` W (`*Kw` suffix when kW); losses are fractions 0–1; durations carry their unit
+  (`timestepMs`, `stepHours`, `gracePeriodDays`); `deltaT` is always ΔT = TT − UT in seconds.
 
 ## References and fixtures
 

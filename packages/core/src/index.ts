@@ -1,23 +1,13 @@
 /**
  * @pvkit/core — PV performance modeling core.
  *
- * The root entry only re-exports the unit types and submodules. For best
- * tree-shaking, prefer subpath imports in real usage:
+ * The root entry exports only the unit types and helpers. Models are imported
+ * from their subpaths, which keeps bundles to exactly what you use:
  *
- *   import { spa } from "@pvkit/core/solarposition";
+ *   import { spa } from "@pvkit/core/solarposition/spa";
+ *   import { perez } from "@pvkit/core/irradiance";
  *
- * which pulls in less than a root-entry import.
+ * Do not add `export * as <module>` here — see doc/playbook.md (2026-10-05, root namespaces).
  */
 
-export * as atmosphere from "./models/atmosphere/index.ts";
-export * as clearsky from "./models/clearsky/index.ts";
-export * as decomposition from "./models/decomposition/index.ts";
-export * as iam from "./models/iam/index.ts";
-export * as irradiance from "./models/irradiance/index.ts";
-export * as losses from "./models/losses/index.ts";
-export * as metrics from "./models/metrics/index.ts";
-export * as pvsystem from "./models/pvsystem/index.ts";
-export * as solarposition from "./models/solarposition/index.ts";
-export * as temperature from "./models/temperature/index.ts";
-export * as tracking from "./models/tracking/index.ts";
 export * from "./units.ts";

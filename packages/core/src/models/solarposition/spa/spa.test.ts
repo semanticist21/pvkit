@@ -32,9 +32,9 @@ test("matches the published Reda & Andreas example (Table A5.1)", () => {
     timeMs: Date.UTC(2003, 9, 17, 19, 30, 30),
     latitude: 39.742476,
     longitude: -105.1786,
-    elevation: 1830.14,
+    altitude: 1830.14,
     pressure: 82_000,
-    temperature: 11,
+    tempAir: 11,
     deltaT: 67,
   });
   expect(got.apparentZenith).toBeCloseTo(50.11162, 5);

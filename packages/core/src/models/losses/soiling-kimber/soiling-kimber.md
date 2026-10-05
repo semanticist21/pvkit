@@ -11,7 +11,7 @@ Per step ending at `t` with duration `Δt`:
 1. Cleaning rain: `R_window(t) > cleaningThreshold` (strictly greater), where `R_window` is
    the rainfall over the trailing window `(t − rain_accum_period, t]` (Kimber: one day).
 2. Grace clock: `τ(t) = 0` on a cleaning rain, else `τ(t) = τ(t − Δt) + Δt`; grace active
-   when `τ < gracePeriod · 1 day`, i.e. a cleaning rain lies in `(t − grace, t]`.
+   when `τ < gracePeriodDays · 1 day`, i.e. a cleaning rain lies in `(t − grace, t]`.
 3. `S(t) = 0` if grace active or manual wash, else `S(t) = S(t − Δt) + rate · Δt / 1 day`.
 4. Output `loss = min(S, maxSoiling)`; the unclipped `S` is the carried state (pvlib clips
    only the output, so soiling keeps accruing under the cap).
@@ -34,8 +34,9 @@ Guards: `RangeError` for negative/non-finite `timestepMs` or negative `prevTimeS
   Grid-Connected Photovoltaic Systems in California and the Southwest Region of the United
   States", IEEE 4th WCPEC, 2006, doi:10.1109/WCPEC.2006.279690.
 - **Reference implementation:** `pvlib.soiling.kimber` @ pvlib 0.16.1, every parameter
-  passed explicitly (`cleaning_threshold`, `soiling_loss_rate`, `grace_period`,
-  `max_soiling`, `manual_wash_dates`, `initial_soiling`, `rain_accum_period`).
+  passed explicitly (`cleaning_threshold`, `soiling_loss_rate`, `grace_period` →
+  `gracePeriodDays`, `max_soiling`, `manual_wash_dates`, `initial_soiling`,
+  `rain_accum_period`).
 - **Fixtures:** `soiling-kimber-fixtures.json` — 7 whole series, 1224 steps (daily defaults;
   hourly with 2-day grace; clipping at `maxSoiling` = 0.05; manual washes on dry data; rain
   at the first sample; initial soiling above max and rain exactly at the threshold; 15-min

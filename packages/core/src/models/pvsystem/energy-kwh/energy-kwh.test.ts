@@ -8,7 +8,7 @@ const rel = (got: number, want: number) => Math.abs(got - want) / Math.max(1e-30
 
 describe("energyKwh vs math.fsum", () => {
   test.each(fixtures.cases.map((c, i) => [i, c] as const))("case %i", (_, { input, expected }) => {
-    const got = energyKwh(input.powerW, input.stepHours);
+    const got = energyKwh(input);
     expect(expected.energyKwh === 0 ? Math.abs(got) : rel(got, expected.energyKwh)).toBeLessThan(
       TOLERANCE,
     );
@@ -27,13 +27,13 @@ test("a year of minute data matches fsum (series regenerated from the xorshift32
     const m = i % 1440;
     power[i] = m >= dayStart && m < dayEnd ? (x / 4294967296) * scale : 0;
   }
-  expect(rel(energyKwh(power, stepHours), expected.energyKwh)).toBeLessThan(TOLERANCE);
+  expect(rel(energyKwh({ power, stepHours }), expected.energyKwh)).toBeLessThan(TOLERANCE);
   // A naive `+=` drifts past TOLERANCE on this series, so the test discriminates.
   expect(rel(fixtures.meta.year.naiveEnergyKwh, expected.energyKwh)).toBeGreaterThan(TOLERANCE);
 });
 
 test("rejects non-positive or non-finite stepHours", () => {
-  expect(() => energyKwh([1], 0)).toThrow(RangeError);
-  expect(() => energyKwh([1], Number.POSITIVE_INFINITY)).toThrow(RangeError);
-  expect(() => energyKwh([1], Number.NaN)).toThrow(RangeError);
+  expect(() => energyKwh({ power: [1], stepHours: 0 })).toThrow(RangeError);
+  expect(() => energyKwh({ power: [1], stepHours: Number.POSITIVE_INFINITY })).toThrow(RangeError);
+  expect(() => energyKwh({ power: [1], stepHours: Number.NaN })).toThrow(RangeError);
 });

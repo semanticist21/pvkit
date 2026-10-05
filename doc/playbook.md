@@ -128,3 +128,13 @@ tarball's `package.json` `exports` point at `./dist`.
 bench("name", fn).run(); })` in a `*.bench.ts` file, run by `pnpm bench` (`vitest bench --run`);
 `pnpm test` does not pick up `*.bench.ts`.
 **Apply:** copy `src/models/solarposition/spa/spa.bench.ts` as the template.
+
+## 2026-10-05 — root namespaces: `export * as <module>` breaks published types
+**Trap:** `src/index.ts` re-exporting every module as a namespace made rolldown hoist the
+namespace objects into the shared module chunks: `dist/index.d.ts` came out `export {}`, every
+`dist/models/<module>/index.d.ts` referenced an undefined `index_d_exports` and an untyped
+`rolldown-runtime.js`, and module subpaths leaked a stray runtime export `t`. In-repo tests and
+attw (bundler/node16 resolution) were all green.
+**Truth:** the root entry exports only `units.ts`; models are imported from their subpaths.
+**Apply:** keep `scripts/check-consumer.mjs` in CI — it installs the packed tarball and
+typechecks with `skipLibCheck: false`, which is what catches this class of bug.

@@ -9,7 +9,7 @@ export interface FuentesInput {
   /** Installed nominal operating cell temperature, °C (PVWatts: 45 rack, 49 roof); > 20. */
   noctInstalled: number;
   /** Module temperature returned by the previous step, °C. Before the first step: 20. */
-  prevModuleTemperature: number;
+  prevTempModule: number;
   /** `poaGlobal` of the previous step, W/m². Before the first step: 0. */
   prevPoaGlobal: number;
   /** Time since the previous step, seconds; > 0. For the first step use the second interval. */
@@ -60,12 +60,12 @@ const hConvection = (
 /**
  * One timestep of the Fuentes (1987) transient heat-balance model (used by PVWatts):
  * module temperature, °C, from this step's weather plus the previous step's state.
- * The caller iterates, feeding each result back as `prevModuleTemperature`.
+ * The caller iterates, feeding each result back as `prevTempModule`.
  *
  * @example
- * let prevModuleTemperature = 20, prevPoaGlobal = 0;
+ * let prevTempModule = 20, prevPoaGlobal = 0;
  * for (const w of weather) {
- *   prevModuleTemperature = fuentes({ ...w, noctInstalled: 45, prevModuleTemperature, prevPoaGlobal, timestepSeconds: 3600 });
+ *   prevTempModule = fuentes({ ...w, noctInstalled: 45, prevTempModule, prevPoaGlobal, timestepSeconds: 3600 });
  *   prevPoaGlobal = w.poaGlobal;
  * }
  */
@@ -75,7 +75,7 @@ export const fuentes = (input: FuentesInput): number => {
     tempAir,
     windSpeed,
     noctInstalled,
-    prevModuleTemperature,
+    prevTempModule,
     prevPoaGlobal,
     timestepSeconds,
     moduleHeight = 5,
@@ -121,7 +121,7 @@ export const fuentes = (input: FuentesInput): number => {
   const sun0 = prevPoaGlobal * absorption;
   const tsky = 0.68 * (0.0552 * tamb ** 1.5) + 0.32 * tamb; // eq. 24
   const windmod = windSpeed * (moduleHeight / windHeight) ** 0.2 + 1e-4; // eq. 22
-  const tmod0 = prevModuleTemperature + K;
+  const tmod0 = prevTempModule + K;
 
   // Heat losses depend on tmod → fixed-point iteration (10 passes, as the FORTRAN).
   let tmod = tmod0;

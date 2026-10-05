@@ -10,7 +10,7 @@ describe("sapm vs pvlib sapm_cell / sapm_module", () => {
   test.each(fixtures.cases.map((c, i) => [i, c] as const))("case %i", (_, { input, expected }) => {
     expect(Math.abs(sapmCell(input) - expected.cell), "cell").toBeLessThan(TOLERANCE);
     expect(Math.abs(sapmModule(input) - expected.module), "module").toBeLessThan(TOLERANCE);
-    const fromModule = sapmCellFromModule({ ...input, moduleTemperature: expected.module });
+    const fromModule = sapmCellFromModule({ ...input, tempModule: expected.module });
     expect(Math.abs(fromModule - expected.cell), "cellFromModule").toBeLessThan(TOLERANCE);
   });
 });

@@ -19,7 +19,7 @@ OUT = (Path(__file__).resolve().parents[2]
 
 
 def case(t, rh):
-    return {"input": {"temperature": t, "relativeHumidity": rh},
+    return {"input": {"tempAir": t, "relativeHumidity": rh},
             "expected": float(pvlib.atmosphere.gueymard94_pw(t, rh))}
 
 

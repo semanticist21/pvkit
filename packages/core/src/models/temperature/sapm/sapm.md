@@ -9,7 +9,7 @@ Steady-state back-surface and cell temperature from POA irradiance, air temperat
 - Back-surface (eq. 11): `Tm = E·exp(a + b·WS) + Ta`.
 - Cell (eq. 12): `Tc = Tm + (E / E₀)·ΔT`, `E₀ = irradRef` (default 1000 W/m²).
 
-`a` sets the low-wind upper limit, `b` (< 0) the cooling rate with wind; `ΔT` is the
+`a` sets the low-wind upper limit, `b` (< 0) the cooling rate with wind; `ΔT` (`tempDelta`) is the
 cell–back difference at E₀. Presets (`sapm-parameters.ts`, King Table 1): open-rack and
 close-mount glass/glass, open-rack glass/polymer, insulated-back glass/polymer.
 

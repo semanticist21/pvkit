@@ -41,7 +41,7 @@ def scenario(name, rain, *, cleaning_threshold=6.0, soiling_loss_rate=0.0015, gr
             inp["manualWash"] = True
         steps.append({"input": inp, "expected": {"soilingLoss": float(r.iloc[i])}})
     params = {"cleaningThreshold": cleaning_threshold, "soilingLossRate": soiling_loss_rate,
-              "gracePeriod": grace_period, "maxSoiling": max_soiling}
+              "gracePeriodDays": grace_period, "maxSoiling": max_soiling}
     return {"name": name, "params": params, "initialSoiling": initial_soiling,
             "rainAccumPeriodHours": rain_accum_period, "steps": steps}
 

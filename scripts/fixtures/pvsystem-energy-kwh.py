@@ -47,7 +47,7 @@ year["numpyEnergyKwh"] = float(np.sum(ys)) * year["stepHours"] / 1000
 
 
 def case(power, step):
-    return {"input": {"powerW": power, "stepHours": step},
+    return {"input": {"power": power, "stepHours": step},
             "expected": {"energyKwh": math.fsum(power) * step / 1000}}
 
 
@@ -65,7 +65,7 @@ for _ in range(60):
     step = float(rng.choice([1 / 60, 5 / 60, 0.25, 0.5, 1.0]))
     cases.append(case([float(v) for v in rng.uniform(-20, 1e6, n)], step))
 
-meta = {"reference": f"math.fsum(powerW) * stepHours / 1000 (numpy/pvlib {pvlib.__version__} env)",
+meta = {"reference": f"math.fsum(power) * stepHours / 1000 (numpy/pvlib {pvlib.__version__} env)",
         "year": year}
 OUT.parent.mkdir(exist_ok=True)
 OUT.write_text(json.dumps({"meta": meta, "cases": cases}) + "\n")

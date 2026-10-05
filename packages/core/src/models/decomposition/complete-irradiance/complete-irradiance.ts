@@ -11,7 +11,7 @@ export interface CompleteIrradianceInput {
   /** Direct normal irradiance, W/m². */
   dni?: number;
   /** Clear-sky DNI, W/m²; only used when solving for `dni` (limits it near the horizon). */
-  dniClear?: number;
+  dniClearsky?: number;
 }
 
 /** All three components, W/m². */
@@ -26,22 +26,27 @@ export interface CompleteIrradianceResult {
  * (pvlib `irradiance.complete_irradiance`, one instant).
  *
  * Solving for DNI follows pvlib `irradiance.dni`: negative DNI → NaN; non-zero DNI at
- * zenith ≥ 88° → NaN; with `dniClear`, DNI above `1.1 · dniClear` at zenith in [80°, 88°)
- * is clipped to that limit. Solving for GHI or DHI applies no guard.
+ * zenith ≥ 88° → NaN; with `dniClearsky`, DNI above `1.1 · dniClearsky` at zenith in
+ * [80°, 88°) is clipped to that limit. Solving for GHI or DHI applies no guard.
  *
  * @throws RangeError unless exactly one of `ghi`, `dhi`, `dni` is omitted.
  */
 export const completeIrradiance = (input: CompleteIrradianceInput): CompleteIrradianceResult => {
-  const { solarZenith, ghi, dhi, dni, dniClear } = input;
+  const { solarZenith, ghi, dhi, dni, dniClearsky } = input;
   const cosZ = Math.cos(solarZenith * D2R);
   if (ghi !== undefined && dhi !== undefined && dni === undefined) {
     let d = (ghi - dhi) / cosZ;
     if (d < 0) d = Number.NaN;
     // d is exactly 0 iff ghi === dhi (inputs, not a computed float).
     if (solarZenith >= 88 && ghi !== dhi) d = Number.NaN;
-    // `>` (not Math.min) so a NaN dniClear leaves d untouched, as pvlib's mask does.
-    if (dniClear !== undefined && solarZenith >= 80 && solarZenith < 88 && d > dniClear * 1.1) {
-      d = dniClear * 1.1;
+    // `>` (not Math.min) so a NaN dniClearsky leaves d untouched, as pvlib's mask does.
+    if (
+      dniClearsky !== undefined &&
+      solarZenith >= 80 &&
+      solarZenith < 88 &&
+      d > dniClearsky * 1.1
+    ) {
+      d = dniClearsky * 1.1;
     }
     return { ghi, dhi, dni: d };
   }

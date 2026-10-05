@@ -17,7 +17,7 @@ export interface IneichenInput {
 }
 
 /** Clear-sky irradiance components, in the unit of `dniExtra` (W/m²). */
-export interface ClearSkyIrradiance {
+export interface ClearskyIrradiance {
   /** Global horizontal irradiance. */
   ghi: number;
   /** Direct normal irradiance. */
@@ -36,7 +36,7 @@ const fmax = (a: number, b: number) => (Number.isNaN(a) ? b : Math.max(a, b));
  * @example
  * ineichen({ apparentZenith: 30, airmassAbsolute: 1.154, linkeTurbidity: 3 });
  */
-export const ineichen = (input: IneichenInput): ClearSkyIrradiance => {
+export const ineichen = (input: IneichenInput): ClearskyIrradiance => {
   const {
     apparentZenith,
     airmassAbsolute: am,

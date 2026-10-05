@@ -5,420 +5,420 @@
   "cases": [
     {
       "input": {
-        "temperature": 20.0,
+        "tempAir": 20.0,
         "relativeHumidity": 50.0
       },
       "expected": 1.867349387403173
     },
     {
       "input": {
-        "temperature": 0.0,
+        "tempAir": 0.0,
         "relativeHumidity": 0.0
       },
       "expected": 0.1
     },
     {
       "input": {
-        "temperature": -40.0,
+        "tempAir": -40.0,
         "relativeHumidity": 100.0
       },
       "expected": 0.22683024657612827
     },
     {
       "input": {
-        "temperature": -40.0,
+        "tempAir": -40.0,
         "relativeHumidity": 5.0
       },
       "expected": 0.1
     },
     {
       "input": {
-        "temperature": 50.0,
+        "tempAir": 50.0,
         "relativeHumidity": 100.0
       },
       "expected": 19.088795473126474
     },
     {
       "input": {
-        "temperature": 50.0,
+        "tempAir": 50.0,
         "relativeHumidity": 1.0
       },
       "expected": 0.19088795473126471
     },
     {
       "input": {
-        "temperature": 25.0,
+        "tempAir": 25.0,
         "relativeHumidity": 100.0
       },
       "expected": 5.012867333165027
     },
     {
       "input": {
-        "temperature": 35.0,
+        "tempAir": 35.0,
         "relativeHumidity": 80.0
       },
       "expected": 7.039059007000119
     },
     {
       "input": {
-        "temperature": -10.0,
+        "tempAir": -10.0,
         "relativeHumidity": 30.0
       },
       "expected": 0.20011778449174503
     },
     {
       "input": {
-        "temperature": 10.0,
+        "tempAir": 10.0,
         "relativeHumidity": 0.5
       },
       "expected": 0.1
     },
     {
       "input": {
-        "temperature": -9.46589878164277,
+        "tempAir": -9.46589878164277,
         "relativeHumidity": 40.29432356259347
       },
       "expected": 0.2755568738750135
     },
     {
       "input": {
-        "temperature": -23.16950443414672,
+        "tempAir": -23.16950443414672,
         "relativeHumidity": 44.817417274143324
       },
       "expected": 0.18017044452730785
     },
     {
       "input": {
-        "temperature": 16.51469757443156,
+        "tempAir": 16.51469757443156,
         "relativeHumidity": 76.12533005379191
       },
       "expected": 2.306156708300631
     },
     {
       "input": {
-        "temperature": 6.8456928032277435,
+        "tempAir": 6.8456928032277435,
         "relativeHumidity": 49.71726745074459
       },
       "expected": 0.8367198945106388
     },
     {
       "input": {
-        "temperature": -13.913613149452713,
+        "tempAir": -13.913613149452713,
         "relativeHumidity": 22.99779838578545
       },
       "expected": 0.1293080013009058
     },
     {
       "input": {
-        "temperature": 14.3512662996518,
+        "tempAir": 14.3512662996518,
         "relativeHumidity": 4.692229810346515
       },
       "expected": 0.12467549848446961
     },
     {
       "input": {
-        "temperature": -18.46779556094741,
+        "tempAir": -18.46779556094741,
         "relativeHumidity": 84.12449867480267
       },
       "expected": 0.3969955521645124
     },
     {
       "input": {
-        "temperature": -31.899248804580246,
+        "tempAir": -31.899248804580246,
         "relativeHumidity": 96.39691427712324
       },
       "expected": 0.2930190891630257
     },
     {
       "input": {
-        "temperature": -38.3743785721701,
+        "tempAir": -38.3743785721701,
         "relativeHumidity": 87.47631118500752
       },
       "expected": 0.2115164945599341
     },
     {
       "input": {
-        "temperature": 15.799322051521145,
+        "tempAir": 15.799322051521145,
         "relativeHumidity": 21.54091953722669
       },
       "expected": 0.6249228926958322
     },
     {
       "input": {
-        "temperature": 37.03262834209171,
+        "tempAir": 37.03262834209171,
         "relativeHumidity": 34.53496645298352
       },
       "expected": 3.391333880690324
     },
     {
       "input": {
-        "temperature": 1.0026560245703642,
+        "tempAir": 1.0026560245703642,
         "relativeHumidity": 70.35445390895968
       },
       "expected": 0.8372113727102944
     },
     {
       "input": {
-        "temperature": -9.800079229081891,
+        "tempAir": -9.800079229081891,
         "relativeHumidity": 85.68389262302608
       },
       "expected": 0.576883890967243
     },
     {
       "input": {
-        "temperature": -39.9358275146993,
+        "tempAir": -39.9358275146993,
         "relativeHumidity": 77.1242999886708
       },
       "expected": 0.1753935892364912
     },
     {
       "input": {
-        "temperature": -27.079086820671108,
+        "tempAir": -27.079086820671108,
         "relativeHumidity": 72.44886454135047
       },
       "expected": 0.257041198892187
     },
     {
       "input": {
-        "temperature": -34.65340380117519,
+        "tempAir": -34.65340380117519,
         "relativeHumidity": 62.66204372576413
       },
       "expected": 0.1735445756889569
     },
     {
       "input": {
-        "temperature": 18.918022701809875,
+        "tempAir": 18.918022701809875,
         "relativeHumidity": 6.808610088039957
       },
       "expected": 0.23835943961268785
     },
     {
       "input": {
-        "temperature": -10.310450160978283,
+        "tempAir": -10.310450160978283,
         "relativeHumidity": 62.85591447330716
       },
       "expected": 0.4133381968366549
     },
     {
       "input": {
-        "temperature": -18.313481684982563,
+        "tempAir": -18.313481684982563,
         "relativeHumidity": 51.16920412018092
       },
       "expected": 0.24282293514217598
     },
     {
       "input": {
-        "temperature": 41.203020047213386,
+        "tempAir": 41.203020047213386,
         "relativeHumidity": 27.599362381133318
       },
       "expected": 3.3787013470765155
     },
     {
       "input": {
-        "temperature": -22.02169091289172,
+        "tempAir": -22.02169091289172,
         "relativeHumidity": 55.520533207209944
       },
       "expected": 0.23178153491504683
     },
     {
       "input": {
-        "temperature": -8.653156382139752,
+        "tempAir": -8.653156382139752,
         "relativeHumidity": 49.09224064114035
       },
       "expected": 0.3489208033989444
     },
     {
       "input": {
-        "temperature": 7.42456052768545,
+        "tempAir": 7.42456052768545,
         "relativeHumidity": 68.9562566712924
       },
       "expected": 1.2018734242942648
     },
     {
       "input": {
-        "temperature": 7.839406869451244,
+        "tempAir": 7.839406869451244,
         "relativeHumidity": 70.45403204876493
       },
       "expected": 1.2592505696761356
     },
     {
       "input": {
-        "temperature": -30.59569108710657,
+        "tempAir": -30.59569108710657,
         "relativeHumidity": 74.97282660564419
       },
       "expected": 0.2377952355303273
     },
     {
       "input": {
-        "temperature": -11.282696182820235,
+        "tempAir": -11.282696182820235,
         "relativeHumidity": 5.717825851261571
       },
       "expected": 0.1
     },
     {
       "input": {
-        "temperature": -26.42586544140059,
+        "tempAir": -26.42586544140059,
         "relativeHumidity": 48.04544623520543
       },
       "expected": 0.17402159030480088
     },
     {
       "input": {
-        "temperature": 24.006367509498325,
+        "tempAir": 24.006367509498325,
         "relativeHumidity": 28.032183259518504
       },
       "expected": 1.326218043570367
     },
     {
       "input": {
-        "temperature": 1.708746006039139,
+        "tempAir": 1.708746006039139,
         "relativeHumidity": 40.38833017698246
       },
       "expected": 0.5007137016592671
     },
     {
       "input": {
-        "temperature": -12.946115892487699,
+        "tempAir": -12.946115892487699,
         "relativeHumidity": 8.576913922675045
       },
       "expected": 0.1
     },
     {
       "input": {
-        "temperature": 21.48603975702866,
+        "tempAir": 21.48603975702866,
         "relativeHumidity": 29.43100038197035
       },
       "expected": 1.2006080397351455
     },
     {
       "input": {
-        "temperature": 26.29931576222734,
+        "tempAir": 26.29931576222734,
         "relativeHumidity": 89.35602737373559
       },
       "expected": 4.828896438215927
     },
     {
       "input": {
-        "temperature": -27.77412267741178,
+        "tempAir": -27.77412267741178,
         "relativeHumidity": 90.81554603089084
       },
       "expected": 0.31519405303729037
     },
     {
       "input": {
-        "temperature": 16.84810932010445,
+        "tempAir": 16.84810932010445,
         "relativeHumidity": 2.4924520026773256
       },
       "expected": 0.1
     },
     {
       "input": {
-        "temperature": 45.30575571534293,
+        "tempAir": 45.30575571534293,
         "relativeHumidity": 95.55751980903764
       },
       "expected": 14.440716896249814
     },
     {
       "input": {
-        "temperature": -9.03758608476626,
+        "tempAir": -9.03758608476626,
         "relativeHumidity": 82.74721416078265
       },
       "expected": 0.5774310375272499
     },
     {
       "input": {
-        "temperature": -39.7428968933928,
+        "tempAir": -39.7428968933928,
         "relativeHumidity": 3.927688407213481
       },
       "expected": 0.1
     },
     {
       "input": {
-        "temperature": -1.5257803376348,
+        "tempAir": -1.5257803376348,
         "relativeHumidity": 19.557061349382167
       },
       "expected": 0.20156935620508007
     },
     {
       "input": {
-        "temperature": -11.703577572670643,
+        "tempAir": -11.703577572670643,
         "relativeHumidity": 0.8004156962616915
       },
       "expected": 0.1
     },
     {
       "input": {
-        "temperature": 35.98508164100538,
+        "tempAir": 35.98508164100538,
         "relativeHumidity": 2.2078855844339995
       },
       "expected": 0.20492555722884728
     },
     {
       "input": {
-        "temperature": -27.754640189158025,
+        "tempAir": -27.754640189158025,
         "relativeHumidity": 68.32539585471827
       },
       "expected": 0.2372836933976364
     },
     {
       "input": {
-        "temperature": 10.335741996616258,
+        "tempAir": 10.335741996616258,
         "relativeHumidity": 45.51957904123467
       },
       "expected": 0.9470132686369868
     },
     {
       "input": {
-        "temperature": 36.740905084247174,
+        "tempAir": 36.740905084247174,
         "relativeHumidity": 11.473021530455018
       },
       "expected": 1.1091409055553128
     },
     {
       "input": {
-        "temperature": -2.4079242829610314,
+        "tempAir": -2.4079242829610314,
         "relativeHumidity": 22.360992773146172
       },
       "expected": 0.2194696239066166
     },
     {
       "input": {
-        "temperature": -2.347116002148717,
+        "tempAir": -2.347116002148717,
         "relativeHumidity": 82.87570378180305
       },
       "expected": 0.8161399205640075
     },
     {
       "input": {
-        "temperature": -1.9327725576744725,
+        "tempAir": -1.9327725576744725,
         "relativeHumidity": 12.364329813148645
       },
       "expected": 0.12458198988421192
     },
     {
       "input": {
-        "temperature": 48.00396532831494,
+        "tempAir": 48.00396532831494,
         "relativeHumidity": 77.52235696788561
       },
       "expected": 13.411488730094941
     },
     {
       "input": {
-        "temperature": 41.648226581471654,
+        "tempAir": 41.648226581471654,
         "relativeHumidity": 36.61556911952687
       },
       "expected": 4.587453831414248
     },
     {
       "input": {
-        "temperature": -5.265505887747585,
+        "tempAir": -5.265505887747585,
         "relativeHumidity": 86.98524153673621
       },
       "expected": 0.7325090521207877
     },
     {
       "input": {
-        "temperature": -1.1523404236785317,
+        "tempAir": -1.1523404236785317,
         "relativeHumidity": 96.5070101370922
       },
       "expected": 1.0156878174416242

@@ -15,11 +15,13 @@ describe("specificYield vs IEC 61724-1 formula", () => {
 });
 
 test("hand-checkable example", () => {
-  expect(specificYield({ energy: [400, 600], pdc0: 5 })).toBe(200);
+  expect(specificYield({ energy: [400, 600], pdc0Kw: 5 })).toBe(200);
 });
 
-test("rejects non-positive or non-finite pdc0", () => {
-  expect(() => specificYield({ energy: [1], pdc0: 0 })).toThrow(RangeError);
-  expect(() => specificYield({ energy: [1], pdc0: Number.POSITIVE_INFINITY })).toThrow(RangeError);
-  expect(() => specificYield({ energy: [1], pdc0: Number.NaN })).toThrow(RangeError);
+test("rejects non-positive or non-finite pdc0Kw", () => {
+  expect(() => specificYield({ energy: [1], pdc0Kw: 0 })).toThrow(RangeError);
+  expect(() => specificYield({ energy: [1], pdc0Kw: Number.POSITIVE_INFINITY })).toThrow(
+    RangeError,
+  );
+  expect(() => specificYield({ energy: [1], pdc0Kw: Number.NaN })).toThrow(RangeError);
 });

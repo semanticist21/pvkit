@@ -31,14 +31,14 @@ def ms(*args):
     return int(datetime(*args, tzinfo=timezone.utc).timestamp() * 1000)
 
 
-def case(time_ms, lat, lon, elevation=0.0, pressure=101325.0, temperature=12.0, delta_t=67.0):
+def case(time_ms, lat, lon, altitude=0.0, pressure=101325.0, temp_air=12.0, delta_t=67.0):
     t = pd.DatetimeIndex([pd.Timestamp(time_ms, unit="ms", tz="UTC")])
     r = pvlib.solarposition.spa_python(
-        t, lat, lon, altitude=elevation, pressure=pressure, temperature=temperature,
+        t, lat, lon, altitude=altitude, pressure=pressure, temperature=temp_air,
         delta_t=delta_t, atmos_refract=0.5667, how="numpy",
     ).iloc[0]
-    inp = dict(timeMs=time_ms, latitude=lat, longitude=lon, elevation=elevation,
-               pressure=pressure, temperature=temperature, deltaT=delta_t)
+    inp = dict(timeMs=time_ms, latitude=lat, longitude=lon, altitude=altitude,
+               pressure=pressure, tempAir=temp_air, deltaT=delta_t)
     return {"input": inp, "expected": {v: float(r[k]) for k, v in FIELDS.items()}}
 
 

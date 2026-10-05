@@ -45,11 +45,11 @@ def day(n):
 # ---- performance-ratio ------------------------------------------------------------------
 def pr(energy, h, pdc0, g_ref=1000.0, t=None, gamma=None, t_ref=None):
     k = pdc0 / (g_ref / 1000)
-    inp = {"energy": fl(energy), "poaIrradiation": fl(h), "pdc0": pdc0, "gRef": g_ref}
+    inp = {"energy": fl(energy), "poaIrradiation": fl(h), "pdc0Kw": pdc0, "irradRef": g_ref}
     if t is None:
         den = math.fsum(h) * k
     else:
-        inp |= {"cellTemperature": fl(t), "gammaPdc": gamma, "cellTemperatureRef": t_ref}
+        inp |= {"tempCell": fl(t), "gammaPdc": gamma, "tempRef": t_ref}
         den = math.fsum(np.asarray(h) * (1 + gamma * (np.asarray(t) - t_ref))) * k
     num = math.fsum(energy)
     return {"input": inp, "expected": {"performanceRatio": num / den if den != 0 else None}}
@@ -84,7 +84,7 @@ write("performance-ratio", cases)
 
 # ---- specific-yield ---------------------------------------------------------------------
 def sy(energy, pdc0):
-    return {"input": {"energy": fl(energy), "pdc0": pdc0},
+    return {"input": {"energy": fl(energy), "pdc0Kw": pdc0},
             "expected": {"specificYield": math.fsum(energy) / pdc0}}
 
 
@@ -97,7 +97,7 @@ write("specific-yield", cases)
 
 # ---- capacity-factor --------------------------------------------------------------------
 def cf(energy, nameplate, hours):
-    return {"input": {"energy": fl(energy), "nameplate": nameplate, "hours": hours},
+    return {"input": {"energy": fl(energy), "nameplateKw": nameplate, "hours": hours},
             "expected": {"capacityFactor": math.fsum(energy) / (nameplate * hours)}}
 
 

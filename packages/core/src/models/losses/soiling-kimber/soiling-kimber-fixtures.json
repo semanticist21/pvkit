@@ -9,7 +9,7 @@
       "params": {
         "cleaningThreshold": 6.0,
         "soilingLossRate": 0.0015,
-        "gracePeriod": 14,
+        "gracePeriodDays": 14,
         "maxSoiling": 0.3
       },
       "initialSoiling": 0.0,
@@ -1372,7 +1372,7 @@
       "params": {
         "cleaningThreshold": 6.0,
         "soilingLossRate": 0.002,
-        "gracePeriod": 2,
+        "gracePeriodDays": 2,
         "maxSoiling": 0.3
       },
       "initialSoiling": 0.0,
@@ -5705,7 +5705,7 @@
       "params": {
         "cleaningThreshold": 6.0,
         "soilingLossRate": 0.003,
-        "gracePeriod": 5,
+        "gracePeriodDays": 5,
         "maxSoiling": 0.05
       },
       "initialSoiling": 0.0,
@@ -6798,7 +6798,7 @@
       "params": {
         "cleaningThreshold": 6.0,
         "soilingLossRate": 0.0015,
-        "gracePeriod": 14,
+        "gracePeriodDays": 14,
         "maxSoiling": 0.3
       },
       "initialSoiling": 0.1,
@@ -7353,7 +7353,7 @@
       "params": {
         "cleaningThreshold": 6.0,
         "soilingLossRate": 0.0015,
-        "gracePeriod": 1,
+        "gracePeriodDays": 1,
         "maxSoiling": 0.3
       },
       "initialSoiling": 0.2,
@@ -8230,7 +8230,7 @@
       "params": {
         "cleaningThreshold": 6.0,
         "soilingLossRate": 0.0015,
-        "gracePeriod": 3,
+        "gracePeriodDays": 3,
         "maxSoiling": 0.3
       },
       "initialSoiling": 0.4,
@@ -8513,7 +8513,7 @@
       "params": {
         "cleaningThreshold": 2.0,
         "soilingLossRate": 0.01,
-        "gracePeriod": 1,
+        "gracePeriodDays": 1,
         "maxSoiling": 0.3
       },
       "initialSoiling": 0.0,

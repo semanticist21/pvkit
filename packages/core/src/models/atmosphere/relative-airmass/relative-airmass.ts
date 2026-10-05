@@ -15,7 +15,7 @@ export interface RelativeAirmassInput {
    * Solar zenith angle, degrees. Apparent (refraction-corrected, sea level) zenith for
    * every model except `youngirvine1967` and `young1994`, which take the true zenith.
    */
-  zenith: number;
+  solarZenith: number;
   /** Air-mass model. Default `"kastenyoung1989"`. */
   model?: AirmassModel;
 }
@@ -24,14 +24,14 @@ const D2R = Math.PI / 180;
 
 /**
  * Relative (not pressure-adjusted) optical air mass at sea level. Unitless; `NaN` for
- * zenith > 90° (sun below the horizon), as pvlib.
+ * solarZenith > 90° (sun below the horizon), as pvlib.
  *
  * @example
- * relativeAirmass({ zenith: 60 }); // ≈ 1.9943 (Kasten & Young 1989)
+ * relativeAirmass({ solarZenith: 60 }); // ≈ 1.9943 (Kasten & Young 1989)
  */
 export const relativeAirmass = (input: RelativeAirmassInput): number => {
-  const { zenith, model = "kastenyoung1989" } = input;
-  const z = zenith > 90 ? Number.NaN : zenith;
+  const { solarZenith, model = "kastenyoung1989" } = input;
+  const z = solarZenith > 90 ? Number.NaN : solarZenith;
   const cz = Math.cos(z * D2R);
   switch (model) {
     case "kastenyoung1989":

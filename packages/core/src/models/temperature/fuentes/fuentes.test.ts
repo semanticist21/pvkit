@@ -15,9 +15,9 @@ test("chained over each series (own prior state) stays within tolerance of pvlib
   let series = -1;
   let prev = 0;
   for (const { series: s, input, expected } of fixtures.cases) {
-    const prevModuleTemperature = s === series ? prev : input.prevModuleTemperature;
+    const prevTempModule = s === series ? prev : input.prevTempModule;
     series = s;
-    prev = fuentes({ ...input, prevModuleTemperature });
+    prev = fuentes({ ...input, prevTempModule });
     expect(Math.abs(prev - expected.moduleTemperature)).toBeLessThan(TOLERANCE);
   }
 });
@@ -33,7 +33,7 @@ test("settles at installed NOCT under NOCT conditions (Fuentes 1987 calibration)
   };
   let t = 20;
   for (let i = 0; i < 48; i++) {
-    t = fuentes({ ...step, prevModuleTemperature: t, prevPoaGlobal: 800, timestepSeconds: 3600 });
+    t = fuentes({ ...step, prevTempModule: t, prevPoaGlobal: 800, timestepSeconds: 3600 });
   }
   expect(Math.abs(t - 45)).toBeLessThan(0.05);
 });
@@ -44,7 +44,7 @@ test("rejects nonsense inputs", () => {
     tempAir: 20,
     windSpeed: 1,
     noctInstalled: 45,
-    prevModuleTemperature: 20,
+    prevTempModule: 20,
     prevPoaGlobal: 0,
     timestepSeconds: 3600,
   };
@@ -56,13 +56,13 @@ test("rejects nonsense inputs", () => {
 test("optional inputs default to pvlib's (series 0 is generated with pvlib defaults)", () => {
   for (const { input, expected } of fixtures.cases.filter((c) => c.series === 0)) {
     const { poaGlobal, tempAir, windSpeed, noctInstalled } = input;
-    const { prevModuleTemperature, prevPoaGlobal, timestepSeconds } = input;
+    const { prevTempModule, prevPoaGlobal, timestepSeconds } = input;
     const got = fuentes({
       poaGlobal,
       tempAir,
       windSpeed,
       noctInstalled,
-      prevModuleTemperature,
+      prevTempModule,
       prevPoaGlobal,
       timestepSeconds,
     });

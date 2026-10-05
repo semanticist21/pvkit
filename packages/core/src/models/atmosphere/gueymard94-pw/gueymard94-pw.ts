@@ -1,7 +1,7 @@
 /** Inputs for {@link gueymard94Pw}. */
 export interface Gueymard94PwInput {
   /** Ambient air temperature at the surface, °C. */
-  temperature: number;
+  tempAir: number;
   /** Relative humidity at the surface, % (0–100). */
   relativeHumidity: number;
 }
@@ -11,11 +11,11 @@ export interface Gueymard94PwInput {
  * cm. Floored at 0.1 cm, as pvlib.
  *
  * @example
- * gueymard94Pw({ temperature: 20, relativeHumidity: 50 }); // ≈ 1.87 cm
+ * gueymard94Pw({ tempAir: 20, relativeHumidity: 50 }); // ≈ 1.87 cm
  */
 export const gueymard94Pw = (input: Gueymard94PwInput): number => {
-  const { temperature, relativeHumidity } = input;
-  const t = temperature + 273.15;
+  const { tempAir, relativeHumidity } = input;
+  const t = tempAir + 273.15;
   const theta = t / 273.15;
   const x = 100 / t;
   const pw =

@@ -23,7 +23,7 @@ PRESETS = TEMPERATURE_MODEL_PARAMETERS["sapm"]
 
 
 def case(poa, temp_air, wind, a, b, delta_t, irrad_ref=1000.0):
-    inp = dict(poaGlobal=poa, tempAir=temp_air, windSpeed=wind, a=a, b=b, deltaT=delta_t,
+    inp = dict(poaGlobal=poa, tempAir=temp_air, windSpeed=wind, a=a, b=b, tempDelta=delta_t,
                irradRef=irrad_ref)
     exp = dict(
         cell=float(sapm_cell(poa, temp_air, wind, a, b, delta_t, irrad_ref=irrad_ref)),
@@ -54,7 +54,7 @@ meta = {"reference": f"pvlib.temperature.sapm_cell / sapm_module @ pvlib {pvlib.
 (DIR / "sapm-fixtures.json").write_text(json.dumps({"meta": meta, "cases": cases}, indent=2) + "\n")
 
 rows = "\n".join(
-    f"  {camel(k)}: {{ a: {float(v['a'])!r}, b: {float(v['b'])!r}, deltaT: {v['deltaT']!r} }},"
+    f"  {camel(k)}: {{ a: {float(v['a'])!r}, b: {float(v['b'])!r}, tempDelta: {v['deltaT']!r} }},"
     for k, v in PRESETS.items()
 )
 (DIR / "sapm-parameters.ts").write_text(f'''/**

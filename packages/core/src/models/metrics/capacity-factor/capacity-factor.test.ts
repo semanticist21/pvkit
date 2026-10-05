@@ -16,13 +16,13 @@ describe("capacityFactor vs NREL formula", () => {
 
 test("hand-checkable example", () => {
   // 5 kW running at 20% for a year.
-  expect(capacityFactor({ energy: [8760], nameplate: 5, hours: 8760 })).toBeCloseTo(0.2, 15);
+  expect(capacityFactor({ energy: [8760], nameplateKw: 5, hours: 8760 })).toBeCloseTo(0.2, 15);
 });
 
-test("rejects non-positive or non-finite nameplate / hours", () => {
-  expect(() => capacityFactor({ energy: [1], nameplate: 0, hours: 1 })).toThrow(RangeError);
-  expect(() => capacityFactor({ energy: [1], nameplate: 1, hours: -1 })).toThrow(RangeError);
-  expect(() => capacityFactor({ energy: [1], nameplate: 1, hours: Number.NaN })).toThrow(
+test("rejects non-positive or non-finite nameplateKw / hours", () => {
+  expect(() => capacityFactor({ energy: [1], nameplateKw: 0, hours: 1 })).toThrow(RangeError);
+  expect(() => capacityFactor({ energy: [1], nameplateKw: 1, hours: -1 })).toThrow(RangeError);
+  expect(() => capacityFactor({ energy: [1], nameplateKw: 1, hours: Number.NaN })).toThrow(
     RangeError,
   );
 });

@@ -17,52 +17,55 @@ describe("performanceRatio vs IEC 61724-1 / Dierauf formula", () => {
 
 test("hand-checkable examples", () => {
   // 800 kWh from 500 kWp under 2 kWh/m²: Y_f = 1.6 h, Y_r = 2 h.
-  expect(performanceRatio({ energy: [800], poaIrradiation: [2], pdc0: 500 })).toBeCloseTo(0.8, 15);
+  expect(performanceRatio({ energy: [800], poaIrradiation: [2], pdc0Kw: 500 })).toBeCloseTo(
+    0.8,
+    15,
+  );
   // Hot interval (T > T_ref) lowers the expectation: 1 + (-0.004)(50 - 25) = 0.9.
   const pr = performanceRatio({
     energy: [0.72],
     poaIrradiation: [1],
-    pdc0: 1,
-    cellTemperature: [50],
+    pdc0Kw: 1,
+    tempCell: [50],
     gammaPdc: -0.004,
-    cellTemperatureRef: 25,
+    tempRef: 25,
   });
   expect(pr).toBeCloseTo(0.8, 15);
 });
 
 test("Dierauf correction cancels when T_ref is the period's own weighted average", () => {
   const poaIrradiation = [0.1, 0.5, 0.9, 0.4];
-  const cellTemperature = [12, 31, 48, 27];
+  const tempCell = [12, 31, 48, 27];
   const energy = [0.08, 0.41, 0.66, 0.33];
-  const cellTemperatureRef = irradianceWeightedTemperature({ poaIrradiation, cellTemperature });
-  expect(cellTemperatureRef).toBeCloseTo((1.2 + 15.5 + 43.2 + 10.8) / 1.9, 12);
-  const plain = performanceRatio({ energy, poaIrradiation, pdc0: 1 });
+  const tempRef = irradianceWeightedTemperature({ poaIrradiation, tempCell });
+  expect(tempRef).toBeCloseTo((1.2 + 15.5 + 43.2 + 10.8) / 1.9, 12);
+  const plain = performanceRatio({ energy, poaIrradiation, pdc0Kw: 1 });
   const corrected = performanceRatio({
     energy,
     poaIrradiation,
-    pdc0: 1,
-    cellTemperature,
+    pdc0Kw: 1,
+    tempCell,
     gammaPdc: -0.0045,
-    cellTemperatureRef,
+    tempRef,
   });
   expect(rel(corrected, plain)).toBeLessThan(TOLERANCE);
 });
 
 test("rejects bad inputs", () => {
-  const base = { energy: [1], poaIrradiation: [1], pdc0: 1 };
-  expect(() => performanceRatio({ ...base, pdc0: 0 })).toThrow(RangeError);
-  expect(() => performanceRatio({ ...base, pdc0: Number.NaN })).toThrow(RangeError);
-  expect(() => performanceRatio({ ...base, gRef: -1 })).toThrow(RangeError);
+  const base = { energy: [1], poaIrradiation: [1], pdc0Kw: 1 };
+  expect(() => performanceRatio({ ...base, pdc0Kw: 0 })).toThrow(RangeError);
+  expect(() => performanceRatio({ ...base, pdc0Kw: Number.NaN })).toThrow(RangeError);
+  expect(() => performanceRatio({ ...base, irradRef: -1 })).toThrow(RangeError);
   expect(() => performanceRatio({ ...base, gammaPdc: -0.004 })).toThrow(RangeError);
   expect(() =>
     performanceRatio({
       ...base,
-      cellTemperature: [1, 2],
+      tempCell: [1, 2],
       gammaPdc: -0.004,
-      cellTemperatureRef: 25,
+      tempRef: 25,
     }),
   ).toThrow(RangeError);
-  expect(() =>
-    irradianceWeightedTemperature({ poaIrradiation: [1], cellTemperature: [1, 2] }),
-  ).toThrow(RangeError);
+  expect(() => irradianceWeightedTemperature({ poaIrradiation: [1], tempCell: [1, 2] })).toThrow(
+    RangeError,
+  );
 });

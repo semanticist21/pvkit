@@ -26,7 +26,7 @@ const rho = (x: number, y: number) => ((x - y) / (x + y)) ** 2;
  * with an optional anti-reflective coating layer. 0 for light from behind the plane.
  *
  * @example
- * physical({ aoi: 60 }); // ≈ 0.9302
+ * physical({ aoi: 60 }); // ≈ 0.9460
  */
 export const physical = ({ aoi, n = 1.526, k = 4, l = 0.002, nAr }: PhysicalInput): number => {
   const n1 = 1;

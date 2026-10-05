@@ -24,7 +24,7 @@ export interface SoilingKimberInput {
   /** Fraction of energy lost per day of soiling. Default 0.0015. */
   soilingLossRate?: number;
   /** Days after a cleaning rain during which the ground is damp and no soiling builds. Default 14. */
-  gracePeriod?: number;
+  gracePeriodDays?: number;
   /** Maximum fraction of energy lost to soiling. Default 0.3. */
   maxSoiling?: number;
 }
@@ -48,12 +48,20 @@ const MS_PER_DAY = 86_400_000;
  *
  * Iterate over a series, feeding the returned state back:
  * @example
- * let s = { accumulatedSoiling: initialSoiling, timeSinceRainMs: Infinity };
- * for (const [i, rain24h] of window24h.entries()) {
- *   s = soilingKimber({ rainfallAccumulated: rain24h, timestepMs: i === 0 ? 0 : stepMs,
- *     prevAccumulatedSoiling: s.accumulatedSoiling, prevTimeSinceRainMs: s.timeSinceRainMs });
- *   loss[i] = s.soilingLoss;
+ * const rain24h = [0, 0, 10, 0]; // trailing 24 h rainfall per daily step, mm
+ * const loss: number[] = [];
+ * let state = { accumulatedSoiling: 0.01, timeSinceRainMs: Number.POSITIVE_INFINITY };
+ * for (const [i, rain] of rain24h.entries()) {
+ *   const step = soilingKimber({
+ *     rainfallAccumulated: rain,
+ *     timestepMs: i === 0 ? 0 : 86_400_000,
+ *     prevAccumulatedSoiling: state.accumulatedSoiling,
+ *     prevTimeSinceRainMs: state.timeSinceRainMs,
+ *   });
+ *   loss.push(step.soilingLoss);
+ *   state = step;
  * }
+ * // loss ≈ [0.01, 0.0115, 0, 0]
  */
 export const soilingKimber = (input: SoilingKimberInput): SoilingKimberResult => {
   const {
@@ -64,7 +72,7 @@ export const soilingKimber = (input: SoilingKimberInput): SoilingKimberResult =>
     manualWash = false,
     cleaningThreshold = 6,
     soilingLossRate = 0.0015,
-    gracePeriod = 14,
+    gracePeriodDays = 14,
     maxSoiling = 0.3,
   } = input;
   if (!(timestepMs >= 0 && Number.isFinite(timestepMs))) {
@@ -77,7 +85,7 @@ export const soilingKimber = (input: SoilingKimberInput): SoilingKimberResult =>
   // A cleaning rain restarts the grace clock; the grace window is (t − grace, t].
   const timeSinceRainMs =
     rainfallAccumulated > cleaningThreshold ? 0 : prevTimeSinceRainMs + timestepMs;
-  const cleaned = manualWash || timeSinceRainMs < gracePeriod * MS_PER_DAY;
+  const cleaned = manualWash || timeSinceRainMs < gracePeriodDays * MS_PER_DAY;
   const accumulatedSoiling = cleaned
     ? 0
     : prevAccumulatedSoiling + (soilingLossRate * timestepMs) / MS_PER_DAY;

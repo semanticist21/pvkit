@@ -1,5 +1,5 @@
 import { degrees, toRadians } from "../../../units.ts";
-import type { ClearSkyIrradiance } from "../ineichen/ineichen.ts";
+import type { ClearskyIrradiance } from "../ineichen/ineichen.ts";
 
 /** Inputs for {@link simplifiedSolis}. */
 export interface SimplifiedSolisInput {
@@ -24,7 +24,7 @@ const P0 = 101_325;
  * @example
  * simplifiedSolis({ apparentElevation: 60, aod700: 0.1, precipitableWater: 1 });
  */
-export const simplifiedSolis = (input: SimplifiedSolisInput): ClearSkyIrradiance => {
+export const simplifiedSolis = (input: SimplifiedSolisInput): ClearskyIrradiance => {
   const {
     apparentElevation,
     aod700: a = 0.1,

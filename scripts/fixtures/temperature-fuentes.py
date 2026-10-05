@@ -5,7 +5,7 @@
 """Fixtures for @pvkit/core temperature/fuentes from pvlib.temperature.fuentes.
 
 pvlib takes whole pandas Series; pvkit's fuentes is one step. Each case records the
-per-step inputs pvlib saw, including the prior state: prevModuleTemperature (pvlib's
+per-step inputs pvlib saw, including the prior state: prevTempModule (pvlib's
 previous output, 20 °C before the first step), prevPoaGlobal (0 before the first step)
 and timestepSeconds (pvlib reuses the second interval for the first step).
 
@@ -41,7 +41,7 @@ def series(series_id, minutes, poa, temp_air, wind, noct, **params):
     for i in range(len(idx)):
         inp = dict(poaGlobal=float(poa[i]), tempAir=float(temp_air[i]), windSpeed=float(wind[i]),
                    noctInstalled=float(noct),
-                   prevModuleTemperature=20.0 if i == 0 else float(out[i - 1]),
+                   prevTempModule=20.0 if i == 0 else float(out[i - 1]),
                    prevPoaGlobal=0.0 if i == 0 else float(poa[i - 1]),
                    timestepSeconds=float(dt[i]))
         inp |= {CAMEL[k]: float(v) for k, v in p.items()}

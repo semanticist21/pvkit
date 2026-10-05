@@ -23,7 +23,8 @@ one observer. Stated accuracy ±0.0003° for years −2000 to 6000 (paper).
 11. Equation of time `E = 4·(M − 0.0057183 − α + Δψ·cos ε)` minutes, wrapped to (−20, 20].
 
 Every accumulated angle goes through `limitDegrees` before trig (paper's `limit_degrees`).
-Pressure arrives in Pa and is converted to mbar for step 9. Refraction constant fixed at
+Observer `altitude` (m) feeds the parallax in step 8; `pressure` (Pa, converted to mbar) and
+`tempAir` (°C) are `P` and `T` in step 9. Refraction constant fixed at
 0.5667° (paper default). `deltaT` defaults to 67 s, the paper's example value — at PV-era
 dates the difference to the true ΔT (~69 s) moves the sun by ~1e-5°.
 

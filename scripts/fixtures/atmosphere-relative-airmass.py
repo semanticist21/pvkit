@@ -23,7 +23,7 @@ OUT = (Path(__file__).resolve().parents[2]
 def case(zenith, model):
     am = float(pvlib.atmosphere.get_relative_airmass(np.array([zenith]), model=model)[0])
     # JSON has no NaN: null marks pvlib's NaN (zenith > 90°).
-    return {"input": {"zenith": zenith, "model": model},
+    return {"input": {"solarZenith": zenith, "model": model},
             "expected": None if math.isnan(am) else am}
 
 

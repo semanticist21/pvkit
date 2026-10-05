@@ -4,7 +4,7 @@ A modern, ESM-first TypeScript library for PV (solar) performance modeling —
 built to run wherever JavaScript runs: browser, edge, Workers, React Native.
 
 Implemented independently from the public, peer-reviewed literature
-(NOAA SPA, Perez, Hay-Davies, SAPM, PVWatts, and friends).
+(NREL SPA, Perez, Hay-Davies, SAPM, PVWatts, and friends).
 
 ## Positioning
 

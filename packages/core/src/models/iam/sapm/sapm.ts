@@ -25,6 +25,7 @@ export interface SapmInput {
  *
  * @example
  * sapm({ aoi: 30, b0: 1, b1: -0.002438, b2: 3.103e-4, b3: -1.246e-5, b4: 2.112e-7, b5: -1.359e-9 });
+ * // ≈ 1.0078
  */
 export const sapm = ({ aoi, b0, b1, b2, b3, b4, b5, upper }: SapmInput): number => {
   if (aoi < 0) return 0;

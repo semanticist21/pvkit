@@ -51,7 +51,7 @@ write("pvwatts-dc", "pvlib.pvsystem.pvwatts_dc(k=None, cap_adjustment=False)", d
 NAMES = [("soiling", "soiling"), ("shading", "shading"), ("snow", "snow"),
          ("mismatch", "mismatch"), ("wiring", "wiring"), ("connections", "connections"),
          ("lid", "lid"), ("nameplate_rating", "nameplateRating"), ("age", "age"),
-         ("availability", "availability")]
+         ("availability", "availabilityLoss")]
 DEFAULTS = dict(soiling=2.0, shading=3.0, snow=0.0, mismatch=2.0, wiring=2.0, connections=0.5,
                 lid=1.5, nameplate_rating=1.0, age=0.0, availability=3.0)
 
@@ -59,7 +59,8 @@ DEFAULTS = dict(soiling=2.0, shading=3.0, snow=0.0, mismatch=2.0, wiring=2.0, co
 def losses(**kw):
     p = {**DEFAULTS, **kw}
     r = pvlib.pvsystem.pvwatts_losses(**p)
-    return {"input": {ts: p[py] for py, ts in NAMES}, "expected": {"losses": float(r)}}
+    # pvkit takes and returns fractions: inputs and expected are pvlib's percent / 100.
+    return {"input": {ts: p[py] / 100 for py, ts in NAMES}, "expected": {"losses": float(r) / 100}}
 
 
 loss_cases = [

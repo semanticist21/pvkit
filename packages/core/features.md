@@ -160,7 +160,7 @@ overwhelmingly single-axis).
 - [x] scale_voltage_current_power (series/parallel string scaling)
 - [x] System losses (soiling, wiring, mismatch, …)
 - [x] Energy integration → kWh
-- [x] Validation fixtures vs reference (NREL PVWatts)
+- [x] Validation fixtures vs reference (pvlib)
 
 ## 10. `losses` — optional derate models
 
@@ -201,7 +201,7 @@ Skipped for 1.0 entirely: gti_dirint, scaling.wvm (cloud variability), ivtools
 ## Cross-cutting
 
 - [x] Module subpath `index.ts` re-exports its methods (convenience subpath entry)
-- [x] Root entry `src/index.ts` re-exports submodules + unit types
+- [x] Root entry `src/index.ts` exports unit types only (models via subpaths)
 - [x] tsdown generates `package.json` `exports`/`publishConfig` (+ main/module/
       types) from the glob tsdown entry on build — new method/module files need no
       manual wiring; run `pnpm build` to regenerate after adding a method/module

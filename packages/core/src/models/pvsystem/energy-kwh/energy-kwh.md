@@ -4,7 +4,7 @@ Integrates a regularly sampled power series to energy.
 
 ## Principle
 
-`E = Σ P_i · Δt / 1000` [kWh], `Δt = stepHours`. The sum is Neumaier-compensated
+`E = Σ P_i · Δt / 1000` [kWh], `P_i = power[i]` [W], `Δt = stepHours` [h]. The sum is Neumaier-compensated
 (`compensatedSum`, `src/sum.ts`) — a naive `+=` over a year of minutes drifts by ~2e-14
 relative on the fixture series (see `doc/architecture.md` → "Numerical strategy").
 Rectangle rule: each value stands for its whole step (mean power, or an instantaneous

@@ -16,7 +16,7 @@ file is the consolidated skeleton.
 
 Each depends on the prior; implement in order:
 
-1. `solarposition` (NOAA SPA) — everything depends on sun position → first.
+1. `solarposition` (NREL SPA) — everything depends on sun position → first.
 2. `atmosphere` (Kasten-Young air mass, alt2pres, precipitable water, Linke/AOD) —
    dataless helpers consumed by clearsky/irradiance.
 3. `clearsky` (Haurwitz / Ineichen / Simplified Solis) — fallback irradiance when no weather data.
@@ -53,9 +53,9 @@ method or module file needs no hand-wiring.
 ## API boundary — branded inside, plain objects outside
 
 - **Public function inputs take plain object args with bare `number` fields**;
-  the unit is fixed by the field name / JSDoc (e.g. lat/lon always degrees, tilt
+  the unit is fixed by the field name / JSDoc (e.g. latitude/longitude always degrees, tilt
   always degrees). Users never have to call `degrees()`/`radians()` to pass an
-  argument. `spa({ lat: 37.5, lon: 127 })`, not `spa(degrees(37.5), …)`.
+  argument. `spa({ timeMs, latitude: 37.5, longitude: 127 })`, not `spa(degrees(37.5), …)`.
 - **Internally, tag at the boundary** (`degrees()`/`radians()`) and use branded
   `Radians`/`Degrees` for all cross-module data and intermediate math — that is
   where rad/deg mix-ups are caught at compile time.

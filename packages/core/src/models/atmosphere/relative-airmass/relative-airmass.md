@@ -1,6 +1,6 @@
 # relative-airmass — relative optical air mass
 
-Relative (sea-level, not pressure-adjusted) air mass for one solar zenith angle `z`
+Relative (sea-level, not pressure-adjusted) air mass for one solar zenith angle `solarZenith` (`z`)
 (degrees), by one of eight published models. Unitless.
 
 ## Principle

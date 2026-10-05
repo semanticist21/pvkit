@@ -194,7 +194,8 @@
     "build": "tsdown",
     "test": "vitest run",
     "typecheck": "tsgo --noEmit",
-    "bench": "vitest bench --run"
+    "bench": "vitest bench --run",
+    "prepack": "tsdown"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",

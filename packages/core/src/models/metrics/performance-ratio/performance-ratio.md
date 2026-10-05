@@ -13,9 +13,9 @@
   (PR_corr = PR), so it is never defaulted.
 
 Series are per-interval values; energy and irradiation may also be one-element totals
-(their lengths need not match). `cellTemperature` must align with `poaIrradiation`.
+(their lengths need not match). `tempCell` must align with `poaIrradiation`.
 Weighting by irradiation `H_i` (not irradiance) keeps non-uniform intervals correct.
-Guards: `pdc0`, `gRef` finite > 0 and the three correction inputs all-or-none, else
+Guards: `pdc0Kw`, `irradRef` finite > 0 and the three correction inputs all-or-none, else
 `RangeError`. Reference yield 0 (`ΣH = 0`) → NaN, also when `ΣE ≠ 0` (night tare would
 otherwise give ±Infinity), e.g. a night-only window.
 

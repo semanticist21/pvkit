@@ -43,7 +43,7 @@ build on every PR and push to `main`. Releases are manual and local (`pnpm versi
 **Monorepo:** `packages/*` pnpm workspaces (`pnpm-workspace.yaml`). Only `@pvkit/core` exists today.
 
 **`@pvkit/core` module plan** — 11 submodules, dependency order (each depends on the prior):
-1. `solarposition` (NOAA SPA + simple models) — everything depends on sun position, so first.
+1. `solarposition` (NREL SPA + simple models) — everything depends on sun position, so first.
 2. `atmosphere` (air mass, alt2pres, precipitable water, Linke/AOD) — dataless helpers.
 3. `clearsky` (Haurwitz / Ineichen / Solis) — fallback irradiance, no weather data needed.
 4. `irradiance` (isotropic / Klucher / Hay-Davies / Reindl / King / Perez + AOI).
@@ -63,8 +63,8 @@ Each is a subpath export (`@pvkit/core/solarposition`, …). The module
 `src/models/<module>/index.ts` files are referenced by `package.json` `exports` and
 `src/index.ts`. Shared foundation (`src/units.ts`, `src/sum.ts`) sits flat at top; models
 nest under `src/models/`. Constants live with the method that cites them.
-The root entry (`src/index.ts`) only re-exports submodules + unit types; real usage should
-prefer subpath imports for tree-shaking.
+The root entry (`src/index.ts`) exports only the unit types; models are imported from their
+subpaths (no `export * as <module>` there — it breaks the published `.d.ts`, see playbook).
 
 **Branded unit types** (`src/units.ts`) are a core differentiator: `Radians`/`Degrees` are
 nominal brands over `number`, so rad/deg mix-ups fail at compile time with zero runtime cost
@@ -74,7 +74,7 @@ to convert. New angular APIs must take/return branded types, never bare `number`
 ## Non-negotiable invariants
 
 - **The papers are the spec.** Implement every model from the published peer-reviewed
-  literature (NOAA SPA, Perez, Hay-Davies, SAPM, PVWatts). The API is pvkit's own design;
+  literature (NREL SPA, Perez, Hay-Davies, SAPM, PVWatts). The API is pvkit's own design;
   the algorithms are open science.
 - **Numerical validation, not "it runs."** For each model: implement from the paper → pin
   reference-implementation outputs for the same inputs as fixtures → assert in `*.test.ts`.

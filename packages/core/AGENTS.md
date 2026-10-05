@@ -48,7 +48,7 @@ PV modeling core. Durable notes for future sessions — update when `src/` chang
 
 11 core submodules, dependency order:
 
-1. `solarposition` (NOAA SPA + simple models) — everything depends on sun position → first.
+1. `solarposition` (NREL SPA + simple models) — everything depends on sun position → first.
 2. `atmosphere` (Kasten-Young air mass, alt2pres, precipitable water, Linke/AOD) —
    dataless helpers consumed by clearsky/irradiance. Air mass lives here.
 3. `clearsky` (Haurwitz / Ineichen / Solis) — fallback irradiance when no weather data.

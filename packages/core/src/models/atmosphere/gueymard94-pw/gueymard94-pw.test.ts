@@ -12,5 +12,5 @@ describe("gueymard94Pw vs pvlib gueymard94_pw", () => {
 });
 
 test("floors at 0.1 cm for dry air", () => {
-  expect(gueymard94Pw({ temperature: 0, relativeHumidity: 0 })).toBe(0.1);
+  expect(gueymard94Pw({ tempAir: 0, relativeHumidity: 0 })).toBe(0.1);
 });
