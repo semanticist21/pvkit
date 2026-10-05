@@ -8,7 +8,7 @@ file is the consolidated skeleton.
 
 - ESM-first TypeScript library for PV (solar) performance modeling. Runs
   everywhere JS runs (browser, edge, Workers, React Native) — no backend.
-- Bun monorepo, `packages/*` workspaces. Only `@pvkit/core` exists today; PV
+- pnpm monorepo, `packages/*` workspaces. Only `@pvkit/core` exists today; PV
   models are stubs (frame only).
 - Positioning: "PV modeling everywhere JS runs," not "smarter PV science."
 
@@ -72,11 +72,10 @@ method or module file needs no hand-wiring.
   down: `src/models/<module>/`. Public subpath names are unchanged
   (`@pvkit/core/clearsky`) — only the internal path is `src/models/...`.
 - Within each `src/models/<module>/`, every calculation method is its **own
-  folder** `<method>/` (e.g. `solarposition/spa/`) holding the method's 4-file
-  set plus a method-level `index.ts` (the subpath entry that re-exports the
-  impl): `<method>/index.ts`, `<method>/<method>.ts` (impl),
-  `<method>/<method>.md` (theory + tolerance), `<method>/<method>.test.ts`
-  (accuracy), `<method>/<method>.bench.ts` (perf). The module's own `index.ts`
+  folder** `<method>/` (e.g. `solarposition/spa/`) holding the method's file set: `<method>/index.ts` (subpath entry that
+  re-exports the impl), `<method>/<method>.ts` (impl), `<method>/<method>.md`
+  (theory + Reference), `<method>/<method>.test.ts` (accuracy), and an optional
+  `<method>/<method>.bench.ts` (perf, only where it matters). The module's own `index.ts`
   is the convenience subpath entry that re-exports each method folder. See
   "Module boundaries & tests".
 - `dist/` mirrors this: `dist/models/<module>/<method>/index.js` + the module
@@ -102,7 +101,7 @@ method or module file needs no hand-wiring.
   }
   ```
 
-  On every `bun run build`, tsdown writes BOTH `exports` (dev → `src`) and
+  On every `pnpm build`, tsdown writes BOTH `exports` (dev → `src`) and
   `publishConfig.exports` (→ `dist`), plus `main`/`module`/`types`, from the
   tsdown entry glob. The `customExports` callback normalizes raw keys with three
   rules: (1) pass through non-model entries (`.`, `./units`, `./package.json`);
@@ -113,7 +112,7 @@ method or module file needs no hand-wiring.
   identical to before.
 - **`exports`/`publishConfig`/`main`/`module`/`types` are machine-owned —
   regenerate, don't edit.** After adding or removing a method folder or module,
-  run `bun run build` to regenerate them and commit the updated `package.json`.
+  run `pnpm build` to regenerate them and commit the updated `package.json`.
   Pre-commit hooks run biome/tsgo/harness but NOT build, so a stale `exports` map
   is not auto-caught — rebuild whenever you change the module/method set. Why
   auto over hand-written wildcards: the map always matches real `dist` output (no
@@ -127,6 +126,10 @@ method or module file needs no hand-wiring.
   tests and benches never ship to `dist`. `hash: false` keeps generated `dist`
   filenames (and thus the generated exports paths) stable, so `package.json` does
   not churn on every content change.
+- **Publish only with `pnpm publish`.** Only pnpm (and yarn) apply
+  `publishConfig.exports`; `npm publish`/`bun publish` ship the dev `exports`
+  (→ `src/*.ts`), which `files: ["dist"]` excludes — a broken package. Verify with
+  `pnpm pack`: the tarball's `exports` must point at `./dist`.
 - **TS consumers need `moduleResolution: "bundler"`** (or `node16`+) to resolve
   the generated subpath types.
 - **Depth-agnostic.** Per-method subpath stays the preferred granularity, but
@@ -137,18 +140,18 @@ method or module file needs no hand-wiring.
 
 ## Module boundaries & tests
 
-- **Per-method folder, 4-file set.** Each calculation method lives in its own
-  folder `src/models/<module>/<method>/` holding four files plus a method-level
-  `index.ts`:
+- **Per-method folder, file set.** Each calculation method lives in its own
+  folder `src/models/<module>/<method>/` holding:
   - `index.ts` — method subpath entry; re-exports the impl (`export * from
     "./<method>.ts"`).
   - `<method>.ts` — implementation.
-  - `<method>.md` — theory: source URL(s) of the paper/reference, the
-    principle/equations, assumptions, and the stated accuracy tolerance + which
-    reference (e.g. pvlib, NREL SPA appendix) the fixtures come from.
-  - `<method>.test.ts` — accuracy test: assert against pinned reference outputs
-    within a documented tolerance.
-  - `<method>.bench.ts` — performance benchmark (per-call timing, regression watch).
+  - `<method>.md` — theory: principle/equations, assumptions, and a
+    `## Reference` section (spec, reference implementation@version, fixture file,
+    tolerance). Policy: `doc/conventions.md`.
+  - `<method>.test.ts` — accuracy test: assert against the committed fixture JSON
+    within the documented tolerance.
+  - `<method>.bench.ts` — **optional**, `vitest bench`; add only for perf-critical
+    methods (e.g. SPA), never as an empty placeholder.
 - **Tests co-locate per method**, independent: `<method>.test.ts` sits in the
   method folder next to `<method>.ts` (top-level files like `units.ts` keep their
   flat `units.test.ts` companion). Each method pins its own reference fixtures —

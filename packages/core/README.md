@@ -46,7 +46,7 @@ toDegrees(radians(Math.PI)); // 180
 ## Development
 
 ```bash
-bun install        # from the monorepo root
-bun test           # this package: bun run --filter @pvkit/core test
-bun run build      # tsdown → dist (ESM + .d.ts + subpath exports)
+pnpm install       # from the monorepo root
+pnpm test          # this package (vitest run)
+pnpm build         # tsdown → dist (ESM + .d.ts + subpath exports)
 ```

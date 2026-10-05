@@ -109,7 +109,15 @@ keeps ONLY each folder's `index` entry — so per-method impl files stay private
 Net public shape is unchanged: `@pvkit/core/<module>` and `<module>/<method>`.
 Supersedes the earlier hand-written "wildcard exports" approach.
 **Apply:** treat `package.json` `exports`/`publishConfig`/`main`/`module`/`types`
-as GENERATED — never hand-edit. Run `bun run build` after changing the
+as GENERATED — never hand-edit. Run `pnpm build` after changing the
 module/method set and commit the regenerated `package.json` (pre-commit runs
 biome/tsgo/harness, NOT build, so a stale map won't be caught). Keep `hash: false`
 so the generated dist paths stay stable.
+
+## 2026-10-05 — publish: devExports breaks under npm/bun publish
+**Trap:** with tsdown `devExports`, `bun pm pack` (and `npm publish`) kept `exports` →
+`./src/*.ts` while `files: ["dist"]` ships no `src` — every import of the published
+package would fail. `publishConfig.exports` is honored only by pnpm/yarn.
+**Truth:** repo switched bun → pnpm (+ vitest); `pnpm pack` rewrites `exports` → `./dist`.
+**Apply:** publish only with `pnpm publish`; before a release, `pnpm pack` and check the
+tarball's `package.json` `exports` point at `./dist`.

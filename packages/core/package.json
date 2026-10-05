@@ -60,7 +60,7 @@
   ],
   "scripts": {
     "build": "tsdown",
-    "test": "bun test",
+    "test": "vitest run",
     "typecheck": "tsgo --noEmit"
   },
   "main": "./dist/index.js",

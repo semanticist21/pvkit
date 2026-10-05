@@ -1,4 +1,4 @@
-import { expect, test } from "bun:test";
+import { expect, test } from "vitest";
 import { degrees, limitDegrees, limitRadians, radians, toDegrees, toRadians } from "./units.ts";
 
 test("toDegrees converts radians to degrees", () => {

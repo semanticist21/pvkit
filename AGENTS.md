@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 `pvkit` — ESM-first TypeScript library for PV (solar) performance modeling, built to run
 **everywhere JavaScript runs** (browser, edge, Workers, React Native). No backend round-trip.
-Bun monorepo. Currently `@pvkit/core` is scaffolded; PV models are **stubs** (frame only).
+pnpm monorepo. Currently `@pvkit/core` is scaffolded; PV models are **stubs** (frame only).
 
 Positioning: not "smarter PV science" but "PV modeling everywhere JS runs." See `README.md`
 for the pitch, `ROADMAP.md` for planned/under-review packages (`sizer`, `economics`, `io`,
@@ -16,28 +16,31 @@ for the pitch, `ROADMAP.md` for planned/under-review packages (`sizer`, `economi
 
 ## Commands
 
-Runtime is **Bun** (`bun@1.3.14`); typechecker is **tsgo** (`@typescript/native-preview`),
-not `tsc`.
+Package manager is **pnpm** (`packageManager` pins the version; `corepack enable pnpm`);
+tests run on **vitest** under Node; typechecker is **tsgo** (`@typescript/native-preview`),
+not `tsc`. Publish with `pnpm publish` only (why: `doc/architecture.md` → "Subpath exports").
 
 ```bash
-bun install
-bun run build                       # all packages (tsdown)
-bun run test                        # all packages (bun test)
-bun run typecheck                   # tsgo --noEmit
-bun run lint                        # biome check .   (read-only)
-bun run format                      # biome check --write .
+pnpm install
+pnpm build                          # all packages (tsdown)
+pnpm test                           # all packages (vitest run)
+pnpm typecheck                      # tsgo --noEmit
+pnpm lint                           # biome check .   (read-only)
+pnpm format                         # biome check --write .
 
-cd packages/core && bun test        # one package
-bun test src/units.test.ts          # one test file
-bun test --test-name-pattern "foo"  # one test by name
+cd packages/core && pnpm test       # one package
+pnpm vitest run src/units.test.ts   # one test file
+pnpm vitest run -t "foo"            # one test by name
 ```
 
-Pre-commit hooks (lefthook): biome write + tsgo typecheck + harness check. Install with
-`bunx lefthook install` (run automatically via the `prepare` script on `bun install`).
+Pre-commit hooks (lefthook): biome write + tsgo typecheck + harness check. Installed by the
+`prepare` script on `pnpm install`. CI (`.github/workflows/ci.yml`) runs lint/typecheck/test/
+build on every PR and push to `main`. Releases are manual and local (`pnpm version` +
+`pnpm publish`) by the user; the npm org `@pvkit` exists.
 
 ## Architecture
 
-**Monorepo:** `packages/*` Bun workspaces. Only `@pvkit/core` exists today.
+**Monorepo:** `packages/*` pnpm workspaces (`pnpm-workspace.yaml`). Only `@pvkit/core` exists today.
 
 **`@pvkit/core` module plan** — 11 submodules, dependency order (each depends on the prior):
 1. `solarposition` (NOAA SPA + simple models) — everything depends on sun position, so first.
@@ -87,9 +90,11 @@ to convert. New angular APIs must take/return branded types, never bare `number`
   `exactOptionalPropertyTypes`, `verbatimModuleSyntax`, `allowImportingTsExtensions`. Use
   explicit `.ts` extensions in imports.
 - Biome: 2-space indent, 100 col, double quotes, semicolons, trailing commas, organized imports.
-- camelCase naming (open decision — see `packages/core/AGENTS.md`).
-- Time-series shape is an **open decision**: scalar in/out core + thin adapter, to keep a
-  future opt-in WASM (Rust) boundary clean. Don't bake batch/DataFrame assumptions into core.
+- camelCase naming (locked).
+- Scalar in/out core: one instant per call, time as `timeMs` (UTC epoch ms). A batch
+  (`Float64Array`) adapter comes only on demand and is the future WASM boundary. Don't bake
+  batch/DataFrame assumptions into core. Cross-module angle/time/ΔT conventions and the
+  reference/fixture policy live in `doc/conventions.md`.
 
 ## Git
 
@@ -100,12 +105,13 @@ to convert. New angular APIs must take/return branded types, never bare `number`
 
 ## Durable docs
 
-`packages/core/AGENTS.md` holds per-package notes (open decisions, module order, validation
+`packages/core/AGENTS.md` holds per-package notes (locked decisions, module order, validation
 workflow). The harness (`scripts/agent-harness-check.mjs`, config `harness.config.json`)
 warns when source under `packages/core/src/` changes without a matching test or doc update —
 keep the nearest `AGENTS.md` current when behavior changes.
 
-`doc/` is the durable-docs home: `doc/architecture.md` (base skeleton), `doc/playbook.md`
+`doc/` is the durable-docs home: `doc/architecture.md` (base skeleton), `doc/conventions.md`
+(model conventions + reference policy), `doc/playbook.md`
 (append-only gotchas log), `doc/plan/` (scoped WIP). See `doc/README.md` for routing.
 
 **Self-document as you work (do this without being asked).** Whenever a change has durable

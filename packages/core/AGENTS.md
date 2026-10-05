@@ -16,7 +16,7 @@ PV modeling core. Durable notes for future sessions — update when `src/` chang
   plain object args with bare `number` fields, unit fixed by field name (no forced
   `degrees()`/`radians()` wrapping). Tag to branded `Radians`/`Degrees` internally;
   returned angles are branded. See `doc/architecture.md` → "API boundary".
-- **Per-method subpath exports + per-method folder (4-file set).** Each
+- **Per-method subpath exports + per-method folder (file set).** Each
   calculation method is its own folder `src/models/<module>/<method>/`, publicly
   importable at `@pvkit/core/<module>/<method>` (preferred granularity) via the
   folder's `index.ts`; the module subpath `@pvkit/core/<module>` re-exports them
@@ -24,22 +24,25 @@ PV modeling core. Durable notes for future sessions — update when `src/` chang
   customExports }` in `tsdown.config.ts` generates `exports` (→ `src`) +
   `publishConfig.exports` (→ `dist`) + `main`/`module`/`types` from the glob
   tsdown entry (`src/models/**/*.ts`) on every build — these fields are
-  machine-owned, never hand-edited (run `bun run build` to regenerate after
+  machine-owned, never hand-edited (run `pnpm build` to regenerate after
   adding/removing a method or module, then commit `package.json`; pre-commit
   hooks don't build). `customExports` strips the `models/` prefix, collapses the
   trailing `/index`, and drops non-index impl files so only `<module>` and
   `<module>/<method>` are public (per-method impl files stay private). Each method folder
   holds: `index.ts` (subpath entry, re-exports impl), `<method>.ts` (impl),
-  `<method>.md` (source URL + principle + tolerance), `<method>.test.ts`
-  (tolerance-based accuracy, not bit-exact — JS float64), `<method>.bench.ts`
-  (perf). Chosen over flat co-located files so method×4 files don't crowd a
-  single module dir. See `doc/architecture.md` → "Subpath exports".
+  `<method>.md` (principle + equations + `## Reference` section),
+  `<method>.test.ts` (tolerance-based accuracy against committed fixture JSON, not
+  bit-exact — JS float64), plus `<method>.bench.ts` (`vitest bench`) only for
+  perf-critical methods such as SPA. Chosen over flat co-located files so a
+  method's files don't crowd a single module dir. See `doc/architecture.md` → "Subpath exports".
 
-## Open decisions (lock before implementing)
-
-1. Naming — camelCase proposed (JS convention).
-2. Time-series data structure — scalar in/out core + a thin adapter proposed.
-   Keeps a future WASM boundary clean.
+- **Naming: camelCase.**
+- **Scalar core, `timeMs` UTC epoch ms, `deltaT?` seconds (default 67).** Batch
+  adapter only on demand (future WASM boundary). Full I/O + geometry conventions:
+  `doc/conventions.md`.
+- **Fixtures from committed generators.** `scripts/fixtures/<module>-<method>.py`
+  (uv, pvlib pinned) writes JSON into the method folder; tests read only the JSON.
+  Policy: `doc/conventions.md` → "References and fixtures".
 
 ## Modules (all stubs — implementation order)
 
@@ -71,4 +74,4 @@ Full feature checklist: `features.md`.
 ## Validation workflow
 
 Implement from the paper → pin reference outputs for the same inputs as fixtures
-→ assert against them in `*.test.ts` (`bun test`). No core logic without a test.
+→ assert against them in `*.test.ts` (`pnpm test`, vitest). No core logic without a test.

@@ -3,10 +3,10 @@
 Implementation tracker. Order = dependency order (each builds on prior).
 Spec = the paper. Each calculation method is its own folder
 `src/models/<module>/<method>/` holding a method `index.ts` (subpath entry,
-re-exports the impl) plus a 4-file set: implement `<method>.ts` from the paper →
-write `<method>.md` (source URL + principle + the accuracy tolerance and its
-reference) → pin reference outputs → assert within that tolerance in
-`<method>.test.ts` → benchmark in `<method>.bench.ts`. Public import
+re-exports the impl) plus its file set: implement `<method>.ts` from the paper →
+write `<method>.md` (principle + `## Reference`) → generate fixture JSON with
+`scripts/fixtures/<module>-<method>.py` → assert within tolerance in
+`<method>.test.ts` → optional `<method>.bench.ts` for perf-critical methods. Public import
 `@pvkit/core/<module>/<method>` resolves to `<method>/index.ts`. Accuracy is
 tolerance-based (JS float64, platform `Math`), not bit-exact. No core logic
 without a test.
@@ -204,7 +204,7 @@ Skipped for 1.0 entirely: gti_dirint, scaling.wvm (cloud variability), ivtools
 - [ ] Root entry `src/index.ts` re-exports submodules + unit types
 - [x] tsdown generates `package.json` `exports`/`publishConfig` (+ main/module/
       types) from the glob tsdown entry on build — new method/module files need no
-      manual wiring; run `bun run build` to regenerate after adding a method/module
+      manual wiring; run `pnpm build` to regenerate after adding a method/module
       and commit the result. Per-method impl files stay private via `customExports`.
       See `doc/architecture.md` → "Subpath exports".
 - [ ] Tree-shaking guard (function-level exports, `sideEffects: false`)

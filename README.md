@@ -44,7 +44,7 @@ See [ROADMAP.md](ROADMAP.md) for packages under consideration.
 ## Development
 
 ```bash
-bun install
-bun run build
-bun run test
+pnpm install
+pnpm build
+pnpm test
 ```
