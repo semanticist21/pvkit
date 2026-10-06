@@ -1,14 +1,30 @@
 # pvkit roadmap
 
-> Status: under review (candidates). Not finalized. `@pvkit/core` implemented
-> (all 11 modules, fixture-validated against pvlib).
+> `@pvkit/core` 0.1.0 released. The queue below is the agreed order; the sections after it
+> describe each package. Agents take work with the `roadmap-next` skill.
+
+## Queue
+
+`Status`: `todo` · `🚧 <UTC time> <agent tag>` (claimed) · `✅ <commit>` (done, unpublished
+until the user releases it). Claims are made only by committing this table to `main`.
+
+| # | Item | Path | Depends on | Status |
+| --- | --- | --- | --- | --- |
+| 1 | demo site — browser kWh estimate on `@pvkit/core` | `apps/demo` | — | todo |
+| 2 | `@pvkit/chain` — ModelChain-style orchestration | `packages/chain` | — | todo |
+| 3 | `@pvkit/economics` — LCOE, payback, ROI, degradation | `packages/economics` | — | todo |
+| 4 | `@pvkit/spec` — module/inverter spec schema + data | `packages/spec` | — | todo |
+| 5 | `@pvkit/sizer` — string sizing, over-voltage checks | `packages/sizer` | 4 | todo |
+| 6 | `@pvkit/io` — PVGIS / NASA POWER weather fetch | `packages/io` | — | todo |
+| 7 | `@pvkit/layout` — roof placement, shading | `packages/layout` | — | todo |
+| 8 | `@pvkit/diode` — single-diode electrical models | `packages/diode` | 4 | todo |
 
 ## Confirmed
 
-| Package | Status | Description |
-| --- | --- | --- |
-| `@pvkit/core` | ✅ implemented | PV modeling core. solarposition · atmosphere · clearsky · irradiance · decomposition · iam · temperature · tracking · pvsystem · losses · metrics. Produces kWh. PVWatts-path precision (single-diode/SAPM precision lives in separate packages). |
-| `@pvkit/sizer` | 📋 planned | String sizing. Series/parallel panel configuration. Inverter over-voltage safety; a gap in JS tooling. |
+| Package | Description |
+| --- | --- |
+| `@pvkit/core` | PV modeling core. solarposition · atmosphere · clearsky · irradiance · decomposition · iam · temperature · tracking · pvsystem · losses · metrics. Produces kWh. PVWatts-path precision (single-diode/SAPM precision lives in separate packages). |
+| `@pvkit/sizer` | String sizing. Series/parallel panel configuration. Inverter over-voltage safety; a gap in JS tooling. |
 
 ## Under review (considered instead of react)
 
@@ -53,10 +69,10 @@ Normalize panel / inverter specs. Consumed by `sizer` and `diode`.
 
 ### Deferred / advanced packages
 
-| Package | Status | Description |
-| --- | --- | --- |
-| `@pvkit/diode` | 📋 proposed | Precise single-diode + SAPM electrical models (desoto/cec/pvsyst calcparams, single-diode solver, SAPM I-V, Sandia/ADR inverters). Depends on core + spec (parameter DBs). Out of 1.0 — most real work is covered by core's PVWatts path. |
-| `@pvkit/chain` | 📋 proposed | Thin orchestration layer wiring solarposition→irradiance→temperature→pvsystem with sane defaults (pvlib ModelChain analog). Kept out of core to keep core stateless and tree-shakable. |
+| Package | Description |
+| --- | --- |
+| `@pvkit/diode` | Precise single-diode + SAPM electrical models (desoto/cec/pvsyst calcparams, single-diode solver, SAPM I-V, Sandia/ADR inverters). Depends on core + spec (parameter DBs). Out of 1.0 — most real work is covered by core's PVWatts path. |
+| `@pvkit/chain` | Thin orchestration layer wiring solarposition→irradiance→temperature→pvsystem with sane defaults (pvlib ModelChain analog). Kept out of core to keep core stateless and tree-shakable. |
 
 ## Dependency graph (expected)
 

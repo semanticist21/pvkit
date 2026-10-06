@@ -11,8 +11,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 pnpm monorepo. `@pvkit/core` implements all 11 modules, validated against pvlib fixtures.
 
 Positioning: not "smarter PV science" but "PV modeling everywhere JS runs." See `README.md`
-for the pitch, `ROADMAP.md` for planned/under-review packages (`sizer`, `economics`, `io`,
-`layout`, `spec`) and their dependency graph.
+for the pitch, `ROADMAP.md` for the ordered work Queue (the only claim record) and each
+package's scope. Take the next item with the `roadmap-next` skill (`.claude/skills/`) —
+several agents can run it at once.
 
 ## Commands
 
