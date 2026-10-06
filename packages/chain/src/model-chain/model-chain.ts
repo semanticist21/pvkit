@@ -1,3 +1,4 @@
+import type { Degrees } from "@pvkit/core";
 import { absoluteAirmass } from "@pvkit/core/atmosphere/absolute-airmass";
 import { alt2pres } from "@pvkit/core/atmosphere/altitude-pressure";
 import { relativeAirmass } from "@pvkit/core/atmosphere/relative-airmass";
@@ -34,7 +35,10 @@ interface ModelChainBase {
   surfaceAzimuth: number;
   /** Ground albedo, 0..1. Default 0.25. */
   albedo?: number;
-  /** Ambient air temperature, °C. Default 20 (pvlib ModelChain default). */
+  /**
+   * Ambient air temperature, °C. When omitted, as in pvlib ModelChain: the cell temperature
+   * uses 20 and the sun position refracts at 12 (pvlib `Location.get_solarposition` default).
+   */
   tempAir?: number;
   /** Wind speed, m/s. Default 0 (pvlib ModelChain default). */
   windSpeed?: number;
@@ -65,9 +69,9 @@ export type ModelChainInput = ModelChainBase &
 
 /** One instant of {@link modelChain} output. Angles in degrees, irradiance W/m², power W. */
 export interface ModelChainResult {
-  apparentZenith: number;
-  azimuth: number;
-  aoi: number;
+  apparentZenith: Degrees;
+  azimuth: Degrees;
+  aoi: Degrees;
   ghi: number;
   dni: number;
   dhi: number;
@@ -81,10 +85,11 @@ export interface ModelChainResult {
 }
 
 /**
- * pvlib `ModelChain.with_pvwatts` for one instant: SPA sun position → Kasten–Young air mass →
- * (Ineichen clear sky) → transposition → physical IAM → SAPM cell temperature → PVWatts DC →
- * PVWatts losses → PVWatts inverter. Loop it over timestamps and pass `pac` to
- * `energyKwh` for energy. Night steps give 0; with `transposition: "perez"`, measured
+ * pvlib `ModelChain` with PVWatts DC/AC/losses models, for one instant: SPA sun position →
+ * Kasten–Young air mass → (Ineichen clear sky) → transposition (Hay–Davies by default, the
+ * plain ModelChain default; `with_pvwatts` uses Perez) → physical IAM → SAPM cell
+ * temperature → PVWatts DC → PVWatts losses → PVWatts inverter. Loop it over timestamps and
+ * pass `pac` to `energyKwh` for energy. Night steps give 0; with `transposition: "perez"`, measured
  * `dni = dhi = 0` while the sun is up gives NaN, as in pvlib.
  *
  * @example
@@ -100,7 +105,7 @@ export const modelChain = (input: ModelChainInput): ModelChainResult => {
     surfaceTilt,
     surfaceAzimuth,
     albedo = 0.25,
-    tempAir = 20,
+    tempAir,
     windSpeed = 0,
     pdc0,
     gammaPdc,
@@ -111,9 +116,20 @@ export const modelChain = (input: ModelChainInput): ModelChainResult => {
     transposition = "haydavies",
     deltaT = 67,
   } = input;
+  if (!input.weather && !Number.isFinite(input.linkeTurbidity)) {
+    throw new RangeError("modelChain needs weather or a finite linkeTurbidity");
+  }
   const pressure = alt2pres({ altitude });
-  // ModelChain refracts with the step's air temperature, not SPA's annual-average default.
-  const sun = spa({ timeMs, latitude, longitude, altitude, pressure, tempAir, deltaT });
+  // ModelChain refracts at the caller's temp_air, else Location.get_solarposition's 12 °C.
+  const sun = spa({
+    timeMs,
+    latitude,
+    longitude,
+    altitude,
+    pressure,
+    tempAir: tempAir ?? 12,
+    deltaT,
+  });
   const airmassRelative = relativeAirmass({ solarZenith: sun.apparentZenith });
   const dniExtra = extraRadiation({ timeMs });
   const sky =
@@ -143,7 +159,12 @@ export const modelChain = (input: ModelChainInput): ModelChainResult => {
     airmassRelative,
   });
   const effectiveIrradiance = poa.poaDirect * physical({ aoi }) + poa.poaDiffuse;
-  const tempCell = sapmCell({ poaGlobal: poa.poaGlobal, tempAir, windSpeed, ...temperatureModel });
+  const tempCell = sapmCell({
+    poaGlobal: poa.poaGlobal,
+    tempAir: tempAir ?? 20,
+    windSpeed,
+    ...temperatureModel,
+  });
   const pdc =
     pvwattsDc({ effectiveIrradiance, tempCell, pdc0, gammaPdc }) * (1 - pvwattsLosses(losses));
   return {

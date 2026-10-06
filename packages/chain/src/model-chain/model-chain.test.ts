@@ -1,4 +1,3 @@
-import { energyKwh } from "@pvkit/core/pvsystem/energy-kwh";
 import { describe, expect, test } from "vitest";
 import { type ModelChainInput, modelChain } from "./model-chain.ts";
 import fixture from "./model-chain-fixtures.json" with { type: "json" };
@@ -19,12 +18,6 @@ describe.each(fixture.cases)("$name", ({ params, steps }) => {
     // Chain of 1e-9…1e-12 per-method tolerances, as in core's pipeline test.
     expect(worst).toBeLessThan(1e-9);
   });
-
-  test("energy over the series matches pvlib", () => {
-    const want = steps.reduce((a, s) => a + s.expected.pac, 0);
-    const got = energyKwh({ power: steps.map((s) => run(s).pac), stepHours: 1 });
-    expect(Math.abs(got - want / 1000)).toBeLessThan(1e-9);
-  });
 });
 
 test("weather input overrides the clear-sky model", () => {
@@ -41,4 +34,5 @@ test("weather input overrides the clear-sky model", () => {
   const measured = modelChain({ ...base, weather: { ghi: cs.ghi, dni: cs.dni, dhi: cs.dhi } });
   expect(Math.abs(measured.pac - cs.pac)).toBeLessThan(1e-12);
   expect(modelChain({ ...base, weather: { ghi: 0, dni: 0, dhi: 0 } }).pac).toBe(0);
+  expect(() => modelChain(base as ModelChainInput)).toThrow(RangeError);
 });

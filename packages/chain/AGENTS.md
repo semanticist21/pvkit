@@ -16,7 +16,8 @@ Package-only facts. Shared rules (fixtures, references, numerics, release) live 
 ## Decisions
 
 - Scalar like core: one instant per call; series and energy are the caller's loop.
-- One model set (pvlib `with_pvwatts`). Fixed tilt only; tracking, other DC/temperature
-  models, spectral loss and Linke-turbidity lookup are out until asked for.
-- Sun position refracts at the step's `tempAir`, matching ModelChain; the clear sky uses
-  that same sun position.
+- One model set (pvlib `ModelChain` with PVWatts DC/AC/losses, Hay–Davies default).
+  Fixed tilt only; tracking, other DC/temperature models, spectral loss and Linke-turbidity
+  lookup are out until asked for.
+- Sun position refracts at the step's `tempAir`, or 12 °C when omitted (cell temperature
+  then uses 20 °C), matching ModelChain; the clear sky uses that same sun position.

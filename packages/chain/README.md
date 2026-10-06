@@ -34,6 +34,6 @@ for (let t = Date.UTC(2025, 5, 20); t < Date.UTC(2025, 5, 21); t += stepMs) {
 energyKwh({ power: pac, stepHours: 0.25 }); // kWh for the day
 ```
 
-Pass `weather: { ghi, dni, dhi }` (plus `tempAir`, `windSpeed`) instead of `linkeTurbidity`
-for measured data. Optional: `albedo`, `transposition`, `losses`, `temperatureModel`,
-`inverterPdc0`, `etaInvNom`, `deltaT`.
+Pass `weather: { ghi, dni, dhi }` instead of `linkeTurbidity` for measured data, with
+`tempAir` and `windSpeed` as top-level inputs (not inside `weather`). Optional: `albedo`,
+`transposition`, `losses`, `temperatureModel`, `inverterPdc0`, `etaInvNom`, `deltaT`.
