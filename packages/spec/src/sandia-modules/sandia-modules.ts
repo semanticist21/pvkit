@@ -3,7 +3,7 @@ import data from "./sandia-modules-data.json" with { type: "json" };
 
 /**
  * One module of the Sandia module database: Sandia Array Performance Model (SAPM)
- * coefficients. Names follow King et al. 2004; `c4`–`c7`, `ixo`, `ixxo` are absent for 10
+ * coefficients. Names follow King et al. 2004; `c4`–`c7`, `ixo`, `ixxo` are absent for some
  * entries.
  */
 export interface SandiaModule {

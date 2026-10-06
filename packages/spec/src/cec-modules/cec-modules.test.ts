@@ -31,7 +31,7 @@ const MAPPING: Mapping = [
 ];
 
 test("sampled rows match pvlib retrieve_sam", () => {
-  checkAgainstPvlib(CEC_MODULES, fixtures, MAPPING);
+  checkAgainstPvlib(CEC_MODULES, fixtures, MAPPING, 1e-14);
 });
 
 test("every row is physically ordered", () => {
@@ -39,4 +39,9 @@ test("every row is physically ordered", () => {
     expect(m.voc > m.vmp && m.vmp > 0, m.name).toBe(true);
     expect(m.betaOc < 0 && m.gammaPmp < 0, m.name).toBe(true);
   }
+});
+
+test("source quirks stay as published", () => {
+  // alphaSc ≈ 46 % of isc per °C, a unit error in the source (cec-modules.md).
+  expect(CEC_MODULES.filter((m) => m.alphaSc > 0.01 * m.isc)).toHaveLength(6);
 });

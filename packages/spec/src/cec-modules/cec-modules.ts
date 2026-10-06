@@ -3,7 +3,7 @@ import data from "./cec-modules-data.json" with { type: "json" };
 
 /** One module of the CEC module list with its CEC 6-parameter single-diode fit (STC values). */
 export interface CecModule {
-  /** Manufacturer + model, as listed (not unique: 36 names repeat). */
+  /** Manufacturer + model, as listed (not unique: some names repeat). */
   name: string;
   manufacturer: string;
   /** Cell technology as listed, e.g. "Mono-c-Si", "Multi-c-Si", "CdTe", "Thin Film". */
@@ -31,7 +31,7 @@ export interface CecModule {
   imp: number;
   /** Max-power voltage at STC, V. */
   vmp: number;
-  /** Temperature coefficient of `isc`, A/°C. */
+  /** Temperature coefficient of `isc`, A/°C (a few rows carry a source unit error). */
   alphaSc: number;
   /** Temperature coefficient of `voc`, V/°C. */
   betaOc: number;

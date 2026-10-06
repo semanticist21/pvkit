@@ -12,13 +12,22 @@ export const yes = (v: unknown) => String(v).trim() === "Y";
 export const bit = (v: unknown) => v === 1;
 export const pct = (v: unknown) => (v as number) / 100;
 
-/** Assert each sampled row equals pvlib's independent parse of the same SAM CSV. */
+/**
+ * Assert each sampled row equals pvlib's independent parse of the same SAM CSV, to `relTol`
+ * relative (0 = exact; the library's `.md` "## Reference" justifies any slack).
+ */
 export function checkAgainstPvlib(
   records: readonly object[],
   fixtures: Fixtures,
   mapping: Mapping,
+  relTol = 0,
 ): void {
   expect(records.length).toBe(fixtures.meta.rows);
+  // The fixture's columns are the generator's mapping; a column it adds or renames must be
+  // mapped here too, or it would ship unchecked.
+  for (const { pvlib } of fixtures.cases) {
+    expect(Object.keys(pvlib)).toStrictEqual(mapping.map(([, column]) => column));
+  }
   for (const { index, name, pvlib } of fixtures.cases) {
     const record = records[index] as Record<string, unknown>;
     expect(record.name).toBe(name);
@@ -27,9 +36,8 @@ export function checkAgainstPvlib(
       const want = cell === null ? undefined : to ? to(cell) : cell;
       const got = record[field];
       if (typeof want === "number" && typeof got === "number") {
-        // Same decimal text parsed twice → exact, except the %→fraction division (1 ULP).
         expect(Math.abs(got - want), `${name} ${field}`).toBeLessThanOrEqual(
-          Math.abs(want) * 1e-15,
+          Math.abs(want) * relTol,
         );
       } else {
         expect(got, `${name} ${field}`).toStrictEqual(want);

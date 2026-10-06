@@ -8,8 +8,9 @@ Dobos's `Adjust` term). Those six (`aRef`, `iLRef`, `iORef`, `rS`, `rShRef`, `ad
 
 Values are as listed, except `gammaPmp`, converted %/°C → 1/°C so it plugs into core's
 `pvwattsDc` `gammaPdc`. Blank cells (`length`, `width` on older rows; one `cellsInSeries`) are
-omitted. Source quirks are kept, not curated: 36 names repeat, technology spelling varies
-("Mono-C-si"), and 5 rows list `imp ≥ isc`.
+omitted. Source quirks are kept, not curated: some names repeat, technology spelling varies
+("Mono-C-si"), a few rows list `imp ≥ isc`, and a few list `alphaSc` at ≈ 46 % of `isc` per °C
+(a unit error in the source, ~100× too large for `calcparams_cec`; count pinned in the test).
 
 ## Reference
 
@@ -22,7 +23,10 @@ omitted. Source quirks are kept, not curated: 36 names repeat, technology spelli
   (BSD-3-Clause), parsed by `scripts/fixtures/spec-sam-libraries.py` into
   `cec-modules-data.json`.
 - **Reference implementation:** `pvlib.pvsystem.retrieve_sam` @ pvlib 0.16.1 parses the same
-  CSV independently; `cec-modules-fixtures.json` pins 60 rows (first, last, blank-cell rows,
-  random).
-- **Tolerance:** exact for values parsed from the same decimal text; `1e-15` relative for
-  `gammaPmp` (one division).
+  CSV independently; `cec-modules-fixtures.json` pins the first and last rows, 40 random
+  rows, the first row of each blank-cell pattern, and the row where pvlib's parse strays
+  furthest from the CSV text.
+- **Tolerance:** `1e-14` relative. pvkit's values are the correctly rounded parse of the CSV
+  text; `retrieve_sam` reads it with pandas' default C float parser, which is not correctly
+  rounded and is off by up to 9.2e-15 relative over the full table (e.g. `0.010721399999999999`
+  → `0.0107213999999999`). The pinned worst row fails at `1e-15`.

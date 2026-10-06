@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "PV module and inverter parameter libraries (CEC modules, CEC inverters, Sandia SAPM modules) as typed ESM data.",
   "type": "module",
-  "license": "MIT",
+  "license": "MIT AND BSD-3-Clause",
   "author": "semanticist21",
   "homepage": "https://github.com/semanticist21/pvkit/tree/main/packages/spec#readme",
   "bugs": {

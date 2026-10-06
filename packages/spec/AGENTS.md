@@ -13,6 +13,7 @@ Package-only facts. Shared rules: `doc/conventions.md`, `doc/architecture.md`.
 - Data is as published (no curation); only renames and unit changes, both listed in the
   generator's mapping and mirrored by each test's `MAPPING`. `gammaPmp` is 1/°C (core unit);
   SAM `dT` → `tempDelta` (`deltaT` means TT − UT package-wide).
-- Bumping the SAM tag: change `SAM_TAG`, run the script, review the row-count/README table.
-- Not yet here: ADR inverter coefficients, spectral response data, datasheet parsing —
-  add when `@pvkit/diode` or a caller needs them.
+- Bumping the SAM tag: change `SAM_TAG`, run the script, update the README table (the only
+  owner of row counts) and any quirk count a test pins.
+- No ADR inverter coefficient DB yet: `@pvkit/diode` `inverterAdr` takes caller-supplied
+  `adrCoefficients`. Also absent: spectral response data, datasheet parsing.

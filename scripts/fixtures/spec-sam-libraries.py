@@ -9,7 +9,9 @@
 Run: uv run scripts/fixtures/spec-sam-libraries.py
 Downloads the SAM library CSVs at a pinned release tag and writes, per library,
 packages/spec/src/<lib>/<lib>-data.json (every row, parsed with the csv module) and
-<lib>-fixtures.json (sampled rows as parsed independently by pvlib.pvsystem.retrieve_sam).
+<lib>-fixtures.json (sampled rows as parsed independently by pvlib.pvsystem.retrieve_sam:
+first, last, 40 random, the first row of each blank-cell pattern, and the row where pvlib's
+parse drifts furthest from the CSV text).
 """
 
 import csv
@@ -109,12 +111,24 @@ for lib, (file, cols) in LIBS.items():
         f.write(raw)
         f.flush()
         frame = pvlib.pvsystem.retrieve_sam(path=f.name)
+    def pv(i):  # row i as parsed by pvlib
+        return {c: plain(frame.iloc[:, i][c.replace(" ", "_")]) for _, c, _ in cols}
+
+    def drift(i):  # worst relative gap between pvlib's parse and ours (pandas' C parser)
+        return max((abs(v - (pct(w) if conv is pct else w)) / abs(v)
+                    for v, w, (_, _, conv) in zip(data[i][1:], pv(i).values(), cols)
+                    if type(v) is float and v and w is not None), default=0.0)
+
     rng = np.random.default_rng(20261006)
-    picks = sorted({0, len(data) - 1, *rng.choice(len(data), 40, replace=False).tolist(),
-                    *(i for i, r in enumerate(data) if None in r)})[:60]
-    cases = [{"index": i, "name": data[i][0],
-              "pvlib": {c: plain(frame.iloc[:, i][c.replace(" ", "_")]) for _, c, _ in cols}}
-             for i in picks]
+    nulls = {}  # first row of each distinct blank-cell pattern
+    for i, r in enumerate(data):
+        nulls.setdefault(tuple(v is None for v in r), i)
+    picks = {0, len(data) - 1, *rng.choice(len(data), 40, replace=False).tolist(),
+             *(i for k, i in nulls.items() if any(k))}
+    gaps = [drift(i) for i in range(len(data))]
+    if max(gaps):
+        picks.add(gaps.index(max(gaps)))
+    cases = [{"index": i, "name": data[i][0], "pvlib": pv(i)} for i in sorted(picks)]
     fmeta = {"reference": f"pvlib.pvsystem.retrieve_sam @ pvlib {pvlib.__version__}", **meta}
     (SRC / lib / f"{lib}-fixtures.json").write_text(
         json.dumps({"meta": fmeta, "cases": cases}, indent=2, ensure_ascii=False, allow_nan=False) + "\n")

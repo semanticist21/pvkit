@@ -5,7 +5,7 @@ Commission's eligible-inverter list with the Sandia grid-connected inverter mode
 (`paco`, `pdco`, `vdco`, `pso`, `c0`–`c3`, `pnt`) fit to each CEC efficiency test, and the
 DC limits a string sizer checks against (`vdcMax`, `idcMax`, `mpptLow`, `mpptHigh`).
 
-Values are as listed. `pnt` is `nan` in the source for 8 rows and is omitted there. Every
+Values are as listed. `pnt` is `nan` in the source for some rows and is omitted there. Every
 row satisfies `mpptLow ≤ mpptHigh ≤ vdcMax` and `pdco > paco` (asserted).
 
 ## Reference
@@ -17,6 +17,6 @@ row satisfies `mpptLow ≤ mpptHigh ≤ vdcMax` and `pdco > paco` (asserted).
   (BSD-3-Clause), parsed by `scripts/fixtures/spec-sam-libraries.py` into
   `cec-inverters-data.json`.
 - **Reference implementation:** `pvlib.pvsystem.retrieve_sam` @ pvlib 0.16.1 parses the same
-  CSV independently; `cec-inverters-fixtures.json` pins 50 rows (first, last, `nan` rows,
-  random).
-- **Tolerance:** exact (same decimal text parsed twice).
+  CSV independently; `cec-inverters-fixtures.json` pins the first and last rows, 40
+  random rows, and the first row of each blank-cell pattern.
+- **Tolerance:** exact (pandas parses every cell of this table to the correctly rounded value).

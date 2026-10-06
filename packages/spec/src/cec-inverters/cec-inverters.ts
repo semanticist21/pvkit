@@ -23,9 +23,12 @@ export interface CecInverter {
   c2: number;
   /** Variation of `c0` with DC voltage, 1/V. */
   c3: number;
-  /** AC power drawn at night, W (absent for 8 entries). */
+  /** AC power drawn at night, W (absent for some entries). */
   pnt?: number;
-  /** Maximum DC input voltage, V. */
+  /**
+   * Upper bound of the rated MPPT/operating DC voltage window, V (equals `mpptHigh` for most
+   * entries) — not the datasheet absolute maximum input voltage, which CEC does not list.
+   */
   vdcMax: number;
   /** Maximum DC input current, A. */
   idcMax: number;
