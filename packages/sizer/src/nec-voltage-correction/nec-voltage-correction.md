@@ -16,14 +16,22 @@ temperature:
 
 Rows are whole degrees; a fractional temperature between two rows takes the colder row (the
 higher factor). ≥ 25 °C → 1. Below −40 °C the code defers to the manufacturer → RangeError.
-The table is unchanged from NEC 2011 through 2023 (2005/2008 had a coarser 5-row table).
 
 ## Reference
 
-- **Spec:** NFPA 70, National Electrical Code 2023, §690.7(A)(2) and Table 690.7(A).
-- **Reference implementation:** the table in `scripts/fixtures/sizer.py`, transcribed
-  independently of the TS source; rows −20 → 1.18, −23.3 (−10 °F) → 1.20, −30 → 1.21 also
-  checked against published worked examples.
-- **Fixtures:** `nec-voltage-correction-fixtures.json` (64 cases: both ends of every row,
-  between-row values, 25/30 °C, −40/−40.5/−60 °C, 30 random).
+- **Spec:** NFPA 70, National Electrical Code 2023, §690.7(A)(2) and Table 690.7(A),
+  https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70.
+- **Table check:** all 13 rows (°C, °F, factor) checked against the NEC 2014 Table 690.7
+  reproduced at https://enkonnsolar.com/wp-content/uploads/2023/08/Article-690-Photovoltaic-PV-System.pdf;
+  rows 4 … −40 °C also match Mike Holt's 2011 NEC guide (sample at
+  https://www.mikeholt.com/instructor2/img/product/pdf/1295899800-sample.pdf). The 2023 text
+  sits behind NFPA's free-access login and was not compared row by row.
+- **Reference implementation:** the table in `scripts/fixtures/sizer.py` (same author as the
+  TS table, so the row check above is the evidence, not their agreement); "between rows →
+  colder row" is pvkit's reading of the whole-degree rows.
+- **Worked examples (fixture `source` cases):** Mike Holt 2011 guide §690.7, −7 °C → 1.14
+  (22.60 V × 1.14 × 23 = 593 V); Penn State AE 868 "Voltage design"
+  (https://courses.ems.psu.edu/ae868/node/943), −10 °F → 1.20.
+- **Fixtures:** `nec-voltage-correction-fixtures.json` (66 cases: the 2 worked examples, both
+  ends of every row, between-row values, 25/30 °C, −40/−40.5/−60 °C, 30 random).
 - **Tolerance:** exact (table lookup).

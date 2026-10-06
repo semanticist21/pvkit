@@ -5,6 +5,22 @@
   "cases": [
     {
       "input": {
+        "tempMin": -7.0
+      },
+      "expected": 1.14,
+      "source": "Mike Holt, Illustrated Guide to the 2011 NEC Requirements for Solar PV Systems, \u00a7690.7",
+      "published": 1.14
+    },
+    {
+      "input": {
+        "tempMin": -23.333333333333332
+      },
+      "expected": 1.2,
+      "source": "Penn State AE 868, Voltage design, https://courses.ems.psu.edu/ae868/node/943 (Method 2, \u221210 \u00b0F)",
+      "published": 1.2
+    },
+    {
+      "input": {
         "tempMin": 25.0
       },
       "expected": 1.0

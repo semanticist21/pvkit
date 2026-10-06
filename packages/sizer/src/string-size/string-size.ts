@@ -1,6 +1,7 @@
 /**
  * Inputs for {@link stringSize}. Field names match `@pvkit/spec` records, so a
- * `CecInverter` can be spread in directly.
+ * `CecInverter` can be spread in — but its `vdcMax`/`mpptLow` are the rated MPPT window,
+ * not the maximum input voltage; override `vdcMax` with the datasheet value for the NEC check.
  */
 export interface StringSizeInput {
   /** Module open-circuit voltage at the coldest expected cell temperature, V. */
@@ -9,7 +10,7 @@ export interface StringSizeInput {
   vmpMin: number;
   /** Module max-power current, A. */
   imp: number;
-  /** Inverter maximum DC input voltage, V. */
+  /** Inverter maximum DC input voltage (datasheet absolute rating), V. */
   vdcMax: number;
   /** Lower bound of the inverter MPPT window, V. */
   mpptLow: number;
@@ -21,7 +22,7 @@ export interface StringSizeInput {
 export interface StringSize {
   /** Fewest modules in series that keep the hot-day string Vmp ≥ `mpptLow`. */
   minSeries: number;
-  /** Most modules in series that keep the cold-day string Voc ≤ `vdcMax` (safety limit). */
+  /** Most modules in series that keep the cold-day string Voc ≤ `vdcMax`. */
   maxSeries: number;
   /** Most parallel strings whose summed `imp` stays ≤ `idcMax` (beyond it the inverter clips). */
   maxParallel: number;

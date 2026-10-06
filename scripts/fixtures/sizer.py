@@ -6,10 +6,10 @@
 # ///
 """Fixtures for @pvkit/sizer {voltage-at-temperature,nec-voltage-correction,string-size}.
 
-No reference library implements string sizing, so the reference is the explicit rule of
-NFPA 70 (NEC) 2023 §690.7(A) — coefficient method and Table 690.7(A) — evaluated in Python
-float64, plus the integer limits floor(Vdcmax/Voc_max), ceil(Vmppt_low/Vmp_min),
-floor(Idcmax/Imp).
+The reference is the explicit rule of NFPA 70 (NEC) §690.7(A) — coefficient method and
+Table 690.7(A) — evaluated in Python float64, plus the integer limits floor(Vdcmax/Voc_max),
+ceil(Vmppt_low/Vmp_min), floor(Idcmax/Imp). Cases carrying `source`/`published` are cited
+worked examples; this script asserts it reproduces each published value.
 Run: uv run scripts/fixtures/sizer.py
 """
 
@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[2] / "packages/sizer/src"
 rng = np.random.default_rng(20261006)
 META = {"reference": "NEC 2023 690.7(A) explicit formulas, Python float64"}
 
-# NEC 2023 Table 690.7(A), rows as printed: (warmest °C, coldest °C, factor).
+# Table 690.7(A), rows as printed (sources: nec-voltage-correction.md → Reference): (warmest °C, coldest °C, factor).
 NEC = [(24, 20, 1.02), (19, 15, 1.04), (14, 10, 1.06), (9, 5, 1.08), (4, 0, 1.10),
        (-1, -5, 1.12), (-6, -10, 1.14), (-11, -15, 1.16), (-16, -20, 1.18), (-21, -25, 1.20),
        (-26, -30, 1.21), (-31, -35, 1.23), (-36, -40, 1.25)]
@@ -40,8 +40,21 @@ def vat(voltage, beta, temp_cell, temp_ref=25.0):
             "expected": voltage + beta * (temp_cell - temp_ref)}
 
 
+HOLT = "Mike Holt, Illustrated Guide to the 2011 NEC Requirements for Solar PV Systems, §690.7"
+PSU = "Penn State AE 868, Voltage design, https://courses.ems.psu.edu/ae868/node/943"
+
+
+def published(case, source, value, digits):
+    """Pin a cited worked example: the formula must reproduce its printed (rounded) value."""
+    got = case["expected"]
+    assert round(got, digits) == value, (source, got, value)
+    return {**case, "source": source, "published": value}
+
+
 write("voltage-at-temperature",
-      [vat(38.63, -0.12118231, -10.0), vat(30.72, -0.12118231, 70.0), vat(50.0, 0.0, -40.0),
+      [published(vat(22.60, -0.075, -7.0), HOLT + " (V/°C example)", 25.0, 2),
+       published(vat(38.0, 60 * -0.0032, -23.0), PSU + " (Method 1)", 47.2, 1),
+       vat(38.63, -0.12118231, -10.0), vat(30.72, -0.12118231, 70.0), vat(50.0, 0.0, -40.0),
        vat(45.0, -0.15, 25.0), vat(0.0, -0.1, -20.0), vat(41.2, -0.13, -40.0, 20.0)]
       + [vat(float(rng.uniform(5, 90)), float(rng.uniform(-0.35, -0.02)),
              float(rng.uniform(-45, 85)), float(rng.choice([25.0, 20.0]))) for _ in range(44)])
@@ -60,7 +73,11 @@ temps = [25.0, 30.0, 24.5, -40.0, -40.5, -60.0, 19.5, -0.5]
 for warm, cold, _ in NEC:
     temps += [float(warm), float(cold)]
 temps += [float(round(rng.uniform(-45, 30), 2)) for _ in range(30)]
-write("nec-voltage-correction", [{"input": {"tempMin": t}, "expected": nec(t)} for t in temps])
+nec_cases = [published({"input": {"tempMin": -7.0}, "expected": nec(-7.0)}, HOLT, 1.14, 2),
+             published({"input": {"tempMin": (-10 - 32) * 5 / 9}, "expected": nec((-10 - 32) * 5 / 9)},
+                       PSU + " (Method 2, −10 °F)", 1.20, 2)]
+write("nec-voltage-correction",
+      nec_cases + [{"input": {"tempMin": t}, "expected": nec(t)} for t in temps])
 
 
 def size(voc_max, vmp_min, imp, vdc_max, mppt_low, idc_max):

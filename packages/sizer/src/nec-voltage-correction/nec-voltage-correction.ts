@@ -15,6 +15,12 @@ const TABLE: readonly (readonly [number, number])[] = [
   [-40, 1.25],
 ];
 
+/** Inputs for {@link necVoltageCorrection}. */
+export interface NecVoltageCorrectionInput {
+  /** Lowest expected ambient temperature, °C. */
+  tempMin: number;
+}
+
 /**
  * Voc correction factor for crystalline/multicrystalline silicon from NEC Table 690.7(A),
  * for when the manufacturer gives no temperature coefficient. Multiply STC `voc` by it.
@@ -22,9 +28,10 @@ const TABLE: readonly (readonly [number, number])[] = [
  * ≥ 25 °C gives 1. Below −40 °C the table has no row → RangeError.
  *
  * @example
- * necVoltageCorrection(-12); // 1.16
+ * necVoltageCorrection({ tempMin: -12 }); // 1.16
  */
-export const necVoltageCorrection = (tempMin: number): number => {
+export const necVoltageCorrection = (input: NecVoltageCorrectionInput): number => {
+  const { tempMin } = input;
   if (tempMin >= 25) return 1;
   for (const [floor, factor] of TABLE) if (tempMin >= floor) return factor;
   throw new RangeError(`NEC Table 690.7(A) covers −40 °C and warmer, got ${tempMin}`);

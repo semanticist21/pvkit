@@ -9,8 +9,8 @@ Package-only facts. Shared rules: `doc/conventions.md`, `doc/architecture.md`.
   modules' outputs as inputs.
 - Input field names match `@pvkit/spec` (`vdcMax`, `mpptLow`, `idcMax`, `imp`, `betaOc` → `beta`)
   so records spread in; no runtime dependency on spec.
-- No library implements string sizing, so fixtures evaluate the NEC 690.7 formulas/table in
-  Python (`scripts/fixtures/sizer.py`); the NEC table there is transcribed separately from
-  the TS one.
+- No library implements string sizing (pvlib has none; SAM's sizing helper is UI code), so
+  fixtures evaluate the NEC 690.7 formulas/table in Python (`scripts/fixtures/sizer.py`)
+  plus cited worked examples (`source` cases, asserted by the generator).
 - Not here yet: cold-day Vmp vs `mpptHigh`, NEC 690.8 current / conductor sizing, multi-MPPT
   inverters, DC/AC ratio — add when a caller asks.

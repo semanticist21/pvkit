@@ -14,7 +14,7 @@ ESM-only, one subpath per method.
 | `@pvkit/sizer/nec-voltage-correction` | `necVoltageCorrection` | NEC Table 690.7(A) |
 | `@pvkit/sizer/string-size` | `stringSize` | NEC 690.7(A), inverter DC ratings |
 
-Field names match [`@pvkit/spec`](../spec) records, so library entries plug in directly:
+Field names match [`@pvkit/spec`](https://github.com/semanticist21/pvkit/tree/main/packages/spec) records, so library entries plug in directly:
 
 ```ts
 import { CEC_INVERTERS } from "@pvkit/spec/cec-inverters";
@@ -27,14 +27,18 @@ const inv = CEC_INVERTERS.find((x) => x.name === "SMA America: SB70-1SP-US-40 {2
 
 const vocMax = voltageAtTemperature({ voltage: m.voc, beta: m.betaOc, tempCell: -15 });
 const vmpMin = voltageAtTemperature({ voltage: m.vmp, beta: m.betaOc, tempCell: 70 });
-stringSize({ ...inv, vocMax, vmpMin, imp: m.imp }); // { minSeries, maxSeries, maxParallel }
+// CEC vdcMax/mpptLow are the rated MPPT window (480 V here), not the 600 V datasheet
+// maximum input voltage: pass that as vdcMax for the NEC 690.7 limit.
+stringSize({ ...inv, vdcMax: 600, vocMax, vmpMin, imp: m.imp }); // { minSeries, maxSeries, maxParallel }
 ```
 
 `tempCell` for `vocMax` is the site's lowest expected ambient (e.g. ASHRAE extreme annual
 mean minimum); for `vmpMin`, the hottest expected cell temperature. Without a coefficient,
-`m.voc * necVoltageCorrection(tempMin)` is the code's crystalline-silicon fallback.
+`m.voc * necVoltageCorrection({ tempMin })` is the code's crystalline-silicon fallback.
 
 ## Correctness
 
-Every method is checked against an independent Python float64 evaluation of the NEC
-formulas and table (164 fixture cases). Per-method notes: `src/<method>/<method>.md`.
+Fixtures re-evaluate the NEC formulas and table in Python float64 (proving JS/Python
+agreement and edge handling) and pin cited published worked examples where one exists; the
+table rows are checked against a published reproduction. Per-method notes and sources:
+`src/<method>/<method>.md`.
