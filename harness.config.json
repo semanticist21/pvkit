@@ -9,7 +9,8 @@
     "packages/economics/src/",
     "packages/io/src/",
     "packages/chain/src/",
-    "packages/sizer/src/"
+    "packages/sizer/src/",
+    "packages/layout/src/"
   ],
   "docFileNames": ["AGENTS.md", "CLAUDE.md", "playbook.md"],
   "durableSourceGlobs": [
@@ -18,7 +19,8 @@
     "packages/economics/src/",
     "packages/io/src/",
     "packages/chain/src/",
-    "packages/sizer/src/"
+    "packages/sizer/src/",
+    "packages/layout/src/"
   ],
   "testPairingMode": "module",
   "modulePairingRoot": "packages/core/src/",

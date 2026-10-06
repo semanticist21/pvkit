@@ -1,0 +1,4706 @@
+[
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 0,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -10.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -1.2372351651196657e-15
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 3.451178397018843
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -10.037423045910712
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -1.2614206492337328e-15
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 3.5151610136798164
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -10.627584138330887
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -1.4069319186073972e-15
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 3.9070374332021016
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 10.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -10.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -9.40804348683469
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 10.037423045910712
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -10.037423045910712
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -9.492514680993168
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 10.627584138330887
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -10.627584138330887
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -10.219747375997896
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 7.107076110446535
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 7.107076110446534
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -7.107076110446534
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -9.07946747328211
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 7.211798041969944
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 7.05774607263845
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -7.05774607263845
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -9.055518193530098
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 7.912920302348354
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 7.233528282351584
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -7.233528282351584
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -9.40127493255417
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 1.2372351651196657e-15
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 10.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -3.4511783970188445
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 1.2614206492337328e-15
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 10.037423045910712
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -3.4149450231480505
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 1.4069319186073972e-15
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 10.627584138330887
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -3.4637454658136093
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -7.107076110446533
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 7.107076110446535
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 7.107076110446534
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 4.261747350398792
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -7.211798041969942
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 7.211798041969944
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 7.05774607263845
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 4.219194061545513
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -7.912920302348352
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 7.912920302348354
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 7.233528282351584
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 4.285874489441199
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -10.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 1.2372351651196655e-15
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 10.0
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 9.40804348683469
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -10.037423045910712
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 1.2614206492337326e-15
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 10.037423045910712
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 9.39465692057165
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -10.627584138330887
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 1.406931918607397e-15
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 10.627584138330887
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 9.78941357623736
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -0.1763174722280533
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -9.998507686626974
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.17631747222805205
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 3.6157094277402173
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -0.17430250151520274
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -10.03857312789749
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.1797636763778697
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 3.6823747078153595
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -0.1763190917273691
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -10.63764565563816
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.20049855189938445
+  },
+  {
+    "solarZenith": 10,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 4.091462700529901
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -44.99999999999999
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -7.016709298534875e-15
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 18.881721230906862
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -45.109221547992476
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -7.718821352247689e-15
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 20.50985285566718
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -46.78082110628581
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -1.1740057578611961e-14
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 28.94975353840174
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 44.99999999999999
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -44.99999999999999
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -43.21917889371418
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 45.109221547992476
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -45.109221547992476
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -44.197672215614844
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 46.78082110628581
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -46.78082110628581
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -48.79737190480309
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 35.264389682754654
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 35.264389682754654
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -35.264389682754654
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -42.18626118104529
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 37.11169251523473
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 33.760931755763075
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -33.760931755763075
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -41.261481372953355
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 45.37758481229733
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 30.89897332174894
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -30.89897332174894
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -39.892077368805005
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 7.016709298534875e-15
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 44.99999999999999
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -18.88172123090687
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 7.718821352247689e-15
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 45.109221547992476
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -17.60137540581853
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 1.1740057578611961e-14
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 46.78082110628581
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -15.174210545056162
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -35.264389682754654
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 35.264389682754654
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 35.264389682754654
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 22.909807125143672
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -37.11169251523472
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 37.11169251523473
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 33.760931755763075
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 21.458090326486477
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -45.37758481229733
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 45.377584812297336
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 30.89897332174894
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 18.68473445608935
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -44.99999999999999
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 7.016709298534876e-15
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 44.99999999999999
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 43.21917889371418
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -45.109221547992476
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 7.71882135224769e-15
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 45.109221547992476
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 42.48583387601682
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -46.78082110628581
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 1.1740057578611964e-14
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 46.78082110628581
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 41.64656275305071
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -0.9998477260772516
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -44.995636455344844
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.9998477260772446
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 19.716052168757162
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -0.9229469556952068
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -45.14863314068727
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 1.099855840757438
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 21.391902141232134
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -0.7801498904111586
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -46.95863419810058
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 1.6724512714579223
+  },
+  {
+    "solarZenith": 45,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 30.01288280585424
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -59.99999999999999
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -1.215329700700338e-14
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 30.642342047955964
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -60.09449859371734
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -1.4378575309246957e-14
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 34.737286098308736
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -61.51876171866053
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -3.4994024038404436e-14
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 57.1147374354197
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 59.99999999999999
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -59.99999999999999
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -58.43329603385902
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 60.09449859371734
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -60.09449859371734
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -59.871553356734864
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 61.51876171866053
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -61.51876171866053
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -65.63588627424333
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 50.76847951640774
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 50.76847951640774
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -50.76847951640774
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -57.501415129035706
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 54.01157834524374
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 47.99553040023493
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -47.99553040023493
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -55.970699914879454
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 66.96307195166617
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 42.03431005443596
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -42.03431005443596
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -52.83408094549779
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 1.215329700700338e-14
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 59.99999999999999
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -30.642342047955978
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 1.4378575309246957e-14
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 60.09449859371734
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -27.498631970654365
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 3.4994024038404436e-14
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 61.51876171866053
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -21.598154075547754
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -50.76847951640774
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 50.76847951640774
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 50.76847951640774
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 36.20398974510616
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -54.011578345243734
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 54.01157834524374
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 47.99553040023493
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 32.86504016027028
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -66.96307195166617
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 66.96307195166617
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 42.03431005443597
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 26.369254439630417
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -59.99999999999999
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 1.215329700700338e-14
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 59.99999999999999
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 58.43329603385902
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -60.09449859371734
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 1.437857530924696e-14
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 60.09449859371734
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 57.22707455180721
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -61.51876171866053
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 3.4994024038404436e-14
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 61.51876171866053
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 54.937462206603925
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -1.7314356299743863
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -59.99622091557209
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 1.731435629974374
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 31.828349947017927
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -1.5094734956309286
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -60.156262657414956
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 2.048158047246828
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 35.970457261520934
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -1.130378376033448
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -61.78001589050213
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 4.97316620529576
+  },
+  {
+    "solarZenith": 60,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 58.081097068916385
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -80.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -3.979373587832336e-14
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 62.72683044319633
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -80.03728921273593
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -7.928461739849797e-14
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 74.67034897452183
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -80.59195651316531
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -179.99999999999997
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 114.47684219879346
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 80.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -80.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -79.37241586166911
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 80.03728921273593
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -80.03728921273593
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -81.177678793255
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 80.59195651316531
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -80.59195651316531
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -87.03233869663714
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 75.99805783448308
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 75.99805783448308
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -75.99805783448308
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -78.99033927877981
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 80.83938203831099
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 71.44974875526397
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -71.44974875526397
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -76.80497129526961
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 96.146756941092
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 60.04318863229658
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -60.04318863229658
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -71.10347389198672
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 3.979373587832336e-14
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 80.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -62.72683044319634
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 7.928461739849797e-14
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 80.03728921273593
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -53.018708697377
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 179.99999999999997
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 80.59195651316531
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -35.07555955835591
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -75.99805783448308
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 75.99805783448308
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 75.99805783448308
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 67.35287375404208
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -80.83938203831099
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 80.83938203831099
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 71.44974875526397
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 58.92920347271129
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -96.14675694109201
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 96.146756941092
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 60.04318863229659
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 41.620190456919104
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -80.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 3.9793735878323364e-14
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 80.0
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 79.37241586166911
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -80.03728921273593
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 7.928461739849798e-14
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 80.03728921273593
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 77.6663091083276
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -80.59195651316531
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 179.99999999999997
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 80.59195651316531
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 73.25807562687397
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -5.652583268938706
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -79.99850747301592
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 5.652583268938666
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 63.801533241616134
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -3.7994250397694502
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -80.12037874691538
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 11.15405744961582
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 75.25916562504483
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -1.9689421827898137
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -80.92377838558897
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 174.34575714796958
+  },
+  {
+    "solarZenith": 80,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 113.20181654421134
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -89.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -4.01987006487254e-13
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 87.07843341926132
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -89.0038045335852
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -179.9999999999999
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 100.68149312513312
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -89.06029621815283
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -179.99999999999997
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 131.7245122163081
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 89.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -89.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -88.93583654091154
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 89.0038045335852
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -89.0038045335852
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -90.75726221540278
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 89.06029621815283
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -89.06029621815283
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -96.10911555401285
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 88.58593000067151
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 88.58593000067151
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -88.58593000067151
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -88.89664644002028
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 93.5800148616253
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 83.62382146491588
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -83.62382146491588
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -86.5762100907264
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 107.6835116801182
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 69.93696562833618
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -69.93696562833618
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -79.93012858438591
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 4.01987006487254e-13
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 89.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -87.07843341926132
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 179.9999999999999
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 89.0038045335852
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -73.81201725976777
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 179.99999999999997
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 89.06029621815283
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -45.355994647264524
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -88.58593000067151
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 88.58593000067151
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 88.58593000067151
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 87.63490236547742
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -93.58001486162532
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 93.5800148616253
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 83.62382146491588
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 77.15333250124372
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -107.6835116801182
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 107.6835116801182
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 69.93696562833618
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 52.32195453940993
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -89.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 4.0198700648725394e-13
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 89.0
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 88.93583654091154
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -89.0038045335852
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 179.9999999999999
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 89.0038045335852
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 87.1246381516344
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -89.06029621815283
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 179.99999999999997
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 89.06029621815283
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 81.92138952552152
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -44.99563645534479
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -88.99984770289579
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 44.99563645534459
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 87.211492260017
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -9.478616383188912
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -89.09079329127682
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 165.95297246985643
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 100.12218883717267
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -2.7880643021376974
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -89.40214537089317
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 176.93151588262424
+  },
+  {
+    "solarZenith": 89,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 130.2052711111745
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -63.43494882292201
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 89.99999999999999
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -179.99999999999991
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 103.46639024943227
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -179.99999999999997
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 133.21917889371417
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -91.8169329329614
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -97.09596970072721
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 94.9810693937002
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 85.0189306062998
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -85.0189306062998
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -87.67270064961522
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 108.88172123090686
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 71.11827876909314
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -71.11827876909314
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -80.93840610854836
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 63.43494882292201
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -89.99999999999999
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 179.99999999999991
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -76.53360975056772
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 179.99999999999997
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -46.78082110628582
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -94.9810693937002
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 94.9810693937002
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 85.0189306062998
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 79.41322091431192
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -108.88172123090688
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 108.88172123090686
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 71.11827876909314
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 53.74127305749841
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 63.43494882292201
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 179.99999999999991
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 88.1830670670386
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 179.99999999999997
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 82.90403029927278
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -89.9999999999998
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 89.9999999999998
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 90.0
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -11.325049479775815
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -90.08716452630131
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 168.67495052022423
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 102.7920476966355
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -2.921566580738674
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -90.34205081238333
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 177.07843341926133
+  },
+  {
+    "solarZenith": 90,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 131.70081240873844
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 180.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -95.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -179.99999999999991
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 104.34856765403899
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 180.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -94.98106939370021
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -179.99999999999997
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 116.30248634534254
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -94.6998569118104
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -180.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 0,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 139.72171149085327
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 95.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 180.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -95.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -95.31910333834675
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 94.98106939370021
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 180.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -94.98106939370021
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -97.09518818294644
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 94.6998569118104
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -94.6998569118104
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 90,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -101.96805061614285
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 97.05322665679864
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 97.05322665679864
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": -97.05322665679864
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -95.51385206120342
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 101.8824176720354
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 92.06754224249431
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": -92.06754224249431
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -93.17804662984304
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 114.62132863086389
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 77.27849402325397
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": -77.27849402325397
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 135,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -86.06566618951243
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": 179.99999999999991
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 95.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 180.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": -104.34856765403899
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": 179.99999999999997
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 94.98106939370021
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 180.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": -90.88044701579797
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": 180.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 94.6998569118104
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 0.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 180,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": -55.034156062431826
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -97.05322665679864
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 97.05322665679864
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 97.05322665679864
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 101.69592175601244
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -101.88241767203542
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 101.8824176720354
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 92.06754224249431
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 91.10692919170427
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -114.62132863086391
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 114.62132863086389
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 77.27849402325397
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 225,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 61.67829256040594
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -95.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": 179.99999999999991
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 95.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 95.31910333834676
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -94.98106939370021
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": 179.99999999999997
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 94.98106939370021
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 93.4922646027448
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -94.6998569118104
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": 180.0
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 94.6998569118104
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 270,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 87.88122370352696
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 0,
+    "expected": -168.71861256937717
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 90,
+    "expected": -95.00075777841326
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 180,
+    "expected": 168.71861256937726
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 0,
+    "axisAzimuth": 200,
+    "expected": 103.7193112292276
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 0,
+    "expected": -90.04357896921906
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 90,
+    "expected": -95.06832015599005
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 180,
+    "expected": 174.28205615998087
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 5,
+    "axisAzimuth": 200,
+    "expected": 115.18527007556808
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 0,
+    "expected": -3.8438002287610162
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 90,
+    "expected": -95.04015785911828
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 180,
+    "expected": 177.64396158558782
+  },
+  {
+    "solarZenith": 95,
+    "solarAzimuth": 359,
+    "axisTilt": 20,
+    "axisAzimuth": 200,
+    "expected": 138.24988643898251
+  }
+]

@@ -1,0 +1,770 @@
+[
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.19999999999999996
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.19999999999999996
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.6
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.6
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.19047619047619047
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.07999999999999996
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.26
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.26
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.62
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.62
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.25142857142857145
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.4
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.5
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.5
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.7
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.7
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.49523809523809526
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 1,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.8
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 1,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.8
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 1,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.8
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 1,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.8
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 1,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.8
+  },
+  {
+    "poaGlobal": 1000,
+    "poaDirect": 800,
+    "shadedFraction": 1,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.8
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.125
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.125
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.375
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.375
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.11904761904761907
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.050000000000000044
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.16249999999999998
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.16249999999999998
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.38749999999999996
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.38749999999999996
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.15714285714285714
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.25
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.3125
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.3125
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.4375
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.4375
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.30952380952380953
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 1,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.5
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 1,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.5
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 1,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.5
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 1,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.5
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 1,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.5
+  },
+  {
+    "poaGlobal": 600,
+    "poaDirect": 300,
+    "shadedFraction": 1,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.5
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 1,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 1,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 1,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 1,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 1,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 200,
+    "poaDirect": 0,
+    "shadedFraction": 1,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.0
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.20583480305702528
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.20583480305702528
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.6175044091710759
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.6175044091710759
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.19603314576859554
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.08233392122281014
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.26758524397413286
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.26758524397413286
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.6380878894767784
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.6380878894767784
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.1,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.2587637524145461
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.41166960611405057
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.5145870076425632
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.5145870076425632
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.7204218106995885
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.7204218106995885
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 0.5,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.5096861789983483
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 1,
+    "shadedBlocks": 0,
+    "totalBlocks": 1,
+    "expected": 0.8233392122281011
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 1,
+    "shadedBlocks": 0.3,
+    "totalBlocks": 3,
+    "expected": 0.8233392122281011
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 1,
+    "shadedBlocks": 1,
+    "totalBlocks": 3,
+    "expected": 0.8233392122281011
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 1,
+    "shadedBlocks": 2.5,
+    "totalBlocks": 3,
+    "expected": 0.8233392122281011
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 1,
+    "shadedBlocks": 3,
+    "totalBlocks": 3,
+    "expected": 0.8233392122281011
+  },
+  {
+    "poaGlobal": 850.5,
+    "poaDirect": 700.25,
+    "shadedFraction": 1,
+    "shadedBlocks": 5,
+    "totalBlocks": 20,
+    "expected": 0.8233392122281011
+  }
+]

@@ -1,0 +1,102 @@
+{
+  "profile": [
+    {
+      "azimuth": 0,
+      "elevation": 5
+    },
+    {
+      "azimuth": 45,
+      "elevation": 12.5
+    },
+    {
+      "azimuth": 90,
+      "elevation": 3
+    },
+    {
+      "azimuth": 180,
+      "elevation": 0
+    },
+    {
+      "azimuth": 200,
+      "elevation": 20
+    },
+    {
+      "azimuth": 270,
+      "elevation": 8
+    },
+    {
+      "azimuth": 315,
+      "elevation": 1
+    }
+  ],
+  "cases": [
+    {
+      "azimuth": 0,
+      "expected": 5.0
+    },
+    {
+      "azimuth": 10,
+      "expected": 6.666666666666667
+    },
+    {
+      "azimuth": 44.9,
+      "expected": 12.483333333333333
+    },
+    {
+      "azimuth": 45,
+      "expected": 12.5
+    },
+    {
+      "azimuth": 89,
+      "expected": 3.2111111111111112
+    },
+    {
+      "azimuth": 135,
+      "expected": 1.5
+    },
+    {
+      "azimuth": 180,
+      "expected": 0.0
+    },
+    {
+      "azimuth": 190,
+      "expected": 10.0
+    },
+    {
+      "azimuth": 199.99,
+      "expected": 19.99000000000001
+    },
+    {
+      "azimuth": 250,
+      "expected": 11.428571428571429
+    },
+    {
+      "azimuth": 300,
+      "expected": 3.333333333333333
+    },
+    {
+      "azimuth": 315,
+      "expected": 1.0
+    },
+    {
+      "azimuth": 330,
+      "expected": 2.3333333333333335
+    },
+    {
+      "azimuth": 359.9,
+      "expected": 4.991111111111109
+    },
+    {
+      "azimuth": 360,
+      "expected": 5.0
+    },
+    {
+      "azimuth": 400,
+      "expected": 11.666666666666666
+    },
+    {
+      "azimuth": -30,
+      "expected": 2.3333333333333335
+    }
+  ]
+}

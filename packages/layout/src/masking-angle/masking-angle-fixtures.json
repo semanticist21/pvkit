@@ -1,0 +1,1514 @@
+[
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.01,
+    "slantHeight": 0,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.01,
+    "slantHeight": 0.25,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.01,
+    "slantHeight": 0.5,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.01,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.2,
+    "slantHeight": 0,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.2,
+    "slantHeight": 0.25,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.2,
+    "slantHeight": 0.5,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.2,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.4,
+    "slantHeight": 0,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.4,
+    "slantHeight": 0.25,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.4,
+    "slantHeight": 0.5,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.4,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.5,
+    "slantHeight": 0,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.5,
+    "slantHeight": 0.25,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.5,
+    "slantHeight": 0.5,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.5,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.7,
+    "slantHeight": 0,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.7,
+    "slantHeight": 0.25,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.7,
+    "slantHeight": 0.5,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.7,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.99,
+    "slantHeight": 0,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.99,
+    "slantHeight": 0.25,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.99,
+    "slantHeight": 0.5,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 0.99,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 1,
+    "slantHeight": 0,
+    "expected": null
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 1,
+    "slantHeight": 0.25,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 1,
+    "slantHeight": 0.5,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0,
+    "gcr": 1,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.01,
+    "slantHeight": 0,
+    "expected": 0.005050438992199171
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.01,
+    "slantHeight": 0.25,
+    "expected": 0.00377828848290318
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.01,
+    "slantHeight": 0.5,
+    "expected": 0.002512530441396804
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.01,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.2,
+    "slantHeight": 0,
+    "expected": 0.12499702527431261
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.2,
+    "slantHeight": 0.25,
+    "expected": 0.08823351157451774
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.2,
+    "slantHeight": 0.5,
+    "expected": 0.055554597976692655
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.2,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.4,
+    "slantHeight": 0,
+    "expected": 0.3333168811298635
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.4,
+    "slantHeight": 0.25,
+    "expected": 0.21427849872339422
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.4,
+    "slantHeight": 0.5,
+    "expected": 0.12499702527431261
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.4,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.5,
+    "slantHeight": 0,
+    "expected": 0.49996192644679494
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.5,
+    "slantHeight": 0.25,
+    "expected": 0.29998659747245743
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.5,
+    "slantHeight": 0.5,
+    "expected": 0.16666196589392007
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.5,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.7,
+    "slantHeight": 0,
+    "expected": 1.1663870643680507
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.7,
+    "slantHeight": 0.25,
+    "expected": 0.5525841750563004
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.7,
+    "slantHeight": 0.5,
+    "expected": 0.269219850877332
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.7,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.99,
+    "slantHeight": 0,
+    "expected": 40.71800473615916
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.99,
+    "slantHeight": 0.25,
+    "expected": 1.4412669246889052
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.99,
+    "slantHeight": 0.5,
+    "expected": 0.49006254747279276
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 0.99,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 1,
+    "slantHeight": 0,
+    "expected": 89.75000000000014
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 1,
+    "slantHeight": 0.25,
+    "expected": 1.4994672136459661
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 1,
+    "slantHeight": 0.5,
+    "expected": 0.49996192644679494
+  },
+  {
+    "surfaceTilt": 0.5,
+    "gcr": 1,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.01,
+    "slantHeight": 0,
+    "expected": 0.10048253479587911
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.01,
+    "slantHeight": 0.25,
+    "expected": 0.07517501194404468
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.01,
+    "slantHeight": 0.5,
+    "expected": 0.04999269183044658
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.01,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.2,
+    "slantHeight": 0,
+    "expected": 2.4763725059582002
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.2,
+    "slantHeight": 0.25,
+    "expected": 1.7505207265356766
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.2,
+    "slantHeight": 0.5,
+    "expected": 1.1034792444897563
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.2,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.4,
+    "slantHeight": 0,
+    "expected": 6.537842924884426
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.4,
+    "slantHeight": 0.25,
+    "expected": 4.228710999562889
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.4,
+    "slantHeight": 0.5,
+    "expected": 2.4763725059582002
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.4,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.5,
+    "slantHeight": 0,
+    "expected": 9.706480902921863
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.5,
+    "slantHeight": 0.25,
+    "expected": 5.894774224295105
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.5,
+    "slantHeight": 0.5,
+    "expected": 3.2960849570589192
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.5,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.7,
+    "slantHeight": 0,
+    "expected": 21.37079268703068
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.7,
+    "slantHeight": 0.25,
+    "expected": 10.689237775126527
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.7,
+    "slantHeight": 0.5,
+    "expected": 5.298692384845655
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.7,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.99,
+    "slantHeight": 0,
+    "expected": 81.71268843863174
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.99,
+    "slantHeight": 0.25,
+    "expected": 25.627014945096537
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.99,
+    "slantHeight": 0.5,
+    "expected": 9.520593994647182
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 0.99,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 1,
+    "slantHeight": 0,
+    "expected": 84.99999999999999
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 1,
+    "slantHeight": 0.25,
+    "expected": 26.484162914100256
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 1,
+    "slantHeight": 0.5,
+    "expected": 9.706480902921863
+  },
+  {
+    "surfaceTilt": 10,
+    "gcr": 1,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.01,
+    "slantHeight": 0,
+    "expected": 0.24435557293565066
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.01,
+    "slantHeight": 0.25,
+    "expected": 0.18284908567203675
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.01,
+    "slantHeight": 0.5,
+    "expected": 0.12162216745727783
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.01,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.2,
+    "slantHeight": 0,
+    "expected": 5.894132774619333
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.2,
+    "slantHeight": 0.25,
+    "expected": 4.196081753874636
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.2,
+    "slantHeight": 0.5,
+    "expected": 2.6608369837316417
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.2,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.4,
+    "slantHeight": 0,
+    "expected": 14.851962593130922
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.4,
+    "slantHeight": 0.25,
+    "expected": 9.87787920716332
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.4,
+    "slantHeight": 0.5,
+    "expected": 5.894132774619333
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.4,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.5,
+    "slantHeight": 0,
+    "expected": 21.1272426359291
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.5,
+    "slantHeight": 0.25,
+    "expected": 13.499799549565868
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.5,
+    "slantHeight": 0.5,
+    "expected": 7.778822907173165
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.5,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.7,
+    "slantHeight": 0,
+    "expected": 38.979951535848556
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.7,
+    "slantHeight": 0.25,
+    "expected": 22.94160869418733
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.7,
+    "slantHeight": 0.5,
+    "expected": 12.223364582816837
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.7,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.99,
+    "slantHeight": 0,
+    "expected": 76.20150597151574
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.99,
+    "slantHeight": 0.25,
+    "expected": 43.813557273273155
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.99,
+    "slantHeight": 0.5,
+    "expected": 20.777050595483107
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 0.99,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 1,
+    "slantHeight": 0,
+    "expected": 77.5
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 1,
+    "slantHeight": 0.25,
+    "expected": 44.702797175755855
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 1,
+    "slantHeight": 0.5,
+    "expected": 21.1272426359291
+  },
+  {
+    "surfaceTilt": 25,
+    "gcr": 1,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.01,
+    "slantHeight": 0,
+    "expected": 0.2889791008098984
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.01,
+    "slantHeight": 0.25,
+    "expected": 0.21626282104542852
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.01,
+    "slantHeight": 0.5,
+    "expected": 0.1438620888851689
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.01,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.2,
+    "slantHeight": 0,
+    "expected": 6.896367932228822
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.2,
+    "slantHeight": 0.25,
+    "expected": 4.926567934889113
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.2,
+    "slantHeight": 0.5,
+    "expected": 3.133282879390916
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.2,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.4,
+    "slantHeight": 0,
+    "expected": 17.014231699693305
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.4,
+    "slantHeight": 0.25,
+    "expected": 11.45585292158768
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.4,
+    "slantHeight": 0.5,
+    "expected": 6.896367932228822
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.4,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.5,
+    "slantHeight": 0,
+    "expected": 23.79397688699689
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.5,
+    "slantHeight": 0.25,
+    "expected": 15.51884888947803
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.5,
+    "slantHeight": 0.5,
+    "expected": 9.0646783885936
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.5,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.7,
+    "slantHeight": 0,
+    "expected": 41.63121158549044
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.7,
+    "slantHeight": 0.25,
+    "expected": 25.7040253037125
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.7,
+    "slantHeight": 0.5,
+    "expected": 14.096369176717715
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.7,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.99,
+    "slantHeight": 0,
+    "expected": 73.92559951536907
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.99,
+    "slantHeight": 0.25,
+    "expected": 46.12290305738477
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.99,
+    "slantHeight": 0.5,
+    "expected": 23.422707601432258
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 0.99,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 1,
+    "slantHeight": 0,
+    "expected": 75.0
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 1,
+    "slantHeight": 0.25,
+    "expected": 46.93568657049171
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 1,
+    "slantHeight": 0.5,
+    "expected": 23.79397688699689
+  },
+  {
+    "surfaceTilt": 30,
+    "gcr": 1,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.01,
+    "slantHeight": 0,
+    "expected": 0.40802063517120235
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.01,
+    "slantHeight": 0.25,
+    "expected": 0.3054738976220252
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.01,
+    "slantHeight": 0.5,
+    "expected": 0.20328905644688414
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.01,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.2,
+    "slantHeight": 0,
+    "expected": 9.353525208111996
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.2,
+    "slantHeight": 0.25,
+    "expected": 6.766557404997327
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.2,
+    "slantHeight": 0.5,
+    "expected": 4.351315913585946
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.2,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.4,
+    "slantHeight": 0,
+    "expected": 21.523991204729306
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.4,
+    "slantHeight": 0.25,
+    "expected": 15.069419553673773
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.4,
+    "slantHeight": 0.5,
+    "expected": 9.353525208111996
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.4,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.5,
+    "slantHeight": 0,
+    "expected": 28.675050063104766
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.5,
+    "slantHeight": 0.25,
+    "expected": 19.84196808865477
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.5,
+    "slantHeight": 0.5,
+    "expected": 12.11948918988963
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.5,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.7,
+    "slantHeight": 0,
+    "expected": 44.42416779307749
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.7,
+    "slantHeight": 0.25,
+    "expected": 30.557999506714353
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.7,
+    "slantHeight": 0.5,
+    "expected": 18.205071497489715
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.7,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.99,
+    "slantHeight": 0,
+    "expected": 66.80493737469965
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.99,
+    "slantHeight": 0.25,
+    "expected": 47.86546690218012
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.99,
+    "slantHeight": 0.5,
+    "expected": 28.30263305568897
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 0.99,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 1,
+    "slantHeight": 0,
+    "expected": 67.5
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 1,
+    "slantHeight": 0.25,
+    "expected": 48.471318244528604
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 1,
+    "slantHeight": 0.5,
+    "expected": 28.675050063104766
+  },
+  {
+    "surfaceTilt": 45,
+    "gcr": 1,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.01,
+    "slantHeight": 0,
+    "expected": 0.498676860867689
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.01,
+    "slantHeight": 0.25,
+    "expected": 0.37354251619087686
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.01,
+    "slantHeight": 0.5,
+    "expected": 0.2487182401630816
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.01,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.2,
+    "slantHeight": 0,
+    "expected": 10.893394649130906
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.2,
+    "slantHeight": 0.25,
+    "expected": 7.994140685006321
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.2,
+    "slantHeight": 0.5,
+    "expected": 5.2087191028551105
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.2,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.4,
+    "slantHeight": 0,
+    "expected": 23.41322444637054
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.4,
+    "slantHeight": 0.25,
+    "expected": 16.996088057177186
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.4,
+    "slantHeight": 0.5,
+    "expected": 10.893394649130906
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.4,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.5,
+    "slantHeight": 0,
+    "expected": 29.999999999999996
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.5,
+    "slantHeight": 0.25,
+    "expected": 21.786789298261812
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.5,
+    "slantHeight": 0.5,
+    "expected": 13.897886248013984
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.5,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.7,
+    "slantHeight": 0,
+    "expected": 43.00391194282282
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.7,
+    "slantHeight": 0.25,
+    "expected": 31.653527475102912
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.7,
+    "slantHeight": 0.5,
+    "expected": 20.173570184167723
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.7,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.99,
+    "slantHeight": 0,
+    "expected": 59.50132313913231
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.99,
+    "slantHeight": 0.25,
+    "expected": 45.64303706349298
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.99,
+    "slantHeight": 0.5,
+    "expected": 29.669206338199388
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 0.99,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 1,
+    "slantHeight": 0,
+    "expected": 60.00000000000001
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 1,
+    "slantHeight": 0.25,
+    "expected": 46.102113751986025
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 1,
+    "slantHeight": 0.5,
+    "expected": 29.999999999999996
+  },
+  {
+    "surfaceTilt": 60,
+    "gcr": 1,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.01,
+    "slantHeight": 0,
+    "expected": 0.5729668802128838
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.01,
+    "slantHeight": 0.25,
+    "expected": 0.42972205179440076
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.01,
+    "slantHeight": 0.5,
+    "expected": 0.2864781019094792
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.01,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.2,
+    "slantHeight": 0,
+    "expected": 11.328775099761698
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.2,
+    "slantHeight": 0.25,
+    "expected": 8.541461570722756
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.2,
+    "slantHeight": 0.5,
+    "expected": 5.715331660914457
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.2,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.4,
+    "slantHeight": 0,
+    "expected": 21.86982804456949
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.4,
+    "slantHeight": 0.25,
+    "expected": 16.740025730459678
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.4,
+    "slantHeight": 0.5,
+    "expected": 11.328775099761698
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.4,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.5,
+    "slantHeight": 0,
+    "expected": 26.664525131891864
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.5,
+    "slantHeight": 0.25,
+    "expected": 20.617146582174907
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.5,
+    "slantHeight": 0.5,
+    "expected": 14.065201051530071
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.5,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.7,
+    "slantHeight": 0,
+    "expected": 35.15609698248107
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.7,
+    "slantHeight": 0.25,
+    "expected": 27.80699575781583
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.7,
+    "slantHeight": 0.5,
+    "expected": 19.34407820958394
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.7,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.99,
+    "slantHeight": 0,
+    "expected": 44.95956040765866
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.99,
+    "slantHeight": 0.25,
+    "expected": 36.77127365645
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.99,
+    "slantHeight": 0.5,
+    "expected": 26.433283220091223
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 0.99,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 1,
+    "slantHeight": 0,
+    "expected": 45.25
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 1,
+    "slantHeight": 0.25,
+    "expected": 37.04960278443351
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 1,
+    "slantHeight": 0.5,
+    "expected": 26.664525131891864
+  },
+  {
+    "surfaceTilt": 89.5,
+    "gcr": 1,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.01,
+    "slantHeight": 0,
+    "expected": 0.5729386976834859
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.01,
+    "slantHeight": 0.25,
+    "expected": 0.42971028940104355
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.01,
+    "slantHeight": 0.5,
+    "expected": 0.2864765102770745
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.01,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.2,
+    "slantHeight": 0,
+    "expected": 11.309932474020215
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.2,
+    "slantHeight": 0.25,
+    "expected": 8.530765609948135
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.2,
+    "slantHeight": 0.5,
+    "expected": 5.710593137499643
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.2,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.4,
+    "slantHeight": 0,
+    "expected": 21.80140948635181
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.4,
+    "slantHeight": 0.25,
+    "expected": 16.699244233993625
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.4,
+    "slantHeight": 0.5,
+    "expected": 11.309932474020215
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.4,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.5,
+    "slantHeight": 0,
+    "expected": 26.565051177077994
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.5,
+    "slantHeight": 0.25,
+    "expected": 20.556045219583467
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.5,
+    "slantHeight": 0.5,
+    "expected": 14.036243467926479
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.5,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.7,
+    "slantHeight": 0,
+    "expected": 34.99202019855866
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.7,
+    "slantHeight": 0.25,
+    "expected": 27.699472808054992
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.7,
+    "slantHeight": 0.5,
+    "expected": 19.290046219188735
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.7,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.99,
+    "slantHeight": 0,
+    "expected": 44.71208393344291
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.99,
+    "slantHeight": 0.25,
+    "expected": 36.59388639107607
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.99,
+    "slantHeight": 0.5,
+    "expected": 26.335410003881346
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 0.99,
+    "slantHeight": 1,
+    "expected": 0.0
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 1,
+    "slantHeight": 0,
+    "expected": 45.00000000000001
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 1,
+    "slantHeight": 0.25,
+    "expected": 36.86989764584402
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 1,
+    "slantHeight": 0.5,
+    "expected": 26.565051177077994
+  },
+  {
+    "surfaceTilt": 90,
+    "gcr": 1,
+    "slantHeight": 1,
+    "expected": 0.0
+  }
+]

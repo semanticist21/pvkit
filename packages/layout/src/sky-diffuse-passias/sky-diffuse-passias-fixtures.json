@@ -1,0 +1,42 @@
+[
+  {
+    "maskingAngle": 0,
+    "expected": 0.0
+  },
+  {
+    "maskingAngle": 0.1,
+    "expected": 7.615433561536378e-7
+  },
+  {
+    "maskingAngle": 1,
+    "expected": 7.615242180436521e-5
+  },
+  {
+    "maskingAngle": 5,
+    "expected": 0.0019026509541271164
+  },
+  {
+    "maskingAngle": 10,
+    "expected": 0.007596123493895934
+  },
+  {
+    "maskingAngle": 20,
+    "expected": 0.030153689607045897
+  },
+  {
+    "maskingAngle": 30,
+    "expected": 0.06698729810778059
+  },
+  {
+    "maskingAngle": 45,
+    "expected": 0.14644660940672627
+  },
+  {
+    "maskingAngle": 60,
+    "expected": 0.2499999999999999
+  },
+  {
+    "maskingAngle": 90,
+    "expected": 0.4999999999999999
+  }
+]

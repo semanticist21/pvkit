@@ -1,0 +1,68 @@
+{
+  "name": "@pvkit/layout",
+  "version": "0.0.0",
+  "description": "PV array layout in plain ESM — roof module fit, row spacing, row-to-row shading and sky masking, horizon profiles. Validated against pvlib. Zero dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "author": "semanticist21",
+  "homepage": "https://github.com/semanticist21/pvkit/tree/main/packages/layout#readme",
+  "bugs": {
+    "url": "https://github.com/semanticist21/pvkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semanticist21/pvkit.git",
+    "directory": "packages/layout"
+  },
+  "keywords": [
+    "pv",
+    "solar",
+    "photovoltaic",
+    "layout",
+    "shading",
+    "row-spacing",
+    "horizon",
+    "esm"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": "./dist/index.js",
+      "./direct-martinez": "./dist/direct-martinez/index.js",
+      "./ground-angle": "./dist/ground-angle/index.js",
+      "./horizon": "./dist/horizon/index.js",
+      "./masking-angle": "./dist/masking-angle/index.js",
+      "./masking-angle-passias": "./dist/masking-angle-passias/index.js",
+      "./min-pitch": "./dist/min-pitch/index.js",
+      "./projected-solar-zenith-angle": "./dist/projected-solar-zenith-angle/index.js",
+      "./roof-fit": "./dist/roof-fit/index.js",
+      "./shaded-fraction1d": "./dist/shaded-fraction1d/index.js",
+      "./sky-diffuse-passias": "./dist/sky-diffuse-passias/index.js",
+      "./package.json": "./package.json"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepack": "tsdown"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./direct-martinez": "./src/direct-martinez/index.ts",
+    "./ground-angle": "./src/ground-angle/index.ts",
+    "./horizon": "./src/horizon/index.ts",
+    "./masking-angle": "./src/masking-angle/index.ts",
+    "./masking-angle-passias": "./src/masking-angle-passias/index.ts",
+    "./min-pitch": "./src/min-pitch/index.ts",
+    "./projected-solar-zenith-angle": "./src/projected-solar-zenith-angle/index.ts",
+    "./roof-fit": "./src/roof-fit/index.ts",
+    "./shaded-fraction1d": "./src/shaded-fraction1d/index.ts",
+    "./sky-diffuse-passias": "./src/sky-diffuse-passias/index.ts",
+    "./package.json": "./package.json"
+  }
+}
