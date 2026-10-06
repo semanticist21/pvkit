@@ -16,7 +16,7 @@ until the user releases it). Claims are made only by committing this table to `m
 | 4 | `@pvkit/spec` — module/inverter spec schema + data | `packages/spec` | — | ✅ 0034fe3 |
 | 5 | `@pvkit/sizer` — string sizing, over-voltage checks | `packages/sizer` | 4 | ✅ 27395d0 |
 | 6 | `@pvkit/io` — PVGIS / NASA POWER weather fetch | `packages/io` | — | ✅ 257bd37 |
-| 7 | `@pvkit/layout` — roof placement, shading | `packages/layout` | — | 🚧 2026-10-06 04:43 b89a5d |
+| 7 | `@pvkit/layout` — roof placement, shading | `packages/layout` | — | ✅ c71833a |
 | 8 | `@pvkit/diode` — single-diode electrical models | `packages/diode` | 4 | 🚧 2026-10-06 04:45 483013 |
 
 ## Confirmed
