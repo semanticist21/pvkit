@@ -1,0 +1,17 @@
+{
+  "name": "@pvkit/demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pvkit/core": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "^8.3.2"
+  }
+}

@@ -41,7 +41,7 @@ pvlib fixture (uv; must come back byte-identical).
 
 ## Architecture
 
-**Monorepo:** `packages/*` pnpm workspaces (`pnpm-workspace.yaml`). Only `@pvkit/core` exists today.
+**Monorepo:** `packages/*` (published libraries) and `apps/*` (private, unpublished: `apps/demo`, a static Vite page running `@pvkit/core` in the browser) pnpm workspaces. Only `@pvkit/core` is released today.
 
 **`@pvkit/core` modules** (dependency order): `solarposition` → `atmosphere` → `clearsky` →
 `irradiance` → `decomposition` → `iam` → `temperature` → `tracking` → `pvsystem` → `losses` →
