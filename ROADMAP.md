@@ -15,7 +15,7 @@ until the user releases it). Claims are made only by committing this table to `m
 | 3 | `@pvkit/economics` — LCOE, payback, ROI, degradation | `packages/economics` | — | 🚧 2026-10-06 04:30 483013 |
 | 4 | `@pvkit/spec` — module/inverter spec schema + data | `packages/spec` | — | 🚧 2026-10-06 04:31 e542c7 |
 | 5 | `@pvkit/sizer` — string sizing, over-voltage checks | `packages/sizer` | 4 | todo |
-| 6 | `@pvkit/io` — PVGIS / NASA POWER weather fetch | `packages/io` | — | todo |
+| 6 | `@pvkit/io` — PVGIS / NASA POWER weather fetch | `packages/io` | — | 🚧 2026-10-06 04:36 b89a5d |
 | 7 | `@pvkit/layout` — roof placement, shading | `packages/layout` | — | todo |
 | 8 | `@pvkit/diode` — single-diode electrical models | `packages/diode` | 4 | todo |
 
