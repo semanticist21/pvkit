@@ -61,3 +61,23 @@ test("textbook case: south rows, noon sun in the row cross-section", () => {
     }),
   ).toBe(Number.POSITIVE_INFINITY);
 });
+
+test("sun behind the rows: no front-face shade, pitch is the footprint W·cos β", () => {
+  const footprint = 2 * Math.cos(Math.PI / 6);
+  for (const [solarZenith, solarAzimuth] of [
+    [80, 0],
+    [70, 0],
+    [60, 0],
+    [70, 300],
+  ] as const) {
+    expect(
+      minPitch({
+        collectorWidth: 2,
+        surfaceTilt: 30,
+        surfaceAzimuth: 180,
+        solarZenith,
+        solarAzimuth,
+      }),
+    ).toBeCloseTo(footprint, 12);
+  }
+});

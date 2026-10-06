@@ -1,3 +1,5 @@
+import type { Degrees } from "../degrees.ts";
+
 export interface HorizonPoint {
   /** Degrees from north, clockwise. */
   azimuth: number;
@@ -8,7 +10,11 @@ export interface HorizonPoint {
 /**
  * Horizon elevation at `azimuth`, degrees, linearly interpolated around the full circle
  * (wraps 360°; as `numpy.interp(..., period=360)`). The sun is blocked when its apparent
- * elevation is below this. Profile points need not be sorted.
+ * elevation is below this. Profile points need not be sorted; a NaN azimuth gives NaN.
+ *
+ * A PVGIS `printhorizon` profile measures `A` from south (0 = S, −90 = E, +90 = W): map
+ * each row to `{ azimuth: A + 180, elevation: H_hor }` first, or the horizon comes out
+ * rotated 180°.
  *
  * @example horizonElevation({ profile: [{ azimuth: 90, elevation: 10 }, { azimuth: 270, elevation: 0 }], azimuth: 180 }); // 5
  */
@@ -18,8 +24,8 @@ export const horizonElevation = ({
 }: {
   profile: readonly HorizonPoint[];
   azimuth: number;
-}): number => {
-  if (profile.length === 0) return 0;
+}): Degrees => {
+  if (profile.length === 0) return 0 as Degrees;
   const pts = profile
     .map((p) => ({ a: ((p.azimuth % 360) + 360) % 360, e: p.elevation }))
     .sort((x, y) => x.a - y.a);
@@ -32,8 +38,10 @@ export const horizonElevation = ({
     const hi = ring[i] as { a: number; e: number };
     if (az <= hi.a) {
       const lo = ring[i - 1] as { a: number; e: number };
-      return hi.a === lo.a ? hi.e : lo.e + ((az - lo.a) / (hi.a - lo.a)) * (hi.e - lo.e);
+      return (
+        hi.a === lo.a ? hi.e : lo.e + ((az - lo.a) / (hi.a - lo.a)) * (hi.e - lo.e)
+      ) as Degrees;
     }
   }
-  return last.e; // unreachable: az < 360 ≤ ring end
+  return Number.NaN as Degrees; // only a NaN azimuth gets here (az < 360 ≤ ring end), as numpy.interp
 };

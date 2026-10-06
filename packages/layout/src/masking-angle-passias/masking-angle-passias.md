@@ -5,7 +5,7 @@ Slant-averaged masking angle (Passias & Källbäck eq. 9), X = 1/GCR:
 ψ̄ = −X sin β ln|2X cos β − (X² + 1)| / 2 + (X cos β − 1) atan((X cos β − 1)/(X sin β))
    + (1 − X cos β) atan(cos β / sin β) + X ln X sin β
 
-Non-finite results (β = 0, GCR = 1 singularities) → 0, as pvlib.
+Non-finite results (flat modules, β = 0) → 0, as pvlib.
 
 ## Reference
 

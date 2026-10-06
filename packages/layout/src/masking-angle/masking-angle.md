@@ -10,4 +10,5 @@ pitch. SAM evaluates it at the bottom of the module (h = 0, worst case). At g(1�
    Solar Cells 11, 281–291, doi:10.1016/0379-6787(84)90017-6; Gilman et al. 2018, SAM PV
    Model Technical Reference Update, NREL/TP-6A20-67399.
 2. Reference implementation — `pvlib.shading.masking_angle` @ pvlib 0.16.1.
-3. Fixtures — `scripts/fixtures/layout.py` → `masking-angle-fixtures.json`. Tolerance 1e-12 relative.
+3. Fixtures — `scripts/fixtures/layout.py` → `masking-angle-fixtures.json`. Tolerance 1e-12 relative:
+   same closed form, one atan, so only double rounding (a few ulp) differs.

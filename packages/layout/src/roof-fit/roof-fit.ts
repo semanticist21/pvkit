@@ -1,5 +1,8 @@
 export interface RoofFitInput {
-  /** Usable roof rectangle: width along the eave and height up the slope, m. */
+  /**
+   * Usable roof rectangle: width along the eave and height up the slope, m (all lengths here
+   * are metres — the `gap` default is 0.02 m).
+   */
   roofWidth: number;
   roofHeight: number;
   /** Module long and short side, m. */
@@ -41,7 +44,8 @@ export const roofFit = (input: RoofFitInput): RoofFit => {
     if (!(v > 0 && Number.isFinite(v)))
       throw new RangeError(`${k} must be finite and > 0, got ${v}`);
   }
-  if (!(setback >= 0 && gap >= 0)) throw new RangeError("setback and gap must be ≥ 0");
+  if (!(setback >= 0 && gap >= 0 && Number.isFinite(setback) && Number.isFinite(gap)))
+    throw new RangeError(`setback and gap must be finite and ≥ 0, got ${setback}, ${gap}`);
   const w = roofWidth - 2 * setback;
   const h = roofHeight - 2 * setback;
   const layout = (orientation: "portrait" | "landscape") => {

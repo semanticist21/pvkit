@@ -1,3 +1,4 @@
+export type { Degrees } from "./degrees.ts";
 export * from "./direct-martinez/index.ts";
 export * from "./ground-angle/index.ts";
 export * from "./horizon/index.ts";

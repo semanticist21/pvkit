@@ -7,4 +7,5 @@ Multiply the unshaded sky-diffuse POA by (1 − loss).
 
 1. Spec — Passias & Källbäck 1984 (see masking-angle); Gilman et al. 2018 (SAM).
 2. Reference implementation — `pvlib.shading.sky_diffuse_passias` @ pvlib 0.16.1.
-3. Fixtures — `scripts/fixtures/layout.py` → `sky-diffuse-passias-fixtures.json`. Tolerance 1e-14 relative.
+3. Fixtures — `scripts/fixtures/layout.py` → `sky-diffuse-passias-fixtures.json`. Tolerance 1e-14 relative:
+   one cosine of the same input, identical operation order — differences are at ulp level.

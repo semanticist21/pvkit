@@ -21,4 +21,5 @@ test("unsorted and out-of-range profile azimuths; single point; empty profile", 
   }
   expect(horizonElevation({ profile: [{ azimuth: 10, elevation: 4 }], azimuth: 200 })).toBe(4);
   expect(horizonElevation({ profile: [], azimuth: 200 })).toBe(0);
+  expect(horizonElevation({ profile, azimuth: Number.NaN })).toBeNaN();
 });

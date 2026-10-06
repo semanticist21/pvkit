@@ -9,4 +9,5 @@ diffuse POA: a shaded cell kills its bypass-diode block's beam contribution.
    shading losses on PV arrays", Sol. Energy Mater. Sol. Cells 94(12) 2298–2303,
    doi:10.1016/j.solmat.2010.07.029, eq. 2.
 2. Reference implementation — `pvlib.shading.direct_martinez` @ pvlib 0.16.1.
-3. Fixtures — `scripts/fixtures/layout.py` → `direct-martinez-fixtures.json`. Tolerance 1e-14 relative.
+3. Fixtures — `scripts/fixtures/layout.py` → `direct-martinez-fixtures.json`. Tolerance 1e-14 relative:
+   the same few +, ×, ÷ and one ceil on O(1) fractions — differences are at ulp level.

@@ -24,4 +24,5 @@ minPitch({ collectorWidth: 2.2, surfaceTilt: 30, surfaceAzimuth: 180, solarZenit
 ```
 
 Angles are degrees, azimuths from north clockwise (as `@pvkit/core`). Lengths are in any
-unit, consistently. Method notes with equations: `src/<method>/<method>.md`.
+unit, consistently — except `roofFit`, which works in metres (its default `gap` is 0.02 m;
+pass `gap` explicitly if you use another unit). Method notes with equations: `src/<method>/<method>.md`.

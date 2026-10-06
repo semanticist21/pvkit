@@ -1,3 +1,5 @@
+import type { Degrees } from "../degrees.ts";
+
 const D2R = Math.PI / 180;
 
 export interface MaskingAngleInput {
@@ -15,7 +17,8 @@ export interface MaskingAngleInput {
  *
  * @example maskingAngle({ surfaceTilt: 30, gcr: 0.5, slantHeight: 0 }); // ≈ 23.8
  */
-export const maskingAngle = ({ surfaceTilt, gcr, slantHeight }: MaskingAngleInput): number => {
+export const maskingAngle = ({ surfaceTilt, gcr, slantHeight }: MaskingAngleInput): Degrees => {
   const g = gcr * (1 - slantHeight);
-  return Math.atan((g * Math.sin(surfaceTilt * D2R)) / (1 - g * Math.cos(surfaceTilt * D2R))) / D2R;
+  return (Math.atan((g * Math.sin(surfaceTilt * D2R)) / (1 - g * Math.cos(surfaceTilt * D2R))) /
+    D2R) as Degrees;
 };

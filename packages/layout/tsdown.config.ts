@@ -1,7 +1,7 @@
 import { defineConfig } from "tsdown";
 
 // Mirrors packages/core/tsdown.config.ts (see the comments there). Methods sit directly
-// under src/ (no module layer): public shape is "@pvkit/layout" and "@pvkit/io/<method>".
+// under src/ (no module layer): public shape is "@pvkit/layout" and "@pvkit/layout/<method>".
 export default defineConfig({
   entry: ["src/**/*.ts", "!src/**/*.test.ts"],
   format: ["esm"],

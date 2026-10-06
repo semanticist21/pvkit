@@ -1,6 +1,12 @@
+import type { Degrees } from "../degrees.ts";
+
 const D2R = Math.PI / 180;
 
 export interface ProjectedSolarZenithAngleInput {
+  /**
+   * Degrees. Apparent (refraction-corrected) or true; apparent is the direction the beam
+   * actually arrives from, so prefer it near the horizon.
+   */
   solarZenith: number;
   /** Degrees from north, clockwise. */
   solarAzimuth: number;
@@ -22,7 +28,7 @@ export const projectedSolarZenithAngle = ({
   solarAzimuth,
   axisTilt,
   axisAzimuth,
-}: ProjectedSolarZenithAngleInput): number => {
+}: ProjectedSolarZenithAngleInput): Degrees => {
   const sinZ = Math.sin(solarZenith * D2R);
   const sx = sinZ * Math.sin(solarAzimuth * D2R);
   const sy = sinZ * Math.cos(solarAzimuth * D2R);
@@ -32,5 +38,5 @@ export const projectedSolarZenithAngle = ({
   const sinAt = Math.sin(axisTilt * D2R);
   const sxP = sx * cosAa - sy * sinAa;
   const szP = sx * sinAa * sinAt + sy * sinAt * cosAa + sz * Math.cos(axisTilt * D2R);
-  return Math.atan2(sxP, szP) / D2R;
+  return (Math.atan2(sxP, szP) / D2R) as Degrees;
 };

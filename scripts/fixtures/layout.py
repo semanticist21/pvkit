@@ -76,7 +76,7 @@ for (z, a), (aa, rot), pitch, at, off, slope, shading_rot in itertools.product(
     cases.append({
         "solarZenith": z, "solarAzimuth": a, "axisAzimuth": aa, "shadedRowRotation": rot,
         "collectorWidth": 2, "pitch": pitch, "axisTilt": at, "surfaceToAxisOffset": off,
-        "crossAxisSlope": slope, "shadingRowRotation": shading_rot,
+        "crossAxisTilt": slope, "shadingRowRotation": shading_rot,
         "expected": num(shading.shaded_fraction1d(z, a, aa, rot, **kwargs)),
     })
 write("shaded-fraction1d", cases)

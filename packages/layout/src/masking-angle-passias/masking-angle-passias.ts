@@ -1,3 +1,5 @@
+import type { Degrees } from "../degrees.ts";
+
 const D2R = Math.PI / 180;
 
 export interface MaskingAnglePassiasInput {
@@ -13,7 +15,7 @@ export interface MaskingAnglePassiasInput {
  *
  * @example maskingAnglePassias({ surfaceTilt: 30, gcr: 0.5 }); // ≈ 10.0
  */
-export const maskingAnglePassias = ({ surfaceTilt, gcr }: MaskingAnglePassiasInput): number => {
+export const maskingAnglePassias = ({ surfaceTilt, gcr }: MaskingAnglePassiasInput): Degrees => {
   const b = surfaceTilt * D2R;
   const sin = Math.sin(b);
   const cos = Math.cos(b);
@@ -23,5 +25,5 @@ export const maskingAnglePassias = ({ surfaceTilt, gcr }: MaskingAnglePassiasInp
     (x * cos - 1) * Math.atan((x * cos - 1) / (x * sin)) +
     (1 - x * cos) * Math.atan(cos / sin) +
     x * Math.log(x) * sin;
-  return Number.isFinite(psi) ? psi / D2R : 0;
+  return (Number.isFinite(psi) ? psi / D2R : 0) as Degrees;
 };

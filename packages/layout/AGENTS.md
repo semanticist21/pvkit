@@ -8,7 +8,8 @@ Shared rules: `doc/conventions.md` (units, fixtures), `doc/architecture.md` (exp
 - Fixtures: `scripts/fixtures/layout.py` (pvlib.shading, numpy.interp). `min-pitch` and
   `roof-fit` have no external reference: min-pitch is checked as the root of
   `shadedFraction1d`, roof-fit by hand counts.
-- Returned angles are plain `number` degrees (no dependency on `@pvkit/core` brands).
+- Returned angles are branded `Degrees` from `src/degrees.ts` — a local brand (zero deps),
+  nominally distinct from `@pvkit/core`'s.
 - Method folders may import each other inside this package (min-pitch, shaded-fraction1d
   → projected-solar-zenith-angle).
 - Deferred: bifacial view factors (pvlib `bifacial.infinite_sheds`), 3-D/obstacle shading,

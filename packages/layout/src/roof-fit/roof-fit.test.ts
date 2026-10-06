@@ -46,7 +46,11 @@ test("modules are centred, inside the setback, and do not overlap", () => {
   }
 });
 
-test("rejects non-positive sizes", () => {
+test("rejects non-positive or non-finite sizes", () => {
   expect(() => roofFit({ roofWidth: 0, roofHeight: 5, ...mod })).toThrow(RangeError);
   expect(() => roofFit({ roofWidth: 5, roofHeight: 5, ...mod, gap: -1 })).toThrow(RangeError);
+  expect(() => roofFit({ roofWidth: 5, roofHeight: 5, ...mod, gap: Infinity })).toThrow(RangeError);
+  expect(() => roofFit({ roofWidth: 5, roofHeight: 5, ...mod, setback: Number.NaN })).toThrow(
+    RangeError,
+  );
 });
