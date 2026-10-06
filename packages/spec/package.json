@@ -1,6 +1,6 @@
 {
   "name": "@pvkit/spec",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "PV module and inverter parameter libraries (CEC modules, CEC inverters, Sandia SAPM modules) as typed ESM data.",
   "type": "module",
   "license": "MIT AND BSD-3-Clause",
