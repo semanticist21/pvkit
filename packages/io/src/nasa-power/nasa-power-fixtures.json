@@ -1,0 +1,747 @@
+{
+  "latitude": 37.5665,
+  "longitude": 126.978,
+  "start": "2024-02-28",
+  "end": "2024-03-01",
+  "request": {
+    "url": "https://power.larc.nasa.gov/api/temporal/hourly/point",
+    "params": {
+      "latitude": "37.5665",
+      "longitude": "126.978",
+      "start": "20240228",
+      "end": "20240301",
+      "community": "re",
+      "parameters": "ALLSKY_SFC_SW_DWN,ALLSKY_SFC_SW_DNI,ALLSKY_SFC_SW_DIFF,T2M,WS10M,RH2M,PS",
+      "format": "json",
+      "header": "True",
+      "time-standard": "utc"
+    }
+  },
+  "meta": {
+    "latitude": 37.566,
+    "longitude": 126.978,
+    "altitude": 73.25
+  },
+  "rows": [
+    {
+      "timeMs": 1709078400000,
+      "ghi": 181.15,
+      "dni": 35.4,
+      "dhi": 147.25,
+      "tempAir": 2.85,
+      "windSpeed": 3.97,
+      "relativeHumidity": 79.47,
+      "pressure": 102080.0
+    },
+    {
+      "timeMs": 1709082000000,
+      "ghi": 282.8,
+      "dni": 2.69,
+      "dhi": 245.24,
+      "tempAir": 4.28,
+      "windSpeed": 3.75,
+      "relativeHumidity": 74.41,
+      "pressure": 102090.0
+    },
+    {
+      "timeMs": 1709085600000,
+      "ghi": 393.1,
+      "dni": 29.57,
+      "dhi": 327.43,
+      "tempAir": 5.07,
+      "windSpeed": 3.28,
+      "relativeHumidity": 74.49,
+      "pressure": 102070.0
+    },
+    {
+      "timeMs": 1709089200000,
+      "ghi": 429.1,
+      "dni": 59.29,
+      "dhi": 330.94,
+      "tempAir": 5.53,
+      "windSpeed": 2.75,
+      "relativeHumidity": 75.72,
+      "pressure": 102030.0
+    },
+    {
+      "timeMs": 1709092800000,
+      "ghi": 360.38,
+      "dni": 6.58,
+      "dhi": 302.03,
+      "tempAir": 5.85,
+      "windSpeed": 1.88,
+      "relativeHumidity": 76.66,
+      "pressure": 101980.0
+    },
+    {
+      "timeMs": 1709096400000,
+      "ghi": 276.05,
+      "dni": 2.11,
+      "dhi": 235.66,
+      "tempAir": 6.21,
+      "windSpeed": 0.72,
+      "relativeHumidity": 75.43,
+      "pressure": 101930.0
+    },
+    {
+      "timeMs": 1709100000000,
+      "ghi": 203.05,
+      "dni": 0.0,
+      "dhi": 177.53,
+      "tempAir": 6.49,
+      "windSpeed": 0.8,
+      "relativeHumidity": 75.32,
+      "pressure": 101910.0
+    },
+    {
+      "timeMs": 1709103600000,
+      "ghi": 119.53,
+      "dni": 0.0,
+      "dhi": 101.8,
+      "tempAir": 6.39,
+      "windSpeed": 1.29,
+      "relativeHumidity": 80.73,
+      "pressure": 101880.0
+    },
+    {
+      "timeMs": 1709107200000,
+      "ghi": 49.6,
+      "dni": 0.68,
+      "dhi": 43.36,
+      "tempAir": 5.57,
+      "windSpeed": 1.56,
+      "relativeHumidity": 82.76,
+      "pressure": 101890.0
+    },
+    {
+      "timeMs": 1709110800000,
+      "ghi": 2.62,
+      "dni": 0.0,
+      "dhi": 3.63,
+      "tempAir": 4.88,
+      "windSpeed": 1.75,
+      "relativeHumidity": 80.83,
+      "pressure": 101910.0
+    },
+    {
+      "timeMs": 1709114400000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 4.57,
+      "windSpeed": 1.73,
+      "relativeHumidity": 81.64,
+      "pressure": 101920.0
+    },
+    {
+      "timeMs": 1709118000000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 4.31,
+      "windSpeed": 1.67,
+      "relativeHumidity": 82.94,
+      "pressure": 101900.0
+    },
+    {
+      "timeMs": 1709121600000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 3.92,
+      "windSpeed": 1.56,
+      "relativeHumidity": 84.42,
+      "pressure": 101880.0
+    },
+    {
+      "timeMs": 1709125200000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 3.66,
+      "windSpeed": 1.33,
+      "relativeHumidity": 85.77,
+      "pressure": 101880.0
+    },
+    {
+      "timeMs": 1709128800000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 3.44,
+      "windSpeed": 1.29,
+      "relativeHumidity": 87.3,
+      "pressure": 101850.0
+    },
+    {
+      "timeMs": 1709132400000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 3.06,
+      "windSpeed": 1.49,
+      "relativeHumidity": 89.43,
+      "pressure": 101820.0
+    },
+    {
+      "timeMs": 1709136000000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 2.57,
+      "windSpeed": 1.74,
+      "relativeHumidity": 90.83,
+      "pressure": 101820.0
+    },
+    {
+      "timeMs": 1709139600000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 2.13,
+      "windSpeed": 2.24,
+      "relativeHumidity": 91.84,
+      "pressure": 101760.0
+    },
+    {
+      "timeMs": 1709143200000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 1.73,
+      "windSpeed": 2.63,
+      "relativeHumidity": 93.53,
+      "pressure": 101720.0
+    },
+    {
+      "timeMs": 1709146800000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 1.72,
+      "windSpeed": 2.81,
+      "relativeHumidity": 94.06,
+      "pressure": 101710.0
+    },
+    {
+      "timeMs": 1709150400000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 1.72,
+      "windSpeed": 2.9,
+      "relativeHumidity": 94.53,
+      "pressure": 101710.0
+    },
+    {
+      "timeMs": 1709154000000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 1.51,
+      "windSpeed": 2.96,
+      "relativeHumidity": 95.93,
+      "pressure": 101670.0
+    },
+    {
+      "timeMs": 1709157600000,
+      "ghi": 11.6,
+      "dni": 0.0,
+      "dhi": 11.6,
+      "tempAir": 1.58,
+      "windSpeed": 2.96,
+      "relativeHumidity": 96.59,
+      "pressure": 101630.0
+    },
+    {
+      "timeMs": 1709161200000,
+      "ghi": 74.62,
+      "dni": 1.19,
+      "dhi": 64.45,
+      "tempAir": 2.69,
+      "windSpeed": 2.37,
+      "relativeHumidity": 93.41,
+      "pressure": 101650.0
+    },
+    {
+      "timeMs": 1709164800000,
+      "ghi": 160.8,
+      "dni": 0.0,
+      "dhi": 136.92,
+      "tempAir": 3.45,
+      "windSpeed": 2.31,
+      "relativeHumidity": 91.61,
+      "pressure": 101620.0
+    },
+    {
+      "timeMs": 1709168400000,
+      "ghi": 244.62,
+      "dni": 0.3,
+      "dhi": 212.43,
+      "tempAir": 4.06,
+      "windSpeed": 2.4,
+      "relativeHumidity": 88.91,
+      "pressure": 101580.0
+    },
+    {
+      "timeMs": 1709172000000,
+      "ghi": 278.15,
+      "dni": 7.55,
+      "dhi": 233.68,
+      "tempAir": 5.16,
+      "windSpeed": 2.14,
+      "relativeHumidity": 83.94,
+      "pressure": 101530.0
+    },
+    {
+      "timeMs": 1709175600000,
+      "ghi": 321.17,
+      "dni": 0.56,
+      "dhi": 268.36,
+      "tempAir": 5.95,
+      "windSpeed": 2.27,
+      "relativeHumidity": 77.98,
+      "pressure": 101420.0
+    },
+    {
+      "timeMs": 1709179200000,
+      "ghi": 304.62,
+      "dni": 5.15,
+      "dhi": 255.36,
+      "tempAir": 6.47,
+      "windSpeed": 2.32,
+      "relativeHumidity": 74.47,
+      "pressure": 101310.0
+    },
+    {
+      "timeMs": 1709182800000,
+      "ghi": 299.52,
+      "dni": 3.6,
+      "dhi": 256.94,
+      "tempAir": 6.65,
+      "windSpeed": 3.16,
+      "relativeHumidity": 73.34,
+      "pressure": 101240.0
+    },
+    {
+      "timeMs": 1709186400000,
+      "ghi": 273.4,
+      "dni": 28.79,
+      "dhi": 233.45,
+      "tempAir": 6.22,
+      "windSpeed": 3.37,
+      "relativeHumidity": 76.56,
+      "pressure": 101220.0
+    },
+    {
+      "timeMs": 1709190000000,
+      "ghi": 161.62,
+      "dni": 17.05,
+      "dhi": 135.81,
+      "tempAir": 5.48,
+      "windSpeed": 4.17,
+      "relativeHumidity": 82.04,
+      "pressure": 101240.0
+    },
+    {
+      "timeMs": 1709193600000,
+      "ghi": 61.03,
+      "dni": 3.31,
+      "dhi": 53.29,
+      "tempAir": 4.46,
+      "windSpeed": 5.43,
+      "relativeHumidity": 83.27,
+      "pressure": 101240.0
+    },
+    {
+      "timeMs": 1709197200000,
+      "ghi": 3.78,
+      "dni": 0.0,
+      "dhi": 4.32,
+      "tempAir": 3.25,
+      "windSpeed": 6.61,
+      "relativeHumidity": 81.02,
+      "pressure": 101240.0
+    },
+    {
+      "timeMs": 1709200800000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 1.97,
+      "windSpeed": 7.44,
+      "relativeHumidity": 79.81,
+      "pressure": 101280.0
+    },
+    {
+      "timeMs": 1709204400000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": 0.71,
+      "windSpeed": 7.34,
+      "relativeHumidity": 81.1,
+      "pressure": 101320.0
+    },
+    {
+      "timeMs": 1709208000000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": null,
+      "windSpeed": 7.37,
+      "relativeHumidity": 81.94,
+      "pressure": 101300.0
+    },
+    {
+      "timeMs": 1709211600000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -0.68,
+      "windSpeed": 8.16,
+      "relativeHumidity": 79.63,
+      "pressure": 101290.0
+    },
+    {
+      "timeMs": 1709215200000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -1.26,
+      "windSpeed": 9.16,
+      "relativeHumidity": 77.09,
+      "pressure": 101330.0
+    },
+    {
+      "timeMs": 1709218800000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -2.41,
+      "windSpeed": 10.15,
+      "relativeHumidity": 75.5,
+      "pressure": 101400.0
+    },
+    {
+      "timeMs": 1709222400000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -3.53,
+      "windSpeed": 10.2,
+      "relativeHumidity": 74.8,
+      "pressure": 101470.0
+    },
+    {
+      "timeMs": 1709226000000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -4.25,
+      "windSpeed": 10.5,
+      "relativeHumidity": 70.82,
+      "pressure": 101540.0
+    },
+    {
+      "timeMs": 1709229600000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -4.74,
+      "windSpeed": 10.52,
+      "relativeHumidity": 67.91,
+      "pressure": 101570.0
+    },
+    {
+      "timeMs": 1709233200000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.17,
+      "windSpeed": 10.39,
+      "relativeHumidity": 66.77,
+      "pressure": 101610.0
+    },
+    {
+      "timeMs": 1709236800000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.6,
+      "windSpeed": 10.15,
+      "relativeHumidity": 64.58,
+      "pressure": 101620.0
+    },
+    {
+      "timeMs": 1709240400000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -6.01,
+      "windSpeed": 9.95,
+      "relativeHumidity": 61.59,
+      "pressure": 101620.0
+    },
+    {
+      "timeMs": 1709244000000,
+      "ghi": 33.7,
+      "dni": 104.53,
+      "dhi": 29.56,
+      "tempAir": -5.93,
+      "windSpeed": 9.89,
+      "relativeHumidity": 58.1,
+      "pressure": 101650.0
+    },
+    {
+      "timeMs": 1709247600000,
+      "ghi": 189.32,
+      "dni": 336.72,
+      "dhi": 97.47,
+      "tempAir": -5.17,
+      "windSpeed": 10.06,
+      "relativeHumidity": 53.62,
+      "pressure": 101670.0
+    },
+    {
+      "timeMs": 1709251200000,
+      "ghi": 442.92,
+      "dni": 758.12,
+      "dhi": 115.13,
+      "tempAir": -4.25,
+      "windSpeed": 9.87,
+      "relativeHumidity": 51.48,
+      "pressure": 101670.0
+    },
+    {
+      "timeMs": 1709254800000,
+      "ghi": 608.55,
+      "dni": 815.76,
+      "dhi": 139.55,
+      "tempAir": -3.32,
+      "windSpeed": 9.84,
+      "relativeHumidity": 50.74,
+      "pressure": 101650.0
+    },
+    {
+      "timeMs": 1709258400000,
+      "ghi": 726.22,
+      "dni": 857.71,
+      "dhi": 151.32,
+      "tempAir": -2.52,
+      "windSpeed": 10.14,
+      "relativeHumidity": 50.72,
+      "pressure": 101630.0
+    },
+    {
+      "timeMs": 1709262000000,
+      "ghi": 779.45,
+      "dni": 907.56,
+      "dhi": 141.63,
+      "tempAir": -2.01,
+      "windSpeed": 10.67,
+      "relativeHumidity": 51.09,
+      "pressure": 101570.0
+    },
+    {
+      "timeMs": 1709265600000,
+      "ghi": 763.4,
+      "dni": 896.73,
+      "dhi": 136.27,
+      "tempAir": -1.85,
+      "windSpeed": 11.1,
+      "relativeHumidity": 51.62,
+      "pressure": 101500.0
+    },
+    {
+      "timeMs": 1709269200000,
+      "ghi": 593.35,
+      "dni": 469.24,
+      "dhi": 263.06,
+      "tempAir": -2.03,
+      "windSpeed": 11.31,
+      "relativeHumidity": 51.76,
+      "pressure": 101480.0
+    },
+    {
+      "timeMs": 1709272800000,
+      "ghi": 531.67,
+      "dni": 785.41,
+      "dhi": 132.52,
+      "tempAir": -2.65,
+      "windSpeed": 10.96,
+      "relativeHumidity": 52.54,
+      "pressure": 101500.0
+    },
+    {
+      "timeMs": 1709276400000,
+      "ghi": 321.0,
+      "dni": 579.66,
+      "dhi": 116.5,
+      "tempAir": -3.47,
+      "windSpeed": 10.22,
+      "relativeHumidity": 53.45,
+      "pressure": 101510.0
+    },
+    {
+      "timeMs": 1709280000000,
+      "ghi": 116.93,
+      "dni": 275.55,
+      "dhi": 66.55,
+      "tempAir": -4.36,
+      "windSpeed": 9.16,
+      "relativeHumidity": 56.13,
+      "pressure": 101550.0
+    },
+    {
+      "timeMs": 1709283600000,
+      "ghi": 5.47,
+      "dni": 5.87,
+      "dhi": 8.03,
+      "tempAir": -5.19,
+      "windSpeed": 7.86,
+      "relativeHumidity": 61.52,
+      "pressure": 101600.0
+    },
+    {
+      "timeMs": 1709287200000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.37,
+      "windSpeed": 7.38,
+      "relativeHumidity": 65.02,
+      "pressure": 101650.0
+    },
+    {
+      "timeMs": 1709290800000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.5,
+      "windSpeed": 6.82,
+      "relativeHumidity": 67.47,
+      "pressure": 101690.0
+    },
+    {
+      "timeMs": 1709294400000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.6,
+      "windSpeed": 6.64,
+      "relativeHumidity": 67.21,
+      "pressure": 101720.0
+    },
+    {
+      "timeMs": 1709298000000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.58,
+      "windSpeed": 6.06,
+      "relativeHumidity": 67.53,
+      "pressure": 101730.0
+    },
+    {
+      "timeMs": 1709301600000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.42,
+      "windSpeed": 5.4,
+      "relativeHumidity": 67.45,
+      "pressure": 101720.0
+    },
+    {
+      "timeMs": 1709305200000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.21,
+      "windSpeed": 4.88,
+      "relativeHumidity": 68.3,
+      "pressure": 101700.0
+    },
+    {
+      "timeMs": 1709308800000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.01,
+      "windSpeed": 4.44,
+      "relativeHumidity": 69.16,
+      "pressure": 101680.0
+    },
+    {
+      "timeMs": 1709312400000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -4.97,
+      "windSpeed": 3.89,
+      "relativeHumidity": 72.13,
+      "pressure": 101630.0
+    },
+    {
+      "timeMs": 1709316000000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.03,
+      "windSpeed": 3.37,
+      "relativeHumidity": 74.9,
+      "pressure": 101570.0
+    },
+    {
+      "timeMs": 1709319600000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.08,
+      "windSpeed": 2.9,
+      "relativeHumidity": 76.4,
+      "pressure": 101510.0
+    },
+    {
+      "timeMs": 1709323200000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -5.06,
+      "windSpeed": 2.51,
+      "relativeHumidity": 76.64,
+      "pressure": 101470.0
+    },
+    {
+      "timeMs": 1709326800000,
+      "ghi": 0.0,
+      "dni": 0.0,
+      "dhi": 0.0,
+      "tempAir": -4.99,
+      "windSpeed": 2.28,
+      "relativeHumidity": 77.37,
+      "pressure": 101430.0
+    },
+    {
+      "timeMs": 1709330400000,
+      "ghi": 27.27,
+      "dni": 50.1,
+      "dhi": 26.36,
+      "tempAir": -3.86,
+      "windSpeed": 2.63,
+      "relativeHumidity": 73.57,
+      "pressure": 101410.0
+    },
+    {
+      "timeMs": 1709334000000,
+      "ghi": 168.3,
+      "dni": 315.79,
+      "dhi": 93.43,
+      "tempAir": -1.95,
+      "windSpeed": 4.28,
+      "relativeHumidity": 64.83,
+      "pressure": 101400.0
+    }
+  ]
+}

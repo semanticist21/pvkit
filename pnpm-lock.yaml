@@ -196,6 +196,8 @@ importers:
 
   packages/economics: {}
 
+  packages/io: {}
+
 packages:
 
   '@biomejs/biome@2.5.15':

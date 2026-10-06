@@ -1,0 +1,52 @@
+{
+  "name": "@pvkit/io",
+  "version": "0.0.0",
+  "description": "Fetch solar irradiance and weather for PV modeling — PVGIS TMY and NASA POWER hourly, parsed like pvlib. Zero dependencies, ESM, runs in the browser.",
+  "type": "module",
+  "license": "MIT",
+  "author": "semanticist21",
+  "homepage": "https://github.com/semanticist21/pvkit/tree/main/packages/io#readme",
+  "bugs": {
+    "url": "https://github.com/semanticist21/pvkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semanticist21/pvkit.git",
+    "directory": "packages/io"
+  },
+  "keywords": [
+    "pv",
+    "solar",
+    "photovoltaic",
+    "pvgis",
+    "nasa-power",
+    "tmy",
+    "weather",
+    "esm"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": "./dist/index.js",
+      "./nasa-power": "./dist/nasa-power/index.js",
+      "./pvgis-tmy": "./dist/pvgis-tmy/index.js",
+      "./package.json": "./package.json"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepack": "tsdown"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./nasa-power": "./src/nasa-power/index.ts",
+    "./pvgis-tmy": "./src/pvgis-tmy/index.ts",
+    "./package.json": "./package.json"
+  }
+}
