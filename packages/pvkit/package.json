@@ -1,6 +1,6 @@
 {
   "name": "pvkit-js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "PV (solar) performance modeling in TypeScript, checked against pvlib: NREL SPA solar position, clear-sky and plane-of-array irradiance, cell temperature, tracking, PVWatts, single-diode I-V, row spacing and shading, string sizing, PVGIS/NASA POWER data, ModelChain, solar ROI/LCOE, and the CEC module and inverter database (NREL SAM). Runs in the browser, edge and Node. Zero dependencies.",
   "type": "module",
   "license": "MIT AND BSD-3-Clause",
