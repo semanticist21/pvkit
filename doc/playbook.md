@@ -133,9 +133,3 @@ config, lockfile) into your commit, and `git pull --rebase` refuses on their dir
 **Apply:** build in the shared tree if you must, but commit from a detached worktree
 (`git worktree add --detach <scratch> origin/main`), copy your paths in, apply only your
 hunks to shared files, verify there, push `HEAD:main`, remove the worktree.
-
-## 2026-10-06 — Parallel agents share one git index
-
-**Trap:** In a shared checkout, `git commit` commits everything another agent has staged at that moment, even if you staged only your own paths. Two agents committing at once mixed their files into one commit, and the other agent's commit failed.
-**Truth:** The index is per-checkout, not per-agent. "Stage only your files" does not isolate commits.
-**Apply:** Commit with explicit pathspecs (`git commit -- <your paths>`), check `git show --stat HEAD` before pushing, and if a commit swept in someone else's files, `git reset --soft HEAD~1` it before pushing.
