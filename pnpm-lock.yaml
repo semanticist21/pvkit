@@ -200,9 +200,19 @@ importers:
 
   packages/core: {}
 
+  packages/diode:
+    devDependencies:
+      '@pvkit/spec':
+        specifier: workspace:*
+        version: link:../spec
+
   packages/economics: {}
 
   packages/io: {}
+
+  packages/layout: {}
+
+  packages/sizer: {}
 
   packages/spec: {}
 

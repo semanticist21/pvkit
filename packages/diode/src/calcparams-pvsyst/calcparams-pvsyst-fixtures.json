@@ -1,0 +1,1325 @@
+{
+  "meta": { "reference": "pvlib 0.16.1" },
+  "cases": [
+    {
+      "input": {
+        "alphaSc": 0.0013507580361845509,
+        "gammaRef": 0.9817795982486515,
+        "muGamma": -0.00048244049608330426,
+        "iLRef": 10.212340390604071,
+        "iORef": 7.592725457293898e-9,
+        "rShRef": 381.49512444930036,
+        "rSh0": 6858.376639139818,
+        "rS": 0.3807354115802677,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 1153.6218183803255,
+        "tempCell": 75.49503139816102
+      },
+      "expected": {
+        "photocurrent": 11.859863278000125,
+        "saturationCurrent": 8.926904309964655e-6,
+        "resistanceSeries": 0.3807354115802677,
+        "resistanceShunt": 366.33472588281876,
+        "nNsVth": 2.0710510032148144
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004421192505890802,
+        "gammaRef": 1.0202006897846099,
+        "muGamma": -0.0005067404196053476,
+        "iLRef": 7.986078461102111,
+        "iORef": 2.5732531106945525e-9,
+        "rShRef": 890.0629178768276,
+        "rSh0": 2682.307956200021,
+        "rS": 0.3878918571942025,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 193.73710142336208,
+        "tempCell": 11.129080604482372
+      },
+      "expected": {
+        "photocurrent": 1.5353185703658934,
+        "saturationCurrent": 2.807665667631589e-10,
+        "resistanceSeries": 0.3878918571942025,
+        "resistanceShunt": 1502.7368451343953,
+        "nNsVth": 3.623663217639778
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0017261702743900762,
+        "gammaRef": 1.1714935905344888,
+        "muGamma": -3.982825401181131e-5,
+        "iLRef": 6.544174722080182,
+        "iORef": 6.695101492163487e-10,
+        "rShRef": 192.07318107550185,
+        "rSh0": 5629.751575330381,
+        "rS": 0.3845265715440547,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": -9.85181769287093
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.352079742010124e-12,
+        "resistanceSeries": 0.3845265715440547,
+        "resistanceShunt": 5629.751575330381,
+        "nNsVth": 0.9580263462237163
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004682517689213465,
+        "gammaRef": 1.0682458855242205,
+        "muGamma": -0.0002589604193276402,
+        "iLRef": 9.010081445379074,
+        "iORef": 2.7569109763161852e-11,
+        "rShRef": 503.1657078246299,
+        "rSh0": 1758.7247971966428,
+        "rS": 0.5903756652232148,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 49.59517195002706
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 8.008850747147712e-10,
+        "resistanceSeries": 0.5903756652232148,
+        "resistanceShunt": 1758.7247971966428,
+        "nNsVth": 4.252743903252369
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.005460897532866081,
+        "gammaRef": 0.9012427707814352,
+        "muGamma": -8.160473706877331e-5,
+        "iLRef": 4.71247483077757,
+        "iORef": 4.500229089662871e-9,
+        "rShRef": 905.2916430868503,
+        "rSh0": 1706.056918172301,
+        "rS": 0.45294673590099244,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 111.7044704290361,
+        "tempCell": -6.399420300811601
+      },
+      "expected": {
+        "photocurrent": 0.5072506496594923,
+        "saturationCurrent": 1.0974084498079417e-11,
+        "resistanceSeries": 0.45294673590099244,
+        "resistanceShunt": 1336.9806101903127,
+        "nNsVth": 2.9916828129852004
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.002036990964225536,
+        "gammaRef": 1.0603881777961874,
+        "muGamma": -0.00032382464874338666,
+        "iLRef": 6.18013453564056,
+        "iORef": 3.894792737450319e-12,
+        "rShRef": 382.24311059539866,
+        "rSh0": 7457.098874274929,
+        "rS": 0.3007244891152706,
+        "cellsInSeries": 96.0,
+        "effectiveIrradiance": 254.85302331828527,
+        "tempCell": 61.54486777392427
+      },
+      "expected": {
+        "photocurrent": 1.5939976289357696,
+        "saturationCurrent": 5.17983974228418e-10,
+        "resistanceSeries": 0.3007244891152706,
+        "resistanceShunt": 2102.0474068352505,
+        "nNsVth": 2.9032470702159436
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0022486481957646113,
+        "gammaRef": 1.2691017803785667,
+        "muGamma": -0.00034670434060898495,
+        "iLRef": 11.813813485447358,
+        "iORef": 4.812987840469767e-9,
+        "rShRef": 280.47525866379505,
+        "rSh0": 2146.251215102246,
+        "rS": 0.1408727278975421,
+        "cellsInSeries": 96.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 62.18713878079248
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.223346649239284e-7,
+        "resistanceSeries": 0.1408727278975421,
+        "resistanceShunt": 2146.251215102246,
+        "nNsVth": 3.4848783387276385
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.005878149726035695,
+        "gammaRef": 1.3237672061920585,
+        "muGamma": -3.670624099479651e-5,
+        "iLRef": 6.340640139262622,
+        "iORef": 4.9717890683106385e-12,
+        "rShRef": 336.6141984760971,
+        "rSh0": 4276.627950683991,
+        "rS": 0.437404198769231,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 12.874768194157094,
+        "tempCell": 56.48798318623851
+      },
+      "expected": {
+        "photocurrent": 0.08401727674202786,
+        "saturationCurrent": 1.569857343828624e-10,
+        "resistanceSeries": 0.437404198769231,
+        "resistanceShunt": 4006.174445693117,
+        "nNsVth": 5.410095000408103
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0045284196471803645,
+        "gammaRef": 1.2259423729860364,
+        "muGamma": -0.00039775048899883,
+        "iLRef": 3.676239869733375,
+        "iORef": 1.0689095808431791e-10,
+        "rShRef": 704.8500419253994,
+        "rSh0": 6019.27480844333,
+        "rS": 0.26899309081546785,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 992.0763931283518,
+        "tempCell": 8.71129188666785
+      },
+      "expected": {
+        "photocurrent": 3.5739331463208903,
+        "saturationCurrent": 1.1673697040860415e-11,
+        "resistanceSeries": 0.26899309081546785,
+        "resistanceShunt": 705.8214424405915,
+        "nNsVth": 4.310523178676452
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0038046236618409406,
+        "gammaRef": 0.902138571080156,
+        "muGamma": -0.0005128050194092199,
+        "iLRef": 6.166943204628586,
+        "iORef": 2.7967541841486404e-12,
+        "rShRef": 249.03614240914962,
+        "rSh0": 7833.106006081716,
+        "rS": 0.21896741504202175,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 56.186587961594235,
+        "tempCell": 1.1263082020382187
+      },
+      "expected": {
+        "photocurrent": 0.3413960458477003,
+        "saturationCurrent": 3.420767535399777e-14,
+        "resistanceSeries": 0.21896741504202175,
+        "resistanceShunt": 5808.6950199828225,
+        "nNsVth": 3.112081246245596
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.005519330920069727,
+        "gammaRef": 1.2240702496151907,
+        "muGamma": -0.0004956809771539889,
+        "iLRef": 3.455408235518848,
+        "iORef": 7.533537419353566e-9,
+        "rShRef": 845.3401845318373,
+        "rSh0": 1075.220705131266,
+        "rS": 0.5962995528564267,
+        "cellsInSeries": 96.0,
+        "effectiveIrradiance": 146.84358240775194,
+        "tempCell": 19.72760902772392
+      },
+      "expected": {
+        "photocurrent": 0.503131365381952,
+        "saturationCurrent": 3.7641955385898484e-9,
+        "resistanceSeries": 0.5962995528564267,
+        "resistanceShunt": 947.3233601213642,
+        "nNsVth": 2.9720963030876546
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0019591308647570463,
+        "gammaRef": 1.2376640070639764,
+        "muGamma": -0.00044593696907504267,
+        "iLRef": 7.185679496413213,
+        "iORef": 2.1453467209123042e-9,
+        "rShRef": 357.8618864015487,
+        "rSh0": 1294.817414472682,
+        "rS": 0.45181739999114034,
+        "cellsInSeries": 60.0,
+        "effectiveIrradiance": 1142.0660263224918,
+        "tempCell": 5.091072679628575
+      },
+      "expected": {
+        "photocurrent": 8.161975064046954,
+        "saturationCurrent": 1.4248689351076273e-10,
+        "resistanceSeries": 0.45181739999114034,
+        "resistanceShunt": 355.7771454049356,
+        "nNsVth": 1.7932974905522374
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.005670987997729782,
+        "gammaRef": 1.072110702592353,
+        "muGamma": -0.0003882806044041995,
+        "iLRef": 5.215618868242948,
+        "iORef": 6.320663128702778e-12,
+        "rShRef": 537.3240219031122,
+        "rSh0": 5977.085505443455,
+        "rS": 0.4106121256794668,
+        "cellsInSeries": 96.0,
+        "effectiveIrradiance": 587.1030990302712,
+        "tempCell": 79.16506326979622
+      },
+      "expected": {
+        "photocurrent": 3.2424461214873856,
+        "saturationCurrent": 6.164223890128298e-9,
+        "resistanceSeries": 0.4106121256794668,
+        "resistanceShunt": 731.2697804604702,
+        "nNsVth": 3.063450609163274
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.00260167265947912,
+        "gammaRef": 1.0451998329040075,
+        "muGamma": -0.0004356084382108855,
+        "iLRef": 12.027417469379733,
+        "iORef": 1.603942041474023e-11,
+        "rShRef": 788.4338292900368,
+        "rSh0": 7083.166831540996,
+        "rS": 0.2313547059016612,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 299.36534445757513,
+        "tempCell": 5.11489893217973
+      },
+      "expected": {
+        "photocurrent": 3.5851044501244336,
+        "saturationCurrent": 6.766495850922081e-13,
+        "resistanceSeries": 0.2313547059016612,
+        "resistanceShunt": 1980.7113342668451,
+        "nNsVth": 0.9097405252729873
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.005488981221325828,
+        "gammaRef": 0.9000273782342302,
+        "muGamma": -0.0003676302012067212,
+        "iLRef": 13.109806898281233,
+        "iORef": 1.2847578237311915e-9,
+        "rShRef": 114.05894255456516,
+        "rSh0": 6118.872858828728,
+        "rS": 0.5141245431845398,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 590.6404463215421,
+        "tempCell": 4.77757271381494
+      },
+      "expected": {
+        "photocurrent": 7.677620798775152,
+        "saturationCurrent": 3.1475290558916007e-11,
+        "resistanceSeries": 0.5141245431845398,
+        "resistanceShunt": 323.5509632807939,
+        "nNsVth": 0.782411732367634
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.003283647035134379,
+        "gammaRef": 0.9253947992595649,
+        "muGamma": -1.9619699192445103e-6,
+        "iLRef": 8.686998520087265,
+        "iORef": 4.385082529191873e-9,
+        "rShRef": 432.52995156016067,
+        "rSh0": 5087.533258799228,
+        "rS": 0.5876464870975823,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 45.19141510568634
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.0621063152622964e-7,
+        "resistanceSeries": 0.5876464870975823,
+        "resistanceShunt": 5087.533258799228,
+        "nNsVth": 0.9138543735704743
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.002361637454716277,
+        "gammaRef": 1.3130310689398201,
+        "muGamma": -0.00015648481671769564,
+        "iLRef": 7.307809591944409,
+        "iORef": 1.994471555042774e-10,
+        "rShRef": 217.04744647005583,
+        "rSh0": 2262.9396344606803,
+        "rS": 0.37280515474861786,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 20.70290875939409
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.1748643170459347e-10,
+        "resistanceSeries": 0.37280515474861786,
+        "resistanceShunt": 2262.9396344606803,
+        "nNsVth": 1.1975750520882193
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0027795318753016393,
+        "gammaRef": 1.2280569540651458,
+        "muGamma": -0.0005514884403644611,
+        "iLRef": 10.205003792262989,
+        "iORef": 4.2382078436485823e-10,
+        "rShRef": 372.7068207925914,
+        "rSh0": 7575.012450461232,
+        "rS": 0.407179726337646,
+        "cellsInSeries": 60.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": -21.088912569014564
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 4.408309445895405e-13,
+        "resistanceSeries": 0.407179726337646,
+        "resistanceShunt": 7575.012450461232,
+        "nNsVth": 1.6335989031966172
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.001181734974519991,
+        "gammaRef": 1.2178530660284792,
+        "muGamma": -0.00039540027355107054,
+        "iLRef": 5.777086718251302,
+        "iORef": 4.0615077902467754e-11,
+        "rShRef": 161.77409637137978,
+        "rSh0": 2094.8290681686412,
+        "rS": 0.19779644360992135,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 172.7992066722487,
+        "tempCell": 0.5200257150504606
+      },
+      "expected": {
+        "photocurrent": 0.9932771208797179,
+        "saturationCurrent": 1.306945882237804e-12,
+        "resistanceSeries": 0.19779644360992135,
+        "resistanceShunt": 904.2042267696308,
+        "nNsVth": 1.0421628934433922
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004071518652982925,
+        "gammaRef": 1.3324614608974168,
+        "muGamma": -8.163829042361141e-5,
+        "iLRef": 4.759966583771084,
+        "iORef": 2.580520730022433e-11,
+        "rShRef": 739.7947730855748,
+        "rSh0": 2192.131997700126,
+        "rS": 0.4098209042412506,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 22.75339816344175
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.9674217788052523e-11,
+        "resistanceSeries": 0.4098209042412506,
+        "resistanceShunt": 2192.131997700126,
+        "nNsVth": 2.446638298666329
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004071928484543282,
+        "gammaRef": 1.3689808980838345,
+        "muGamma": -0.000210609673741624,
+        "iLRef": 8.331264237702898,
+        "iORef": 1.0887613147999621e-9,
+        "rShRef": 234.31154100857873,
+        "rSh0": 1331.3988549792448,
+        "rS": 0.2829993418716531,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 204.69342275133627,
+        "tempCell": -16.811014669240446
+      },
+      "expected": {
+        "photocurrent": 1.6705056382580228,
+        "saturationCurrent": 3.952113812617065e-12,
+        "resistanceSeries": 0.2829993418716531,
+        "resistanceShunt": 587.1523350832565,
+        "nNsVth": 4.382601981746139
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.00198539821507795,
+        "gammaRef": 1.3045952569861228,
+        "muGamma": -2.6519119607661376e-5,
+        "iLRef": 12.216586548724795,
+        "iORef": 5.714010052351412e-9,
+        "rShRef": 152.05349668930037,
+        "rSh0": 7659.993663274809,
+        "rS": 0.20187913505656738,
+        "cellsInSeries": 60.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 7.065790374398899
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 5.582815196070673e-10,
+        "resistanceSeries": 0.20187913505656738,
+        "resistanceShunt": 7659.993663274809,
+        "nNsVth": 1.8908228210790854
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.002298372604820533,
+        "gammaRef": 1.2178427039503519,
+        "muGamma": -0.0004666235271321213,
+        "iLRef": 11.226425519583342,
+        "iORef": 6.865836399183426e-10,
+        "rShRef": 552.9486698041097,
+        "rSh0": 4506.116505129539,
+        "rS": 0.16717389345836722,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 809.2878913094198,
+        "tempCell": 45.95686800942364
+      },
+      "expected": {
+        "photocurrent": 9.124390955732096,
+        "saturationCurrent": 9.022046991230871e-9,
+        "resistanceSeries": 0.16717389345836722,
+        "resistanceShunt": 583.0332698898609,
+        "nNsVth": 2.3918359251635324
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.00511065509355433,
+        "gammaRef": 1.3438756717253275,
+        "muGamma": -2.157942380764366e-6,
+        "iLRef": 7.733354197865157,
+        "iORef": 4.392646969194783e-9,
+        "rShRef": 606.9024838238696,
+        "rSh0": 7954.09722891024,
+        "rS": 0.3959451439012174,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": -25.04821487903066
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.6240817003521865e-12,
+        "resistanceSeries": 0.3959451439012174,
+        "resistanceShunt": 7954.09722891024,
+        "nNsVth": 4.137702511138248
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004360409014271545,
+        "gammaRef": 1.0026903243242726,
+        "muGamma": -0.0005122177556579241,
+        "iLRef": 13.246178998390825,
+        "iORef": 2.8459150540206744e-9,
+        "rShRef": 195.26816986964408,
+        "rSh0": 1801.4625293343809,
+        "rS": 0.5141591242933468,
+        "cellsInSeries": 96.0,
+        "effectiveIrradiance": 215.20128134967575,
+        "tempCell": 78.4748262694862
+      },
+      "expected": {
+        "photocurrent": 2.900773631256729,
+        "saturationCurrent": 4.205915046525278e-6,
+        "resistanceSeries": 0.5141591242933468,
+        "resistanceShunt": 682.4674202119108,
+        "nNsVth": 2.837015344743913
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004108306519957947,
+        "gammaRef": 1.0437539404950722,
+        "muGamma": -0.0003479843797924456,
+        "iLRef": 5.089335356027829,
+        "iORef": 3.653878502987996e-11,
+        "rShRef": 783.3056624665364,
+        "rSh0": 7354.643284796469,
+        "rS": 0.1878539097934405,
+        "cellsInSeries": 96.0,
+        "effectiveIrradiance": 174.43642737250585,
+        "tempCell": -20.486954003146245
+      },
+      "expected": {
+        "photocurrent": 0.8551677832761218,
+        "saturationCurrent": 1.3413580118031113e-14,
+        "resistanceSeries": 0.1878539097934405,
+        "resistanceShunt": 3284.2987631581364,
+        "nNsVth": 2.214729570367572
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.001417303791143699,
+        "gammaRef": 0.9183262571832739,
+        "muGamma": -0.0005794620237629642,
+        "iLRef": 6.166080382867221,
+        "iORef": 2.219454113578962e-11,
+        "rShRef": 349.24551050722994,
+        "rSh0": 7778.612906088007,
+        "rS": 0.5210300742613991,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 431.2496058744869,
+        "tempCell": 70.79174371592754
+      },
+      "expected": {
+        "photocurrent": 2.687108184485609,
+        "saturationCurrent": 2.2978369317573177e-8,
+        "resistanceSeries": 0.5210300742613991,
+        "resistanceShunt": 1014.8065700870463,
+        "nNsVth": 1.9030653008084994
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004965483804760432,
+        "gammaRef": 1.0601852074792224,
+        "muGamma": -0.0003372158446895465,
+        "iLRef": 13.422098666990413,
+        "iORef": 1.9285608492148412e-10,
+        "rShRef": 768.6512552716337,
+        "rSh0": 4522.096370850637,
+        "rS": 0.5968197967325515,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 953.2136122806623,
+        "tempCell": 73.09593798628154
+      },
+      "expected": {
+        "photocurrent": 13.02177324944086,
+        "saturationCurrent": 1.0031203935932796e-7,
+        "resistanceSeries": 0.5968197967325515,
+        "resistanceShunt": 773.1713353390488,
+        "nNsVth": 1.1213640724765706
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004106754567651981,
+        "gammaRef": 0.958260920767026,
+        "muGamma": -8.979449405575822e-5,
+        "iLRef": 3.0905166141218707,
+        "iORef": 2.7513519768592844e-11,
+        "rShRef": 861.4189011801504,
+        "rSh0": 7632.759440822588,
+        "rS": 0.5037852423487298,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 86.24711222800185,
+        "tempCell": 13.293191016758604
+      },
+      "expected": {
+        "photocurrent": 0.2624016315994945,
+        "saturationCurrent": 3.802600594446772e-12,
+        "resistanceSeries": 0.5037852423487298,
+        "resistanceShunt": 5064.618609753969,
+        "nNsVth": 0.8524596429070721
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.00384174543652794,
+        "gammaRef": 1.3029987557201126,
+        "muGamma": -0.0005096603325167924,
+        "iLRef": 8.233683442212165,
+        "iORef": 6.514315652716605e-11,
+        "rShRef": 763.9726199046108,
+        "rSh0": 1342.7512317132744,
+        "rS": 0.21483804633026607,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 19.199409526446807
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.1650658822830864e-11,
+        "resistanceSeries": 0.21483804633026607,
+        "resistanceShunt": 1342.7512317132744,
+        "nNsVth": 4.737681306403341
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004223657382701236,
+        "gammaRef": 0.9640373285686872,
+        "muGamma": -9.913114649413755e-6,
+        "iLRef": 3.3282017764124046,
+        "iORef": 1.2880374041057175e-11,
+        "rShRef": 921.1115314305517,
+        "rSh0": 2257.625119409826,
+        "rS": 0.17100215643695046,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 982.3029345287576,
+        "tempCell": 73.63135767386152
+      },
+      "expected": {
+        "photocurrent": 3.4710695484885616,
+        "saturationCurrent": 1.1604152047058737e-8,
+        "resistanceSeries": 0.17100215643695046,
+        "resistanceShunt": 921.6721963395304,
+        "nNsVth": 4.146367018038242
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0023966499165043002,
+        "gammaRef": 0.9509360728005485,
+        "muGamma": -0.0002515524715642648,
+        "iLRef": 4.611538927703432,
+        "iORef": 2.1613578729110937e-9,
+        "rShRef": 842.2197106395553,
+        "rSh0": 7136.031379450676,
+        "rS": 0.5775173135373147,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": -2.121526445995948
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.700781214024209e-11,
+        "resistanceSeries": 0.5775173135373147,
+        "resistanceShunt": 7136.031379450676,
+        "nNsVth": 1.610557915472844
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004911892551442496,
+        "gammaRef": 0.9115776897602693,
+        "muGamma": -0.0002500907913711319,
+        "iLRef": 7.994972196961772,
+        "iORef": 9.877411565825865e-11,
+        "rShRef": 342.30415257342617,
+        "rSh0": 2460.6609457601962,
+        "rS": 0.16176036196279872,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 54.6049176592804,
+        "tempCell": 54.198194378989356
+      },
+      "expected": {
+        "photocurrent": 0.4443961480704482,
+        "saturationCurrent": 9.67045502170827e-9,
+        "resistanceSeries": 0.16176036196279872,
+        "resistanceShunt": 1908.8531939129275,
+        "nNsVth": 0.9183032031494828
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.003657138083500634,
+        "gammaRef": 1.3826888474124275,
+        "muGamma": -0.0005558937104312077,
+        "iLRef": 8.627166519903577,
+        "iORef": 9.36825715872401e-9,
+        "rShRef": 926.3612395713169,
+        "rSh0": 5370.82249715685,
+        "rS": 0.14133330903093536,
+        "cellsInSeries": 60.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 78.55782884592223
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 2.0879042735159944e-6,
+        "resistanceSeries": 0.14133330903093536,
+        "resistanceShunt": 5370.82249715685,
+        "nNsVth": 2.4602380564496698
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.003874543131258511,
+        "gammaRef": 1.0641110975935177,
+        "muGamma": -0.00010210624222748431,
+        "iLRef": 9.600139930982275,
+        "iORef": 2.726004783646217e-10,
+        "rShRef": 169.51744311565946,
+        "rSh0": 4894.257576709895,
+        "rS": 0.39254865015783136,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 82.0902828097781
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.4779673122044406e-7,
+        "resistanceSeries": 0.39254865015783136,
+        "resistanceShunt": 4894.257576709895,
+        "nNsVth": 2.332539083503596
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.005344942957116076,
+        "gammaRef": 0.9098044610780326,
+        "muGamma": -5.76930031619359e-5,
+        "iLRef": 7.035844270055287,
+        "iORef": 1.0649942460124942e-12,
+        "rShRef": 681.387700338521,
+        "rSh0": 7144.552342766465,
+        "rS": 0.5932750472864304,
+        "cellsInSeries": 96.0,
+        "effectiveIrradiance": 862.4292775347965,
+        "tempCell": 52.36604615809803
+      },
+      "expected": {
+        "photocurrent": 6.194065582870541,
+        "saturationCurrent": 7.866002753717378e-11,
+        "resistanceSeries": 0.5932750472864304,
+        "resistanceShunt": 711.3866216602557,
+        "nNsVth": 2.445739952393038
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0024253119988716762,
+        "gammaRef": 1.1200405607115844,
+        "muGamma": -0.00012051760823905673,
+        "iLRef": 7.05449100028849,
+        "iORef": 1.4146804583385546e-11,
+        "rShRef": 784.5074599162363,
+        "rSh0": 6310.798174579913,
+        "rS": 0.5412495013362202,
+        "cellsInSeries": 96.0,
+        "effectiveIrradiance": 921.3809392425779,
+        "tempCell": -16.94318053065428
+      },
+      "expected": {
+        "photocurrent": 6.406145792175863,
+        "saturationCurrent": 1.5702040130944982e-14,
+        "resistanceSeries": 0.5412495013362202,
+        "resistanceShunt": 796.7749801640558,
+        "nNsVth": 2.384647423436761
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.005645656347376972,
+        "gammaRef": 1.0498800528793237,
+        "muGamma": -0.00034201235588775464,
+        "iLRef": 3.42070892763101,
+        "iORef": 5.41766574297372e-10,
+        "rShRef": 350.23472576426843,
+        "rSh0": 2654.5705015269705,
+        "rS": 0.3003842213207655,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 1159.605640686332,
+        "tempCell": 41.64646132527441
+      },
+      "expected": {
+        "photocurrent": 4.075653337709011,
+        "saturationCurrent": 5.81045704158828e-9,
+        "resistanceSeries": 0.3003842213207655,
+        "resistanceShunt": 344.70946563244854,
+        "nNsVth": 4.078903247596391
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0013076394388594832,
+        "gammaRef": 1.0879166720143933,
+        "muGamma": -8.695779467786716e-5,
+        "iLRef": 5.446087536394388,
+        "iORef": 2.9988369929701384e-11,
+        "rShRef": 364.2494064947648,
+        "rSh0": 7544.383376486301,
+        "rS": 0.5415531474121781,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": -1.4397181072943162
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 4.620268845013649e-13,
+        "resistanceSeries": 0.5415531474121781,
+        "resistanceShunt": 7544.383376486301,
+        "nNsVth": 3.6758174104277686
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0018143264839617338,
+        "gammaRef": 1.2936992465758812,
+        "muGamma": -0.0002523996657799862,
+        "iLRef": 9.524407737429692,
+        "iORef": 2.4829102048039793e-9,
+        "rShRef": 206.62041073273838,
+        "rSh0": 4821.1372775803775,
+        "rS": 0.3444499987570664,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 11.099309250568975
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 4.1534323543852347e-10,
+        "resistanceSeries": 0.3444499987570664,
+        "resistanceShunt": 4821.1372775803775,
+        "nNsVth": 4.5755609247861715
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.003470246564571779,
+        "gammaRef": 1.0430991008992883,
+        "muGamma": -0.00011128527144265678,
+        "iLRef": 9.061339594658817,
+        "iORef": 6.866815685716499e-12,
+        "rShRef": 387.4920132534029,
+        "rSh0": 2447.0590868297795,
+        "rS": 0.12874762863189596,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 77.1972885006427
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 5.86934662372261e-9,
+        "resistanceSeries": 0.12874762863189596,
+        "resistanceShunt": 2447.0590868297795,
+        "nNsVth": 4.5095630482902545
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.003308865678827099,
+        "gammaRef": 1.2710733183961582,
+        "muGamma": -8.65514138020802e-5,
+        "iLRef": 8.99489214162297,
+        "iORef": 4.479205357209896e-11,
+        "rShRef": 428.79697383175136,
+        "rSh0": 4402.106014266788,
+        "rS": 0.5422089680845094,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 995.1340200172112,
+        "tempCell": 21.573090937685482
+      },
+      "expected": {
+        "photocurrent": 8.939839170965302,
+        "saturationCurrent": 2.9029460567146122e-11,
+        "resistanceSeries": 0.5422089680845094,
+        "resistanceShunt": 429.2392246550184,
+        "nNsVth": 2.324831499934953
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004161067507331522,
+        "gammaRef": 1.0770306096205227,
+        "muGamma": -0.0001390068281201874,
+        "iLRef": 12.929178952932556,
+        "iORef": 1.0641770044004974e-11,
+        "rShRef": 561.3498403828461,
+        "rSh0": 7752.44749891095,
+        "rS": 0.5932509604617405,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 17.20564912206142
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.316578116034814e-12,
+        "resistanceSeries": 0.5932509604617405,
+        "resistanceShunt": 7752.44749891095,
+        "nNsVth": 0.9711143835487783
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0011536980934351401,
+        "gammaRef": 1.2785554252166411,
+        "muGamma": -0.00022661217619529257,
+        "iLRef": 12.309742310907215,
+        "iORef": 4.233077386205902e-12,
+        "rShRef": 335.64938735955707,
+        "rSh0": 4201.68663081567,
+        "rS": 0.4560613110757261,
+        "cellsInSeries": 96.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 57.186818757071954
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.6314097311375585e-10,
+        "resistanceSeries": 0.4560613110757261,
+        "resistanceShunt": 4201.68663081567,
+        "nNsVth": 3.4740494724714672
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004463211719040861,
+        "gammaRef": 0.9672376369345768,
+        "muGamma": -0.0001599341448166713,
+        "iLRef": 13.998368631465228,
+        "iORef": 1.5510460839522917e-12,
+        "rShRef": 290.32015005725987,
+        "rSh0": 2012.193638795882,
+        "rS": 0.4023207603924135,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 983.9631193646951,
+        "tempCell": 82.40322292357948
+      },
+      "expected": {
+        "photocurrent": 14.025972509180729,
+        "saturationCurrent": 4.1040065648025835e-9,
+        "resistanceSeries": 0.4023207603924135,
+        "resistanceShunt": 290.97168310315107,
+        "nNsVth": 4.226990818236305
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.005369891911392536,
+        "gammaRef": 1.1387083570479517,
+        "muGamma": -0.0002902463252551641,
+        "iLRef": 11.401134866712658,
+        "iORef": 3.3672599541533575e-11,
+        "rShRef": 387.86069210275144,
+        "rSh0": 1988.0862985032716,
+        "rS": 0.3177961710462507,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 36.19048218382025
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.5100245973535162e-10,
+        "resistanceSeries": 0.3177961710462507,
+        "resistanceShunt": 1988.0862985032718,
+        "nNsVth": 2.1792854584738204
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.002788126401711276,
+        "gammaRef": 1.323394150761579,
+        "muGamma": -0.0003522251996932591,
+        "iLRef": 13.291064728877458,
+        "iORef": 6.159232799264236e-12,
+        "rShRef": 959.4050391803155,
+        "rSh0": 2910.648258582501,
+        "rS": 0.4015589142590137,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 1183.437351797736,
+        "tempCell": 41.343324992292644
+      },
+      "expected": {
+        "photocurrent": 15.783068437969286,
+        "saturationCurrent": 4.0400924131060526e-11,
+        "resistanceSeries": 0.4015589142590137,
+        "resistanceShunt": 954.3175293788742,
+        "nNsVth": 5.142127005026166
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.005466040984253796,
+        "gammaRef": 1.232749720308982,
+        "muGamma": -0.00033165061157013493,
+        "iLRef": 10.15106699689599,
+        "iORef": 2.3005121039350176e-12,
+        "rShRef": 703.4341935703334,
+        "rSh0": 4141.068983627012,
+        "rS": 0.22175857901587284,
+        "cellsInSeries": 96.0,
+        "effectiveIrradiance": 1107.0040673616184,
+        "tempCell": 26.502550536304884
+      },
+      "expected": {
+        "photocurrent": 11.246364281142679,
+        "saturationCurrent": 2.789208973028706e-12,
+        "resistanceSeries": 0.22175857901587284,
+        "resistanceShunt": 697.1588844046303,
+        "nNsVth": 3.054649747386137
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0019066351067891327,
+        "gammaRef": 0.9806206614872511,
+        "muGamma": -0.00013804274270564178,
+        "iLRef": 4.553048113800361,
+        "iORef": 1.4736373676684398e-9,
+        "rShRef": 130.28543424081357,
+        "rSh0": 6670.518809674355,
+        "rS": 0.2215986682318372,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 489.4983576144317,
+        "tempCell": 4.972480390080967
+      },
+      "expected": {
+        "photocurrent": 2.2100179948703453,
+        "saturationCurrent": 4.900512338311502e-11,
+        "resistanceSeries": 0.2215986682318372,
+        "resistanceShunt": 548.2284386307244,
+        "nNsVth": 0.8484674819445976
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0027463053429391242,
+        "gammaRef": 0.9136265756072818,
+        "muGamma": -0.00043481954256503226,
+        "iLRef": 10.978787651918603,
+        "iORef": 2.8921022020671747e-12,
+        "rShRef": 282.78972732877355,
+        "rSh0": 1047.9735167572098,
+        "rS": 0.32349488676213567,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 36.935419007424834
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 2.066429614312753e-11,
+        "resistanceSeries": 0.32349488676213567,
+        "resistanceShunt": 1047.9735167572098,
+        "nNsVth": 0.8738793243306722
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.002537818185661939,
+        "gammaRef": 1.2460295912187032,
+        "muGamma": -0.0005599120570906997,
+        "iLRef": 8.39583314375273,
+        "iORef": 1.187720762873998e-12,
+        "rShRef": 787.768337995016,
+        "rSh0": 1922.6692672621216,
+        "rS": 0.4098951134944522,
+        "cellsInSeries": 96.0,
+        "effectiveIrradiance": 293.06976306273026,
+        "tempCell": 54.59270132947301
+      },
+      "expected": {
+        "photocurrent": 2.482574631832183,
+        "saturationCurrent": 3.887090321512341e-11,
+        "resistanceSeries": 0.4098951134944522,
+        "resistanceShunt": 1010.466091693175,
+        "nNsVth": 3.3334324118885923
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.004034208024640521,
+        "gammaRef": 1.1830772027976546,
+        "muGamma": -0.0002968101976715776,
+        "iLRef": 11.503135044955068,
+        "iORef": 4.429233227857684e-12,
+        "rShRef": 660.4043202239997,
+        "rSh0": 6680.730765348663,
+        "rS": 0.4885923195388171,
+        "cellsInSeries": 36.0,
+        "effectiveIrradiance": 629.8234868113581,
+        "tempCell": 71.73667818932351
+      },
+      "expected": {
+        "photocurrent": 7.363694996295,
+        "saturationCurrent": 1.077105800462648e-9,
+        "resistanceSeries": 0.4885923195388171,
+        "resistanceShunt": 824.929569840634,
+        "nNsVth": 1.250957562763181
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0012175886117526383,
+        "gammaRef": 1.2270226726721374,
+        "muGamma": -0.00038060238396883797,
+        "iLRef": 4.04244128748285,
+        "iORef": 1.3247279395003984e-11,
+        "rShRef": 418.2332884907999,
+        "rSh0": 7634.943170292558,
+        "rS": 0.39236346956136126,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 87.47550041931147,
+        "tempCell": 13.720245866350394
+      },
+      "expected": {
+        "photocurrent": 0.35241317725249965,
+        "saturationCurrent": 2.9294029599104264e-12,
+        "resistanceSeries": 0.39236346956136126,
+        "resistanceShunt": 4867.526233786245,
+        "nNsVth": 4.383190334804025
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0031926469264712746,
+        "gammaRef": 1.1195810300997788,
+        "muGamma": -0.0001668685502769735,
+        "iLRef": 5.629071686741023,
+        "iORef": 4.689209776578425e-12,
+        "rShRef": 510.4027173228507,
+        "rSh0": 3953.840604121095,
+        "rS": 0.10574734705644509,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 71.04715865286707
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.3743681950614475e-9,
+        "resistanceSeries": 0.10574734705644509,
+        "resistanceShunt": 3953.840604121095,
+        "nNsVth": 2.374528058615881
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0042930346151380545,
+        "gammaRef": 0.98466555455414,
+        "muGamma": -0.00015882971781805733,
+        "iLRef": 6.768660001639301,
+        "iORef": 5.795388433994518e-9,
+        "rShRef": 276.14682070010997,
+        "rSh0": 7618.349559527065,
+        "rS": 0.3991565548278303,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 1140.5683642652384,
+        "tempCell": -29.829232511320285
+      },
+      "expected": {
+        "photocurrent": 7.451648158475166,
+        "saturationCurrent": 1.584745530735745e-13,
+        "resistanceSeries": 0.3991565548278303,
+        "resistanceShunt": 259.9243825919184,
+        "nNsVth": 1.4996757908782041
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0019287388375177701,
+        "gammaRef": 0.976996957566728,
+        "muGamma": -0.0002506913468914948,
+        "iLRef": 5.377577647737212,
+        "iORef": 2.3883796366297424e-9,
+        "rShRef": 942.9663062065928,
+        "rSh0": 3727.336932727599,
+        "rS": 0.4066323744404655,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 1017.3233150408607,
+        "tempCell": 8.54687951079733
+      },
+      "expected": {
+        "photocurrent": 5.438451612861562,
+        "saturationCurrent": 1.5000374988361967e-10,
+        "resistanceSeries": 0.4066323744404655,
+        "resistanceShunt": 941.9279306935015,
+        "nNsVth": 1.7147873225993735
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.003074256372078721,
+        "gammaRef": 1.2294852578913322,
+        "muGamma": -0.000517468724339854,
+        "iLRef": 5.970122264513097,
+        "iORef": 2.877182547892347e-9,
+        "rShRef": 574.472402991136,
+        "rSh0": 2604.8888115657783,
+        "rS": 0.3442578778655324,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 871.1912903118723,
+        "tempCell": 80.81520612718026
+      },
+      "expected": {
+        "photocurrent": 5.350606452939899,
+        "saturationCurrent": 1.4833994374376825e-6,
+        "resistanceSeries": 0.3442578778655324,
+        "resistanceShunt": 583.0612300600199,
+        "nNsVth": 2.636727516319409
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0025819866221345237,
+        "gammaRef": 0.9605943507928894,
+        "muGamma": -0.0003043993433929579,
+        "iLRef": 8.598571553540072,
+        "iORef": 2.968825732661155e-10,
+        "rShRef": 364.19611851570073,
+        "rSh0": 1922.2112190202101,
+        "rS": 0.15098588716205166,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": -15.160158000878031
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.7864549648591868e-13,
+        "resistanceSeries": 0.15098588716205166,
+        "resistanceShunt": 1922.2112190202101,
+        "nNsVth": 3.1143689862091706
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0031287712262724194,
+        "gammaRef": 1.3346282135314487,
+        "muGamma": -8.148492289182686e-5,
+        "iLRef": 10.623974369027053,
+        "iORef": 8.678372881463112e-12,
+        "rShRef": 714.0317639844766,
+        "rSh0": 5085.675309265062,
+        "rS": 0.45407704945150174,
+        "cellsInSeries": 72.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": 83.17197490428728
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.1391710251105224e-9,
+        "resistanceSeries": 0.45407704945150174,
+        "resistanceShunt": 5085.675309265062,
+        "nNsVth": 2.9401066458779637
+      }
+    },
+    {
+      "input": {
+        "alphaSc": 0.0029024044466438277,
+        "gammaRef": 0.9945137760507843,
+        "muGamma": -0.0005371233157392412,
+        "iLRef": 9.448454946967326,
+        "iORef": 5.16176184760872e-10,
+        "rShRef": 792.7422438309411,
+        "rSh0": 1361.6729185967206,
+        "rS": 0.5610963883297528,
+        "cellsInSeries": 144.0,
+        "effectiveIrradiance": 0.0,
+        "tempCell": -1.7724369970948672
+      },
+      "expected": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 5.461611358452221e-12,
+        "resistanceSeries": 0.5610963883297528,
+        "resistanceShunt": 1361.6729185967206,
+        "nNsVth": 3.397463542677528
+      }
+    }
+  ]
+}

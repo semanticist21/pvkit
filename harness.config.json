@@ -10,7 +10,8 @@
     "packages/io/src/",
     "packages/chain/src/",
     "packages/sizer/src/",
-    "packages/layout/src/"
+    "packages/layout/src/",
+    "packages/diode/src/"
   ],
   "docFileNames": ["AGENTS.md", "CLAUDE.md", "playbook.md"],
   "durableSourceGlobs": [
@@ -20,7 +21,8 @@
     "packages/io/src/",
     "packages/chain/src/",
     "packages/sizer/src/",
-    "packages/layout/src/"
+    "packages/layout/src/",
+    "packages/diode/src/"
   ],
   "testPairingMode": "module",
   "modulePairingRoot": "packages/core/src/",

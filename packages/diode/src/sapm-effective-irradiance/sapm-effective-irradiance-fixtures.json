@@ -1,0 +1,605 @@
+{
+  "meta": { "reference": "pvlib 0.16.1 sapm_effective_irradiance" },
+  "cases": [
+    {
+      "input": {
+        "poaDirect": 892.6364900320988,
+        "poaDiffuse": 247.58564677052135,
+        "spectralFactor": 1.0404277086005818,
+        "iam": 0.99877607128049,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 1185.182013433857 }
+    },
+    {
+      "input": {
+        "poaDirect": 293.22727874890387,
+        "poaDiffuse": 37.010686054448485,
+        "spectralFactor": 0.9998826577352812,
+        "iam": 1.0067198090481122,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 332.1694140386827 }
+    },
+    {
+      "input": {
+        "poaDirect": 89.38859210407246,
+        "poaDiffuse": 261.4509849731915,
+        "spectralFactor": 1.0134748840369987,
+        "iam": 1.007527845339729,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 356.2490704870487 }
+    },
+    {
+      "input": {
+        "poaDirect": 727.4156271889135,
+        "poaDiffuse": 93.16419178575606,
+        "spectralFactor": 1.0358763095018557,
+        "iam": 0.9470322838219412,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 810.1073521838657 }
+    },
+    {
+      "input": {
+        "poaDirect": 772.0321364726387,
+        "poaDiffuse": 143.35370208345037,
+        "spectralFactor": 0.9924017895978531,
+        "iam": 0.9948712369911377,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 904.501060137323 }
+    },
+    {
+      "input": {
+        "poaDirect": 311.4870877718918,
+        "poaDiffuse": 271.191854133676,
+        "spectralFactor": 1.0102895535964833,
+        "iam": 0.9997226899977301,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 588.5871808267791 }
+    },
+    {
+      "input": {
+        "poaDirect": 805.0531233301233,
+        "poaDiffuse": 201.67654878112225,
+        "spectralFactor": 1.0202050901571837,
+        "iam": 0.9945941103010189,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 1022.6307743877057 }
+    },
+    {
+      "input": {
+        "poaDirect": 298.2309110485073,
+        "poaDiffuse": 301.1932589503468,
+        "spectralFactor": 1.0186591361669466,
+        "iam": 0.9716976246520814,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 602.0107689132524 }
+    },
+    {
+      "input": {
+        "poaDirect": 668.6383154041614,
+        "poaDiffuse": 224.94526118949332,
+        "spectralFactor": 1.012004055481793,
+        "iam": 1.0033454945631906,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 906.5739814556287 }
+    },
+    {
+      "input": {
+        "poaDirect": 106.91386757170251,
+        "poaDiffuse": 380.935773673613,
+        "spectralFactor": 1.0081651898249187,
+        "iam": 0.9967677227602256,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 491.48462922373074 }
+    },
+    {
+      "input": {
+        "poaDirect": 149.96245466458512,
+        "poaDiffuse": 188.90492057131246,
+        "spectralFactor": 1.0143967241994136,
+        "iam": 1.0067678765604864,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 344.7754943888248 }
+    },
+    {
+      "input": {
+        "poaDirect": 890.811232925388,
+        "poaDiffuse": 311.958590453267,
+        "spectralFactor": 1.0157549231652894,
+        "iam": 1.0015429156641513,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 1223.1154704372548 }
+    },
+    {
+      "input": {
+        "poaDirect": 143.58626536718978,
+        "poaDiffuse": 316.5173149721296,
+        "spectralFactor": 0.9852731048112566,
+        "iam": 0.9681919184056346,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 448.82774022044697 }
+    },
+    {
+      "input": {
+        "poaDirect": 569.2698234316719,
+        "poaDiffuse": 343.00405592856987,
+        "spectralFactor": 0.9917694771454829,
+        "iam": 1.005507758090485,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 907.87498283699 }
+    },
+    {
+      "input": {
+        "poaDirect": 651.3946136228549,
+        "poaDiffuse": 47.1343702812661,
+        "spectralFactor": 1.0030231669532077,
+        "iam": 0.9817639396697581,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 688.7259703596186 }
+    },
+    {
+      "input": {
+        "poaDirect": 716.482853948336,
+        "poaDiffuse": 387.308945829955,
+        "spectralFactor": 0.9776445774590938,
+        "iam": 1.0013772100647795,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 1080.0807559397429 }
+    },
+    {
+      "input": {
+        "poaDirect": 399.268539901383,
+        "poaDiffuse": 302.9558639333732,
+        "spectralFactor": 1.0257177189526518,
+        "iam": 0.8369741551405617,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 653.5189282652836 }
+    },
+    {
+      "input": {
+        "poaDirect": 688.4321098476921,
+        "poaDiffuse": 145.67088320145234,
+        "spectralFactor": 1.0386325757808852,
+        "iam": 0.9940148439325408,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 862.0469858717972 }
+    },
+    {
+      "input": {
+        "poaDirect": 306.00160863954153,
+        "poaDiffuse": 152.9956880638355,
+        "spectralFactor": 1.0139869810477065,
+        "iam": 1.0081088523372845,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 467.9333112545663 }
+    },
+    {
+      "input": {
+        "poaDirect": 589.6748265400931,
+        "poaDiffuse": 48.302198814565415,
+        "spectralFactor": 1.01035754110074,
+        "iam": 1.0012666953673666,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 645.3395734320059 }
+    },
+    {
+      "input": {
+        "poaDirect": 775.950611495315,
+        "poaDiffuse": 60.97611007605899,
+        "spectralFactor": 1.0368479417431218,
+        "iam": 1.0017467257964936,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 869.1710643045 }
+    },
+    {
+      "input": {
+        "poaDirect": 325.6182829617368,
+        "poaDiffuse": 151.8321895121084,
+        "spectralFactor": 0.9870916194355934,
+        "iam": 1.0013612460064367,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 471.7248850661687 }
+    },
+    {
+      "input": {
+        "poaDirect": 87.76642124263134,
+        "poaDiffuse": 263.10675467367696,
+        "spectralFactor": 1.0060154350100061,
+        "iam": 0.9991070280019186,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 352.90498629881915 }
+    },
+    {
+      "input": {
+        "poaDirect": 835.5732464079076,
+        "poaDiffuse": 258.59231925263725,
+        "spectralFactor": 1.0051561736131318,
+        "iam": 1.0074362686241871,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 1106.0528585217553 }
+    },
+    {
+      "input": {
+        "poaDirect": 474.2070127221697,
+        "poaDiffuse": 192.65641691796134,
+        "spectralFactor": 1.0462354246827188,
+        "iam": 1.0033610343433421,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 699.3636607950814 }
+    },
+    {
+      "input": {
+        "poaDirect": 536.2882051307835,
+        "poaDiffuse": 256.92500226170716,
+        "spectralFactor": 1.0479934119351513,
+        "iam": 0.9962324095797321,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 829.1647299278076 }
+    },
+    {
+      "input": {
+        "poaDirect": 389.54367216692134,
+        "poaDiffuse": 384.1335616865328,
+        "spectralFactor": 1.0415672995724514,
+        "iam": 1.0036277317374978,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 807.3088083907679 }
+    },
+    {
+      "input": {
+        "poaDirect": 953.3489433214932,
+        "poaDiffuse": 49.99214503576317,
+        "spectralFactor": 0.9997046232371019,
+        "iam": 0.9952347737530373,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 998.503143181275 }
+    },
+    {
+      "input": {
+        "poaDirect": 831.9280040205113,
+        "poaDiffuse": 194.3231657184527,
+        "spectralFactor": 1.0429413765167896,
+        "iam": 0.9941333164732664,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 1065.2295671164816 }
+    },
+    {
+      "input": {
+        "poaDirect": 259.22788935969123,
+        "poaDiffuse": 345.30669063441877,
+        "spectralFactor": 1.0204092202351112,
+        "iam": 0.9645863780028482,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 607.5051001993662 }
+    },
+    {
+      "input": {
+        "poaDirect": 190.06893443778083,
+        "poaDiffuse": 21.915302695488002,
+        "spectralFactor": 1.0440430754537338,
+        "iam": 1.0059927485417615,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 222.50987683298757 }
+    },
+    {
+      "input": {
+        "poaDirect": 507.14821019378707,
+        "poaDiffuse": 41.54849927090822,
+        "spectralFactor": 0.9844036459142056,
+        "iam": 1.001471037866417,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 540.8734401053822 }
+    },
+    {
+      "input": {
+        "poaDirect": 621.5653278581937,
+        "poaDiffuse": 396.125095436629,
+        "spectralFactor": 1.04864790444909,
+        "iam": 0.9965457004891395,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 1064.9474063652265 }
+    },
+    {
+      "input": {
+        "poaDirect": 605.9787608196519,
+        "poaDiffuse": 266.65364050387393,
+        "spectralFactor": 0.9948520647503274,
+        "iam": 0.9972783838299275,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 866.4993948195166 }
+    },
+    {
+      "input": {
+        "poaDirect": 421.7648405247383,
+        "poaDiffuse": 340.59415539841297,
+        "spectralFactor": 1.051250285260415,
+        "iam": 0.890878620262881,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 753.0478299659042 }
+    },
+    {
+      "input": {
+        "poaDirect": 967.0296892459938,
+        "poaDiffuse": 150.17453877739894,
+        "spectralFactor": 0.9904298741555053,
+        "iam": 0.6956975704280943,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 815.0591550546587 }
+    },
+    {
+      "input": {
+        "poaDirect": 684.2051237359462,
+        "poaDiffuse": 53.45542659879929,
+        "spectralFactor": 1.0567174584930408,
+        "iam": 1.0026583338334096,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 781.4207879112213 }
+    },
+    {
+      "input": {
+        "poaDirect": 416.1540321771522,
+        "poaDiffuse": 201.87633493149426,
+        "spectralFactor": 1.0545861197552746,
+        "iam": 0.5008519033045071,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 432.7049887627955 }
+    },
+    {
+      "input": {
+        "poaDirect": 961.5025702809829,
+        "poaDiffuse": 375.21215642392855,
+        "spectralFactor": 1.056892093942238,
+        "iam": 1.0056011235155236,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 1418.4551132351482 }
+    },
+    {
+      "input": {
+        "poaDirect": 83.93606685917266,
+        "poaDiffuse": 355.48777326230197,
+        "spectralFactor": 1.047406559048035,
+        "iam": 0.9851081131946833,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 458.9461893324971 }
+    },
+    {
+      "input": {
+        "poaDirect": 72.58729100349103,
+        "poaDiffuse": 55.88432736579798,
+        "spectralFactor": 0.9877302843961073,
+        "iam": 0.9977861643364382,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 126.73658351349232 }
+    },
+    {
+      "input": {
+        "poaDirect": 851.617509682345,
+        "poaDiffuse": 34.02696122319293,
+        "spectralFactor": 1.029774065134298,
+        "iam": 0.9940311468534463,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 906.7791802877699 }
+    },
+    {
+      "input": {
+        "poaDirect": 940.4219925564283,
+        "poaDiffuse": 145.36560646454456,
+        "spectralFactor": 1.044781189232279,
+        "iam": 0.9240218620060686,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 1059.7592633594572 }
+    },
+    {
+      "input": {
+        "poaDirect": 148.3982915510238,
+        "poaDiffuse": 226.62223042485357,
+        "spectralFactor": 1.0447630261662537,
+        "iam": 0.9603669636789949,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 385.66282792104323 }
+    },
+    {
+      "input": {
+        "poaDirect": 48.637404647412396,
+        "poaDiffuse": 131.43955323596134,
+        "spectralFactor": 1.0349027628848873,
+        "iam": 0.9941043496412942,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 186.06538377628584 }
+    },
+    {
+      "input": {
+        "poaDirect": 0.2631586547453546,
+        "poaDiffuse": 341.8176404575871,
+        "spectralFactor": 1.0104971540826615,
+        "iam": 0.9769300738330942,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 345.6655391898445 }
+    },
+    {
+      "input": {
+        "poaDirect": 101.06481263729638,
+        "poaDiffuse": 142.81762234483705,
+        "spectralFactor": 1.034604883120048,
+        "iam": 0.5940906389555864,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 209.87920318521108 }
+    },
+    {
+      "input": {
+        "poaDirect": 134.63838600488387,
+        "poaDiffuse": 291.19737523023434,
+        "spectralFactor": 1.0276129921504624,
+        "iam": 0.9982826652806276,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 437.3567569393832 }
+    },
+    {
+      "input": {
+        "poaDirect": 475.2977916453034,
+        "poaDiffuse": 110.6785582799271,
+        "spectralFactor": 1.0408513361191631,
+        "iam": 1.0076621642594559,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 613.7048492998998 }
+    },
+    {
+      "input": {
+        "poaDirect": 100.10067723236882,
+        "poaDiffuse": 336.55863486043967,
+        "spectralFactor": 0.9870247171514751,
+        "iam": 0.9966108119595474,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 430.6586759865391 }
+    },
+    {
+      "input": {
+        "poaDirect": 947.1979858591897,
+        "poaDiffuse": 363.74144538757645,
+        "spectralFactor": 1.0408418317119306,
+        "iam": 0.9799704353919582,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 1344.7337858974267 }
+    },
+    {
+      "input": {
+        "poaDirect": 80.26809887031783,
+        "poaDiffuse": 120.73140875231046,
+        "spectralFactor": 0.9970189480968615,
+        "iam": 0.9863233880226453,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 199.30579460127973 }
+    },
+    {
+      "input": {
+        "poaDirect": 456.74505035387114,
+        "poaDiffuse": 12.298278231806492,
+        "spectralFactor": 1.0460412433718194,
+        "iam": 1.007442674000816,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 494.1945839507119 }
+    },
+    {
+      "input": {
+        "poaDirect": 204.94707096794818,
+        "poaDiffuse": 271.3129780366378,
+        "spectralFactor": 1.0461609346996927,
+        "iam": 1.0029587467669576,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 498.87903587725634 }
+    },
+    {
+      "input": {
+        "poaDirect": 550.9794465004401,
+        "poaDiffuse": 364.18315696267626,
+        "spectralFactor": 1.0078091484661693,
+        "iam": 0.996057698900068,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 920.1201547649897 }
+    },
+    {
+      "input": {
+        "poaDirect": 534.9593472781556,
+        "poaDiffuse": 79.94578467953932,
+        "spectralFactor": 1.0452767077546996,
+        "iam": 1.003141102992172,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 644.5024555982319 }
+    },
+    {
+      "input": {
+        "poaDirect": 259.81987973548183,
+        "poaDiffuse": 394.25725165878345,
+        "spectralFactor": 1.0270561996486476,
+        "iam": 1.0060033847418262,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 673.3759737735932 }
+    },
+    {
+      "input": {
+        "poaDirect": 666.9915331006944,
+        "poaDiffuse": 175.06466760585715,
+        "spectralFactor": 1.0124749340958115,
+        "iam": 0.9864154148647815,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 843.386960125862 }
+    },
+    {
+      "input": {
+        "poaDirect": 175.46330910149888,
+        "poaDiffuse": 21.980797583431276,
+        "spectralFactor": 1.049810496838377,
+        "iam": 1.000811759084524,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 207.42842437695697 }
+    },
+    {
+      "input": {
+        "poaDirect": 224.9468187894589,
+        "poaDiffuse": 268.54715479595916,
+        "spectralFactor": 1.0027922631077002,
+        "iam": 1.0062624143826278,
+        "fd": 1.0
+      },
+      "expected": { "effectiveIrradiance": 496.28458228454866 }
+    }
+  ]
+}

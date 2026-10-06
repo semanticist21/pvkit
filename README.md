@@ -32,6 +32,7 @@ Not "smarter PV science" — **"PV modeling everywhere JavaScript runs."**
 | [`@pvkit/chain`](packages/chain) | 🧪 unreleased | ModelChain-style orchestration — site + system + weather → AC power in one call (pvlib PVWatts model set) |
 | [`@pvkit/economics`](packages/economics) | 🧪 unreleased | PV project finance — lifetime kWh with degradation, bill savings, NPV, IRR, payback, ROI, LCOE |
 | [`@pvkit/sizer`](packages/sizer) | 🧪 unreleased | String sizing — temperature-corrected Voc/Vmp, NEC 690.7, series/parallel limits per inverter |
+| [`@pvkit/diode`](packages/diode) | 🧪 unreleased | Single-diode + SAPM electrical models — De Soto/CEC/PVsyst parameters, exact I-V solver, Sandia/ADR inverters |
 
 See [ROADMAP.md](ROADMAP.md) for packages under consideration.
 

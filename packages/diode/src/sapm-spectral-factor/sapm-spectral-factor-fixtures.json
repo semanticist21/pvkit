@@ -1,0 +1,830 @@
+{
+  "meta": { "reference": "pvlib 0.16.1" },
+  "cases": [
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.05422,
+        "a2": -0.009903,
+        "a3": 0.0007297,
+        "a4": -1.907e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.9830276299999999 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.05422,
+        "a2": -0.009903,
+        "a3": 0.0007297,
+        "a4": -1.907e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 0.9994144456249999 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.05422,
+        "a2": -0.009903,
+        "a3": 0.0007297,
+        "a4": -1.907e-5,
+        "airmassAbsolute": 1.1200948671058797
+      },
+      "expected": { "spectralFactor": 0.9873025353021196 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.05422,
+        "a2": -0.009903,
+        "a3": 0.0007297,
+        "a4": -1.907e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.05422,
+        "a2": -0.009903,
+        "a3": 0.0007297,
+        "a4": -1.907e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9337,
+        "a1": 0.0638,
+        "a2": -0.014606,
+        "a3": 0.0011831,
+        "a4": -3.1918e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.984045182 }
+    },
+    {
+      "input": {
+        "a0": 0.9337,
+        "a1": 0.0638,
+        "a2": -0.014606,
+        "a3": 0.0011831,
+        "a4": -3.1918e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 1.000367877625 }
+    },
+    {
+      "input": {
+        "a0": 0.9337,
+        "a1": 0.0638,
+        "a2": -0.014606,
+        "a3": 0.0011831,
+        "a4": -3.1918e-5,
+        "airmassAbsolute": 9.225045932759098
+      },
+      "expected": { "spectralFactor": 0.9769177419356867 }
+    },
+    {
+      "input": {
+        "a0": 0.9337,
+        "a1": 0.0638,
+        "a2": -0.014606,
+        "a3": 0.0011831,
+        "a4": -3.1918e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9337,
+        "a1": 0.0638,
+        "a2": -0.014606,
+        "a3": 0.0011831,
+        "a4": -3.1918e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.928,
+        "a1": 0.073144,
+        "a2": -0.019427,
+        "a3": 0.0017513,
+        "a4": -5.1288e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.9834170120000001 }
+    },
+    {
+      "input": {
+        "a0": 0.928,
+        "a1": 0.073144,
+        "a2": -0.019427,
+        "a3": 0.0017513,
+        "a4": -5.1288e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 0.999656242 }
+    },
+    {
+      "input": {
+        "a0": 0.928,
+        "a1": 0.073144,
+        "a2": -0.019427,
+        "a3": 0.0017513,
+        "a4": -5.1288e-5,
+        "airmassAbsolute": 8.750744949146942
+      },
+      "expected": { "spectralFactor": 0.9532221547198143 }
+    },
+    {
+      "input": {
+        "a0": 0.928,
+        "a1": 0.073144,
+        "a2": -0.019427,
+        "a3": 0.0017513,
+        "a4": -5.1288e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.928,
+        "a1": 0.073144,
+        "a2": -0.019427,
+        "a3": 0.0017513,
+        "a4": -5.1288e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9595,
+        "a1": 0.04319,
+        "a2": -0.012002,
+        "a3": 0.00066263,
+        "a4": -9.86e-6,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.99134077 }
+    },
+    {
+      "input": {
+        "a0": 0.9595,
+        "a1": 0.04319,
+        "a2": -0.012002,
+        "a3": 0.00066263,
+        "a4": -9.86e-6,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 0.99946696 }
+    },
+    {
+      "input": {
+        "a0": 0.9595,
+        "a1": 0.04319,
+        "a2": -0.012002,
+        "a3": 0.00066263,
+        "a4": -9.86e-6,
+        "airmassAbsolute": 6.467028818624156
+      },
+      "expected": { "spectralFactor": 0.8988310738731551 }
+    },
+    {
+      "input": {
+        "a0": 0.9595,
+        "a1": 0.04319,
+        "a2": -0.012002,
+        "a3": 0.00066263,
+        "a4": -9.86e-6,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 1.3578099999999977 }
+    },
+    {
+      "input": {
+        "a0": 0.9595,
+        "a1": 0.04319,
+        "a2": -0.012002,
+        "a3": 0.00066263,
+        "a4": -9.86e-6,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9415,
+        "a1": 0.052728,
+        "a2": -0.0095876,
+        "a3": 0.00067629,
+        "a4": -1.8111e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.985298579 }
+    },
+    {
+      "input": {
+        "a0": 0.9415,
+        "a1": 0.052728,
+        "a2": -0.0095876,
+        "a3": 0.00067629,
+        "a4": -1.8111e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 1.0012106918125 }
+    },
+    {
+      "input": {
+        "a0": 0.9415,
+        "a1": 0.052728,
+        "a2": -0.0095876,
+        "a3": 0.00067629,
+        "a4": -1.8111e-5,
+        "airmassAbsolute": 2.3265389308137516
+      },
+      "expected": { "spectralFactor": 1.0202640771752653 }
+    },
+    {
+      "input": {
+        "a0": 0.9415,
+        "a1": 0.052728,
+        "a2": -0.0095876,
+        "a3": 0.00067629,
+        "a4": -1.8111e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9415,
+        "a1": 0.052728,
+        "a2": -0.0095876,
+        "a3": 0.00067629,
+        "a4": -1.8111e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9415,
+        "a1": 0.052728,
+        "a2": -0.0095876,
+        "a3": 0.00067629,
+        "a4": -1.8111e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.985298579 }
+    },
+    {
+      "input": {
+        "a0": 0.9415,
+        "a1": 0.052728,
+        "a2": -0.0095876,
+        "a3": 0.00067629,
+        "a4": -1.8111e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 1.0012106918125 }
+    },
+    {
+      "input": {
+        "a0": 0.9415,
+        "a1": 0.052728,
+        "a2": -0.0095876,
+        "a3": 0.00067629,
+        "a4": -1.8111e-5,
+        "airmassAbsolute": 1.6619715090534144
+      },
+      "expected": { "spectralFactor": 1.0056164597821353 }
+    },
+    {
+      "input": {
+        "a0": 0.9415,
+        "a1": 0.052728,
+        "a2": -0.0095876,
+        "a3": 0.00067629,
+        "a4": -1.8111e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9415,
+        "a1": 0.052728,
+        "a2": -0.0095876,
+        "a3": 0.00067629,
+        "a4": -1.8111e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9196,
+        "a1": 0.07164,
+        "a2": -0.01338,
+        "a3": 0.0009607,
+        "a4": -2.461e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.97879609 }
+    },
+    {
+      "input": {
+        "a0": 0.9196,
+        "a1": 0.07164,
+        "a2": -0.01338,
+        "a3": 0.0009607,
+        "a4": -2.461e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 1.000072774375 }
+    },
+    {
+      "input": {
+        "a0": 0.9196,
+        "a1": 0.07164,
+        "a2": -0.01338,
+        "a3": 0.0009607,
+        "a4": -2.461e-5,
+        "airmassAbsolute": 3.0425641656969376
+      },
+      "expected": { "spectralFactor": 1.0386577402958768 }
+    },
+    {
+      "input": {
+        "a0": 0.9196,
+        "a1": 0.07164,
+        "a2": -0.01338,
+        "a3": 0.0009607,
+        "a4": -2.461e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9196,
+        "a1": 0.07164,
+        "a2": -0.01338,
+        "a3": 0.0009607,
+        "a4": -2.461e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.921941,
+        "a1": 0.0708917,
+        "a2": -0.0142724,
+        "a3": 0.0011709,
+        "a4": -3.3705e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.979697495 }
+    },
+    {
+      "input": {
+        "a0": 0.921941,
+        "a1": 0.0708917,
+        "a2": -0.0142724,
+        "a3": 0.0011709,
+        "a4": -3.3705e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 0.9999468059375001 }
+    },
+    {
+      "input": {
+        "a0": 0.921941,
+        "a1": 0.0708917,
+        "a2": -0.0142724,
+        "a3": 0.0011709,
+        "a4": -3.3705e-5,
+        "airmassAbsolute": 5.354051853298973
+      },
+      "expected": { "spectralFactor": 1.044379621202682 }
+    },
+    {
+      "input": {
+        "a0": 0.921941,
+        "a1": 0.0708917,
+        "a2": -0.0142724,
+        "a3": 0.0011709,
+        "a4": -3.3705e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.921941,
+        "a1": 0.0708917,
+        "a2": -0.0142724,
+        "a3": 0.0011709,
+        "a4": -3.3705e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9219,
+        "a1": 0.0709,
+        "a2": -0.0143,
+        "a3": 0.0012,
+        "a4": -3e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.97967 }
+    },
+    {
+      "input": {
+        "a0": 0.9219,
+        "a1": 0.0709,
+        "a2": -0.0143,
+        "a3": 0.0012,
+        "a4": -3e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 0.999973125 }
+    },
+    {
+      "input": {
+        "a0": 0.9219,
+        "a1": 0.0709,
+        "a2": -0.0143,
+        "a3": 0.0012,
+        "a4": -3e-5,
+        "airmassAbsolute": 3.3296530262328417
+      },
+      "expected": { "spectralFactor": 1.0400441937098437 }
+    },
+    {
+      "input": {
+        "a0": 0.9219,
+        "a1": 0.0709,
+        "a2": -0.0143,
+        "a3": 0.0012,
+        "a4": -3e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9219,
+        "a1": 0.0709,
+        "a2": -0.0143,
+        "a3": 0.0012,
+        "a4": -3e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.92619,
+        "a1": 0.062356,
+        "a2": -0.010119,
+        "a3": 0.00067031,
+        "a4": -1.6221e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.9790810889999999 }
+    },
+    {
+      "input": {
+        "a0": 0.92619,
+        "a1": 0.062356,
+        "a2": -0.010119,
+        "a3": 0.00067031,
+        "a4": -1.6221e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 0.9991364274375 }
+    },
+    {
+      "input": {
+        "a0": 0.92619,
+        "a1": 0.062356,
+        "a2": -0.010119,
+        "a3": 0.00067031,
+        "a4": -1.6221e-5,
+        "airmassAbsolute": 6.0082754220010175
+      },
+      "expected": { "spectralFactor": 1.0598006988138278 }
+    },
+    {
+      "input": {
+        "a0": 0.92619,
+        "a1": 0.062356,
+        "a2": -0.010119,
+        "a3": 0.00067031,
+        "a4": -1.6221e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.92619,
+        "a1": 0.062356,
+        "a2": -0.010119,
+        "a3": 0.00067031,
+        "a4": -1.6221e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.921941,
+        "a1": 0.0708917,
+        "a2": -0.0142724,
+        "a3": 0.0011709,
+        "a4": -3.3705e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.979697495 }
+    },
+    {
+      "input": {
+        "a0": 0.921941,
+        "a1": 0.0708917,
+        "a2": -0.0142724,
+        "a3": 0.0011709,
+        "a4": -3.3705e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 0.9999468059375001 }
+    },
+    {
+      "input": {
+        "a0": 0.921941,
+        "a1": 0.0708917,
+        "a2": -0.0142724,
+        "a3": 0.0011709,
+        "a4": -3.3705e-5,
+        "airmassAbsolute": 2.4997390817430905
+      },
+      "expected": { "spectralFactor": 1.0269414045308594 }
+    },
+    {
+      "input": {
+        "a0": 0.921941,
+        "a1": 0.0708917,
+        "a2": -0.0142724,
+        "a3": 0.0011709,
+        "a4": -3.3705e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.921941,
+        "a1": 0.0708917,
+        "a2": -0.0142724,
+        "a3": 0.0011709,
+        "a4": -3.3705e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.05423,
+        "a2": -0.0099,
+        "a3": 0.00073,
+        "a4": -1.91e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.9830409 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.05423,
+        "a2": -0.0099,
+        "a3": 0.00073,
+        "a4": -1.91e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 0.9994370562499999 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.05423,
+        "a2": -0.0099,
+        "a3": 0.00073,
+        "a4": -1.91e-5,
+        "airmassAbsolute": 9.257186993761676
+      },
+      "expected": { "spectralFactor": 1.0304751679579274 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.05423,
+        "a2": -0.0099,
+        "a3": 0.00073,
+        "a4": -1.91e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.05423,
+        "a2": -0.0099,
+        "a3": 0.00073,
+        "a4": -1.91e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.054228,
+        "a2": -0.0099032,
+        "a3": 0.00072969,
+        "a4": -1.9074e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.983035416 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.054228,
+        "a2": -0.0099032,
+        "a3": 0.00072969,
+        "a4": -1.9074e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 0.999425941625 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.054228,
+        "a2": -0.0099032,
+        "a3": 0.00072969,
+        "a4": -1.9074e-5,
+        "airmassAbsolute": 8.84156819205636
+      },
+      "expected": { "spectralFactor": 1.0310752706730784 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.054228,
+        "a2": -0.0099032,
+        "a3": 0.00072969,
+        "a4": -1.9074e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.938,
+        "a1": 0.054228,
+        "a2": -0.0099032,
+        "a3": 0.00072969,
+        "a4": -1.9074e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9315,
+        "a1": 0.05975,
+        "a2": -0.01067,
+        "a3": 0.0008,
+        "a4": -2.24e-5,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.9813575999999999 }
+    },
+    {
+      "input": {
+        "a0": 0.9315,
+        "a1": 0.05975,
+        "a2": -0.01067,
+        "a3": 0.0008,
+        "a4": -2.24e-5,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 0.9997041 }
+    },
+    {
+      "input": {
+        "a0": 0.9315,
+        "a1": 0.05975,
+        "a2": -0.01067,
+        "a3": 0.0008,
+        "a4": -2.24e-5,
+        "airmassAbsolute": 2.714486265016822
+      },
+      "expected": { "spectralFactor": 1.0298543774475 }
+    },
+    {
+      "input": {
+        "a0": 0.9315,
+        "a1": 0.05975,
+        "a2": -0.01067,
+        "a3": 0.0008,
+        "a4": -2.24e-5,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9315,
+        "a1": 0.05975,
+        "a2": -0.01067,
+        "a3": 0.0008,
+        "a4": -2.24e-5,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9428,
+        "a1": 0.0536,
+        "a2": -0.01281,
+        "a3": 0.001826,
+        "a4": -0.0001048,
+        "airmassAbsolute": 1.0
+      },
+      "expected": { "spectralFactor": 0.9853111999999999 }
+    },
+    {
+      "input": {
+        "a0": 0.9428,
+        "a1": 0.0536,
+        "a2": -0.01281,
+        "a3": 0.001826,
+        "a4": -0.0001048,
+        "airmassAbsolute": 1.5
+      },
+      "expected": { "spectralFactor": 1.0000097 }
+    },
+    {
+      "input": {
+        "a0": 0.9428,
+        "a1": 0.0536,
+        "a2": -0.01281,
+        "a3": 0.001826,
+        "a4": -0.0001048,
+        "airmassAbsolute": 4.341196901037808
+      },
+      "expected": { "spectralFactor": 1.0462417050278583 }
+    },
+    {
+      "input": {
+        "a0": 0.9428,
+        "a1": 0.0536,
+        "a2": -0.01281,
+        "a3": 0.001826,
+        "a4": -0.0001048,
+        "airmassAbsolute": 30.0
+      },
+      "expected": { "spectralFactor": 0.0 }
+    },
+    {
+      "input": {
+        "a0": 0.9428,
+        "a1": 0.0536,
+        "a2": -0.01281,
+        "a3": 0.001826,
+        "a4": -0.0001048,
+        "airmassAbsolute": null
+      },
+      "expected": { "spectralFactor": 0.0 }
+    }
+  ]
+}
