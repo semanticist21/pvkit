@@ -31,4 +31,23 @@ test("rejects non-finite costs and escalation ≤ -1", () => {
   expect(() =>
     cashFlows({ capitalCost: 1, energy: [], energyPrice: 0.2, priceEscalation: -1 }),
   ).toThrow(RangeError);
+  expect(() => cashFlows({ capitalCost: 1, energy: [1, Infinity], energyPrice: 0.2 })).toThrow(
+    RangeError,
+  );
+});
+
+test("worked example: escalation starts in year 2", () => {
+  // E = 1000 kWh/yr at 0.5, +10 %/yr → 500, 550, 605; O&M 100, +10 %/yr → 100, 110, 121.
+  const got = cashFlows({
+    capitalCost: 1200,
+    incentive: 200,
+    energy: [1000, 1000, 1000],
+    energyPrice: 0.5,
+    priceEscalation: 0.1,
+    omCost: 100,
+    omEscalation: 0.1,
+  });
+  [-1000, 400, 440, 484].forEach((want, t) => {
+    expect(got[t]).toBeCloseTo(want, 10);
+  });
 });

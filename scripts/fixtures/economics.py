@@ -68,8 +68,8 @@ def bs(p, l, pi, pe):
     price = lambda x: float(x) if np.isscalar(x) else fl(x)
     return {"input": {"production": fl(p), "load": fl(l), "importPrice": price(pi),
                       "exportPrice": price(pe)},
-            "expected": {"selfConsumption": math.fsum(self), "export": math.fsum(p - self),
-                         "import": math.fsum(l - self), "avoidedCost": avoided,
+            "expected": {"selfConsumption": math.fsum(self), "gridExport": math.fsum(p - self),
+                         "gridImport": math.fsum(l - self), "avoidedCost": avoided,
                          "exportRevenue": revenue, "savings": avoided + revenue}}
 
 
@@ -127,10 +127,14 @@ def ir(cf):
     return {"input": {"cashFlows": fl(cf)}, "expected": {"irr": None if math.isnan(r) else r}}
 
 
-# numpy-financial docstring examples (incl. non-conventional), no-root, zero-rate cases
+# numpy-financial docstring examples (incl. non-conventional), no-root, zero-rate cases;
+# empty / all-zero flows (no rate); closely spaced roots (r = 0.10 & 0.104, 0.10 & 0.102 —
+# under 0.5 % apart in ln(1 + r)) alone and with a far root (0.5); zero flows at both ends
 cases = [ir([-100, 39, 59, 55, 20]), ir([-100, 0, 0, 74]), ir([-100, 100, 0, -7]),
          ir([-100, 100, 0, 7]), ir([-5, 10.5, 1, -8, 1]), ir([-100, -10]), ir([100, 10]),
-         ir([-100, 50, 50]), ir([-100, 300])]
+         ir([-100, 50, 50]), ir([-100, 300]), ir([]), ir([0, 0, 0]),
+         ir([-1, 2.204, -1.2144]), ir([-824.9463784853984, 1816.5319254248473, -1000]),
+         ir([-1, 3.704, -4.5204, 1.8216]), ir([0, -100, 110]), ir([-100, 110, 0, 0])]
 for _ in range(51):
     cases.append(ir(flows(int(rng.integers(1, 41)), rng.random() < 0.7)))
 write("irr", cases, "numpy-financial 1.0.0 npf.irr")
@@ -140,8 +144,8 @@ def pb(cf, r=0.0):
     cum, out = 0.0, math.inf
     for t, c in enumerate(cf):
         d = c / (1 + r) ** t
-        if cum + d >= 0:
-            out = 0.0 if t == 0 else t - 1 + -cum / d
+        if (cum + d >= 0) if cum < 0 else (cum + d > 0):
+            out = t - 1 + -cum / d if cum < 0 else 0.0
             break
         cum += d
     return {"input": {"cashFlows": fl(cf), "discountRate": r},
@@ -149,7 +153,8 @@ def pb(cf, r=0.0):
 
 
 cases = [pb([-1000, 400, 400, 400]), pb([-1000, 500, 500]), pb([0, 10]), pb([-1000, 100, 100]),
-         pb([-1000, 400, 400, 400], 0.05), pb([-1000, 600, -500, 2000])]
+         pb([-1000, 400, 400, 400], 0.05), pb([-1000, 600, -500, 2000]), pb([0, -100, 50]),
+         pb([0, -100, 150]), pb([0, 0, 10]), pb([0, 0])]
 for _ in range(54):
     cases.append(pb(flows(int(rng.integers(1, 41)), rng.random() < 0.7),
                     float(rng.choice([0.0, rng.uniform(0.0, 0.12)]))))

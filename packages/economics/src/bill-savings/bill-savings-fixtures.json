@@ -10,8 +10,8 @@
       },
       "expected": {
         "selfConsumption": 2.0,
-        "export": 2.0,
-        "import": 1.0,
+        "gridExport": 2.0,
+        "gridImport": 1.0,
         "avoidedCost": 0.6,
         "exportRevenue": 0.2,
         "savings": 0.8
@@ -21,8 +21,8 @@
       "input": { "production": [], "load": [], "importPrice": 0.3, "exportPrice": 0.1 },
       "expected": {
         "selfConsumption": 0.0,
-        "export": 0.0,
-        "import": 0.0,
+        "gridExport": 0.0,
+        "gridImport": 0.0,
         "avoidedCost": 0.0,
         "exportRevenue": 0.0,
         "savings": 0.0
@@ -37,8 +37,8 @@
       },
       "expected": {
         "selfConsumption": 0.0,
-        "export": 0.0,
-        "import": 2.0,
+        "gridExport": 0.0,
+        "gridImport": 2.0,
         "avoidedCost": 0.0,
         "exportRevenue": 0.0,
         "savings": 0.0
@@ -53,8 +53,8 @@
       },
       "expected": {
         "selfConsumption": 0.0,
-        "export": 10.0,
-        "import": 0.0,
+        "gridExport": 10.0,
+        "gridImport": 0.0,
         "avoidedCost": 0.0,
         "exportRevenue": 0.0,
         "savings": 0.0
@@ -69,8 +69,8 @@
       },
       "expected": {
         "selfConsumption": 5.0,
-        "export": 1.0,
-        "import": 1.0,
+        "gridExport": 1.0,
+        "gridImport": 1.0,
         "avoidedCost": 1.3,
         "exportRevenue": 0.05,
         "savings": 1.35
@@ -129,8 +129,8 @@
       },
       "expected": {
         "selfConsumption": 26.001815093402502,
-        "export": 34.88908804160206,
-        "import": 53.83833211126976,
+        "gridExport": 34.88908804160206,
+        "gridImport": 53.83833211126976,
         "avoidedCost": 5.741835574415641,
         "exportRevenue": 2.380513976683758,
         "savings": 8.122349551099399
@@ -201,8 +201,8 @@
       },
       "expected": {
         "selfConsumption": 30.482232796797238,
-        "export": 4.328618157428371,
-        "import": 78.81867044128914,
+        "gridExport": 4.328618157428371,
+        "gridImport": 78.81867044128914,
         "avoidedCost": 6.412491730854087,
         "exportRevenue": 0.4290660502045182,
         "savings": 6.841557781058605
@@ -353,8 +353,8 @@
       },
       "expected": {
         "selfConsumption": 118.7605088773997,
-        "export": 101.62679427883202,
-        "import": 160.82024026817984,
+        "gridExport": 101.62679427883202,
+        "gridImport": 160.82024026817984,
         "avoidedCost": 25.358089642849727,
         "exportRevenue": 7.024900896846669,
         "savings": 32.382990539696394
@@ -427,8 +427,8 @@
       },
       "expected": {
         "selfConsumption": 90.96052273076147,
-        "export": 107.80321049998851,
-        "import": 118.19933126726723,
+        "gridExport": 107.80321049998851,
+        "gridImport": 118.19933126726723,
         "avoidedCost": 31.32703517573343,
         "exportRevenue": 10.976476197321677,
         "savings": 42.30351137305511
@@ -479,8 +479,8 @@
       },
       "expected": {
         "selfConsumption": 4.264748832590796,
-        "export": 0.0,
-        "import": 114.74829274615001,
+        "gridExport": 0.0,
+        "gridImport": 114.74829274615001,
         "avoidedCost": 0.4347981320554969,
         "exportRevenue": 0.0,
         "savings": 0.4347981320554969
@@ -605,8 +605,8 @@
       },
       "expected": {
         "selfConsumption": 11.532917301519067,
-        "export": 0.05478851485393618,
-        "import": 223.3516222497442,
+        "gridExport": 0.05478851485393618,
+        "gridImport": 223.3516222497442,
         "avoidedCost": 2.380138868785336,
         "exportRevenue": 0.0005623160767062927,
         "savings": 2.3807011848620423
@@ -659,8 +659,8 @@
       },
       "expected": {
         "selfConsumption": 42.37583642679318,
-        "export": 9.42202497088267,
-        "import": 108.73956349843242,
+        "gridExport": 9.42202497088267,
+        "gridImport": 108.73956349843242,
         "avoidedCost": 3.1990543318102596,
         "exportRevenue": 0.4141949089882438,
         "savings": 3.6132492407985035
@@ -805,8 +805,8 @@
       },
       "expected": {
         "selfConsumption": 112.48771920986404,
-        "export": 81.92895049652215,
-        "import": 176.17273981756009,
+        "gridExport": 81.92895049652215,
+        "gridImport": 176.17273981756009,
         "avoidedCost": 24.02670851206468,
         "exportRevenue": 6.913620608602034,
         "savings": 30.940329120666714
@@ -1015,8 +1015,8 @@
       },
       "expected": {
         "selfConsumption": 128.40905302539633,
-        "export": 62.65127581350372,
-        "import": 295.1885879817159,
+        "gridExport": 62.65127581350372,
+        "gridImport": 295.1885879817159,
         "avoidedCost": 27.056892107655322,
         "exportRevenue": 5.146267546213495,
         "savings": 32.203159653868816
@@ -1104,8 +1104,8 @@
       },
       "expected": {
         "selfConsumption": 101.36449870138725,
-        "export": 37.715961725210725,
-        "import": 194.35917760807374,
+        "gridExport": 37.715961725210725,
+        "gridImport": 194.35917760807374,
         "avoidedCost": 8.998117414940516,
         "exportRevenue": 1.7475645160809707,
         "savings": 10.745681931021487
@@ -1228,8 +1228,8 @@
       },
       "expected": {
         "selfConsumption": 79.06577453878805,
-        "export": 42.22683401834962,
-        "import": 148.2827884368114,
+        "gridExport": 42.22683401834962,
+        "gridImport": 148.2827884368114,
         "avoidedCost": 16.73780497702009,
         "exportRevenue": 3.375681604082262,
         "savings": 20.113486581102354
@@ -1354,8 +1354,8 @@
       },
       "expected": {
         "selfConsumption": 103.18061450881925,
-        "export": 125.02308278710854,
-        "import": 126.3070492608419,
+        "gridExport": 125.02308278710854,
+        "gridImport": 126.3070492608419,
         "avoidedCost": 22.34731650561334,
         "exportRevenue": 9.896540312698747,
         "savings": 32.24385681831208
@@ -1394,8 +1394,8 @@
       },
       "expected": {
         "selfConsumption": 20.26543577088615,
-        "export": 1.5446904980394796,
-        "import": 63.71716377129033,
+        "gridExport": 1.5446904980394796,
+        "gridImport": 63.71716377129033,
         "avoidedCost": 5.961376629256093,
         "exportRevenue": 0.08145742621776382,
         "savings": 6.042834055473857
@@ -1421,8 +1421,8 @@
       },
       "expected": {
         "selfConsumption": 9.852633829292644,
-        "export": 2.0751177636293607,
-        "import": 18.42412815456298,
+        "gridExport": 2.0751177636293607,
+        "gridImport": 18.42412815456298,
         "avoidedCost": 2.798599739637872,
         "exportRevenue": 0.09474085376357654,
         "savings": 2.8933405934014487
@@ -1613,8 +1613,8 @@
       },
       "expected": {
         "selfConsumption": 104.36682641628335,
-        "export": 21.105370855517027,
-        "import": 281.7620920732571,
+        "gridExport": 21.105370855517027,
+        "gridImport": 281.7620920732571,
         "avoidedCost": 21.98847581702778,
         "exportRevenue": 1.7086682934330248,
         "savings": 23.697144110460805
@@ -1762,8 +1762,8 @@
       },
       "expected": {
         "selfConsumption": 110.93196280021097,
-        "export": 143.1718687068972,
-        "import": 169.47133534448557,
+        "gridExport": 143.1718687068972,
+        "gridImport": 169.47133534448557,
         "avoidedCost": 23.906362307142757,
         "exportRevenue": 10.725456711403192,
         "savings": 34.63181901854595
@@ -1778,8 +1778,8 @@
       },
       "expected": {
         "selfConsumption": 0.0,
-        "export": 0.0,
-        "import": 5.284916644292814,
+        "gridExport": 0.0,
+        "gridImport": 5.284916644292814,
         "avoidedCost": 0.0,
         "exportRevenue": 0.0,
         "savings": 0.0
@@ -1803,8 +1803,8 @@
       },
       "expected": {
         "selfConsumption": 10.667183297037203,
-        "export": 7.376152562253353,
-        "import": 15.23790233232412,
+        "gridExport": 7.376152562253353,
+        "gridImport": 15.23790233232412,
         "avoidedCost": 3.416851177553497,
         "exportRevenue": 1.440928591631266,
         "savings": 4.857779769184763
@@ -2007,8 +2007,8 @@
       },
       "expected": {
         "selfConsumption": 113.69140128981184,
-        "export": 32.24447251257278,
-        "import": 299.17549599186526,
+        "gridExport": 32.24447251257278,
+        "gridImport": 299.17549599186526,
         "avoidedCost": 23.707676073088464,
         "exportRevenue": 1.9932723091728028,
         "savings": 25.700948382261267
@@ -2082,8 +2082,8 @@
       },
       "expected": {
         "selfConsumption": 30.922649625573207,
-        "export": 8.010789316510177,
-        "import": 94.43413793111417,
+        "gridExport": 8.010789316510177,
+        "gridImport": 94.43413793111417,
         "avoidedCost": 6.517546861355572,
         "exportRevenue": 0.5347846338712255,
         "savings": 7.052331495226798
@@ -2131,8 +2131,8 @@
       },
       "expected": {
         "selfConsumption": 32.31031987217587,
-        "export": 12.170612956994198,
-        "import": 80.57726191301722,
+        "gridExport": 12.170612956994198,
+        "gridImport": 80.57726191301722,
         "avoidedCost": 12.231701170753713,
         "exportRevenue": 1.4683896403637064,
         "savings": 13.70009081111742
@@ -2226,8 +2226,8 @@
       },
       "expected": {
         "selfConsumption": 124.65082897323735,
-        "export": 117.84754190497972,
-        "import": 174.2591871671732,
+        "gridExport": 117.84754190497972,
+        "gridImport": 174.2591871671732,
         "avoidedCost": 28.373948127696085,
         "exportRevenue": 3.244751146133639,
         "savings": 31.618699273829723
@@ -2343,8 +2343,8 @@
       },
       "expected": {
         "selfConsumption": 123.05711902258888,
-        "export": 64.9597791404128,
-        "import": 264.93136637705237,
+        "gridExport": 64.9597791404128,
+        "gridImport": 264.93136637705237,
         "avoidedCost": 56.42584098397425,
         "exportRevenue": 6.381772482980355,
         "savings": 62.8076134669546
@@ -2569,8 +2569,8 @@
       },
       "expected": {
         "selfConsumption": 155.5550482865234,
-        "export": 70.49863211744706,
-        "import": 298.18335096416195,
+        "gridExport": 70.49863211744706,
+        "gridImport": 298.18335096416195,
         "avoidedCost": 33.157769736900875,
         "exportRevenue": 5.9744807682776715,
         "savings": 39.13225050517855
@@ -2656,8 +2656,8 @@
       },
       "expected": {
         "selfConsumption": 21.923906172688817,
-        "export": 2.2135206042545277,
-        "import": 125.99088167628145,
+        "gridExport": 2.2135206042545277,
+        "gridImport": 125.99088167628145,
         "avoidedCost": 4.565060171151087,
         "exportRevenue": 0.19505346602256232,
         "savings": 4.760113637173649
@@ -2773,8 +2773,8 @@
       },
       "expected": {
         "selfConsumption": 94.03250300415941,
-        "export": 104.44112316247758,
-        "import": 120.03737697459601,
+        "gridExport": 104.44112316247758,
+        "gridImport": 120.03737697459601,
         "avoidedCost": 19.895311145866078,
         "exportRevenue": 9.270597106614975,
         "savings": 29.165908252481053
@@ -2859,8 +2859,8 @@
       },
       "expected": {
         "selfConsumption": 124.0883768229106,
-        "export": 102.63989860387102,
-        "import": 168.53324666760415,
+        "gridExport": 102.63989860387102,
+        "gridImport": 168.53324666760415,
         "avoidedCost": 20.463861162249145,
         "exportRevenue": 4.293148781222048,
         "savings": 24.757009943471193
@@ -2983,8 +2983,8 @@
       },
       "expected": {
         "selfConsumption": 87.32992143674986,
-        "export": 90.38641323846402,
-        "import": 136.66742199525515,
+        "gridExport": 90.38641323846402,
+        "gridImport": 136.66742199525515,
         "avoidedCost": 18.790653400499213,
         "exportRevenue": 7.554793753711127,
         "savings": 26.34544715421034
@@ -3046,8 +3046,8 @@
       },
       "expected": {
         "selfConsumption": 62.036525901421214,
-        "export": 38.305583750551015,
-        "import": 112.76547837108781,
+        "gridExport": 38.305583750551015,
+        "gridImport": 112.76547837108781,
         "avoidedCost": 18.212165310822485,
         "exportRevenue": 6.581560593356141,
         "savings": 24.793725904178626
@@ -3062,8 +3062,8 @@
       },
       "expected": {
         "selfConsumption": 0.0,
-        "export": 0.0,
-        "import": 2.5390548261449135,
+        "gridExport": 0.0,
+        "gridImport": 2.5390548261449135,
         "avoidedCost": 0.0,
         "exportRevenue": 0.0,
         "savings": 0.0
@@ -3225,8 +3225,8 @@
       },
       "expected": {
         "selfConsumption": 136.5683842203982,
-        "export": 172.73944788799963,
-        "import": 179.85614505239252,
+        "gridExport": 172.73944788799963,
+        "gridImport": 179.85614505239252,
         "avoidedCost": 30.149408937852552,
         "exportRevenue": 12.855269331846358,
         "savings": 43.004678269698914
@@ -3325,8 +3325,8 @@
       },
       "expected": {
         "selfConsumption": 131.36645503802993,
-        "export": 101.45421859856947,
-        "import": 208.48268168347877,
+        "gridExport": 101.45421859856947,
+        "gridImport": 208.48268168347877,
         "avoidedCost": 63.518564835198774,
         "exportRevenue": 9.248334317816582,
         "savings": 72.76689915301536
@@ -3449,8 +3449,8 @@
       },
       "expected": {
         "selfConsumption": 105.02253267088395,
-        "export": 33.58951016715228,
-        "import": 284.46109902459176,
+        "gridExport": 33.58951016715228,
+        "gridImport": 284.46109902459176,
         "avoidedCost": 32.8914551128162,
         "exportRevenue": 0.2764101542942009,
         "savings": 33.16786526711041
@@ -3548,8 +3548,8 @@
       },
       "expected": {
         "selfConsumption": 36.32359362756883,
-        "export": 1.2536534332919131,
-        "import": 286.5839222958584,
+        "gridExport": 1.2536534332919131,
+        "gridImport": 286.5839222958584,
         "avoidedCost": 2.005813057189519,
         "exportRevenue": 0.027411606337867708,
         "savings": 2.033224663527387
@@ -3648,8 +3648,8 @@
       },
       "expected": {
         "selfConsumption": 100.55498764842415,
-        "export": 54.97019366700738,
-        "import": 217.58702845302034,
+        "gridExport": 54.97019366700738,
+        "gridImport": 217.58702845302034,
         "avoidedCost": 6.558586279967502,
         "exportRevenue": 5.887585146481415,
         "savings": 12.446171426448917
@@ -3683,8 +3683,8 @@
       },
       "expected": {
         "selfConsumption": 23.526710147276265,
-        "export": 6.842125267428695,
-        "import": 39.39171790744815,
+        "gridExport": 6.842125267428695,
+        "gridImport": 39.39171790744815,
         "avoidedCost": 7.2321472252266785,
         "exportRevenue": 0.3957373726386385,
         "savings": 7.627884597865317
@@ -3860,8 +3860,8 @@
       },
       "expected": {
         "selfConsumption": 144.21508731363375,
-        "export": 207.7342684715488,
-        "import": 186.28383479076942,
+        "gridExport": 207.7342684715488,
+        "gridImport": 186.28383479076942,
         "avoidedCost": 31.523799734340123,
         "exportRevenue": 15.467483205488097,
         "savings": 46.991282939828224
@@ -3966,8 +3966,8 @@
       },
       "expected": {
         "selfConsumption": 44.1614463977464,
-        "export": 4.206748865831094,
-        "import": 139.86260463701643,
+        "gridExport": 4.206748865831094,
+        "gridImport": 139.86260463701643,
         "avoidedCost": 9.205999814134007,
         "exportRevenue": 0.2920941401928419,
         "savings": 9.49809395432685
@@ -4014,8 +4014,8 @@
       },
       "expected": {
         "selfConsumption": 47.727729167443854,
-        "export": 65.63721143898582,
-        "import": 58.45272885085664,
+        "gridExport": 65.63721143898582,
+        "gridImport": 58.45272885085664,
         "avoidedCost": 4.301769675830087,
         "exportRevenue": 0.8317374882266177,
         "savings": 5.133507164056705
@@ -4146,8 +4146,8 @@
       },
       "expected": {
         "selfConsumption": 167.64807526990117,
-        "export": 99.45315300945036,
-        "import": 287.62714948250743,
+        "gridExport": 99.45315300945036,
+        "gridImport": 287.62714948250743,
         "avoidedCost": 18.990988294175,
         "exportRevenue": 4.350613842570758,
         "savings": 23.34160213674576
@@ -4249,8 +4249,8 @@
       },
       "expected": {
         "selfConsumption": 133.1877706578632,
-        "export": 162.3354752769182,
-        "import": 194.34872950759396,
+        "gridExport": 162.3354752769182,
+        "gridImport": 194.34872950759396,
         "avoidedCost": 16.1955152285274,
         "exportRevenue": 16.602941043475386,
         "savings": 32.79845627200279
@@ -4384,8 +4384,8 @@
       },
       "expected": {
         "selfConsumption": 181.04372665859887,
-        "export": 196.95043283670353,
-        "import": 259.2600604359124,
+        "gridExport": 196.95043283670353,
+        "gridImport": 259.2600604359124,
         "avoidedCost": 72.03355222977846,
         "exportRevenue": 39.10419207914275,
         "savings": 111.13774430892121
@@ -4587,8 +4587,8 @@
       },
       "expected": {
         "selfConsumption": 4.534689599881625,
-        "export": 0.0,
-        "import": 421.1263622595072,
+        "gridExport": 0.0,
+        "gridImport": 421.1263622595072,
         "avoidedCost": 0.9458333303048712,
         "exportRevenue": 0.0,
         "savings": 0.9458333303048712
@@ -4632,8 +4632,8 @@
       },
       "expected": {
         "selfConsumption": 19.27145882380849,
-        "export": 8.415869602451314,
-        "import": 34.84121994445962,
+        "gridExport": 8.415869602451314,
+        "gridImport": 34.84121994445962,
         "avoidedCost": 4.04402479303717,
         "exportRevenue": 0.4056264697403289,
         "savings": 4.4496512627775
@@ -4749,8 +4749,8 @@
       },
       "expected": {
         "selfConsumption": 45.91585552540266,
-        "export": 7.197902636031815,
-        "import": 150.06037498158324,
+        "gridExport": 7.197902636031815,
+        "gridImport": 150.06037498158324,
         "avoidedCost": 9.655798495673922,
         "exportRevenue": 0.6255339955712798,
         "savings": 10.281332491245202
@@ -4947,8 +4947,8 @@
       },
       "expected": {
         "selfConsumption": 150.13281545695213,
-        "export": 194.09953651860476,
-        "import": 244.28177597398277,
+        "gridExport": 194.09953651860476,
+        "gridImport": 244.28177597398277,
         "avoidedCost": 32.82146725670006,
         "exportRevenue": 14.930100146605762,
         "savings": 47.75156740330582
@@ -4986,8 +4986,8 @@
       },
       "expected": {
         "selfConsumption": 33.37038998707262,
-        "export": 31.518178179817337,
-        "import": 52.41255811556668,
+        "gridExport": 31.518178179817337,
+        "gridImport": 52.41255811556668,
         "avoidedCost": 14.068938410392994,
         "exportRevenue": 2.035636893773328,
         "savings": 16.10457530416632
@@ -5138,8 +5138,8 @@
       },
       "expected": {
         "selfConsumption": 94.72689673975722,
-        "export": 35.65449837902927,
-        "import": 183.868232227617,
+        "gridExport": 35.65449837902927,
+        "gridImport": 183.868232227617,
         "avoidedCost": 19.835128810687724,
         "exportRevenue": 2.692575405275276,
         "savings": 22.527704215963
@@ -5217,8 +5217,8 @@
       },
       "expected": {
         "selfConsumption": 67.16449582704453,
-        "export": 19.948064146845205,
-        "import": 173.73510596315504,
+        "gridExport": 19.948064146845205,
+        "gridImport": 173.73510596315504,
         "avoidedCost": 7.565028254581218,
         "exportRevenue": 1.38761832647309,
         "savings": 8.952646581054308
@@ -5280,8 +5280,8 @@
       },
       "expected": {
         "selfConsumption": 29.16980860660884,
-        "export": 11.827195806993718,
-        "import": 64.98111872632904,
+        "gridExport": 11.827195806993718,
+        "gridImport": 64.98111872632904,
         "avoidedCost": 6.245942523037359,
         "exportRevenue": 0.8664876359693274,
         "savings": 7.112430159006686
@@ -5490,8 +5490,8 @@
       },
       "expected": {
         "selfConsumption": 91.3658466484914,
-        "export": 15.032919323205439,
-        "import": 320.6260730980234,
+        "gridExport": 15.032919323205439,
+        "gridImport": 320.6260730980234,
         "avoidedCost": 19.12655117276139,
         "exportRevenue": 1.1298709284980646,
         "savings": 20.256422101259453
@@ -5529,8 +5529,8 @@
       },
       "expected": {
         "selfConsumption": 28.95455931647089,
-        "export": 19.489707029725054,
-        "import": 49.513406805702594,
+        "gridExport": 19.489707029725054,
+        "gridImport": 49.513406805702594,
         "avoidedCost": 1.6245195103173786,
         "exportRevenue": 2.6837945692227794,
         "savings": 4.308314079540158
@@ -5667,8 +5667,8 @@
       },
       "expected": {
         "selfConsumption": 60.15353573259463,
-        "export": 2.827191036401957,
-        "import": 400.8132168158852,
+        "gridExport": 2.827191036401957,
+        "gridImport": 400.8132168158852,
         "avoidedCost": 15.374349666564749,
         "exportRevenue": 0.2725991654703686,
         "savings": 15.646948832035118
@@ -5705,8 +5705,8 @@
       },
       "expected": {
         "selfConsumption": 9.155459661459824,
-        "export": 0.9649387271404095,
-        "import": 27.813682154500484,
+        "gridExport": 0.9649387271404095,
+        "gridImport": 27.813682154500484,
         "avoidedCost": 1.9535479625330308,
         "exportRevenue": 0.10711879711067901,
         "savings": 2.0606667596437096
@@ -5897,8 +5897,8 @@
       },
       "expected": {
         "selfConsumption": 159.95457287503393,
-        "export": 191.7849825244136,
-        "import": 239.92496701487718,
+        "gridExport": 191.7849825244136,
+        "gridImport": 239.92496701487718,
         "avoidedCost": 34.280544795096844,
         "exportRevenue": 14.970087022044783,
         "savings": 49.250631817141624

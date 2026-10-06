@@ -25,6 +25,25 @@
     { "input": { "cashFlows": [100.0, 10.0] }, "expected": { "irr": null } },
     { "input": { "cashFlows": [-100.0, 50.0, 50.0] }, "expected": { "irr": 0.0 } },
     { "input": { "cashFlows": [-100.0, 300.0] }, "expected": { "irr": 2.0 } },
+    { "input": { "cashFlows": [] }, "expected": { "irr": null } },
+    { "input": { "cashFlows": [0.0, 0.0, 0.0] }, "expected": { "irr": null } },
+    {
+      "input": { "cashFlows": [-1.0, 2.204, -1.2144] },
+      "expected": { "irr": 0.09999999999992482 }
+    },
+    {
+      "input": { "cashFlows": [-824.9463784853984, 1816.5319254248473, -1000.0] },
+      "expected": { "irr": 0.10000000000002762 }
+    },
+    {
+      "input": { "cashFlows": [-1.0, 3.704, -4.5204, 1.8216] },
+      "expected": { "irr": 0.10000000000006914 }
+    },
+    { "input": { "cashFlows": [0.0, -100.0, 110.0] }, "expected": { "irr": 0.10000000000000009 } },
+    {
+      "input": { "cashFlows": [-100.0, 110.0, 0.0, 0.0] },
+      "expected": { "irr": 0.10000000000000009 }
+    },
     {
       "input": {
         "cashFlows": [

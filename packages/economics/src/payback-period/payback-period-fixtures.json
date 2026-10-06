@@ -26,6 +26,22 @@
       "expected": { "paybackPeriod": 2.45 }
     },
     {
+      "input": { "cashFlows": [0.0, -100.0, 50.0], "discountRate": 0.0 },
+      "expected": { "paybackPeriod": null }
+    },
+    {
+      "input": { "cashFlows": [0.0, -100.0, 150.0], "discountRate": 0.0 },
+      "expected": { "paybackPeriod": 1.6666666666666665 }
+    },
+    {
+      "input": { "cashFlows": [0.0, 0.0, 10.0], "discountRate": 0.0 },
+      "expected": { "paybackPeriod": 0.0 }
+    },
+    {
+      "input": { "cashFlows": [0.0, 0.0], "discountRate": 0.0 },
+      "expected": { "paybackPeriod": null }
+    },
+    {
       "input": {
         "cashFlows": [
           -4468604.459435664, 742955.0951893548, 734301.154217471, 725748.014350297,

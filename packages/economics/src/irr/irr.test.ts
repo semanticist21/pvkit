@@ -17,3 +17,8 @@ test("numpy-financial docstring examples", () => {
   expect(irr({ cashFlows: [-100, 39, 59, 55, 20] })).toBeCloseTo(0.28095, 5);
   expect(irr({ cashFlows: [-5, 10.5, 1, -8, 1] })).toBeCloseTo(0.0886, 4); // closest of several
 });
+
+test("rejects non-finite flows", () => {
+  expect(() => irr({ cashFlows: [-100, Number.NaN, 200] })).toThrow(RangeError);
+  expect(() => irr({ cashFlows: [-100, Infinity] })).toThrow(RangeError);
+});

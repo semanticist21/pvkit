@@ -20,4 +20,10 @@ test("hand-checkable example", () => {
 test("rejects a non-negative or missing investment", () => {
   expect(() => roi({ cashFlows: [] })).toThrow(RangeError);
   expect(() => roi({ cashFlows: [0, 10] })).toThrow(RangeError);
+  expect(() => roi({ cashFlows: [-10, Number.NaN] })).toThrow(RangeError);
+});
+
+test("worked example: undiscounted net gain over the investment", () => {
+  // [-1000, 400, 440, 484]: net gain 324 on 1000 invested
+  expect(roi({ cashFlows: [-1000, 400, 440, 484] })).toBeCloseTo(0.324, 15);
 });

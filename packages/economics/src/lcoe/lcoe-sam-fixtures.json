@@ -1,0 +1,85 @@
+{
+  "meta": { "reference": "NREL SAM Lcoefcr (PySAM 7.1.1.post1) lcoe_fcr, FCR = CRF(r, n)" },
+  "cases": [
+    {
+      "input": {
+        "capitalCost": 504738.3,
+        "omCost": 10954.81,
+        "annualEnergy": 443058.9,
+        "discountRate": 0.0392,
+        "years": 16
+      },
+      "expected": { "lcoe": 0.12191653298903052 }
+    },
+    {
+      "input": {
+        "capitalCost": 7739547.99,
+        "omCost": 141258.62,
+        "annualEnergy": 11008655.2,
+        "discountRate": 0.0837,
+        "years": 9
+      },
+      "expected": { "lcoe": 0.1271119848828364 }
+    },
+    {
+      "input": {
+        "capitalCost": 4841934.39,
+        "omCost": 90192.73,
+        "annualEnergy": 5746456.4,
+        "discountRate": 0.0959,
+        "years": 26
+      },
+      "expected": { "lcoe": 0.10473263184066033 }
+    },
+    {
+      "input": {
+        "capitalCost": 509905.92,
+        "omCost": 12759.05,
+        "annualEnergy": 557100.7,
+        "discountRate": 0.0895,
+        "years": 14
+      },
+      "expected": { "lcoe": 0.14012506096189142 }
+    },
+    {
+      "input": {
+        "capitalCost": 771509.69,
+        "omCost": 6479.36,
+        "annualEnergy": 1362493.5,
+        "discountRate": 0.0501,
+        "years": 27
+      },
+      "expected": { "lcoe": 0.04346664124203674 }
+    },
+    {
+      "input": {
+        "capitalCost": 7932371.16,
+        "omCost": 115872.31,
+        "annualEnergy": 11552600.0,
+        "discountRate": 0.0586,
+        "years": 32
+      },
+      "expected": { "lcoe": 0.05802500760281052 }
+    },
+    {
+      "input": {
+        "capitalCost": 3257176.34,
+        "omCost": 53829.81,
+        "annualEnergy": 5997918.3,
+        "discountRate": 0.1038,
+        "years": 36
+      },
+      "expected": { "lcoe": 0.06700141483772634 }
+    },
+    {
+      "input": {
+        "capitalCost": 8114166.88,
+        "omCost": 172632.2,
+        "annualEnergy": 12555385.9,
+        "discountRate": 0.1029,
+        "years": 26
+      },
+      "expected": { "lcoe": 0.08590442195840534 }
+    }
+  ]
+}

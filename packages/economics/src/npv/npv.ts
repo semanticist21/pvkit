@@ -1,3 +1,4 @@
+import { assertFinite } from "../finite.ts";
 import { compensatedSum } from "../sum.ts";
 
 /**
@@ -8,7 +9,7 @@ import { compensatedSum } from "../sum.ts";
  * npv({ cashFlows: [-40000, 5000, 8000, 12000, 30000], discountRate: 0.08 }); // 3065.22…
  */
 export const npv = (input: {
-  /** Cash flow per period, year 0 first (investment negative). */
+  /** Cash flow per period, year 0 first (investment negative), finite. */
   cashFlows: ArrayLike<number>;
   /** Discount rate per period, fraction, > −1. */
   discountRate: number;
@@ -17,5 +18,6 @@ export const npv = (input: {
   if (!(discountRate > -1 && Number.isFinite(discountRate))) {
     throw new RangeError(`discountRate must be finite and > -1, got ${discountRate}`);
   }
+  assertFinite("cashFlows", cashFlows);
   return compensatedSum(Array.from(cashFlows, (cf, t) => cf / (1 + discountRate) ** t));
 };

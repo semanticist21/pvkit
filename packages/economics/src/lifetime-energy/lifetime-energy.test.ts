@@ -1,6 +1,7 @@
 import { describe, expect, test } from "vitest";
 import { lifetimeEnergy } from "./lifetime-energy.ts";
 import fixtures from "./lifetime-energy-fixtures.json" with { type: "json" };
+import sam from "./lifetime-energy-sam-fixtures.json" with { type: "json" };
 
 /** Relative. Justification in lifetime-energy.md → Reference. */
 const TOLERANCE = 1e-14;
@@ -33,4 +34,24 @@ test("rejects bad degradationRate / years", () => {
   expect(() => lifetimeEnergy({ ...ok, years: 2.5 })).toThrow(RangeError);
   expect(() => lifetimeEnergy({ ...ok, years: -1 })).toThrow(RangeError);
   expect(() => lifetimeEnergy({ ...ok, firstYearEnergy: Number.NaN })).toThrow(RangeError);
+});
+
+/** Relative. Justification in lifetime-energy.md → Reference. */
+const SAM_TOLERANCE = 1e-12;
+
+describe("lifetimeEnergy vs NREL SAM (degradation convention)", () => {
+  test.each(sam.cases.map((c, i) => [i, c] as const))("case %i", (_, { input, expected }) => {
+    const { annual } = lifetimeEnergy(input);
+    expect(annual).toHaveLength(expected.annual.length);
+    annual.forEach((v, t) => {
+      expect(rel(v, expected.annual[t] as number)).toBeLessThan(SAM_TOLERANCE);
+    });
+  });
+});
+
+test("worked example: total equals the geometric-series closed form", () => {
+  // Σ_{t=1..n} E·(1−d)^(t−1) = E·(1 − (1−d)^n)/d; a linear-degradation or year-1-degraded
+  // convention misses it by > 0.4 %.
+  const { total } = lifetimeEnergy({ firstYearEnergy: 10000, degradationRate: 0.005, years: 25 });
+  expect(total).toBeCloseTo((10000 * (1 - 0.995 ** 25)) / 0.005, 9);
 });

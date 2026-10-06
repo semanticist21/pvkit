@@ -18,6 +18,7 @@ test("numpy-financial docstring example", () => {
   );
 });
 
-test("rejects discountRate ≤ -1", () => {
+test("rejects discountRate ≤ -1 and non-finite flows", () => {
   expect(() => npv({ cashFlows: [1], discountRate: -1 })).toThrow(RangeError);
+  expect(() => npv({ cashFlows: [-1, Number.NaN], discountRate: 0.05 })).toThrow(RangeError);
 });

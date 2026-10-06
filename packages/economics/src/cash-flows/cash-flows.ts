@@ -1,3 +1,5 @@
+import { assertFinite } from "../finite.ts";
+
 /**
  * Annual project cash flows, year 0 … n, for `npv` / `irr` / `paybackPeriod` / `roi`:
  * `CF_0 = −capitalCost + incentive`,
@@ -11,7 +13,7 @@
 export const cashFlows = (input: {
   /** Up-front installed cost (currency), ≥ 0. */
   capitalCost: number;
-  /** Energy valued per year, kWh, years 1…n (e.g. `lifetimeEnergy(...).annual`). */
+  /** Energy valued per year, kWh, finite, years 1…n (e.g. `lifetimeEnergy(...).annual`). */
   energy: ArrayLike<number>;
   /** Year-1 value per kWh (currency/kWh) — e.g. `billSavings(...).savings / ΣP`. */
   energyPrice: number;
@@ -41,6 +43,7 @@ export const cashFlows = (input: {
       throw new RangeError(`${name} must be finite and > -1, got ${v}`);
     }
   }
+  assertFinite("energy", energy);
   const out = [incentive - capitalCost];
   for (let t = 0; t < energy.length; t++) {
     out.push(

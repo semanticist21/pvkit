@@ -20,8 +20,11 @@ Every method is its own subpath (`@pvkit/economics/<method>`); the root entry re
 | `roi` | simple return on investment | Short et al. 1995 |
 | `lcoe` | levelized cost of energy | Short et al. 1995 |
 
-Each has a theory note (`src/<method>/<method>.md`) and is checked against fixtures from
-numpy-financial 1.0.0 or an exactly rounded Python formula (480 cases).
+Each has a theory note (`src/<method>/<method>.md`) whose Reference section names its
+fixtures. `npv` and `irr` are checked against numpy-financial. The other six are checked against the
+cited formula restated in Python (arithmetic); their conventions are checked against NREL SAM
+(`lifetime-energy`, `bill-savings`, `lcoe`) or a hand-derived worked example (`cash-flows`,
+`payback-period`, `roi`).
 
 ## Usage
 
@@ -32,7 +35,7 @@ import { billSavings, cashFlows, irr, lcoe, lifetimeEnergy, npv, paybackPeriod }
 
 // hourly PV and load for a typical year (kWh), e.g. from @pvkit/core energyKwh per hour
 const year1 = billSavings({ production, load, importPrice: 0.3, exportPrice: 0.08 });
-const pvKwh = production.reduce((a, b) => a + b, 0);
+const pvKwh = year1.selfConsumption + year1.gridExport; // = ΣP, compensated
 
 const energy = lifetimeEnergy({ firstYearEnergy: pvKwh, degradationRate: 0.005, years: 25 });
 const flows = cashFlows({
