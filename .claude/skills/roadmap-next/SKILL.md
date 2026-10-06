@@ -7,7 +7,7 @@ description: Claim the next free item in ROADMAP.md's Queue and build it end to 
 
 The Queue table at the top of `ROADMAP.md` is the only work list and the only claim record.
 `git push` to `main` is the lock: whoever pushes the claim first owns the item. No branches,
-no status files. Other agents may share this same checkout: never `git add -A`/`commit -a`
+no status files. Other agents may share this same checkout: never `git add -A`/`commit -a`/`commit --amend` (HEAD may be another agent's commit by then)
 — stage only your Path, your ROADMAP row and files you changed — and always pull with
 `git pull --rebase --autostash origin main` (their uncommitted work is left in place).
 
