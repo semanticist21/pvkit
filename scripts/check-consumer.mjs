@@ -19,8 +19,20 @@ try {
     run("pnpm", ["pack", "--pack-destination", dir], join(root, "packages", pkg));
   }
   const tgzs = readdirSync(dir).filter((f) => f.endsWith(".tgz"));
-  writeFileSync(join(dir, "package.json"), JSON.stringify({ name: "consumer", private: true, type: "module" }));
-  run("pnpm", ["add", ...tgzs.map((f) => `./${f}`), "--ignore-workspace"]);
+  // Map every @pvkit/* name to its local tarball, including transitive deps (chain → core):
+  // otherwise pnpm resolves those from npm, where a version bumped in this commit is not yet.
+  const local = Object.fromEntries(
+    tgzs.map((f) => [`@pvkit/${f.match(/^pvkit-(.+)-\d+\.\d+\.\d+.*\.tgz$/)[1]}`, `file:./${f}`]),
+  );
+  writeFileSync(
+    join(dir, "package.json"),
+    JSON.stringify({ name: "consumer", private: true, type: "module", dependencies: local }),
+  );
+  writeFileSync(
+    join(dir, "pnpm-workspace.yaml"),
+    `overrides:\n${Object.entries(local).map(([k, v]) => `  "${k}": "${v}"\n`).join("")}`,
+  );
+  run("pnpm", ["install"]);
   const code = `import { type Degrees, radians, toDegrees } from "@pvkit/core";
 import { spa } from "@pvkit/core/solarposition/spa";
 import { perez, totalIrradiance } from "@pvkit/core/irradiance";
