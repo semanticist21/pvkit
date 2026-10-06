@@ -1,6 +1,6 @@
 {
   "name": "@pvkit/layout",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "PV array layout in plain ESM — roof module fit, row spacing, row-to-row shading and sky masking, horizon profiles. Validated against pvlib. Zero dependencies.",
   "type": "module",
   "license": "MIT",

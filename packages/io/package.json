@@ -1,6 +1,6 @@
 {
   "name": "@pvkit/io",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Fetch solar irradiance and weather for PV modeling — PVGIS TMY and NASA POWER hourly, parsed like pvlib. Zero dependencies, ESM, runs in the browser.",
   "type": "module",
   "license": "MIT",

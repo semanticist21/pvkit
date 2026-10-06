@@ -1,6 +1,6 @@
 {
   "name": "@pvkit/sizer",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "PV string sizing in plain ESM — temperature-corrected module voltages, NEC 690.7 Voc correction, series/parallel limits against inverter voltage and current. Zero dependencies.",
   "type": "module",
   "license": "MIT",

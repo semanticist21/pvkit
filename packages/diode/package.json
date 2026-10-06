@@ -1,6 +1,6 @@
 {
   "name": "@pvkit/diode",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Single-diode and SAPM PV electrical models in plain ESM — De Soto / CEC / PVsyst parameters, Lambert-W I-V solver, SAPM, Sandia and ADR inverters. Zero dependencies.",
   "type": "module",
   "license": "MIT",

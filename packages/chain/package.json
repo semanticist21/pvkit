@@ -1,6 +1,6 @@
 {
   "name": "@pvkit/chain",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "ModelChain-style PV orchestration on @pvkit/core — one call from location, system and weather to AC power.",
   "type": "module",
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
   "name": "@pvkit/economics",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "PV (solar) project finance in plain ESM — lifetime energy with degradation, bill savings, cash flows, NPV, IRR, payback, ROI, LCOE. Zero dependencies, runs in the browser.",
   "type": "module",
   "license": "MIT",
