@@ -1,7 +1,7 @@
 {
   "name": "@pvkit/core",
   "version": "0.1.0",
-  "description": "ESM-first PV (solar) performance modeling engine \u2014 solar position, irradiance, cell temperature, system output. Numerically validated against reference implementations.",
+  "description": "Solar position (NREL SPA), sunrise/sunset, clear-sky and plane-of-array irradiance, cell temperature, tracking and PVWatts PV output in TypeScript. Checked against pvlib; runs in the browser, edge and Node. Zero dependencies.",
   "type": "module",
   "license": "MIT",
   "author": "semanticist21",
@@ -15,14 +15,21 @@
     "directory": "packages/core"
   },
   "keywords": [
-    "pv",
     "solar",
-    "photovoltaic",
-    "irradiance",
     "solar-position",
+    "sun-position",
+    "sunrise",
+    "sunset",
     "spa",
-    "esm",
-    "tree-shaking"
+    "irradiance",
+    "clear-sky",
+    "poa",
+    "pvwatts",
+    "pvlib",
+    "photovoltaic",
+    "pv",
+    "solar-energy",
+    "typescript"
   ],
   "sideEffects": false,
   "exports": {

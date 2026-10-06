@@ -1,8 +1,22 @@
 # @pvkit/diode
 
-Single-diode and SAPM PV electrical models in plain ESM: module parameters → full I-V
-key points → inverter AC power, in the browser. Zero runtime dependencies, function-level
-tree-shaking.
+Single-diode model and I-V curve solver for PV modules in plain ESM — De Soto / CEC / PVsyst
+parameters → I-V key points (exact Lambert W) → inverter AC power, plus SAPM. Validated
+against pvlib; zero runtime dependencies, function-level tree-shaking, runs in the browser.
+
+```sh
+npm i @pvkit/diode @pvkit/spec
+```
+
+```ts
+import { calcparamsCec } from "@pvkit/diode/calcparams-cec";
+import { singleDiode } from "@pvkit/diode/single-diode";
+import { CEC_MODULES } from "@pvkit/spec/cec-modules";
+
+const module = CEC_MODULES.find((m) => m.name === "CSI Solar Co Ltd CS6P-200P")!;
+const { pMp, vMp } = singleDiode(calcparamsCec({ ...module, effectiveIrradiance: 1000, tempCell: 25 }));
+console.log(pMp.toFixed(1), vMp.toFixed(1)); // 200.3 28.9 (a 200 W module at STC)
+```
 
 > For broader context, see the [monorepo README](https://github.com/semanticist21/pvkit/blob/main/README.md).
 

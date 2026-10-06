@@ -1,7 +1,7 @@
 {
   "name": "@pvkit/sizer",
   "version": "0.1.0",
-  "description": "PV string sizing in plain ESM — temperature-corrected module voltages, NEC 690.7 Voc correction, series/parallel limits against inverter voltage and current. Zero dependencies.",
+  "description": "Solar string sizing calculator: NEC 690.7 temperature-corrected Voc, min/max modules per string and parallel strings against inverter DC limits. TypeScript, zero dependencies.",
   "type": "module",
   "license": "MIT",
   "author": "semanticist21",
@@ -15,13 +15,18 @@
     "directory": "packages/sizer"
   },
   "keywords": [
+    "string-sizing",
+    "solar-string-sizing",
+    "nec",
+    "nec-690.7",
+    "voc",
+    "mppt",
+    "inverter",
+    "solar-panel",
+    "photovoltaic",
     "pv",
     "solar",
-    "photovoltaic",
-    "string-sizing",
-    "inverter",
-    "nec-690",
-    "esm"
+    "typescript"
   ],
   "sideEffects": false,
   "exports": {

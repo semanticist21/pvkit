@@ -1,7 +1,7 @@
 {
   "name": "@pvkit/spec",
   "version": "0.1.0",
-  "description": "PV module and inverter parameter libraries (CEC modules, CEC inverters, Sandia SAPM modules) as typed ESM data.",
+  "description": "CEC solar module (PV panel) and inverter database plus Sandia SAPM modules from NREL SAM, as typed ESM data: 21,677 modules and 2,343 inverters.",
   "type": "module",
   "license": "MIT AND BSD-3-Clause",
   "author": "semanticist21",
@@ -15,15 +15,20 @@
     "directory": "packages/spec"
   },
   "keywords": [
-    "pv",
-    "solar",
-    "photovoltaic",
+    "pv-module-database",
+    "solar-panel-database",
+    "inverter-database",
+    "solar-inverter",
     "cec",
     "sandia",
     "sapm",
-    "module-database",
-    "inverter-database",
-    "esm"
+    "nrel-sam",
+    "datasheet",
+    "pvlib",
+    "photovoltaic",
+    "pv",
+    "solar",
+    "typescript"
   ],
   "sideEffects": false,
   "exports": {

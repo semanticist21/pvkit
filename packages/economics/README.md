@@ -1,7 +1,22 @@
 # @pvkit/economics
 
-PV (solar) project finance in plain ESM — the "kWh → money" step of a quote calculator,
-computed in the browser. Zero dependencies, function-level tree-shaking.
+Solar ROI and payback calculator in TypeScript — the "kWh → money" step of a PV quote:
+lifetime energy with degradation, bill savings (self-consumption vs export), cash flows,
+NPV, IRR, payback period, ROI, LCOE. Zero dependencies, function-level tree-shaking, runs in
+the browser.
+
+```sh
+npm i @pvkit/economics
+```
+
+```ts
+import { cashFlows, irr, npv, paybackPeriod } from "@pvkit/economics";
+
+// 10,000 up front, 6,000 kWh/yr for 25 years valued at 0.25/kWh
+const flows = cashFlows({ capitalCost: 10000, energy: Array(25).fill(6000), energyPrice: 0.25 });
+console.log(paybackPeriod({ cashFlows: flows })); // 6.666666666666667 (years)
+console.log(npv({ cashFlows: flows, discountRate: 0.05 }).toFixed(0), irr({ cashFlows: flows }).toFixed(3)); // 11141 0.145
+```
 
 > For broader context, see the [monorepo README](https://github.com/semanticist21/pvkit/blob/main/README.md).
 

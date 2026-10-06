@@ -1,8 +1,22 @@
 # @pvkit/sizer
 
-PV string sizing: temperature-corrected module voltages, the NEC 690.7 maximum system
-voltage, and series/parallel limits against an inverter's DC ratings. Zero dependencies,
-ESM-only, one subpath per method.
+Solar string sizing calculator: temperature-corrected module voltages, the NEC 690.7
+maximum system voltage, and min/max modules per string plus parallel strings against an
+inverter's DC ratings. Zero dependencies, ESM-only, one subpath per method.
+
+```sh
+npm i @pvkit/sizer
+```
+
+```ts
+import { stringSize } from "@pvkit/sizer/string-size";
+import { voltageAtTemperature } from "@pvkit/sizer/voltage-at-temperature";
+
+const vocMax = voltageAtTemperature({ voltage: 49.5, beta: -0.135, tempCell: -10 }); // 54.225 V, coldest
+const vmpMin = voltageAtTemperature({ voltage: 41.2, beta: -0.135, tempCell: 70 }); // 35.125 V, hottest
+console.log(stringSize({ vocMax, vmpMin, imp: 13.1, vdcMax: 600, mpptLow: 200, idcMax: 30 }));
+// { minSeries: 6, maxSeries: 11, maxParallel: 2 }
+```
 
 > For broader context and positioning, see the [monorepo README](https://github.com/semanticist21/pvkit/blob/main/README.md).
 

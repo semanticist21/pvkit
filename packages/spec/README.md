@@ -1,7 +1,18 @@
 # @pvkit/spec
 
-PV module and inverter parameter libraries as typed, zero-dependency ESM data — the CEC
-module and inverter lists and the Sandia SAPM module database from NREL SAM.
+CEC solar module (PV panel) and inverter database plus Sandia SAPM module parameters from
+NREL SAM, as typed, zero-dependency ESM data.
+
+```sh
+npm i @pvkit/spec
+```
+
+```ts
+import { CEC_INVERTERS } from "@pvkit/spec/cec-inverters";
+
+const inv = CEC_INVERTERS.find((i) => i.name === "SMA America: SB70-1SP-US-40 {240V}")!;
+console.log(inv.paco, inv.vdcMax, inv.mpptLow, inv.mpptHigh); // 7000 480 245 480
+```
 
 > For broader context and positioning, see the [monorepo README](https://github.com/semanticist21/pvkit/blob/main/README.md).
 
@@ -19,11 +30,6 @@ The root entry `@pvkit/spec` exports only the record types (`CecModule`, `CecInv
 `SandiaModule`) — zero bytes at runtime.
 
 ```ts
-import { CEC_INVERTERS } from "@pvkit/spec/cec-inverters";
-
-const inv = CEC_INVERTERS.find((i) => i.name === "SMA America: SB70-1SP-US-40 {240V}");
-// inv.mpptLow, inv.mpptHigh, inv.vdcMax, inv.paco, …
-
 // In a browser, load the large module list on demand:
 const { CEC_MODULES } = await import("@pvkit/spec/cec-modules");
 const m = CEC_MODULES.find((x) => x.name === "Jinko Solar Co Ltd JKM200M-60B");

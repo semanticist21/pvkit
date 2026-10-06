@@ -1,7 +1,7 @@
 {
   "name": "@pvkit/layout",
   "version": "0.1.0",
-  "description": "PV array layout in plain ESM — roof module fit, row spacing, row-to-row shading and sky masking, horizon profiles. Validated against pvlib. Zero dependencies.",
+  "description": "Solar panel layout and shading for TypeScript: modules that fit a roof, row spacing (pitch), row-to-row shading, horizon profiles. Validated against pvlib. Zero dependencies.",
   "type": "module",
   "license": "MIT",
   "author": "semanticist21",
@@ -15,14 +15,19 @@
     "directory": "packages/layout"
   },
   "keywords": [
+    "solar-panel-layout",
+    "roof-layout",
+    "row-spacing",
+    "pitch",
+    "inter-row-shading",
+    "shading",
+    "partial-shading",
+    "horizon",
+    "pvlib",
+    "photovoltaic",
     "pv",
     "solar",
-    "photovoltaic",
-    "layout",
-    "shading",
-    "row-spacing",
-    "horizon",
-    "esm"
+    "typescript"
   ],
   "sideEffects": false,
   "publishConfig": {

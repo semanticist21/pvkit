@@ -1,7 +1,7 @@
 {
   "name": "@pvkit/chain",
   "version": "0.1.0",
-  "description": "ModelChain-style PV orchestration on @pvkit/core — one call from location, system and weather to AC power.",
+  "description": "Solar PV output in one call: pvlib-style ModelChain (PVWatts) for TypeScript/JavaScript. Site, system and weather in, AC power out. Runs in the browser.",
   "type": "module",
   "license": "MIT",
   "author": "semanticist21",
@@ -15,12 +15,17 @@
     "directory": "packages/chain"
   },
   "keywords": [
+    "pvwatts",
+    "modelchain",
+    "pvlib",
+    "solar-power",
+    "ac-power",
+    "energy-yield",
+    "solar-energy",
+    "photovoltaic",
     "pv",
     "solar",
-    "photovoltaic",
-    "modelchain",
-    "pvwatts",
-    "esm"
+    "typescript"
   ],
   "sideEffects": false,
   "publishConfig": {

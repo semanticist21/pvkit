@@ -1,7 +1,7 @@
 {
   "name": "@pvkit/economics",
   "version": "0.1.0",
-  "description": "PV (solar) project finance in plain ESM — lifetime energy with degradation, bill savings, cash flows, NPV, IRR, payback, ROI, LCOE. Zero dependencies, runs in the browser.",
+  "description": "Solar ROI and payback calculator for TypeScript: lifetime kWh with degradation, bill savings, cash flows, NPV, IRR, payback period, LCOE. Zero dependencies, runs in the browser.",
   "type": "module",
   "license": "MIT",
   "author": "semanticist21",
@@ -15,14 +15,21 @@
     "directory": "packages/economics"
   },
   "keywords": [
-    "pv",
-    "solar",
-    "photovoltaic",
+    "solar-roi",
+    "solar-payback",
+    "solar-savings",
+    "payback-period",
+    "roi",
     "lcoe",
     "npv",
     "irr",
-    "payback",
-    "esm"
+    "net-metering",
+    "degradation",
+    "cash-flow",
+    "photovoltaic",
+    "pv",
+    "solar",
+    "typescript"
   ],
   "sideEffects": false,
   "publishConfig": {

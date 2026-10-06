@@ -1,9 +1,27 @@
 # @pvkit/core
 
-PV (solar) performance modeling core. Zero dependencies, ESM-only,
-function-level tree-shaking.
+Solar position (NREL SPA), sunrise/sunset, clear-sky and plane-of-array irradiance, cell
+temperature, single-axis tracking and PVWatts PV output in TypeScript — checked against
+pvlib, runs in the browser, edge and Node. Zero dependencies, ESM-only, function-level
+tree-shaking.
 
-> For broader context and positioning, see the [monorepo README](https://github.com/semanticist21/pvkit/blob/main/README.md).
+```sh
+npm i @pvkit/core
+```
+
+```ts
+import { spa } from "@pvkit/core/solarposition/spa";
+import { sunriseSpa } from "@pvkit/core/solarposition/sunrise-spa";
+
+const seoul = { latitude: 37.5665, longitude: 126.978 };
+const sun = spa({ ...seoul, timeMs: Date.UTC(2025, 5, 21, 3) }); // 12:00 KST
+console.log(sun.azimuth.toFixed(1), sun.apparentElevation.toFixed(1)); // 150.4 74.1
+const { sunrise, sunset } = sunriseSpa({ ...seoul, timeMs: Date.UTC(2025, 5, 21) });
+console.log(new Date(sunrise).toISOString(), new Date(sunset).toISOString());
+// 2025-06-20T20:11:13.852Z 2025-06-21T10:56:43.842Z  (05:11 / 19:56 KST)
+```
+
+> Live demo: <https://pvkit.netlify.app>. For broader context and positioning, see the [monorepo README](https://github.com/semanticist21/pvkit/blob/main/README.md).
 
 ## Modules
 
