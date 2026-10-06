@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""@pvkit/io fixtures: pvlib's own fetchers parse captured API responses.
+"""pvkit/io fixtures: pvlib's own fetchers parse captured API responses.
 
 `<method>-raw.json` holds a real response (trimmed PVGIS TMY; NASA POWER with one value set
 to the fill value). requests.get is stubbed to return it, so pvlib's public get_* path —
@@ -19,7 +19,7 @@ from unittest import mock
 
 import pvlib
 
-SRC = Path(__file__).resolve().parents[2] / "packages/io/src"
+SRC = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/io"
 
 
 class Response:

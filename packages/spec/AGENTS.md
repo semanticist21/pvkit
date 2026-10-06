@@ -11,9 +11,9 @@ Package-only facts. Shared rules: `doc/conventions.md`, `doc/architecture.md`.
 - `tsdown.config.ts` loads `*-data.json` as `JSON.parse("…")`; rolldown's default JSON import
   emits a pretty object literal ~30 % larger and slower to parse.
 - Data is as published (no curation); only renames and unit changes, both listed in the
-  generator's mapping and mirrored by each test's `MAPPING`. `gammaPmp` is 1/°C (core unit);
+  generator's mapping and mirrored by each test's `MAPPING`. `gammaPmp` is 1/°C (pvkit's unit);
   SAM `dT` → `tempDelta` (`deltaT` means TT − UT package-wide).
 - Bumping the SAM tag: change `SAM_TAG`, run the script, update the README table (the only
   owner of row counts) and any quirk count a test pins.
-- No ADR inverter coefficient DB yet: `@pvkit/diode` `inverterAdr` takes caller-supplied
+- No ADR inverter coefficient DB yet: `pvkit/diode/inverter-adr` takes caller-supplied
   `adrCoefficients`. Also absent: spectral response data, datasheet parsing.

@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/economics (every method).
+"""Fixtures for pvkit/economics (every method).
 
 npv / irr: numpy-financial 1.0.0 (npf.npv, npf.irr). The rest has no reference library, so
 the reference is the explicit formula (Short, Packey & Holt 1995, NREL/TP-462-5173; SAM
@@ -19,7 +19,7 @@ from pathlib import Path
 import numpy as np
 import numpy_financial as npf
 
-ROOT = Path(__file__).resolve().parents[2] / "packages/economics/src"
+ROOT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/economics"
 rng = np.random.default_rng(20261006)
 FORMULA = "explicit formula, Python float64 + math.fsum"
 

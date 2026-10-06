@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core temperature/generic-linear and temperature/generic-linear-model
+"""Fixtures for pvkit temperature/generic-linear and temperature/generic-linear-model
 from pvlib.temperature.generic_linear and pvlib.temperature.GenericLinearModel.
 
 Run: uv run scripts/fixtures/temperature-generic-linear.py
@@ -18,7 +18,7 @@ import numpy as np
 import pvlib
 from pvlib.temperature import GenericLinearModel, generic_linear
 
-ROOT = Path(__file__).resolve().parents[2] / "packages/core/src/models/temperature"
+ROOT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/temperature"
 rng = np.random.default_rng(20261005)
 meta = {"reference": f"pvlib.temperature.generic_linear / GenericLinearModel @ pvlib {pvlib.__version__}"}
 

@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core losses/soiling-hsu from pvlib.soiling.hsu.
+"""Fixtures for pvkit losses/soiling-hsu from pvlib.soiling.hsu.
 
 Run: uv run scripts/fixtures/losses-soiling-hsu.py
-Writes packages/core/src/models/losses/soiling-hsu/soiling-hsu-fixtures.json.
+Writes packages/pvkit/src/models/losses/soiling-hsu/soiling-hsu-fixtures.json.
 
 Each case is a whole series: pvlib runs once on it, and every step records the per-step
 TS input (trailing-window rainfall, timestep, PM, tilt, ...) plus pvlib's output. The test
@@ -22,7 +22,7 @@ import pandas as pd
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/losses/soiling-hsu/soiling-hsu-fixtures.json")
+       / "packages/pvkit/src/models/losses/soiling-hsu/soiling-hsu-fixtures.json")
 
 
 def scenario(name, rain, *, cleaning_threshold, surface_tilt, pm2_5, pm10,

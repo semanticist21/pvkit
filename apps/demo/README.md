@@ -1,6 +1,6 @@
 # pvkit demo
 
-Static page that estimates clear-sky annual kWh entirely in the browser with `@pvkit/core`
+Static page that estimates clear-sky annual kWh entirely in the browser with `pvkit`
 (`src/estimate.ts` wires the modules). Not published to npm.
 
 Inputs round-trip through the query string (`?latitude=…&losses=14.1`, field names as in

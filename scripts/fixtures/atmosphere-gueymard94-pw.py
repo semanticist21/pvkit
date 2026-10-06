@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core atmosphere/gueymard94-pw from pvlib.atmosphere.gueymard94_pw.
+"""Fixtures for pvkit atmosphere/gueymard94-pw from pvlib.atmosphere.gueymard94_pw.
 
 Run: uv run scripts/fixtures/atmosphere-gueymard94-pw.py
-Writes packages/core/src/models/atmosphere/gueymard94-pw/gueymard94-pw-fixtures.json.
+Writes packages/pvkit/src/models/atmosphere/gueymard94-pw/gueymard94-pw-fixtures.json.
 """
 
 import json
@@ -17,7 +17,7 @@ import numpy as np
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/atmosphere/gueymard94-pw/gueymard94-pw-fixtures.json")
+       / "packages/pvkit/src/models/atmosphere/gueymard94-pw/gueymard94-pw-fixtures.json")
 
 
 def case(t, rh):

@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core temperature/ross from pvlib.temperature.ross (noct form).
+"""Fixtures for pvkit temperature/ross from pvlib.temperature.ross (noct form).
 
 Run: uv run scripts/fixtures/temperature-ross.py
-Writes packages/core/src/models/temperature/ross/ross-fixtures.json.
+Writes packages/pvkit/src/models/temperature/ross/ross-fixtures.json.
 """
 
 import json
@@ -17,7 +17,7 @@ import numpy as np
 import pvlib
 from pvlib.temperature import ross
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/temperature/ross/ross-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/temperature/ross/ross-fixtures.json"
 
 
 def case(poa, temp_air, noct):

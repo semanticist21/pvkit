@@ -22,6 +22,6 @@ export default defineConfig({
       },
     },
   ],
-  // tsdown owns the package.json `exports` map (same as @pvkit/core): one subpath per library.
+  // tsdown owns the package.json `exports` map (same as pvkit): one subpath per library.
   exports: { devExports: true },
 });

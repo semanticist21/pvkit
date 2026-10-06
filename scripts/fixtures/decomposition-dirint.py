@@ -4,14 +4,14 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core decomposition/dirint and decomposition/dirindex, plus the DIRINT
+"""Fixtures for pvkit decomposition/dirint and decomposition/dirindex, plus the DIRINT
 coefficient table, from pvlib.irradiance.dirint / dirindex / _get_dirint_coeffs.
 
 Run: uv run scripts/fixtures/decomposition-dirint.py
 Writes:
-  packages/core/src/models/decomposition/dirint/dirint-coefficients.ts
-  packages/core/src/models/decomposition/dirint/dirint-fixtures.json
-  packages/core/src/models/decomposition/dirindex/dirindex-fixtures.json
+  packages/pvkit/src/models/decomposition/dirint/dirint-coefficients.ts
+  packages/pvkit/src/models/decomposition/dirint/dirint-fixtures.json
+  packages/pvkit/src/models/decomposition/dirindex/dirindex-fixtures.json
 pvlib runs on whole pandas series (so ΔKt' uses real neighbours); each emitted case records
 the previous/next sample the scalar TS function needs (absent at series edges). NaN → null,
 ±inf → "Infinity"/"-Infinity".
@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 import pvlib
 
-DIR = Path(__file__).resolve().parents[2] / "packages/core/src/models/decomposition"
+DIR = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/decomposition"
 
 
 def num(x):

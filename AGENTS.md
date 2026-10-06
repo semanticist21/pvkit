@@ -1,6 +1,7 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this
+repository.
 
 > `CLAUDE.md` is a symlink to `AGENTS.md` — edit `AGENTS.md`.
 
@@ -8,7 +9,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 `pvkit` — ESM-first TypeScript library for PV (solar) performance modeling, built to run
 **everywhere JavaScript runs** (browser, edge, Workers, React Native). No backend round-trip.
-pnpm monorepo. `@pvkit/core` implements all 11 modules, validated against pvlib fixtures.
+pnpm monorepo: `pvkit` (17 modules, fixture-validated) plus `@pvkit/spec` (data, kept apart).
 
 Positioning: not "smarter PV science" but "PV modeling everywhere JS runs." See `README.md`
 for the pitch, `ROADMAP.md` for the ordered work Queue (the only claim record). Take the next
@@ -27,7 +28,7 @@ pnpm typecheck                      # tsc --noEmit
 pnpm lint                           # biome check .   (read-only)
 pnpm format                         # biome check --write .
 
-cd packages/core && pnpm test       # one package
+cd packages/pvkit && pnpm test      # one package
 pnpm vitest run src/units.test.ts   # one test file
 pnpm vitest run -t "foo"            # one test by name
 ```
@@ -42,15 +43,18 @@ byte-identical).
 ## Architecture
 
 **Monorepo:** `packages/*` (published libraries) and `apps/*` (private apps, e.g. `apps/demo`)
-pnpm workspaces. Packages: core, spec, chain, economics, sizer, io, layout, diode — one line
-each in `README.md` "Packages"; what core deliberately leaves out: `packages/core/features.md`.
+pnpm workspaces. Packages: `pvkit` (`packages/pvkit`, every model) and `@pvkit/spec`
+(`packages/spec`, NREL SAM data) — one line each in `README.md` "Packages". New models become
+modules of `pvkit`; a separate package only for something that must not load with it (data).
 
-**`@pvkit/core` modules** (dependency order): `solarposition` → `atmosphere` → `clearsky` →
+**`pvkit` modules** (dependency order): `solarposition` → `atmosphere` → `clearsky` →
 `irradiance` → `decomposition` → `iam` → `temperature` → `tracking` → `pvsystem` → `losses` →
-`metrics`. Method list: `packages/core/README.md` "Modules"; status: `packages/core/features.md`.
+`metrics` → `diode` → `layout` → `sizer` → `economics` → `io` → `chain`. Method list:
+`packages/pvkit/README.md` "Modules"; status and deferred scope: `packages/pvkit/features.md`.
 
-Each module is a subpath export (`@pvkit/core/solarposition`, …). The module
-`src/models/<module>/index.ts` files are referenced by `package.json` `exports`. Shared
+Each module is a subpath export (`pvkit/solarposition`, …) and each method one level finer
+(`pvkit/solarposition/spa`). Modules never import each other, except `chain` (orchestration).
+Module `src/models/<module>/index.ts` files are referenced by `package.json` `exports`. Shared
 foundation (`src/units.ts`, `src/sum.ts`) sits flat at top; models nest under `src/models/`.
 Constants live with the method that cites them. The root entry (`src/index.ts`) exports only
 the unit types; models are imported from their subpaths (no `export * as <module>` there — it
@@ -69,9 +73,8 @@ to convert. New angular APIs must take/return branded types, never bare `number`
 - **Numerical validation, not "it runs."** For each model: implement from the paper → pin
   reference-implementation outputs for the same inputs as fixtures → assert in `*.test.ts`.
   No core logic lands without a test. The harness check enforces test pairing.
-- **ESM-only. No third-party runtime dependencies.** A package may depend on another
-  `@pvkit` package, imported by per-method subpath (today only `@pvkit/chain` → `@pvkit/core`).
-  No CJS. `sideEffects: false`, function-level exports, aggressive tree-shaking. Pure TS.
+- **ESM-only. Zero runtime dependencies** (`@pvkit/spec` is a devDependency for one compat
+  test). No CJS. `sideEffects: false`, function-level exports, aggressive tree-shaking. Pure TS.
 - Build via `tsdown` (rolldown) → ESM + `.d.ts` + per-subpath entries. Each package's tsdown
   entry is a glob that generates `package.json` `exports`: run `pnpm build` and commit
   `package.json` (owner: `doc/architecture.md` → "Subpath exports").
@@ -83,9 +86,9 @@ to convert. New angular APIs must take/return branded types, never bare `number`
   explicit `.ts` extensions in imports.
 - Biome: 2-space indent, 100 col, double quotes, semicolons, trailing commas, organized imports.
 - camelCase naming (locked).
-- Scalar in/out core: one instant per call, time as `timeMs` (UTC epoch ms). A batch
+- Scalar in/out models: one instant per call, time as `timeMs` (UTC epoch ms). A batch
   (`Float64Array`) adapter comes only on demand and is the future WASM boundary. Don't bake
-  batch/DataFrame assumptions into core. Cross-module angle/time/ΔT conventions and the
+  batch/DataFrame assumptions into models. Cross-module angle/time/ΔT conventions and the
   reference/fixture policy live in `doc/conventions.md`.
 
 ## Git
@@ -97,11 +100,11 @@ to convert. New angular APIs must take/return branded types, never bare `number`
 
 ## Durable docs
 
-Each `packages/<p>/AGENTS.md` holds that package's notes (locked decisions, validation
-workflow). The harness (`scripts/agent-harness-check.mjs`, config `harness.config.json`)
-warns when source under any `packages/<p>/src/` (or `apps/demo/src/`) changes without a
-matching test or doc update (scope and test-pairing roots: `harness.config.json`). Keep the
-nearest `AGENTS.md` current when behavior changes.
+`packages/pvkit/AGENTS.md` and `packages/spec/AGENTS.md` hold each package's notes
+(locked decisions, validation workflow). The harness (`scripts/agent-harness-check.mjs`,
+config `harness.config.json`) warns when source under any `packages/<p>/src/` (or
+`apps/demo/src/`) changes without a matching test or doc update (scope and test-pairing roots:
+`harness.config.json`). Keep the nearest `AGENTS.md` current when behavior changes.
 
 `doc/` is the durable-docs home: `doc/architecture.md` (base skeleton), `doc/conventions.md`
 (model conventions + reference policy), `doc/playbook.md`

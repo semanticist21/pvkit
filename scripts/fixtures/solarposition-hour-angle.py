@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core solarposition/hour-angle from pvlib.solarposition.hour_angle.
+"""Fixtures for pvkit solarposition/hour-angle from pvlib.solarposition.hour_angle.
 
 Run: uv run scripts/fixtures/solarposition-hour-angle.py
-Writes packages/core/src/models/solarposition/hour-angle/hour-angle-fixtures.json.
+Writes packages/pvkit/src/models/solarposition/hour-angle/hour-angle-fixtures.json.
 Times are passed UTC-localized (pvkit's timeMs); pvlib's value is not wrapped, so the
 test compares modulo 360°.
 """
@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/solarposition/hour-angle/hour-angle-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/solarposition/hour-angle/hour-angle-fixtures.json"
 
 
 def ms(*args):

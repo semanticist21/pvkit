@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core solarposition/declination from pvlib.solarposition.
+"""Fixtures for pvkit solarposition/declination from pvlib.solarposition.
 
 Run: uv run scripts/fixtures/solarposition-declination.py
-Writes packages/core/src/models/solarposition/declination/declination-fixtures.json.
+Writes packages/pvkit/src/models/solarposition/declination/declination-fixtures.json.
 """
 
 import json
@@ -17,7 +17,7 @@ import numpy as np
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/solarposition/declination/declination-fixtures.json")
+       / "packages/pvkit/src/models/solarposition/declination/declination-fixtures.json")
 
 rng = np.random.default_rng(20261005)
 # Integer days incl. leap day 366 and out-of-range 0 / 367, plus fractional days.

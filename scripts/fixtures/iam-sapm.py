@@ -4,11 +4,11 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core iam/sapm from pvlib.iam.sapm, coefficients B0..B5 drawn from
+"""Fixtures for pvkit iam/sapm from pvlib.iam.sapm, coefficients B0..B5 drawn from
 pvlib's bundled Sandia module database.
 
 Run: uv run scripts/fixtures/iam-sapm.py
-Writes packages/core/src/models/iam/sapm/sapm-fixtures.json.
+Writes packages/pvkit/src/models/iam/sapm/sapm-fixtures.json.
 """
 
 import json
@@ -17,7 +17,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/iam/sapm/sapm-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/iam/sapm/sapm-fixtures.json"
 mods = pvlib.pvsystem.retrieve_sam("SandiaMod")
 NAMES = sorted(mods.columns)
 

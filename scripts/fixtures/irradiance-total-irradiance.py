@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core irradiance transposition: isotropic, klucher, hay-davies, reindl,
+"""Fixtures for pvkit irradiance transposition: isotropic, klucher, hay-davies, reindl,
 perez, ground-diffuse, poa-components and total-irradiance (one JSON per method, one
 shared scenario set). Also writes perez/perez-coefficients.ts from pvlib's Perez tables.
 
@@ -25,7 +25,7 @@ import pvlib
 from pvlib import irradiance as irr
 
 warnings.simplefilter("ignore")  # numpy divide warnings
-DIR = Path(__file__).resolve().parents[2] / "packages/core/src/models/irradiance"
+DIR = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/irradiance"
 REF = f"@ pvlib {pvlib.__version__}"
 PEREZ_MODELS = re.findall(r"'(\w+)': \[", inspect.getsource(irr._get_perez_coefficients))
 

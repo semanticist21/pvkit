@@ -6,7 +6,7 @@ plus the six CEC single-diode parameters SAM fits to each datasheet (De Soto et 
 Dobos's `Adjust` term). Those six (`aRef`, `iLRef`, `iORef`, `rS`, `rShRef`, `adjust`) with
 `alphaSc` are exactly the inputs of `calcparams_cec`.
 
-Values are as listed, except `gammaPmp`, converted %/°C → 1/°C so it plugs into core's
+Values are as listed, except `gammaPmp`, converted %/°C → 1/°C so it plugs into pvkit's
 `pvwattsDc` `gammaPdc`. Blank cells (`length`, `width` on older rows; one `cellsInSeries`) are
 omitted. Source quirks are kept, not curated: some names repeat, technology spelling varies
 ("Mono-C-si"), a few rows list `imp ≥ isc`, and a few list `alphaSc` at ≈ 46 % of `isc` per °C

@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core decomposition/clearness-index from pvlib.irradiance.clearness_index.
+"""Fixtures for pvkit decomposition/clearness-index from pvlib.irradiance.clearness_index.
 
 Run: uv run scripts/fixtures/decomposition-clearness-index.py
-Writes packages/core/src/models/decomposition/clearness-index/clearness-index-fixtures.json.
+Writes packages/pvkit/src/models/decomposition/clearness-index/clearness-index-fixtures.json.
 """
 
 import json
@@ -17,7 +17,7 @@ import numpy as np
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/decomposition/clearness-index/clearness-index-fixtures.json")
+       / "packages/pvkit/src/models/decomposition/clearness-index/clearness-index-fixtures.json")
 
 
 def case(ghi, zenith, dni_extra, min_cos_zenith=0.065, max_kt=2.0):

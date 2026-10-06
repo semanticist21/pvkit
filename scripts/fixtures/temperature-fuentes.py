@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core temperature/fuentes from pvlib.temperature.fuentes.
+"""Fixtures for pvkit temperature/fuentes from pvlib.temperature.fuentes.
 
 pvlib takes whole pandas Series; pvkit's fuentes is one step. Each case records the
 per-step inputs pvlib saw, including the prior state: prevTempModule (pvlib's
@@ -12,7 +12,7 @@ previous output, 20 °C before the first step), prevPoaGlobal (0 before the firs
 and timestepSeconds (pvlib reuses the second interval for the first step).
 
 Run: uv run scripts/fixtures/temperature-fuentes.py
-Writes packages/core/src/models/temperature/fuentes/fuentes-fixtures.json.
+Writes packages/pvkit/src/models/temperature/fuentes/fuentes-fixtures.json.
 """
 
 import json
@@ -23,7 +23,7 @@ import pandas as pd
 import pvlib
 from pvlib.temperature import fuentes
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/temperature/fuentes/fuentes-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/temperature/fuentes/fuentes-fixtures.json"
 rng = np.random.default_rng(20261005)
 DEFAULTS = dict(module_height=5.0, wind_height=9.144, emissivity=0.84, absorption=0.83,
                 surface_tilt=30.0, module_width=0.31579, module_length=1.2)

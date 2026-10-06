@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core temperature/noct-sam from pvlib.temperature.noct_sam.
+"""Fixtures for pvkit temperature/noct-sam from pvlib.temperature.noct_sam.
 
 Run: uv run scripts/fixtures/temperature-noct-sam.py
-Writes packages/core/src/models/temperature/noct-sam/noct-sam-fixtures.json.
+Writes packages/pvkit/src/models/temperature/noct-sam/noct-sam-fixtures.json.
 """
 
 import json
@@ -17,7 +17,7 @@ import numpy as np
 import pvlib
 from pvlib.temperature import noct_sam
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/temperature/noct-sam/noct-sam-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/temperature/noct-sam/noct-sam-fixtures.json"
 
 
 def case(poa, temp_air, wind, noct, eta, eff=None, ta=0.9, height=1, standoff=4.0):

@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core clearsky/ineichen from pvlib.clearsky.ineichen.
+"""Fixtures for pvkit clearsky/ineichen from pvlib.clearsky.ineichen.
 
 Run: uv run scripts/fixtures/clearsky-ineichen.py
-Writes packages/core/src/models/clearsky/ineichen/ineichen-fixtures.json.
+Writes packages/pvkit/src/models/clearsky/ineichen/ineichen-fixtures.json.
 """
 
 import json
@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/clearsky/ineichen/ineichen-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/clearsky/ineichen/ineichen-fixtures.json"
 
 
 def case(z, am, tl, altitude=0.0, dni_extra=1364.0, perez=False):

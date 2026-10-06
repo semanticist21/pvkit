@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core decomposition/erbs from pvlib.irradiance.erbs.
+"""Fixtures for pvkit decomposition/erbs from pvlib.irradiance.erbs.
 
 Run: uv run scripts/fixtures/decomposition-erbs.py
-Writes packages/core/src/models/decomposition/erbs/erbs-fixtures.json.
+Writes packages/pvkit/src/models/decomposition/erbs/erbs-fixtures.json.
 Cases with `timeMs` pass a UTC DatetimeIndex; cases with `dniExtra` pass a day-of-year and
 record pvlib's get_extra_radiation(doy) (the value erbs uses internally) as the input.
 """
@@ -19,7 +19,7 @@ import numpy as np
 import pandas as pd
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/decomposition/erbs/erbs-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/decomposition/erbs/erbs-fixtures.json"
 
 
 def case(ghi, zenith, time_ms=None, doy=None, min_cos_zenith=0.065, max_zenith=87.0):

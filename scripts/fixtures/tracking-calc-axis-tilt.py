@@ -4,12 +4,12 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core tracking/calc-axis-tilt and tracking/calc-cross-axis-tilt
+"""Fixtures for pvkit tracking/calc-axis-tilt and tracking/calc-cross-axis-tilt
 from pvlib.tracking.calc_axis_tilt / calc_cross_axis_tilt (same slope geometry).
 
 Run: uv run scripts/fixtures/tracking-calc-axis-tilt.py
 Writes calc-axis-tilt-fixtures.json and calc-cross-axis-tilt-fixtures.json into
-packages/core/src/models/tracking/<method>/.
+packages/pvkit/src/models/tracking/<method>/.
 """
 
 import json
@@ -18,7 +18,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-DIR = Path(__file__).resolve().parents[2] / "packages/core/src/models/tracking"
+DIR = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/tracking"
 
 # Edge geometry: flat ground, axis along / across / oblique to the slope, steep slope.
 edges = [(180.0, 0.0, 180.0), (180.0, 10.0, 180.0), (180.0, 10.0, 0.0), (90.0, 10.0, 180.0),

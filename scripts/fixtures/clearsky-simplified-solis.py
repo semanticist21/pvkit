@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core clearsky/simplified-solis from pvlib.clearsky.simplified_solis.
+"""Fixtures for pvkit clearsky/simplified-solis from pvlib.clearsky.simplified_solis.
 
 Run: uv run scripts/fixtures/clearsky-simplified-solis.py
-Writes packages/core/src/models/clearsky/simplified-solis/simplified-solis-fixtures.json.
+Writes packages/pvkit/src/models/clearsky/simplified-solis/simplified-solis-fixtures.json.
 """
 
 import json
@@ -17,7 +17,7 @@ import numpy as np
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/clearsky/simplified-solis/simplified-solis-fixtures.json")
+       / "packages/pvkit/src/models/clearsky/simplified-solis/simplified-solis-fixtures.json")
 
 
 def case(h, aod700=0.1, pw=1.0, pressure=101325.0, dni_extra=1364.0):

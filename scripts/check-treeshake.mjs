@@ -1,11 +1,12 @@
 // Tree-shaking guard: every public method entry in dist/ must only reach JS inside its own
 // module folder (dist/models/<module>/) or the shared foundation (units, sum, runtime).
 // A hit means a cross-module import slipped in and per-method imports pull extra code.
+// The chain module is exempt: it is the documented orchestrator that imports other modules.
 // Run after `pnpm build`: node scripts/check-treeshake.mjs
 import { readFileSync } from "node:fs";
 import { dirname, relative, resolve } from "node:path";
 
-const pkgDir = resolve(import.meta.dirname, "../packages/core");
+const pkgDir = resolve(import.meta.dirname, "../packages/pvkit");
 const { publishConfig } = JSON.parse(readFileSync(resolve(pkgDir, "package.json"), "utf8"));
 const IMPORT = /(?:import|export)\s[^"']*?from\s*["'](\.[^"']+)["']|import\s*["'](\.[^"']+)["']/g;
 const FOUNDATION = /^dist\/(units|sum|rolldown-runtime)[^/]*\.js$/;
@@ -22,7 +23,7 @@ const reach = (file, seen = new Set()) => {
 let bad = 0;
 for (const [key, target] of Object.entries(publishConfig.exports)) {
   const mod = key.match(/^\.\/([^/]+)\/[^/]+$/)?.[1]; // method entries only
-  if (!mod) continue;
+  if (!mod || mod === "chain") continue;
   for (const file of reach(resolve(pkgDir, target))) {
     const rel = relative(pkgDir, file);
     if (!rel.startsWith(`dist/models/${mod}/`) && !FOUNDATION.test(rel)) {

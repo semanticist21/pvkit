@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core losses/combine-loss-factors from pvlib.pvsystem.combine_loss_factors.
+"""Fixtures for pvkit losses/combine-loss-factors from pvlib.pvsystem.combine_loss_factors.
 
 Run: uv run scripts/fixtures/losses-combine-loss-factors.py
-Writes packages/core/src/models/losses/combine-loss-factors/combine-loss-factors-fixtures.json.
+Writes packages/pvkit/src/models/losses/combine-loss-factors/combine-loss-factors-fixtures.json.
 """
 
 import json
@@ -18,7 +18,7 @@ import pandas as pd
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/losses/combine-loss-factors/combine-loss-factors-fixtures.json")
+       / "packages/pvkit/src/models/losses/combine-loss-factors/combine-loss-factors-fixtures.json")
 INDEX = pd.DatetimeIndex([pd.Timestamp("2024-01-01", tz="UTC")])
 
 

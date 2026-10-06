@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core pvsystem/energy-kwh.
+"""Fixtures for pvkit pvsystem/energy-kwh.
 
 Reference: math.fsum (exactly rounded sum) — pvlib has no energy integrator; energy is
 Σ P·Δt as pvlib users compute it with `power.sum() * step_hours / 1000`.
@@ -22,7 +22,7 @@ import numpy as np
 import pvlib
 
 METHOD = "energy-kwh"
-OUT = Path(__file__).resolve().parents[2] / f"packages/core/src/models/pvsystem/{METHOD}/{METHOD}-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / f"packages/pvkit/src/models/pvsystem/{METHOD}/{METHOD}-fixtures.json"
 M = 0xFFFFFFFF
 
 

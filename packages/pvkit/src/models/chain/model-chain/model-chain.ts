@@ -1,0 +1,183 @@
+import type { Degrees } from "../../../units.ts";
+import { absoluteAirmass } from "../../atmosphere/absolute-airmass/index.ts";
+import { alt2pres } from "../../atmosphere/altitude-pressure/index.ts";
+import { relativeAirmass } from "../../atmosphere/relative-airmass/index.ts";
+import { ineichen } from "../../clearsky/ineichen/index.ts";
+import { physical } from "../../iam/physical/index.ts";
+import { aoi as angleOfIncidence } from "../../irradiance/aoi/index.ts";
+import { extraRadiation } from "../../irradiance/extra-radiation/index.ts";
+import { totalIrradiance } from "../../irradiance/total-irradiance/index.ts";
+import { pvwattsDc } from "../../pvsystem/pvwatts-dc/index.ts";
+import { pvwattsInverter } from "../../pvsystem/pvwatts-inverter/index.ts";
+import { type PvwattsLossesInput, pvwattsLosses } from "../../pvsystem/pvwatts-losses/index.ts";
+import { spa } from "../../solarposition/spa/index.ts";
+import { SAPM_TEMPERATURE_PARAMETERS, sapmCell } from "../../temperature/sapm/index.ts";
+
+/** Measured or modelled horizontal irradiance, W/m². */
+export interface Weather {
+  ghi: number;
+  dni: number;
+  dhi: number;
+}
+
+interface ModelChainBase {
+  /** Instant as UTC epoch milliseconds. */
+  timeMs: number;
+  /** Site latitude, degrees, north-positive. */
+  latitude: number;
+  /** Site longitude, degrees, east-positive. */
+  longitude: number;
+  /** Site height above sea level, m. Default 0. */
+  altitude?: number;
+  /** Panel tilt from horizontal, degrees. */
+  surfaceTilt: number;
+  /** Panel azimuth, degrees from north, clockwise (south = 180). */
+  surfaceAzimuth: number;
+  /** Ground albedo, 0..1. Default 0.25. */
+  albedo?: number;
+  /**
+   * Ambient air temperature, °C. When omitted, as in pvlib ModelChain: the cell temperature
+   * uses 20 and the sun position refracts at 12 (pvlib `Location.get_solarposition` default).
+   */
+  tempAir?: number;
+  /** Wind speed, m/s. Default 0 (pvlib ModelChain default). */
+  windSpeed?: number;
+  /** Array DC rating at 1000 W/m² and 25 °C, W. */
+  pdc0: number;
+  /** Temperature coefficient of power, 1/°C (e.g. −0.004). */
+  gammaPdc: number;
+  /** Inverter DC input limit, W. Default `pdc0 / 1.2 / etaInvNom` (PVWatts DC/AC ratio 1.2). */
+  inverterPdc0?: number;
+  /** Nominal inverter efficiency. Default 0.96. */
+  etaInvNom?: number;
+  /** PVWatts loss categories (fractions). Default: PVWatts defaults, ≈ 14.08 % total. */
+  losses?: PvwattsLossesInput;
+  /** SAPM cell-temperature parameters. Default open rack, glass/glass. */
+  temperatureModel?: { a: number; b: number; tempDelta: number };
+  /** Sky diffuse transposition model. Default "haydavies" (pvlib ModelChain default). */
+  transposition?: "isotropic" | "klucher" | "haydavies" | "reindl" | "perez";
+  /** ΔT = TT − UT, seconds. Default 67. */
+  deltaT?: number;
+}
+
+/**
+ * Inputs for {@link modelChain}. Give either measured `weather`, or a `linkeTurbidity` to
+ * model the clear sky (Ineichen) instead.
+ */
+export type ModelChainInput = ModelChainBase &
+  ({ weather: Weather; linkeTurbidity?: never } | { weather?: never; linkeTurbidity: number });
+
+/** One instant of {@link modelChain} output. Angles in degrees, irradiance W/m², power W. */
+export interface ModelChainResult {
+  apparentZenith: Degrees;
+  azimuth: Degrees;
+  aoi: Degrees;
+  ghi: number;
+  dni: number;
+  dhi: number;
+  poaGlobal: number;
+  /** POA after the physical IAM (beam only), W/m². */
+  effectiveIrradiance: number;
+  tempCell: number;
+  /** DC power after PVWatts losses, W. */
+  pdc: number;
+  pac: number;
+}
+
+/**
+ * pvlib `ModelChain` with PVWatts DC/AC/losses models, for one instant: SPA sun position →
+ * Kasten–Young air mass → (Ineichen clear sky) → transposition (Hay–Davies by default, the
+ * plain ModelChain default; `with_pvwatts` uses Perez) → physical IAM → SAPM cell
+ * temperature → PVWatts DC → PVWatts losses → PVWatts inverter. Loop it over timestamps and
+ * pass `pac` to `energyKwh` for energy. Night steps give 0; with `transposition: "perez"`, measured
+ * `dni = dhi = 0` while the sun is up gives NaN, as in pvlib.
+ *
+ * @example
+ * modelChain({ timeMs: Date.UTC(2025, 5, 21, 3), latitude: 37.57, longitude: 126.98,
+ *   surfaceTilt: 30, surfaceAzimuth: 180, pdc0: 5000, gammaPdc: -0.004, linkeTurbidity: 3 }).pac;
+ */
+export const modelChain = (input: ModelChainInput): ModelChainResult => {
+  const {
+    timeMs,
+    latitude,
+    longitude,
+    altitude = 0,
+    surfaceTilt,
+    surfaceAzimuth,
+    albedo = 0.25,
+    tempAir,
+    windSpeed = 0,
+    pdc0,
+    gammaPdc,
+    etaInvNom = 0.96,
+    inverterPdc0 = pdc0 / 1.2 / etaInvNom,
+    losses,
+    temperatureModel = SAPM_TEMPERATURE_PARAMETERS.openRackGlassGlass,
+    transposition = "haydavies",
+    deltaT = 67,
+  } = input;
+  if (!input.weather && !Number.isFinite(input.linkeTurbidity)) {
+    throw new RangeError("modelChain needs weather or a finite linkeTurbidity");
+  }
+  const pressure = alt2pres({ altitude });
+  // ModelChain refracts at the caller's temp_air, else Location.get_solarposition's 12 °C.
+  const sun = spa({
+    timeMs,
+    latitude,
+    longitude,
+    altitude,
+    pressure,
+    tempAir: tempAir ?? 12,
+    deltaT,
+  });
+  const airmassRelative = relativeAirmass({ solarZenith: sun.apparentZenith });
+  const dniExtra = extraRadiation({ timeMs });
+  const sky =
+    input.weather ??
+    ineichen({
+      apparentZenith: sun.apparentZenith,
+      airmassAbsolute: absoluteAirmass({ airmassRelative, pressure }),
+      linkeTurbidity: input.linkeTurbidity,
+      altitude,
+      dniExtra,
+    });
+  const geometry = {
+    surfaceTilt,
+    surfaceAzimuth,
+    solarZenith: sun.apparentZenith,
+    solarAzimuth: sun.azimuth,
+  };
+  const aoi = angleOfIncidence(geometry);
+  const poa = totalIrradiance({
+    ...geometry,
+    ghi: sky.ghi,
+    dni: sky.dni,
+    dhi: sky.dhi,
+    albedo,
+    model: transposition,
+    dniExtra,
+    airmassRelative,
+  });
+  const effectiveIrradiance = poa.poaDirect * physical({ aoi }) + poa.poaDiffuse;
+  const tempCell = sapmCell({
+    poaGlobal: poa.poaGlobal,
+    tempAir: tempAir ?? 20,
+    windSpeed,
+    ...temperatureModel,
+  });
+  const pdc =
+    pvwattsDc({ effectiveIrradiance, tempCell, pdc0, gammaPdc }) * (1 - pvwattsLosses(losses));
+  return {
+    apparentZenith: sun.apparentZenith,
+    azimuth: sun.azimuth,
+    aoi,
+    ghi: sky.ghi,
+    dni: sky.dni,
+    dhi: sky.dhi,
+    poaGlobal: poa.poaGlobal,
+    effectiveIrradiance,
+    tempCell,
+    pdc,
+    pac: pvwattsInverter({ pdc, pdc0: inverterPdc0, etaInvNom }),
+  };
+};

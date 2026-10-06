@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core iam/marion from pvlib.iam.marion_integrate / marion_diffuse.
+"""Fixtures for pvkit iam/marion from pvlib.iam.marion_integrate / marion_diffuse.
 
 Run: uv run scripts/fixtures/iam-marion.py
-Writes packages/core/src/models/iam/marion/marion-fixtures.json.
+Writes packages/pvkit/src/models/iam/marion/marion-fixtures.json.
 Each case names the IAM model + its pvlib kwargs; the test rebuilds the IAM function from
 the sibling pvkit methods. `num` absent → pvlib default (and marion_diffuse is cross-checked).
 """
@@ -19,7 +19,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/iam/marion/marion-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/iam/marion/marion-fixtures.json"
 MODELS = {"physical": pvlib.iam.physical, "ashrae": pvlib.iam.ashrae,
           "martinRuiz": pvlib.iam.martin_ruiz, "sapm": pvlib.iam.sapm}
 # pvkit field name → pvlib kwarg.

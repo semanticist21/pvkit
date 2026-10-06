@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core atmosphere/kasten96-lt from pvlib.atmosphere.kasten96_lt.
+"""Fixtures for pvkit atmosphere/kasten96-lt from pvlib.atmosphere.kasten96_lt.
 
 Run: uv run scripts/fixtures/atmosphere-kasten96-lt.py
-Writes packages/core/src/models/atmosphere/kasten96-lt/kasten96-lt-fixtures.json.
+Writes packages/pvkit/src/models/atmosphere/kasten96-lt/kasten96-lt-fixtures.json.
 """
 
 import json
@@ -17,7 +17,7 @@ import numpy as np
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/atmosphere/kasten96-lt/kasten96-lt-fixtures.json")
+       / "packages/pvkit/src/models/atmosphere/kasten96-lt/kasten96-lt-fixtures.json")
 
 
 def case(am, pw, aod):

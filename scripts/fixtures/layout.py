@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""@pvkit/layout fixtures from pvlib.shading (and numpy.interp for the horizon profile).
+"""pvkit/layout fixtures from pvlib.shading (and numpy.interp for the horizon profile).
 
 Run: uv run scripts/fixtures/layout.py
 """
@@ -17,7 +17,7 @@ from pathlib import Path
 import numpy as np
 from pvlib import shading
 
-SRC = Path(__file__).resolve().parents[2] / "packages/layout/src"
+SRC = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/layout"
 
 
 def num(v):

@@ -4,11 +4,11 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core pvsystem/{pvwatts-dc, pvwatts-losses, pvwatts-inverter}.
+"""Fixtures for pvkit pvsystem/{pvwatts-dc, pvwatts-losses, pvwatts-inverter}.
 
 References: pvlib.pvsystem.pvwatts_dc, pvlib.pvsystem.pvwatts_losses, pvlib.inverter.pvwatts.
 Run: uv run scripts/fixtures/pvsystem-pvwatts.py
-Writes <method>-fixtures.json into packages/core/src/models/pvsystem/<method>/.
+Writes <method>-fixtures.json into packages/pvkit/src/models/pvsystem/<method>/.
 """
 
 import json
@@ -17,7 +17,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-DIR = Path(__file__).resolve().parents[2] / "packages/core/src/models/pvsystem"
+DIR = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/pvsystem"
 rng = np.random.default_rng(20261005)
 u = lambda lo, hi: float(rng.uniform(lo, hi))  # noqa: E731
 

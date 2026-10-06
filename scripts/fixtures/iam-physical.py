@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core iam/physical from pvlib.iam.physical.
+"""Fixtures for pvkit iam/physical from pvlib.iam.physical.
 
 Run: uv run scripts/fixtures/iam-physical.py
-Writes packages/core/src/models/iam/physical/physical-fixtures.json.
+Writes packages/pvkit/src/models/iam/physical/physical-fixtures.json.
 """
 
 import json
@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/iam/physical/physical-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/iam/physical/physical-fixtures.json"
 
 
 def case(aoi, n=1.526, k=4.0, l=0.002, n_ar=None):

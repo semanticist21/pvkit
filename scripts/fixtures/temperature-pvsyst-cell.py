@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core temperature/pvsyst-cell from pvlib.temperature.pvsyst_cell.
+"""Fixtures for pvkit temperature/pvsyst-cell from pvlib.temperature.pvsyst_cell.
 
 Run: uv run scripts/fixtures/temperature-pvsyst-cell.py
-Writes packages/core/src/models/temperature/pvsyst-cell/pvsyst-cell-fixtures.json and the
+Writes packages/pvkit/src/models/temperature/pvsyst-cell/pvsyst-cell-fixtures.json and the
 TEMPERATURE_MODEL_PARAMETERS['pvsyst'] presets as pvsyst-cell-parameters.ts.
 """
 
@@ -19,7 +19,7 @@ import numpy as np
 import pvlib
 from pvlib.temperature import TEMPERATURE_MODEL_PARAMETERS, pvsyst_cell
 
-DIR = Path(__file__).resolve().parents[2] / "packages/core/src/models/temperature/pvsyst-cell"
+DIR = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/temperature/pvsyst-cell"
 camel = lambda s: re.sub(r"_(\w)", lambda m: m.group(1).upper(), s)  # noqa: E731
 PRESETS = TEMPERATURE_MODEL_PARAMETERS["pvsyst"]
 

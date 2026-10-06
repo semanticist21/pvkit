@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""@pvkit/chain modelChain fixtures from pvlib's own ModelChain with PVWatts DC/AC/losses.
+"""pvkit/chain modelChain fixtures from pvlib's own ModelChain with PVWatts DC/AC/losses.
 
 ModelChain(aoi_model="physical", spectral_model="no_loss", dc/ac/losses "pvwatts",
 temperature_model="sapm", airmass "kastenyoung1989", solar position "nrel_numpy").
@@ -27,7 +27,7 @@ from pvlib.modelchain import ModelChain
 from pvlib.pvsystem import PVSystem
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/chain/src/model-chain/model-chain-fixtures.json")
+       / "packages/pvkit/src/models/chain/model-chain/model-chain-fixtures.json")
 
 _get_solarposition = Location.get_solarposition
 Location.get_solarposition = lambda self, times, **kw: _get_solarposition(

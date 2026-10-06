@@ -184,35 +184,19 @@ importers:
 
   apps/demo:
     dependencies:
-      '@pvkit/core':
+      pvkit:
         specifier: workspace:*
-        version: link:../../packages/core
+        version: link:../../packages/pvkit
     devDependencies:
       vite:
         specifier: ^8.3.2
         version: 8.3.2(jiti@2.7.0)
 
-  packages/chain:
-    dependencies:
-      '@pvkit/core':
-        specifier: workspace:^
-        version: link:../core
-
-  packages/core: {}
-
-  packages/diode:
+  packages/pvkit:
     devDependencies:
       '@pvkit/spec':
         specifier: workspace:*
         version: link:../spec
-
-  packages/economics: {}
-
-  packages/io: {}
-
-  packages/layout: {}
-
-  packages/sizer: {}
 
   packages/spec: {}
 

@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core solarposition/earth-sun-distance from pvlib.solarposition.nrel_earthsun_distance.
+"""Fixtures for pvkit solarposition/earth-sun-distance from pvlib.solarposition.nrel_earthsun_distance.
 
 Run: uv run scripts/fixtures/solarposition-earth-sun-distance.py
-Writes packages/core/src/models/solarposition/earth-sun-distance/earth-sun-distance-fixtures.json.
+Writes packages/pvkit/src/models/solarposition/earth-sun-distance/earth-sun-distance-fixtures.json.
 """
 
 import json
@@ -19,7 +19,7 @@ import pandas as pd
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/solarposition/earth-sun-distance/earth-sun-distance-fixtures.json")
+       / "packages/pvkit/src/models/solarposition/earth-sun-distance/earth-sun-distance-fixtures.json")
 
 
 def ms(*args):

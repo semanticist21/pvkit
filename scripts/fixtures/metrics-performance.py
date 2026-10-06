@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core metrics/{performance-ratio,specific-yield,capacity-factor,availability}.
+"""Fixtures for pvkit metrics/{performance-ratio,specific-yield,capacity-factor,availability}.
 
 pvlib has no metrics implementation, so the reference is the explicit formula from
 IEC 61724-1 and Marion et al. 2005 (NREL/CP-520-37358); temperature-corrected PR from
@@ -20,7 +20,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-ROOT = Path(__file__).resolve().parents[2] / "packages/core/src/models/metrics"
+ROOT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/metrics"
 rng = np.random.default_rng(20261005)
 
 

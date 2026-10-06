@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core decomposition/disc from pvlib.irradiance.disc.
+"""Fixtures for pvkit decomposition/disc from pvlib.irradiance.disc.
 
 Run: uv run scripts/fixtures/decomposition-disc.py
-Writes packages/core/src/models/decomposition/disc/disc-fixtures.json. NaN outputs → null.
+Writes packages/pvkit/src/models/decomposition/disc/disc-fixtures.json. NaN outputs → null.
 """
 
 import json
@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/decomposition/disc/disc-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/decomposition/disc/disc-fixtures.json"
 
 
 def num(x):

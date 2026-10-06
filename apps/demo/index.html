@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>pvkit demo</title>
     <link rel="icon" href="data:," />
-    <meta name="description" content="Annual solar kWh estimate computed in your browser with @pvkit/core." />
+    <meta name="description" content="Annual solar kWh estimate computed in your browser with pvkit." />
     <style>
       :root {
         color-scheme: light dark;
@@ -60,7 +60,7 @@
       <h1>Solar kWh estimate</h1>
       <p class="lede">
         Clear-sky annual output, computed in your browser by
-        <a href="https://github.com/semanticist21/pvkit">@pvkit/core</a>: hourly NREL SPA → Ineichen
+        <a href="https://www.npmjs.com/package/pvkit">pvkit</a>: hourly NREL SPA → Ineichen
         clear sky → Perez POA → SAPM cell temperature → PVWatts DC, losses and inverter. No server.
       </p>
       <form id="f">
@@ -88,22 +88,22 @@
       <details>
         <summary>Code for this result</summary>
         <p class="sub">
-          The exact <code>@pvkit/core</code> calls behind the numbers above, with your inputs.
+          The exact <code>pvkit</code> calls behind the numbers above, with your inputs.
           Save as <code>estimate.ts</code>, install, then run <code>node estimate.ts</code> (Node 22.18+) or use any TypeScript runtime.
         </p>
         <button type="button" data-copy="code">Copy code</button>
         <pre><code id="code"></code></pre>
       </details>
       <div class="row">
-        <code id="install">npm i @pvkit/core</code>
+        <code id="install">npm i pvkit</code>
         <button type="button" data-copy="install">Copy install command</button>
-        <a href="https://www.npmjs.com/package/@pvkit/core">@pvkit/core on npm</a>
+        <a href="https://www.npmjs.com/package/pvkit">pvkit on npm</a>
         <a href="https://github.com/semanticist21/pvkit">GitHub</a>
       </div>
       <footer>
         Months are local standard time approximated from longitude. For weather-driven estimates
-        (PVGIS / NASA POWER data), <a href="https://www.npmjs.com/package/@pvkit/io">@pvkit/io</a>
-        is available on npm.
+        (PVGIS / NASA POWER data), use <code>pvkit/io</code> with <code>pvkit/chain</code> from the
+        same <a href="https://www.npmjs.com/package/pvkit">pvkit</a> package.
       </footer>
     </main>
     <script type="module" src="./src/main.ts"></script>

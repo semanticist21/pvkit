@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core irradiance/extra-radiation from pvlib.irradiance.get_extra_radiation.
+"""Fixtures for pvkit irradiance/extra-radiation from pvlib.irradiance.get_extra_radiation.
 
 Run: uv run scripts/fixtures/irradiance-extra-radiation.py
-Writes packages/core/src/models/irradiance/extra-radiation/extra-radiation-fixtures.json and
+Writes packages/pvkit/src/models/irradiance/extra-radiation/extra-radiation-fixtures.json and
 earth-radius-terms.ts (SPA R0..R4 terms copied from pvlib.spa, used by method "nrel").
 """
 
@@ -20,7 +20,7 @@ import pandas as pd
 import pvlib
 from pvlib import spa
 
-DIR = Path(__file__).resolve().parents[2] / "packages/core/src/models/irradiance/extra-radiation"
+DIR = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/irradiance/extra-radiation"
 
 
 def ms(*args):

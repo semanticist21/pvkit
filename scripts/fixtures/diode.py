@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/diode (every method), from pvlib 0.16.1.
+"""Fixtures for pvkit/diode (every method), from pvlib 0.16.1.
 
 Parameters come from the SAM libraries bundled with pvlib (CEC modules, Sandia modules,
 CEC inverters, ADR inverters). The single-diode maximum power point uses
@@ -26,7 +26,7 @@ import pvlib
 from pvlib import inverter, pvsystem, spectrum
 from pvlib import singlediode as sd
 
-ROOT = Path(__file__).resolve().parents[2] / "packages/diode/src"
+ROOT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/diode"
 rng = np.random.default_rng(20261006)
 REF = f"pvlib {pvlib.__version__}"
 

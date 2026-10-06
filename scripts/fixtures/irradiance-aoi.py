@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core irradiance/aoi from pvlib.irradiance.aoi / aoi_projection.
+"""Fixtures for pvkit irradiance/aoi from pvlib.irradiance.aoi / aoi_projection.
 
 Run: uv run scripts/fixtures/irradiance-aoi.py
-Writes packages/core/src/models/irradiance/aoi/aoi-fixtures.json.
+Writes packages/pvkit/src/models/irradiance/aoi/aoi-fixtures.json.
 """
 
 import json
@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/irradiance/aoi/aoi-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/irradiance/aoi/aoi-fixtures.json"
 
 
 def case(tilt, surf_az, zen, sun_az):

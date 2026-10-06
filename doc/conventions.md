@@ -6,13 +6,15 @@ Cross-module rules every model follows. Method-specific math lives next to the c
 
 ## Inputs / outputs
 
-- **Scalar core.** One instant, one location per call; plain object in, plain object out.
+- **Scalar models.** One instant, one location per call; plain object in, plain object out.
   Models with state across timesteps (fuentes, soiling) are step functions: prior state in,
   new state out, the caller loops. DIRINT-style neighbour terms are explicit inputs. Only
   reductions over a series (energy, metrics) take `ArrayLike<number>`.
 - **No cross-module calls.** A model needing another module's output (air mass, zenith,
-  extraterrestrial DNI) takes it as an input; `src/pipeline.test.ts` shows the wiring.
-- **Time** is `timeMs: number` — UTC epoch milliseconds. Core never sees a `Date`, a
+  extraterrestrial DNI) takes it as an input; `src/pipeline.test.ts` shows the wiring. The
+  one exception is `chain`, the orchestration module, which calls the other modules for the
+  caller (`doc/architecture.md` → "Module boundaries & tests").
+- **Time** is `timeMs: number` — UTC epoch milliseconds. Models never see a `Date`, a
   timezone, or a local time; callers pass `date.getTime()`. Julian dates are derived inside
   the model, never accepted or persisted.
 - **ΔT** (TT − UT) is an optional per-call `deltaT?: number` in seconds, default `67`

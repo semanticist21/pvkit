@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core iam/ashrae from pvlib.iam.ashrae.
+"""Fixtures for pvkit iam/ashrae from pvlib.iam.ashrae.
 
 Run: uv run scripts/fixtures/iam-ashrae.py
-Writes packages/core/src/models/iam/ashrae/ashrae-fixtures.json.
+Writes packages/pvkit/src/models/iam/ashrae/ashrae-fixtures.json.
 """
 
 import json
@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/iam/ashrae/ashrae-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/iam/ashrae/ashrae-fixtures.json"
 
 
 def case(aoi, b=0.05):

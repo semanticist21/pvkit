@@ -14,6 +14,9 @@ const inv = CEC_INVERTERS.find((i) => i.name === "SMA America: SB70-1SP-US-40 {2
 console.log(inv.paco, inv.vdcMax, inv.mpptLow, inv.mpptHigh); // 7000 480 245 480
 ```
 
+Field names match the inputs of [`pvkit`](https://www.npmjs.com/package/pvkit)'s `diode` and
+`sizer` modules, so a row spreads straight in (examples in its README).
+
 > For broader context and positioning, see the [monorepo README](https://github.com/semanticist21/pvkit/blob/main/README.md).
 
 ## Libraries
@@ -36,7 +39,7 @@ const m = CEC_MODULES.find((x) => x.name === "Jinko Solar Co Ltd JKM200M-60B");
 ```
 
 Units are fixed per field and documented on each type (W, V, A, m², °C; `gammaPmp` in 1/°C
-so it feeds `@pvkit/core` `pvwattsDc` directly). Rows are as published, not curated.
+so it feeds `pvkit`'s `pvwattsDc` directly). Rows are as published, not curated.
 
 ## Source and correctness
 

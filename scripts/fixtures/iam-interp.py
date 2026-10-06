@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core iam/interp from pvlib.iam.interp (method='linear').
+"""Fixtures for pvkit iam/interp from pvlib.iam.interp (method='linear').
 
 Run: uv run scripts/fixtures/iam-interp.py
-Writes packages/core/src/models/iam/interp/interp-fixtures.json.
+Writes packages/pvkit/src/models/iam/interp/interp-fixtures.json.
 """
 
 import json
@@ -16,7 +16,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/iam/interp/interp-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/iam/interp/interp-fixtures.json"
 
 
 def case(aoi, theta_ref, iam_ref, normalize=True):

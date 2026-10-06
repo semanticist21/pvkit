@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core solarposition/sunrise-spa from pvlib.solarposition.sun_rise_set_transit_spa.
+"""Fixtures for pvkit solarposition/sunrise-spa from pvlib.solarposition.sun_rise_set_transit_spa.
 
 Run: uv run scripts/fixtures/solarposition-sunrise-spa.py
-Writes packages/core/src/models/solarposition/sunrise-spa/sunrise-spa-fixtures.json.
+Writes packages/pvkit/src/models/solarposition/sunrise-spa/sunrise-spa-fixtures.json.
 Times are UTC midnights (UTC-localized index); results are UTC epoch ms, null for NaT
 (polar day/night).
 """
@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/solarposition/sunrise-spa/sunrise-spa-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/solarposition/sunrise-spa/sunrise-spa-fixtures.json"
 
 
 def ms(*args):

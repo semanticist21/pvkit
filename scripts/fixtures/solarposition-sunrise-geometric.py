@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core solarposition/sunrise-geometric from pvlib.solarposition.sun_rise_set_transit_geometric.
+"""Fixtures for pvkit solarposition/sunrise-geometric from pvlib.solarposition.sun_rise_set_transit_geometric.
 
 Run: uv run scripts/fixtures/solarposition-sunrise-geometric.py
-Writes packages/core/src/models/solarposition/sunrise-geometric/sunrise-geometric-fixtures.json.
+Writes packages/pvkit/src/models/solarposition/sunrise-geometric/sunrise-geometric-fixtures.json.
 Times are UTC-localized; declination is given in degrees (pvlib takes radians); results are
 UTC epoch ms, null for NaT (polar day/night).
 """
@@ -21,7 +21,7 @@ import pandas as pd
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/solarposition/sunrise-geometric/sunrise-geometric-fixtures.json")
+       / "packages/pvkit/src/models/solarposition/sunrise-geometric/sunrise-geometric-fixtures.json")
 
 
 def ms(*args):

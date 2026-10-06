@@ -4,11 +4,11 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core decomposition/complete-irradiance from
+"""Fixtures for pvkit decomposition/complete-irradiance from
 pvlib.irradiance.complete_irradiance.
 
 Run: uv run scripts/fixtures/decomposition-complete-irradiance.py
-Writes packages/core/src/models/decomposition/complete-irradiance/complete-irradiance-fixtures.json.
+Writes packages/pvkit/src/models/decomposition/complete-irradiance/complete-irradiance-fixtures.json.
 NaN outputs are stored as null.
 """
 
@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 import pvlib
 
-OUT = (Path(__file__).resolve().parents[2] / "packages/core/src/models/decomposition/"
+OUT = (Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/decomposition/"
        "complete-irradiance/complete-irradiance-fixtures.json")
 
 

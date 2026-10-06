@@ -4,11 +4,11 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core atmosphere/bird-hulstrom80-aod-bb from
+"""Fixtures for pvkit atmosphere/bird-hulstrom80-aod-bb from
 pvlib.atmosphere.bird_hulstrom80_aod_bb.
 
 Run: uv run scripts/fixtures/atmosphere-bird-hulstrom80-aod-bb.py
-Writes packages/core/src/models/atmosphere/bird-hulstrom80-aod-bb/
+Writes packages/pvkit/src/models/atmosphere/bird-hulstrom80-aod-bb/
 bird-hulstrom80-aod-bb-fixtures.json.
 """
 
@@ -18,7 +18,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-OUT = (Path(__file__).resolve().parents[2] / "packages/core/src/models/atmosphere/"
+OUT = (Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/atmosphere/"
        "bird-hulstrom80-aod-bb/bird-hulstrom80-aod-bb-fixtures.json")
 
 

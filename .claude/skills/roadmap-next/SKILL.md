@@ -27,12 +27,12 @@ no status files. Other agents may share this same checkout: never `git add -A`/`
 
 ## 2. Build
 
-- Follow `AGENTS.md`, `doc/conventions.md`, `doc/architecture.md`. A new package mirrors
-  `packages/core`: ESM-only, no third-party runtime deps, tsdown + vitest, per-method folders,
-  method `.md` with `## Reference`, fixtures from a committed generator against an
-  established reference (paper, pvlib, NREL SAM, …), README, `AGENTS.md` ≤ 50 lines.
-  Extend `harness.config.json` globs and CI to the new path.
-- Scope = the item's Queue row and ROADMAP section (if any), plus the package `AGENTS.md`. Decide conventional choices yourself; ask one focused
+- Follow `AGENTS.md`, `doc/conventions.md`, `doc/architecture.md`. New models go in
+  `packages/pvkit/src/models/<module>/<method>/` (per-method folder, method `.md` with
+  `## Reference`, fixtures from a committed generator against an established reference: paper,
+  pvlib, NREL SAM, …). A new module gets its own `index.ts`; a separate package only for heavy
+  data like `@pvkit/spec` (mirror it, extend `harness.config.json` globs and CI to the path).
+- Scope = the item's Queue row and ROADMAP section (if any), plus the nearest `AGENTS.md`. Decide conventional choices yourself; ask one focused
   question (the orchestrator in a multi-agent run, else the user) only for a product choice
   the section leaves genuinely open.
 - Taking over: read the existing Path, its `git log`, and its ROADMAP entry, then continue

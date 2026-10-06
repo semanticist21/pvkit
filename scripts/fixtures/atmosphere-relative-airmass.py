@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core atmosphere/relative-airmass from pvlib.atmosphere.get_relative_airmass.
+"""Fixtures for pvkit atmosphere/relative-airmass from pvlib.atmosphere.get_relative_airmass.
 
 Run: uv run scripts/fixtures/atmosphere-relative-airmass.py
-Writes packages/core/src/models/atmosphere/relative-airmass/relative-airmass-fixtures.json.
+Writes packages/pvkit/src/models/atmosphere/relative-airmass/relative-airmass-fixtures.json.
 """
 
 import json
@@ -19,7 +19,7 @@ import numpy as np
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/atmosphere/relative-airmass/relative-airmass-fixtures.json")
+       / "packages/pvkit/src/models/atmosphere/relative-airmass/relative-airmass-fixtures.json")
 
 
 def case(zenith, model):

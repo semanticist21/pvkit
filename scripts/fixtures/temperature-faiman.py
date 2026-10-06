@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core temperature/faiman from pvlib.temperature.faiman.
+"""Fixtures for pvkit temperature/faiman from pvlib.temperature.faiman.
 
 Run: uv run scripts/fixtures/temperature-faiman.py
-Writes packages/core/src/models/temperature/faiman/faiman-fixtures.json.
+Writes packages/pvkit/src/models/temperature/faiman/faiman-fixtures.json.
 """
 
 import json
@@ -17,7 +17,7 @@ import numpy as np
 import pvlib
 from pvlib.temperature import faiman
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/temperature/faiman/faiman-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/temperature/faiman/faiman-fixtures.json"
 
 
 def case(poa, temp_air, wind, u0=25.0, u1=6.84):

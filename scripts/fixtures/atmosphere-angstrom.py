@@ -4,11 +4,11 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core atmosphere/angstrom from pvlib.atmosphere.angstrom_aod_at_lambda
+"""Fixtures for pvkit atmosphere/angstrom from pvlib.atmosphere.angstrom_aod_at_lambda
 and angstrom_alpha.
 
 Run: uv run scripts/fixtures/atmosphere-angstrom.py
-Writes packages/core/src/models/atmosphere/angstrom/angstrom-fixtures.json with one case list
+Writes packages/pvkit/src/models/atmosphere/angstrom/angstrom-fixtures.json with one case list
 per function.
 """
 
@@ -19,7 +19,7 @@ import numpy as np
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/atmosphere/angstrom/angstrom-fixtures.json")
+       / "packages/pvkit/src/models/atmosphere/angstrom/angstrom-fixtures.json")
 atm = pvlib.atmosphere
 
 

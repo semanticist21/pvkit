@@ -10,7 +10,7 @@ source under a `durableSourceGlob` changes.
 | --- | --- |
 | **Base skeleton** — architecture, module plan, design decisions | `doc/architecture.md` |
 | **Model I/O, units, reference/fixture policy** | `doc/conventions.md` |
-| **Package-only decisions** | `packages/<p>/AGENTS.md`; method list → `packages/<p>/README.md`; core status → `packages/core/features.md` |
+| **Package-only decisions** | `packages/pvkit/AGENTS.md`, `packages/spec/AGENTS.md`; method list → `packages/pvkit/README.md` "Modules"; status and deferred scope → `packages/pvkit/features.md` |
 | **Package list + release status** | root `README.md` "Packages"; work queue → `ROADMAP.md` |
 | **Gotchas / mistakes / surprises** — things a future session would trip on | `doc/playbook.md` (append-only log) |
 | **Plans** — scoped work-in-progress notes | `doc/plan/` |

@@ -57,7 +57,7 @@ export interface SandiaModule {
   a2: number;
   a3: number;
   a4: number;
-  /** Incidence-angle modifier polynomial coefficients (core `iam/sapm`). */
+  /** Incidence-angle modifier polynomial coefficients (`pvkit/iam/sapm`). */
   b0: number;
   b1: number;
   b2: number;
@@ -66,7 +66,7 @@ export interface SandiaModule {
   b5: number;
   /** Fraction of diffuse irradiance used by the module. */
   fd: number;
-  /** SAPM module-temperature coefficient a (core `temperature/sapm`). */
+  /** SAPM module-temperature coefficient a (`pvkit/temperature/sapm`). */
   a: number;
   /** SAPM module-temperature coefficient b, s/m. */
   b: number;

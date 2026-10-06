@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/sizer {voltage-at-temperature,nec-voltage-correction,string-size}.
+"""Fixtures for pvkit/sizer {voltage-at-temperature,nec-voltage-correction,string-size}.
 
 The reference is the explicit rule of NFPA 70 (NEC) §690.7(A) — coefficient method and
 Table 690.7(A) — evaluated in Python float64, plus the integer limits floor(Vdcmax/Voc_max),
@@ -19,7 +19,7 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[2] / "packages/sizer/src"
+ROOT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/sizer"
 rng = np.random.default_rng(20261006)
 META = {"reference": "NEC 2023 690.7(A) explicit formulas, Python float64"}
 

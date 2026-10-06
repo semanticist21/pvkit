@@ -7,7 +7,7 @@
 """End-to-end fixture: sun position → clear-sky → Perez POA → SAPM cell temp → PVWatts DC/AC → kWh.
 
 Mirrors pvlib's ModelChain-style manual chain with every parameter explicit, so the TS
-pipeline test (packages/core/src/pipeline.test.ts) checks that pvkit modules compose.
+pipeline test (packages/pvkit/src/pipeline.test.ts) checks that pvkit modules compose.
 Run: uv run scripts/fixtures/pipeline.py
 """
 
@@ -17,7 +17,7 @@ from pathlib import Path
 import pandas as pd
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/pipeline-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/pipeline-fixtures.json"
 P = dict(latitude=37.5665, longitude=126.978, altitude=38.0, linkeTurbidity=3.0, surfaceTilt=30.0,
          surfaceAzimuth=180.0, albedo=0.25, tempAir=25.0, windSpeed=1.0, pdc0=5000.0,
          gammaPdc=-0.004, inverterPdc0=4500.0, etaInvNom=0.96, stepMinutes=15)

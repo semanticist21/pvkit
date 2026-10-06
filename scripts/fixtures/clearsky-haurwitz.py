@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core clearsky/haurwitz from pvlib.clearsky.haurwitz.
+"""Fixtures for pvkit clearsky/haurwitz from pvlib.clearsky.haurwitz.
 
 Run: uv run scripts/fixtures/clearsky-haurwitz.py
-Writes packages/core/src/models/clearsky/haurwitz/haurwitz-fixtures.json.
+Writes packages/pvkit/src/models/clearsky/haurwitz/haurwitz-fixtures.json.
 """
 
 import json
@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/clearsky/haurwitz/haurwitz-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/clearsky/haurwitz/haurwitz-fixtures.json"
 
 
 def case(z):

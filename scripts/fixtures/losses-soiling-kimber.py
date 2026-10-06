@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core losses/soiling-kimber from pvlib.soiling.kimber.
+"""Fixtures for pvkit losses/soiling-kimber from pvlib.soiling.kimber.
 
 Run: uv run scripts/fixtures/losses-soiling-kimber.py
-Writes packages/core/src/models/losses/soiling-kimber/soiling-kimber-fixtures.json.
+Writes packages/pvkit/src/models/losses/soiling-kimber/soiling-kimber-fixtures.json.
 
 Each case is a whole series: pvlib runs once on it, and every step records the per-step
 TS input (trailing-window rainfall, timestep, manual-wash flag) plus pvlib's output. The
@@ -22,7 +22,7 @@ import pandas as pd
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/losses/soiling-kimber/soiling-kimber-fixtures.json")
+       / "packages/pvkit/src/models/losses/soiling-kimber/soiling-kimber-fixtures.json")
 
 
 def scenario(name, rain, *, cleaning_threshold=6.0, soiling_loss_rate=0.0015, grace_period=14,

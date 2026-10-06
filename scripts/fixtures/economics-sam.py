@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Independent-convention fixtures for @pvkit/economics, computed by NREL SAM (PySAM 7.1.1).
+"""Independent-convention fixtures for pvkit/economics, computed by NREL SAM (PySAM 7.1.1).
 
 economics.py pins the arithmetic against the spec formula restated in Python; this script
 pins the conventions against SAM's own compute modules:
@@ -26,7 +26,7 @@ import numpy as np
 import PySAM.Lcoefcr as Lcoefcr
 import PySAM.Utilityrate5 as Utilityrate5
 
-ROOT = Path(__file__).resolve().parents[2] / "packages/economics/src"
+ROOT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/economics"
 rng = np.random.default_rng(20261007)
 DAYS = 365
 

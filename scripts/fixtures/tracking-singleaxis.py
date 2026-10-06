@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core tracking/singleaxis from pvlib.tracking.singleaxis.
+"""Fixtures for pvkit tracking/singleaxis from pvlib.tracking.singleaxis.
 
 Run: uv run scripts/fixtures/tracking-singleaxis.py
-Writes packages/core/src/models/tracking/singleaxis/singleaxis-fixtures.json.
+Writes packages/pvkit/src/models/tracking/singleaxis/singleaxis-fixtures.json.
 NaN outputs (sun below horizon) are written as null.
 """
 
@@ -18,7 +18,7 @@ from pathlib import Path
 import numpy as np
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/tracking/singleaxis/singleaxis-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/tracking/singleaxis/singleaxis-fixtures.json"
 FIELDS = {"tracker_theta": "trackerTheta", "aoi": "aoi", "surface_tilt": "surfaceTilt",
           "surface_azimuth": "surfaceAzimuth"}
 

@@ -9,43 +9,41 @@ file is the consolidated skeleton.
 - ESM-first TypeScript library for PV (solar) performance modeling. Runs
   everywhere JS runs (browser, edge, Workers, React Native) — no backend.
 - pnpm monorepo; workspace layout and package list: root `AGENTS.md` → "Monorepo".
-  `@pvkit/core` (all 11 modules fixture-validated) has a module layer; the sibling
-  packages are flat (see "Sibling packages"). Sections that name `@pvkit/core` or
-  `src/models/` describe core only.
+  Two published packages: `pvkit` (every model, 17 modules under `src/models/`) and
+  `@pvkit/spec` (parameter databases, flat; see "`@pvkit/spec`"). Sections that name
+  `src/models/` describe `pvkit`.
 - Positioning: "PV modeling everywhere JS runs," not "smarter PV science."
 
-## `@pvkit/core` module order
+## `pvkit` module order
 
 Dependency order: `solarposition` → `atmosphere` → `clearsky` → `irradiance` →
-`decomposition` → `iam` → `temperature` → `tracking` → `pvsystem` → `losses` → `metrics`.
-Method list (owner): `packages/core/README.md` → "Modules".
+`decomposition` → `iam` → `temperature` → `tracking` → `pvsystem` → `losses` → `metrics` →
+`diode` → `layout` → `sizer` → `economics` → `io` → `chain`.
+Method list (owner): `packages/pvkit/README.md` → "Modules".
 
-Status checklist: `packages/core/features.md`.
+Status checklist and deferred scope: `packages/pvkit/features.md`.
 
-Each module is a subpath export (`@pvkit/core/solarposition`, …) whose
+Each module is a subpath export (`pvkit/solarposition`, …) whose
 `src/models/<module>/index.ts` is the convenience subpath entry re-exporting that
 module's calculation methods. Individual methods are also importable one level
-finer (`@pvkit/core/<module>/<method>`) — see "Subpath exports" below. The tsdown
+finer (`pvkit/<module>/<method>`) — see "Subpath exports" below. The tsdown
 entry is a glob and tsdown generates the `exports` map from it on build, so a new
 method or module file needs no hand-wiring.
 
-## Sibling packages
+## `@pvkit/spec`
 
-Every `packages/*` other than core has no module layer:
+A separate package only because its data (≈ 7 MB) must not be forced on every `pvkit` user.
+No module layer:
 
-- Each method is its own folder `src/<method>/` with the same file set as a core method
-  folder (see "Module boundaries & tests"); public subpath `@pvkit/<pkg>/<method>`.
-  Package-private helpers sit flat at `src/` (e.g. `sum.ts`, `table.ts`, `lambert-w.ts`).
-- Only `.`, `./package.json` and each `src/<method>/index` become exports, so flat helpers
-  stay private: either a `customExports` filter over entry `src/**/*.ts` (minus tests and
-  test helpers such as diode's `src/testing.ts`) or, in `@pvkit/spec`, an index-only entry
-  list (`src/index.ts`, `src/*/index.ts`) plus its `data-json-parse` plugin. The exports
-  map is generated the same way as core's (see "Subpath exports").
-- Root entry `src/index.ts` re-exports every method, except where loading everything is
-  costly or unwanted: `@pvkit/spec` and `@pvkit/sizer` export only types (spec's tables are
-  megabytes; import per table), and core exports only the unit types.
-- A workspace dependency (`workspace:^`) is rewritten to `^<dependency's current version>`
-  at pack time, so the dependency is published first (see "Release procedure").
+- Each library is its own folder `src/<lib>/` (file set: `packages/spec/AGENTS.md`); public
+  subpath `@pvkit/spec/<lib>`.
+- The tsdown entry is index-only (`src/index.ts`, `src/*/index.ts`) plus its
+  `data-json-parse` plugin, so flat helpers (`src/table.ts`) stay private. The exports map is
+  generated the same way as `pvkit`'s (see "Subpath exports").
+- Root entry `src/index.ts` exports only the record types (the tables are megabytes; import
+  per table).
+- `pvkit` never imports it at runtime; `diode` and `sizer` input names match its records so a
+  row spreads in, and `pvkit` keeps it as a devDependency (`workspace:*`) for a compat test.
 
 ## Core invariants
 
@@ -53,7 +51,7 @@ Every `packages/*` other than core has no module layer:
   is pvkit's design, the algorithms are open science.
 - **Numerical validation, not "it runs."** Implement from paper → pin
   reference-implementation outputs as fixtures → assert in `*.test.ts`.
-- **ESM-only, no third-party runtime deps** (`@pvkit/*` workspace deps allowed). `sideEffects: false`, function-level exports,
+- **ESM-only, zero runtime deps.** `sideEffects: false`, function-level exports,
   aggressive tree-shaking.
 - **Branded unit types** (`src/units.ts`): `Radians`/`Degrees` are nominal brands
   over `number` — rad/deg mix-ups fail at compile time, zero runtime cost. New
@@ -78,9 +76,10 @@ Every `packages/*` other than core has no module layer:
 
 - Shared foundation sits flat at `src/` top: `units.ts` (public unit types),
   `sum.ts` (compensated summation). Physical constants and coefficients live in
-  the method that cites them (no shared constants file). The 11 PV models nest one layer
-  down: `src/models/<module>/`. Public subpath names are unchanged
-  (`@pvkit/core/clearsky`) — only the internal path is `src/models/...`.
+  the method that cites them (no shared constants file). The 17 modules nest one layer
+  down: `src/models/<module>/`. Public subpath names omit that layer (`pvkit/clearsky`) —
+  only the internal path is `src/models/...`. Helpers that are not a method (e.g.
+  `models/diode/lambert-w.ts`) are plain files in their module folder, never subpaths.
 - Within each `src/models/<module>/`, every calculation method is its **own
   folder** `<method>/` (e.g. `solarposition/spa/`) holding the method's file set: `<method>/index.ts` (subpath entry that
   re-exports the impl), `<method>/<method>.ts` (impl), `<method>/<method>.md`
@@ -98,8 +97,8 @@ Every `packages/*` other than core has no module layer:
 ## Subpath exports (method-level)
 
 - **Per-method subpath is the preferred import granularity** (finest
-  tree-shaking): `import { spa } from "@pvkit/core/solarposition/spa"`. The
-  module subpath `@pvkit/core/solarposition` still works as a convenience — its
+  tree-shaking): `import { spa } from "pvkit/solarposition/spa"`. The
+  module subpath `pvkit/solarposition` still works as a convenience — its
   `index.ts` re-exports the methods.
 - **tsdown owns the `exports` map — it is generated, do not hand-edit.**
   `tsdown.config.ts` sets:
@@ -118,10 +117,9 @@ Every `packages/*` other than core has no module layer:
   (2) keep ONLY each folder's `index` entry, so per-method impl files (e.g.
   `solarposition/spa/spa.ts`) stay **private** — never a public subpath; (3)
   strip the internal `models/` prefix and collapse the trailing `/index`. Net
-  public shape: `@pvkit/core/<module>` and `@pvkit/core/<module>/<method>`,
-  identical to before.
-- **`publishConfig.access: "public"` is hand-set** (scoped packages default to restricted);
-  tsdown's regeneration preserves it — keep it.
+  public shape: `pvkit/<module>` and `pvkit/<module>/<method>`.
+- **`publishConfig.access: "public"` is hand-set** (required for scoped `@pvkit/spec`, kept
+  on `pvkit` for symmetry); tsdown's regeneration preserves it — keep it.
 - **`exports`/`publishConfig`/`main`/`module`/`types` are machine-owned —
   regenerate, don't edit.** After adding or removing a method folder or module,
   run `pnpm build` to regenerate them and commit the updated `package.json`.
@@ -132,8 +130,8 @@ Every `packages/*` other than core has no module layer:
   hand-maintain; the cost is that build mutates `package.json` plus a small
   `customExports` callback.
 - **Glob tsdown entry, zero wiring per method.** `tsdown.config.ts` entry is
-  `["src/index.ts", "src/units.ts", "src/models/**/*.ts", "!**/*.test.ts",
-  "!**/*.bench.ts"]` — the `**` glob reaches into method folders, so new method
+  `src/index.ts`, `src/units.ts` and `src/models/**/*.ts` minus tests, benches and test
+  helpers (`testing.ts`) — the `**` glob reaches into method folders, so new method
   folders are auto-built and feed the entry list that exports generation reads;
   tests and benches never ship to `dist`. `hash: false` keeps generated `dist`
   filenames (and thus the generated exports paths) stable, so `package.json` does
@@ -141,25 +139,27 @@ Every `packages/*` other than core has no module layer:
 - **Release procedure (owner of this fact).** Only pnpm (and yarn) apply
   `publishConfig.exports`; `npm publish` of the package *directory* ships the dev
   `exports` (→ `src/*.ts`), which `files: ["dist"]` excludes — a broken package.
-  Tags are per package, `@pvkit/<pkg>@<x.y.z>` (core's first release keeps its old
-  `v0.1.0` tag). Order: a workspace dependency before its dependents — core (if
-  changed), then spec, then the rest. Per package `<pkg>`:
-  1. Clean tree, then `cd packages/<pkg> && pnpm version <x.y.z> --no-git-tag-version`;
-     commit, `git tag @pvkit/<pkg>@<x.y.z>`, push commit + tag.
+  Tags are per package: `pvkit@<x.y.z>` and `@pvkit/spec@<x.y.z>`. `pvkit` has no runtime
+  dependency on `@pvkit/spec`, so they release independently in either order (a workspace
+  runtime dependency would have to be published first: pack rewrites `workspace:` ranges to
+  the dependency's current version). Per package (`<dir>` = `pvkit` or `spec`):
+  1. Clean tree, then `cd packages/<dir> && pnpm version <x.y.z> --no-git-tag-version`;
+     commit, tag (`pvkit@<x.y.z>` or `@pvkit/spec@<x.y.z>`), push commit + tag.
   2. `pnpm pack` and check the tarball's `package.json`: `exports` point at `./dist`,
-     and `dependencies` hold no `workspace:` range, only ranges already on npm.
+     and `dependencies` hold no `workspace:` range.
   3. Publish: `pnpm publish` from an interactive terminal, or from an agent shell (no
-     TTY → pnpm's OTP fails) `script -q /dev/null npm publish ./pvkit-<pkg>-<x.y.z>.tgz
-     --auth-type=web --access public` and hand the printed auth URL to the user.
-  4. Poll `https://registry.npmjs.org/@pvkit%2f<pkg>` until the version is `latest`
-     (a brand-new package first shows a `0.0.0-stage` placeholder for minutes).
-  CI guards on the packed output: `scripts/check-consumer.mjs` packs every `packages/*`
-  and typechecks/imports it as a consumer; `scripts/check-treeshake.mjs` covers core only
-  (its regex and paths assume core's `dist/models/<module>/` layout).
+     TTY → pnpm's OTP fails) `script -q /dev/null npm publish ./<tarball>.tgz
+     --auth-type=web --access public` (`pvkit-<x.y.z>.tgz` or `pvkit-spec-<x.y.z>.tgz`) and
+     hand the printed auth URL to the user.
+  4. Poll `https://registry.npmjs.org/pvkit` (or `…/@pvkit%2fspec`) until the version is
+     `latest` (a brand-new package first shows a `0.0.0-stage` placeholder for minutes).
+  CI guards on the packed output: `scripts/check-consumer.mjs` packs `pvkit` and
+  `@pvkit/spec` and typechecks/imports them as a consumer; `scripts/check-treeshake.mjs` covers
+  `pvkit` only (its regex and paths assume the `dist/models/<module>/` layout).
 - **TS consumers need `moduleResolution: "bundler"`** (or `node16`+) to resolve
   the generated subpath types.
 - **Depth-agnostic.** Per-method subpath stays the preferred granularity, but
-  deeper nesting (`@pvkit/core/<module>/<theory>/<method>`) works automatically:
+  deeper nesting (`pvkit/<module>/<theory>/<method>`) works automatically:
   the entry glob (`**`) and the `customExports` key-normalization are both
   depth-agnostic. Use a middle folder only where a model-family groups several
   methods.
@@ -192,7 +192,11 @@ Every `packages/*` other than core has no module layer:
   `sum.ts`) is imported *upward* by modules. Modules must NOT import
   each other (no `clearsky` → `irradiance`); cross-module relationships are
   data/function pipelines (`solarposition` output → `clearsky`/`irradiance`
-  input), not code sharing. Cycles break tree-shaking and the build.
+  input), not code sharing. Cycles break tree-shaking and the build. Methods inside one
+  module may import each other.
+- **One exception: `chain`.** It is the orchestration module, so `model-chain` imports other
+  modules' method folders by relative path (`../../atmosphere/absolute-airmass/index.ts`),
+  never their module `index.ts`, so its bundle stays method-level. Nothing imports `chain`.
 
 ## Numerical strategy — float64, zero deps
 

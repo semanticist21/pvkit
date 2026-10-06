@@ -4,7 +4,7 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core pvsystem/scale-voltage-current-power.
+"""Fixtures for pvkit pvsystem/scale-voltage-current-power.
 
 Reference: pvlib.pvsystem.scale_voltage_current_power.
 Run: uv run scripts/fixtures/pvsystem-scale-voltage-current-power.py
@@ -18,7 +18,7 @@ import pandas as pd
 import pvlib
 
 METHOD = "scale-voltage-current-power"
-OUT = Path(__file__).resolve().parents[2] / f"packages/core/src/models/pvsystem/{METHOD}/{METHOD}-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / f"packages/pvkit/src/models/pvsystem/{METHOD}/{METHOD}-fixtures.json"
 COLS = {"i_mp": "iMp", "v_mp": "vMp", "i_sc": "iSc", "v_oc": "vOc", "p_mp": "pMp"}
 rng = np.random.default_rng(20261005)
 

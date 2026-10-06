@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core temperature/sapm from pvlib.temperature.sapm_{cell,module}.
+"""Fixtures for pvkit temperature/sapm from pvlib.temperature.sapm_{cell,module}.
 
 Run: uv run scripts/fixtures/temperature-sapm.py
-Writes packages/core/src/models/temperature/sapm/sapm-fixtures.json and the
+Writes packages/pvkit/src/models/temperature/sapm/sapm-fixtures.json and the
 TEMPERATURE_MODEL_PARAMETERS['sapm'] presets as sapm-parameters.ts.
 """
 
@@ -19,7 +19,7 @@ import numpy as np
 import pvlib
 from pvlib.temperature import TEMPERATURE_MODEL_PARAMETERS, sapm_cell, sapm_module
 
-DIR = Path(__file__).resolve().parents[2] / "packages/core/src/models/temperature/sapm"
+DIR = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/temperature/sapm"
 camel = lambda s: re.sub(r"_(\w)", lambda m: m.group(1).upper(), s)  # noqa: E731
 PRESETS = TEMPERATURE_MODEL_PARAMETERS["sapm"]
 

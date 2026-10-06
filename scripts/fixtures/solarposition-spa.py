@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core solarposition/spa from pvlib.solarposition.spa_python.
+"""Fixtures for pvkit solarposition/spa from pvlib.solarposition.spa_python.
 
 Run: uv run scripts/fixtures/solarposition-spa.py
-Writes packages/core/src/models/solarposition/spa/spa-fixtures.json.
+Writes packages/pvkit/src/models/solarposition/spa/spa-fixtures.json.
 """
 
 import json
@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 import pvlib
 
-OUT = Path(__file__).resolve().parents[2] / "packages/core/src/models/solarposition/spa/spa-fixtures.json"
+OUT = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/solarposition/spa/spa-fixtures.json"
 FIELDS = {
     "zenith": "zenith",
     "apparent_zenith": "apparentZenith",

@@ -4,10 +4,10 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Fixtures for @pvkit/core atmosphere/altitude-pressure from pvlib.atmosphere.alt2pres / pres2alt.
+"""Fixtures for pvkit atmosphere/altitude-pressure from pvlib.atmosphere.alt2pres / pres2alt.
 
 Run: uv run scripts/fixtures/atmosphere-altitude-pressure.py
-Writes packages/core/src/models/atmosphere/altitude-pressure/altitude-pressure-fixtures.json
+Writes packages/pvkit/src/models/atmosphere/altitude-pressure/altitude-pressure-fixtures.json
 with one case list per function.
 """
 
@@ -18,7 +18,7 @@ import numpy as np
 import pvlib
 
 OUT = (Path(__file__).resolve().parents[2]
-       / "packages/core/src/models/atmosphere/altitude-pressure/altitude-pressure-fixtures.json")
+       / "packages/pvkit/src/models/atmosphere/altitude-pressure/altitude-pressure-fixtures.json")
 
 rng = np.random.default_rng(20261005)
 alts = [-430.0, 0.0, 1.0, 1830.14, 5000.0, 8848.0, 20000.0, 40000.0]
