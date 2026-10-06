@@ -1,7 +1,7 @@
 # pvkit roadmap
 
 > The queue below is the agreed order; agents take work with the `roadmap-next` skill. What
-> ships today: `README.md` "Packages" (`pvkit`, 17 modules, and `@pvkit/spec`); deferred scope:
+> ships today: `README.md` "Packages" (`pvkit-js`, 17 modules, and `@pvkit/spec`); deferred scope:
 > `packages/pvkit/features.md` "Not implemented" and `packages/spec/AGENTS.md`.
 
 ## Queue

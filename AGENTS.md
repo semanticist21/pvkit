@@ -7,9 +7,9 @@ repository.
 
 ## What this is
 
-`pvkit` — ESM-first TypeScript library for PV (solar) performance modeling, built to run
+`pvkit-js` — ESM-first TypeScript library for PV (solar) performance modeling, built to run
 **everywhere JavaScript runs** (browser, edge, Workers, React Native). No backend round-trip.
-pnpm monorepo: `pvkit` (17 modules, fixture-validated) plus `@pvkit/spec` (data, kept apart).
+pnpm monorepo: `pvkit-js` (17 modules, fixture-validated) plus `@pvkit/spec` (data, kept apart).
 
 Positioning: not "smarter PV science" but "PV modeling everywhere JS runs." See `README.md`
 for the pitch, `ROADMAP.md` for the ordered work Queue (the only claim record). Take the next
@@ -43,17 +43,17 @@ byte-identical).
 ## Architecture
 
 **Monorepo:** `packages/*` (published libraries) and `apps/*` (private apps, e.g. `apps/demo`)
-pnpm workspaces. Packages: `pvkit` (`packages/pvkit`, every model) and `@pvkit/spec`
+pnpm workspaces. Packages: `pvkit-js` (`packages/pvkit`, every model) and `@pvkit/spec`
 (`packages/spec`, NREL SAM data) — one line each in `README.md` "Packages". New models become
-modules of `pvkit`; a separate package only for something that must not load with it (data).
+modules of `pvkit-js`; a separate package only for something that must not load with it (data).
 
-**`pvkit` modules** (dependency order): `solarposition` → `atmosphere` → `clearsky` →
+**`pvkit-js` modules** (dependency order): `solarposition` → `atmosphere` → `clearsky` →
 `irradiance` → `decomposition` → `iam` → `temperature` → `tracking` → `pvsystem` → `losses` →
 `metrics` → `diode` → `layout` → `sizer` → `economics` → `io` → `chain`. Method list:
 `packages/pvkit/README.md` "Modules"; status and deferred scope: `packages/pvkit/features.md`.
 
-Each module is a subpath export (`pvkit/solarposition`, …) and each method one level finer
-(`pvkit/solarposition/spa`). Modules never import each other, except `chain` (orchestration).
+Each module is a subpath export (`pvkit-js/solarposition`, …) and each method one level finer
+(`pvkit-js/solarposition/spa`). Modules never import each other, except `chain` (orchestration).
 Module `src/models/<module>/index.ts` files are referenced by `package.json` `exports`. Shared
 foundation (`src/units.ts`, `src/sum.ts`) sits flat at top; models nest under `src/models/`.
 Constants live with the method that cites them. The root entry (`src/index.ts`) exports only

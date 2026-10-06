@@ -184,7 +184,7 @@ importers:
 
   apps/demo:
     dependencies:
-      pvkit:
+      pvkit-js:
         specifier: workspace:*
         version: link:../../packages/pvkit
     devDependencies:

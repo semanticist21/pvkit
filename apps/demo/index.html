@@ -60,7 +60,7 @@
       <h1>Solar kWh estimate</h1>
       <p class="lede">
         Clear-sky annual output, computed in your browser by
-        <a href="https://www.npmjs.com/package/pvkit">pvkit</a>: hourly NREL SPA → Ineichen
+        <a href="https://www.npmjs.com/package/pvkit-js">pvkit</a>: hourly NREL SPA → Ineichen
         clear sky → Perez POA → SAPM cell temperature → PVWatts DC, losses and inverter. No server.
       </p>
       <form id="f">
@@ -95,15 +95,15 @@
         <pre><code id="code"></code></pre>
       </details>
       <div class="row">
-        <code id="install">npm i pvkit</code>
+        <code id="install">npm i pvkit-js</code>
         <button type="button" data-copy="install">Copy install command</button>
-        <a href="https://www.npmjs.com/package/pvkit">pvkit on npm</a>
+        <a href="https://www.npmjs.com/package/pvkit-js">pvkit on npm</a>
         <a href="https://github.com/semanticist21/pvkit">GitHub</a>
       </div>
       <footer>
         Months are local standard time approximated from longitude. For weather-driven estimates
         (PVGIS / NASA POWER data), use <code>pvkit/io</code> with <code>pvkit/chain</code> from the
-        same <a href="https://www.npmjs.com/package/pvkit">pvkit</a> package.
+        same <a href="https://www.npmjs.com/package/pvkit-js">pvkit</a> package.
       </footer>
     </main>
     <script type="module" src="./src/main.ts"></script>

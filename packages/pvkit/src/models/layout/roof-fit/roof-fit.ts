@@ -34,7 +34,7 @@ const fits = (span: number, size: number, gap: number) =>
 
 /**
  * Packs identical modules in a single-orientation grid on a rectangular roof plane.
- * Geometry only: no obstacles, no shading, no string limits (see `pvkit/sizer`).
+ * Geometry only: no obstacles, no shading, no string limits (see `pvkit-js/sizer`).
  *
  * @example roofFit({ roofWidth: 10, roofHeight: 5, moduleLength: 1.7, moduleWidth: 1.1 }).count; // 20
  */

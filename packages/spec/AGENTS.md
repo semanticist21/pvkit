@@ -15,5 +15,5 @@ Package-only facts. Shared rules: `doc/conventions.md`, `doc/architecture.md`.
   SAM `dT` → `tempDelta` (`deltaT` means TT − UT package-wide).
 - Bumping the SAM tag: change `SAM_TAG`, run the script, update the README table (the only
   owner of row counts) and any quirk count a test pins.
-- No ADR inverter coefficient DB yet: `pvkit/diode/inverter-adr` takes caller-supplied
+- No ADR inverter coefficient DB yet: `pvkit-js/diode/inverter-adr` takes caller-supplied
   `adrCoefficients`. Also absent: spectral response data, datasheet parsing.

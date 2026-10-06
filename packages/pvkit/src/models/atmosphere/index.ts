@@ -2,7 +2,7 @@
  * Atmosphere — dataless closed-form helpers consumed by `clearsky` and `irradiance`:
  * air mass (relative, absolute), standard-atmosphere altitude ↔ pressure, precipitable
  * water, Angstrom AOD, broadband AOD and Linke turbidity. Caller supplies every input;
- * no bundled climatology (that is `pvkit/io`).
+ * no bundled climatology (that is `pvkit-js/io`).
  */
 
 export * from "./absolute-airmass/index.ts";

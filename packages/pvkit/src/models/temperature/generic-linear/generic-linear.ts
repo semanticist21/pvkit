@@ -19,7 +19,7 @@ export interface GenericLinearInput {
 /**
  * Generic linear heat-loss module temperature, °C (Driesse et al. 2022):
  * `Tm = Ta + E·(α − η) / (u_const + du_wind·WS)`. Parameters from other models:
- * `pvkit/temperature/generic-linear-model`.
+ * `pvkit-js/temperature/generic-linear-model`.
  */
 export const genericLinear = ({
   poaGlobal,

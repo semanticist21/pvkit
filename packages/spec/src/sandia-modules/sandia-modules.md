@@ -2,8 +2,8 @@
 
 `SANDIA_MODULES` is every row of the NREL SAM "Sandia Modules" library: outdoor-measured SAPM
 coefficients (King et al. 2004) for modules of 1994–2014 vintages. `a0`–`a4` are the
-air-mass modifier, `b0`–`b5` the incidence-angle modifier (`pvkit/iam/sapm`), `a`, `b`,
-`tempDelta` the module/cell temperature model (`pvkit/temperature/sapm`; SAM's `dT`, renamed
+air-mass modifier, `b0`–`b5` the incidence-angle modifier (`pvkit-js/iam/sapm`), `a`, `b`,
+`tempDelta` the module/cell temperature model (`pvkit-js/temperature/sapm`; SAM's `dT`, renamed
 because `deltaT` means TT − UT across pvkit), the rest the SAPM I-V point equations.
 
 Values are as listed; `c4`–`c7`, `ixo`, `ixxo` are blank for some rows and omitted there.

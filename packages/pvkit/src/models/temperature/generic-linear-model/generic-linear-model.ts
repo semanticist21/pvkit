@@ -1,6 +1,6 @@
 /**
  * Parameters of the generic linear model — spreadable into `genericLinear`
- * (`pvkit/temperature/generic-linear`).
+ * (`pvkit-js/temperature/generic-linear`).
  */
 export interface GenericLinearParameters {
   /** Combined heat-transfer coefficient at zero wind, W/(m²·K). */

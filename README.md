@@ -7,10 +7,10 @@ Zero runtime dependencies, ESM-only, and every model is checked against referenc
 implementations.
 
 **Live demo:** [pvkit.netlify.app](https://pvkit.netlify.app), a browser-only clear-sky kWh
-estimate built on `pvkit`, no backend.
+estimate built on `pvkit-js`, no backend.
 
 ```bash
-npm i pvkit
+npm i pvkit-js
 ```
 
 Install, quickstart, the module list and the fixture counts behind each module are in the
@@ -20,7 +20,7 @@ package README: **[packages/pvkit](packages/pvkit)**.
 
 | Package | npm | What |
 | --- | --- | --- |
-| [`pvkit`](packages/pvkit) | [![npm](https://img.shields.io/npm/v/pvkit)](https://www.npmjs.com/package/pvkit) | All models in 17 modules: sun position → irradiance → temperature → DC/AC → kWh, plus diode, layout, sizer, economics, io and chain |
+| [`pvkit-js`](packages/pvkit) | [![npm](https://img.shields.io/npm/v/pvkit-js)](https://www.npmjs.com/package/pvkit-js) | All models in 17 modules: sun position → irradiance → temperature → DC/AC → kWh, plus diode, layout, sizer, economics, io and chain |
 | [`@pvkit/spec`](packages/spec) | [![npm](https://img.shields.io/npm/v/@pvkit/spec)](https://www.npmjs.com/package/@pvkit/spec) | CEC module/inverter and Sandia SAPM module databases (NREL SAM), kept separate so nobody downloads the data by default |
 
 [`apps/demo`](apps/demo) is the demo site (not published to npm).
@@ -28,7 +28,7 @@ package README: **[packages/pvkit](packages/pvkit)**.
 ## Design
 
 - **Runs anywhere.** Pure TypeScript, no backend round-trip, no WASM. SPA ≈ 18 µs/call.
-- **Small bundles.** One subpath per method (`pvkit/solarposition/spa`) and
+- **Small bundles.** One subpath per method (`pvkit-js/solarposition/spa`) and
   `"sideEffects": false`, so a bundle carries only what it imports.
 - **Unit-safe.** Branded `Radians`/`Degrees` types catch rad/deg mix-ups at compile time, at
   zero runtime cost.

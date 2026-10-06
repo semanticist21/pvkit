@@ -1,6 +1,6 @@
 # pvkit demo
 
-Static page that estimates clear-sky annual kWh entirely in the browser with `pvkit`
+Static page that estimates clear-sky annual kWh entirely in the browser with `pvkit-js`
 (`src/estimate.ts` wires the modules). Not published to npm.
 
 Inputs round-trip through the query string (`?latitude=…&losses=14.1`, field names as in
@@ -9,7 +9,7 @@ a shareable link. The "Code for this result" panel shows `src/estimate.ts` verba
 `estimate({...})` call with the current inputs (`src/share.ts`), so it can never drift from
 what the page runs.
 
-Live: https://pvkit.netlify.app — Netlify site `pvkit` (account `semanticist21`), deployed by
+Live: https://pvkit.netlify.app — Netlify site `pvkit-js` (account `semanticist21`), deployed by
 hand; no CI deploy.
 
 ```bash

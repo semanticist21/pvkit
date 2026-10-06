@@ -1,14 +1,14 @@
-import { absoluteAirmass } from "pvkit/atmosphere/absolute-airmass";
-import { alt2pres } from "pvkit/atmosphere/altitude-pressure";
-import { relativeAirmass } from "pvkit/atmosphere/relative-airmass";
-import { ineichen } from "pvkit/clearsky/ineichen";
-import { extraRadiation } from "pvkit/irradiance/extra-radiation";
-import { totalIrradiance } from "pvkit/irradiance/total-irradiance";
-import { energyKwh } from "pvkit/pvsystem/energy-kwh";
-import { pvwattsDc } from "pvkit/pvsystem/pvwatts-dc";
-import { pvwattsInverter } from "pvkit/pvsystem/pvwatts-inverter";
-import { spa } from "pvkit/solarposition/spa";
-import { SAPM_TEMPERATURE_PARAMETERS, sapmCell } from "pvkit/temperature/sapm";
+import { absoluteAirmass } from "pvkit-js/atmosphere/absolute-airmass";
+import { alt2pres } from "pvkit-js/atmosphere/altitude-pressure";
+import { relativeAirmass } from "pvkit-js/atmosphere/relative-airmass";
+import { ineichen } from "pvkit-js/clearsky/ineichen";
+import { extraRadiation } from "pvkit-js/irradiance/extra-radiation";
+import { totalIrradiance } from "pvkit-js/irradiance/total-irradiance";
+import { energyKwh } from "pvkit-js/pvsystem/energy-kwh";
+import { pvwattsDc } from "pvkit-js/pvsystem/pvwatts-dc";
+import { pvwattsInverter } from "pvkit-js/pvsystem/pvwatts-inverter";
+import { spa } from "pvkit-js/solarposition/spa";
+import { SAPM_TEMPERATURE_PARAMETERS, sapmCell } from "pvkit-js/temperature/sapm";
 
 export interface EstimateInput {
   latitude: number;

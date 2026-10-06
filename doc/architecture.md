@@ -9,12 +9,12 @@ file is the consolidated skeleton.
 - ESM-first TypeScript library for PV (solar) performance modeling. Runs
   everywhere JS runs (browser, edge, Workers, React Native) — no backend.
 - pnpm monorepo; workspace layout and package list: root `AGENTS.md` → "Monorepo".
-  Two published packages: `pvkit` (every model, 17 modules under `src/models/`) and
+  Two published packages: `pvkit-js` (every model, 17 modules under `src/models/`) and
   `@pvkit/spec` (parameter databases, flat; see "`@pvkit/spec`"). Sections that name
-  `src/models/` describe `pvkit`.
+  `src/models/` describe `pvkit-js`.
 - Positioning: "PV modeling everywhere JS runs," not "smarter PV science."
 
-## `pvkit` module order
+## `pvkit-js` module order
 
 Dependency order: `solarposition` → `atmosphere` → `clearsky` → `irradiance` →
 `decomposition` → `iam` → `temperature` → `tracking` → `pvsystem` → `losses` → `metrics` →
@@ -23,27 +23,27 @@ Method list (owner): `packages/pvkit/README.md` → "Modules".
 
 Status checklist and deferred scope: `packages/pvkit/features.md`.
 
-Each module is a subpath export (`pvkit/solarposition`, …) whose
+Each module is a subpath export (`pvkit-js/solarposition`, …) whose
 `src/models/<module>/index.ts` is the convenience subpath entry re-exporting that
 module's calculation methods. Individual methods are also importable one level
-finer (`pvkit/<module>/<method>`) — see "Subpath exports" below. The tsdown
+finer (`pvkit-js/<module>/<method>`) — see "Subpath exports" below. The tsdown
 entry is a glob and tsdown generates the `exports` map from it on build, so a new
 method or module file needs no hand-wiring.
 
 ## `@pvkit/spec`
 
-A separate package only because its data (≈ 7 MB) must not be forced on every `pvkit` user.
+A separate package only because its data (≈ 7 MB) must not be forced on every `pvkit-js` user.
 No module layer:
 
 - Each library is its own folder `src/<lib>/` (file set: `packages/spec/AGENTS.md`); public
   subpath `@pvkit/spec/<lib>`.
 - The tsdown entry is index-only (`src/index.ts`, `src/*/index.ts`) plus its
   `data-json-parse` plugin, so flat helpers (`src/table.ts`) stay private. The exports map is
-  generated the same way as `pvkit`'s (see "Subpath exports").
+  generated the same way as `pvkit-js`'s (see "Subpath exports").
 - Root entry `src/index.ts` exports only the record types (the tables are megabytes; import
   per table).
-- `pvkit` never imports it at runtime; `diode` and `sizer` input names match its records so a
-  row spreads in, and `pvkit` keeps it as a devDependency (`workspace:*`) for a compat test.
+- `pvkit-js` never imports it at runtime; `diode` and `sizer` input names match its records so a
+  row spreads in, and `pvkit-js` keeps it as a devDependency (`workspace:*`) for a compat test.
 
 ## Core invariants
 
@@ -77,7 +77,7 @@ No module layer:
 - Shared foundation sits flat at `src/` top: `units.ts` (public unit types),
   `sum.ts` (compensated summation). Physical constants and coefficients live in
   the method that cites them (no shared constants file). The 17 modules nest one layer
-  down: `src/models/<module>/`. Public subpath names omit that layer (`pvkit/clearsky`) —
+  down: `src/models/<module>/`. Public subpath names omit that layer (`pvkit-js/clearsky`) —
   only the internal path is `src/models/...`. Helpers that are not a method (e.g.
   `models/diode/lambert-w.ts`) are plain files in their module folder, never subpaths.
 - Within each `src/models/<module>/`, every calculation method is its **own
@@ -97,8 +97,8 @@ No module layer:
 ## Subpath exports (method-level)
 
 - **Per-method subpath is the preferred import granularity** (finest
-  tree-shaking): `import { spa } from "pvkit/solarposition/spa"`. The
-  module subpath `pvkit/solarposition` still works as a convenience — its
+  tree-shaking): `import { spa } from "pvkit-js/solarposition/spa"`. The
+  module subpath `pvkit-js/solarposition` still works as a convenience — its
   `index.ts` re-exports the methods.
 - **tsdown owns the `exports` map — it is generated, do not hand-edit.**
   `tsdown.config.ts` sets:
@@ -117,9 +117,9 @@ No module layer:
   (2) keep ONLY each folder's `index` entry, so per-method impl files (e.g.
   `solarposition/spa/spa.ts`) stay **private** — never a public subpath; (3)
   strip the internal `models/` prefix and collapse the trailing `/index`. Net
-  public shape: `pvkit/<module>` and `pvkit/<module>/<method>`.
+  public shape: `pvkit-js/<module>` and `pvkit-js/<module>/<method>`.
 - **`publishConfig.access: "public"` is hand-set** (required for scoped `@pvkit/spec`, kept
-  on `pvkit` for symmetry); tsdown's regeneration preserves it — keep it.
+  on `pvkit-js` for symmetry); tsdown's regeneration preserves it — keep it.
 - **`exports`/`publishConfig`/`main`/`module`/`types` are machine-owned —
   regenerate, don't edit.** After adding or removing a method folder or module,
   run `pnpm build` to regenerate them and commit the updated `package.json`.
@@ -139,12 +139,12 @@ No module layer:
 - **Release procedure (owner of this fact).** Only pnpm (and yarn) apply
   `publishConfig.exports`; `npm publish` of the package *directory* ships the dev
   `exports` (→ `src/*.ts`), which `files: ["dist"]` excludes — a broken package.
-  Tags are per package: `pvkit@<x.y.z>` and `@pvkit/spec@<x.y.z>`. `pvkit` has no runtime
+  Tags are per package: `pvkit-js@<x.y.z>` and `@pvkit/spec@<x.y.z>`. `pvkit-js` has no runtime
   dependency on `@pvkit/spec`, so they release independently in either order (a workspace
   runtime dependency would have to be published first: pack rewrites `workspace:` ranges to
-  the dependency's current version). Per package (`<dir>` = `pvkit` or `spec`):
+  the dependency's current version). Per package (`<dir>` = `pvkit-js` or `spec`):
   1. Clean tree, then `cd packages/<dir> && pnpm version <x.y.z> --no-git-tag-version`;
-     commit, tag (`pvkit@<x.y.z>` or `@pvkit/spec@<x.y.z>`), push commit + tag.
+     commit, tag (`pvkit-js@<x.y.z>` or `@pvkit/spec@<x.y.z>`), push commit + tag.
   2. `pnpm pack` and check the tarball's `package.json`: `exports` point at `./dist`,
      and `dependencies` hold no `workspace:` range.
   3. Publish: `pnpm publish` from an interactive terminal, or from an agent shell (no
@@ -153,13 +153,13 @@ No module layer:
      hand the printed auth URL to the user.
   4. Poll `https://registry.npmjs.org/pvkit` (or `…/@pvkit%2fspec`) until the version is
      `latest` (a brand-new package first shows a `0.0.0-stage` placeholder for minutes).
-  CI guards on the packed output: `scripts/check-consumer.mjs` packs `pvkit` and
+  CI guards on the packed output: `scripts/check-consumer.mjs` packs `pvkit-js` and
   `@pvkit/spec` and typechecks/imports them as a consumer; `scripts/check-treeshake.mjs` covers
-  `pvkit` only (its regex and paths assume the `dist/models/<module>/` layout).
+  `pvkit-js` only (its regex and paths assume the `dist/models/<module>/` layout).
 - **TS consumers need `moduleResolution: "bundler"`** (or `node16`+) to resolve
   the generated subpath types.
 - **Depth-agnostic.** Per-method subpath stays the preferred granularity, but
-  deeper nesting (`pvkit/<module>/<theory>/<method>`) works automatically:
+  deeper nesting (`pvkit-js/<module>/<theory>/<method>`) works automatically:
   the entry glob (`**`) and the `customExports` key-normalization are both
   depth-agnostic. Use a middle folder only where a model-family groups several
   methods.

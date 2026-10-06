@@ -23,7 +23,7 @@ export default defineConfig({
   //   - keep ONLY entries whose target is a folder's `index` file → impl files
   //     (e.g. spa/spa.ts) stay private and never become a public subpath
   //   - strip the internal `models/` prefix (tsdown already collapses `/index`)
-  // Net public shape: "pvkit/<module>" and "pvkit/<module>/<method>".
+  // Net public shape: "pvkit-js/<module>" and "pvkit-js/<module>/<method>".
   // hash:false keeps the generated paths stable so package.json doesn't churn.
   exports: {
     devExports: true,

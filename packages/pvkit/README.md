@@ -8,15 +8,15 @@ zero dependencies, ESM-only, and one subpath per method. Every model is checked 
 another independent reference.
 
 ```sh
-npm i pvkit
+npm i pvkit-js
 npm i @pvkit/spec   # optional: CEC / Sandia module and inverter databases (multi-MB data)
 ```
 
 ## Quickstart: kWh in a few lines
 
 ```ts
-import { modelChain } from "pvkit/chain/model-chain";
-import { energyKwh } from "pvkit/pvsystem/energy-kwh";
+import { modelChain } from "pvkit-js/chain/model-chain";
+import { energyKwh } from "pvkit-js/pvsystem/energy-kwh";
 
 // 5 kW, 30° tilt, facing south, Seoul, 21 June 2025 (local day), 15-minute steps
 const site = { latitude: 37.5665, longitude: 126.978, surfaceTilt: 30, surfaceAzimuth: 180,
@@ -30,10 +30,10 @@ console.log(energyKwh({ power: pac, stepHours: 0.25 })); // 28.22864450658671 kW
 
 `linkeTurbidity` runs the chain on modeled **clear sky**, so that figure is a cloudless upper
 bound, not a yield estimate. For a real estimate pass measured or typical-year weather instead,
-for example from `pvkit/io` (below):
+for example from `pvkit-js/io` (below):
 
 ```ts
-import { modelChain } from "pvkit/chain/model-chain";
+import { modelChain } from "pvkit-js/chain/model-chain";
 
 const out = modelChain({
   timeMs: Date.UTC(2025, 5, 21, 3), latitude: 37.5665, longitude: 126.978,
@@ -55,7 +55,7 @@ Every subpath is plain ESM, so a CDN import works in a bare HTML page:
 
 ```html
 <script type="module">
-  import { spa } from "https://esm.sh/pvkit@0.2/solarposition/spa";
+  import { spa } from "https://esm.sh/pvkit-js@0.2/solarposition/spa";
 
   const sun = spa({ timeMs: Date.now(), latitude: 37.5665, longitude: 126.978 });
   console.log(sun.apparentElevation, sun.azimuth); // degrees
@@ -64,9 +64,9 @@ Every subpath is plain ESM, so a CDN import works in a bare HTML page:
 
 ## Modules
 
-Every method is its own subpath, `pvkit/<module>/<method>`, so you import only what you use.
-`pvkit/<module>` re-exports all of a module's methods. The root `pvkit` exports only the unit
-helpers (also at `pvkit/units`).
+Every method is its own subpath, `pvkit-js/<module>/<method>`, so you import only what you use.
+`pvkit-js/<module>` re-exports all of a module's methods. The root `pvkit-js` exports only the unit
+helpers (also at `pvkit-js/units`).
 
 | Module | Methods | Spec |
 | --- | --- | --- |
@@ -129,12 +129,12 @@ call: loop for a series. Modules never call each other (except `chain`), so you 
 to inputs:
 
 ```ts
-import { relativeAirmass } from "pvkit/atmosphere/relative-airmass";
-import { ineichen } from "pvkit/clearsky/ineichen";
-import { totalIrradiance } from "pvkit/irradiance/total-irradiance";
-import { pvwattsDc } from "pvkit/pvsystem/pvwatts-dc";
-import { spa } from "pvkit/solarposition/spa";
-import { SAPM_TEMPERATURE_PARAMETERS, sapmCell } from "pvkit/temperature/sapm";
+import { relativeAirmass } from "pvkit-js/atmosphere/relative-airmass";
+import { ineichen } from "pvkit-js/clearsky/ineichen";
+import { totalIrradiance } from "pvkit-js/irradiance/total-irradiance";
+import { pvwattsDc } from "pvkit-js/pvsystem/pvwatts-dc";
+import { spa } from "pvkit-js/solarposition/spa";
+import { SAPM_TEMPERATURE_PARAMETERS, sapmCell } from "pvkit-js/temperature/sapm";
 
 const sun = spa({ timeMs: Date.UTC(2025, 5, 21, 3), latitude: 37.5665, longitude: 126.978 });
 const am = relativeAirmass({ solarZenith: sun.apparentZenith }); // sea level: absolute = relative
@@ -158,8 +158,8 @@ before summing if that is what you mean.
 ### Sun position and sunrise
 
 ```ts
-import { spa } from "pvkit/solarposition/spa";
-import { sunriseSpa } from "pvkit/solarposition/sunrise-spa";
+import { spa } from "pvkit-js/solarposition/spa";
+import { sunriseSpa } from "pvkit-js/solarposition/sunrise-spa";
 
 const seoul = { latitude: 37.5665, longitude: 126.978 };
 const sun = spa({ ...seoul, timeMs: Date.UTC(2025, 5, 21, 3) }); // 12:00 KST
@@ -177,9 +177,9 @@ library row spreads straight in:
 ```ts
 import { CEC_INVERTERS } from "@pvkit/spec/cec-inverters";
 import { CEC_MODULES } from "@pvkit/spec/cec-modules";
-import { calcparamsCec } from "pvkit/diode/calcparams-cec";
-import { inverterSandia } from "pvkit/diode/inverter-sandia";
-import { singleDiode } from "pvkit/diode/single-diode";
+import { calcparamsCec } from "pvkit-js/diode/calcparams-cec";
+import { inverterSandia } from "pvkit-js/diode/inverter-sandia";
+import { singleDiode } from "pvkit-js/diode/single-diode";
 
 const module = CEC_MODULES.find((m) => m.name === "CSI Solar Co Ltd CS6P-200P")!;
 const stc = singleDiode(calcparamsCec({ ...module, effectiveIrradiance: 1000, tempCell: 25 }));
@@ -193,8 +193,8 @@ console.log(inverterSandia({ ...inverter, vdc: vMp * 12, pdc: pMp * 12 }).toFixe
 ### String sizing
 
 ```ts
-import { stringSize } from "pvkit/sizer/string-size";
-import { voltageAtTemperature } from "pvkit/sizer/voltage-at-temperature";
+import { stringSize } from "pvkit-js/sizer/string-size";
+import { voltageAtTemperature } from "pvkit-js/sizer/voltage-at-temperature";
 
 const vocMax = voltageAtTemperature({ voltage: 49.5, beta: -0.135, tempCell: -10 }); // 54.225 V, coldest
 const vmpMin = voltageAtTemperature({ voltage: 41.2, beta: -0.135, tempCell: 70 }); // 35.125 V, hottest
@@ -209,8 +209,8 @@ window, so pass the datasheet maximum input voltage as `vdcMax` for the NEC 690.
 ### Roof fit and row spacing
 
 ```ts
-import { minPitch } from "pvkit/layout/min-pitch";
-import { roofFit } from "pvkit/layout/roof-fit";
+import { minPitch } from "pvkit-js/layout/min-pitch";
+import { roofFit } from "pvkit-js/layout/roof-fit";
 
 console.log(roofFit({ roofWidth: 10, roofHeight: 5, moduleLength: 1.7, moduleWidth: 1.1, setback: 0.5 }).count); // 16
 // winter-solstice noon in Seoul: sun elevation ≈ 29°
@@ -224,7 +224,7 @@ is 0.02 m).
 ### Payback, NPV, IRR
 
 ```ts
-import { cashFlows, irr, npv, paybackPeriod } from "pvkit/economics";
+import { cashFlows, irr, npv, paybackPeriod } from "pvkit-js/economics";
 
 // 10,000 up front, 6,000 kWh/yr for 25 years valued at 0.25/kWh
 const flows = cashFlows({ capitalCost: 10000, energy: Array(25).fill(6000), energyPrice: 0.25 });
@@ -239,7 +239,7 @@ editing it before `npv` / `irr`.
 ### Weather data
 
 ```ts
-import { getNasaPower } from "pvkit/io/nasa-power";
+import { getNasaPower } from "pvkit-js/io/nasa-power";
 
 const { data } = await getNasaPower({
   latitude: 37.57, longitude: 126.98,
@@ -251,8 +251,8 @@ console.log(data.length, data[4]); // 24 { timeMs: 1717214400000, ghi: 936.3, te
 
 | Subpath | Source | Browser |
 | --- | --- | --- |
-| `pvkit/io/pvgis-tmy` | PVGIS typical meteorological year (8760 h, global) | needs a proxy (PVGIS sends no CORS headers); pass `url` |
-| `pvkit/io/nasa-power` | NASA POWER hourly (satellite + MERRA-2, global, 2001 on) | direct |
+| `pvkit-js/io/pvgis-tmy` | PVGIS typical meteorological year (8760 h, global) | needs a proxy (PVGIS sends no CORS headers); pass `url` |
+| `pvkit-js/io/nasa-power` | NASA POWER hourly (satellite + MERRA-2, global, 2001 on) | direct |
 
 Times are the interval start; missing values are `NaN`. Every getter takes `fetch` (inject a
 custom or mock fetch) and `signal` (abort).
@@ -264,7 +264,7 @@ runtime cost (the brand is erased at build). Inputs stay plain numbers; returned
 the brand.
 
 ```ts
-import { radians, toDegrees } from "pvkit";
+import { radians, toDegrees } from "pvkit-js";
 
 console.log(toDegrees(radians(Math.PI))); // 180
 ```
