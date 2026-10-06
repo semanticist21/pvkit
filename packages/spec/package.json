@@ -1,6 +1,6 @@
 {
   "name": "@pvkit/spec",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CEC solar module (PV panel) and inverter database plus Sandia SAPM modules from NREL SAM, as typed ESM data: 21,677 modules and 2,343 inverters.",
   "type": "module",
   "license": "MIT AND BSD-3-Clause",
