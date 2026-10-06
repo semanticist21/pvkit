@@ -17,6 +17,7 @@ Run: uv run scripts/fixtures/diode.py
 import json
 import math
 import os
+import warnings
 from pathlib import Path
 
 import numpy as np
@@ -141,12 +142,12 @@ for p in diode_params:
     sdc.append({"input": p, "expected": {"iSc": lw["i_sc"], "vOc": lw["v_oc"], "iMp": i_mp, "vMp": v_mp,
                                          "pMp": p_mp, "iX": lw["i_x"], "iXx": i_xx}})
     voc = lw["v_oc"]
-    for v in [0.0, 0.5 * voc, 0.9 * voc, voc, 1.05 * voc, -1.0]:
+    for v in [0.0, 0.5 * voc, 0.9 * voc, voc, 1.05 * voc, -1.0, -5000.0]:  # -5 kV: W arg underflows
         i = pvsystem.i_from_v(v, *args)
         if math.isfinite(i):
             ifv.append({"input": {**p, "voltage": float(v)}, "expected": {"current": i}})
     isc = lw["i_sc"]
-    for i in [0.0, 0.5 * isc, 0.95 * isc, isc]:
+    for i in [0.0, 0.5 * isc, 0.95 * isc, isc, 1.1 * isc, isc + 10.0]:  # past Isc: W arg underflows
         v = pvsystem.v_from_i(i, *args)
         if math.isfinite(v):
             vfi.append({"input": {**p, "current": float(i)}, "expected": {"voltage": v}})
@@ -167,7 +168,7 @@ sapm_cases, f1_cases, ee_cases = [], [], []
 for _, m in pick(sandia, 15).iterrows():
     mod = sandia_module(m)
     series = m.dropna()  # pvlib only emits i_x/i_xx when the keys exist
-    for s, t in conditions()[:4]:
+    for s, t in conditions():
         r = pvsystem.sapm(s, t, series)
         sapm_cases.append({"input": {**mod, "effectiveIrradiance": s, "tempCell": t},
                            "expected": {"iSc": r["i_sc"], "iMp": r["i_mp"], "vOc": r["v_oc"],
@@ -213,4 +214,16 @@ for _, m in pick(adr.dropna(subset=["Vmin", "Vmax", "Vdcmax", "MPPTLow", "MPPTHi
                      (float(rng.uniform(m.MPPTLow, m.MPPTHi)), float(rng.uniform(0, 1.2 * m.Pnom)))]:
         cases.append({"input": {**par, "vdc": float(vdc), "pdc": float(pdc)},
                       "expected": {"pac": float(inverter.adr(np.float64(vdc), np.float64(pdc), pvl))}})
+# NaN voltage limits (np.nanmax ignores them; all NaN → no bound) on the last row, at its nominal point
+for nan_keys in [["MPPTHi", "MPPTLow"], ["Vmax", "Vmin", "Vdcmax", "MPPTHi", "MPPTLow"]]:
+    pvl_nan = {**pvl, **{k: math.nan for k in nan_keys}}
+    par_nan = {"pNom": m.Pnom, "vNom": m.Vnom, "pacMax": m.Pacmax, "pnt": m.Pnt, "adrCoefficients": coeffs,
+               "vMax": pvl_nan["Vmax"], "vMin": pvl_nan["Vmin"], "vdcMax": pvl_nan["Vdcmax"],
+               "mpptHigh": pvl_nan["MPPTHi"], "mpptLow": pvl_nan["MPPTLow"]}
+    for vdc in [m.Vnom, 5.0 * m.Vdcmax]:
+        with warnings.catch_warnings():  # all-NaN nanmax warns; the NaN bound is the point
+            warnings.simplefilter("ignore", RuntimeWarning)
+            pac = inverter.adr(np.float64(vdc), np.float64(0.5 * m.Pnom), pvl_nan)
+        cases.append({"input": {**par_nan, "vdc": float(vdc), "pdc": float(0.5 * m.Pnom)},
+                      "expected": {"pac": float(pac)}})
 write("inverter-adr", cases)

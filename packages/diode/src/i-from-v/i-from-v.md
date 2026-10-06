@@ -18,8 +18,9 @@ directly and returns NaN once it overflows (V far above Voc).
   cells using Lambert W-function", *Sol. Energy Mater. Sol. Cells* 81 (2004) 269–277,
   https://doi.org/10.1016/j.solmat.2003.11.018.
 - **Reference implementation:** `pvlib.pvsystem.i_from_v` (method `lambertw`) @ pvlib 0.16.1.
-- **Fixtures:** `i-from-v-fixtures.json` (1104 cases: every single-diode parameter set ×
-  V ∈ {0, Voc/2, 0.9·Voc, Voc, 1.05·Voc, −1 V}, incl. Rs = 0, Rsh = ∞, dark), `scripts/fixtures/diode.py`.
+- **Fixtures:** `i-from-v-fixtures.json` (1288 cases: every single-diode parameter set ×
+  V ∈ {0, Voc/2, 0.9·Voc, Voc, 1.05·Voc, −1 V, −5 kV}, incl. Rs = 0, Rsh = ∞, dark; −5 kV
+  underflows the W argument to 0), `scripts/fixtures/diode.py`.
   Cases where pvlib overflows are skipped.
 - **Tolerance:** `|ΔI| ≤ 1e-11 A + 1e-12·|I|`. Observed max |ΔI| 1.8e-14 A. Absolute floor
   because the formula subtracts two terms of size ~IL; at zero irradiance pvlib returns

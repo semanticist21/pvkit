@@ -16,3 +16,8 @@ describe("inverterSandia vs pvlib", () => {
     }
   });
 });
+
+test("pnt omitted defaults to 0 below pso (pvlib would return NaN)", () => {
+  const inv = { paco: 3000, pdco: 3100, vdco: 400, pso: 20, c0: -1e-6, c1: 0, c2: 0, c3: 0 };
+  expect(inverterSandia({ ...inv, vdc: 400, pdc: 10 })).toBe(-0);
+});

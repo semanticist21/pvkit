@@ -18,11 +18,5 @@ Package-only facts. Shared rules (fixtures, references, numerics, release) live 
   `CecInverter`); outputs are camelCase pvlib names (`iSc`, `vOc`, `pMp`, …). Keep them
   aligned — `src/spec-compat.test.ts` (spec as devDependency only) fails at compile time
   if they drift.
-- Lambert W is evaluated from the log of its argument (no overflow); this deliberately
-  differs from pvlib, which returns NaN in `i_from_v` once the argument overflows.
-- MPP: Newton + bisection on the diode voltage (Bishop form), exact to float64; the
-  fixture reference uses `bishop88_mpp` brentq at 4ε, not pvlib's default ~1e-8 minimizer.
-- `k/e` is the exact SI ratio — scipy's table value; a truncated 8.617333262e-5 costs 1e-10
-  relative in `I0`.
 - Out of scope so far: reverse-bias breakdown and thin-film recombination terms of
-  `bishop88`, full I-V curve arrays, ADR coefficients in `@pvkit/spec`.
+  `bishop88`, full I-V curve arrays.

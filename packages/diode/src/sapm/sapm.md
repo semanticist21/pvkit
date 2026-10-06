@@ -17,6 +17,6 @@ With `Ee = E/Eref`, `δ = n·k·(Tc + 273.15)/q`, `ΔT = Tc − Tref`, `β(Ee) =
 - **Spec:** D. L. King, W. E. Boyson, J. A. Kratochvil, "Photovoltaic Array Performance
   Model", Sandia report SAND2004-3535, 2004, https://doi.org/10.2172/919131.
 - **Reference implementation:** `pvlib.pvsystem.sapm` @ pvlib 0.16.1.
-- **Fixtures:** `sapm-fixtures.json` (60 cases: 15 Sandia library modules × 4 conditions incl.
-  Ee = 0 and 1 W/m²), `scripts/fixtures/diode.py`.
+- **Fixtures:** `sapm-fixtures.json` (120 cases: 15 Sandia library modules × 8 conditions incl.
+  Ee = 0, 1 and 1200 W/m², Tc from −20 to 80 °C, 3 random), `scripts/fixtures/diode.py`.
 - **Tolerance:** `1e-14` relative. Observed max error: 0.

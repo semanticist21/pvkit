@@ -69,6 +69,17 @@
     },
     {
       "input": {
+        "photocurrent": 8.10655,
+        "saturationCurrent": 2.385172e-8,
+        "resistanceSeries": 0.122563,
+        "resistanceShunt": 151.572739,
+        "nNsVth": 2.228697,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 41.060810116293 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 2.385172e-8,
         "resistanceSeries": 0.122563,
@@ -132,6 +143,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 8.62329623729207e-9 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 2.385172e-8,
+        "resistanceSeries": 0.122563,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 2.228697,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.385172e-8 }
     },
     {
       "input": {
@@ -201,6 +223,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0079703627507035,
+        "saturationCurrent": 3.36634365816911e-12,
+        "resistanceSeries": 0.122563,
+        "resistanceShunt": 151572.739,
+        "nNsVth": 1.8923181135334561,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.04095779184638279 }
+    },
+    {
+      "input": {
         "photocurrent": 1.6122308500469,
         "saturationCurrent": 1.6839245985343916e-9,
         "resistanceSeries": 0.122563,
@@ -264,6 +297,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.6132894451658386 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.6122308500469,
+        "saturationCurrent": 1.6839245985343916e-9,
+        "resistanceSeries": 0.122563,
+        "resistanceShunt": 757.863695,
+        "nNsVth": 2.116570704511152,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 8.208395818286352 }
     },
     {
       "input": {
@@ -333,6 +377,17 @@
     },
     {
       "input": {
+        "photocurrent": 9.9276012989682,
+        "saturationCurrent": 6.091822405813843e-5,
+        "resistanceSeries": 0.122563,
+        "resistanceShunt": 126.31061583333334,
+        "nNsVth": 2.639826750125776,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 49.46461985807516 }
+    },
+    {
+      "input": {
         "photocurrent": 10.288888624298812,
         "saturationCurrent": 6.56614561057077e-13,
         "resistanceSeries": 0.122563,
@@ -396,6 +451,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 10.286661962269807 }
+    },
+    {
+      "input": {
+        "photocurrent": 10.288888624298812,
+        "saturationCurrent": 6.56614561057077e-13,
+        "resistanceSeries": 0.122563,
+        "resistanceShunt": 117.10989215995797,
+        "nNsVth": 1.8408389814640054,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 52.92843717016079 }
     },
     {
       "input": {
@@ -465,6 +531,17 @@
     },
     {
       "input": {
+        "photocurrent": 9.494576437059512,
+        "saturationCurrent": 2.126036505281998e-7,
+        "resistanceSeries": 0.122563,
+        "resistanceShunt": 130.07066734223633,
+        "nNsVth": 2.3302824311972477,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 47.89009309135331 }
+    },
+    {
+      "input": {
         "photocurrent": 3.434646508112096,
         "saturationCurrent": 8.901516615442254e-8,
         "resistanceSeries": 0.122563,
@@ -528,6 +605,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 3.436259708980263 }
+    },
+    {
+      "input": {
+        "photocurrent": 3.434646508112096,
+        "saturationCurrent": 8.901516615442254e-8,
+        "resistanceSeries": 0.122563,
+        "resistanceShunt": 358.82006388422207,
+        "nNsVth": 2.2887967882755187,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 17.363276592421037 }
     },
     {
       "input": {
@@ -597,6 +685,17 @@
     },
     {
       "input": {
+        "photocurrent": 8.120884,
+        "saturationCurrent": 3.347211e-9,
+        "resistanceSeries": 0.226477,
+        "resistanceShunt": 87.843483,
+        "nNsVth": 1.697832,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 64.87304792568321 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 3.347211e-9,
         "resistanceSeries": 0.226477,
@@ -660,6 +759,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.4898790231133006e-9 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.347211e-9,
+        "resistanceSeries": 0.226477,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.697832,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 3.347211e-9 }
     },
     {
       "input": {
@@ -729,6 +839,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.00793696339355575,
+        "saturationCurrent": 4.724129967316354e-13,
+        "resistanceSeries": 0.226477,
+        "resistanceShunt": 87843.48300000001,
+        "nNsVth": 1.4415769605903068,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.06485621500839088 }
+    },
+    {
+      "input": {
         "photocurrent": 1.61191542623705,
         "saturationCurrent": 2.363121376313699e-10,
         "resistanceSeries": 0.226477,
@@ -792,6 +913,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.613360293887599 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.61191542623705,
+        "saturationCurrent": 2.363121376313699e-10,
+        "resistanceSeries": 0.226477,
+        "resistanceShunt": 439.217415,
+        "nNsVth": 1.6124136535301021,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 12.989101522918087 }
     },
     {
       "input": {
@@ -861,6 +993,17 @@
     },
     {
       "input": {
+        "photocurrent": 10.014811022784901,
+        "saturationCurrent": 8.548907570098323e-6,
+        "resistanceSeries": 0.226477,
+        "resistanceShunt": 73.20290250000001,
+        "nNsVth": 2.0110326037229584,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 78.07656689597515 }
+    },
+    {
+      "input": {
         "photocurrent": 3.18799694019757,
         "saturationCurrent": 1.7436944167426507e-11,
         "resistanceSeries": 0.226477,
@@ -924,6 +1067,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 3.1892559827808005 }
+    },
+    {
+      "input": {
+        "photocurrent": 3.18799694019757,
+        "saturationCurrent": 1.7436944167426507e-11,
+        "resistanceSeries": 0.226477,
+        "resistanceShunt": 220.56988152967799,
+        "nNsVth": 1.5361977347345206,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 25.830027928896374 }
     },
     {
       "input": {
@@ -993,6 +1147,17 @@
     },
     {
       "input": {
+        "photocurrent": 6.413232090866944,
+        "saturationCurrent": 4.631599064341211e-8,
+        "resistanceSeries": 0.226477,
+        "resistanceShunt": 112.15549422239738,
+        "nNsVth": 1.7916102441424613,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 50.8914299838236 }
+    },
+    {
+      "input": {
         "photocurrent": 8.469108621985695,
         "saturationCurrent": 1.4427404755734703e-6,
         "resistanceSeries": 0.226477,
@@ -1056,6 +1221,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 8.4584563115542 }
+    },
+    {
+      "input": {
+        "photocurrent": 8.469108621985695,
+        "saturationCurrent": 1.4427404755734703e-6,
+        "resistanceSeries": 0.226477,
+        "resistanceShunt": 85.96455017429709,
+        "nNsVth": 1.9306150479312714,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 66.45753537090864 }
     },
     {
       "input": {
@@ -1125,6 +1301,17 @@
     },
     {
       "input": {
+        "photocurrent": 8.220323,
+        "saturationCurrent": 3.780532e-10,
+        "resistanceSeries": 0.219877,
+        "resistanceShunt": 174.871155,
+        "nNsVth": 0.924868,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 36.76657395879177 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 3.780532e-10,
         "resistanceSeries": 0.219877,
@@ -1188,6 +1375,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 2.498265308907479e-10 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.780532e-10,
+        "resistanceSeries": 0.219877,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 0.924868,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 3.780532e-10 }
     },
     {
       "input": {
@@ -1257,6 +1455,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0080424128973584,
+        "saturationCurrent": 5.3357032208601225e-14,
+        "resistanceSeries": 0.219877,
+        "resistanceShunt": 174871.155,
+        "nNsVth": 0.785276988764045,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.03663484682306282 }
+    },
+    {
+      "input": {
         "photocurrent": 1.6322039264905603,
         "saturationCurrent": 2.6690447608585127e-11,
         "resistanceSeries": 0.219877,
@@ -1320,6 +1529,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.6329369858981446 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.6322039264905603,
+        "saturationCurrent": 2.6690447608585127e-11,
+        "resistanceSeries": 0.219877,
+        "resistanceShunt": 874.355775,
+        "nNsVth": 0.8783376629213483,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 7.348851885403317 }
     },
     {
       "input": {
@@ -1389,6 +1609,17 @@
     },
     {
       "input": {
+        "photocurrent": 10.125322417207679,
+        "saturationCurrent": 9.655626321077145e-7,
+        "resistanceSeries": 0.219877,
+        "resistanceShunt": 145.7259625,
+        "nNsVth": 1.0954792359550563,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 44.36935316390406 }
+    },
+    {
+      "input": {
         "photocurrent": 9.401772875885348,
         "saturationCurrent": 2.305979812650972e-7,
         "resistanceSeries": 0.219877,
@@ -1452,6 +1683,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 9.394945178650113 }
+    },
+    {
+      "input": {
+        "photocurrent": 9.401772875885348,
+        "saturationCurrent": 2.305979812650972e-7,
+        "resistanceSeries": 0.219877,
+        "resistanceShunt": 156.09871243062983,
+        "nNsVth": 1.059953875283211,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 41.374507664407545 }
     },
     {
       "input": {
@@ -1521,6 +1763,17 @@
     },
     {
       "input": {
+        "photocurrent": 9.057884502263404,
+        "saturationCurrent": 6.105842061580871e-12,
+        "resistanceSeries": 0.219877,
+        "resistanceShunt": 156.96643766978224,
+        "nNsVth": 0.8543642867388264,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 40.85459905740833 }
+    },
+    {
+      "input": {
         "photocurrent": 5.309676633960224,
         "saturationCurrent": 8.589206231658288e-11,
         "resistanceSeries": 0.219877,
@@ -1584,6 +1837,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 5.309055975210584 }
+    },
+    {
+      "input": {
+        "photocurrent": 5.309676633960224,
+        "saturationCurrent": 8.589206231658288e-11,
+        "resistanceSeries": 0.219877,
+        "resistanceShunt": 269.6156390290666,
+        "nNsVth": 0.898281262749316,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 23.835156888810886 }
     },
     {
       "input": {
@@ -1653,6 +1917,17 @@
     },
     {
       "input": {
+        "photocurrent": 8.472015,
+        "saturationCurrent": 2.201376e-10,
+        "resistanceSeries": 0.54117,
+        "resistanceShunt": 2274.750244,
+        "nNsVth": 1.834131,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 10.667520669913811 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 2.201376e-10,
         "resistanceSeries": 0.54117,
@@ -1716,6 +1991,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 9.252035903578698e-11 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 2.201376e-10,
+        "resistanceSeries": 0.54117,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.834131,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.201376e-10 }
     },
     {
       "input": {
@@ -1785,6 +2071,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.008304876441067501,
+        "saturationCurrent": 3.1069407727600706e-14,
+        "resistanceSeries": 0.54117,
+        "resistanceShunt": 2274750.244,
+        "nNsVth": 1.5573042517189333,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.010502917447720906 }
+    },
+    {
+      "input": {
         "photocurrent": 1.6832604294045002,
         "saturationCurrent": 1.5541651491059114e-11,
         "resistanceSeries": 0.54117,
@@ -1848,6 +2145,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.683268260217985 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.6832604294045002,
+        "saturationCurrent": 1.5541651491059114e-11,
+        "resistanceSeries": 0.54117,
+        "resistanceShunt": 11373.751219999998,
+        "nNsVth": 1.7418554172396443,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.1227681278812214 }
     },
     {
       "input": {
@@ -1917,6 +2225,17 @@
     },
     {
       "input": {
+        "photocurrent": 10.411554553101,
+        "saturationCurrent": 5.622400246364142e-7,
+        "resistanceSeries": 0.54117,
+        "resistanceShunt": 1895.6252033333333,
+        "nNsVth": 2.1724748034546373,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 13.045483049596324 }
+    },
+    {
+      "input": {
         "photocurrent": 4.276111958991013,
         "saturationCurrent": 5.085760285524752e-15,
         "resistanceSeries": 0.54117,
@@ -1980,6 +2299,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 4.2758135322392965 }
+    },
+    {
+      "input": {
+        "photocurrent": 4.276111958991013,
+        "saturationCurrent": 5.085760285524752e-15,
+        "resistanceSeries": 0.54117,
+        "resistanceShunt": 4402.896193838758,
+        "nNsVth": 1.5105284681771978,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 5.411063017346565 }
     },
     {
       "input": {
@@ -2049,6 +2379,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.331970384284238,
+        "saturationCurrent": 4.5268878231142304e-11,
+        "resistanceSeries": 0.54117,
+        "resistanceShunt": 57820.153648060805,
+        "nNsVth": 1.7779648249551574,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.4184415061885506 }
+    },
+    {
+      "input": {
         "photocurrent": 2.3756524179261684,
         "saturationCurrent": 1.3856072974648626e-7,
         "resistanceSeries": 0.54117,
@@ -2112,6 +2453,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 2.3756178530388325 }
+    },
+    {
+      "input": {
+        "photocurrent": 2.3756524179261684,
+        "saturationCurrent": 1.3856072974648626e-7,
+        "resistanceSeries": 0.54117,
+        "resistanceShunt": 8267.919829249287,
+        "nNsVth": 2.1035215982790167,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.980204524327086 }
     },
     {
       "input": {
@@ -2181,6 +2533,17 @@
     },
     {
       "input": {
+        "photocurrent": 8.135091,
+        "saturationCurrent": 2.744723e-10,
+        "resistanceSeries": 0.551355,
+        "resistanceShunt": 127.270897,
+        "nNsVth": 1.853058,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 47.216820501500465 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 2.744723e-10,
         "resistanceSeries": 0.551355,
@@ -2244,6 +2607,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.1446781773198605e-10 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 2.744723e-10,
+        "resistanceSeries": 0.551355,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.853058,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.744723e-10 }
     },
     {
       "input": {
@@ -2313,6 +2687,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0079758751273425,
+        "saturationCurrent": 3.8738006586027733e-14,
+        "resistanceSeries": 0.551355,
+        "resistanceShunt": 127270.89700000001,
+        "nNsVth": 1.5733745856112695,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.04726194963259793 }
+    },
+    {
+      "input": {
         "photocurrent": 1.6164038084894998,
         "saturationCurrent": 1.9377665744286412e-11,
         "resistanceSeries": 0.551355,
@@ -2376,6 +2761,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.6165746150233335 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.6164038084894998,
+        "saturationCurrent": 1.9377665744286412e-11,
+        "resistanceSeries": 0.551355,
+        "resistanceShunt": 636.3544850000001,
+        "nNsVth": 1.7598301952037565,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 9.46545852541673 }
     },
     {
       "input": {
@@ -2445,6 +2841,17 @@
     },
     {
       "input": {
+        "photocurrent": 9.995625813231,
+        "saturationCurrent": 7.010129696790247e-7,
+        "resistanceSeries": 0.551355,
+        "resistanceShunt": 106.05908083333334,
+        "nNsVth": 2.194893284252893,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 56.84365618697923 }
+    },
+    {
+      "input": {
         "photocurrent": 1.3298921536605277,
         "saturationCurrent": 1.4611523496980998e-14,
         "resistanceSeries": 0.551355,
@@ -2508,6 +2915,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.3302420278308325 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.3298921536605277,
+        "saturationCurrent": 1.4611523496980998e-14,
+        "resistanceSeries": 0.551355,
+        "resistanceShunt": 761.8864991239793,
+        "nNsVth": 1.5475656134966747,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 7.886841982778933 }
     },
     {
       "input": {
@@ -2577,6 +2995,17 @@
     },
     {
       "input": {
+        "photocurrent": 6.3903406952545705,
+        "saturationCurrent": 1.2567859419593278e-6,
+        "resistanceSeries": 0.551355,
+        "resistanceShunt": 166.23935447130094,
+        "nNsVth": 2.2252476451163616,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 36.34690649242194 }
+    },
+    {
+      "input": {
         "photocurrent": 4.561380638097589,
         "saturationCurrent": 5.436316517980135e-15,
         "resistanceSeries": 0.551355,
@@ -2640,6 +3069,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 4.554565193916597 }
+    },
+    {
+      "input": {
+        "photocurrent": 4.561380638097589,
+        "saturationCurrent": 5.436316517980135e-15,
+        "resistanceSeries": 0.551355,
+        "resistanceShunt": 221.72909826014683,
+        "nNsVth": 1.5222237550630957,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 27.04417202474937 }
     },
     {
       "input": {
@@ -2709,6 +3149,17 @@
     },
     {
       "input": {
+        "photocurrent": 8.738918,
+        "saturationCurrent": 5.418559e-10,
+        "resistanceSeries": 0.259682,
+        "resistanceShunt": 254.198868,
+        "nNsVth": 1.594086,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 28.379565407735612 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 5.418559e-10,
         "resistanceSeries": 0.259682,
@@ -2772,6 +3223,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 2.524930687475033e-10 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 5.418559e-10,
+        "resistanceSeries": 0.259682,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.594086,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 5.418559e-10 }
     },
     {
       "input": {
@@ -2841,6 +3303,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.008621903825500401,
+        "saturationCurrent": 7.647554023804217e-14,
+        "resistanceSeries": 0.259682,
+        "resistanceShunt": 254198.86800000002,
+        "nNsVth": 1.3534894210967632,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.028291514050603716 }
+    },
+    {
+      "input": {
         "photocurrent": 1.7399826550333601,
         "saturationCurrent": 3.825487129946986e-11,
         "resistanceSeries": 0.259682,
@@ -2904,6 +3377,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.7404138496093118 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.7399826550333601,
+        "saturationCurrent": 3.825487129946986e-11,
+        "resistanceSeries": 0.259682,
+        "resistanceShunt": 1270.99434,
+        "nNsVth": 1.5138871403655876,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 5.672751457610881 }
     },
     {
       "input": {
@@ -2973,6 +3457,17 @@
     },
     {
       "input": {
+        "photocurrent": 10.658322389266079,
+        "saturationCurrent": 1.383921122813124e-6,
+        "resistanceSeries": 0.259682,
+        "resistanceShunt": 211.83239,
+        "nNsVth": 1.888148485326178,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 34.219941037060835 }
+    },
+    {
+      "input": {
         "photocurrent": 0.5865106937358157,
         "saturationCurrent": 3.0682323303404185e-7,
         "resistanceSeries": 0.259682,
@@ -3036,6 +3531,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.5867317792622967 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.5865106937358157,
+        "saturationCurrent": 3.0682323303404185e-7,
+        "resistanceSeries": 0.259682,
+        "resistanceShunt": 3835.953528886395,
+        "nNsVth": 1.8238423922366749,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.8898399394881467 }
     },
     {
       "input": {
@@ -3105,6 +3611,17 @@
     },
     {
       "input": {
+        "photocurrent": 10.21323830319641,
+        "saturationCurrent": 9.900064965984964e-7,
+        "resistanceSeries": 0.259682,
+        "resistanceShunt": 220.88622958641406,
+        "nNsVth": 1.873473975959849,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 32.81075316874711 }
+    },
+    {
+      "input": {
         "photocurrent": 7.858479518475918,
         "saturationCurrent": 1.6148218273006134e-8,
         "resistanceSeries": 0.259682,
@@ -3168,6 +3685,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 7.854824779527579 }
+    },
+    {
+      "input": {
+        "photocurrent": 7.858479518475918,
+        "saturationCurrent": 1.6148218273006134e-8,
+        "resistanceSeries": 0.259682,
+        "resistanceShunt": 284.49650403811575,
+        "nNsVth": 1.7096479787447059,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 25.410194086835805 }
     },
     {
       "input": {
@@ -3237,6 +3765,17 @@
     },
     {
       "input": {
+        "photocurrent": 9.346606,
+        "saturationCurrent": 1.716279e-10,
+        "resistanceSeries": 0.480385,
+        "resistanceShunt": 269.90033,
+        "nNsVth": 1.880405,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 27.82244304600756 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 1.716279e-10,
         "resistanceSeries": 0.480385,
@@ -3300,6 +3839,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 7.078857273155639e-11 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.716279e-10,
+        "resistanceSeries": 0.480385,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.880405,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.716279e-10 }
     },
     {
       "input": {
@@ -3369,6 +3919,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0091413389491072,
+        "saturationCurrent": 2.4222927852996856e-14,
+        "resistanceSeries": 0.480385,
+        "resistanceShunt": 269900.33,
+        "nNsVth": 1.5965940826765053,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.027666646826146116 }
+    },
+    {
+      "input": {
         "photocurrent": 1.85563672994048,
         "saturationCurrent": 1.2116880568982058e-11,
         "resistanceSeries": 0.480385,
@@ -3432,6 +3993,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.8557171606037308 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.85563672994048,
+        "saturationCurrent": 1.2116880568982058e-11,
+        "resistanceSeries": 0.480385,
+        "resistanceShunt": 1349.50165,
+        "nNsVth": 1.7858013608921683,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 5.55872940107061 }
     },
     {
       "input": {
@@ -3501,6 +4073,17 @@
     },
     {
       "input": {
+        "photocurrent": 11.51698554130944,
+        "saturationCurrent": 4.3834435700351076e-7,
+        "resistanceSeries": 0.480385,
+        "resistanceShunt": 224.91694166666667,
+        "nNsVth": 2.2272850100620496,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 33.67548930598797 }
+    },
+    {
+      "input": {
         "photocurrent": 3.3607517825708637,
         "saturationCurrent": 2.918699159746334e-15,
         "resistanceSeries": 0.480385,
@@ -3564,6 +4147,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 3.359911647200678 }
+    },
+    {
+      "input": {
+        "photocurrent": 3.3607517825708637,
+        "saturationCurrent": 2.918699159746334e-15,
+        "resistanceSeries": 0.480385,
+        "resistanceShunt": 730.8954942644638,
+        "nNsVth": 1.5407963418951964,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 10.19497435808395 }
     },
     {
       "input": {
@@ -3633,6 +4227,17 @@
     },
     {
       "input": {
+        "photocurrent": 11.684686445940427,
+        "saturationCurrent": 3.709150071877197e-13,
+        "resistanceSeries": 0.480385,
+        "resistanceShunt": 212.4560521357202,
+        "nNsVth": 1.6746241625032,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 35.139511364976954 }
+    },
+    {
+      "input": {
         "photocurrent": 2.079335324892094,
         "saturationCurrent": 1.7085952684646735e-8,
         "resistanceSeries": 0.480385,
@@ -3696,6 +4301,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 2.079336233166132 }
+    },
+    {
+      "input": {
+        "photocurrent": 2.079335324892094,
+        "saturationCurrent": 1.7085952684646735e-8,
+        "resistanceSeries": 0.480385,
+        "resistanceShunt": 1230.988602543415,
+        "nNsVth": 2.06987667649918,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 6.138715780346987 }
     },
     {
       "input": {
@@ -3765,6 +4381,17 @@
     },
     {
       "input": {
+        "photocurrent": 1.657489,
+        "saturationCurrent": 1.273942e-11,
+        "resistanceSeries": 5.846558,
+        "resistanceShunt": 1288.129761,
+        "nNsVth": 3.765826,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 5.514058336833086 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 1.273942e-11,
         "resistanceSeries": 5.846558,
@@ -3828,6 +4455,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 2.970996112036622e-12 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.273942e-11,
+        "resistanceSeries": 5.846558,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 3.765826,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.273942e-11 }
     },
     {
       "input": {
@@ -3897,6 +4535,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.001657489,
+        "saturationCurrent": 1.7979946823857033e-15,
+        "resistanceSeries": 5.846558,
+        "resistanceShunt": 1288129.761,
+        "nNsVth": 3.197447096763374,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.005539060381196069 }
+    },
+    {
+      "input": {
         "photocurrent": 0.3314978,
         "saturationCurrent": 8.993994021840353e-13,
         "resistanceSeries": 5.846558,
@@ -3960,6 +4609,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.3313522757944459 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.3314978,
+        "saturationCurrent": 8.993994021840353e-13,
+        "resistanceSeries": 5.846558,
+        "resistanceShunt": 6440.648805,
+        "nNsVth": 3.5763663655877913,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.106812385282704 }
     },
     {
       "input": {
@@ -4029,6 +4689,17 @@
     },
     {
       "input": {
+        "photocurrent": 1.9889868,
+        "saturationCurrent": 3.253697603069002e-8,
+        "resistanceSeries": 5.846558,
+        "resistanceShunt": 1073.4414675,
+        "nNsVth": 4.460511326178099,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 6.6108960497835785 }
+    },
+    {
+      "input": {
         "photocurrent": 1.4336337524844796,
         "saturationCurrent": 3.123387779061301e-11,
         "resistanceSeries": 5.846558,
@@ -4092,6 +4763,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.4286964473398824 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.4336337524844796,
+        "saturationCurrent": 3.123387779061301e-11,
+        "resistanceSeries": 5.846558,
+        "resistanceShunt": 1489.2652364874082,
+        "nNsVth": 3.834406902100448,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 4.772259128570961 }
     },
     {
       "input": {
@@ -4161,6 +4843,17 @@
     },
     {
       "input": {
+        "photocurrent": 1.3213655566229303,
+        "saturationCurrent": 1.6398540143221688e-15,
+        "resistanceSeries": 5.846558,
+        "resistanceShunt": 1615.7988217029008,
+        "nNsVth": 3.192421823302185,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 4.399889765503068 }
+    },
+    {
+      "input": {
         "photocurrent": 0.9684967623665299,
         "saturationCurrent": 5.4742145814391196e-14,
         "resistanceSeries": 5.846558,
@@ -4224,6 +4917,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.9663874319809331 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.9684967623665299,
+        "saturationCurrent": 5.4742145814391196e-14,
+        "resistanceSeries": 5.846558,
+        "resistanceShunt": 2204.5101154629465,
+        "nNsVth": 3.3954460979521333,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 3.2280133767967008 }
     },
     {
       "input": {
@@ -4293,6 +4997,17 @@
     },
     {
       "input": {
+        "photocurrent": 8.513571,
+        "saturationCurrent": 5.521208e-10,
+        "resistanceSeries": 0.343869,
+        "resistanceShunt": 312.065857,
+        "nNsVth": 0.924918,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 24.508823487837397 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 5.521208e-10,
         "resistanceSeries": 0.343869,
@@ -4356,6 +5071,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 3.6484358784559157e-10 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 5.521208e-10,
+        "resistanceSeries": 0.343869,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 0.924918,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 5.521208e-10 }
     },
     {
       "input": {
@@ -4425,6 +5151,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.008298135124851001,
+        "saturationCurrent": 7.792429030792141e-14,
+        "resistanceSeries": 0.343869,
+        "resistanceShunt": 312065.857,
+        "nNsVth": 0.785319442227067,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.024320367371180693 }
+    },
+    {
+      "input": {
         "photocurrent": 1.6883518083234001,
         "saturationCurrent": 3.8979570298598463e-11,
         "resistanceSeries": 0.343869,
@@ -4488,6 +5225,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.6886205565709345 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.6883518083234001,
+        "saturationCurrent": 3.8979570298598463e-11,
+        "resistanceSeries": 0.343869,
+        "resistanceShunt": 1560.329285,
+        "nNsVth": 0.8783851474090223,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 4.8917255675242615 }
     },
     {
       "input": {
@@ -4557,6 +5305,17 @@
     },
     {
       "input": {
+        "photocurrent": 10.5322578168852,
+        "saturationCurrent": 1.4101380781578282e-6,
+        "resistanceSeries": 0.343869,
+        "resistanceShunt": 260.05488083333336,
+        "nNsVth": 1.0955384595002517,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 29.71967193829691 }
+    },
+    {
+      "input": {
         "photocurrent": 6.42400078464483,
         "saturationCurrent": 2.066087302078153e-14,
         "resistanceSeries": 0.343869,
@@ -4620,6 +5379,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 6.420994364642228 }
+    },
+    {
+      "input": {
+        "photocurrent": 6.42400078464483,
+        "saturationCurrent": 2.066087302078153e-14,
+        "resistanceSeries": 0.343869,
+        "resistanceShunt": 401.80045042315743,
+        "nNsVth": 0.7678811096655546,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 18.85185502474229 }
     },
     {
       "input": {
@@ -4689,6 +5459,17 @@
     },
     {
       "input": {
+        "photocurrent": 9.454626201266658,
+        "saturationCurrent": 2.489050904384729e-14,
+        "resistanceSeries": 0.343869,
+        "resistanceShunt": 273.1279493047497,
+        "nNsVth": 0.7702819928406712,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 27.7261573525115 }
+    },
+    {
+      "input": {
         "photocurrent": 7.858993774636049,
         "saturationCurrent": 1.72670801011158e-13,
         "resistanceSeries": 0.343869,
@@ -4752,6 +5533,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 7.853842762618238 }
+    },
+    {
+      "input": {
+        "photocurrent": 7.858993774636049,
+        "saturationCurrent": 1.72670801011158e-13,
+        "resistanceSeries": 0.343869,
+        "resistanceShunt": 330.16678110708904,
+        "nNsVth": 0.7961459904884209,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 22.97892269084673 }
     },
     {
       "input": {
@@ -4821,6 +5613,17 @@
     },
     {
       "input": {
+        "photocurrent": 9.580168,
+        "saturationCurrent": 1.625012e-10,
+        "resistanceSeries": 0.367607,
+        "resistanceShunt": 655.659058,
+        "nNsVth": 1.597179,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 17.196441133179075 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 1.625012e-10,
         "resistanceSeries": 0.367607,
@@ -4884,6 +5687,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 7.561654043531997e-11 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.625012e-10,
+        "resistanceSeries": 0.367607,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.597179,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.625012e-10 }
     },
     {
       "input": {
@@ -4953,6 +5767,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0093641125716244,
+        "saturationCurrent": 2.2934819126875134e-14,
+        "resistanceSeries": 0.367607,
+        "resistanceShunt": 655659.058,
+        "nNsVth": 1.3561155923193022,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.016990017671780294 }
+    },
+    {
+      "input": {
         "photocurrent": 1.9016299047749603,
         "saturationCurrent": 1.1472538163761644e-11,
         "resistanceSeries": 0.367607,
@@ -5016,6 +5841,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.9017216944928477 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.9016299047749603,
+        "saturationCurrent": 1.1472538163761644e-11,
+        "resistanceSeries": 0.367607,
+        "resistanceShunt": 3278.29529,
+        "nNsVth": 1.5168245307731005,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 3.426428612244277 }
     },
     {
       "input": {
@@ -5085,6 +5921,17 @@
     },
     {
       "input": {
+        "photocurrent": 11.81308289495088,
+        "saturationCurrent": 4.1503440889446815e-7,
+        "resistanceSeries": 0.367607,
+        "resistanceShunt": 546.3825483333334,
+        "nNsVth": 1.8918120538319638,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 20.950085611956283 }
+    },
+    {
+      "input": {
         "photocurrent": 4.213487582446868,
         "saturationCurrent": 5.775804255757058e-14,
         "resistanceSeries": 0.367607,
@@ -5148,6 +5995,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 4.213111759082772 }
+    },
+    {
+      "input": {
+        "photocurrent": 4.213487582446868,
+        "saturationCurrent": 5.775804255757058e-14,
+        "resistanceSeries": 0.367607,
+        "resistanceShunt": 1460.1789747231062,
+        "nNsVth": 1.3778648479634257,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 7.635803005330096 }
     },
     {
       "input": {
@@ -5217,6 +6075,17 @@
     },
     {
       "input": {
+        "photocurrent": 5.224188208316561,
+        "saturationCurrent": 8.592396580447326e-9,
+        "resistanceSeries": 0.367607,
+        "resistanceShunt": 1217.7606059990615,
+        "nNsVth": 1.734144760826136,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 9.327269894605882 }
+    },
+    {
+      "input": {
         "photocurrent": 8.770839141369487,
         "saturationCurrent": 7.55473476747914e-8,
         "resistanceSeries": 0.367607,
@@ -5280,6 +6149,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 8.767797941895584 }
+    },
+    {
+      "input": {
+        "photocurrent": 8.770839141369487,
+        "saturationCurrent": 7.55473476747914e-8,
+        "resistanceSeries": 0.367607,
+        "resistanceShunt": 731.0392258675287,
+        "nNsVth": 1.819259436272471,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 15.602571644843161 }
     },
     {
       "input": {
@@ -5349,6 +6229,17 @@
     },
     {
       "input": {
+        "photocurrent": 8.599438,
+        "saturationCurrent": 1.984298e-9,
+        "resistanceSeries": 0.300682,
+        "resistanceShunt": 273.667877,
+        "nNsVth": 1.704737,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 26.840269439078824 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 1.984298e-9,
         "resistanceSeries": 0.300682,
@@ -5412,6 +6303,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 8.806021066726117e-10 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.984298e-9,
+        "resistanceSeries": 0.300682,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.704737,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.984298e-9 }
     },
     {
       "input": {
@@ -5481,6 +6383,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.008507536236480701,
+        "saturationCurrent": 2.800564901909652e-13,
+        "resistanceSeries": 0.300682,
+        "resistanceShunt": 273667.877,
+        "nNsVth": 1.4474397838336408,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.026777827961167757 }
+    },
+    {
+      "input": {
         "photocurrent": 1.7137608157653799,
         "saturationCurrent": 1.4009087030296333e-10,
         "resistanceSeries": 0.300682,
@@ -5544,6 +6457,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.7141149651372036 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.7137608157653799,
+        "saturationCurrent": 1.4009087030296333e-10,
+        "resistanceSeries": 0.300682,
+        "resistanceShunt": 1368.3393849999998,
+        "nNsVth": 1.6189712612778802,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 5.366645766094755 }
     },
     {
       "input": {
@@ -5613,6 +6537,17 @@
     },
     {
       "input": {
+        "photocurrent": 10.454114853161638,
+        "saturationCurrent": 5.067974559575409e-6,
+        "resistanceSeries": 0.300682,
+        "resistanceShunt": 228.05656416666665,
+        "nNsVth": 2.0192113753144394,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 32.33587194868918 }
+    },
+    {
+      "input": {
         "photocurrent": 8.864992791363616,
         "saturationCurrent": 6.886946591098598e-14,
         "resistanceSeries": 0.300682,
@@ -5676,6 +6611,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 8.858649303331589 }
+    },
+    {
+      "input": {
+        "photocurrent": 8.864992791363616,
+        "saturationCurrent": 6.886946591098598e-14,
+        "resistanceSeries": 0.300682,
+        "resistanceShunt": 262.25893096447817,
+        "nNsVth": 1.4135177396305985,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 27.898135016910757 }
     },
     {
       "input": {
@@ -5745,6 +6691,17 @@
     },
     {
       "input": {
+        "photocurrent": 7.670270246287147,
+        "saturationCurrent": 1.2579247357621695e-6,
+        "resistanceSeries": 0.300682,
+        "resistanceShunt": 310.01461464912785,
+        "nNsVth": 1.9554395059604872,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 23.77548365904304 }
+    },
+    {
+      "input": {
         "photocurrent": 4.2810264601003665,
         "saturationCurrent": 2.866404414900797e-8,
         "resistanceSeries": 0.300682,
@@ -5808,6 +6765,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 4.28050631635817 }
+    },
+    {
+      "input": {
+        "photocurrent": 4.2810264601003665,
+        "saturationCurrent": 2.866404414900797e-8,
+        "resistanceSeries": 0.300682,
+        "resistanceShunt": 551.9126953598789,
+        "nNsVth": 1.8005221854145474,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 13.333166435630696 }
     },
     {
       "input": {
@@ -5877,6 +6845,17 @@
     },
     {
       "input": {
+        "photocurrent": 9.372979,
+        "saturationCurrent": 1.998931e-9,
+        "resistanceSeries": 0.309441,
+        "resistanceShunt": 973.08075,
+        "nNsVth": 1.751242,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 14.506685569219355 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 1.998931e-9,
         "resistanceSeries": 0.309441,
@@ -5940,6 +6919,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 8.696408722514988e-10 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.998931e-9,
+        "resistanceSeries": 0.309441,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.751242,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.998931e-9 }
     },
     {
       "input": {
@@ -6009,6 +6999,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.00910630321964965,
+        "saturationCurrent": 2.8212173776011277e-13,
+        "resistanceSeries": 0.309441,
+        "resistanceShunt": 973080.75,
+        "nNsVth": 1.4869257497903738,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.014244618403056127 }
+    },
+    {
+      "input": {
         "photocurrent": 1.8568174146433103,
         "saturationCurrent": 1.4112395591064082e-10,
         "resistanceSeries": 0.309441,
@@ -6072,6 +7073,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.8569048478109997 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.8568174146433103,
+        "saturationCurrent": 1.4112395591064082e-10,
+        "resistanceSeries": 0.309441,
+        "resistanceShunt": 4865.4037499999995,
+        "nNsVth": 1.663136583263458,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.884297915240087 }
     },
     {
       "input": {
@@ -6141,6 +7153,17 @@
     },
     {
       "input": {
+        "photocurrent": 11.638699277847179,
+        "saturationCurrent": 5.105347812852017e-6,
+        "resistanceSeries": 0.309441,
+        "resistanceShunt": 810.900625,
+        "nNsVth": 2.074295194700654,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 17.79789633246866 }
+    },
+    {
+      "input": {
         "photocurrent": 1.1326394225890284,
         "saturationCurrent": 1.3259550963674402e-13,
         "resistanceSeries": 0.309441,
@@ -6204,6 +7227,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.1327226153805394 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.1326394225890284,
+        "saturationCurrent": 1.3259550963674402e-13,
+        "resistanceSeries": 0.309441,
+        "resistanceShunt": 7807.0367605843185,
+        "nNsVth": 1.4679693669053693,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.7730170087540822 }
     },
     {
       "input": {
@@ -6273,6 +7307,17 @@
     },
     {
       "input": {
+        "photocurrent": 1.3812215045318814,
+        "saturationCurrent": 1.6849846168908686e-8,
+        "resistanceSeries": 0.309441,
+        "resistanceShunt": 6658.560009803753,
+        "nNsVth": 1.8289394693442618,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.132035549253641 }
+    },
+    {
+      "input": {
         "photocurrent": 10.767099014326627,
         "saturationCurrent": 3.211086716939943e-7,
         "resistanceSeries": 0.309441,
@@ -6336,6 +7381,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 10.764403633367703 }
+    },
+    {
+      "input": {
+        "photocurrent": 10.767099014326627,
+        "saturationCurrent": 3.211086716939943e-7,
+        "resistanceSeries": 0.309441,
+        "resistanceShunt": 865.031380952674,
+        "nNsVth": 1.948043300551201,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 16.541319262722876 }
     },
     {
       "input": {
@@ -6405,6 +7461,17 @@
     },
     {
       "input": {
+        "photocurrent": 8.447779,
+        "saturationCurrent": 4.954157e-10,
+        "resistanceSeries": 0.294744,
+        "resistanceShunt": 89.339386,
+        "nNsVth": 1.570864,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 64.20232325530412 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 4.954157e-10,
         "resistanceSeries": 0.294744,
@@ -6468,6 +7535,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 2.332950584983201e-10 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 4.954157e-10,
+        "resistanceSeries": 0.294744,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.570864,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 4.954157e-10 }
     },
     {
       "input": {
@@ -6537,6 +7615,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.00828056934070525,
+        "saturationCurrent": 6.99211419491932e-14,
+        "resistanceSeries": 0.294744,
+        "resistanceShunt": 89339.386,
+        "nNsVth": 1.3337723347308401,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.06424671470544469 }
+    },
+    {
+      "input": {
         "photocurrent": 1.6784084893803504,
         "saturationCurrent": 3.497620648448559e-11,
         "resistanceSeries": 0.294744,
@@ -6600,6 +7689,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.679538933641584 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.6784084893803504,
+        "saturationCurrent": 3.497620648448559e-11,
+        "resistanceSeries": 0.294744,
+        "resistanceShunt": 446.69693,
+        "nNsVth": 1.4918334449102801,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 12.863192435006662 }
     },
     {
       "input": {
@@ -6669,6 +7769,17 @@
     },
     {
       "input": {
+        "photocurrent": 10.3825756336323,
+        "saturationCurrent": 1.2653110389741072e-6,
+        "resistanceSeries": 0.294744,
+        "resistanceShunt": 74.44948833333333,
+        "nNsVth": 1.86064270199564,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 77.2364282499062 }
+    },
+    {
+      "input": {
         "photocurrent": 4.139827797717605,
         "saturationCurrent": 2.3396706347877818e-8,
         "resistanceSeries": 0.294744,
@@ -6732,6 +7843,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 4.1386349304493315 }
+    },
+    {
+      "input": {
+        "photocurrent": 4.139827797717605,
+        "saturationCurrent": 2.3396706347877818e-8,
+        "resistanceSeries": 0.294744,
+        "resistanceShunt": 184.29410757538616,
+        "nNsVth": 1.7014287790416267,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 31.22044383842124 }
     },
     {
       "input": {
@@ -6801,6 +7923,17 @@
     },
     {
       "input": {
+        "photocurrent": 3.13852540202559,
+        "saturationCurrent": 4.102141031240568e-13,
+        "resistanceSeries": 0.294744,
+        "resistanceShunt": 236.54430236161065,
+        "nNsVth": 1.3753443131076168,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 24.246003308503536 }
+    },
+    {
+      "input": {
         "photocurrent": 5.3862467890483074,
         "saturationCurrent": 3.062852877619745e-7,
         "resistanceSeries": 0.294744,
@@ -6864,6 +7997,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 5.382140842585657 }
+    },
+    {
+      "input": {
+        "photocurrent": 5.3862467890483074,
+        "saturationCurrent": 3.062852877619745e-7,
+        "resistanceSeries": 0.294744,
+        "resistanceShunt": 142.81008283203235,
+        "nNsVth": 1.8008541065990407,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 40.31457583614513 }
     },
     {
       "input": {
@@ -6933,6 +8077,17 @@
     },
     {
       "input": {
+        "photocurrent": 7.879261,
+        "saturationCurrent": 2.35768e-9,
+        "resistanceSeries": 0.149366,
+        "resistanceShunt": 60.952682,
+        "nNsVth": 1.564791,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 89.69031758594586 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 2.35768e-9,
         "resistanceSeries": 0.149366,
@@ -6996,6 +8151,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.1133277610869433e-9 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 2.35768e-9,
+        "resistanceSeries": 0.149366,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.564791,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.35768e-9 }
     },
     {
       "input": {
@@ -7065,6 +8231,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0077655302915692,
+        "saturationCurrent": 3.3275424648587806e-13,
+        "resistanceSeries": 0.149366,
+        "resistanceShunt": 60952.682,
+        "nNsVth": 1.328615937112192,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.08979615508881406 }
+    },
+    {
+      "input": {
         "photocurrent": 1.5682701527712801,
         "saturationCurrent": 1.6645153252983703e-10,
         "resistanceSeries": 0.149366,
@@ -7128,6 +8305,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.5707815391120756 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.5682701527712801,
+        "saturationCurrent": 1.6645153252983703e-10,
+        "resistanceSeries": 0.149366,
+        "resistanceShunt": 304.76341,
+        "nNsVth": 1.4860659790373973,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 17.96563407894238 }
     },
     {
       "input": {
@@ -7197,6 +8385,17 @@
     },
     {
       "input": {
+        "photocurrent": 9.62191823903184,
+        "saturationCurrent": 6.021606764518107e-6,
+        "resistanceSeries": 0.149366,
+        "resistanceShunt": 50.79390166666667,
+        "nNsVth": 1.8534494101962102,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 107.74210854814079 }
+    },
+    {
+      "input": {
         "photocurrent": 4.570228903415172,
         "saturationCurrent": 1.6048401794310494e-7,
         "resistanceSeries": 0.149366,
@@ -7260,6 +8459,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 4.573218528540896 }
+    },
+    {
+      "input": {
+        "photocurrent": 4.570228903415172,
+        "saturationCurrent": 1.6048401794310494e-7,
+        "resistanceSeries": 0.149366,
+        "resistanceShunt": 106.00644180280906,
+        "nNsVth": 1.7082778333859738,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 51.664377435434176 }
     },
     {
       "input": {
@@ -7329,6 +8539,17 @@
     },
     {
       "input": {
+        "photocurrent": 5.1229459453198825,
+        "saturationCurrent": 2.214476069831225e-6,
+        "resistanceSeries": 0.149366,
+        "resistanceShunt": 95.15826295620305,
+        "nNsVth": 1.8110626949314537,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 57.5766169843816 }
+    },
+    {
+      "input": {
         "photocurrent": 9.067807964966779,
         "saturationCurrent": 1.4730812747154543e-13,
         "resistanceSeries": 0.149366,
@@ -7392,6 +8613,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 9.061029847990971 }
+    },
+    {
+      "input": {
+        "photocurrent": 9.067807964966779,
+        "saturationCurrent": 1.4730812747154543e-13,
+        "resistanceSeries": 0.149366,
+        "resistanceShunt": 52.13981781942017,
+        "nNsVth": 1.310353312496192,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 104.66397552149726 }
     },
     {
       "input": {
@@ -7461,6 +8693,17 @@
     },
     {
       "input": {
+        "photocurrent": 8.496114,
+        "saturationCurrent": 4.047649e-10,
+        "resistanceSeries": 0.337412,
+        "resistanceShunt": 177.558685,
+        "nNsVth": 1.87468,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 36.58629356844158 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 4.047649e-10,
         "resistanceSeries": 0.337412,
@@ -7524,6 +8767,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.673327178952788e-10 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 4.047649e-10,
+        "resistanceSeries": 0.337412,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.87468,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 4.047649e-10 }
     },
     {
       "input": {
@@ -7593,6 +8847,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0082948950523248,
+        "saturationCurrent": 5.712702287987844e-14,
+        "resistanceSeries": 0.337412,
+        "resistanceShunt": 177558.685,
+        "nNsVth": 1.5917331611604897,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.03645452970953329 }
+    },
+    {
+      "input": {
         "photocurrent": 1.6858082034883202,
         "saturationCurrent": 2.8576285975741502e-11,
         "resistanceSeries": 0.337412,
@@ -7656,6 +8921,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.6862937041262176 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.6858082034883202,
+        "saturationCurrent": 2.8576285975741502e-11,
+        "resistanceSeries": 0.337412,
+        "resistanceShunt": 887.793425,
+        "nNsVth": 1.7803643870534964,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 7.314968885483439 }
     },
     {
       "input": {
@@ -7725,6 +9001,17 @@
     },
     {
       "input": {
+        "photocurrent": 10.49045792325696,
+        "saturationCurrent": 1.0337853567403104e-6,
+        "resistanceSeries": 0.337412,
+        "resistanceShunt": 147.96557083333335,
+        "nNsVth": 2.220503914137179,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 44.181355106296 }
+    },
+    {
+      "input": {
         "photocurrent": 3.0320067798446986,
         "saturationCurrent": 5.466671611600447e-13,
         "resistanceSeries": 0.337412,
@@ -7788,6 +9075,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 3.031959649238511 }
+    },
+    {
+      "input": {
+        "photocurrent": 3.0320067798446986,
+        "saturationCurrent": 5.466671611600447e-13,
+        "resistanceSeries": 0.337412,
+        "resistanceShunt": 488.4208168454596,
+        "nNsVth": 1.655599980720908,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 13.259920438377272 }
     },
     {
       "input": {
@@ -7857,6 +9155,17 @@
     },
     {
       "input": {
+        "photocurrent": 3.805210513493712,
+        "saturationCurrent": 6.411500201416762e-12,
+        "resistanceSeries": 0.337412,
+        "resistanceShunt": 391.68262689084946,
+        "nNsVth": 1.731148369381025,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 16.55638540357256 }
+    },
+    {
+      "input": {
         "photocurrent": 10.416091464467964,
         "saturationCurrent": 5.210055556427632e-10,
         "resistanceSeries": 0.337412,
@@ -7920,6 +9229,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 10.398783658735603 }
+    },
+    {
+      "input": {
+        "photocurrent": 10.416091464467964,
+        "saturationCurrent": 5.210055556427632e-10,
+        "resistanceSeries": 0.337412,
+        "resistanceShunt": 144.94469380370205,
+        "nNsVth": 1.8841703190506254,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 44.8077012100846 }
     },
     {
       "input": {
@@ -7989,6 +9309,17 @@
     },
     {
       "input": {
+        "photocurrent": 11.859863278000125,
+        "saturationCurrent": 8.926904309964655e-6,
+        "resistanceSeries": 0.3807354115802677,
+        "resistanceShunt": 366.33472588281876,
+        "nNsVth": 2.0710510032148144,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 25.482108117844042 }
+    },
+    {
+      "input": {
         "photocurrent": 1.5353185703658934,
         "saturationCurrent": 2.807665667631589e-10,
         "resistanceSeries": 0.3878918571942025,
@@ -8052,6 +9383,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.5355876514760314 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.5353185703658934,
+        "saturationCurrent": 2.807665667631589e-10,
+        "resistanceSeries": 0.3878918571942025,
+        "resistanceShunt": 1502.7368451343953,
+        "nNsVth": 3.623663217639778,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 4.861326279384288 }
     },
     {
       "input": {
@@ -8122,6 +9464,17 @@
     {
       "input": {
         "photocurrent": 0.0,
+        "saturationCurrent": 3.352079742010124e-12,
+        "resistanceSeries": 0.3845265715440547,
+        "resistanceShunt": 5629.751575330381,
+        "nNsVth": 0.9580263462237163,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.8880779983861871 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
         "saturationCurrent": 8.008850747147712e-10,
         "resistanceSeries": 0.5903756652232148,
         "resistanceShunt": 1758.7247971966428,
@@ -8184,6 +9537,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.0005684031550938595 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 8.008850747147712e-10,
+        "resistanceSeries": 0.5903756652232148,
+        "resistanceShunt": 1758.7247971966428,
+        "nNsVth": 4.252743903252369,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.8420149377073067 }
     },
     {
       "input": {
@@ -8253,6 +9617,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.5072506496594923,
+        "saturationCurrent": 1.0974084498079417e-11,
+        "resistanceSeries": 0.45294673590099244,
+        "resistanceShunt": 1336.9806101903127,
+        "nNsVth": 2.9916828129852004,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 4.245582334696212 }
+    },
+    {
+      "input": {
         "photocurrent": 1.5939976289357696,
         "saturationCurrent": 5.17983974228418e-10,
         "resistanceSeries": 0.3007244891152706,
@@ -8316,6 +9691,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.5942452787176307 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.5939976289357696,
+        "saturationCurrent": 5.17983974228418e-10,
+        "resistanceSeries": 0.3007244891152706,
+        "resistanceShunt": 2102.0474068352505,
+        "nNsVth": 2.9032470702159436,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 3.97206269459965 }
     },
     {
       "input": {
@@ -8385,6 +9771,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.223346649239284e-7,
+        "resistanceSeries": 0.1408727278975421,
+        "resistanceShunt": 2146.251215102246,
+        "nNsVth": 3.4848783387276385,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.3294908326212784 }
+    },
+    {
+      "input": {
         "photocurrent": 0.08401727674202786,
         "saturationCurrent": 1.569857343828624e-10,
         "resistanceSeries": 0.437404198769231,
@@ -8448,6 +9845,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.08425769199287708 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.08401727674202786,
+        "saturationCurrent": 1.569857343828624e-10,
+        "resistanceSeries": 0.437404198769231,
+        "resistanceShunt": 4006.174445693117,
+        "nNsVth": 5.410095000408103,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.331945311311739 }
     },
     {
       "input": {
@@ -8517,6 +9925,17 @@
     },
     {
       "input": {
+        "photocurrent": 3.5739331463208903,
+        "saturationCurrent": 1.1673697040860415e-11,
+        "resistanceSeries": 0.26899309081546785,
+        "resistanceShunt": 705.8214424405915,
+        "nNsVth": 4.310523178676452,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 10.653817513997595 }
+    },
+    {
+      "input": {
         "photocurrent": 0.3413960458477003,
         "saturationCurrent": 3.420767535399777e-14,
         "resistanceSeries": 0.21896741504202175,
@@ -8580,6 +9999,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.34155532611805606 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.3413960458477003,
+        "saturationCurrent": 3.420767535399777e-14,
+        "resistanceSeries": 0.21896741504202175,
+        "resistanceShunt": 5808.6950199828225,
+        "nNsVth": 3.112081246245596,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.2021292665904433 }
     },
     {
       "input": {
@@ -8649,6 +10079,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.503131365381952,
+        "saturationCurrent": 3.7641955385898484e-9,
+        "resistanceSeries": 0.5962995528564267,
+        "resistanceShunt": 947.3233601213642,
+        "nNsVth": 2.9720963030876546,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 5.777523488735521 }
+    },
+    {
+      "input": {
         "photocurrent": 8.161975064046954,
         "saturationCurrent": 1.4248689351076273e-10,
         "resistanceSeries": 0.45181739999114034,
@@ -8712,6 +10153,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 8.15443013421628 }
+    },
+    {
+      "input": {
+        "photocurrent": 8.161975064046954,
+        "saturationCurrent": 1.4248689351076273e-10,
+        "resistanceSeries": 0.45181739999114034,
+        "resistanceShunt": 355.7771454049356,
+        "nNsVth": 1.7932974905522374,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 22.18753951663324 }
     },
     {
       "input": {
@@ -8781,6 +10233,17 @@
     },
     {
       "input": {
+        "photocurrent": 3.2424461214873856,
+        "saturationCurrent": 6.164223890128298e-9,
+        "resistanceSeries": 0.4106121256794668,
+        "resistanceShunt": 731.2697804604702,
+        "nNsVth": 3.063450609163274,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 10.074211284888031 }
+    },
+    {
+      "input": {
         "photocurrent": 3.5851044501244336,
         "saturationCurrent": 6.766495850922081e-13,
         "resistanceSeries": 0.2313547059016612,
@@ -8847,6 +10310,17 @@
     },
     {
       "input": {
+        "photocurrent": 3.5851044501244336,
+        "saturationCurrent": 6.766495850922081e-13,
+        "resistanceSeries": 0.2313547059016612,
+        "resistanceShunt": 1980.7113342668451,
+        "nNsVth": 0.9097405252729873,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 6.10873655570951 }
+    },
+    {
+      "input": {
         "photocurrent": 7.677620798775152,
         "saturationCurrent": 3.1475290558916007e-11,
         "resistanceSeries": 0.5141245431845398,
@@ -8910,6 +10384,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 7.6685261637026185 }
+    },
+    {
+      "input": {
+        "photocurrent": 7.677620798775152,
+        "saturationCurrent": 3.1475290558916007e-11,
+        "resistanceSeries": 0.5141245431845398,
+        "resistanceShunt": 323.5509632807939,
+        "nNsVth": 0.782411732367634,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 23.094439624498097 }
     },
     {
       "input": {
@@ -8980,6 +10465,17 @@
     {
       "input": {
         "photocurrent": 0.0,
+        "saturationCurrent": 1.0621063152622964e-7,
+        "resistanceSeries": 0.5876464870975823,
+        "resistanceShunt": 5087.533258799228,
+        "nNsVth": 0.9138543735704743,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.9826811574299164 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
         "saturationCurrent": 1.1748643170459347e-10,
         "resistanceSeries": 0.37280515474861786,
         "resistanceShunt": 2262.9396344606803,
@@ -9042,6 +10538,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.00044183036022602044 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.1748643170459347e-10,
+        "resistanceSeries": 0.37280515474861786,
+        "resistanceShunt": 2262.9396344606803,
+        "nNsVth": 1.1975750520882193,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.20915146877178 }
     },
     {
       "input": {
@@ -9111,6 +10618,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 4.408309445895405e-13,
+        "resistanceSeries": 0.407179726337646,
+        "resistanceShunt": 7575.012450461232,
+        "nNsVth": 1.6335989031966172,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.6600294431319229 }
+    },
+    {
+      "input": {
         "photocurrent": 0.9932771208797179,
         "saturationCurrent": 1.306945882237804e-12,
         "resistanceSeries": 0.19779644360992135,
@@ -9174,6 +10692,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.9941655900538038 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.9932771208797179,
+        "saturationCurrent": 1.306945882237804e-12,
+        "resistanceSeries": 0.19779644360992135,
+        "resistanceShunt": 904.2042267696308,
+        "nNsVth": 1.0421628934433922,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 6.521574719723429 }
     },
     {
       "input": {
@@ -9243,6 +10772,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.9674217788052523e-11,
+        "resistanceSeries": 0.4098209042412506,
+        "resistanceShunt": 2192.131997700126,
+        "nNsVth": 2.446638298666329,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.28045821412237 }
+    },
+    {
+      "input": {
         "photocurrent": 1.6705056382580228,
         "saturationCurrent": 3.952113812617065e-12,
         "resistanceSeries": 0.2829993418716531,
@@ -9306,6 +10846,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.6714031804607896 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.6705056382580228,
+        "saturationCurrent": 3.952113812617065e-12,
+        "resistanceSeries": 0.2829993418716531,
+        "resistanceShunt": 587.1523350832565,
+        "nNsVth": 4.382601981746139,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 10.181276024412446 }
     },
     {
       "input": {
@@ -9375,6 +10926,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 5.582815196070673e-10,
+        "resistanceSeries": 0.20187913505656738,
+        "resistanceShunt": 7659.993663274809,
+        "nNsVth": 1.8908228210790854,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.6527248523349646 }
+    },
+    {
+      "input": {
         "photocurrent": 9.124390955732096,
         "saturationCurrent": 9.022046991230871e-9,
         "resistanceSeries": 0.16717389345836722,
@@ -9438,6 +11000,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 9.123490131223502 }
+    },
+    {
+      "input": {
+        "photocurrent": 9.124390955732096,
+        "saturationCurrent": 9.022046991230871e-9,
+        "resistanceSeries": 0.16717389345836722,
+        "resistanceShunt": 583.0332698898609,
+        "nNsVth": 2.3918359251635324,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 17.695157145264982 }
     },
     {
       "input": {
@@ -9507,6 +11080,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.6240817003521865e-12,
+        "resistanceSeries": 0.3959451439012174,
+        "resistanceShunt": 7954.09722891024,
+        "nNsVth": 4.137702511138248,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.6285755598279673 }
+    },
+    {
+      "input": {
         "photocurrent": 2.900773631256729,
         "saturationCurrent": 4.205915046525278e-6,
         "resistanceSeries": 0.5141591242933468,
@@ -9570,6 +11154,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 2.9000532579564378 }
+    },
+    {
+      "input": {
+        "photocurrent": 2.900773631256729,
+        "saturationCurrent": 4.205915046525278e-6,
+        "resistanceSeries": 0.5141591242933468,
+        "resistanceShunt": 682.4674202119108,
+        "nNsVth": 2.837015344743913,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 10.219435748071167 }
     },
     {
       "input": {
@@ -9639,6 +11234,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.8551677832761218,
+        "saturationCurrent": 1.3413580118031113e-14,
+        "resistanceSeries": 0.1878539097934405,
+        "resistanceShunt": 3284.2987631581364,
+        "nNsVth": 2.214729570367572,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.3774267955085406 }
+    },
+    {
+      "input": {
         "photocurrent": 2.687108184485609,
         "saturationCurrent": 2.2978369317573177e-8,
         "resistanceSeries": 0.5210300742613991,
@@ -9702,6 +11308,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 2.6867141543921242 }
+    },
+    {
+      "input": {
+        "photocurrent": 2.687108184485609,
+        "saturationCurrent": 2.2978369317573177e-8,
+        "resistanceSeries": 0.5210300742613991,
+        "resistanceShunt": 1014.8065700870463,
+        "nNsVth": 1.9030653008084994,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 7.610248221600278 }
     },
     {
       "input": {
@@ -9771,6 +11388,17 @@
     },
     {
       "input": {
+        "photocurrent": 13.02177324944086,
+        "saturationCurrent": 1.0031203935932796e-7,
+        "resistanceSeries": 0.5968197967325515,
+        "resistanceShunt": 773.1713353390488,
+        "nNsVth": 1.1213640724765706,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 19.473613367645935 }
+    },
+    {
+      "input": {
         "photocurrent": 0.2624016315994945,
         "saturationCurrent": 3.802600594446772e-12,
         "resistanceSeries": 0.5037852423487298,
@@ -9834,6 +11462,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.26257296130785235 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.2624016315994945,
+        "saturationCurrent": 3.802600594446772e-12,
+        "resistanceSeries": 0.5037852423487298,
+        "resistanceShunt": 5064.618609753969,
+        "nNsVth": 0.8524596429070721,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.2495185097402695 }
     },
     {
       "input": {
@@ -9903,6 +11542,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.1650658822830864e-11,
+        "resistanceSeries": 0.21483804633026607,
+        "resistanceShunt": 1342.7512317132744,
+        "nNsVth": 4.737681306403341,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 3.7231022530133733 }
+    },
+    {
+      "input": {
         "photocurrent": 3.4710695484885616,
         "saturationCurrent": 1.1604152047058737e-8,
         "resistanceSeries": 0.17100215643695046,
@@ -9966,6 +11616,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 3.4715104484389943 }
+    },
+    {
+      "input": {
+        "photocurrent": 3.4710695484885616,
+        "saturationCurrent": 1.1604152047058737e-8,
+        "resistanceSeries": 0.17100215643695046,
+        "resistanceShunt": 921.6721963395304,
+        "nNsVth": 4.146367018038242,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 8.894341595702306 }
     },
     {
       "input": {
@@ -10035,6 +11696,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.700781214024209e-11,
+        "resistanceSeries": 0.5775173135373147,
+        "resistanceShunt": 7136.031379450676,
+        "nNsVth": 1.610557915472844,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.7006128642398217 }
+    },
+    {
+      "input": {
         "photocurrent": 0.4443961480704482,
         "saturationCurrent": 9.67045502170827e-9,
         "resistanceSeries": 0.16176036196279872,
@@ -10098,6 +11770,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.44488232868226724 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.4443961480704482,
+        "saturationCurrent": 9.67045502170827e-9,
+        "resistanceSeries": 0.16176036196279872,
+        "resistanceShunt": 1908.8531939129275,
+        "nNsVth": 0.9183032031494828,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 3.0635103260821426 }
     },
     {
       "input": {
@@ -10168,6 +11851,17 @@
     {
       "input": {
         "photocurrent": 0.0,
+        "saturationCurrent": 2.0879042735159944e-6,
+        "resistanceSeries": 0.14133330903093536,
+        "resistanceShunt": 5370.82249715685,
+        "nNsVth": 2.4602380564496698,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.9309336967420127 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
         "saturationCurrent": 3.4779673122044406e-7,
         "resistanceSeries": 0.39254865015783136,
         "resistanceShunt": 4894.257576709895,
@@ -10230,6 +11924,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.0002044259386965083 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 3.4779673122044406e-7,
+        "resistanceSeries": 0.39254865015783136,
+        "resistanceShunt": 4894.257576709895,
+        "nNsVth": 2.332539083503596,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.0215238217540594 }
     },
     {
       "input": {
@@ -10299,6 +12004,17 @@
     },
     {
       "input": {
+        "photocurrent": 6.194065582870541,
+        "saturationCurrent": 7.866002753717378e-11,
+        "resistanceSeries": 0.5932750472864304,
+        "resistanceShunt": 711.3866216602557,
+        "nNsVth": 2.445739952393038,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 13.211574417894164 }
+    },
+    {
+      "input": {
         "photocurrent": 6.406145792175863,
         "saturationCurrent": 1.5702040130944982e-14,
         "resistanceSeries": 0.5412495013362202,
@@ -10365,6 +12081,17 @@
     },
     {
       "input": {
+        "photocurrent": 6.406145792175863,
+        "saturationCurrent": 1.5702040130944982e-14,
+        "resistanceSeries": 0.5412495013362202,
+        "resistanceShunt": 796.7749801640558,
+        "nNsVth": 2.384647423436761,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 12.672834579987686 }
+    },
+    {
+      "input": {
         "photocurrent": 4.075653337709011,
         "saturationCurrent": 5.81045704158828e-9,
         "resistanceSeries": 0.3003842213207655,
@@ -10428,6 +12155,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 4.07500332128942 }
+    },
+    {
+      "input": {
+        "photocurrent": 4.075653337709011,
+        "saturationCurrent": 5.81045704158828e-9,
+        "resistanceSeries": 0.3003842213207655,
+        "resistanceShunt": 344.70946563244854,
+        "nNsVth": 4.078903247596391,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 18.564444721976457 }
     },
     {
       "input": {
@@ -10498,6 +12236,17 @@
     {
       "input": {
         "photocurrent": 0.0,
+        "saturationCurrent": 4.620268845013649e-13,
+        "resistanceSeries": 0.5415531474121781,
+        "resistanceShunt": 7544.383376486301,
+        "nNsVth": 3.6758174104277686,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.6626971171529235 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
         "saturationCurrent": 4.1534323543852347e-10,
         "resistanceSeries": 0.3444499987570664,
         "resistanceShunt": 4821.1372775803775,
@@ -10560,6 +12309,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.00020740520229882152 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 4.1534323543852347e-10,
+        "resistanceSeries": 0.3444499987570664,
+        "resistanceShunt": 4821.1372775803775,
+        "nNsVth": 4.5755609247861715,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.0370256042664556 }
     },
     {
       "input": {
@@ -10629,6 +12389,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 5.86934662372261e-9,
+        "resistanceSeries": 0.12874762863189596,
+        "resistanceShunt": 2447.0590868297795,
+        "nNsVth": 4.5095630482902545,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.0431615195035455 }
+    },
+    {
+      "input": {
         "photocurrent": 8.939839170965302,
         "saturationCurrent": 2.9029460567146122e-11,
         "resistanceSeries": 0.5422089680845094,
@@ -10692,6 +12463,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 8.930887502225453 }
+    },
+    {
+      "input": {
+        "photocurrent": 8.939839170965302,
+        "saturationCurrent": 2.9029460567146122e-11,
+        "resistanceSeries": 0.5422089680845094,
+        "resistanceShunt": 429.2392246550184,
+        "nNsVth": 2.324831499934953,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 20.562381114974063 }
     },
     {
       "input": {
@@ -10762,6 +12544,17 @@
     {
       "input": {
         "photocurrent": 0.0,
+        "saturationCurrent": 3.316578116034814e-12,
+        "resistanceSeries": 0.5932509604617405,
+        "resistanceShunt": 7752.44749891095,
+        "nNsVth": 0.9711143835487783,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.6449082574612598 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
         "saturationCurrent": 1.6314097311375585e-10,
         "resistanceSeries": 0.4560613110757261,
         "resistanceShunt": 4201.68663081567,
@@ -10824,6 +12617,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.00023797387302195753 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.6314097311375585e-10,
+        "resistanceSeries": 0.4560613110757261,
+        "resistanceShunt": 4201.68663081567,
+        "nNsVth": 3.4740494724714672,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.1898691612861245 }
     },
     {
       "input": {
@@ -10893,6 +12697,17 @@
     },
     {
       "input": {
+        "photocurrent": 14.025972509180729,
+        "saturationCurrent": 4.1040065648025835e-9,
+        "resistanceSeries": 0.4023207603924135,
+        "resistanceShunt": 290.97168310315107,
+        "nNsVth": 4.226990818236305,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 31.166681683798707 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 1.5100245973535162e-10,
         "resistanceSeries": 0.3177961710462507,
@@ -10956,6 +12771,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.0005029159380330468 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.5100245973535162e-10,
+        "resistanceSeries": 0.3177961710462507,
+        "resistanceShunt": 1988.0862985032718,
+        "nNsVth": 2.1792854584738204,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.514579412551028 }
     },
     {
       "input": {
@@ -11025,6 +12851,17 @@
     },
     {
       "input": {
+        "photocurrent": 15.783068437969286,
+        "saturationCurrent": 4.0400924131060526e-11,
+        "resistanceSeries": 0.4015589142590137,
+        "resistanceShunt": 954.3175293788742,
+        "nNsVth": 5.142127005026166,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 21.01357260348325 }
+    },
+    {
+      "input": {
         "photocurrent": 11.246364281142679,
         "saturationCurrent": 2.789208973028706e-12,
         "resistanceSeries": 0.22175857901587284,
@@ -11088,6 +12925,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 11.24422201095159 }
+    },
+    {
+      "input": {
+        "photocurrent": 11.246364281142679,
+        "saturationCurrent": 2.789208973028706e-12,
+        "resistanceSeries": 0.22175857901587284,
+        "resistanceShunt": 697.1588844046303,
+        "nNsVth": 3.054649747386137,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 18.412473740187494 }
     },
     {
       "input": {
@@ -11157,6 +13005,17 @@
     },
     {
       "input": {
+        "photocurrent": 2.2100179948703453,
+        "saturationCurrent": 4.900512338311502e-11,
+        "resistanceSeries": 0.2215986682318372,
+        "resistanceShunt": 548.2284386307244,
+        "nNsVth": 0.8484674819445976,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 11.325725758524369 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 2.066429614312753e-11,
         "resistanceSeries": 0.32349488676213567,
@@ -11220,6 +13079,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.0009539281364438487 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 2.066429614312753e-11,
+        "resistanceSeries": 0.32349488676213567,
+        "resistanceShunt": 1047.9735167572098,
+        "nNsVth": 0.8738793243306722,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 4.7696406118534105 }
     },
     {
       "input": {
@@ -11289,6 +13159,17 @@
     },
     {
       "input": {
+        "photocurrent": 2.482574631832183,
+        "saturationCurrent": 3.887090321512341e-11,
+        "resistanceSeries": 0.4098951134944522,
+        "resistanceShunt": 1010.466091693175,
+        "nNsVth": 3.3334324118885923,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 7.427773123113451 }
+    },
+    {
+      "input": {
         "photocurrent": 7.363694996295,
         "saturationCurrent": 1.077105800462648e-9,
         "resistanceSeries": 0.4885923195388171,
@@ -11352,6 +13233,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 7.360547681237991 }
+    },
+    {
+      "input": {
+        "photocurrent": 7.363694996295,
+        "saturationCurrent": 1.077105800462648e-9,
+        "resistanceSeries": 0.4885923195388171,
+        "resistanceShunt": 824.929569840634,
+        "nNsVth": 1.250957562763181,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 13.416871901191316 }
     },
     {
       "input": {
@@ -11421,6 +13313,17 @@
     },
     {
       "input": {
+        "photocurrent": 0.35241317725249965,
+        "saturationCurrent": 2.9294029599104264e-12,
+        "resistanceSeries": 0.39236346956136126,
+        "resistanceShunt": 4867.526233786245,
+        "nNsVth": 4.383190334804025,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.3795178064827187 }
+    },
+    {
+      "input": {
         "photocurrent": 0.0,
         "saturationCurrent": 1.3743681950614475e-9,
         "resistanceSeries": 0.10574734705644509,
@@ -11484,6 +13387,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.00025291235103940007 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 1.3743681950614475e-9,
+        "resistanceSeries": 0.10574734705644509,
+        "resistanceShunt": 3953.840604121095,
+        "nNsVth": 2.374528058615881,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 1.2645593948378862 }
     },
     {
       "input": {
@@ -11553,6 +13467,17 @@
     },
     {
       "input": {
+        "photocurrent": 7.451648158475166,
+        "saturationCurrent": 1.584745530735745e-13,
+        "resistanceSeries": 0.3991565548278303,
+        "resistanceShunt": 259.9243825919184,
+        "nNsVth": 1.4996757908782041,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 26.64709103763968 }
+    },
+    {
+      "input": {
         "photocurrent": 5.438451612861562,
         "saturationCurrent": 1.5000374988361967e-10,
         "resistanceSeries": 0.4066323744404655,
@@ -11619,6 +13544,17 @@
     },
     {
       "input": {
+        "photocurrent": 5.438451612861562,
+        "saturationCurrent": 1.5000374988361967e-10,
+        "resistanceSeries": 0.4066323744404655,
+        "resistanceShunt": 941.9279306935015,
+        "nNsVth": 1.7147873225993735,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 10.742075978901436 }
+    },
+    {
+      "input": {
         "photocurrent": 5.350606452939899,
         "saturationCurrent": 1.4833994374376825e-6,
         "resistanceSeries": 0.3442578778655324,
@@ -11682,6 +13618,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 5.349162665382749 }
+    },
+    {
+      "input": {
+        "photocurrent": 5.350606452939899,
+        "saturationCurrent": 1.4833994374376825e-6,
+        "resistanceSeries": 0.3442578778655324,
+        "resistanceShunt": 583.0612300600199,
+        "nNsVth": 2.636727516319409,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 13.917819103195372 }
     },
     {
       "input": {
@@ -11752,6 +13699,17 @@
     {
       "input": {
         "photocurrent": 0.0,
+        "saturationCurrent": 1.7864549648591868e-13,
+        "resistanceSeries": 0.15098588716205166,
+        "resistanceShunt": 1922.2112190202101,
+        "nNsVth": 3.1143689862091706,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 2.600966658227274 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
         "saturationCurrent": 3.1391710251105224e-9,
         "resistanceSeries": 0.45407704945150174,
         "resistanceShunt": 5085.675309265062,
@@ -11818,6 +13776,17 @@
     {
       "input": {
         "photocurrent": 0.0,
+        "saturationCurrent": 3.1391710251105224e-9,
+        "resistanceSeries": 0.45407704945150174,
+        "resistanceShunt": 5085.675309265062,
+        "nNsVth": 2.9401066458779637,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 0.9830658318324615 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
         "saturationCurrent": 5.461611358452221e-12,
         "resistanceSeries": 0.5610963883297528,
         "resistanceShunt": 1361.6729185967206,
@@ -11880,6 +13849,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 0.0007340882630261818 }
+    },
+    {
+      "input": {
+        "photocurrent": 0.0,
+        "saturationCurrent": 5.461611358452221e-12,
+        "resistanceSeries": 0.5610963883297528,
+        "resistanceShunt": 1361.6729185967206,
+        "nNsVth": 3.397463542677528,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 3.670441308178836 }
     },
     {
       "input": {
@@ -11951,6 +13931,17 @@
       "input": {
         "photocurrent": 6.0,
         "saturationCurrent": 1e-9,
+        "resistanceSeries": 0.0,
+        "resistanceShunt": 400.0,
+        "nNsVth": 1.6,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 18.500000001 }
+    },
+    {
+      "input": {
+        "photocurrent": 6.0,
+        "saturationCurrent": 1e-9,
         "resistanceSeries": 0.3,
         "resistanceShunt": "Infinity",
         "nNsVth": 1.6,
@@ -12012,6 +14003,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 5.999999999351279 }
+    },
+    {
+      "input": {
+        "photocurrent": 6.0,
+        "saturationCurrent": 1e-9,
+        "resistanceSeries": 0.3,
+        "resistanceShunt": "Infinity",
+        "nNsVth": 1.6,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 6.000000001 }
     },
     {
       "input": {
@@ -12081,6 +14083,17 @@
     },
     {
       "input": {
+        "photocurrent": 9.0,
+        "saturationCurrent": 1e-12,
+        "resistanceSeries": 0.2,
+        "resistanceShunt": 5000.0,
+        "nNsVth": 2.4,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 9.99960001600036 }
+    },
+    {
+      "input": {
         "photocurrent": 1.5,
         "saturationCurrent": 1e-6,
         "resistanceSeries": 1.5,
@@ -12144,6 +14157,17 @@
         "voltage": -1.0
       },
       "expected": { "current": 1.4846620806789996 }
+    },
+    {
+      "input": {
+        "photocurrent": 1.5,
+        "saturationCurrent": 1e-6,
+        "resistanceSeries": 1.5,
+        "resistanceShunt": 80.0,
+        "nNsVth": 3.0,
+        "voltage": -5000.0
+      },
+      "expected": { "current": 62.82208687116564 }
     }
   ]
 }

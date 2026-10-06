@@ -2680,6 +2680,82 @@
         "pdc": 631.7196736802242
       },
       "expected": { "pac": 578.4228152248903 }
+    },
+    {
+      "input": {
+        "pNom": 2719.352295,
+        "vNom": 290.0,
+        "pacMax": 2500.0,
+        "pnt": 0.1,
+        "adrCoefficients": [
+          0.01027, 0.0323, 0.03807, -0.00299, 0.00726, -0.02021, -0.0, -0.0, -0.0
+        ],
+        "vMax": 320.0,
+        "vMin": 100.0,
+        "vdcMax": 320.0,
+        "mpptHigh": null,
+        "mpptLow": null,
+        "vdc": 290.0,
+        "pdc": 1359.6761475
+      },
+      "expected": { "pac": 1261.9494243984375 }
+    },
+    {
+      "input": {
+        "pNom": 2719.352295,
+        "vNom": 290.0,
+        "pacMax": 2500.0,
+        "pnt": 0.1,
+        "adrCoefficients": [
+          0.01027, 0.0323, 0.03807, -0.00299, 0.00726, -0.02021, -0.0, -0.0, -0.0
+        ],
+        "vMax": 320.0,
+        "vMin": 100.0,
+        "vdcMax": 320.0,
+        "mpptHigh": null,
+        "mpptLow": null,
+        "vdc": 1600.0,
+        "pdc": 1359.6761475
+      },
+      "expected": { "pac": null }
+    },
+    {
+      "input": {
+        "pNom": 2719.352295,
+        "vNom": 290.0,
+        "pacMax": 2500.0,
+        "pnt": 0.1,
+        "adrCoefficients": [
+          0.01027, 0.0323, 0.03807, -0.00299, 0.00726, -0.02021, -0.0, -0.0, -0.0
+        ],
+        "vMax": null,
+        "vMin": null,
+        "vdcMax": null,
+        "mpptHigh": null,
+        "mpptLow": null,
+        "vdc": 290.0,
+        "pdc": 1359.6761475
+      },
+      "expected": { "pac": 1261.9494243984375 }
+    },
+    {
+      "input": {
+        "pNom": 2719.352295,
+        "vNom": 290.0,
+        "pacMax": 2500.0,
+        "pnt": 0.1,
+        "adrCoefficients": [
+          0.01027, 0.0323, 0.03807, -0.00299, 0.00726, -0.02021, -0.0, -0.0, -0.0
+        ],
+        "vMax": null,
+        "vMin": null,
+        "vdcMax": null,
+        "mpptHigh": null,
+        "mpptLow": null,
+        "vdc": 1600.0,
+        "pdc": 1359.6761475
+      },
+      "expected": { "pac": 1316.152445164681 }
     }
   ]
 }

@@ -38,8 +38,11 @@ export const inverterAdr = (input: {
   const { vdc, pdc, pNom, vNom, pacMax, adrCoefficients: b, vtol = 0.1 } = input;
   if (b.length !== 9) throw new RangeError(`adrCoefficients needs 9 values, got ${b.length}`);
   const pnt = -Math.abs(input.pnt);
-  // np.nanmax: NaN limits are ignored
-  const nanMax = (...xs: number[]) => Math.max(...xs.filter((x) => !Number.isNaN(x)));
+  // np.nanmax: NaN limits are ignored; all NaN → NaN, so that bound never rejects
+  const nanMax = (...xs: number[]) => {
+    const finite = xs.filter((x) => !Number.isNaN(x));
+    return finite.length ? Math.max(...finite) : Number.NaN;
+  };
   const upper = nanMax(input.vMax, input.vdcMax, input.mpptHigh) * (1 + vtol);
   const lower = nanMax(input.vMin, input.mpptLow) * (1 - vtol);
   const p = pdc / pNom;

@@ -16,7 +16,7 @@ export default defineConfig({
     customExports(exports) {
       const out = {};
       for (const [key, val] of Object.entries(exports)) {
-        // keep ".", "./package.json" and each method folder's index; drop impl files + sum
+        // keep ".", "./package.json" and each method folder's index; drop impl files and the private lambert-w
         if (key === "." || key === "./package.json" || /\/index\.\w+$/.test(val)) out[key] = val;
       }
       return out;

@@ -23,18 +23,18 @@ Every method is its own subpath (`@pvkit/diode/<method>`); the root entry re-exp
 | `inverter-adr` | AC power, ADR inverter model | Driesse et al. 2008 |
 
 Each has a theory note (`src/<method>/<method>.md`) and is checked against pvlib 0.16.1 on
-≈2,800 fixture cases built from the SAM module and inverter libraries (typically 1e-15).
+≈3,400 fixture cases built from the SAM module and inverter libraries (typically 1e-15).
 
 ## Usage
 
-Parameter names match [`@pvkit/spec`](../spec) records, so a library row spreads straight in:
+Parameter names match [`@pvkit/spec`](https://github.com/semanticist21/pvkit/tree/main/packages/spec) records, so a library row spreads straight in:
 
 ```ts
 import { calcparamsCec, inverterSandia, singleDiode } from "@pvkit/diode";
 import { CEC_INVERTERS } from "@pvkit/spec/cec-inverters";
 import { CEC_MODULES } from "@pvkit/spec/cec-modules";
 
-const module = CEC_MODULES.find((m) => m.name.startsWith("Canadian Solar"))!;
+const module = CEC_MODULES.find((m) => m.name === "CSI Solar Co Ltd CS6P-200P")!;
 const params = calcparamsCec({ ...module, effectiveIrradiance: 850, tempCell: 47 });
 const { pMp, vMp } = singleDiode(params); // W, V for one module
 

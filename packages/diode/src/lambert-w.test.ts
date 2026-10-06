@@ -5,6 +5,12 @@ test("known values: W(e) = 1, W(1) = Ω, W(x) ≈ x for tiny x", () => {
   expect(lambertWExp(1)).toBeCloseTo(1, 15);
   expect(lambertWExp(0)).toBeCloseTo(0.5671432904097838, 15); // omega constant
   expect(lambertWExp(-50) / Math.exp(-50)).toBeCloseTo(1, 12);
+  expect(lambertWExp(-39.9) / Math.exp(-39.9)).toBeCloseTo(1, 15);
+});
+
+test("finite where e^logX underflows float64", () => {
+  expect(lambertWExp(-746)).toBe(0);
+  expect(lambertWExp(-1e4)).toBe(0);
 });
 
 test("satisfies w + ln w = logX far past float64 overflow of e^logX", () => {

@@ -9,7 +9,9 @@
 export const lambertWExp = (logX: number): number => {
   if (Number.isNaN(logX)) return Number.NaN;
   if (logX === Number.POSITIVE_INFINITY) return Number.POSITIVE_INFINITY;
-  if (logX === Number.NEGATIVE_INFINITY) return 0;
+  // W(x) = x − x² + …: below e^−40 the x² term is under ε·x; also covers exp underflow → 0
+  // (Newton from w = 0 would give 0·∞ = NaN).
+  if (logX < -40) return Math.exp(logX);
   // Start below the root: W(x) ≈ x/(1+x) for small x, ln x − ln ln x asymptotically.
   let w = logX < 1 ? Math.exp(logX) / (1 + Math.exp(logX)) : Math.max(logX - Math.log(logX), 1e-3);
   for (let k = 0; k < 100; k++) {

@@ -11,7 +11,7 @@ import { singleDiode } from "./single-diode/single-diode.ts";
 // numbers. A devDependency only — diode has no runtime dependencies.
 
 test("CEC modules reproduce their STC Pmp through calcparamsCec → singleDiode", () => {
-  // A few SAM fits (71 of 21 677 in the 2026 library) miss their own Imp·Vmp by > 2 % — a
+  // A few SAM fits in the library miss their own Imp·Vmp by > 2 % — a
   // property of the published coefficients, which pvlib reproduces identically.
   const off = CEC_MODULES.filter((m) => {
     const { pMp } = singleDiode(calcparamsCec({ ...m, effectiveIrradiance: 1000, tempCell: 25 }));
