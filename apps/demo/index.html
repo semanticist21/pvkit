@@ -46,6 +46,13 @@
       details { margin-top: 1rem; }
       footer { margin-top: 2rem; font-size: 0.875rem; color: var(--ink-2); }
       a { color: inherit; }
+      :focus-visible { outline: 2px solid var(--bar); outline-offset: 2px; }
+      .caveat { margin: 0.5rem 0 0; padding: 0.5rem 0.75rem; border-left: 3px solid var(--bar); color: var(--ink); }
+      .row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 1rem; }
+      .row input { flex: 1 1 16rem; min-width: 0; }
+      .row code { padding: 0.375rem 0.5rem; border: 1px solid var(--rule); border-radius: 6px; }
+      pre { overflow-x: auto; max-height: 28rem; padding: 0.75rem; border: 1px solid var(--rule); border-radius: 6px; font-size: 0.8125rem; }
+      summary { cursor: pointer; }
     </style>
   </head>
   <body>
@@ -69,10 +76,34 @@
         <button type="button" id="locate">Use my location</button>
       </form>
       <section id="out" aria-live="polite"></section>
+      <p class="caveat">
+        <strong>Clear sky is an upper bound, not a yield forecast.</strong> It assumes a cloudless
+        sky every hour; real output is lower by an amount that depends on the local climate.
+      </p>
+      <div class="row">
+        <label for="share">Link to this result</label>
+        <input id="share" readonly />
+        <button type="button" data-copy="share">Copy link</button>
+      </div>
+      <details>
+        <summary>Code for this result</summary>
+        <p class="sub">
+          The exact <code>@pvkit/core</code> calls behind the numbers above, with your inputs.
+          Save as <code>estimate.ts</code>, install, then run <code>node estimate.ts</code> (Node 22.18+) or use any TypeScript runtime.
+        </p>
+        <button type="button" data-copy="code">Copy code</button>
+        <pre><code id="code"></code></pre>
+      </details>
+      <div class="row">
+        <code id="install">npm i @pvkit/core</code>
+        <button type="button" data-copy="install">Copy install command</button>
+        <a href="https://www.npmjs.com/package/@pvkit/core">@pvkit/core on npm</a>
+        <a href="https://github.com/semanticist21/pvkit">GitHub</a>
+      </div>
       <footer>
-        Clear sky is an upper bound: clouds typically cut real yield by 20–40%. Months are local
-        standard time approximated from longitude. For weather-driven estimates, see
-        <code>@pvkit/io</code>.
+        Months are local standard time approximated from longitude. For weather-driven estimates
+        (PVGIS / NASA POWER data), <a href="https://www.npmjs.com/package/@pvkit/io">@pvkit/io</a>
+        is available on npm.
       </footer>
     </main>
     <script type="module" src="./src/main.ts"></script>
