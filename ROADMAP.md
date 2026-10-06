@@ -12,7 +12,7 @@ until the user releases it). Claims are made only by committing this table to `m
 | --- | --- | --- | --- | --- |
 | 1 | demo site — browser kWh estimate on `@pvkit/core` | `apps/demo` | — | 🚧 2026-10-06 04:30 b89a5d |
 | 2 | `@pvkit/chain` — ModelChain-style orchestration | `packages/chain` | — | 🚧 2026-10-06 04:30 93b71f |
-| 3 | `@pvkit/economics` — LCOE, payback, ROI, degradation | `packages/economics` | — | todo |
+| 3 | `@pvkit/economics` — LCOE, payback, ROI, degradation | `packages/economics` | — | 🚧 2026-10-06 04:30 483013 |
 | 4 | `@pvkit/spec` — module/inverter spec schema + data | `packages/spec` | — | todo |
 | 5 | `@pvkit/sizer` — string sizing, over-voltage checks | `packages/sizer` | 4 | todo |
 | 6 | `@pvkit/io` — PVGIS / NASA POWER weather fetch | `packages/io` | — | todo |
