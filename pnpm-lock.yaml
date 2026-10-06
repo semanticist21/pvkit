@@ -192,13 +192,7 @@ importers:
         specifier: ^8.3.2
         version: 8.3.2(jiti@2.7.0)
 
-  packages/pvkit:
-    devDependencies:
-      '@pvkit/spec':
-        specifier: workspace:*
-        version: link:../spec
-
-  packages/spec: {}
+  packages/pvkit: {}
 
 packages:
 

@@ -3,7 +3,7 @@
 ## Principle
 
 De Soto (`calcparams-desoto`) with the short-circuit temperature coefficient adjusted by
-the CEC fit's sixth parameter: `αsc,eff = αsc · (1 − adjust/100)`. A `@pvkit/spec`
+the CEC fit's sixth parameter: `αsc,eff = αsc · (1 − adjust/100)`. A `pvkit-js/spec`
 `CecModule` row is a valid input as-is.
 
 ## Reference

@@ -98,3 +98,11 @@ config, lockfile) into your commit, and `git pull --rebase` refuses on their dir
 *index* still races: another agent can be mid-commit with a large staged set, or soft-reset
 your commit away. When a shared file carries others' hunks, commit from a detached worktree
 (`git worktree add --detach <scratch> origin/main`), push `HEAD:main`, remove it.
+
+## 2026-10-06 — rolldown hoists a JSON import reached from two entries
+**Trap:** with both `spec/<lib>/index.ts` and its impl `<lib>.ts` as tsdown entries, rolldown
+moved the data table and impl into a shared chunk at `dist/` root (`dist/cec-modules.js`),
+outside the module folder; the tree-shaking guard failed. Making the JSON an entry fails dts.
+**Truth:** a non-entry module reached from two entries goes to a shared root chunk.
+**Apply:** keep a data-importing file reachable from a single entry (spec excludes its impl
+files: `!src/models/spec/*/!(index).ts`); run `node scripts/check-treeshake.mjs` after build.

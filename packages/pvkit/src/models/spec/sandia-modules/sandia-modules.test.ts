@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { checkAgainstPvlib, type Mapping } from "../../test/pvlib-fixtures.ts";
+import { checkAgainstPvlib, type Mapping } from "../testing.ts";
 import { SANDIA_MODULES } from "./sandia-modules.ts";
 import fixtures from "./sandia-modules-fixtures.json" with { type: "json" };
 

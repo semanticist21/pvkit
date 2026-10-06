@@ -10,7 +10,7 @@ With `Ee = E/Eref`, `δ = n·k·(Tc + 273.15)/q`, `ΔT = Tc − Tref`, `β(Ee) =
 - `Ix = Ixo·(C4·Ee + C5·Ee²)·(1 + αIsc·ΔT)`, `Ixx = Ixxo·(C6·Ee + C7·Ee²)·(1 + αImp·ΔT)` —
   only when the module has those coefficients (pvlib behaviour).
 
-`Ee = 0` → `ln Ee = −∞`; `Ee < 0` → NaN. A `@pvkit/spec` `SandiaModule` row is a valid input.
+`Ee = 0` → `ln Ee = −∞`; `Ee < 0` → NaN. A `pvkit-js/spec` `SandiaModule` row is a valid input.
 
 ## Reference
 

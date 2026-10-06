@@ -4,7 +4,7 @@
 
 `ΔV = Vdc − Vdco`, `A = Pdco·(1 + C1·ΔV)`, `B = Pso·(1 + C2·ΔV)`, `C = C0·(1 + C3·ΔV)`;
 `Pac = (Paco/(A − B) − C·(A − B))·(Pdc − B) + C·(Pdc − B)²`, then `min(Paco, Pac)`;
-`Pdc < Pso` → `−|Pnt|` (night tare). `pnt` defaults to 0 because some `@pvkit/spec`
+`Pdc < Pso` → `−|Pnt|` (night tare). `pnt` defaults to 0 because some `pvkit-js/spec`
 `CecInverter` rows lack it (pvlib would return NaN there; unit-tested, not a fixture).
 
 ## Reference

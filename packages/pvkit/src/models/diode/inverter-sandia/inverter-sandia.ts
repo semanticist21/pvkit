@@ -2,7 +2,7 @@
  * Sandia grid-connected inverter model (King et al. 2007). With `ΔV = Vdc − Vdco`,
  * `A = Pdco·(1 + C1·ΔV)`, `B = Pso·(1 + C2·ΔV)`, `C = C0·(1 + C3·ΔV)`:
  * `Pac = (Paco/(A − B) − C·(A − B))·(Pdc − B) + C·(Pdc − B)²`, clipped at `Paco`;
- * `Pdc < Pso` → `−|Pnt|` (night tare). Coefficient names match `@pvkit/spec` `CecInverter`.
+ * `Pdc < Pso` → `−|Pnt|` (night tare). Coefficient names match `pvkit-js/spec` `CecInverter`.
  *
  * @example
  * inverterSandia({ vdc: 400, pdc: 3000, ...CEC_INVERTERS[0] });

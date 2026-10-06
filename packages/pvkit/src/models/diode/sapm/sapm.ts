@@ -2,7 +2,7 @@
 const K = 1.380649e-23;
 const Q = 1.602176634e-19;
 
-/** SAPM electrical coefficients; field names match `@pvkit/spec` `SandiaModule`. */
+/** SAPM electrical coefficients; field names match `pvkit-js/spec` `SandiaModule`. */
 export interface SapmModule {
   /** Cells in series. */
   cellsInSeries: number;

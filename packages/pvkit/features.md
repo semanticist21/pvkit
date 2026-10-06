@@ -168,7 +168,7 @@ the spec).
 - [x] Availability
 - [x] Validation fixtures vs reference
 
-## 12–17. Extended modules
+## 12–18. Extended modules
 
 - [x] `diode` — single-diode (De Soto / CEC / PVsyst), exact Lambert-W I-V points, SAPM,
       Sandia and ADR inverters
@@ -176,14 +176,14 @@ the spec).
 - [x] `sizer` — temperature-corrected voltages, NEC 690.7, modules per string
 - [x] `economics` — lifetime energy, bill savings, cash flows, NPV, IRR, payback, ROI, LCOE
 - [x] `io` — PVGIS TMY and NASA POWER hourly fetch + parse
+- [x] `spec` — CEC modules, CEC inverters and Sandia SAPM modules from NREL SAM (data)
 - [x] `chain` — ModelChain orchestration (PVWatts model set, fixed tilt)
 
 ## Not implemented
 
 | Capability | Why / where it would go |
 | --- | --- |
-| Parameter databases (CEC modules/inverters, Sandia modules) | separate package `@pvkit/spec`: multi-MB data must not load with pvkit |
-| Spectrum mismatch from reference spectra; ADR inverter coefficient DB | data tables: `packages/spec/AGENTS.md` |
+| Spectrum mismatch from reference spectra; ADR inverter coefficient DB; datasheet parsing | `spec`, when asked (`diode/inverter-adr` takes caller-supplied coefficients) |
 | Bifacial view factors (`infinite_sheds`), 3-D/obstacle shading, tilt/azimuth optimisation | `layout`, when asked |
 | PVGIS hourly series, NSRDB (needs API key), Linke turbidity raster, `detect_clearsky` | `io`, when asked |
 | Cold-day Vmp vs `mpptHigh`, NEC 690.8 current/conductor sizing, multi-MPPT, DC/AC ratio | `sizer`, when asked |

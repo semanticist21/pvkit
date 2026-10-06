@@ -15,7 +15,7 @@ export interface DiodeParams {
   nNsVth: number;
 }
 
-/** Reference-condition fit of the De Soto / CEC model; field names match `@pvkit/spec` `CecModule`. */
+/** Reference-condition fit of the De Soto / CEC model; field names match `pvkit-js/spec` `CecModule`. */
 export interface DesotoModule {
   /** Temperature coefficient of short-circuit current, A/°C. */
   alphaSc: number;

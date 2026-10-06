@@ -1,9 +1,9 @@
 {
   "name": "pvkit-js",
   "version": "0.2.0",
-  "description": "PV (solar) performance modeling in TypeScript, checked against pvlib: NREL SPA solar position, clear-sky and plane-of-array irradiance, cell temperature, tracking, PVWatts, single-diode I-V, row spacing and shading, string sizing, PVGIS/NASA POWER data, ModelChain and solar ROI/LCOE. Runs in the browser, edge and Node. Zero dependencies.",
+  "description": "PV (solar) performance modeling in TypeScript, checked against pvlib: NREL SPA solar position, clear-sky and plane-of-array irradiance, cell temperature, tracking, PVWatts, single-diode I-V, row spacing and shading, string sizing, PVGIS/NASA POWER data, ModelChain, solar ROI/LCOE, and the CEC module and inverter database (NREL SAM). Runs in the browser, edge and Node. Zero dependencies.",
   "type": "module",
-  "license": "MIT",
+  "license": "MIT AND BSD-3-Clause",
   "author": "semanticist21",
   "homepage": "https://github.com/semanticist21/pvkit/tree/main/packages/pvkit#readme",
   "bugs": {
@@ -20,21 +20,21 @@
     "pv",
     "pvlib",
     "solar-position",
-    "spa",
     "sunrise",
     "irradiance",
     "clear-sky",
     "pvwatts",
     "modelchain",
     "single-diode",
-    "iv-curve",
     "string-sizing",
     "row-spacing",
     "shading",
     "pvgis",
     "nasa-power",
     "solar-roi",
-    "lcoe"
+    "lcoe",
+    "solar-panel-database",
+    "inverter-database"
   ],
   "sideEffects": false,
   "exports": {
@@ -141,6 +141,10 @@
     "./solarposition/spa": "./src/models/solarposition/spa/index.ts",
     "./solarposition/sunrise-geometric": "./src/models/solarposition/sunrise-geometric/index.ts",
     "./solarposition/sunrise-spa": "./src/models/solarposition/sunrise-spa/index.ts",
+    "./spec": "./src/models/spec/index.ts",
+    "./spec/cec-inverters": "./src/models/spec/cec-inverters/index.ts",
+    "./spec/cec-modules": "./src/models/spec/cec-modules/index.ts",
+    "./spec/sandia-modules": "./src/models/spec/sandia-modules/index.ts",
     "./temperature": "./src/models/temperature/index.ts",
     "./temperature/faiman": "./src/models/temperature/faiman/index.ts",
     "./temperature/fuentes": "./src/models/temperature/fuentes/index.ts",
@@ -263,6 +267,10 @@
       "./solarposition/spa": "./dist/models/solarposition/spa/index.js",
       "./solarposition/sunrise-geometric": "./dist/models/solarposition/sunrise-geometric/index.js",
       "./solarposition/sunrise-spa": "./dist/models/solarposition/sunrise-spa/index.js",
+      "./spec": "./dist/models/spec/index.js",
+      "./spec/cec-inverters": "./dist/models/spec/cec-inverters/index.js",
+      "./spec/cec-modules": "./dist/models/spec/cec-modules/index.js",
+      "./spec/sandia-modules": "./dist/models/spec/sandia-modules/index.js",
       "./temperature": "./dist/models/temperature/index.js",
       "./temperature/faiman": "./dist/models/temperature/faiman/index.js",
       "./temperature/fuentes": "./dist/models/temperature/fuentes/index.js",
@@ -290,8 +298,5 @@
     "bench": "vitest bench --run",
     "prepack": "tsdown"
   },
-  "types": "./dist/index.d.ts",
-  "devDependencies": {
-    "@pvkit/spec": "workspace:*"
-  }
+  "types": "./dist/index.d.ts"
 }

@@ -1,6 +1,6 @@
 /**
  * Diode: De Soto / CEC / PVsyst single-diode parameters, exact Lambert-W I-V solver, SAPM,
- * Sandia and ADR inverters. Parameter names match `@pvkit/spec` records, so a library row
+ * Sandia and ADR inverters. Parameter names match `pvkit-js/spec` records, so a library row
  * spreads straight in.
  */
 

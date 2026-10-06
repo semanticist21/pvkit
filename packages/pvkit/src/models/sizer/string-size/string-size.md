@@ -9,7 +9,7 @@
   maximum DC input current; current above it is clipped, not a hazard.
 
 `minSeries > maxSeries` means no string length works for that module/inverter pair. Field
-names match `@pvkit/spec` (`CecInverter`, `CecModule`), but a CEC record's `vdcMax` and
+names match `pvkit-js/spec` (`CecInverter`, `CecModule`), but a CEC record's `vdcMax` and
 `mpptLow` are the rated MPPT window (`vdcMax` = `mpptHigh` in every CEC row), not the
 absolute input range: spreading one in gives a conservative `maxSeries`. Pass the datasheet
 maximum input voltage as `vdcMax` for the NEC 690.7 limit. Not covered: cold-day Vmp above

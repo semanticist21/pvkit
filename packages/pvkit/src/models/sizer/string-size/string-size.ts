@@ -1,5 +1,5 @@
 /**
- * Inputs for {@link stringSize}. Field names match `@pvkit/spec` records, so a
+ * Inputs for {@link stringSize}. Field names match `pvkit-js/spec` records, so a
  * `CecInverter` can be spread in — but its `vdcMax`/`mpptLow` are the rated MPPT window,
  * not the maximum input voltage; override `vdcMax` with the datasheet value for the NEC check.
  */

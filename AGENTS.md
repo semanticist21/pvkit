@@ -9,7 +9,7 @@ repository.
 
 `pvkit-js` — ESM-first TypeScript library for PV (solar) performance modeling, built to run
 **everywhere JavaScript runs** (browser, edge, Workers, React Native). No backend round-trip.
-pnpm monorepo: `pvkit-js` (17 modules, fixture-validated) plus `@pvkit/spec` (data, kept apart).
+pnpm monorepo with one published package, `pvkit-js` (18 modules, fixture-validated).
 
 Positioning: not "smarter PV science" but "PV modeling everywhere JS runs." See `README.md`
 for the pitch, `ROADMAP.md` for the ordered work Queue (the only claim record). Take the next
@@ -43,13 +43,13 @@ byte-identical).
 ## Architecture
 
 **Monorepo:** `packages/*` (published libraries) and `apps/*` (private apps, e.g. `apps/demo`)
-pnpm workspaces. Packages: `pvkit-js` (`packages/pvkit`, every model) and `@pvkit/spec`
-(`packages/spec`, NREL SAM data) — one line each in `README.md` "Packages". New models become
-modules of `pvkit-js`; a separate package only for something that must not load with it (data).
+pnpm workspaces. One package: `pvkit-js` (`packages/pvkit`, every model and the NREL SAM data
+of `spec`), listed in `README.md` "Packages". New work becomes a module of `pvkit-js`, heavy
+data included (per-subpath entries keep it out of bundles that don't import it); no npm org.
 
 **`pvkit-js` modules** (dependency order): `solarposition` → `atmosphere` → `clearsky` →
 `irradiance` → `decomposition` → `iam` → `temperature` → `tracking` → `pvsystem` → `losses` →
-`metrics` → `diode` → `layout` → `sizer` → `economics` → `io` → `chain`. Method list:
+`metrics` → `diode` → `layout` → `sizer` → `economics` → `io` → `spec` → `chain`. Method list:
 `packages/pvkit/README.md` "Modules"; status and deferred scope: `packages/pvkit/features.md`.
 
 Each module is a subpath export (`pvkit-js/solarposition`, …) and each method one level finer
@@ -73,9 +73,8 @@ to convert. New angular APIs must take/return branded types, never bare `number`
 - **Numerical validation, not "it runs."** For each model: implement from the paper → pin
   reference-implementation outputs for the same inputs as fixtures → assert in `*.test.ts`.
   No core logic lands without a test. The harness check enforces test pairing.
-- **ESM-only. Zero runtime dependencies** (`@pvkit/spec` is a devDependency for one compat
-  test). No CJS. `sideEffects: false`, function-level exports, aggressive tree-shaking. Pure TS.
-- Build via `tsdown` (rolldown) → ESM + `.d.ts` + per-subpath entries. Each package's tsdown
+- **ESM-only. Zero runtime dependencies.** No CJS. `sideEffects: false`, function-level exports, aggressive tree-shaking. Pure TS.
+- Build via `tsdown` (rolldown) → ESM + `.d.ts` + per-subpath entries. The tsdown
   entry is a glob that generates `package.json` `exports`: run `pnpm build` and commit
   `package.json` (owner: `doc/architecture.md` → "Subpath exports").
 
@@ -100,10 +99,9 @@ to convert. New angular APIs must take/return branded types, never bare `number`
 
 ## Durable docs
 
-`packages/pvkit/AGENTS.md` and `packages/spec/AGENTS.md` hold each package's notes
-(locked decisions, validation workflow). The harness (`scripts/agent-harness-check.mjs`,
-config `harness.config.json`) warns when source under any `packages/<p>/src/` (or
-`apps/demo/src/`) changes without a matching test or doc update (scope and test-pairing roots:
+`packages/pvkit/AGENTS.md` holds the package notes (locked decisions, validation workflow).
+The harness (`scripts/agent-harness-check.mjs`, config `harness.config.json`) warns when
+source under `packages/pvkit/src/` (or `apps/demo/src/`) changes without a matching test or doc update (scope and test-pairing roots:
 `harness.config.json`). Keep the nearest `AGENTS.md` current when behavior changes.
 
 `doc/` is the durable-docs home: `doc/architecture.md` (base skeleton), `doc/conventions.md`

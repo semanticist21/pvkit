@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
@@ -8,6 +9,9 @@ export default defineConfig({
     "!src/models/**/*.test.ts",
     "!src/models/**/*.bench.ts",
     "!src/models/**/testing.ts",
+    // spec: only `<lib>/index.ts` is an entry, so its data table has a single importer and
+    // stays in that folder (a second entry would hoist it to a shared chunk at dist root).
+    "!src/models/spec/*/!(index).ts",
   ],
   format: ["esm"],
   dts: { sourcemap: false }, // no .d.ts.map: they point at src/, which is not published
@@ -16,6 +20,18 @@ export default defineConfig({
   hash: false,
   fixedExtension: false, // keep .js/.d.ts (tsdown ≥0.15 defaults to .mjs on node)
   outDir: "dist",
+  // spec data tables ship as `JSON.parse("…")`: as compact as the JSON and faster to parse than
+  // the pretty-printed object literal rolldown emits for a JSON import by default.
+  plugins: [
+    {
+      name: "data-json-parse",
+      load(id) {
+        if (!id.endsWith("-data.json")) return null;
+        const json = JSON.stringify(JSON.parse(readFileSync(id, "utf8")));
+        return { code: `export default JSON.parse(${JSON.stringify(json)});`, moduleType: "js" };
+      },
+    },
+  ],
   // tsdown owns the package.json `exports` map (generated from the entry glob on
   // every build). devExports → dev `exports` point at src, `publishConfig.exports`
   // mirror to dist. customExports normalizes the raw keys into the public surface:

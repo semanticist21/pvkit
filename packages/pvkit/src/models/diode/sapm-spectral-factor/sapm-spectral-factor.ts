@@ -1,7 +1,7 @@
 /**
  * SAPM spectral factor `F1` (King et al. 2004): `F1 = max(0, A0 + A1·AM + A2·AM² + A3·AM³ + A4·AM⁴)`
  * of absolute air mass; NaN air mass (sun below horizon) → 0, as pvlib.
- * Coefficient names match `@pvkit/spec` `SandiaModule`.
+ * Coefficient names match `pvkit-js/spec` `SandiaModule`.
  *
  * @example
  * sapmSpectralFactor({ airmassAbsolute: 1.5, a0: 0.928, a1: 0.068, a2: -0.0077, a3: 0.0001, a4: 0 });

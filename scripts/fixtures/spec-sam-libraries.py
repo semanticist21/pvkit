@@ -4,11 +4,11 @@
 # [tool.uv]
 # exclude-newer = "2026-10-06T00:00:00Z"
 # ///
-"""Data + fixtures for @pvkit/spec from the NREL SAM component libraries.
+"""Data + fixtures for the pvkit-js spec module from the NREL SAM component libraries.
 
 Run: uv run scripts/fixtures/spec-sam-libraries.py
 Downloads the SAM library CSVs at a pinned release tag and writes, per library,
-packages/spec/src/<lib>/<lib>-data.json (every row, parsed with the csv module) and
+packages/pvkit/src/models/spec/<lib>/<lib>-data.json (every row, parsed with the csv module) and
 <lib>-fixtures.json (sampled rows as parsed independently by pvlib.pvsystem.retrieve_sam:
 first, last, 40 random, the first row of each blank-cell pattern, and the row where pvlib's
 parse drifts furthest from the CSV text).
@@ -28,7 +28,7 @@ import pvlib
 
 SAM_TAG = "2026.7.3.r0.ssc.308"
 BASE = f"https://raw.githubusercontent.com/NREL/SAM/{SAM_TAG}/deploy/libraries/"
-SRC = Path(__file__).resolve().parents[2] / "packages/spec/src"
+SRC = Path(__file__).resolve().parents[2] / "packages/pvkit/src/models/spec"
 
 num = float
 text = str

@@ -30,8 +30,8 @@ no status files. Other agents may share this same checkout: never `git add -A`/`
 - Follow `AGENTS.md`, `doc/conventions.md`, `doc/architecture.md`. New models go in
   `packages/pvkit/src/models/<module>/<method>/` (per-method folder, method `.md` with
   `## Reference`, fixtures from a committed generator against an established reference: paper,
-  pvlib, NREL SAM, …). A new module gets its own `index.ts`; a separate package only for heavy
-  data like `@pvkit/spec` (mirror it, extend `harness.config.json` globs and CI to the path).
+  pvlib, NREL SAM, …). A new module gets its own `index.ts`, heavy data included (like `spec`):
+  one npm package, no new packages.
 - Scope = the item's Queue row and ROADMAP section (if any), plus the nearest `AGENTS.md`. Decide conventional choices yourself; ask one focused
   question (the orchestrator in a multi-agent run, else the user) only for a product choice
   the section leaves genuinely open.

@@ -1,10 +1,10 @@
 # pvkit
 
 PV (solar) performance modeling in TypeScript (sun position, irradiance, cell temperature,
-DC/AC power and kWh, single-diode I-V, shading, string sizing, weather data and project
-economics) that runs wherever JavaScript runs: browser, edge, Workers, React Native.
-Zero runtime dependencies, ESM-only, and every model is checked against reference
-implementations.
+DC/AC power and kWh, single-diode I-V, shading, string sizing, weather data, project
+economics and the CEC module/inverter database) that runs wherever JavaScript runs: browser,
+edge, Workers, React Native. Zero runtime dependencies, ESM-only, and every model is checked
+against reference implementations.
 
 **Live demo:** [pvkit.netlify.app](https://pvkit.netlify.app), a browser-only clear-sky kWh
 estimate built on `pvkit-js`, no backend.
@@ -20,8 +20,7 @@ package README: **[packages/pvkit](packages/pvkit)**.
 
 | Package | npm | What |
 | --- | --- | --- |
-| [`pvkit-js`](packages/pvkit) | [![npm](https://img.shields.io/npm/v/pvkit-js)](https://www.npmjs.com/package/pvkit-js) | All models in 17 modules: sun position → irradiance → temperature → DC/AC → kWh, plus diode, layout, sizer, economics, io and chain |
-| [`@pvkit/spec`](packages/spec) | [![npm](https://img.shields.io/npm/v/@pvkit/spec)](https://www.npmjs.com/package/@pvkit/spec) | CEC module/inverter and Sandia SAPM module databases (NREL SAM), kept separate so nobody downloads the data by default |
+| [`pvkit-js`](packages/pvkit) | [![npm](https://img.shields.io/npm/v/pvkit-js)](https://www.npmjs.com/package/pvkit-js) | Everything in 18 modules: sun position → irradiance → temperature → DC/AC → kWh, plus diode, layout, sizer, economics, io, chain and spec (CEC module/inverter and Sandia SAPM databases from NREL SAM; a bundle carries the data only when it imports it) |
 
 [`apps/demo`](apps/demo) is the demo site (not published to npm).
 
@@ -45,4 +44,4 @@ pnpm build
 pnpm test
 ```
 
-MIT licensed; `@pvkit/spec` also ships NREL SAM data under BSD-3-Clause.
+MIT licensed; the `spec` module's NREL SAM data ships under BSD-3-Clause.

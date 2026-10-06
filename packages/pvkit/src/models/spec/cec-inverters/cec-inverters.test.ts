@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { checkAgainstPvlib, type Mapping, yes } from "../../test/pvlib-fixtures.ts";
+import { checkAgainstPvlib, type Mapping, yes } from "../testing.ts";
 import { CEC_INVERTERS } from "./cec-inverters.ts";
 import fixtures from "./cec-inverters-fixtures.json" with { type: "json" };
 

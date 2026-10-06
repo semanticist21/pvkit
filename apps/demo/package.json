@@ -1,5 +1,5 @@
 {
-  "name": "@pvkit/demo",
+  "name": "pvkit-demo",
   "private": true,
   "type": "module",
   "scripts": {

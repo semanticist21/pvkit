@@ -7,7 +7,7 @@ Horner from B5 (numpy `polyval` order), then clipped to `[0, upper]` (`upper` op
 SAPM itself has no upper limit and F2 can slightly exceed 1 at 15–40°). aoi < 0 → 0.
 aoi ≥ 90 is **not** zeroed — pvlib evaluates the polynomial and clips at 0; mirrored.
 NaN aoi → NaN. Coefficients come from the module's SAPM parameter set (caller-supplied;
-parameter databases live in `@pvkit/spec`).
+parameter databases live in `pvkit-js/spec`).
 
 ## Reference
 

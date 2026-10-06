@@ -2,10 +2,10 @@
   "ignorePrefixes": ["node_modules/", ".git/", "dist/", "build/", "target/", "vendor/"],
   "sourceExtensions": [".ts", ".tsx"],
   "testPatterns": ["(^|/)__tests__/", "\\.test\\.", "\\.spec\\.", "(^|/)tests?/"],
-  "testableGlobs": ["packages/pvkit/src/", "packages/spec/src/", "apps/demo/src/"],
+  "testableGlobs": ["packages/pvkit/src/", "apps/demo/src/"],
   "docFileNames": ["AGENTS.md", "CLAUDE.md", "playbook.md"],
-  "durableSourceGlobs": ["packages/pvkit/src/", "packages/spec/src/"],
+  "durableSourceGlobs": ["packages/pvkit/src/"],
   "testPairingMode": "module",
-  "modulePairingRoot": ["packages/pvkit/src/models/", "packages/pvkit/src/", "packages/spec/src/"],
+  "modulePairingRoot": ["packages/pvkit/src/models/", "packages/pvkit/src/"],
   "roleComments": []
 }

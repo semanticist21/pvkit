@@ -7,7 +7,7 @@
 `Pac = Pnom·(p − ploss)`, limited to `[−|Pnt|, Pacmax]`. `Vdc = 0` → `−|Pnt|`; Vdc outside
 `[max(Vmin, MPPTLow)·(1 − vtol), max(Vmax, Vdcmax, MPPTHi)·(1 + vtol)]` → NaN (`vtol` 0.1,
 NaN limits ignored as `np.nanmax`; all NaN → that bound is not applied). Coefficients come with the SAM ADR library (not yet in
-`@pvkit/spec`); field names are pvlib's, camelCased.
+`pvkit-js/spec`); field names are pvlib's, camelCased.
 
 ## Reference
 

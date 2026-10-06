@@ -1,14 +1,14 @@
-import { CEC_INVERTERS } from "@pvkit/spec/cec-inverters";
-import { CEC_MODULES } from "@pvkit/spec/cec-modules";
-import { SANDIA_MODULES } from "@pvkit/spec/sandia-modules";
 import { expect, test } from "vitest";
+import { CEC_INVERTERS } from "../spec/cec-inverters/index.ts";
+import { CEC_MODULES } from "../spec/cec-modules/index.ts";
+import { SANDIA_MODULES } from "../spec/sandia-modules/index.ts";
 import { calcparamsCec } from "./calcparams-cec/calcparams-cec.ts";
 import { inverterSandia } from "./inverter-sandia/inverter-sandia.ts";
 import { sapm } from "./sapm/sapm.ts";
 import { singleDiode } from "./single-diode/single-diode.ts";
 
-// @pvkit/spec rows spread straight into diode inputs (compile-time check) and give sane STC
-// numbers. A devDependency only — diode has no runtime dependencies.
+// spec rows spread straight into diode inputs (compile-time check) and give sane STC
+// numbers. Test-only import: diode itself never imports the spec module.
 
 test("CEC modules reproduce their STC Pmp through calcparamsCec → singleDiode", () => {
   // A few SAM fits in the library miss their own Imp·Vmp by > 2 % — a

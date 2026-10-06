@@ -1,4 +1,4 @@
-// Consumer check: pack pvkit and @pvkit/spec, install the tarballs into a throwaway project,
+// Consumer check: pack pvkit-js, install the tarball into a throwaway project,
 // then typecheck imports (skipLibCheck off) under moduleResolution bundler and node16 and run a
 // plain-Node ESM import. Catches broken published .d.ts / exports that in-repo tests miss.
 // Run after `pnpm build`: node scripts/check-consumer.mjs
@@ -13,24 +13,21 @@ const dir = mkdtempSync(join(tmpdir(), "pvkit-consumer-"));
 const run = (cmd, args, cwd = dir) => execFileSync(cmd, args, { cwd, stdio: "inherit" });
 
 try {
-  const local = {};
-  for (const pkg of ["pvkit", "spec"]) {
-    const pkgDir = join(root, "packages", pkg);
-    const { name, version } = JSON.parse(readFileSync(join(pkgDir, "package.json"), "utf8"));
-    run("pnpm", ["pack", "--pack-destination", dir], pkgDir);
-    local[name] = `file:./${name.replace("@", "").replace("/", "-")}-${version}.tgz`;
-  }
+  const pkgDir = join(root, "packages/pvkit");
+  const { name, version } = JSON.parse(readFileSync(join(pkgDir, "package.json"), "utf8"));
+  run("pnpm", ["pack", "--pack-destination", dir], pkgDir);
+  const dependencies = { [name]: `file:./${name}-${version}.tgz` };
   writeFileSync(
     join(dir, "package.json"),
-    JSON.stringify({ name: "consumer", private: true, type: "module", dependencies: local }),
+    JSON.stringify({ name: "consumer", private: true, type: "module", dependencies }),
   );
   run("pnpm", ["install"]);
   const code = `import { type Degrees, radians, toDegrees } from "pvkit-js";
 import { spa } from "pvkit-js/solarposition/spa";
 import { perez, totalIrradiance } from "pvkit-js/irradiance";
 import { sapmCell, SAPM_TEMPERATURE_PARAMETERS } from "pvkit-js/temperature/sapm";
-import type { CecModule } from "@pvkit/spec";
-import { CEC_INVERTERS } from "@pvkit/spec/cec-inverters";
+import type { CecModule } from "pvkit-js/spec";
+import { CEC_INVERTERS } from "pvkit-js/spec/cec-inverters";
 import { type NasaPowerRecord, parseNasaPower } from "pvkit-js/io/nasa-power";
 import { getPvgisTmy } from "pvkit-js/io/pvgis-tmy";
 import { type ModelChainResult, modelChain } from "pvkit-js/chain/model-chain";
@@ -65,8 +62,8 @@ export const out = [z, toDegrees(radians(1)), typeof perez, typeof totalIrradian
   }
   writeFileSync(join(dir, "run.mjs"), `import { spa } from "pvkit-js/solarposition/spa";
 import * as root from "pvkit-js";
-import { SANDIA_MODULES } from "@pvkit/spec/sandia-modules";
-import { CEC_MODULES } from "@pvkit/spec/cec-modules";
+import { SANDIA_MODULES } from "pvkit-js/spec/sandia-modules";
+import { CEC_MODULES } from "pvkit-js/spec/cec-modules";
 import { parsePvgisTmy } from "pvkit-js/io/pvgis-tmy";
 if (typeof parsePvgisTmy !== "function") throw new Error("io import broken");
 const { modelChain } = await import("pvkit-js/chain/model-chain");

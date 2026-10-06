@@ -7,7 +7,7 @@ import {
 
 /**
  * CEC model (Dobos 2012): De Soto with the short-circuit temperature coefficient scaled by
- * the fit's `adjust`: `αsc,eff = αsc · (1 − adjust/100)`. Pass a `@pvkit/spec` `CecModule`
+ * the fit's `adjust`: `αsc,eff = αsc · (1 − adjust/100)`. Pass a `pvkit-js/spec` `CecModule`
  * record directly.
  *
  * @example
