@@ -1,0 +1,51 @@
+{
+  "name": "@pvkit/chain",
+  "version": "0.0.0",
+  "description": "ModelChain-style PV orchestration on @pvkit/core — one call from location, system and weather to AC power.",
+  "type": "module",
+  "license": "MIT",
+  "author": "semanticist21",
+  "homepage": "https://github.com/semanticist21/pvkit/tree/main/packages/chain#readme",
+  "bugs": {
+    "url": "https://github.com/semanticist21/pvkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semanticist21/pvkit.git",
+    "directory": "packages/chain"
+  },
+  "keywords": [
+    "pv",
+    "solar",
+    "photovoltaic",
+    "modelchain",
+    "pvwatts",
+    "esm"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": "./dist/index.js",
+      "./model-chain": "./dist/model-chain/index.js",
+      "./package.json": "./package.json"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepack": "tsdown"
+  },
+  "dependencies": {
+    "@pvkit/core": "workspace:^"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./model-chain": "./src/model-chain/index.ts",
+    "./package.json": "./package.json"
+  }
+}

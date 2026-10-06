@@ -192,11 +192,19 @@ importers:
         specifier: ^8.3.2
         version: 8.3.2(jiti@2.7.0)
 
+  packages/chain:
+    dependencies:
+      '@pvkit/core':
+        specifier: workspace:^
+        version: link:../core
+
   packages/core: {}
 
   packages/economics: {}
 
   packages/io: {}
+
+  packages/spec: {}
 
 packages:
 

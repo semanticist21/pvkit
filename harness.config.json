@@ -7,14 +7,16 @@
     "apps/demo/src/",
     "packages/spec/src/",
     "packages/economics/src/",
-    "packages/io/src/"
+    "packages/io/src/",
+    "packages/chain/src/"
   ],
   "docFileNames": ["AGENTS.md", "CLAUDE.md", "playbook.md"],
   "durableSourceGlobs": [
     "packages/core/src/",
     "packages/spec/src/",
     "packages/economics/src/",
-    "packages/io/src/"
+    "packages/io/src/",
+    "packages/chain/src/"
   ],
   "testPairingMode": "module",
   "modulePairingRoot": "packages/core/src/",

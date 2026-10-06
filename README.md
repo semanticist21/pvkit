@@ -29,6 +29,7 @@ Not "smarter PV science" — **"PV modeling everywhere JavaScript runs."**
 | --- | --- | --- |
 | [`@pvkit/core`](packages/core) | ✅ 0.x | PV modeling core — sun position → irradiance → temperature → kWh (11 modules) |
 | [`@pvkit/spec`](packages/spec) | 🧪 unreleased | Module/inverter parameter libraries — CEC modules, CEC inverters, Sandia SAPM modules (NREL SAM) |
+| [`@pvkit/chain`](packages/chain) | 🧪 unreleased | ModelChain-style orchestration — site + system + weather → AC power in one call (pvlib PVWatts model set) |
 | [`@pvkit/economics`](packages/economics) | 🧪 unreleased | PV project finance — lifetime kWh with degradation, bill savings, NPV, IRR, payback, ROI, LCOE |
 | `@pvkit/sizer` | 📋 Planned | String sizing — series/parallel panel configuration (inverter over-voltage safety) |
 
