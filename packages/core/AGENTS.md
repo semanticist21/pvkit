@@ -24,7 +24,5 @@ I/O, units, fixtures → `doc/conventions.md`; layout, exports, numerics, releas
   snow (Marion) deferred; `iam/interp` is linear only (spline methods need scipy).
 - Stateful models (fuentes, soiling) are step functions; DIRINT/DIRINDEX take explicit
   previous/next neighbour inputs.
-- Out of core: single-diode/SAPM electrical + inverters → `@pvkit/diode`; parameter DBs +
-  spectrum → `@pvkit/spec`; bifacial/shading → `@pvkit/layout`; data fetch, Linke raster,
-  detect_clearsky → `@pvkit/io`; ModelChain → `@pvkit/chain`.
-- Perf (Node 24): `spa` ≈ 18 µs/call, every other model < 0.4 µs — no WASM planned.
+- What stays out of core, and why: `features.md` "Out of core scope".
+- No WASM planned (pure-JS timings: root `README.md` "Technical direction").

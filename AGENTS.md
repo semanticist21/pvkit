@@ -11,9 +11,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 pnpm monorepo. `@pvkit/core` implements all 11 modules, validated against pvlib fixtures.
 
 Positioning: not "smarter PV science" but "PV modeling everywhere JS runs." See `README.md`
-for the pitch, `ROADMAP.md` for the ordered work Queue (the only claim record) and each
-package's scope. Take the next item with the `roadmap-next` skill (`.claude/skills/`) —
-several agents can run it at once.
+for the pitch, `ROADMAP.md` for the ordered work Queue (the only claim record). Take the next
+item with the `roadmap-next` skill (`.claude/skills/`) — several agents can run it at once.
 
 ## Commands
 
@@ -37,26 +36,25 @@ Pre-commit hooks (lefthook): biome write + tsc typecheck + harness check. Instal
 `prepare` script on `pnpm install`. CI (`.github/workflows/ci.yml`) runs lint/typecheck/test/
 build on every PR and push to `main`. Release procedure (never `npm publish` the package
 directory): `doc/architecture.md` → "Release procedure". `pnpm fixtures` regenerates every
-pvlib fixture (uv; must come back byte-identical).
+committed fixture and data file from `scripts/fixtures/*.py` (uv; must come back
+byte-identical).
 
 ## Architecture
 
-**Monorepo:** `packages/*` (published libraries) and `apps/*` (private, unpublished: `apps/demo`, a static Vite page running `@pvkit/core` in the browser) pnpm workspaces. Only `@pvkit/core` is released today.
+**Monorepo:** `packages/*` (published libraries) and `apps/*` (private apps, e.g. `apps/demo`)
+pnpm workspaces. Packages: core, spec, chain, economics, sizer, io, layout, diode — one line
+each in `README.md` "Packages"; what core deliberately leaves out: `packages/core/features.md`.
 
 **`@pvkit/core` modules** (dependency order): `solarposition` → `atmosphere` → `clearsky` →
 `irradiance` → `decomposition` → `iam` → `temperature` → `tracking` → `pvsystem` → `losses` →
 `metrics`. Method list: `packages/core/README.md` "Modules"; status: `packages/core/features.md`.
 
-Out of core → separate packages: `@pvkit/diode` (single-diode/SAPM precision),
-`@pvkit/spec` (parameter DBs + spectrum), `@pvkit/layout` (bifacial/shading),
-`@pvkit/io` (data fetch), `@pvkit/chain` (ModelChain orchestration). See `ROADMAP.md`.
-
-Each is a subpath export (`@pvkit/core/solarposition`, …). The module
-`src/models/<module>/index.ts` files are referenced by `package.json` `exports` and
-`src/index.ts`. Shared foundation (`src/units.ts`, `src/sum.ts`) sits flat at top; models
-nest under `src/models/`. Constants live with the method that cites them.
-The root entry (`src/index.ts`) exports only the unit types; models are imported from their
-subpaths (no `export * as <module>` there — it breaks the published `.d.ts`, see playbook).
+Each module is a subpath export (`@pvkit/core/solarposition`, …). The module
+`src/models/<module>/index.ts` files are referenced by `package.json` `exports`. Shared
+foundation (`src/units.ts`, `src/sum.ts`) sits flat at top; models nest under `src/models/`.
+Constants live with the method that cites them. The root entry (`src/index.ts`) exports only
+the unit types; models are imported from their subpaths (no `export * as <module>` there — it
+breaks the published `.d.ts`, see playbook).
 
 **Branded unit types** (`src/units.ts`) are a core differentiator: `Radians`/`Degrees` are
 nominal brands over `number`, so rad/deg mix-ups fail at compile time with zero runtime cost
@@ -71,10 +69,12 @@ to convert. New angular APIs must take/return branded types, never bare `number`
 - **Numerical validation, not "it runs."** For each model: implement from the paper → pin
   reference-implementation outputs for the same inputs as fixtures → assert in `*.test.ts`.
   No core logic lands without a test. The harness check enforces test pairing.
-- **ESM-only. Zero runtime dependencies.** No CJS. `sideEffects: false`, function-level
-  exports, aggressive tree-shaking. Pure TS.
-- Build via `tsdown` (rolldown) → ESM + `.d.ts` + per-subpath entries; entry list lives in
-  `packages/core/tsdown.config.ts` — add new submodules there.
+- **ESM-only. No third-party runtime dependencies.** A package may depend on another
+  `@pvkit` package, imported by per-method subpath (today only `@pvkit/chain` → `@pvkit/core`).
+  No CJS. `sideEffects: false`, function-level exports, aggressive tree-shaking. Pure TS.
+- Build via `tsdown` (rolldown) → ESM + `.d.ts` + per-subpath entries. Each package's tsdown
+  entry is a glob that generates `package.json` `exports`: run `pnpm build` and commit
+  `package.json` (owner: `doc/architecture.md` → "Subpath exports").
 
 ## Conventions
 
@@ -97,10 +97,11 @@ to convert. New angular APIs must take/return branded types, never bare `number`
 
 ## Durable docs
 
-`packages/core/AGENTS.md` holds per-package notes (locked decisions, module order, validation
+Each `packages/<p>/AGENTS.md` holds that package's notes (locked decisions, validation
 workflow). The harness (`scripts/agent-harness-check.mjs`, config `harness.config.json`)
-warns when source under `packages/core/src/` changes without a matching test or doc update —
-keep the nearest `AGENTS.md` current when behavior changes.
+warns when source under any `packages/<p>/src/` (or `apps/demo/src/`) changes without a
+matching test or doc update (scope and test-pairing roots: `harness.config.json`). Keep the
+nearest `AGENTS.md` current when behavior changes.
 
 `doc/` is the durable-docs home: `doc/architecture.md` (base skeleton), `doc/conventions.md`
 (model conventions + reference policy), `doc/playbook.md`

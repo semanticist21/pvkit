@@ -34,6 +34,9 @@ Cross-module rules every model follows. Method-specific math lives next to the c
 ## References and fixtures
 
 - The paper is the **spec**. A reference implementation only supplies expected numbers.
+- A closed-form method with no reference library may use the cited formula restated in
+  Python as its arithmetic oracle, but its conventions (timing, compounding, netting) must
+  also be pinned by an NREL SAM/PySAM fixture or a published/hand-derived worked example.
 - Every `<method>.md` ends with a `## Reference` section listing:
   1. the spec — paper citation + URL;
   2. the reference implementation — e.g. `pvlib.solarposition.spa_python` @ pvlib 0.16.1,

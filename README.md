@@ -33,14 +33,18 @@ Not "smarter PV science" — **"PV modeling everywhere JavaScript runs."**
 | [`@pvkit/economics`](packages/economics) | 🧪 unreleased | PV project finance — lifetime kWh with degradation, bill savings, NPV, IRR, payback, ROI, LCOE |
 | [`@pvkit/sizer`](packages/sizer) | 🧪 unreleased | String sizing — temperature-corrected Voc/Vmp, NEC 690.7, series/parallel limits per inverter |
 | [`@pvkit/diode`](packages/diode) | 🧪 unreleased | Single-diode + SAPM electrical models — De Soto/CEC/PVsyst parameters, exact I-V solver, Sandia/ADR inverters |
+| [`@pvkit/io`](packages/io) | 🧪 unreleased | Weather/irradiance fetch — PVGIS TMY and NASA POWER hourly, parsed like pvlib |
+| [`@pvkit/layout`](packages/layout) | 🧪 unreleased | Array layout — roof module fit, row spacing, row-to-row shading and sky masking, horizon profiles |
 
-See [ROADMAP.md](ROADMAP.md) for packages under consideration.
+Live demo (browser-only kWh estimate on `@pvkit/core`): https://pvkit.netlify.app
+
+Work queue: [ROADMAP.md](ROADMAP.md).
 
 ## Technical direction
 
 - **ESM-only.** No CJS. Targets modern bundler environments (Vite / Next, etc.).
 - Aggressive tree-shaking. `"sideEffects": false`, functional exports.
-- Zero runtime dependencies. Pure TS.
+- No third-party runtime dependencies (a package may depend on another `@pvkit` package). Pure TS.
 - Build: `tsdown` (rolldown-based). ESM + `.d.ts` + subpath exports map.
 - Pure JS is fast enough: SPA ≈ 18 µs/call (a year at 1-minute steps ≈ 10 s), every
   other model < 0.4 µs. No WASM planned; a lighter sun-position algorithm is the

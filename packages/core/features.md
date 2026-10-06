@@ -1,23 +1,11 @@
 # @pvkit/core — features checklist
 
-Implementation tracker. Order = dependency order (each builds on prior).
-Spec = the paper. Each calculation method is its own folder
-`src/models/<module>/<method>/` holding a method `index.ts` (subpath entry,
-re-exports the impl) plus its file set: implement `<method>.ts` from the paper →
-write `<method>.md` (principle + `## Reference`) → generate fixture JSON with
-`scripts/fixtures/<module>-<method>.py` → assert within tolerance in
-`<method>.test.ts` → optional `<method>.bench.ts` for perf-critical methods. Public import
-`@pvkit/core/<module>/<method>` resolves to `<method>/index.ts`. Accuracy is
-tolerance-based (JS float64, platform `Math`), not bit-exact. No core logic
-without a test.
+Implementation status, in module dependency order. How to add or change a method:
+`AGENTS.md` → "Adding or changing a method".
 
 Legend: `[ ]` todo · `[~]` in progress · `[x]` done + validated.
 
 ## 0. Foundation (top-level `src/`, shared by models)
-
-Layout: shared foundation files sit flat at `src/` top; the PV models nest one
-layer down under `src/models/<module>/`. Foundation is imported *upward* by models;
-models never import each other.
 
 - [x] Branded unit types (`Radians`/`Degrees`, `src/units.ts`)
 - [x] API boundary: plain-object inputs (bare `number`, unit by field name) → branded
@@ -75,8 +63,8 @@ the browser thesis.
 - [x] Validation fixtures vs reference (pvlib)
 
 Note: `lookup_linke_turbidity` (bundled climatology raster) and `detect_clearsky`
-(measured-series analysis) live in `@pvkit/io`, not core — they need data files /
-measured series. Air mass moved to `atmosphere`.
+(measured-series analysis) are not in core — they need data files / measured series. See
+"Out of core scope". Air mass lives in `atmosphere`.
 
 ## 4. `irradiance` — Perez / Hay-Davies / Isotropic + AOI
 
@@ -182,15 +170,19 @@ the spec).
 
 ## Out of core scope (separate packages)
 
-| Capability | Goes to | Why not core |
+Not-yet-implemented rows point at the package `AGENTS.md` that owns the deferral.
+
+| Capability | Where | Why not core |
 | --- | --- | --- |
-| single-diode (desoto/cec/pvsyst), single-diode solver (Lambert-W/bishop88), max_power_point, i↔v | `@pvkit/diode` (proposed) | pure TS but inert without per-module parameters; gateway to data-bound models |
-| SAPM full I-V, Sandia/ADR inverter models | `@pvkit/diode` | DB-coefficient driven |
-| Parameter databases (CEC ~20k modules, CEC inverters, Sandia) | `@pvkit/spec` | multi-MB data — breaks zero-data core |
-| Spectrum mismatch (firstsolar/sapm, AM1.5 reference) | `@pvkit/spec` | reference-spectrum tables = data |
-| Bifacial (infinite_sheds, pvfactors) + row/horizon shading | `@pvkit/layout` | row/tracker 3D geometry + view factors |
-| iotools (TMY/EPW/PVGIS/NSRDB/NASA fetch + parse) | `@pvkit/io` | network + file parsing breaks zero-runtime-dep |
-| ModelChain orchestrator + PVSystem/Array/Location classes | `@pvkit/chain` (thin layer) | encodes model-choice opinions + mutable state + time-series shape; core stays stateless |
+| single-diode (desoto/cec/pvsyst), Lambert-W solver, max power point, i↔v | `@pvkit/diode` | pure TS but inert without per-module parameters |
+| SAPM I-V, SAPM spectral factor + effective irradiance, Sandia/ADR inverters | `@pvkit/diode` | DB-coefficient driven |
+| Parameter databases (CEC modules, CEC inverters, Sandia modules) | `@pvkit/spec` | multi-MB data — breaks zero-data core |
+| Spectrum mismatch from reference spectra (firstsolar, AM1.5 tables) | not implemented — `packages/spec/AGENTS.md` | reference-spectrum tables = data |
+| Row-to-row shading, masking angle, horizon profiles, roof fit | `@pvkit/layout` | array geometry, not single-instant physics |
+| Bifacial (infinite_sheds) | not implemented — `packages/layout/AGENTS.md` | row/tracker view factors |
+| PVGIS TMY / NASA POWER hourly fetch + parse | `@pvkit/io` | network + file parsing |
+| Other iotools (PVGIS hourly, NSRDB), Linke turbidity raster, `detect_clearsky` | not implemented — `packages/io/AGENTS.md` | data files / measured series |
+| ModelChain orchestrator | `@pvkit/chain` | encodes model-choice opinions + time-series shape; core stays stateless |
 
 Skipped for 1.0 entirely: gti_dirint, scaling.wvm (cloud variability), ivtools
 (IV-curve fitting), string mismatch, pvfactors (external engine).
@@ -199,10 +191,7 @@ Skipped for 1.0 entirely: gti_dirint, scaling.wvm (cloud variability), ivtools
 
 - [x] Module subpath `index.ts` re-exports its methods (convenience subpath entry)
 - [x] Root entry `src/index.ts` exports unit types only (models via subpaths)
-- [x] tsdown generates `package.json` `exports`/`publishConfig` (+ main/module/
-      types) from the glob tsdown entry on build — new method/module files need no
-      manual wiring; run `pnpm build` to regenerate after adding a method/module
-      and commit the result. Per-method impl files stay private via `customExports`.
-      See `doc/architecture.md` → "Subpath exports".
+- [x] tsdown generates `package.json` `exports` from the entry glob — `doc/architecture.md` →
+      "Subpath exports"
 - [x] Tree-shaking guard — `scripts/check-treeshake.mjs` (CI): method entries reach only their module + foundation
 - [x] End-to-end pipeline test (`src/pipeline.test.ts`) — sun position → kWh matches pvlib
