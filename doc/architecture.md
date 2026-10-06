@@ -1,15 +1,17 @@
 # Architecture — base skeleton
 
 Durable design facts for pvkit. Update when the shape changes. Agent-facing
-instructions live in root `AGENTS.md`; planned packages in `ROADMAP.md`; this
+instructions live in root `AGENTS.md`; the work queue in `ROADMAP.md`; this
 file is the consolidated skeleton.
 
 ## Shape
 
 - ESM-first TypeScript library for PV (solar) performance modeling. Runs
   everywhere JS runs (browser, edge, Workers, React Native) — no backend.
-- pnpm monorepo, `packages/*` workspaces. `@pvkit/core` (all 11 modules
-  fixture-validated) plus sibling packages that mirror its layout.
+- pnpm monorepo; workspace layout and package list: root `AGENTS.md` → "Monorepo".
+  `@pvkit/core` (all 11 modules fixture-validated) has a module layer; the sibling
+  packages are flat (see "Sibling packages"). Sections that name `@pvkit/core` or
+  `src/models/` describe core only.
 - Positioning: "PV modeling everywhere JS runs," not "smarter PV science."
 
 ## `@pvkit/core` module order
@@ -27,13 +29,31 @@ finer (`@pvkit/core/<module>/<method>`) — see "Subpath exports" below. The tsd
 entry is a glob and tsdown generates the `exports` map from it on build, so a new
 method or module file needs no hand-wiring.
 
+## Sibling packages
+
+Every `packages/*` other than core has no module layer:
+
+- Each method is its own folder `src/<method>/` with the same file set as a core method
+  folder (see "Module boundaries & tests"); public subpath `@pvkit/<pkg>/<method>`.
+  Package-private helpers sit flat at `src/` (e.g. `sum.ts`, `table.ts`, `lambert-w.ts`).
+- Only `.`, `./package.json` and each `src/<method>/index` become exports, so flat helpers
+  stay private: either a `customExports` filter over entry `src/**/*.ts` (minus tests and
+  test helpers such as diode's `src/testing.ts`) or, in `@pvkit/spec`, an index-only entry
+  list (`src/index.ts`, `src/*/index.ts`) plus its `data-json-parse` plugin. The exports
+  map is generated the same way as core's (see "Subpath exports").
+- Root entry `src/index.ts` re-exports every method, except where loading everything is
+  costly or unwanted: `@pvkit/spec` and `@pvkit/sizer` export only types (spec's tables are
+  megabytes; import per table), and core exports only the unit types.
+- A workspace dependency (`workspace:^`) is rewritten to `^<dependency's current version>`
+  at pack time, so the dependency is published first (see "Release procedure").
+
 ## Core invariants
 
 - **The papers are the spec.** Implement from peer-reviewed literature; the API
   is pvkit's design, the algorithms are open science.
 - **Numerical validation, not "it runs."** Implement from paper → pin
   reference-implementation outputs as fixtures → assert in `*.test.ts`.
-- **ESM-only, zero runtime deps.** `sideEffects: false`, function-level exports,
+- **ESM-only, no third-party runtime deps** (`@pvkit/*` workspace deps allowed). `sideEffects: false`, function-level exports,
   aggressive tree-shaking.
 - **Branded unit types** (`src/units.ts`): `Radians`/`Degrees` are nominal brands
   over `number` — rad/deg mix-ups fail at compile time, zero runtime cost. New
@@ -121,14 +141,21 @@ method or module file needs no hand-wiring.
 - **Release procedure (owner of this fact).** Only pnpm (and yarn) apply
   `publishConfig.exports`; `npm publish` of the package *directory* ships the dev
   `exports` (→ `src/*.ts`), which `files: ["dist"]` excludes — a broken package.
-  1. Clean tree, then `cd packages/core && pnpm version <patch|minor|major>` — bumps,
-     commits and tags (`v<x.y.z>`); it refuses on a dirty tree. Push commit + tag.
-  2. `pnpm pack` and check the tarball's `package.json` `exports` point at `./dist`.
+  Tags are per package, `@pvkit/<pkg>@<x.y.z>` (core's first release keeps its old
+  `v0.1.0` tag). Order: a workspace dependency before its dependents — core (if
+  changed), then spec, then the rest. Per package `<pkg>`:
+  1. Clean tree, then `cd packages/<pkg> && pnpm version <x.y.z> --no-git-tag-version`;
+     commit, `git tag @pvkit/<pkg>@<x.y.z>`, push commit + tag.
+  2. `pnpm pack` and check the tarball's `package.json`: `exports` point at `./dist`,
+     and `dependencies` hold no `workspace:` range, only ranges already on npm.
   3. Publish: `pnpm publish` from an interactive terminal, or from an agent shell (no
-     TTY → pnpm's OTP fails) `script -q /dev/null npm publish ./pvkit-core-<v>.tgz
+     TTY → pnpm's OTP fails) `script -q /dev/null npm publish ./pvkit-<pkg>-<x.y.z>.tgz
      --auth-type=web --access public` and hand the printed auth URL to the user.
-  4. Poll `https://registry.npmjs.org/@pvkit%2fcore` until the version is `latest`
+  4. Poll `https://registry.npmjs.org/@pvkit%2f<pkg>` until the version is `latest`
      (a brand-new package first shows a `0.0.0-stage` placeholder for minutes).
+  CI guards on the packed output: `scripts/check-consumer.mjs` packs every `packages/*`
+  and typechecks/imports it as a consumer; `scripts/check-treeshake.mjs` covers core only
+  (its regex and paths assume core's `dist/models/<module>/` layout).
 - **TS consumers need `moduleResolution: "bundler"`** (or `node16`+) to resolve
   the generated subpath types.
 - **Depth-agnostic.** Per-method subpath stays the preferred granularity, but

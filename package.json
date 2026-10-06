@@ -7,7 +7,7 @@
     "build": "pnpm -r build",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck",
-    "fixtures": "for f in scripts/fixtures/*.py; do uv run -q \"$f\" || exit 1; done && biome format --write packages/*/src",
+    "fixtures": "for f in scripts/fixtures/*.py; do uv run -q \"$f\" || exit 1; done && biome format --write packages/*/src apps/demo/src",
     "format": "biome check --write .",
     "lint": "biome check .",
     "harness": "node scripts/agent-harness-check.mjs --worktree",

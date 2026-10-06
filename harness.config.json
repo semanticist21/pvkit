@@ -25,6 +25,16 @@
     "packages/diode/src/"
   ],
   "testPairingMode": "module",
-  "modulePairingRoot": "packages/core/src/",
+  "modulePairingRoot": [
+    "packages/core/src/models/",
+    "packages/core/src/",
+    "packages/spec/src/",
+    "packages/economics/src/",
+    "packages/io/src/",
+    "packages/chain/src/",
+    "packages/sizer/src/",
+    "packages/layout/src/",
+    "packages/diode/src/"
+  ],
   "roleComments": []
 }

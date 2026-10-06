@@ -116,17 +116,18 @@ function matchesAny(file, globs) {
 function checkTestPairing(sourceFiles, testFiles) {
   const testable = sourceFiles.filter((f) => !isTest(f) && matchesAny(f, cfg.testableGlobs))
   if (testable.length === 0) return
-  const root = cfg.modulePairingRoot
-  if (cfg.testPairingMode !== 'module' || !root) {
+  // modulePairingRoot: one prefix or a list; the longest matching prefix keys a file.
+  const roots = [cfg.modulePairingRoot ?? []].flat().sort((a, b) => b.length - a.length)
+  if (cfg.testPairingMode !== 'module' || roots.length === 0) {
     if (testFiles.length === 0)
       warnings.push('testable code changed but no test file changed; add/adjust a test or record why omitted in handoff')
     return
   }
-  const testedKeys = new Set(testFiles.map((f) => moduleKey(f, root)).filter(Boolean))
+  const testedKeys = new Set(testFiles.map((f) => moduleKey(f, roots)).filter(Boolean))
   const uncovered = new Set()
   let nullKeyUntested = false
   for (const f of testable) {
-    const k = moduleKey(f, root)
+    const k = moduleKey(f, roots)
     if (k === null) {
       // Outside the module root: fall back to the global check so it's never silently exempt.
       if (testFiles.length === 0) nullKeyUntested = true
@@ -140,17 +141,27 @@ function checkTestPairing(sourceFiles, testFiles) {
     warnings.push('testable code changed but no test file changed; add/adjust a test or record why omitted in handoff')
 }
 
-// Module key for pairing: <root><submodule-dir> for nested files, else <root><filename-stem>
+// Module key for pairing (root = longest matching pairing root): <root><submodule-dir> for nested files, else <root><filename-stem>
 // for files directly under root. Stripping the .test/.spec suffix keys a source and its
-// sibling test identically (units.ts <-> units.test.ts), so they pair. No config-supplied
-// regex is compiled here -- a bad config can't throw and break the hook.
-function moduleKey(file, root) {
-  if (!file.startsWith(root)) return null
+// sibling test identically (units.ts <-> units.test.ts), so they pair. A root-level source
+// with no sibling test on disk (index.ts, small private helpers) gets null, i.e. the global
+// "any test changed" fallback. No config-supplied regex is compiled here -- a bad config
+// can't throw and break the hook.
+function moduleKey(file, roots) {
+  const root = roots.find((r) => file.startsWith(r))
+  if (!root) return null
   const rel = file.slice(root.length)
   const slash = rel.indexOf('/')
   if (slash !== -1) return root + rel.slice(0, slash)
+  const isTest = /\.(test|spec)\.[^.]+$/.test(rel)
   const stem = rel.replace(/\.(test|spec)\.[^.]+$/, '').replace(/\.[^.]+$/, '')
-  return stem ? root + stem : null
+  if (!stem) return null
+  if (!isTest) {
+    const ext = rel.slice(stem.length)
+    const hasTest = ['.test', '.spec'].some((s) => existsSync(join(repoRoot, root, stem + s + ext)))
+    if (!hasTest) return null
+  }
+  return root + stem
 }
 
 // A touched source tree should keep its nearest agent-doc current.
