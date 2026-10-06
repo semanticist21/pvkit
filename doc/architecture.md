@@ -8,8 +8,8 @@ file is the consolidated skeleton.
 
 - ESM-first TypeScript library for PV (solar) performance modeling. Runs
   everywhere JS runs (browser, edge, Workers, React Native) — no backend.
-- pnpm monorepo, `packages/*` workspaces. Only `@pvkit/core` exists today; all
-  11 modules implemented and fixture-validated.
+- pnpm monorepo, `packages/*` workspaces. `@pvkit/core` (all 11 modules
+  fixture-validated) plus sibling packages that mirror its layout.
 - Positioning: "PV modeling everywhere JS runs," not "smarter PV science."
 
 ## `@pvkit/core` module order

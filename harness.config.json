@@ -2,9 +2,9 @@
   "ignorePrefixes": ["node_modules/", ".git/", "dist/", "build/", "target/", "vendor/"],
   "sourceExtensions": [".ts", ".tsx"],
   "testPatterns": ["(^|/)__tests__/", "\\.test\\.", "\\.spec\\.", "(^|/)tests?/"],
-  "testableGlobs": ["packages/core/src/", "apps/demo/src/", "packages/spec/src/"],
+  "testableGlobs": ["packages/core/src/", "apps/demo/src/", "packages/spec/src/", "packages/economics/src/"],
   "docFileNames": ["AGENTS.md", "CLAUDE.md", "playbook.md"],
-  "durableSourceGlobs": ["packages/core/src/", "packages/spec/src/"],
+  "durableSourceGlobs": ["packages/core/src/", "packages/spec/src/", "packages/economics/src/"],
   "testPairingMode": "module",
   "modulePairingRoot": "packages/core/src/",
   "roleComments": []

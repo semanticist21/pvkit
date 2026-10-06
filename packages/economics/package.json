@@ -1,0 +1,64 @@
+{
+  "name": "@pvkit/economics",
+  "version": "0.0.0",
+  "description": "PV (solar) project finance in plain ESM — lifetime energy with degradation, bill savings, cash flows, NPV, IRR, payback, ROI, LCOE. Zero dependencies, runs in the browser.",
+  "type": "module",
+  "license": "MIT",
+  "author": "semanticist21",
+  "homepage": "https://github.com/semanticist21/pvkit/tree/main/packages/economics#readme",
+  "bugs": {
+    "url": "https://github.com/semanticist21/pvkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semanticist21/pvkit.git",
+    "directory": "packages/economics"
+  },
+  "keywords": [
+    "pv",
+    "solar",
+    "photovoltaic",
+    "lcoe",
+    "npv",
+    "irr",
+    "payback",
+    "esm"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": "./dist/index.js",
+      "./bill-savings": "./dist/bill-savings/index.js",
+      "./cash-flows": "./dist/cash-flows/index.js",
+      "./irr": "./dist/irr/index.js",
+      "./lcoe": "./dist/lcoe/index.js",
+      "./lifetime-energy": "./dist/lifetime-energy/index.js",
+      "./npv": "./dist/npv/index.js",
+      "./payback-period": "./dist/payback-period/index.js",
+      "./roi": "./dist/roi/index.js",
+      "./package.json": "./package.json"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepack": "tsdown"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./bill-savings": "./src/bill-savings/index.ts",
+    "./cash-flows": "./src/cash-flows/index.ts",
+    "./irr": "./src/irr/index.ts",
+    "./lcoe": "./src/lcoe/index.ts",
+    "./lifetime-energy": "./src/lifetime-energy/index.ts",
+    "./npv": "./src/npv/index.ts",
+    "./payback-period": "./src/payback-period/index.ts",
+    "./roi": "./src/roi/index.ts",
+    "./package.json": "./package.json"
+  }
+}
