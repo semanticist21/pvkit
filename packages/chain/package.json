@@ -1,6 +1,6 @@
 {
   "name": "@pvkit/chain",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Solar PV output in one call: pvlib-style ModelChain (PVWatts) for TypeScript/JavaScript. Site, system and weather in, AC power out. Runs in the browser.",
   "type": "module",
   "license": "MIT",

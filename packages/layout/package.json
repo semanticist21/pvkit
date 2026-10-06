@@ -1,6 +1,6 @@
 {
   "name": "@pvkit/layout",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Solar panel layout and shading for TypeScript: modules that fit a roof, row spacing (pitch), row-to-row shading, horizon profiles. Validated against pvlib. Zero dependencies.",
   "type": "module",
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
   "name": "@pvkit/sizer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Solar string sizing calculator: NEC 690.7 temperature-corrected Voc, min/max modules per string and parallel strings against inverter DC limits. TypeScript, zero dependencies.",
   "type": "module",
   "license": "MIT",
