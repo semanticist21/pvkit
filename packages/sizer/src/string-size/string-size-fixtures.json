@@ -1,0 +1,757 @@
+{
+  "meta": {
+    "reference": "NEC 2023 690.7(A) explicit formulas, Python float64"
+  },
+  "cases": [
+    {
+      "input": {
+        "vocMax": 50.0,
+        "vmpMin": 25.0,
+        "imp": 9.0,
+        "vdcMax": 600.0,
+        "mpptLow": 250.0,
+        "idcMax": 18.0
+      },
+      "expected": {
+        "minSeries": 10,
+        "maxSeries": 12,
+        "maxParallel": 2
+      }
+    },
+    {
+      "input": {
+        "vocMax": 42.87,
+        "vmpMin": 26.1,
+        "imp": 8.81,
+        "vdcMax": 600.0,
+        "mpptLow": 250.0,
+        "idcMax": 18.0
+      },
+      "expected": {
+        "minSeries": 10,
+        "maxSeries": 13,
+        "maxParallel": 2
+      }
+    },
+    {
+      "input": {
+        "vocMax": 65.0,
+        "vmpMin": 30.0,
+        "imp": 10.0,
+        "vdcMax": 600.0,
+        "mpptLow": 580.0,
+        "idcMax": 9.0
+      },
+      "expected": {
+        "minSeries": 20,
+        "maxSeries": 9,
+        "maxParallel": 0
+      }
+    },
+    {
+      "input": {
+        "vocMax": 40.0,
+        "vmpMin": 30.0,
+        "imp": 10.0,
+        "vdcMax": 1000.0,
+        "mpptLow": 0.0,
+        "idcMax": 30.0
+      },
+      "expected": {
+        "minSeries": 1,
+        "maxSeries": 25,
+        "maxParallel": 3
+      }
+    },
+    {
+      "input": {
+        "vocMax": 76.32937590052035,
+        "vmpMin": 28.666255115165274,
+        "imp": 6.43779443287797,
+        "vdcMax": 480.0,
+        "mpptLow": 260.64036825825656,
+        "idcMax": 43.090036672000025
+      },
+      "expected": {
+        "minSeries": 10,
+        "maxSeries": 6,
+        "maxParallel": 6
+      }
+    },
+    {
+      "input": {
+        "vocMax": 20.59422007049956,
+        "vmpMin": 57.10524493204514,
+        "imp": 14.528971866150775,
+        "vdcMax": 600.0,
+        "mpptLow": 367.5577682462328,
+        "idcMax": 41.89800679054779
+      },
+      "expected": {
+        "minSeries": 7,
+        "maxSeries": 29,
+        "maxParallel": 2
+      }
+    },
+    {
+      "input": {
+        "vocMax": 40.224951100116996,
+        "vmpMin": 17.766435830727442,
+        "imp": 11.101293394137278,
+        "vdcMax": 600.0,
+        "mpptLow": 372.66766625707123,
+        "idcMax": 25.57528144480866
+      },
+      "expected": {
+        "minSeries": 21,
+        "maxSeries": 14,
+        "maxParallel": 2
+      }
+    },
+    {
+      "input": {
+        "vocMax": 65.78814122130855,
+        "vmpMin": 52.00312827483677,
+        "imp": 8.71267901229,
+        "vdcMax": 1000.0,
+        "mpptLow": 302.4161295656846,
+        "idcMax": 8.222411392336232
+      },
+      "expected": {
+        "minSeries": 6,
+        "maxSeries": 15,
+        "maxParallel": 0
+      }
+    },
+    {
+      "input": {
+        "vocMax": 28.719498059078006,
+        "vmpMin": 27.95567674620785,
+        "imp": 5.563290037714211,
+        "vdcMax": 480.0,
+        "mpptLow": 489.2711003909675,
+        "idcMax": 20.372611164370262
+      },
+      "expected": {
+        "minSeries": 18,
+        "maxSeries": 16,
+        "maxParallel": 3
+      }
+    },
+    {
+      "input": {
+        "vocMax": 22.593227136688967,
+        "vmpMin": 50.680539320744124,
+        "imp": 7.789289694161175,
+        "vdcMax": 480.0,
+        "mpptLow": 456.7397828062754,
+        "idcMax": 41.703305959979836
+      },
+      "expected": {
+        "minSeries": 10,
+        "maxSeries": 21,
+        "maxParallel": 5
+      }
+    },
+    {
+      "input": {
+        "vocMax": 30.431902284601104,
+        "vmpMin": 16.863033690758922,
+        "imp": 17.569496324188872,
+        "vdcMax": 1000.0,
+        "mpptLow": 54.83561675843852,
+        "idcMax": 59.61515349706837
+      },
+      "expected": {
+        "minSeries": 4,
+        "maxSeries": 32,
+        "maxParallel": 3
+      }
+    },
+    {
+      "input": {
+        "vocMax": 26.77739611112701,
+        "vmpMin": 24.808126320004536,
+        "imp": 10.053795881635955,
+        "vdcMax": 1500.0,
+        "mpptLow": 136.32177782813417,
+        "idcMax": 43.11705673465356
+      },
+      "expected": {
+        "minSeries": 6,
+        "maxSeries": 56,
+        "maxParallel": 4
+      }
+    },
+    {
+      "input": {
+        "vocMax": 35.40630309249573,
+        "vmpMin": 32.1232343035086,
+        "imp": 15.660241217932782,
+        "vdcMax": 600.0,
+        "mpptLow": 68.95254807324385,
+        "idcMax": 44.589009599078594
+      },
+      "expected": {
+        "minSeries": 3,
+        "maxSeries": 16,
+        "maxParallel": 2
+      }
+    },
+    {
+      "input": {
+        "vocMax": 72.71073967642269,
+        "vmpMin": 47.93383734082583,
+        "imp": 8.27195667404174,
+        "vdcMax": 600.0,
+        "mpptLow": 470.3889197956804,
+        "idcMax": 25.89951306960473
+      },
+      "expected": {
+        "minSeries": 10,
+        "maxSeries": 8,
+        "maxParallel": 3
+      }
+    },
+    {
+      "input": {
+        "vocMax": 41.171939559580046,
+        "vmpMin": 24.063895370084786,
+        "imp": 6.802669255491506,
+        "vdcMax": 600.0,
+        "mpptLow": 369.95549677850784,
+        "idcMax": 40.30366107066455
+      },
+      "expected": {
+        "minSeries": 16,
+        "maxSeries": 14,
+        "maxParallel": 5
+      }
+    },
+    {
+      "input": {
+        "vocMax": 47.09706610908944,
+        "vmpMin": 17.66512102698953,
+        "imp": 17.289659876323018,
+        "vdcMax": 600.0,
+        "mpptLow": 194.15053935312076,
+        "idcMax": 23.100782622016787
+      },
+      "expected": {
+        "minSeries": 11,
+        "maxSeries": 12,
+        "maxParallel": 1
+      }
+    },
+    {
+      "input": {
+        "vocMax": 36.43915617891145,
+        "vmpMin": 51.93034419291709,
+        "imp": 8.218160348425895,
+        "vdcMax": 1000.0,
+        "mpptLow": 441.0607248847783,
+        "idcMax": 21.660889413772765
+      },
+      "expected": {
+        "minSeries": 9,
+        "maxSeries": 27,
+        "maxParallel": 2
+      }
+    },
+    {
+      "input": {
+        "vocMax": 33.81686205188808,
+        "vmpMin": 19.484621998390633,
+        "imp": 8.274857261308837,
+        "vdcMax": 1500.0,
+        "mpptLow": 454.0083099193245,
+        "idcMax": 8.002847336359936
+      },
+      "expected": {
+        "minSeries": 24,
+        "maxSeries": 44,
+        "maxParallel": 0
+      }
+    },
+    {
+      "input": {
+        "vocMax": 43.236979879327876,
+        "vmpMin": 56.35830094751414,
+        "imp": 14.880874448740052,
+        "vdcMax": 480.0,
+        "mpptLow": 379.0703980675611,
+        "idcMax": 51.068952491192135
+      },
+      "expected": {
+        "minSeries": 7,
+        "maxSeries": 11,
+        "maxParallel": 3
+      }
+    },
+    {
+      "input": {
+        "vocMax": 47.260328291763486,
+        "vmpMin": 17.888347302670727,
+        "imp": 8.233791460812254,
+        "vdcMax": 480.0,
+        "mpptLow": 255.52823316209412,
+        "idcMax": 10.641059122994749
+      },
+      "expected": {
+        "minSeries": 15,
+        "maxSeries": 10,
+        "maxParallel": 1
+      }
+    },
+    {
+      "input": {
+        "vocMax": 79.80380300807555,
+        "vmpMin": 38.26499394581154,
+        "imp": 16.746922199875957,
+        "vdcMax": 1500.0,
+        "mpptLow": 312.76999520852183,
+        "idcMax": 58.71523465814856
+      },
+      "expected": {
+        "minSeries": 9,
+        "maxSeries": 18,
+        "maxParallel": 3
+      }
+    },
+    {
+      "input": {
+        "vocMax": 58.583754193909364,
+        "vmpMin": 19.12923120468923,
+        "imp": 13.153737491127032,
+        "vdcMax": 600.0,
+        "mpptLow": 172.54737092446493,
+        "idcMax": 50.95523116974129
+      },
+      "expected": {
+        "minSeries": 10,
+        "maxSeries": 10,
+        "maxParallel": 3
+      }
+    },
+    {
+      "input": {
+        "vocMax": 64.35151832823044,
+        "vmpMin": 32.622857421590766,
+        "imp": 12.049397463886885,
+        "vdcMax": 1500.0,
+        "mpptLow": 131.18897650104373,
+        "idcMax": 36.371736093856256
+      },
+      "expected": {
+        "minSeries": 5,
+        "maxSeries": 23,
+        "maxParallel": 3
+      }
+    },
+    {
+      "input": {
+        "vocMax": 71.5428848729942,
+        "vmpMin": 26.171664714257172,
+        "imp": 10.172528022882759,
+        "vdcMax": 480.0,
+        "mpptLow": 210.15786877714754,
+        "idcMax": 42.117923222775175
+      },
+      "expected": {
+        "minSeries": 9,
+        "maxSeries": 6,
+        "maxParallel": 4
+      }
+    },
+    {
+      "input": {
+        "vocMax": 24.85115596355389,
+        "vmpMin": 44.475015513803136,
+        "imp": 13.195137878138777,
+        "vdcMax": 1500.0,
+        "mpptLow": 472.6793718153649,
+        "idcMax": 39.946691539115186
+      },
+      "expected": {
+        "minSeries": 11,
+        "maxSeries": 60,
+        "maxParallel": 3
+      }
+    },
+    {
+      "input": {
+        "vocMax": 36.306179910985975,
+        "vmpMin": 15.98392094780635,
+        "imp": 5.084828035076488,
+        "vdcMax": 600.0,
+        "mpptLow": 66.35614770679918,
+        "idcMax": 41.05671886696184
+      },
+      "expected": {
+        "minSeries": 5,
+        "maxSeries": 16,
+        "maxParallel": 8
+      }
+    },
+    {
+      "input": {
+        "vocMax": 40.45997264489294,
+        "vmpMin": 26.36080930193714,
+        "imp": 9.630405517020783,
+        "vdcMax": 1000.0,
+        "mpptLow": 120.3818686679841,
+        "idcMax": 18.17083013543182
+      },
+      "expected": {
+        "minSeries": 5,
+        "maxSeries": 24,
+        "maxParallel": 1
+      }
+    },
+    {
+      "input": {
+        "vocMax": 27.975348000257632,
+        "vmpMin": 38.84383955121362,
+        "imp": 7.715481391397447,
+        "vdcMax": 480.0,
+        "mpptLow": 326.4366787684632,
+        "idcMax": 52.97599193333135
+      },
+      "expected": {
+        "minSeries": 9,
+        "maxSeries": 17,
+        "maxParallel": 6
+      }
+    },
+    {
+      "input": {
+        "vocMax": 71.83617095763886,
+        "vmpMin": 22.199863297245344,
+        "imp": 8.94097573278843,
+        "vdcMax": 480.0,
+        "mpptLow": 126.63705699500808,
+        "idcMax": 40.221374041090066
+      },
+      "expected": {
+        "minSeries": 6,
+        "maxSeries": 6,
+        "maxParallel": 4
+      }
+    },
+    {
+      "input": {
+        "vocMax": 27.226262709546234,
+        "vmpMin": 57.088689991791334,
+        "imp": 10.422152819897256,
+        "vdcMax": 1000.0,
+        "mpptLow": 326.4735636088954,
+        "idcMax": 56.7740134007188
+      },
+      "expected": {
+        "minSeries": 6,
+        "maxSeries": 36,
+        "maxParallel": 5
+      }
+    },
+    {
+      "input": {
+        "vocMax": 58.9390326258376,
+        "vmpMin": 36.80971733605731,
+        "imp": 14.6292643848438,
+        "vdcMax": 480.0,
+        "mpptLow": 71.3042121058086,
+        "idcMax": 27.031931554651926
+      },
+      "expected": {
+        "minSeries": 2,
+        "maxSeries": 8,
+        "maxParallel": 1
+      }
+    },
+    {
+      "input": {
+        "vocMax": 29.447388742369366,
+        "vmpMin": 24.283537265702275,
+        "imp": 5.605615605483772,
+        "vdcMax": 480.0,
+        "mpptLow": 138.6858393570155,
+        "idcMax": 50.07790672655677
+      },
+      "expected": {
+        "minSeries": 6,
+        "maxSeries": 16,
+        "maxParallel": 8
+      }
+    },
+    {
+      "input": {
+        "vocMax": 77.34808803923386,
+        "vmpMin": 52.7042176993287,
+        "imp": 17.149293500274347,
+        "vdcMax": 480.0,
+        "mpptLow": 478.142449781952,
+        "idcMax": 18.595430045883006
+      },
+      "expected": {
+        "minSeries": 10,
+        "maxSeries": 6,
+        "maxParallel": 1
+      }
+    },
+    {
+      "input": {
+        "vocMax": 48.43332304688816,
+        "vmpMin": 40.011747667503315,
+        "imp": 8.512357089057257,
+        "vdcMax": 480.0,
+        "mpptLow": 166.85353443384795,
+        "idcMax": 41.05564121083659
+      },
+      "expected": {
+        "minSeries": 5,
+        "maxSeries": 9,
+        "maxParallel": 4
+      }
+    },
+    {
+      "input": {
+        "vocMax": 33.33764728678786,
+        "vmpMin": 48.653558943750035,
+        "imp": 13.92842707758535,
+        "vdcMax": 600.0,
+        "mpptLow": 275.3932039011847,
+        "idcMax": 14.98608491967019
+      },
+      "expected": {
+        "minSeries": 6,
+        "maxSeries": 17,
+        "maxParallel": 1
+      }
+    },
+    {
+      "input": {
+        "vocMax": 57.35174882966553,
+        "vmpMin": 58.514249616718665,
+        "imp": 13.24692306201679,
+        "vdcMax": 1000.0,
+        "mpptLow": 419.95895841988965,
+        "idcMax": 54.163069859434074
+      },
+      "expected": {
+        "minSeries": 8,
+        "maxSeries": 17,
+        "maxParallel": 4
+      }
+    },
+    {
+      "input": {
+        "vocMax": 79.78420576192356,
+        "vmpMin": 34.36372171853928,
+        "imp": 16.749542053627508,
+        "vdcMax": 480.0,
+        "mpptLow": 497.0491075728012,
+        "idcMax": 38.77829496572661
+      },
+      "expected": {
+        "minSeries": 15,
+        "maxSeries": 6,
+        "maxParallel": 2
+      }
+    },
+    {
+      "input": {
+        "vocMax": 57.15990175595207,
+        "vmpMin": 45.6635570580865,
+        "imp": 4.602826014726702,
+        "vdcMax": 1000.0,
+        "mpptLow": 352.43681128443905,
+        "idcMax": 18.679793729724363
+      },
+      "expected": {
+        "minSeries": 8,
+        "maxSeries": 17,
+        "maxParallel": 4
+      }
+    },
+    {
+      "input": {
+        "vocMax": 28.778224434207583,
+        "vmpMin": 56.91618681159883,
+        "imp": 16.089776765328953,
+        "vdcMax": 600.0,
+        "mpptLow": 101.5225911714959,
+        "idcMax": 51.07254892650806
+      },
+      "expected": {
+        "minSeries": 2,
+        "maxSeries": 20,
+        "maxParallel": 3
+      }
+    },
+    {
+      "input": {
+        "vocMax": 29.932366831523495,
+        "vmpMin": 50.48693774440708,
+        "imp": 17.205631024111362,
+        "vdcMax": 480.0,
+        "mpptLow": 329.7475867962153,
+        "idcMax": 22.950409811487507
+      },
+      "expected": {
+        "minSeries": 7,
+        "maxSeries": 16,
+        "maxParallel": 1
+      }
+    },
+    {
+      "input": {
+        "vocMax": 45.20156202075544,
+        "vmpMin": 23.547281001932028,
+        "imp": 9.469639358068218,
+        "vdcMax": 480.0,
+        "mpptLow": 458.5127825940587,
+        "idcMax": 17.13680661851781
+      },
+      "expected": {
+        "minSeries": 20,
+        "maxSeries": 10,
+        "maxParallel": 1
+      }
+    },
+    {
+      "input": {
+        "vocMax": 28.050912032577195,
+        "vmpMin": 37.75191147712369,
+        "imp": 5.158109947443066,
+        "vdcMax": 1500.0,
+        "mpptLow": 87.5573412029329,
+        "idcMax": 9.905930747060486
+      },
+      "expected": {
+        "minSeries": 3,
+        "maxSeries": 53,
+        "maxParallel": 1
+      }
+    },
+    {
+      "input": {
+        "vocMax": 22.053797623703566,
+        "vmpMin": 27.952147020820448,
+        "imp": 8.711861596998196,
+        "vdcMax": 480.0,
+        "mpptLow": 485.767972534229,
+        "idcMax": 51.787127723185506
+      },
+      "expected": {
+        "minSeries": 18,
+        "maxSeries": 21,
+        "maxParallel": 5
+      }
+    },
+    {
+      "input": {
+        "vocMax": 39.903827963437855,
+        "vmpMin": 16.836942954310068,
+        "imp": 16.27029923498248,
+        "vdcMax": 600.0,
+        "mpptLow": 406.8935424284388,
+        "idcMax": 24.65926157783914
+      },
+      "expected": {
+        "minSeries": 25,
+        "maxSeries": 15,
+        "maxParallel": 1
+      }
+    },
+    {
+      "input": {
+        "vocMax": 46.27841553104535,
+        "vmpMin": 57.635858183142595,
+        "imp": 11.998316711391116,
+        "vdcMax": 480.0,
+        "mpptLow": 276.42048098325523,
+        "idcMax": 59.66925886018536
+      },
+      "expected": {
+        "minSeries": 5,
+        "maxSeries": 10,
+        "maxParallel": 4
+      }
+    },
+    {
+      "input": {
+        "vocMax": 63.99447441295364,
+        "vmpMin": 21.470278566774603,
+        "imp": 16.55080984180819,
+        "vdcMax": 1000.0,
+        "mpptLow": 329.6079110886783,
+        "idcMax": 14.059135759770697
+      },
+      "expected": {
+        "minSeries": 16,
+        "maxSeries": 15,
+        "maxParallel": 0
+      }
+    },
+    {
+      "input": {
+        "vocMax": 71.02055059442418,
+        "vmpMin": 15.370295239589472,
+        "imp": 9.038411534340527,
+        "vdcMax": 600.0,
+        "mpptLow": 476.39167833859494,
+        "idcMax": 49.99366520426789
+      },
+      "expected": {
+        "minSeries": 31,
+        "maxSeries": 8,
+        "maxParallel": 5
+      }
+    },
+    {
+      "input": {
+        "vocMax": 23.980635948984702,
+        "vmpMin": 58.396124199315054,
+        "imp": 9.270475428127135,
+        "vdcMax": 1500.0,
+        "mpptLow": 305.7570892875146,
+        "idcMax": 49.91187059489171
+      },
+      "expected": {
+        "minSeries": 6,
+        "maxSeries": 62,
+        "maxParallel": 5
+      }
+    },
+    {
+      "input": {
+        "vocMax": 29.033966748320754,
+        "vmpMin": 36.41052317268613,
+        "imp": 10.348540795034479,
+        "vdcMax": 600.0,
+        "mpptLow": 72.0340077529962,
+        "idcMax": 19.94315681834767
+      },
+      "expected": {
+        "minSeries": 2,
+        "maxSeries": 20,
+        "maxParallel": 1
+      }
+    },
+    {
+      "input": {
+        "vocMax": 65.2486299480537,
+        "vmpMin": 57.20034743564847,
+        "imp": 9.989493333654394,
+        "vdcMax": 1000.0,
+        "mpptLow": 340.12916444311116,
+        "idcMax": 14.65988217114347
+      },
+      "expected": {
+        "minSeries": 6,
+        "maxSeries": 15,
+        "maxParallel": 1
+      }
+    }
+  ]
+}

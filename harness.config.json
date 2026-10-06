@@ -8,7 +8,8 @@
     "packages/spec/src/",
     "packages/economics/src/",
     "packages/io/src/",
-    "packages/chain/src/"
+    "packages/chain/src/",
+    "packages/sizer/src/"
   ],
   "docFileNames": ["AGENTS.md", "CLAUDE.md", "playbook.md"],
   "durableSourceGlobs": [
@@ -16,7 +17,8 @@
     "packages/spec/src/",
     "packages/economics/src/",
     "packages/io/src/",
-    "packages/chain/src/"
+    "packages/chain/src/",
+    "packages/sizer/src/"
   ],
   "testPairingMode": "module",
   "modulePairingRoot": "packages/core/src/",

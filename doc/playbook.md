@@ -130,6 +130,7 @@ without a tag.
 there sweeps other agents' uncommitted edits to shared files (ci.yml, lefthook, harness
 config, lockfile) into your commit, and `git pull --rebase` refuses on their dirty files.
 **Truth:** the shared tree's `main` can also lag `origin/main` while others push.
-**Apply:** build in the shared tree if you must, but commit from a detached worktree
-(`git worktree add --detach <scratch> origin/main`), copy your paths in, apply only your
-hunks to shared files, verify there, push `HEAD:main`, remove the worktree.
+**Apply:** follow `roadmap-next` (stage only your paths, pull with `--autostash`). The shared
+*index* still races: another agent can be mid-commit with a large staged set, or soft-reset
+your commit away. When a shared file carries others' hunks, commit from a detached worktree
+(`git worktree add --detach <scratch> origin/main`), push `HEAD:main`, remove it.

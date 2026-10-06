@@ -1,0 +1,53 @@
+{
+  "name": "@pvkit/sizer",
+  "version": "0.0.0",
+  "description": "PV string sizing in plain ESM — temperature-corrected module voltages, NEC 690.7 Voc correction, series/parallel limits against inverter voltage and current. Zero dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "author": "semanticist21",
+  "homepage": "https://github.com/semanticist21/pvkit/tree/main/packages/sizer#readme",
+  "bugs": {
+    "url": "https://github.com/semanticist21/pvkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semanticist21/pvkit.git",
+    "directory": "packages/sizer"
+  },
+  "keywords": [
+    "pv",
+    "solar",
+    "photovoltaic",
+    "string-sizing",
+    "inverter",
+    "nec-690",
+    "esm"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./nec-voltage-correction": "./src/nec-voltage-correction/index.ts",
+    "./string-size": "./src/string-size/index.ts",
+    "./voltage-at-temperature": "./src/voltage-at-temperature/index.ts",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": "./dist/index.js",
+      "./nec-voltage-correction": "./dist/nec-voltage-correction/index.js",
+      "./string-size": "./dist/string-size/index.js",
+      "./voltage-at-temperature": "./dist/voltage-at-temperature/index.js",
+      "./package.json": "./package.json"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepack": "tsdown"
+  }
+}

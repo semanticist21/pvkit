@@ -1,0 +1,391 @@
+{
+  "meta": {
+    "reference": "NEC 2023 690.7(A) explicit formulas, Python float64"
+  },
+  "cases": [
+    {
+      "input": {
+        "tempMin": 25.0
+      },
+      "expected": 1.0
+    },
+    {
+      "input": {
+        "tempMin": 30.0
+      },
+      "expected": 1.0
+    },
+    {
+      "input": {
+        "tempMin": 24.5
+      },
+      "expected": 1.02
+    },
+    {
+      "input": {
+        "tempMin": -40.0
+      },
+      "expected": 1.25
+    },
+    {
+      "input": {
+        "tempMin": -40.5
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "tempMin": -60.0
+      },
+      "expected": null
+    },
+    {
+      "input": {
+        "tempMin": 19.5
+      },
+      "expected": 1.04
+    },
+    {
+      "input": {
+        "tempMin": -0.5
+      },
+      "expected": 1.12
+    },
+    {
+      "input": {
+        "tempMin": 24.0
+      },
+      "expected": 1.02
+    },
+    {
+      "input": {
+        "tempMin": 20.0
+      },
+      "expected": 1.02
+    },
+    {
+      "input": {
+        "tempMin": 19.0
+      },
+      "expected": 1.04
+    },
+    {
+      "input": {
+        "tempMin": 15.0
+      },
+      "expected": 1.04
+    },
+    {
+      "input": {
+        "tempMin": 14.0
+      },
+      "expected": 1.06
+    },
+    {
+      "input": {
+        "tempMin": 10.0
+      },
+      "expected": 1.06
+    },
+    {
+      "input": {
+        "tempMin": 9.0
+      },
+      "expected": 1.08
+    },
+    {
+      "input": {
+        "tempMin": 5.0
+      },
+      "expected": 1.08
+    },
+    {
+      "input": {
+        "tempMin": 4.0
+      },
+      "expected": 1.1
+    },
+    {
+      "input": {
+        "tempMin": 0.0
+      },
+      "expected": 1.1
+    },
+    {
+      "input": {
+        "tempMin": -1.0
+      },
+      "expected": 1.12
+    },
+    {
+      "input": {
+        "tempMin": -5.0
+      },
+      "expected": 1.12
+    },
+    {
+      "input": {
+        "tempMin": -6.0
+      },
+      "expected": 1.14
+    },
+    {
+      "input": {
+        "tempMin": -10.0
+      },
+      "expected": 1.14
+    },
+    {
+      "input": {
+        "tempMin": -11.0
+      },
+      "expected": 1.16
+    },
+    {
+      "input": {
+        "tempMin": -15.0
+      },
+      "expected": 1.16
+    },
+    {
+      "input": {
+        "tempMin": -16.0
+      },
+      "expected": 1.18
+    },
+    {
+      "input": {
+        "tempMin": -20.0
+      },
+      "expected": 1.18
+    },
+    {
+      "input": {
+        "tempMin": -21.0
+      },
+      "expected": 1.2
+    },
+    {
+      "input": {
+        "tempMin": -25.0
+      },
+      "expected": 1.2
+    },
+    {
+      "input": {
+        "tempMin": -26.0
+      },
+      "expected": 1.21
+    },
+    {
+      "input": {
+        "tempMin": -30.0
+      },
+      "expected": 1.21
+    },
+    {
+      "input": {
+        "tempMin": -31.0
+      },
+      "expected": 1.23
+    },
+    {
+      "input": {
+        "tempMin": -35.0
+      },
+      "expected": 1.23
+    },
+    {
+      "input": {
+        "tempMin": -36.0
+      },
+      "expected": 1.25
+    },
+    {
+      "input": {
+        "tempMin": -40.0
+      },
+      "expected": 1.25
+    },
+    {
+      "input": {
+        "tempMin": 22.11
+      },
+      "expected": 1.02
+    },
+    {
+      "input": {
+        "tempMin": -37.44
+      },
+      "expected": 1.25
+    },
+    {
+      "input": {
+        "tempMin": 7.94
+      },
+      "expected": 1.08
+    },
+    {
+      "input": {
+        "tempMin": -38.56
+      },
+      "expected": 1.25
+    },
+    {
+      "input": {
+        "tempMin": 5.21
+      },
+      "expected": 1.08
+    },
+    {
+      "input": {
+        "tempMin": -29.61
+      },
+      "expected": 1.21
+    },
+    {
+      "input": {
+        "tempMin": -29.45
+      },
+      "expected": 1.21
+    },
+    {
+      "input": {
+        "tempMin": -20.94
+      },
+      "expected": 1.2
+    },
+    {
+      "input": {
+        "tempMin": -10.48
+      },
+      "expected": 1.16
+    },
+    {
+      "input": {
+        "tempMin": -23.32
+      },
+      "expected": 1.2
+    },
+    {
+      "input": {
+        "tempMin": -33.93
+      },
+      "expected": 1.23
+    },
+    {
+      "input": {
+        "tempMin": -21.48
+      },
+      "expected": 1.2
+    },
+    {
+      "input": {
+        "tempMin": 24.18
+      },
+      "expected": 1.02
+    },
+    {
+      "input": {
+        "tempMin": -14.89
+      },
+      "expected": 1.16
+    },
+    {
+      "input": {
+        "tempMin": -30.3
+      },
+      "expected": 1.23
+    },
+    {
+      "input": {
+        "tempMin": 8.4
+      },
+      "expected": 1.08
+    },
+    {
+      "input": {
+        "tempMin": 14.7
+      },
+      "expected": 1.06
+    },
+    {
+      "input": {
+        "tempMin": -26.27
+      },
+      "expected": 1.21
+    },
+    {
+      "input": {
+        "tempMin": 10.37
+      },
+      "expected": 1.06
+    },
+    {
+      "input": {
+        "tempMin": -13.34
+      },
+      "expected": 1.16
+    },
+    {
+      "input": {
+        "tempMin": 15.09
+      },
+      "expected": 1.04
+    },
+    {
+      "input": {
+        "tempMin": 24.05
+      },
+      "expected": 1.02
+    },
+    {
+      "input": {
+        "tempMin": -29.96
+      },
+      "expected": 1.21
+    },
+    {
+      "input": {
+        "tempMin": -32.72
+      },
+      "expected": 1.23
+    },
+    {
+      "input": {
+        "tempMin": -38.87
+      },
+      "expected": 1.25
+    },
+    {
+      "input": {
+        "tempMin": -27.39
+      },
+      "expected": 1.21
+    },
+    {
+      "input": {
+        "tempMin": 28.4
+      },
+      "expected": 1.0
+    },
+    {
+      "input": {
+        "tempMin": 15.12
+      },
+      "expected": 1.04
+    },
+    {
+      "input": {
+        "tempMin": 28.17
+      },
+      "expected": 1.0
+    },
+    {
+      "input": {
+        "tempMin": 18.57
+      },
+      "expected": 1.04
+    }
+  ]
+}

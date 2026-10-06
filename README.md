@@ -31,7 +31,7 @@ Not "smarter PV science" — **"PV modeling everywhere JavaScript runs."**
 | [`@pvkit/spec`](packages/spec) | 🧪 unreleased | Module/inverter parameter libraries — CEC modules, CEC inverters, Sandia SAPM modules (NREL SAM) |
 | [`@pvkit/chain`](packages/chain) | 🧪 unreleased | ModelChain-style orchestration — site + system + weather → AC power in one call (pvlib PVWatts model set) |
 | [`@pvkit/economics`](packages/economics) | 🧪 unreleased | PV project finance — lifetime kWh with degradation, bill savings, NPV, IRR, payback, ROI, LCOE |
-| `@pvkit/sizer` | 📋 Planned | String sizing — series/parallel panel configuration (inverter over-voltage safety) |
+| [`@pvkit/sizer`](packages/sizer) | 🧪 unreleased | String sizing — temperature-corrected Voc/Vmp, NEC 690.7, series/parallel limits per inverter |
 
 See [ROADMAP.md](ROADMAP.md) for packages under consideration.
 

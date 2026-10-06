@@ -1,4 +1,4 @@
-// Consumer check: pack @pvkit/core, @pvkit/spec, @pvkit/io and @pvkit/chain, install the tarball into a throwaway project, then
+// Consumer check: pack @pvkit/core, @pvkit/spec, @pvkit/io, @pvkit/chain and @pvkit/sizer, install the tarball into a throwaway project, then
 // typecheck imports (skipLibCheck off) under moduleResolution bundler and node16 and run a
 // plain-Node ESM import. Catches broken published .d.ts / exports that in-repo tests miss.
 // Run after `pnpm build`: node scripts/check-consumer.mjs
@@ -13,7 +13,7 @@ const dir = mkdtempSync(join(tmpdir(), "pvkit-consumer-"));
 const run = (cmd, args, cwd = dir) => execFileSync(cmd, args, { cwd, stdio: "inherit" });
 
 try {
-  for (const pkg of ["core", "spec", "io", "chain"]) {
+  for (const pkg of ["core", "spec", "io", "chain", "sizer"]) {
     run("pnpm", ["pack", "--pack-destination", dir], join(root, "packages", pkg));
   }
   const tgzs = readdirSync(dir).filter((f) => f.endsWith(".tgz"));
@@ -51,6 +51,8 @@ if (typeof parsePvgisTmy !== "function") throw new Error("io import broken");
 const { modelChain } = await import("@pvkit/chain/model-chain");
 if (!(modelChain({ timeMs: Date.UTC(2025, 5, 21, 3), latitude: 37.57, longitude: 126.98, surfaceTilt: 30,
   surfaceAzimuth: 180, pdc0: 5000, gammaPdc: -0.004, linkeTurbidity: 3 }).pac > 0)) throw new Error("chain broken");
+const { stringSize } = await import("@pvkit/sizer/string-size");
+if (stringSize({ vocMax: 50, vmpMin: 25, imp: 9, vdcMax: 600, mpptLow: 250, idcMax: 18 }).maxSeries !== 12) throw new Error("sizer broken");
 if (SANDIA_MODULES.length !== 523 || !(SANDIA_MODULES[0].isco > 0)) throw new Error("spec data broken");
 const r = spa({ timeMs: Date.UTC(2003, 9, 17, 19, 30, 30), latitude: 39.742476, longitude: -105.1786 });
 if (!(r.zenith > 50 && r.zenith < 51) || typeof root.toDegrees !== "function") throw new Error("runtime import broken");
