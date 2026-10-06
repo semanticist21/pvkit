@@ -6,7 +6,10 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 const fmt = (n: number) => Math.round(n).toLocaleString();
 
 const render = () => {
-  if (!form.checkValidity()) return;
+  if (!form.reportValidity()) {
+    out.textContent = "Fix the highlighted field to update the estimate.";
+    return;
+  }
   const v = (name: string) => Number((form.elements.namedItem(name) as HTMLInputElement).value);
   const input: EstimateInput = {
     latitude: v("latitude"),
@@ -42,13 +45,17 @@ const render = () => {
 
 form.addEventListener("change", render);
 document.getElementById("locate")?.addEventListener("click", () => {
-  navigator.geolocation.getCurrentPosition(({ coords }) => {
-    (form.elements.namedItem("latitude") as HTMLInputElement).value = coords.latitude.toFixed(4);
-    (form.elements.namedItem("longitude") as HTMLInputElement).value = coords.longitude.toFixed(4);
-    if (coords.altitude != null) {
-      (form.elements.namedItem("altitude") as HTMLInputElement).value = coords.altitude.toFixed(0);
-    }
-    render();
-  });
+  // Altitude stays as entered: coords.altitude is height above the WGS84 ellipsoid, not sea level.
+  navigator.geolocation.getCurrentPosition(
+    ({ coords }) => {
+      (form.elements.namedItem("latitude") as HTMLInputElement).value = coords.latitude.toFixed(4);
+      (form.elements.namedItem("longitude") as HTMLInputElement).value =
+        coords.longitude.toFixed(4);
+      render();
+    },
+    (err) => {
+      out.textContent = `Could not get your location (${err.message}). Enter it by hand.`;
+    },
+  );
 });
 render();
