@@ -1,0 +1,55 @@
+{
+  "name": "@pvkit/spec",
+  "version": "0.0.0",
+  "description": "PV module and inverter parameter libraries (CEC modules, CEC inverters, Sandia SAPM modules) as typed ESM data.",
+  "type": "module",
+  "license": "MIT",
+  "author": "semanticist21",
+  "homepage": "https://github.com/semanticist21/pvkit/tree/main/packages/spec#readme",
+  "bugs": {
+    "url": "https://github.com/semanticist21/pvkit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semanticist21/pvkit.git",
+    "directory": "packages/spec"
+  },
+  "keywords": [
+    "pv",
+    "solar",
+    "photovoltaic",
+    "cec",
+    "sandia",
+    "sapm",
+    "module-database",
+    "inverter-database",
+    "esm"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./cec-inverters": "./src/cec-inverters/index.ts",
+    "./cec-modules": "./src/cec-modules/index.ts",
+    "./sandia-modules": "./src/sandia-modules/index.ts",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": "./dist/index.js",
+      "./cec-inverters": "./dist/cec-inverters/index.js",
+      "./cec-modules": "./dist/cec-modules/index.js",
+      "./sandia-modules": "./dist/sandia-modules/index.js",
+      "./package.json": "./package.json"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepack": "tsdown"
+  }
+}

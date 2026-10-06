@@ -8,6 +8,6 @@ pre-commit:
       stage_fixed: true
     typecheck:
       glob: "**/*.{ts,tsx}"
-      run: pnpm exec tsc --noEmit -p packages/core/tsconfig.json && pnpm exec tsc --noEmit -p apps/demo/tsconfig.json
+      run: pnpm exec tsc --noEmit -p packages/core/tsconfig.json && pnpm exec tsc --noEmit -p apps/demo/tsconfig.json && pnpm exec tsc --noEmit -p packages/spec/tsconfig.json
     harness:
       run: node scripts/agent-harness-check.mjs --staged

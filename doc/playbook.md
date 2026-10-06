@@ -124,3 +124,12 @@ tree (`ERR_PNPM_UNCLEAN_WORKING_TREE`), which looked like "did not bump" and lef
 without a tag.
 **Truth / Apply:** `doc/architecture.md` → "Release procedure" (clean tree → `pnpm version`;
 `pnpm pack` + `script -q /dev/null npm publish <tgz> --auth-type=web`; poll the registry).
+
+## 2026-10-06 — parallel agents share one checkout
+**Trap:** several `roadmap-next` agents ran in the same working tree; `git add`/`commit -a`
+there sweeps other agents' uncommitted edits to shared files (ci.yml, lefthook, harness
+config, lockfile) into your commit, and `git pull --rebase` refuses on their dirty files.
+**Truth:** the shared tree's `main` can also lag `origin/main` while others push.
+**Apply:** build in the shared tree if you must, but commit from a detached worktree
+(`git worktree add --detach <scratch> origin/main`), copy your paths in, apply only your
+hunks to shared files, verify there, push `HEAD:main`, remove the worktree.
