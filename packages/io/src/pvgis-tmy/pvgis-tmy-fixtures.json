@@ -63,6 +63,7 @@
           "year": 2023
         }
       ],
+      "irradianceTimeOffset": 0.5,
       "rows": [
         {
           "timeMs": 631152000000,
@@ -589,6 +590,7 @@
           "year": 2023
         }
       ],
+      "irradianceTimeOffset": 0.5,
       "rows": [
         {
           "timeMs": 631152000000,

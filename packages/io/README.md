@@ -21,5 +21,6 @@ const { data } = await getNasaPower({
 ```
 
 Units: time UTC epoch ms (interval start), irradiance W/m², temperature °C, wind m/s,
-pressure Pa, humidity %. Missing values are `NaN`. Every getter takes `fetch` (inject a
+pressure Pa, humidity %. Missing values are `NaN`. PVGIS irradiance is centred
+`meta.irradianceTimeOffset` hours (0.5) after `timeMs`. Every getter takes `fetch` (inject a
 custom/mock fetch) and `signal` (abort). Method notes: `src/<method>/<method>.md`.

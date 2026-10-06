@@ -7,13 +7,13 @@ export interface PvgisTmyInput {
   /** Degrees, east-positive. */
   longitude: number;
   /** Include terrain-horizon shading in the irradiance. Default true (PVGIS default). */
-  usehorizon?: boolean;
+  useHorizon?: boolean;
   /** First / last year the TMY months are drawn from. Default: PVGIS's full range. */
   startYear?: number;
   endYear?: number;
   /**
    * Year stamped on every row (TMY months come from different years). Default 1990, as
-   * pvlib. Must not be a leap year unless the data has no Feb 29.
+   * pvlib. Must be a leap year if the data contains Feb 29.
    */
   coerceYear?: number;
   /**
@@ -26,7 +26,10 @@ export interface PvgisTmyInput {
 }
 
 export interface PvgisTmyRecord {
-  /** UTC epoch ms, hour start, year replaced by `coerceYear`. */
+  /**
+   * UTC epoch ms, hour start, year replaced by `coerceYear`. Irradiance is centred
+   * `meta.irradianceTimeOffset` hours later.
+   */
   timeMs: number;
   /** W/m². */
   ghi: number;
@@ -57,12 +60,22 @@ export interface PvgisTmy {
     monthsSelected: { month: number; year: number }[];
     /** PVGIS `inputs.meteo_data` (databases, year range, horizon source), as sent. */
     meteoData: Record<string, unknown>;
+    /**
+     * Hours by which irradiance is stamped later than `timeMs` (PVGIS 5.3 reports 0.5:
+     * irradiance is centred mid-hour). Absent when PVGIS omits it.
+     */
+    irradianceTimeOffset?: number;
   };
 }
 
 interface PvgisJson {
   inputs: {
-    location: { latitude: number; longitude: number; elevation: number };
+    location: {
+      latitude: number;
+      longitude: number;
+      elevation: number;
+      irradiance_time_offset?: number;
+    };
     meteo_data: Record<string, unknown>;
   };
   outputs: {
@@ -106,7 +119,7 @@ export const parsePvgisTmy = (json: unknown, coerceYear = 1990): PvgisTmy => {
       pressure: Number(r.SP),
     };
   });
-  const { latitude, longitude, elevation } = src.inputs.location;
+  const { latitude, longitude, elevation, irradiance_time_offset } = src.inputs.location;
   return {
     data,
     meta: {
@@ -115,20 +128,23 @@ export const parsePvgisTmy = (json: unknown, coerceYear = 1990): PvgisTmy => {
       altitude: elevation,
       monthsSelected: src.outputs.months_selected,
       meteoData: src.inputs.meteo_data,
+      ...(irradiance_time_offset === undefined
+        ? {}
+        : { irradianceTimeOffset: irradiance_time_offset }),
     },
   };
 };
 
 /** Fetches a typical meteorological year (8760 hourly rows) from PVGIS. */
 export const getPvgisTmy = async (input: PvgisTmyInput): Promise<PvgisTmy> => {
-  const { latitude, longitude, usehorizon = true, startYear, endYear, coerceYear } = input;
+  const { latitude, longitude, useHorizon = true, startYear, endYear, coerceYear } = input;
   const { url = PVGIS_TMY_URL, fetch = globalThis.fetch, signal } = input;
   const q = new URLSearchParams({
     lat: String(latitude),
     lon: String(longitude),
     outputformat: "json",
   });
-  if (!usehorizon) q.set("usehorizon", "0"); // PVGIS default is 1
+  if (!useHorizon) q.set("usehorizon", "0"); // PVGIS default is 1
   if (startYear !== undefined) q.set("startyear", String(startYear));
   if (endYear !== undefined) q.set("endyear", String(endYear));
   const res = await fetch(`${url}?${q}`, signal ? { signal } : {});

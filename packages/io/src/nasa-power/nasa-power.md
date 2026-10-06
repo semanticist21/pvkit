@@ -10,7 +10,7 @@ Parsing, as pvlib `get_nasa_power(map_variables=True)`:
 
 - keys `YYYYMMDDHH` → `timeMs` (UTC, interval start);
 - `header.fill_value` (−999) → `NaN`;
-- `PS` kPa → Pa (×1000); `TQV` kg/m² → cm (×0.1);
+- `PS` kPa → Pa (×1000); `TQV` kg/m² → cm (÷10);
 - irradiance is the hour's mean (POWER reports Wh/m² per hour = W/m²).
 
 `meta` is the grid cell POWER answered for (`geometry.coordinates`), not the request point.
@@ -23,6 +23,8 @@ Parsing, as pvlib `get_nasa_power(map_variables=True)`:
 2. Reference implementation — `pvlib.iotools.get_nasa_power` @ pvlib 0.16.1, with
    `requests.get` stubbed to return the captured response.
 3. Fixtures — `scripts/fixtures/io.py` → `nasa-power-fixtures.json` from
-   `nasa-power-raw.json` (a real Seoul response spanning 2024-02-28…03-01, leap day included;
-   one `T2M` value set to the fill value). Query compared exactly; values to 1e-9 (only
-   `pressure` involves arithmetic: one multiply, ≤ 1 ulp).
+   `nasa-power-raw.json` (a real Seoul response with all 16 `VARIABLE_MAP` parameters,
+   2024-02-28…03-01, leap day included; one `T2M` value set to the fill value, night-time
+   `ALLSKY_SRF_ALB` is fill natively). Two requests: every parameter; and the defaults with
+   `site-elevation`/`wind-elevation`/`wind-surface`. The name map, default list, query and
+   rows are compared exactly (the conversions are the same single IEEE operation as pvlib's).

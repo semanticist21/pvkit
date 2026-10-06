@@ -1,7 +1,7 @@
 # pvgis-tmy — PVGIS typical meteorological year
 
 `getPvgisTmy` requests `GET <url>?lat&lon&outputformat=json[&usehorizon=0][&startyear][&endyear]`
-and `parsePvgisTmy` maps the response:
+(`useHorizon: false` sends `usehorizon=0`) and `parsePvgisTmy` maps the response:
 
 | PVGIS | pvkit | unit |
 | --- | --- | --- |
@@ -18,8 +18,9 @@ every row is restamped to `coerceYear` (default 1990, as pvlib). A Feb 29 row th
 exist in `coerceYear` throws, as pvlib's `Timestamp.replace` does. pvlib's optional
 `roll_utc_offset` (shift to local standard time) is not offered — pvkit time is UTC.
 
-PVGIS 5.3 reports `inputs.location.irradiance_time_offset` (irradiance stamped mid-hour);
-it is passed through in `meta` untouched, as pvlib does.
+PVGIS 5.3 reports `inputs.location.irradiance_time_offset` (0.5 h: irradiance is centred
+mid-hour, not at `timeMs`); it is returned as `meta.irradianceTimeOffset` (hours), unapplied,
+as pvlib keeps it in `meta`. Add it to `timeMs` before solar-position or transposition work.
 
 ## Reference
 

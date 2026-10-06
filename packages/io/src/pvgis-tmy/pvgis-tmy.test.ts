@@ -15,7 +15,7 @@ const fakeFetch = (body: unknown, status = 200) => {
 const toInput = (c: (typeof fixture.cases)[number]["input"]) => {
   const i = c as { usehorizon?: boolean; startyear?: number; endyear?: number };
   return {
-    ...(i.usehorizon === undefined ? {} : { usehorizon: i.usehorizon }),
+    ...(i.usehorizon === undefined ? {} : { useHorizon: i.usehorizon }),
     ...(i.startyear === undefined ? {} : { startYear: i.startyear }),
     ...(i.endyear === undefined ? {} : { endYear: i.endyear }),
   };
@@ -34,7 +34,12 @@ test.each(fixture.cases)("matches pvlib get_pvgis_tmy: request and rows ($input)
   expect(Object.fromEntries(url.searchParams)).toEqual(c.request.params);
   expect(got.data).toEqual(c.rows); // pure parse + rename: exact
   expect(got.meta.monthsSelected).toEqual(c.monthsSelected);
-  expect(got.meta).toMatchObject({ latitude: 37.5665, longitude: 126.978, altitude: 38 });
+  expect(got.meta).toMatchObject({
+    latitude: 37.5665,
+    longitude: 126.978,
+    altitude: 38,
+    irradianceTimeOffset: c.irradianceTimeOffset,
+  });
 });
 
 test("default endpoint is pvlib's", () => {

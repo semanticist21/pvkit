@@ -68,10 +68,10 @@ interface PowerJson {
   properties: { parameter: Record<string, Record<string, number>> };
 }
 
-/** Unit conversions pvlib applies when mapping names (kPa → Pa, kg/m² → cm). */
-const SCALE: Partial<Record<NasaPowerParameter, number>> = {
-  pressure: 1000,
-  precipitableWater: 0.1,
+/** Unit conversions pvlib applies when mapping names, as pvlib computes them. */
+const CONVERT: Partial<Record<NasaPowerParameter, (v: number) => number>> = {
+  pressure: (v) => v * 1000, // kPa → Pa
+  precipitableWater: (v) => v / 10, // kg/m² (mm) → cm
 };
 
 const ymd = (ms: number) => new Date(ms).toISOString().slice(0, 10).replaceAll("-", "");
@@ -88,16 +88,16 @@ export const parseNasaPower = <P extends NasaPowerParameter>(
   const columns = parameters.map((p) => {
     const values = series[NASA_POWER_PARAMETERS[p]];
     if (!values) throw new Error(`NASA POWER response lacks ${NASA_POWER_PARAMETERS[p]}`);
-    return [p, values, SCALE[p] ?? 1] as const;
+    return [p, values, CONVERT[p] ?? ((v: number) => v)] as const;
   });
   const keys = Object.keys(columns[0]?.[1] ?? {}); // "YYYYMMDDHH", UTC
   const data = keys.map((k) => {
     const row: Record<string, number> = {
       timeMs: Date.UTC(+k.slice(0, 4), +k.slice(4, 6) - 1, +k.slice(6, 8), +k.slice(8, 10)),
     };
-    for (const [p, values, scale] of columns) {
+    for (const [p, values, convert] of columns) {
       const v = values[k];
-      row[p] = v === undefined || v === fill ? Number.NaN : v * scale;
+      row[p] = v === undefined || v === fill ? Number.NaN : convert(v);
     }
     return row as NasaPowerRecord<P>;
   });
@@ -133,6 +133,8 @@ export const getNasaPower = async <
   const res = await fetch(`${url}?${q}`, signal ? { signal } : {});
   const body: unknown = await res.json().catch(() => null);
   if (!res.ok)
-    throw new Error(`NASA POWER ${res.status}: ${JSON.stringify(body) ?? res.statusText}`);
+    throw new Error(
+      `NASA POWER ${res.status}: ${body == null ? res.statusText : JSON.stringify(body)}`,
+    );
   return parseNasaPower(body, parameters);
 };
