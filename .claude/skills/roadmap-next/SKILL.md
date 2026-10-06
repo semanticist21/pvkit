@@ -13,8 +13,10 @@ no status files.
 
 1. `git pull --rebase origin main`.
 2. In the Queue, take the first row whose Status is `todo` and whose "Depends on" rows are
-   all `✅`. A `🚧` claim older than 24 h with no commit touching its Path since then is stale:
-   treat it as `todo` and say so in your report.
+   all `✅`. A `🚧` row is stale when nothing has been committed to its Path (or the claim
+   itself) for 2 h — `git log -1 --format=%cr -- <Path>` — its agent died: take it over
+   (step 3 with message `take over #<n> (stale)`) and resume, not restart (see Build).
+   The user saying "release #<n>" also resets a row to `todo`.
 3. Set its Status to `🚧 <UTC yyyy-mm-dd hh:mm> <tag>` (`tag` = `openssl rand -hex 3`, keep it
    for the session), commit only that line as `chore(roadmap): claim #<n> <item>`, push.
 4. Push rejected → `git pull --rebase`. If the row now shows someone else's claim, drop
@@ -31,7 +33,11 @@ no status files.
 - Scope = the item's ROADMAP section. Decide conventional choices yourself; ask one focused
   question (the orchestrator in a multi-agent run, else the user) only for a product choice
   the section leaves genuinely open.
-- Commit to `main` in small verified steps and push often; rebase on conflicts, never force.
+- Taking over: read the existing Path, its `git log`, and the ROADMAP section, then continue
+  from there; only uncommitted work of the dead agent is lost.
+- Commit to `main` in small verified steps (main must stay green — an abrupt stop must never
+  leave it broken) and push at least hourly; rebase on conflicts, never force. A
+  `pnpm-lock.yaml` conflict: take `origin`'s version, run `pnpm install`, commit the result.
 - Done when `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm build`, the repo's check
   scripts and CI are green.
 
